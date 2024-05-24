@@ -1,0 +1,2 @@
+StartGameWindowVersusBackground = class(StartGameWindowVersusBackground, StartGameWindowBackgroundConsole)
+StartGameWindowVersusBackground.NAME = "StartGameWindowVersusBackground"

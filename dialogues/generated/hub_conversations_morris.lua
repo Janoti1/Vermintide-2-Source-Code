@@ -1,0 +1,4202 @@
+return function ()
+	define_rule({
+		name = "ndw_morris_daemon_whispers_hub_bardin",
+		response = "ndw_morris_daemon_whispers_hub_bardin",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"ndw_daemon_whispers"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"npc_whisper_daemon"
+			},
+			{
+				"global_context",
+				"dwarf_ranger",
+				OP.EQ,
+				1
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				360
+			},
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_bardin",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_bardin",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "ndw_morris_daemon_whispers_hub_kerillian",
+		response = "ndw_morris_daemon_whispers_hub_kerillian",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"ndw_daemon_whispers"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"npc_whisper_daemon"
+			},
+			{
+				"global_context",
+				"wood_elf",
+				OP.EQ,
+				1
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				360
+			},
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_kerillian",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_kerillian",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "ndw_morris_daemon_whispers_hub_kruber",
+		response = "ndw_morris_daemon_whispers_hub_kruber",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"ndw_daemon_whispers"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"npc_whisper_daemon"
+			},
+			{
+				"global_context",
+				"empire_soldier",
+				OP.EQ,
+				1
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				360
+			},
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_kruber",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_kruber",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "ndw_morris_daemon_whispers_hub_sienna",
+		response = "ndw_morris_daemon_whispers_hub_sienna",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"ndw_daemon_whispers"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"npc_whisper_daemon"
+			},
+			{
+				"global_context",
+				"bright_wizard",
+				OP.EQ,
+				1
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				360
+			},
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_sienna",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_sienna",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "ndw_morris_daemon_whispers_hub_victor",
+		response = "ndw_morris_daemon_whispers_hub_victor",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"ndw_daemon_whispers"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"npc_whisper_daemon"
+			},
+			{
+				"global_context",
+				"witch_hunter",
+				OP.EQ,
+				1
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				360
+			},
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_victor",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"ndw_morris_daemon_whispers_hub_victor",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "nik_hub_grudgemark_a",
+		response = "nik_hub_grudgemark_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"nik_morris_hub_okri_grudge"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				480
+			},
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "nik_morris_hub_okri_grudge",
+		response = "nik_morris_hub_okri_grudge",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"nik_morris_hub_okri_grudge"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
+				"user_memory",
+				"nik_morris_grudgemarks",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"nik_morris_grudgemarks",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "nik_morris_idle_01",
+		response = "nik_morris_idle_01",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"nik_morris_idle"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
+				"user_memory",
+				"nik_morris_idle_01",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"nik_morris_idle_01",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "nik_morris_idle_02",
+		response = "nik_morris_idle_02",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"nik_morris_idle"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
+				"user_memory",
+				"nik_morris_idle_02",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"nik_morris_idle_02",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_hub_grudgemark_a",
+		response = "pbw_hub_grudgemark_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				480
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_hub_grudgemark_b",
+		response = "pbw_hub_grudgemark_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_hub_grudgemark_c",
+		response = "pbw_hub_grudgemark_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_hub_whispers_redux_response",
+		response = "pbw_hub_whispers_redux_response",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name",
+				OP.EQ,
+				"ndw_morris_daemon_whispers_hub_sienna"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_hub_whispers_redux_response_rejoinder",
+		response = "pbw_hub_whispers_redux_response_rejoinder",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_whispers_redux_response"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_morris_hub_conversation_one_a",
+		response = "pbw_morris_hub_conversation_one_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_morris_hub_conversation_one_b",
+		response = "pbw_morris_hub_conversation_one_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pbw_morris_hub_conversation_one_c",
+		response = "pbw_morris_hub_conversation_one_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_hub_grudgemark_a",
+		response = "pdr_hub_grudgemark_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				480
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_hub_grudgemark_b",
+		response = "pdr_hub_grudgemark_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_hub_grudgemark_c",
+		response = "pdr_hub_grudgemark_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_hub_whispers_redux_response",
+		response = "pdr_hub_whispers_redux_response",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name",
+				OP.EQ,
+				"ndw_morris_daemon_whispers_hub_bardin"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_hub_whispers_redux_response_rejoinder",
+		response = "pdr_hub_whispers_redux_response_rejoinder",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_whispers_redux_response"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_morris_hub_conversation_one_a",
+		response = "pdr_morris_hub_conversation_one_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_morris_hub_conversation_one_b",
+		response = "pdr_morris_hub_conversation_one_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pdr_morris_hub_conversation_one_c",
+		response = "pdr_morris_hub_conversation_one_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_hub_grudgemark_a",
+		response = "pes_hub_grudgemark_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				480
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_hub_grudgemark_b",
+		response = "pes_hub_grudgemark_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_hub_grudgemark_c",
+		response = "pes_hub_grudgemark_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_hub_whispers_redux_response",
+		response = "pes_hub_whispers_redux_response",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name",
+				OP.EQ,
+				"ndw_morris_daemon_whispers_hub_kruber"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "pes_hub_whispers_redux_response_rejoinder",
+		response = "pes_hub_whispers_redux_response_rejoinder",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_whispers_redux_response"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_morris_hub_conversation_one_a",
+		response = "pes_morris_hub_conversation_one_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_morris_hub_conversation_one_b",
+		response = "pes_morris_hub_conversation_one_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pes_morris_hub_conversation_one_c",
+		response = "pes_morris_hub_conversation_one_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_hub_grudgemark_a",
+		response = "pwe_hub_grudgemark_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				480
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_hub_grudgemark_b",
+		response = "pwe_hub_grudgemark_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_hub_grudgemark_c",
+		response = "pwe_hub_grudgemark_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_hub_whispers_redux_response",
+		response = "pwe_hub_whispers_redux_response",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name",
+				OP.EQ,
+				"ndw_morris_daemon_whispers_hub_kerillian"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_hub_whispers_redux_response_rejoinder",
+		response = "pwe_hub_whispers_redux_response_rejoinder",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_whispers_redux_response"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_morris_hub_conversation_one_a",
+		response = "pwe_morris_hub_conversation_one_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_morris_hub_conversation_one_b",
+		response = "pwe_morris_hub_conversation_one_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwe_morris_hub_conversation_one_c",
+		response = "pwe_morris_hub_conversation_one_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_hub_grudgemark_a",
+		response = "pwh_hub_grudgemark_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"global_context",
+				"level_time",
+				OP.GT,
+				480
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"hub_grudgemark_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_hub_grudgemark_b",
+		response = "pwh_hub_grudgemark_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_hub_grudgemark_c",
+		response = "pwh_hub_grudgemark_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_grudgemark_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_hub_whispers_redux_response",
+		response = "pwh_hub_whispers_redux_response",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name",
+				OP.EQ,
+				"ndw_morris_daemon_whispers_hub_victor"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			},
+			{
+				"faction_memory",
+				"hub_whisper_response",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_hub_whispers_redux_response_rejoinder",
+		response = "pwh_hub_whispers_redux_response_rejoinder",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"hub_whispers_redux_response"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_morris_hub_conversation_one_a",
+		response = "pwh_morris_hub_conversation_one_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.GT,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				120
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_a",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_morris_hub_conversation_one_b",
+		response = "pwh_morris_hub_conversation_one_b",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_a"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_b",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_morris_hub_conversation_one_c",
+		response = "pwh_morris_hub_conversation_one_c",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"morris_hub_conversation_one_b"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"morris_hub_conversation_one_c",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		name = "pwh_morris_saltzpyre_monologue",
+		response = "pwh_morris_saltzpyre_monologue",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"story_trigger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_career",
+				OP.NEQ,
+				"wh_priest"
+			},
+			{
+				"user_context",
+				"friends_close",
+				OP.EQ,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMEDIFF,
+				OP.GT,
+				140
+			},
+			{
+				"faction_memory",
+				"pwh_morris_saltzpyre_monologue",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"pwh_morris_saltzpyre_monologue",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_conversation",
+				OP.TIMESET
+			}
+		}
+	})
+	add_dialogues({
+		ndw_morris_daemon_whispers_hub_bardin = {
+			intended_player_profile = "dwarf_ranger",
+			randomize_indexes_n = 0,
+			face_animations_n = 16,
+			database = "hub_conversations_morris",
+			category = "story_talk_keep",
+			dialogue_animations_n = 16,
+			sound_events_n = 16,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"ndw_morris_daemon_whispers_13",
+				"ndw_morris_daemon_whispers_14",
+				"ndw_morris_daemon_whispers_15",
+				"ndw_morris_daemon_whispers_16",
+				"ndw_morris_daemon_whispers_17",
+				"ndw_morris_daemon_whispers_18",
+				"nwd_hub_whispers_redux_bardin_01",
+				"nwd_hub_whispers_redux_bardin_02",
+				"nwd_hub_whispers_redux_bardin_03",
+				"nwd_hub_whispers_redux_bardin_04",
+				"nwd_hub_whispers_redux_bardin_05",
+				"nwd_hub_whispers_redux_bardin_06",
+				"nwd_hub_whispers_redux_bardin_07",
+				"nwd_hub_whispers_redux_bardin_08",
+				"nwd_hub_whispers_redux_bardin_09",
+				"nwd_hub_whispers_redux_bardin_10"
+			},
+			randomize_indexes = {},
+			sound_distance = math.huge,
+			sound_event_filters = {
+				ndw_morris_daemon_whispers_17 = {
+					{
+						"global_context",
+						"dr_engineer",
+						OP.EQ,
+						false
+					}
+				}
+			},
+			sound_events = {
+				"ndw_morris_daemon_whispers_13",
+				"ndw_morris_daemon_whispers_14",
+				"ndw_morris_daemon_whispers_15",
+				"ndw_morris_daemon_whispers_16",
+				"ndw_morris_daemon_whispers_17",
+				"ndw_morris_daemon_whispers_18",
+				"nwd_hub_whispers_redux_bardin_01",
+				"nwd_hub_whispers_redux_bardin_02",
+				"nwd_hub_whispers_redux_bardin_03",
+				"nwd_hub_whispers_redux_bardin_04",
+				"nwd_hub_whispers_redux_bardin_05",
+				"nwd_hub_whispers_redux_bardin_06",
+				"nwd_hub_whispers_redux_bardin_07",
+				"nwd_hub_whispers_redux_bardin_08",
+				"nwd_hub_whispers_redux_bardin_09",
+				"nwd_hub_whispers_redux_bardin_10"
+			},
+			sound_events_duration = {
+				8.6380500793457,
+				13.406372070313,
+				12.186394691467,
+				8.1970748901367,
+				9.4446716308594,
+				6.8946032524109,
+				8.9870004653931,
+				10.248000144959,
+				8.2580003738403,
+				9.753999710083,
+				9.6129999160767,
+				11.519000053406,
+				13.00800037384,
+				10.13300037384,
+				9.1020002365112,
+				8.9770002365112
+			}
+		},
+		ndw_morris_daemon_whispers_hub_kerillian = {
+			intended_player_profile = "wood_elf",
+			randomize_indexes_n = 0,
+			face_animations_n = 16,
+			database = "hub_conversations_morris",
+			category = "story_talk_keep",
+			dialogue_animations_n = 16,
+			sound_events_n = 16,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"ndw_morris_daemon_whispers_19",
+				"ndw_morris_daemon_whispers_20",
+				"ndw_morris_daemon_whispers_21",
+				"ndw_morris_daemon_whispers_22",
+				"ndw_morris_daemon_whispers_23",
+				"ndw_morris_daemon_whispers_24",
+				"nwd_hub_whispers_redux_kerillian_01",
+				"nwd_hub_whispers_redux_kerillian_02",
+				"nwd_hub_whispers_redux_kerillian_03",
+				"nwd_hub_whispers_redux_kerillian_04",
+				"nwd_hub_whispers_redux_kerillian_05",
+				"nwd_hub_whispers_redux_kerillian_06",
+				"nwd_hub_whispers_redux_kerillian_07",
+				"nwd_hub_whispers_redux_kerillian_08",
+				"nwd_hub_whispers_redux_kerillian_09",
+				"nwd_hub_whispers_redux_kerillian_10"
+			},
+			randomize_indexes = {},
+			sound_distance = math.huge,
+			sound_events = {
+				"ndw_morris_daemon_whispers_19",
+				"ndw_morris_daemon_whispers_20",
+				"ndw_morris_daemon_whispers_21",
+				"ndw_morris_daemon_whispers_22",
+				"ndw_morris_daemon_whispers_23",
+				"ndw_morris_daemon_whispers_24",
+				"nwd_hub_whispers_redux_kerillian_01",
+				"nwd_hub_whispers_redux_kerillian_02",
+				"nwd_hub_whispers_redux_kerillian_03",
+				"nwd_hub_whispers_redux_kerillian_04",
+				"nwd_hub_whispers_redux_kerillian_05",
+				"nwd_hub_whispers_redux_kerillian_06",
+				"nwd_hub_whispers_redux_kerillian_07",
+				"nwd_hub_whispers_redux_kerillian_08",
+				"nwd_hub_whispers_redux_kerillian_09",
+				"nwd_hub_whispers_redux_kerillian_10"
+			},
+			sound_events_duration = {
+				6.9955329895019,
+				6.3398637771606,
+				6.9110884666443,
+				10.011269569397,
+				11.321927070618,
+				10.094920158386,
+				9.2270002365112,
+				10.237000465393,
+				9.5080003738403,
+				9.5920000076294,
+				11.727000236511,
+				11.413999557495,
+				10.465999603272,
+				11.237000465393,
+				13.90299987793,
+				13.746999740601
+			}
+		},
+		ndw_morris_daemon_whispers_hub_kruber = {
+			intended_player_profile = "empire_soldier",
+			randomize_indexes_n = 0,
+			face_animations_n = 16,
+			database = "hub_conversations_morris",
+			category = "story_talk_keep",
+			dialogue_animations_n = 16,
+			sound_events_n = 16,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"ndw_morris_daemon_whispers_25",
+				"ndw_morris_daemon_whispers_26",
+				"ndw_morris_daemon_whispers_27",
+				"ndw_morris_daemon_whispers_28",
+				"ndw_morris_daemon_whispers_29",
+				"ndw_morris_daemon_whispers_30",
+				"nwd_hub_whispers_redux_kruber_01",
+				"nwd_hub_whispers_redux_kruber_02",
+				"nwd_hub_whispers_redux_kruber_03",
+				"nwd_hub_whispers_redux_kruber_04",
+				"nwd_hub_whispers_redux_kruber_05",
+				"nwd_hub_whispers_redux_kruber_06",
+				"nwd_hub_whispers_redux_kruber_07",
+				"nwd_hub_whispers_redux_kruber_08",
+				"nwd_hub_whispers_redux_kruber_09",
+				"nwd_hub_whispers_redux_kruber_10"
+			},
+			randomize_indexes = {},
+			sound_distance = math.huge,
+			sound_event_filters = {
+				ndw_morris_daemon_whispers_25 = {
+					{
+						"global_context",
+						"es_questingknight",
+						OP.EQ,
+						false
+					}
+				},
+				ndw_morris_daemon_whispers_26 = {
+					{
+						"global_context",
+						"es_questingknight",
+						OP.EQ,
+						false
+					}
+				}
+			},
+			sound_events = {
+				"ndw_morris_daemon_whispers_25",
+				"ndw_morris_daemon_whispers_26",
+				"ndw_morris_daemon_whispers_27",
+				"ndw_morris_daemon_whispers_28",
+				"ndw_morris_daemon_whispers_29",
+				"ndw_morris_daemon_whispers_30",
+				"nwd_hub_whispers_redux_kruber_01",
+				"nwd_hub_whispers_redux_kruber_02",
+				"nwd_hub_whispers_redux_kruber_03",
+				"nwd_hub_whispers_redux_kruber_04",
+				"nwd_hub_whispers_redux_kruber_05",
+				"nwd_hub_whispers_redux_kruber_06",
+				"nwd_hub_whispers_redux_kruber_07",
+				"nwd_hub_whispers_redux_kruber_08",
+				"nwd_hub_whispers_redux_kruber_09",
+				"nwd_hub_whispers_redux_kruber_10"
+			},
+			sound_events_duration = {
+				8.5390024185181,
+				11.126734733582,
+				11.03074836731,
+				8.644829750061,
+				9.0631294250488,
+				10.203220367432,
+				7.5110001564026,
+				9.8830003738403,
+				9.9029998779297,
+				7.5310001373291,
+				9.3669996261597,
+				10.5640001297,
+				9.9040002822876,
+				9.2019996643066,
+				10.914999961853,
+				14.937000274658
+			}
+		},
+		ndw_morris_daemon_whispers_hub_sienna = {
+			intended_player_profile = "bright_wizard",
+			randomize_indexes_n = 0,
+			face_animations_n = 16,
+			database = "hub_conversations_morris",
+			category = "story_talk_keep",
+			dialogue_animations_n = 16,
+			sound_events_n = 16,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"ndw_morris_daemon_whispers_07",
+				"ndw_morris_daemon_whispers_08",
+				"ndw_morris_daemon_whispers_09",
+				"ndw_morris_daemon_whispers_10",
+				"ndw_morris_daemon_whispers_11",
+				"ndw_morris_daemon_whispers_12",
+				"nwd_hub_whispers_redux_sienna_01",
+				"nwd_hub_whispers_redux_sienna_02",
+				"nwd_hub_whispers_redux_sienna_03",
+				"nwd_hub_whispers_redux_sienna_04",
+				"nwd_hub_whispers_redux_sienna_05",
+				"nwd_hub_whispers_redux_sienna_06",
+				"nwd_hub_whispers_redux_sienna_07",
+				"nwd_hub_whispers_redux_sienna_08",
+				"nwd_hub_whispers_redux_sienna_09",
+				"nwd_hub_whispers_redux_sienna_10"
+			},
+			randomize_indexes = {},
+			sound_distance = math.huge,
+			sound_events = {
+				"ndw_morris_daemon_whispers_07",
+				"ndw_morris_daemon_whispers_08",
+				"ndw_morris_daemon_whispers_09",
+				"ndw_morris_daemon_whispers_10",
+				"ndw_morris_daemon_whispers_11",
+				"ndw_morris_daemon_whispers_12",
+				"nwd_hub_whispers_redux_sienna_01",
+				"nwd_hub_whispers_redux_sienna_02",
+				"nwd_hub_whispers_redux_sienna_03",
+				"nwd_hub_whispers_redux_sienna_04",
+				"nwd_hub_whispers_redux_sienna_05",
+				"nwd_hub_whispers_redux_sienna_06",
+				"nwd_hub_whispers_redux_sienna_07",
+				"nwd_hub_whispers_redux_sienna_08",
+				"nwd_hub_whispers_redux_sienna_09",
+				"nwd_hub_whispers_redux_sienna_10"
+			},
+			sound_events_duration = {
+				8.7563714981079,
+				5.4378685951233,
+				8.984354019165,
+				9.0411338806152,
+				9.0541038513184,
+				7.112539768219,
+				11.100999832153,
+				10.192000389099,
+				10.571999549866,
+				10.571999549866,
+				10.222999572754,
+				9.4099998474121,
+				9.4670000076294,
+				10.935000419617,
+				10.99199962616,
+				10.977999687195
+			}
+		},
+		ndw_morris_daemon_whispers_hub_victor = {
+			intended_player_profile = "witch_hunter",
+			randomize_indexes_n = 0,
+			face_animations_n = 16,
+			database = "hub_conversations_morris",
+			category = "story_talk_keep",
+			dialogue_animations_n = 16,
+			sound_events_n = 16,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"ndw_morris_daemon_whispers_01",
+				"ndw_morris_daemon_whispers_02",
+				"ndw_morris_daemon_whispers_03",
+				"ndw_morris_daemon_whispers_04",
+				"ndw_morris_daemon_whispers_05",
+				"ndw_morris_daemon_whispers_06",
+				"nwd_hub_whispers_redux_saltzpyre_01",
+				"nwd_hub_whispers_redux_saltzpyre_02",
+				"nwd_hub_whispers_redux_saltzpyre_03",
+				"nwd_hub_whispers_redux_saltzpyre_04",
+				"nwd_hub_whispers_redux_saltzpyre_05",
+				"nwd_hub_whispers_redux_saltzpyre_06",
+				"nwd_hub_whispers_redux_saltzpyre_07",
+				"nwd_hub_whispers_redux_saltzpyre_08",
+				"nwd_hub_whispers_redux_saltzpyre_09",
+				"nwd_hub_whispers_redux_saltzpyre_10"
+			},
+			randomize_indexes = {},
+			sound_distance = math.huge,
+			sound_events = {
+				"ndw_morris_daemon_whispers_01",
+				"ndw_morris_daemon_whispers_02",
+				"ndw_morris_daemon_whispers_03",
+				"ndw_morris_daemon_whispers_04",
+				"ndw_morris_daemon_whispers_05",
+				"ndw_morris_daemon_whispers_06",
+				"nwd_hub_whispers_redux_saltzpyre_01",
+				"nwd_hub_whispers_redux_saltzpyre_02",
+				"nwd_hub_whispers_redux_saltzpyre_03",
+				"nwd_hub_whispers_redux_saltzpyre_04",
+				"nwd_hub_whispers_redux_saltzpyre_05",
+				"nwd_hub_whispers_redux_saltzpyre_06",
+				"nwd_hub_whispers_redux_saltzpyre_07",
+				"nwd_hub_whispers_redux_saltzpyre_08",
+				"nwd_hub_whispers_redux_saltzpyre_09",
+				"nwd_hub_whispers_redux_saltzpyre_10"
+			},
+			sound_events_duration = {
+				5.2502040863037,
+				6.2606120109558,
+				9.4107255935669,
+				9.3419275283813,
+				9.5092973709106,
+				6.8406801223755,
+				10.260000228882,
+				15.043000221252,
+				11.64999961853,
+				11.569000244141,
+				11.609000205994,
+				12.581000328064,
+				11.64999961853,
+				13.324000358582,
+				10.335000038147,
+				11.303000450134
+			}
+		},
+		nik_hub_grudgemark_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			sound_distance = 30,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "nik_hub_grudgemark_a_01",
+				[2] = "nik_hub_grudgemark_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "nik_hub_grudgemark_a_01",
+				[2] = "nik_hub_grudgemark_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.8035416603088,
+				[2] = 3.5216457843781
+			}
+		},
+		nik_morris_hub_okri_grudge = {
+			randomize_indexes_n = 0,
+			face_animations_n = 10,
+			database = "hub_conversations_morris",
+			sound_events_n = 10,
+			sound_distance = 15,
+			category = "story_talk_keep",
+			dialogue_animations_n = 10,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"nik_morris_hub_okri_grudge_01",
+				"nik_morris_hub_okri_grudge_02",
+				"nik_morris_hub_okri_grudge_03",
+				"nik_morris_hub_okri_grudge_04",
+				"nik_morris_hub_okri_grudge_05",
+				"nik_morris_hub_okri_grudge_06",
+				"nik_morris_hub_okri_grudge_07",
+				"nik_morris_hub_okri_grudge_08",
+				"nik_morris_hub_okri_grudge_09",
+				"nik_morris_hub_okri_grudge_10"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"nik_morris_hub_okri_grudge_01",
+				"nik_morris_hub_okri_grudge_02",
+				"nik_morris_hub_okri_grudge_03",
+				"nik_morris_hub_okri_grudge_04",
+				"nik_morris_hub_okri_grudge_05",
+				"nik_morris_hub_okri_grudge_06",
+				"nik_morris_hub_okri_grudge_07",
+				"nik_morris_hub_okri_grudge_08",
+				"nik_morris_hub_okri_grudge_09",
+				"nik_morris_hub_okri_grudge_10"
+			},
+			sound_events_duration = {
+				7.0590000152588,
+				6.4412708282471,
+				7.8485832214356,
+				7.1881456375122,
+				4.3000245094299,
+				7.6347708702087,
+				6.0818748474121,
+				5.8747081756592,
+				7.9390001296997,
+				9.9809789657593
+			}
+		},
+		nik_morris_idle_01 = {
+			randomize_indexes_n = 0,
+			face_animations_n = 20,
+			database = "hub_conversations_morris",
+			sound_events_n = 20,
+			sound_distance = 15,
+			category = "story_talk_keep",
+			dialogue_animations_n = 20,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"nik_morris_idle_01",
+				"nik_morris_idle_02",
+				"nik_morris_idle_03",
+				"nik_morris_idle_04",
+				"nik_morris_idle_05",
+				"nik_morris_idle_06",
+				"nik_morris_idle_07",
+				"nik_morris_idle_08",
+				"nik_morris_idle_09",
+				"nik_morris_idle_10",
+				"nik_morris_idle_11",
+				"nik_morris_idle_12",
+				"nik_morris_idle_13",
+				"nik_morris_idle_14",
+				"nik_morris_idle_15",
+				"nik_morris_idle_16",
+				"nik_morris_idle_17",
+				"nik_morris_idle_18",
+				"nik_morris_idle_19",
+				"nik_morris_idle_20"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"nik_morris_idle_01",
+				"nik_morris_idle_02",
+				"nik_morris_idle_03",
+				"nik_morris_idle_04",
+				"nik_morris_idle_05",
+				"nik_morris_idle_06",
+				"nik_morris_idle_07",
+				"nik_morris_idle_08",
+				"nik_morris_idle_09",
+				"nik_morris_idle_10",
+				"nik_morris_idle_11",
+				"nik_morris_idle_12",
+				"nik_morris_idle_13",
+				"nik_morris_idle_14",
+				"nik_morris_idle_15",
+				"nik_morris_idle_16",
+				"nik_morris_idle_17",
+				"nik_morris_idle_18",
+				"nik_morris_idle_19",
+				"nik_morris_idle_20"
+			},
+			sound_events_duration = {
+				7.2243332862854,
+				5.710437297821,
+				5.1011877059936,
+				6.4661664962769,
+				4.5493960380554,
+				5.5658540725708,
+				7.917854309082,
+				5.7921876907349,
+				5.9557085037231,
+				6.4053540229797,
+				6.0374584197998,
+				3.8504583835602,
+				3.9395208358765,
+				5.7401041984558,
+				4.4622707366943,
+				4.9907083511353,
+				5.9557085037231,
+				9.2668333053589,
+				6.106062412262,
+				5.681583404541
+			}
+		},
+		nik_morris_idle_02 = {
+			randomize_indexes_n = 0,
+			face_animations_n = 15,
+			database = "hub_conversations_morris",
+			sound_events_n = 15,
+			sound_distance = 15,
+			category = "story_talk_keep",
+			dialogue_animations_n = 15,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"nik_morris_hub_idle_01",
+				"nik_morris_hub_idle_02",
+				"nik_morris_hub_idle_03",
+				"nik_morris_hub_idle_04",
+				"nik_morris_hub_idle_05",
+				"nik_morris_hub_idle_06",
+				"nik_morris_hub_idle_07",
+				"nik_morris_hub_idle_08",
+				"nik_morris_hub_idle_09",
+				"nik_morris_hub_idle_10",
+				"nik_morris_hub_idle_11",
+				"nik_morris_hub_idle_12",
+				"nik_morris_hub_idle_13",
+				"nik_morris_hub_idle_14",
+				"nik_morris_hub_idle_15"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"nik_morris_hub_idle_01",
+				"nik_morris_hub_idle_02",
+				"nik_morris_hub_idle_03",
+				"nik_morris_hub_idle_04",
+				"nik_morris_hub_idle_05",
+				"nik_morris_hub_idle_06",
+				"nik_morris_hub_idle_07",
+				"nik_morris_hub_idle_08",
+				"nik_morris_hub_idle_09",
+				"nik_morris_hub_idle_10",
+				"nik_morris_hub_idle_11",
+				"nik_morris_hub_idle_12",
+				"nik_morris_hub_idle_13",
+				"nik_morris_hub_idle_14",
+				"nik_morris_hub_idle_15"
+			},
+			sound_events_duration = {
+				6.9757914543152,
+				6.1823334693909,
+				4.4970002174377,
+				6.348708152771,
+				4.2792916297913,
+				6.7460622787476,
+				8.6294584274292,
+				3.914999961853,
+				5.2647500038147,
+				6.8620834350586,
+				6.7306251525879,
+				6.3495206832886,
+				7.6345624923706,
+				6.437979221344,
+				8.5086669921875
+			}
+		},
+		pbw_hub_grudgemark_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_hub_grudgemark_a_01",
+				[2] = "pbw_hub_grudgemark_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_hub_grudgemark_a_01",
+				[2] = "pbw_hub_grudgemark_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.1772291660309,
+				[2] = 4.3572916984558
+			}
+		},
+		pbw_hub_grudgemark_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_hub_grudgemark_b_01",
+				[2] = "pbw_hub_grudgemark_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_hub_grudgemark_b_01",
+				[2] = "pbw_hub_grudgemark_b_02"
+			},
+			sound_events_duration = {
+				[1] = 2.9363541603088,
+				[2] = 3.5231873989105
+			}
+		},
+		pbw_hub_grudgemark_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_hub_grudgemark_c_01",
+				[2] = "pbw_hub_grudgemark_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_hub_grudgemark_c_01",
+				[2] = "pbw_hub_grudgemark_c_02"
+			},
+			sound_events_duration = {
+				[1] = 4.2643542289734,
+				[2] = 2.8479583263397
+			}
+		},
+		pbw_hub_whispers_redux_response = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_hub_whispers_redux_response_01",
+				[2] = "pbw_hub_whispers_redux_response_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_hub_whispers_redux_response_01",
+				[2] = "pbw_hub_whispers_redux_response_02"
+			},
+			sound_events_duration = {
+				[1] = 2.2038333415985,
+				[2] = 1.9983333349228
+			}
+		},
+		pbw_hub_whispers_redux_response_rejoinder = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pbw_hub_whispers_redux_response_rejoinder_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pbw_hub_whispers_redux_response_rejoinder_02"
+			},
+			sound_events_duration = {
+				[1] = 2.933833360672,
+				[2] = 2.3422708511352
+			}
+		},
+		pbw_morris_hub_conversation_one_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_morris_hub_conversation_one_a_01",
+				[2] = "pbw_morris_hub_conversation_one_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_morris_hub_conversation_one_a_01",
+				[2] = "pbw_morris_hub_conversation_one_a_02"
+			},
+			sound_events_duration = {
+				[1] = 4.2449584007263,
+				[2] = 3.6178750991821
+			}
+		},
+		pbw_morris_hub_conversation_one_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_morris_hub_conversation_one_b_01",
+				[2] = "pbw_morris_hub_conversation_one_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_morris_hub_conversation_one_b_01",
+				[2] = "pbw_morris_hub_conversation_one_b_02"
+			},
+			sound_events_duration = {
+				[1] = 4.7663540840149,
+				[2] = 5.4693541526794
+			}
+		},
+		pbw_morris_hub_conversation_one_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pbw_morris_hub_conversation_one_c_01",
+				[2] = "pbw_morris_hub_conversation_one_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pbw_morris_hub_conversation_one_c_01",
+				[2] = "pbw_morris_hub_conversation_one_c_02"
+			},
+			sound_events_duration = {
+				[1] = 2.9101874828339,
+				[2] = 4.4816875457764
+			}
+		},
+		pdr_hub_grudgemark_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_hub_grudgemark_a_01",
+				[2] = "pdr_hub_grudgemark_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_hub_grudgemark_a_01",
+				[2] = "pdr_hub_grudgemark_a_02"
+			},
+			sound_events_duration = {
+				[1] = 4.3674793243408,
+				[2] = 4.3531875610352
+			}
+		},
+		pdr_hub_grudgemark_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_hub_grudgemark_b_01",
+				[2] = "pdr_hub_grudgemark_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_hub_grudgemark_b_01",
+				[2] = "pdr_hub_grudgemark_b_02"
+			},
+			sound_events_duration = {
+				[1] = 2.6660625934601,
+				[2] = 6.6596040725708
+			}
+		},
+		pdr_hub_grudgemark_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_hub_grudgemark_c_01",
+				[2] = "pdr_hub_grudgemark_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_hub_grudgemark_c_01",
+				[2] = "pdr_hub_grudgemark_c_02"
+			},
+			sound_events_duration = {
+				[1] = 3.0067501068115,
+				[2] = 4.3076457977295
+			}
+		},
+		pdr_hub_whispers_redux_response = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_hub_whispers_redux_response_01",
+				[2] = "pdr_hub_whispers_redux_response_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_hub_whispers_redux_response_01",
+				[2] = "pdr_hub_whispers_redux_response_02"
+			},
+			sound_events_duration = {
+				[1] = 1.7124999761581,
+				[2] = 2.016104221344
+			}
+		},
+		pdr_hub_whispers_redux_response_rejoinder = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pdr_hub_whispers_redux_response_rejoinder_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pdr_hub_whispers_redux_response_rejoinder_02"
+			},
+			sound_events_duration = {
+				[1] = 2.8027501106262,
+				[2] = 3.5653541088104
+			}
+		},
+		pdr_morris_hub_conversation_one_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_morris_hub_conversation_one_a_01",
+				[2] = "pdr_morris_hub_conversation_one_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_morris_hub_conversation_one_a_01",
+				[2] = "pdr_morris_hub_conversation_one_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.6872498989105,
+				[2] = 4.6014375686645
+			}
+		},
+		pdr_morris_hub_conversation_one_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_morris_hub_conversation_one_b_01",
+				[2] = "pdr_morris_hub_conversation_one_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_morris_hub_conversation_one_b_01",
+				[2] = "pdr_morris_hub_conversation_one_b_02"
+			},
+			sound_events_duration = {
+				[1] = 4.0275831222534,
+				[2] = 3.4693958759308
+			}
+		},
+		pdr_morris_hub_conversation_one_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_morris_hub_conversation_one_c_01",
+				[2] = "pdr_morris_hub_conversation_one_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_morris_hub_conversation_one_c_01",
+				[2] = "pdr_morris_hub_conversation_one_c_02"
+			},
+			sound_events_duration = {
+				[1] = 3.7303333282471,
+				[2] = 3.35972905159
+			}
+		},
+		pes_hub_grudgemark_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_hub_grudgemark_a_01",
+				[2] = "pes_hub_grudgemark_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_hub_grudgemark_a_01",
+				[2] = "pes_hub_grudgemark_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.6672084331513,
+				[2] = 4.0334377288818
+			}
+		},
+		pes_hub_grudgemark_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_hub_grudgemark_b_01",
+				[2] = "pes_hub_grudgemark_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_hub_grudgemark_b_01",
+				[2] = "pes_hub_grudgemark_b_02"
+			},
+			sound_events_duration = {
+				[1] = 2.3049376010895,
+				[2] = 3.5836040973663
+			}
+		},
+		pes_hub_grudgemark_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_hub_grudgemark_c_01",
+				[2] = "pes_hub_grudgemark_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_hub_grudgemark_c_01",
+				[2] = "pes_hub_grudgemark_c_02"
+			},
+			sound_events_duration = {
+				[1] = 2.9455416202545,
+				[2] = 2.9496250152588
+			}
+		},
+		pes_hub_whispers_redux_response = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_hub_whispers_redux_response_01",
+				[2] = "pes_hub_whispers_redux_response_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_hub_whispers_redux_response_01",
+				[2] = "pes_hub_whispers_redux_response_02"
+			},
+			sound_events_duration = {
+				[1] = 1.5511041879654,
+				[2] = 4.1674790382385
+			}
+		},
+		pes_hub_whispers_redux_response_rejoinder = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pes_hub_whispers_redux_response_rejoinder_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pes_hub_whispers_redux_response_rejoinder_02"
+			},
+			sound_events_duration = {
+				[1] = 2.8368124961853,
+				[2] = 1.9669375419617
+			}
+		},
+		pes_morris_hub_conversation_one_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_morris_hub_conversation_one_a_01",
+				[2] = "pes_morris_hub_conversation_one_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_morris_hub_conversation_one_a_01",
+				[2] = "pes_morris_hub_conversation_one_a_02"
+			},
+			sound_events_duration = {
+				[1] = 2.5063750743866,
+				[2] = 2.9255623817444
+			}
+		},
+		pes_morris_hub_conversation_one_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_morris_hub_conversation_one_b_01",
+				[2] = "pes_morris_hub_conversation_one_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_morris_hub_conversation_one_b_01",
+				[2] = "pes_morris_hub_conversation_one_b_02"
+			},
+			sound_events_duration = {
+				[1] = 5.2262916564941,
+				[2] = 4.025812625885
+			}
+		},
+		pes_morris_hub_conversation_one_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_morris_hub_conversation_one_c_01",
+				[2] = "pes_morris_hub_conversation_one_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pes_morris_hub_conversation_one_c_01",
+				[2] = "pes_morris_hub_conversation_one_c_02"
+			},
+			sound_events_duration = {
+				[1] = 2.2161667346954,
+				[2] = 4.6671667098999
+			}
+		},
+		pwe_hub_grudgemark_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_hub_grudgemark_a_01",
+				[2] = "pwe_hub_grudgemark_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_hub_grudgemark_a_01",
+				[2] = "pwe_hub_grudgemark_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.5150833129883,
+				[2] = 4.4699792861939
+			}
+		},
+		pwe_hub_grudgemark_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_hub_grudgemark_b_01",
+				[2] = "pwe_hub_grudgemark_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_hub_grudgemark_b_01",
+				[2] = "pwe_hub_grudgemark_b_02"
+			},
+			sound_events_duration = {
+				[1] = 4.3599581718445,
+				[2] = 4.8696250915527
+			}
+		},
+		pwe_hub_grudgemark_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_hub_grudgemark_c_01",
+				[2] = "pwe_hub_grudgemark_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_hub_grudgemark_c_01",
+				[2] = "pwe_hub_grudgemark_c_02"
+			},
+			sound_events_duration = {
+				[1] = 3.1077709197998,
+				[2] = 4.7193541526794
+			}
+		},
+		pwe_hub_whispers_redux_response = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_hub_whispers_redux_response_01",
+				[2] = "pwe_hub_whispers_redux_response_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_hub_whispers_redux_response_01",
+				[2] = "pwe_hub_whispers_redux_response_02"
+			},
+			sound_events_duration = {
+				[1] = 1.4391875267029,
+				[2] = 1.5157083272934
+			}
+		},
+		pwe_hub_whispers_redux_response_rejoinder = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pwe_hub_whispers_redux_response_rejoinder_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pwe_hub_whispers_redux_response_rejoinder_02"
+			},
+			sound_events_duration = {
+				[1] = 3.0649790763855,
+				[2] = 4.1995415687561
+			}
+		},
+		pwe_morris_hub_conversation_one_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_morris_hub_conversation_one_a_01",
+				[2] = "pwe_morris_hub_conversation_one_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_morris_hub_conversation_one_a_01",
+				[2] = "pwe_morris_hub_conversation_one_a_02"
+			},
+			sound_events_duration = {
+				[1] = 4.1728749275208,
+				[2] = 4.8879790306091
+			}
+		},
+		pwe_morris_hub_conversation_one_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_morris_hub_conversation_one_b_01",
+				[2] = "pwe_morris_hub_conversation_one_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_morris_hub_conversation_one_b_01",
+				[2] = "pwe_morris_hub_conversation_one_b_02"
+			},
+			sound_events_duration = {
+				[1] = 4.983895778656,
+				[2] = 3.9909167289734
+			}
+		},
+		pwe_morris_hub_conversation_one_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_morris_hub_conversation_one_c_01",
+				[2] = "pwe_morris_hub_conversation_one_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_morris_hub_conversation_one_c_01",
+				[2] = "pwe_morris_hub_conversation_one_c_02"
+			},
+			sound_events_duration = {
+				[1] = 2.4623334407806,
+				[2] = 4.048770904541
+			}
+		},
+		pwh_hub_grudgemark_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_hub_grudgemark_a_01",
+				[2] = "pwh_hub_grudgemark_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_hub_grudgemark_a_01",
+				[2] = "pwh_hub_grudgemark_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.694375038147,
+				[2] = 4.3389792442322
+			}
+		},
+		pwh_hub_grudgemark_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_hub_grudgemark_b_01",
+				[2] = "pwh_hub_grudgemark_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_hub_grudgemark_b_01",
+				[2] = "pwh_hub_grudgemark_b_02"
+			},
+			sound_events_duration = {
+				[1] = 4.133749961853,
+				[2] = 6.6855626106262
+			}
+		},
+		pwh_hub_grudgemark_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_hub_grudgemark_c_01",
+				[2] = "pwh_hub_grudgemark_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_hub_grudgemark_c_01",
+				[2] = "pwh_hub_grudgemark_c_02"
+			},
+			sound_events_duration = {
+				[1] = 5.667396068573,
+				[2] = 3.2976458072662
+			}
+		},
+		pwh_hub_whispers_redux_response = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_hub_whispers_redux_response_01",
+				[2] = "pwh_hub_whispers_redux_response_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_hub_whispers_redux_response_01",
+				[2] = "pwh_hub_whispers_redux_response_02"
+			},
+			sound_events_duration = {
+				[1] = 1.2599791288376,
+				[2] = 2.0559375286102
+			}
+		},
+		pwh_hub_whispers_redux_response_rejoinder = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pwh_hub_whispers_redux_response_rejoinder_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_hub_whispers_redux_response_rejoinder_01",
+				[2] = "pwh_hub_whispers_redux_response_rejoinder_02"
+			},
+			sound_events_duration = {
+				[1] = 3.1380000114441,
+				[2] = 3.5477707386017
+			}
+		},
+		pwh_morris_hub_conversation_one_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_morris_hub_conversation_one_a_01",
+				[2] = "pwh_morris_hub_conversation_one_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_morris_hub_conversation_one_a_01",
+				[2] = "pwh_morris_hub_conversation_one_a_02"
+			},
+			sound_events_duration = {
+				[1] = 4.2901668548584,
+				[2] = 4.3963127136231
+			}
+		},
+		pwh_morris_hub_conversation_one_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_morris_hub_conversation_one_b_01",
+				[2] = "pwh_morris_hub_conversation_one_b_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_morris_hub_conversation_one_b_01",
+				[2] = "pwh_morris_hub_conversation_one_b_02"
+			},
+			sound_events_duration = {
+				[1] = 6.930145740509,
+				[2] = 7.5941667556763
+			}
+		},
+		pwh_morris_hub_conversation_one_c = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "hub_conversations_morris",
+			sound_events_n = 2,
+			category = "story_talk_keep",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwh_morris_hub_conversation_one_c_01",
+				[2] = "pwh_morris_hub_conversation_one_c_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwh_morris_hub_conversation_one_c_01",
+				[2] = "pwh_morris_hub_conversation_one_c_02"
+			},
+			sound_events_duration = {
+				[1] = 4.3605418205261,
+				[2] = 5.5029792785644
+			}
+		},
+		pwh_morris_saltzpyre_monologue = {
+			randomize_indexes_n = 0,
+			face_animations_n = 11,
+			database = "hub_conversations_morris",
+			sound_events_n = 11,
+			category = "story_talk_keep",
+			dialogue_animations_n = 11,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pwh_morris_saltzpyre_monologue_01",
+				"pwh_morris_saltzpyre_monologue_02",
+				"pwh_morris_saltzpyre_monologue_03",
+				"pwh_morris_saltzpyre_monologue_04",
+				"pwh_morris_saltzpyre_monologue_05",
+				"pwh_morris_saltzpyre_monologue_06",
+				"pwh_morris_saltzpyre_monologue_07",
+				"pwh_morris_saltzpyre_monologue_08",
+				"pwh_morris_saltzpyre_monologue_09",
+				"pwh_morris_saltzpyre_monologue_10",
+				"pwh_morris_saltzpyre_monologue_11"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwh_morris_saltzpyre_monologue_01",
+				"pwh_morris_saltzpyre_monologue_02",
+				"pwh_morris_saltzpyre_monologue_03",
+				"pwh_morris_saltzpyre_monologue_04",
+				"pwh_morris_saltzpyre_monologue_05",
+				"pwh_morris_saltzpyre_monologue_06",
+				"pwh_morris_saltzpyre_monologue_07",
+				"pwh_morris_saltzpyre_monologue_08",
+				"pwh_morris_saltzpyre_monologue_09",
+				"pwh_morris_saltzpyre_monologue_10",
+				"pwh_morris_saltzpyre_monologue_11"
+			},
+			sound_events_duration = {
+				12.836833000183,
+				10.173542022705,
+				11.336062431335,
+				11.800229072571,
+				13.083541870117,
+				10.855375289917,
+				11.673146247864,
+				13.101499557495,
+				14.055062294006,
+				12.624771118164,
+				4.5355625152588
+			}
+		}
+	})
+end
