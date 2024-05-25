@@ -23,101 +23,125 @@ if not StoreLayoutConfig then
 				ranger = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				ironbreaker = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				slayer = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				engineer = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				}
 			},
 			kruber = {
 				mercenary = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				huntsman = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				knight = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				questingknight = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				}
 			},
 			kerillian = {
 				waywatcher = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				maidenguard = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				shade = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				}
 			},
 			victor = {
 				captain = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				bountyhunter = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				zealot = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				priest = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				}
 			},
 			sienna = {
 				scholar = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				adept = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				},
 				unchained = {
 					weapon_skins = "item_details",
 					hats = "item_details",
-					skins = "item_details"
+					skins = "item_details",
+					frames = "item_details"
 				}
+			},
+			event = {
+				weapon_skins = "item_details",
+				hats = "item_details",
+				skins = "item_details",
+				frames = "item_details"
 			}
 		}
 	}
@@ -240,6 +264,24 @@ if not StoreLayoutConfig then
 		item_filter = "item_type == weapon_skin",
 		sort_order = 3,
 		category_button_texture = "store_category_icon_weapons"
+	}
+	StoreLayoutConfig.pages.frames = {
+		sound_event_enter = "Play_hud_store_category_button",
+		layout = "item_list",
+		display_name = "frame",
+		type = "item",
+		item_filter = "item_type == frame",
+		sort_order = 4,
+		category_button_texture = "store_category_icon_portrait_frames"
+	}
+	StoreLayoutConfig.pages.event = {
+		sound_event_enter = "Play_hud_store_category_button",
+		layout = "item_list",
+		display_name = "achv_menu_event_category_title",
+		type = "item",
+		item_filter = "is_event_item",
+		sort_order = 100,
+		category_button_texture = "store_category_icon_portrait_frames"
 	}
 	StoreLayoutConfig.pages.bardin = {
 		sound_event_enter = "Play_hud_store_bardin",
@@ -450,16 +492,6 @@ if not StoreLayoutConfig then
 		end
 	end
 end
-
-local ORDER_RARITY = {
-	common = 2,
-	promo = 7,
-	magic = 5,
-	plentiful = 1,
-	exotic = 4,
-	rare = 3,
-	unique = 6
-}
 
 StoreLayoutConfig.make_sort_key = function (item)
 	local backend_items = Managers.backend:get_interface("items")

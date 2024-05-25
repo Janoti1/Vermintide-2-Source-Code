@@ -29,16 +29,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMESET
 			}
 		}
@@ -73,16 +73,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMESET
 			}
 		}
@@ -117,16 +117,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMESET
 			}
 		}
@@ -161,16 +161,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMESET
 			}
 		}
@@ -205,16 +205,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMESET
 			}
 		}
@@ -249,16 +249,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMESET
 			}
 		}
@@ -293,16 +293,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMESET
 			}
 		}
@@ -340,7 +340,7 @@ return function ()
 				"time_since_vw_objective_in_sight",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
@@ -381,16 +381,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMESET
 			}
 		}
@@ -425,16 +425,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_bright_wizard_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMESET
 			}
 		}
@@ -469,16 +469,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMESET
 			}
 		}
@@ -513,16 +513,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMESET
 			}
 		}
@@ -557,16 +557,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMESET
 			}
 		}
@@ -601,16 +601,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMESET
 			}
 		}
@@ -645,16 +645,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMESET
 			}
 		}
@@ -689,16 +689,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMESET
 			}
 		}
@@ -733,16 +733,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMESET
 			}
 		}
@@ -780,7 +780,7 @@ return function ()
 				"time_since_vw_objective_in_sight",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
@@ -821,16 +821,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMESET
 			}
 		}
@@ -865,16 +865,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_dwarf_ranger_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMESET
 			}
 		}
@@ -909,16 +909,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMESET
 			}
 		}
@@ -953,16 +953,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMESET
 			}
 		}
@@ -997,16 +997,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMESET
 			}
 		}
@@ -1041,16 +1041,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMESET
 			}
 		}
@@ -1085,16 +1085,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMESET
 			}
 		}
@@ -1129,16 +1129,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMESET
 			}
 		}
@@ -1173,16 +1173,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMESET
 			}
 		}
@@ -1220,7 +1220,7 @@ return function ()
 				"time_since_vw_objective_in_sight",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
@@ -1261,16 +1261,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMESET
 			}
 		}
@@ -1305,16 +1305,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_empire_soldier_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMESET
 			}
 		}
@@ -1349,16 +1349,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMESET
 			}
 		}
@@ -1393,16 +1393,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMESET
 			}
 		}
@@ -1437,16 +1437,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMESET
 			}
 		}
@@ -1481,16 +1481,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMESET
 			}
 		}
@@ -1525,16 +1525,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMESET
 			}
 		}
@@ -1569,16 +1569,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMESET
 			}
 		}
@@ -1613,16 +1613,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMESET
 			}
 		}
@@ -1660,7 +1660,7 @@ return function ()
 				"time_since_vw_objective_in_sight",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
@@ -1701,16 +1701,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMESET
 			}
 		}
@@ -1745,16 +1745,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_wood_elf_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMESET
 			}
 		}
@@ -1789,16 +1789,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_affirmative",
+				"time_since_vw_affirmative",
 				OP.TIMESET
 			}
 		}
@@ -1833,16 +1833,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_answer_ping",
+				"time_since_vw_answer_ping",
 				OP.TIMESET
 			}
 		}
@@ -1877,16 +1877,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_attack_now",
+				"time_since_vw_attack_now",
 				OP.TIMESET
 			}
 		}
@@ -1921,16 +1921,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_cover_me",
+				"time_since_vw_cover_me",
 				OP.TIMESET
 			}
 		}
@@ -1965,16 +1965,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_gather",
+				"time_since_vw_gather",
 				OP.TIMESET
 			}
 		}
@@ -2009,16 +2009,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_go_there",
+				"time_since_vw_go_there",
 				OP.TIMESET
 			}
 		}
@@ -2053,16 +2053,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_negation",
+				"time_since_vw_negation",
 				OP.TIMESET
 			}
 		}
@@ -2100,7 +2100,7 @@ return function ()
 				"time_since_vw_objective_in_sight",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
@@ -2141,16 +2141,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_thank_you",
+				"time_since_vw_thank_you",
 				OP.TIMESET
 			}
 		}
@@ -2185,16 +2185,16 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				7
 			}
 		},
 		on_done = {
 			{
 				"user_memory",
-				"time_since_witch_hunter_vw_wait",
+				"time_since_vw_wait",
 				OP.TIMESET
 			}
 		}

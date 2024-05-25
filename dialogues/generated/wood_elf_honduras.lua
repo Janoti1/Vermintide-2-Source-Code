@@ -8951,6 +8951,36 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pwe_objective_dropping_grimoire",
+		name = "pwe_objective_dropping_grimoire",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"throwing_item"
+			},
+			{
+				"query_context",
+				"item_type",
+				OP.EQ,
+				"grimoire"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			}
+		}
+	})
+	define_rule({
 		name = "pwe_objective_goal_achieved_escape",
 		response = "pwe_objective_goal_achieved_escape",
 		criterias = {
@@ -9123,6 +9153,36 @@ return function ()
 				"faction_memory",
 				"time_since_objective_nearing_objective_deadline_done",
 				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		response = "pwe_objective_picking_up_grimoire",
+		name = "pwe_objective_picking_up_grimoire",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"on_pickup"
+			},
+			{
+				"query_context",
+				"pickup_name",
+				OP.EQ,
+				"wpn_grimoire_01"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
 			}
 		}
 	})
@@ -11878,12 +11938,14 @@ return function ()
 		},
 		pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 8,
 			database = "wood_elf_honduras",
-			sound_events_n = 6,
+			sound_events_n = 8,
 			category = "enemy_alerts_high",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 8,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11897,6 +11959,8 @@ return function ()
 				"face_fear",
 				"face_fear",
 				"face_fear",
+				"face_fear",
+				"face_fear",
 				"face_fear"
 			},
 			localization_strings = {
@@ -11905,7 +11969,9 @@ return function ()
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_04",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_05",
-				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06"
+				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06",
+				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_07",
+				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -11914,7 +11980,9 @@ return function ()
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_04",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_05",
-				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06"
+				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06",
+				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_07",
+				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			sound_events_duration = {
 				1.2997291088104,
@@ -11922,7 +11990,9 @@ return function ()
 				1.1809791326523,
 				1.8490417003632,
 				1.533979177475,
-				2.4010624885559
+				2.4010624885559,
+				2.1067707538605,
+				2.3272292613983
 			}
 		},
 		pwe_gameplay_hearing_a_chaos_spawn = {
@@ -16425,12 +16495,13 @@ return function ()
 		},
 		pwe_gameplay_seeing_a_stormvermin = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 9,
 			database = "wood_elf_honduras",
-			sound_events_n = 8,
+			sound_events_n = 9,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 9,
 			dialogue_animations = {
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -16442,6 +16513,7 @@ return function ()
 			},
 			face_animations = {
 				"face_contempt",
+				"face_contempt",
 				"face_angry",
 				"face_angry",
 				"face_angry",
@@ -16452,6 +16524,7 @@ return function ()
 			},
 			localization_strings = {
 				"pwe_gameplay_seeing_a_stormvermin_02",
+				"pwe_gameplay_seeing_a_stormvermin_03",
 				"pwe_gameplay_seeing_a_stormvermin_08",
 				"pwe_gameplay_seeing_a_stormvermin_09",
 				"pwe_gameplay_seeing_a_stormvermin_10",
@@ -16463,6 +16536,7 @@ return function ()
 			randomize_indexes = {},
 			sound_events = {
 				"pwe_gameplay_seeing_a_stormvermin_02",
+				"pwe_gameplay_seeing_a_stormvermin_03",
 				"pwe_gameplay_seeing_a_stormvermin_08",
 				"pwe_gameplay_seeing_a_stormvermin_09",
 				"pwe_gameplay_seeing_a_stormvermin_10",
@@ -16473,13 +16547,14 @@ return function ()
 			},
 			sound_events_duration = {
 				2.6539375782013,
-				3.1020624637604,
 				1.488041639328,
+				3.1020624637604,
 				2.3120832443237,
 				2.2794582843781,
 				3.2977707386017,
 				2.7984166145325,
-				3.3620417118073
+				3.3620417118073,
+				1.7499791383743
 			}
 		},
 		pwe_gameplay_seeing_a_troll = {
@@ -18850,6 +18925,40 @@ return function ()
 				1.0745416879654
 			}
 		},
+		pwe_objective_dropping_grimoire = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "wood_elf_honduras",
+			sound_events_n = 3,
+			category = "player_feedback",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pwe_objective_dropping_grimoire_01",
+				"pwe_objective_dropping_grimoire_02",
+				"pwe_objective_dropping_grimoire_03"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwe_objective_dropping_grimoire_01",
+				"pwe_objective_dropping_grimoire_02",
+				"pwe_objective_dropping_grimoire_03"
+			},
+			sound_events_duration = {
+				1.2158541679382,
+				3.1163332462311,
+				1.8781249523163
+			}
+		},
 		pwe_objective_goal_achieved_escape = {
 			randomize_indexes_n = 0,
 			face_animations_n = 8,
@@ -19049,6 +19158,35 @@ return function ()
 				1.5949583053589,
 				1.8584582805634,
 				1.9018958806992
+			}
+		},
+		pwe_objective_picking_up_grimoire = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "wood_elf_honduras",
+			sound_events_n = 2,
+			category = "player_feedback",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pwe_objective_picking_up_grimoire_01",
+				[2] = "pwe_objective_picking_up_grimoire_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pwe_objective_picking_up_grimoire_01",
+				[2] = "pwe_objective_picking_up_grimoire_04"
+			},
+			sound_events_duration = {
+				[1] = 3.6131041049957,
+				[2] = 5.2941250801086
 			}
 		},
 		pwe_spotting_ferry_lady = {

@@ -389,18 +389,16 @@ local talent_buff_templates = {
 	sienna_necromancer_cursed_area = {
 		buffs = {
 			{
-				icon = "sienna_necromancer_6_3",
+				area_unit_name = "units/hub_elements/empty",
 				name = "sienna_necromancer_cursed_area",
 				buff_area_buff = "sienna_necromancer_empowered_overcharge",
-				area_unit_name = "units/hub_elements/empty",
-				enter_area_func = "enter_buff_area",
 				refresh_durations = false,
 				refresh_buff_area_position = true,
 				buff_self = true,
 				area_radius = 8,
 				buff_area = true,
 				max_stacks = 1,
-				exit_area_func = "exit_buff_area"
+				icon = "sienna_necromancer_6_3"
 			}
 		}
 	},

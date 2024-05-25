@@ -8,7 +8,7 @@ local NUM_GLOBADIER_POISONS = 2
 local NUM_TIMES_KNOCKED_DOWN = 2
 local block_breaking_fatigue_types = {
 	blocked_slam = true,
-	blocked_attack_2 = true,
+	ogre_shove = true,
 	blocked_berzerker = true,
 	chaos_cleave = true,
 	blocked_sv_sweep_2 = true,
@@ -16,6 +16,7 @@ local block_breaking_fatigue_types = {
 	complete = true,
 	blocked_running = true,
 	blocked_charge = true,
+	blocked_attack_2 = true,
 	sv_shove = true,
 	sv_push = true,
 	blocked_sv_sweep = true,
@@ -148,6 +149,8 @@ GenericStatusExtension.extensions_ready = function (self)
 		self.first_person_extension = ScriptUnit.extension(unit, "first_person_system")
 		self.low_health_playing_id, self.low_health_source_id = self.first_person_extension:play_hud_sound_event("hud_low_health")
 	end
+
+	Managers.state.event:register(self, "on_player_joined_party", "_on_player_joined_party")
 end
 
 GenericStatusExtension.destroy = function (self)
@@ -155,6 +158,12 @@ GenericStatusExtension.destroy = function (self)
 
 	if first_person_extension then
 		first_person_extension:play_hud_sound_event("stop_hud_low_health")
+	end
+
+	local event_manager = Managers.state.event
+
+	if event_manager then
+		event_manager:unregister("on_player_joined_party", self)
 	end
 end
 
@@ -2471,4 +2480,19 @@ GenericStatusExtension.get_max_wounds = function (self)
 	local buff_extension = self.buff_extension
 
 	return buff_extension:apply_buffs_to_value(base_max_wounds, "extra_wounds")
+end
+
+GenericStatusExtension._on_player_joined_party = function (self, peer_id, local_player_id, party_id, slot_id)
+	if not self.is_server then
+		return
+	end
+
+	if self:is_invisible() then
+		local lookup = NetworkLookup.statuses
+		local network_manager = Managers.state.network
+		local self_game_object_id = network_manager:unit_game_object_id(self.unit)
+		local channel_id = PEER_ID_TO_CHANNEL[peer_id]
+
+		RPC.rpc_status_change_bool(channel_id, lookup.invisible, true, self_game_object_id, 0)
+	end
 end

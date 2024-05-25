@@ -10,16 +10,19 @@ settings.mechanism_settings = {
 		using_ghost_mode_system = true,
 		sync_backend_id = true,
 		keep_leaving_players_grace_period = 120,
+		spawn_boss_every_section = true,
 		file = "scripts/managers/game_mode/mechanisms/versus_mechanism",
-		display_name = "area_selection_carousel_name",
 		class_name = "VersusMechanism",
+		display_name = "area_selection_carousel_name",
+		always_spawn_a_boss = true,
 		steam_port = 8766,
 		disadvantaged_team_starts = true,
 		server_universe = "carousel",
-		hero_respawn_time = 1800,
 		social_wheel = "VersusSocialWheelUI",
+		check_matchmaking_hero_availability = true,
 		playfab_mirror = "PlayFabMirrorAdventure",
 		use_gamepad_layout = true,
+		hero_respawn_time = 1800,
 		rcon_port = 27015,
 		states = {
 			"inn",
@@ -36,6 +39,11 @@ settings.mechanism_settings = {
 			dark_pact = true
 		},
 		override_career_availability = {},
+		playable_boss_terror_events = {
+			vs_chaos_troll = {
+				"playable_boss_chaos_troll"
+			}
+		},
 		override_item_availability = {},
 		override_career_talents = {},
 		map_pool = {
@@ -217,6 +225,9 @@ settings.anim_lookup = {
 	"equip",
 	"cooldown_ready",
 	"to_armed",
+	"swing_left",
+	"slam",
+	"attack_cleave_charge",
 	"death_dissolve",
 	"death_crawl"
 }

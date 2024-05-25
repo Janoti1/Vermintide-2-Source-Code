@@ -565,33 +565,15 @@ ItemMasterList.dr_steam_pistol_magic_01 = {
 		"dr_ironbreaker"
 	}
 }
-ItemMasterList.dr_steam_pistol_skin_02_magic_01 = {
-	description = "dr_steam_pistol_skin_02_magic_01_description",
-	rarity = "magic",
-	display_name = "dr_steam_pistol_skin_02_magic_01_name",
-	hud_icon = "weapon_generic_icon_staff_3",
-	inventory_icon = "icon_wpn_dw_steam_pistol_01_t2_magic",
-	slot_type = "weapon_skin",
-	information_text = "information_weapon_skin",
-	right_hand_unit = "units/weapons/player/wpn_dw_steam_pistol_01_t2/wpn_dw_steam_pistol_01_t2_magic_01",
-	required_dlc = "cog_upgrade",
-	template = "heavy_steam_pistol_template_1",
-	item_type = "weapon_skin",
-	matching_item_key = "dr_steam_pistol",
-	can_wield = {
-		"dr_engineer",
-		"dr_ranger",
-		"dr_ironbreaker"
-	}
-}
 ItemMasterList.dr_steam_pistol_01_t2_magic_01 = {
-	description = "dr_steam_pistol_01_t2_magic_01_desciption",
+	description = "dr_steam_pistol_skin_01_magic_01_description",
 	rarity = "magic",
 	right_hand_unit = "units/weapons/player/wpn_dw_steam_pistol_01_t2/wpn_dw_steam_pistol_01_t2_magic_01",
 	template = "heavy_steam_pistol_template_1",
 	inventory_icon = "icon_wpn_dw_steam_pistol_01_t2_magic",
 	slot_type = "weapon_skin",
-	required_dlc = "cog_upgrade",
+	display_name = "dr_steam_pistol_skin_01_magic_01_name",
+	required_dlc = "cog",
 	hud_icon = "weapon_generic_icon_staff_3",
 	item_type = "weapon_skin",
 	matching_item_key = "dr_steam_pistol",

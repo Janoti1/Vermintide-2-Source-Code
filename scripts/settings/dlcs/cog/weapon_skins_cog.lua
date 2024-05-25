@@ -136,12 +136,12 @@ local skins = {
 	{
 		name = "dr_steam_pistol_01_t2_magic_01",
 		data = {
-			description = "dr_steam_pistol_01_t2_magic_01_desciption",
+			description = "dr_steam_pistol_skin_02_magic_01_description",
 			rarity = "magic",
 			right_hand_unit = "units/weapons/player/wpn_dw_steam_pistol_01_t2/wpn_dw_steam_pistol_01_t2_magic_01",
 			hud_icon = "weapon_generic_icon_staff_3",
 			inventory_icon = "icon_wpn_dw_steam_pistol_01_t2_magic",
-			display_name = "dr_steam_pistol_01_t2_magic_01_name",
+			display_name = "dr_steam_pistol_skin_02_magic_01_name",
 			template = "heavy_steam_pistol_template_1",
 			display_unit = "units/weapons/weapon_display/display_drakefire_pistols",
 			action_anim_overrides = {

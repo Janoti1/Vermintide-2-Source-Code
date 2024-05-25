@@ -36,6 +36,14 @@ settings.buff_templates = {
 			}
 		}
 	},
+	vs_stagger_immune = {
+		buffs = {
+			multiplier = -1,
+			name = "vs_stagger_immune",
+			stat_buff = "impact_vulnerability",
+			duration = 10
+		}
+	},
 	vs_ratling_gunner_slow = {
 		buffs = {
 			{
@@ -174,6 +182,31 @@ settings.buff_templates = {
 				multiplier = 1,
 				name = "defence_debuff_enemies",
 				stat_buff = "damage_taken_melee"
+			}
+		}
+	},
+	vs_boss_stagger_immune = {
+		buffs = {
+			{
+				multiplier = -1,
+				name = "vs_boss_stagger_immune",
+				stat_buff = "impact_vulnerability",
+				max_stacks = 1,
+				duration = 3
+			}
+		}
+	},
+	staff_life_player_target_cooldown = {
+		buffs = {
+			{
+				icon = "icon_wpn_we_life_staff_01",
+				name = "staff_life_player_target_cooldown",
+				is_cooldown = true,
+				duration = 40,
+				priority_buff = true,
+				perks = {
+					buff_perks.sister_no_player_lift
+				}
 			}
 		}
 	}

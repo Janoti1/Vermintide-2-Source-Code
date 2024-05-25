@@ -71,6 +71,78 @@ local skins = {
 			display_unit = "units/weapons/weapon_display/display_1h_handguns",
 			material_settings = WeaponMaterialSettingsTemplates.deep_crimson
 		}
+	},
+	{
+		name = "bw_beam_staff_skin_05_runed_04",
+		data = {
+			description = "bw_beam_staff_skin_05_runed_04_description",
+			rarity = "unique",
+			display_name = "bw_beam_staff_skin_05_runed_04_name",
+			right_hand_unit = "units/weapons/player/wpn_brw_beam_staff_05/wpn_brw_beam_staff_05_runed_01",
+			inventory_icon = "icon_wpn_brw_beam_staff_05_runed_04",
+			left_hand_unit = "units/weapons/player/wpn_fireball/wpn_fireball",
+			template = "staff_blast_beam_template_1",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_staff",
+			material_settings = WeaponMaterialSettingsTemplates.deep_crimson
+		}
+	},
+	{
+		name = "es_2h_hammer_skin_04_runed_04",
+		data = {
+			description = "es_2h_hammer_skin_04_runed_04_description",
+			rarity = "unique",
+			right_hand_unit = "units/weapons/player/wpn_empire_2h_hammer_02_t2/wpn_2h_hammer_02_t2_runed_01",
+			hud_icon = "weapon_generic_icon_staff_3",
+			inventory_icon = "icon_wpn_empire_2h_hammer_02_t2_runed_04",
+			display_name = "es_2h_hammer_skin_04_runed_04_name",
+			template = "two_handed_hammers_template_1",
+			display_unit = "units/weapons/weapon_display/display_2h_hammers",
+			material_settings = WeaponMaterialSettingsTemplates.deep_crimson
+		}
+	},
+	{
+		name = "wh_1h_falchion_skin_02_runed_04",
+		data = {
+			description = "wh_1h_falchion_skin_02_runed_04_description",
+			rarity = "unique",
+			right_hand_unit = "units/weapons/player/wpn_emp_sword_04_t2/wpn_emp_sword_04_t2_runed_01",
+			hud_icon = "weapon_generic_icon_falken",
+			inventory_icon = "icon_wpn_emp_sword_04_t2_runed_04",
+			display_name = "wh_1h_falchion_skin_02_runed_04_name",
+			template = "one_hand_falchion_template_1",
+			display_unit = "units/weapons/weapon_display/display_1h_falchions",
+			material_settings = WeaponMaterialSettingsTemplates.deep_crimson
+		}
+	},
+	{
+		name = "we_shortbow_skin_04_runed_04",
+		data = {
+			description = "we_shortbow_skin_04_runed_04_description",
+			ammo_unit = "units/weapons/player/wpn_we_quiver_t1/wpn_we_arrow_t1",
+			display_name = "we_shortbow_skin_04_runed_04_name",
+			rarity = "unique",
+			inventory_icon = "icon_wpn_we_bow_short_04_runed_04",
+			left_hand_unit = "units/weapons/player/wpn_we_bow_short_04/wpn_we_bow_short_04_runed_01",
+			template = "shortbow_template_1",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_bow",
+			material_settings = WeaponMaterialSettingsTemplates.deep_crimson
+		}
+	},
+	{
+		name = "dw_grudge_raker_skin_02_runed_04",
+		data = {
+			description = "dw_grudge_raker_skin_02_runed_04_description",
+			rarity = "unique",
+			right_hand_unit = "units/weapons/player/wpn_dw_rakegun_t2/wpn_dw_rakegun_t2_runed_01",
+			hud_icon = "weapon_generic_icon_staff_3",
+			inventory_icon = "icon_wpn_dw_rakegun_t2_runed_04",
+			display_name = "dw_grudge_raker_skin_02_runed_04_name",
+			template = "grudge_raker_template_1",
+			display_unit = "units/weapons/weapon_display/display_1h_grudge_raker",
+			material_settings = WeaponMaterialSettingsTemplates.deep_crimson
+		}
 	}
 }
 local skin_combinations = {
@@ -97,6 +169,31 @@ local skin_combinations = {
 	dr_handgun_skins = {
 		unique = {
 			"dw_handgun_skin_02_runed_04"
+		}
+	},
+	bw_skullstaff_beam_skins = {
+		unique = {
+			"bw_beam_staff_skin_05_runed_04"
+		}
+	},
+	es_2h_hammer_skins = {
+		unique = {
+			"es_2h_hammer_skin_04_runed_04"
+		}
+	},
+	wh_1h_falchion_skins = {
+		unique = {
+			"wh_1h_falchion_skin_02_runed_04"
+		}
+	},
+	we_shortbow_skins = {
+		unique = {
+			"we_shortbow_skin_04_runed_04"
+		}
+	},
+	dr_rakegun_skins = {
+		unique = {
+			"dw_grudge_raker_skin_02_runed_04"
 		}
 	}
 }

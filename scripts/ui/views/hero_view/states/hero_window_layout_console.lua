@@ -64,6 +64,11 @@ local windows = {
 		name = "hero_power",
 		class_name = "HeroWindowHeroPowerConsole"
 	},
+	loadout_selection = {
+		ignore_alignment = true,
+		name = "loadout_selection",
+		class_name = "HeroWindowLoadoutSelectionConsole"
+	},
 	ingame_view = {
 		ignore_alignment = true,
 		name = "ingame_view",
@@ -88,6 +93,7 @@ local window_layouts = {
 		close_on_exit = true,
 		windows = {
 			hero_power = 5,
+			loadout_selection = 6,
 			background = 2,
 			character_info = 3,
 			panel = 1,
@@ -100,9 +106,10 @@ local window_layouts = {
 		sound_event_exit = "play_gui_talents_close",
 		close_on_exit = true,
 		windows = {
+			loadout_selection = 5,
+			background = 2,
 			character_info = 3,
 			panel = 1,
-			background = 2,
 			talents = 4
 		}
 	},
@@ -130,6 +137,7 @@ local window_layouts = {
 			hero_power = 5,
 			cosmetics_loadout = 3,
 			background = 2,
+			loadout_selection = 6,
 			character_info = 4,
 			panel = 1
 		}

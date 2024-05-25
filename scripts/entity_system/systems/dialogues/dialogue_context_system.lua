@@ -90,3 +90,9 @@ end
 DialogueContextSystem.hot_join_sync = function (self, sender)
 	return
 end
+
+DialogueContextSystem.set_context_value = function (self, unit, key, value)
+	local extension = self._unit_extension_data[unit]
+
+	extension.context[key] = value
+end

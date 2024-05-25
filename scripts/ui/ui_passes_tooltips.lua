@@ -2583,7 +2583,7 @@ UITooltipPasses = {
 				end
 
 				local can_wield_table = item_data and item_data.can_wield
-				local can_wield = can_wield_table and table.contains(can_wield_table, career_name)
+				local can_wield = can_wield_table and table.contains(can_wield_table, career_name) or pass_definition.disable_unsupported
 
 				if not can_wield then
 					text_style.text_color = text_style.disabled_text_color
@@ -2846,7 +2846,7 @@ UITooltipPasses = {
 				end
 
 				local can_wield_table = item_data and item_data.can_wield
-				local can_wield = can_wield_table and table.contains(can_wield_table, career_name)
+				local can_wield = can_wield_table and table.contains(can_wield_table, career_name) or pass_definition.disable_unsupported
 
 				if not can_wield then
 					text_style.text_color = text_style.disabled_text_color
@@ -3198,7 +3198,7 @@ UITooltipPasses = {
 				end
 
 				local can_wield_table = item_data and item_data.can_wield
-				local can_wield = can_wield_table and table.contains(can_wield_table, career_name)
+				local can_wield = can_wield_table and table.contains(can_wield_table, career_name) or pass_definition.disable_unsupported
 
 				if not can_wield then
 					local text = ""

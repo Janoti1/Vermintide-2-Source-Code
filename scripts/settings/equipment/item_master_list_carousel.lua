@@ -79,6 +79,27 @@ ItemMasterList.vs_warpfire_thrower_gun = {
 		"versus"
 	}
 }
+ItemMasterList.vs_chaos_troll_axe = {
+	description = "dw_1h_axe_skin_01_description",
+	rarity = "plentiful",
+	right_hand_unit = "units/weapons/player/wpn_invisible_weapon",
+	inventory_icon = "icon_wpn_dw_axe_01_t1",
+	slot_type = "melee",
+	display_name = "dw_1h_axe_skin_01_name",
+	left_hand_unit = "units/weapons/player/dark_pact/wpn_chaos_troll/wpn_chaos_troll_01",
+	has_power_level = true,
+	template = "vs_chaos_troll_axe",
+	property_table_name = "melee",
+	item_type = "dr_1h_axes",
+	hud_icon = "weapon_generic_icon_axe1h",
+	trait_table_name = "melee",
+	can_wield = {
+		"vs_chaos_troll"
+	},
+	mechanisms = {
+		"versus"
+	}
+}
 ItemMasterList.vs_gutter_runner_claws = {
 	description = "dw_1h_axe_skin_01_description",
 	rarity = "plentiful",
@@ -2080,11 +2101,11 @@ ItemMasterList.skaven_gutter_runner_skin_0000 = {
 		"vs_gutter_runner"
 	}
 }
-ItemMasterList.skaven_packmaster_skin_0000 = {
+ItemMasterList.skaven_pack_master_skin_0000 = {
 	description = "description_skaven_packmaster_skin_0000",
-	temporary_template = "skaven_packmaster_skin_0000",
+	temporary_template = "skaven_pack_master_skin_0000",
 	display_name = "skaven_packmaster_skin_0000",
-	name = "skaven_packmaster_skin_0000",
+	name = "skaven_pack_master_skin_0000",
 	inventory_icon = "icon_skin_zealot_original",
 	slot_type = "skin",
 	information_text = "information_text_character_skin",
@@ -2144,9 +2165,26 @@ ItemMasterList.skaven_warpfire_thrower_skin_0000 = {
 		"vs_warpfire_thrower"
 	}
 }
+ItemMasterList.chaos_troll_skin_0000 = {
+	description = "description_chaos_troll_skin_0000",
+	temporary_template = "chaos_troll_skin_0000",
+	display_name = "chaos_troll_skin_0000",
+	name = "chaos_troll_skin_0000",
+	inventory_icon = "icon_skin_zealot_original",
+	slot_type = "skin",
+	information_text = "information_text_character_skin",
+	hud_icon = "unit_frame_portrait_witch_hunter",
+	rarity = "plentiful",
+	skin_type = "unit",
+	item_type = "skin",
+	can_wield = {
+		"vs_chaos_troll"
+	}
+}
 
 UpdateItemMasterList({}, "vs_warpfire_thrower")
 UpdateItemMasterList({}, "vs_packmaster")
 UpdateItemMasterList({}, "vs_ratling_gunner")
 UpdateItemMasterList({}, "vs_poison_wind_globadier")
 UpdateItemMasterList({}, "vs_gutter_runner")
+UpdateItemMasterList({}, "vs_chaos_troll")

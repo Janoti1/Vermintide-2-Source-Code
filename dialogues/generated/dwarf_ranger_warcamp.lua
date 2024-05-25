@@ -2050,7 +2050,7 @@ return function ()
 			face_animations_n = 4,
 			database = "dwarf_ranger_warcamp",
 			sound_events_n = 4,
-			category = "cut_scene",
+			category = "level_talk_must_play",
 			dialogue_animations_n = 4,
 			dialogue_animations = {
 				"dialogue_shout",
@@ -2089,7 +2089,7 @@ return function ()
 			face_animations_n = 4,
 			database = "dwarf_ranger_warcamp",
 			sound_events_n = 4,
-			category = "cut_scene",
+			category = "level_talk",
 			dialogue_animations_n = 4,
 			dialogue_animations = {
 				"dialogue_shout",

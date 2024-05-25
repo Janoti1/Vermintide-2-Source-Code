@@ -246,14 +246,21 @@ settings.projectiles = {
 		disable_throwing_dialogue = true,
 		radius = 0.1,
 		impact_type = "sphere_sweep",
-		life_time = 5,
 		trajectory_template_name = "throw_trajectory",
 		pickup_name = "grenade",
 		show_warning_icon = true,
+		life_time = 5,
 		rotation_speed = 10,
 		gravity_settings = "drakegun",
 		projectile_unit_template_name = "player_projectile_unit",
-		projectile_units_template = "holy_hand_grenade"
+		projectile_units_template = "holy_hand_grenade",
+		rotation_on_hit = function (unit)
+			local go_id = Managers.state.network.unit_storage:go_id(unit)
+			local _, rnd = Math.next_random(go_id)
+			local rotation = Quaternion.axis_angle(Vector3.right(), rnd * math.pi * 0.15)
+
+			return Quaternion.multiply(Quaternion.axis_angle(Vector3.up(), math.random() * math.tau), rotation)
+		end
 	}
 }
 settings.default_items = {

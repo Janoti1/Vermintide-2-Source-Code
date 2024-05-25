@@ -823,6 +823,14 @@ local function create_power_up(scenegraph_id)
 					content_check_function = function (content)
 						return content.extend_left
 					end
+				},
+				{
+					style_id = "set_progression",
+					pass_type = "text",
+					text_id = "set_progression",
+					content_check_function = function (content)
+						return content.is_part_of_set
+					end
 				}
 			}
 		},
@@ -834,6 +842,7 @@ local function create_power_up(scenegraph_id)
 			rarity_text = "rarity",
 			visible = false,
 			shrine_bg = "shrine_blessing_bg_hover",
+			set_progression = "%d/%d",
 			is_rectangular_icon = false,
 			description_text = "description_text",
 			shrine_bg_frame_left = {
@@ -1257,6 +1266,24 @@ local function create_power_up(scenegraph_id)
 					-318,
 					-62,
 					2
+				}
+			},
+			set_progression = {
+				word_wrap = false,
+				upper_case = false,
+				font_size = 20,
+				horizontal_alignment = "right",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark",
+				progression_colors = {
+					incomplete = Colors.get_color_table_with_alpha("font_default", 255),
+					complete = Colors.get_color_table_with_alpha("lime_green", 255)
+				},
+				text_color = Colors.get_color_table_with_alpha("font_default", 255),
+				offset = {
+					-488,
+					18,
+					10
 				}
 			}
 		},

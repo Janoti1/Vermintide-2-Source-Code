@@ -280,7 +280,7 @@ ItemMasterList.bw_ghost_scythe_magic_01 = {
 }
 ItemMasterList.bw_ghost_scythe_skin_magic_01 = {
 	description = "bw_ghost_scythe_skin_02_magic_01_description",
-	rarity = "unique",
+	rarity = "magic",
 	right_hand_unit = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_magic_01",
 	hud_icon = "hud_icon_default",
 	inventory_icon = "icon_wpn_bw_ghost_scythe_02_magic",
@@ -399,6 +399,28 @@ ItemMasterList.bw_ghost_scythe_skin_02 = {
 		bw_unchained = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_fire",
 		bw_scholar = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_fire",
 		bw_adept = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_fire"
+	}
+}
+ItemMasterList.bw_ghost_scythe_skin_02_magic_01 = {
+	description = "bw_ghost_scythe_skin_02_magic_01_description",
+	rarity = "magic",
+	right_hand_unit = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_magic_01",
+	hud_icon = "hud_icon_default",
+	inventory_icon = "icon_wpn_bw_ghost_scythe_02_magic",
+	template = "staff_scythe",
+	display_name = "bw_ghost_scythe_skin_02_magic_01_name",
+	slot_type = "weapon_skin",
+	required_dlc = "shovel",
+	display_unit = "units/weapons/weapon_display/display_staff",
+	item_type = "weapon_skin",
+	matching_item_key = "bw_ghost_scythe",
+	can_wield = {
+		"bw_necromancer"
+	},
+	right_hand_unit_override = {
+		bw_unchained = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_magic_01_fire",
+		bw_scholar = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_magic_01_fire",
+		bw_adept = "units/weapons/player/wpn_bw_ghost_scythe_02/wpn_bw_ghost_scythe_02_magic_01_fire"
 	}
 }
 ItemMasterList.bw_ghost_scythe_skin_02_runed_01 = {
@@ -528,9 +550,9 @@ ItemMasterList.bw_necromancy_staff_magic_01 = {
 		"bw_necromancer"
 	}
 }
-ItemMasterList.bw_necromancy_staff_skin_magic_01 = {
+ItemMasterList.bw_necromancy_staff_skin_02_magic_01 = {
 	description = "bw_necromancy_staff_skin_02_magic_01_description",
-	rarity = "unique",
+	rarity = "magic",
 	right_hand_unit = "units/weapons/player/wpn_bw_necromancy_staff_02/wpn_bw_necromancy_staff_02_magic_01",
 	hud_icon = "hud_icon_default",
 	inventory_icon = "icon_wpn_bw_necromancy_staff_02_magic_01",
@@ -539,7 +561,8 @@ ItemMasterList.bw_necromancy_staff_skin_magic_01 = {
 	display_name = "bw_necromancy_staff_skin_02_magic_01_name",
 	slot_type = "weapon_skin",
 	required_dlc = "shovel",
-	item_type = "bw_necromancy_staff",
+	display_unit = "units/weapons/weapon_display/display_staff",
+	item_type = "weapon_skin",
 	matching_item_key = "bw_necromancy_staff",
 	can_wield = {
 		"bw_necromancer"

@@ -241,7 +241,7 @@ local skins = {
 			display_name = "es_deus_01_magic_name",
 			right_hand_unit = "units/weapons/player/wpn_es_deus_spear_01/wpn_es_deus_spear_01_magic",
 			inventory_icon = "icon_wpn_empire_spearshield_t1_magic",
-			left_hand_unit = "units/weapons/player/wpn_es_deus_shield_02/wpn_es_deus_shield_02_magic_3p",
+			left_hand_unit = "units/weapons/player/wpn_es_deus_shield_02/wpn_es_deus_shield_02_magic",
 			template = "es_deus_01_template",
 			hud_icon = "weapon_generic_icon_staff_3",
 			display_unit = "units/weapons/weapon_display/display_shield_sword"
@@ -657,7 +657,6 @@ local skin_combinations = {
 			"dr_deus_01_skin_03_runed"
 		},
 		magic = {
-			"dr_deus_01_skin_magic",
 			"dr_deus_02_skin_magic"
 		}
 	},
@@ -683,7 +682,6 @@ local skin_combinations = {
 			"es_deus_01_skin_03_runed"
 		},
 		magic = {
-			"es_deus_01_skin_magic",
 			"es_deus_02_skin_magic"
 		}
 	},
@@ -709,7 +707,6 @@ local skin_combinations = {
 			"bw_deus_01_skin_03_runed"
 		},
 		magic = {
-			"bw_deus_01_skin_magic",
 			"bw_deus_02_skin_magic"
 		}
 	},
@@ -735,8 +732,7 @@ local skin_combinations = {
 			"we_deus_01_skin_03_runed"
 		},
 		magic = {
-			"we_deus_01_skin_magic",
-			"we_deus_02_skin_magic"
+			"we_deus_01_skin_magic"
 		}
 	},
 	wh_deus_01_skins = {
@@ -763,7 +759,6 @@ local skin_combinations = {
 			"wh_deus_01_skin_03_runed"
 		},
 		magic = {
-			"wh_deus_01_skin_magic",
 			"wh_deus_02_skin_magic"
 		}
 	}

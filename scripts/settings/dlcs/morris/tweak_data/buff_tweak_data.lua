@@ -520,5 +520,154 @@ MorrisBuffTweakData = MorrisBuffTweakData or {
 	},
 	boon_deus_coins_greed = {
 		multiplier = 0.15
+	},
+	boon_skulls_01_data = {
+		max_stacks = 10,
+		duration = 10,
+		attack_speed_on_proc = 0.2,
+		attack_speed_per_stack = 0.01
+	},
+	boon_skulls_02_data = {
+		max_stacks = 10,
+		power_per_stack = 0.015,
+		power_on_proc = 0.3,
+		duration = 10
+	},
+	boon_skulls_03_data = {
+		cooldown = 30
+	},
+	boon_skulls_04_data = {
+		thp_per_second = 3,
+		proc_duration = 10,
+		thp_on_hit = 3,
+		total_thp_to_consume = 30,
+		proc_cooldown_regen = 0.3,
+		damage_per_thp = 2.5
+	},
+	boon_skulls_05_data = {
+		max_stacks = 5,
+		power_per_stack = 0.02,
+		power_on_proc = 0.2,
+		duration = 10
+	},
+	boon_supportbomb_shared_data = {
+		radius = 6,
+		duration = 10
+	},
+	boon_supportbomb_healing_01_data = {
+		heal_amount = 2
+	},
+	boon_supportbomb_concentration_01_data = {
+		multiplier = 10
+	},
+	boon_supportbomb_crit_01_data = {
+		bonus = 1
+	},
+	boon_supportbomb_speed_01_data = {
+		multiplier = 0.5
+	},
+	boon_supportbomb_strenght_01_data = {
+		multiplier = 0.35
+	},
+	boon_cursed_chest_damage_area_buff_data = {
+		damage_multiplier = 0.35,
+		duration = 30,
+		radius = 10,
+		max_stacks = 1
+	},
+	boon_cursed_chest_cooldown_area_buff_data = {
+		cooldown_multiplier = 5,
+		duration = 30,
+		radius = 10,
+		max_stacks = 1
+	},
+	boon_bomb_heavy_01_data = {
+		radius = 0.5,
+		throw_range = -0.5
+	},
+	boon_career_ability_lightning_aoe_data = {
+		radius = 7
+	},
+	boon_career_ability_burning_aoe_data = {
+		radius = 7,
+		time_between_dot_damages = 0.5,
+		max_stacks = 5,
+		duration = 10,
+		update_start_delay = 0.5
+	},
+	boon_career_ability_bleed_aoe_data = {
+		radius = 7,
+		time_between_dot_damages = 0.75,
+		max_stacks = 5,
+		duration = 10,
+		update_start_delay = 0.75
+	},
+	boon_career_ability_poison_aoe_data = {
+		radius = 7,
+		time_between_dot_damages = 0.8,
+		multiplier = 0.12,
+		damage_profile = "thorn_sister_poison",
+		max_stacks = 5,
+		duration = 10,
+		update_start_delay = 0.8
+	},
+	boonset_drone_part1_data = {
+		num_drones = 4,
+		radius = 15
+	},
+	boonset_drone_part2_data = {
+		num_drones = 4,
+		radius = 15
+	},
+	boonset_drone_part3_data = {
+		num_drones = 6,
+		radius = 15
+	},
+	boonset_drone_part4_data = {
+		num_extra_drones = 2
+	},
+	boon_careerskill_07_data = {
+		num_drones = 6,
+		radius = 15
+	},
+	boon_careerskill_06_data = {
+		bonus = 1
+	},
+	boon_aura_01 = {
+		multiplier = 0.15
+	},
+	boon_aura_02 = {
+		multiplier = 1
+	},
+	boon_meta_01_data = {
+		damage_multiplier_per_stack = 0.01,
+		attack_speed_multiplier_per_stack = 0.01
+	},
+	boon_weaponrarity_02_data = {
+		bonus_per_rarity = -0.25,
+		base_bonus = 1
+	},
+	boon_range_01_data = {
+		ammo_usage_multiplier = 1,
+		damage_multiplier = 1
+	},
+	boon_range_02_data = {
+		duration = 5,
+		multiplier = 0.15
+	},
+	boon_weaponrarity_01_data = {
+		base_multiplier = 1,
+		multiplier_per_rarity = -0.25
+	},
+	boon_teamaura_02_data = {
+		distance_from_allies = 7,
+		multiplier = 1
+	},
+	boon_teamaura_01_data = {
+		distance_from_allies = 7,
+		multiplier = 0.2
+	},
+	boon_dot_burning_01_data = {
+		radius = 5
 	}
 }

@@ -8982,8 +8982,8 @@ return function ()
 				2.4966249465942,
 				2.565687417984,
 				0.92485415935516,
-				0.94499999284744,
-				0.92485415935516
+				2.9004375934601,
+				2.4927499294281
 			}
 		},
 		pwh_gameplay_bright_wizard_being_helped_up_drunk = {
@@ -9279,21 +9279,20 @@ return function ()
 			},
 			sound_events_duration = {
 				1.4624999761581,
-				1.4624999761581,
 				2.9811251163483,
 				2.6770207881927,
-				3.6535415649414
+				3.6535415649414,
+				2.9300208091736
 			}
 		},
 		pwh_gameplay_friendly_fire_bright_wizard_drunk = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 5,
 			database = "witch_hunter_game_play_crawl",
-			sound_events_n = 6,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
-				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -9305,7 +9304,6 @@ return function ()
 				"face_angry",
 				"face_angry",
 				"face_angry",
-				"face_angry",
 				"face_angry"
 			},
 			localization_strings = {
@@ -9313,8 +9311,7 @@ return function ()
 				"pwh_gameplay_friendly_fire_bright_wizard_05",
 				"pwh_gameplay_friendly_fire_bright_wizard_06",
 				"pwh_gameplay_friendly_fire_bright_wizard_07",
-				"pwh_gameplay_friendly_fire_bright_wizard_08",
-				"pwh_gameplay_friendly_fire_bright_wizard_09"
+				"pwh_gameplay_friendly_fire_bright_wizard_08"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -9322,11 +9319,9 @@ return function ()
 				"pwh_gameplay_friendly_fire_bright_wizard_05",
 				"pwh_gameplay_friendly_fire_bright_wizard_06",
 				"pwh_gameplay_friendly_fire_bright_wizard_07",
-				"pwh_gameplay_friendly_fire_bright_wizard_08",
-				"pwh_gameplay_friendly_fire_bright_wizard_09"
+				"pwh_gameplay_friendly_fire_bright_wizard_08"
 			},
 			sound_events_duration = {
-				1.8437708616257,
 				1.8437708616257,
 				4.0555415153503,
 				3.7145624160767,
@@ -9436,10 +9431,10 @@ return function ()
 			},
 			sound_events_duration = {
 				2.3938541412353,
-				2.3938541412353,
 				2.7055833339691,
 				2.8527915477753,
-				2.0943541526794
+				2.0943541526794,
+				5.0315208435059
 			}
 		},
 		pwh_gameplay_friendly_fire_wood_elf_drunk = {
@@ -9528,11 +9523,11 @@ return function ()
 			},
 			sound_events_duration = {
 				3.9588332176209,
-				3.9588332176209,
 				3.4568123817444,
 				2.341020822525,
 				2.6422083377838,
-				3.8699584007263
+				3.8699584007263,
+				4.013249874115
 			}
 		},
 		pwh_gameplay_healing_draught_drunk = {
@@ -9576,14 +9571,12 @@ return function ()
 		},
 		pwh_gameplay_healing_dwarf_ranger_drunk = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 5,
 			database = "witch_hunter_game_play_crawl",
-			sound_events_n = 7,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
-				"dialogue_talk",
-				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -9595,8 +9588,6 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
-				"face_neutral",
-				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -9604,9 +9595,7 @@ return function ()
 				"pwh_gameplay_healing_dwarf_ranger_04",
 				"pwh_gameplay_healing_dwarf_ranger_05",
 				"pwh_gameplay_healing_dwarf_ranger_06",
-				"pwh_gameplay_healing_dwarf_ranger_07",
-				"pwh_gameplay_healing_dwarf_ranger_08",
-				"pwh_gameplay_healing_dwarf_ranger_09"
+				"pwh_gameplay_healing_dwarf_ranger_07"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -9614,13 +9603,9 @@ return function ()
 				"pwh_gameplay_healing_dwarf_ranger_04",
 				"pwh_gameplay_healing_dwarf_ranger_05",
 				"pwh_gameplay_healing_dwarf_ranger_06",
-				"pwh_gameplay_healing_dwarf_ranger_07",
-				"pwh_gameplay_healing_dwarf_ranger_08",
-				"pwh_gameplay_healing_dwarf_ranger_09"
+				"pwh_gameplay_healing_dwarf_ranger_07"
 			},
 			sound_events_duration = {
-				1.8657499551773,
-				3.3627290725708,
 				1.8657499551773,
 				3.3627290725708,
 				2.2356667518616,
@@ -11110,7 +11095,7 @@ return function ()
 				3.0916042327881,
 				1.8273333311081,
 				2.1063125133514,
-				1.8273333311081
+				1.8662707805634
 			}
 		},
 		pwh_gameplay_hearing_a_skaven_ratling_gun_drunk = {
@@ -11700,10 +11685,10 @@ return function ()
 			},
 			sound_events_duration = {
 				1.5048333406448,
-				1.5048333406448,
 				1.2281874418259,
 				1.5620000362396,
-				2.9541459083557
+				2.9541459083557,
+				2.749541759491
 			}
 		},
 		pwh_gameplay_helped_by_dwarf_ranger_drunk = {
@@ -11838,9 +11823,9 @@ return function ()
 			sound_events_duration = {
 				1.7400624752045,
 				1.9810416698456,
-				1.7400624752045,
-				1.9810416698456,
-				1.6733750104904
+				1.6733750104904,
+				2.2369792461395,
+				3.9604165554047
 			}
 		},
 		pwh_gameplay_incoming_skaven_rat_ogre_drunk = {
@@ -12528,11 +12513,11 @@ return function ()
 			sound_events_duration = {
 				0.70027083158493,
 				1.5856041908264,
-				0.70027083158493,
-				1.5856041908264,
 				1.5100208520889,
 				2.401624917984,
-				1.6210833787918
+				1.6210833787918,
+				1.2107708454132,
+				1.7496042251587
 			}
 		},
 		pwh_gameplay_player_pounced_drunk = {
@@ -13636,12 +13621,12 @@ return function ()
 				"pwh_gameplay_self_heal_10"
 			},
 			sound_events_duration = {
-				0.74968749284744,
-				6.3066248893738,
 				3.2419166564941,
+				6.3066248893738,
 				3.1528959274292,
 				3.1719374656677,
-				0.89620834589005
+				0.89620834589005,
+				1.6740833520889
 			}
 		},
 		pwh_gameplay_spots_ammo_no_drunk = {
@@ -13918,18 +13903,18 @@ return function ()
 			},
 			localization_strings = {
 				"pwh_gameplay_throwing_bomb_01",
+				"pwh_gameplay_throwing_bomb_03",
+				"pwh_gameplay_throwing_bomb_04",
 				"pwh_gameplay_throwing_bomb_06",
-				"pwh_gameplay_throwing_bomb_07",
-				"pwh_gameplay_throwing_bomb_08",
-				"pwh_gameplay_throwing_bomb_09"
+				"pwh_gameplay_throwing_bomb_07"
 			},
 			randomize_indexes = {},
 			sound_events = {
 				"pwh_gameplay_throwing_bomb_01",
+				"pwh_gameplay_throwing_bomb_03",
+				"pwh_gameplay_throwing_bomb_04",
 				"pwh_gameplay_throwing_bomb_06",
-				"pwh_gameplay_throwing_bomb_07",
-				"pwh_gameplay_throwing_bomb_08",
-				"pwh_gameplay_throwing_bomb_09"
+				"pwh_gameplay_throwing_bomb_07"
 			},
 			sound_events_duration = {
 				0.98325002193451,
@@ -14028,25 +14013,25 @@ return function ()
 				"face_neutral"
 			},
 			localization_strings = {
+				"pwh_gameplay_wood_elf_being_helped_up_02",
+				"pwh_gameplay_wood_elf_being_helped_up_03",
 				"pwh_gameplay_wood_elf_being_helped_up_05",
 				"pwh_gameplay_wood_elf_being_helped_up_06",
 				"pwh_gameplay_wood_elf_being_helped_up_07",
 				"pwh_gameplay_wood_elf_being_helped_up_08",
 				"pwh_gameplay_wood_elf_being_helped_up_09",
-				"pwh_gameplay_wood_elf_being_helped_up_10",
-				"pwh_gameplay_wood_elf_being_helped_up_11",
-				"pwh_gameplay_wood_elf_being_helped_up_12"
+				"pwh_gameplay_wood_elf_being_helped_up_10"
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwh_gameplay_wood_elf_being_helped_up_02",
+				"pwh_gameplay_wood_elf_being_helped_up_03",
 				"pwh_gameplay_wood_elf_being_helped_up_05",
 				"pwh_gameplay_wood_elf_being_helped_up_06",
 				"pwh_gameplay_wood_elf_being_helped_up_07",
 				"pwh_gameplay_wood_elf_being_helped_up_08",
 				"pwh_gameplay_wood_elf_being_helped_up_09",
-				"pwh_gameplay_wood_elf_being_helped_up_10",
-				"pwh_gameplay_wood_elf_being_helped_up_11",
-				"pwh_gameplay_wood_elf_being_helped_up_12"
+				"pwh_gameplay_wood_elf_being_helped_up_10"
 			},
 			sound_events_duration = {
 				1.2633541822434,

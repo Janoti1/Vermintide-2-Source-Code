@@ -179,9 +179,9 @@ local skins = {
 	{
 		name = "es_sword_shield_breton_skin_04_magic_01_magic_01",
 		data = {
-			description = "es_sword_shield_breton_skin_04_magic_01_description",
+			description = "es_sword_shield_breton_skin_05_magic_01_description",
 			rarity = "magic",
-			display_name = "es_sword_shield_breton_skin_04_magic_01_name",
+			display_name = "es_sword_shield_breton_skin_05_magic_01_name",
 			right_hand_unit = "units/weapons/player/wpn_emp_gk_sword_02_t2/wpn_emp_gk_sword_02_t2_magic_01",
 			inventory_icon = "icon_wpn_emp_gk_sword_02_t2_wpn_emp_gk_shield_01_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_emp_gk_shield_01/wpn_emp_gk_shield_01_magic_01",

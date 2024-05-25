@@ -6006,6 +6006,32 @@ local settings = {
 		category = "Dialogue"
 	},
 	{
+		description = "Loop through active dialogue rules and filter a single one. No other rules will be loaded. (Requires restart)",
+		setting_name = "filter_single_dialogue_rule",
+		category = "Dialogue",
+		item_source = {
+			"[clear value]"
+		},
+		load_items_source_func = function (options)
+			table.clear(options)
+
+			local dialogue_system = Managers.state.entity:system("dialogue_system")
+
+			if dialogue_system then
+				local tagquery_database = dialogue_system:tagquery_database()
+				local rule_id_mapping = tagquery_database.rule_id_mapping
+
+				for i = 1, #rule_id_mapping do
+					local rule = rule_id_mapping[i]
+
+					options[i] = rule.name
+				end
+			end
+
+			table.insert(options, 1, "[clear value]")
+		end
+	},
+	{
 		setting_name = "debug_dialogue_files",
 		description = "Used to debug dialog files, facial expressions and missing vo/subtitles. To skip use: DebugVo.jump_to(('line_number/line_id')",
 		category = "Dialogue",
@@ -6283,7 +6309,7 @@ local settings = {
 		setting_name = "package_loading_latency",
 		category = "Network",
 		item_source = {
-			"off",
+			"[clear value]",
 			{
 				0.05,
 				0.2
@@ -7765,10 +7791,17 @@ local settings = {
 		func = function (options, index)
 			local item_interface = Managers.backend:get_interface("items")
 			local item = options[index]
+			local item_data = ItemMasterList[item]
+			local difficulty = item_data.difficulties[1]
+			local level_key = "farmlands"
 
 			add_items({
 				{
-					ItemName = item
+					ItemName = item,
+					CustomData = {
+						difficulty = difficulty,
+						level_key = level_key
+					}
 				}
 			})
 		end
@@ -8513,19 +8546,7 @@ local settings = {
 
 				deus_run_controller:add_power_ups({
 					power_up
-				}, local_player_id)
-
-				local local_player_unit = local_player.player_unit
-
-				if local_player_unit then
-					local buff_system = Managers.state.entity:system("buff_system")
-					local talent_interface = Managers.backend:get_talents_interface()
-					local deus_backend = Managers.backend:get_interface("deus")
-					local profile_index = local_player:profile_index()
-					local career_index = local_player:career_index()
-
-					DeusPowerUpUtils.activate_deus_power_up(power_up, buff_system, talent_interface, deus_backend, deus_run_controller, local_player_unit, profile_index, career_index)
-				end
+				}, local_player_id, false)
 			end
 		end
 	},
@@ -8553,16 +8574,7 @@ local settings = {
 
 			deus_run_controller:add_power_ups({
 				power_up
-			}, local_player_id)
-
-			local buff_system = Managers.state.entity:system("buff_system")
-			local talent_interface = Managers.backend:get_talents_interface()
-			local deus_backend = Managers.backend:get_interface("deus")
-			local player_unit = local_player.player_unit
-			local profile_index = local_player:profile_index()
-			local career_index = local_player:career_index()
-
-			DeusPowerUpUtils.activate_deus_power_up(power_up, buff_system, talent_interface, deus_backend, deus_run_controller, player_unit, profile_index, career_index)
+			}, local_player_id, true)
 			Managers.state.event:trigger("present_rewards", {
 				{
 					type = "deus_power_up",
@@ -8617,8 +8629,7 @@ local settings = {
 
 							deus_run_controller:add_power_ups({
 								power_up
-							}, local_player_id)
-							DeusPowerUpUtils.activate_deus_power_up(power_up, buff_system, talent_interface, deus_backend, deus_run_controller, local_player_unit, profile_index, career_index)
+							}, local_player_id, false)
 						end
 					end
 				end
@@ -8814,6 +8825,12 @@ local settings = {
 		end
 	},
 	{
+		description = "Displays career counters",
+		is_boolean = true,
+		setting_name = "debug_dark_pact_delegator",
+		category = "Versus"
+	},
+	{
 		description = "",
 		setting_name = "Number of Crafted Items",
 		category = "Crafting",
@@ -8933,6 +8950,18 @@ local settings = {
 	},
 	{
 		description = "Trigger boss terror event",
+		setting_name = "trigger_playable_boss_event",
+		category = "Versus",
+		func = function (options, index)
+			print("[DEBUG] Triggered Playable boss")
+
+			local game_mode = Managers.state.game_mode:game_mode()
+
+			game_mode:set_playable_boss_can_be_picked(true)
+		end
+	},
+	{
+		description = "Trigger boss terror event",
 		is_boolean = true,
 		setting_name = "debug_playable_boss",
 		category = "Versus"
@@ -8944,6 +8973,12 @@ local settings = {
 		func = function (options, index)
 			if Managers.level_transition_handler:in_hub_level() then
 				printf("Failed to end round - Match not started")
+
+				return false
+			end
+
+			if not Managers.mechanism:game_mechanism().win_conditions then
+				printf("Wrong game-mode, cannot end round here")
 
 				return false
 			end

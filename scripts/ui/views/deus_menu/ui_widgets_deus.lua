@@ -3224,7 +3224,7 @@ UIWidgets.create_start_game_deus_journey_stepper = function (scenegraph_id)
 	}
 end
 
-UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, background_size, gamemode_header_text, game_mode_text, is_twitch)
+UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, background_size, gamemode_header_text, game_mode_text, is_twitch, disable_note)
 	local header_text_color_alpha = is_twitch and 0 or 255
 	local info_hotspot_height = is_twitch and background_size[2] / 2 or background_size[2]
 	local info_hotspot_offset_y = is_twitch and background_size[2] / 2 or 0
@@ -3272,7 +3272,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 					pass_type = "text",
 					text_id = "expedition_highlight_text",
 					content_check_function = function (content)
-						return not content.show_note
+						return not content.show_note and not disable_note
 					end
 				},
 				{
@@ -3280,7 +3280,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 					pass_type = "text",
 					text_id = "note_text",
 					content_check_function = function (content)
-						return content.show_note
+						return content.show_note and not disable_note
 					end
 				},
 				{
@@ -3288,7 +3288,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 					pass_type = "text",
 					text_id = "press_key_text",
 					content_check_function = function (content)
-						return not content.show_note
+						return not content.show_note and not disable_note
 					end
 				}
 			}
@@ -3306,7 +3306,8 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 			game_mode_text = game_mode_text or Localize("not_assigned"),
 			expedition_highlight_text = Localize("expedition_highlight_text"),
 			note_text = Localize("expedition_info_note") or Localize("not_assigned"),
-			press_key_text = string.format(Localize("for_more_info"), "$KEY;start_game_view__show_information:") or Localize("not_assigned")
+			press_key_text = string.format(Localize("for_more_info"), "$KEY;start_game_view__show_information:") or Localize("not_assigned"),
+			disable_note = disable_note
 		},
 		style = {
 			background = {
@@ -3363,7 +3364,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 				localize = false,
 				font_size = 50,
 				horizontal_alignment = "center",
-				vertical_alignment = "top",
+				vertical_alignment = "center",
 				dynamic_font_size = true,
 				font_type = "hell_shark_header",
 				text_color = {
@@ -3374,7 +3375,11 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 				},
 				size = {
 					background_size[1],
-					50
+					40
+				},
+				area_size = {
+					background_size[1] - 200,
+					40
 				},
 				offset = {
 					0,
@@ -4332,5 +4337,66 @@ UIWidgets.create_start_game_deus_difficulty_info_box = function (scenegraph_id, 
 			0
 		},
 		scenegraph_id = scenegraph_id
+	}
+end
+
+UIWidgets.create_ability_charges_widget = function (scenegraph_id, size, offset)
+	local size = size or {
+		20,
+		20
+	}
+
+	return {
+		element = {
+			passes = {
+				{
+					pass_type = "texture",
+					style_id = "ability_charge_bg",
+					texture_id = "ability_charge_bg"
+				},
+				{
+					pass_type = "texture",
+					style_id = "ability_charge_active",
+					texture_id = "ability_charge_active",
+					content_check_function = function (content, style)
+						return content.ready
+					end
+				}
+			}
+		},
+		content = {
+			ability_charge_bg = "hud_career_ability_charge_bg",
+			ready = false,
+			ability_charge_active = "hud_career_ability_charge_active"
+		},
+		style = {
+			ability_charge_bg = {
+				texture_size = size,
+				color = Colors.get_color_table_with_alpha("white", 255),
+				offset = {
+					0,
+					0,
+					1
+				}
+			},
+			ability_charge_active = {
+				texture_size = {
+					size[1] - 4,
+					size[2] - 4
+				},
+				color = Colors.get_color_table_with_alpha("white", 255),
+				offset = {
+					2,
+					2,
+					2
+				}
+			}
+		},
+		scenegraph_id = scenegraph_id,
+		offset = offset or {
+			0,
+			0,
+			1
+		}
 	}
 end

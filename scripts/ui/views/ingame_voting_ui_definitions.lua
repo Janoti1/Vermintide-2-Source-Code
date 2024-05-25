@@ -446,9 +446,10 @@ local widget_definitions = {
 			info_text = {
 				scenegraph_id = "info_box",
 				localize = false,
+				dynamic_font_size_word_wrap = true,
 				word_wrap = true,
-				font_size = 32,
 				horizontal_alignment = "center",
+				font_size = 32,
 				vertical_alignment = "top",
 				font_type = "hell_shark_header",
 				text_color = Colors.get_color_table_with_alpha("font_default", 255),
@@ -460,13 +461,18 @@ local widget_definitions = {
 					0,
 					-14,
 					3
+				},
+				area_size = {
+					350,
+					85
 				}
 			},
 			info_text_shadow = {
-				font_size = 32,
 				scenegraph_id = "info_box",
 				localize = false,
+				dynamic_font_size_word_wrap = true,
 				word_wrap = true,
+				font_size = 32,
 				horizontal_alignment = "center",
 				vertical_alignment = "top",
 				font_type = "hell_shark_header",
@@ -475,6 +481,10 @@ local widget_definitions = {
 					2,
 					-16,
 					2
+				},
+				area_size = {
+					350,
+					85
 				}
 			},
 			time_text = {

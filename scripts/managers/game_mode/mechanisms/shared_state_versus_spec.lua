@@ -100,6 +100,11 @@ local spec = {
 			default_value = false,
 			type = "boolean",
 			composite_keys = {}
+		},
+		match_id = {
+			default_value = "missing id",
+			type = "string",
+			composite_keys = {}
 		}
 	},
 	peer = {

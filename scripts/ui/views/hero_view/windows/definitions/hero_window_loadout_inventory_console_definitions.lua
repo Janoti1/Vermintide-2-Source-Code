@@ -268,10 +268,10 @@ local generic_input_actions = {
 			description_text = "lb_add_to_favorites"
 		},
 		{
-			input_action = "right_thumb",
+			input_action = "right_stick_press",
 			priority = 4,
 			description_text = "input_description_toggle_hero_details",
-			ignore_keybinding = true
+			ignore_keybinding = false
 		},
 		{
 			input_action = "special_1",

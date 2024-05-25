@@ -1036,11 +1036,20 @@ local function create_power_up(scenegraph_id)
 					style_id = "description_text_shadow",
 					pass_type = "text",
 					text_id = "description_text"
+				},
+				{
+					style_id = "set_progression",
+					pass_type = "text",
+					text_id = "set_progression",
+					content_check_function = function (content)
+						return content.is_part_of_set
+					end
 				}
 			}
 		},
 		content = {
 			title_text = "",
+			set_progression = "%d/%d",
 			icon_frame = "weapon_icon_glow_white",
 			rarity_text = "",
 			shrine_bg = "shrine_blessing_bg_hover",
@@ -1279,6 +1288,24 @@ local function create_power_up(scenegraph_id)
 					62,
 					-62,
 					2
+				}
+			},
+			set_progression = {
+				word_wrap = false,
+				upper_case = false,
+				font_size = 20,
+				horizontal_alignment = "right",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark",
+				progression_colors = {
+					incomplete = Colors.get_color_table_with_alpha("font_default", 255),
+					complete = Colors.get_color_table_with_alpha("lime_green", 255)
+				},
+				text_color = Colors.get_color_table_with_alpha("font_default", 255),
+				offset = {
+					52,
+					14,
+					5
 				}
 			}
 		},

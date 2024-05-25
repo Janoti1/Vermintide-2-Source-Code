@@ -1,5 +1,49 @@
 return function ()
 	define_rule({
+		name = "pwh_gameplay_path_clear",
+		response = "pwh_gameplay_path_clear",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_item"
+			},
+			{
+				"query_context",
+				"item_tag",
+				OP.EQ,
+				"generic_path_clear"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"faction_memory",
+				"generic_path_clear",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"generic_path_clear",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
 		name = "pwh_generic_assemble",
 		response = "pwh_generic_assemble",
 		criterias = {
@@ -816,6 +860,45 @@ return function ()
 		}
 	})
 	add_dialogues({
+		pwh_gameplay_path_clear = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "witch_hunter_generic_vo",
+			sound_events_n = 4,
+			category = "level_talk",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm"
+			},
+			localization_strings = {
+				"pwh_gameplay_path_clear_01",
+				"pwh_gameplay_path_clear_02",
+				"pwh_gameplay_path_clear_03",
+				"pwh_gameplay_path_clear_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwh_gameplay_path_clear_01",
+				"pwh_gameplay_path_clear_02",
+				"pwh_gameplay_path_clear_03",
+				"pwh_gameplay_path_clear_04"
+			},
+			sound_events_duration = {
+				3.8468124866486,
+				2.9111459255219,
+				2.8924791812897,
+				3.0797083377838
+			}
+		},
 		pwh_generic_assemble = {
 			randomize_indexes_n = 0,
 			face_animations_n = 4,

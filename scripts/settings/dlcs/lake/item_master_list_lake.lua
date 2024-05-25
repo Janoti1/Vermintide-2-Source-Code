@@ -551,9 +551,9 @@ ItemMasterList.es_sword_shield_breton_skin_04 = {
 	}
 }
 ItemMasterList.es_sword_shield_breton_skin_04_magic_01_magic_01 = {
-	description = "es_sword_shield_breton_skin_04_magic_01_description",
+	description = "es_sword_shield_breton_skin_05_magic_01_description",
 	rarity = "magic",
-	display_name = "es_sword_shield_breton_skin_04_magic_01_name",
+	display_name = "es_sword_shield_breton_skin_05_magic_01_name",
 	hud_icon = "weapon_generic_icon_staff_3",
 	inventory_icon = "icon_wpn_emp_gk_sword_02_t2_wpn_emp_gk_shield_01_magic_01",
 	slot_type = "weapon_skin",
@@ -602,7 +602,7 @@ ItemMasterList.es_sword_shield_breton_magic_01 = {
 	property_table_name = "melee",
 	item_type = "es_1h_sword_shield_breton",
 	left_hand_unit = "units/weapons/player/wpn_emp_gk_shield_01/wpn_emp_gk_shield_01_magic_01",
-	required_unlock_item = "es_sword_shield",
+	required_unlock_item = "es_sword_shield_breton",
 	required_dlc = "lake",
 	can_wield = {
 		"es_questingknight"

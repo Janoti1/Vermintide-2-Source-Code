@@ -1301,6 +1301,14 @@ local function create_power_up_shop_item(scenegraph_id, size, masked, is_rectang
 			style_id = "hover",
 			pass_type = "texture_uv",
 			content_id = "hover"
+		},
+		{
+			style_id = "set_progression",
+			pass_type = "text",
+			text_id = "set_progression",
+			content_check_function = function (content)
+				return content.is_part_of_set
+			end
 		}
 	}
 	local content = {
@@ -1315,10 +1323,11 @@ local function create_power_up_shop_item(scenegraph_id, size, masked, is_rectang
 		icon = "icon_property_attack_speed",
 		current_value_text = "10%",
 		has_discount = false,
-		max_value_text = "20%",
+		set_progression = "%d/%d",
 		sub_text = "",
 		price_text = "0",
 		rarity_text = "",
+		max_value_text = "20%",
 		has_buying_animation_played = false,
 		button_hotspot = {},
 		background = {
@@ -1571,6 +1580,28 @@ local function create_power_up_shop_item(scenegraph_id, size, masked, is_rectang
 			size = {
 				120,
 				30
+			}
+		},
+		set_progression = {
+			word_wrap = false,
+			upper_case = false,
+			font_size = 24,
+			horizontal_alignment = "right",
+			vertical_alignment = "bottom",
+			font_type = "hell_shark",
+			progression_colors = {
+				incomplete = Colors.get_color_table_with_alpha("font_default", 255),
+				complete = Colors.get_color_table_with_alpha("lime_green", 255)
+			},
+			text_color = Colors.get_color_table_with_alpha("font_default", 255),
+			size = {
+				size[1] - 66,
+				30
+			},
+			offset = {
+				0,
+				18,
+				5
 			}
 		}
 	}

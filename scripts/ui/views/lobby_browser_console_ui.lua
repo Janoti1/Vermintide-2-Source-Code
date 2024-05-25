@@ -2017,10 +2017,11 @@ LobbyBrowserConsoleUI._fill_details = function (self, lobby_data)
 
 	if lobby_data then
 		local matchmaking_type_lookup = {
-			event = "lb_game_type_event",
-			deed = "lb_game_type_deed",
 			tutorial = "lb_game_type_prologue",
+			deed = "lb_game_type_deed",
 			weave = "lb_game_type_weave",
+			event = "lb_game_type_event",
+			deus_weekly = "cw_weekly_expedition_name_long",
 			custom = "lb_game_type_custom",
 			standard = "lb_game_type_quick_play",
 			weave_quick_play = "lb_game_type_weave_quick_play",
@@ -2043,7 +2044,7 @@ LobbyBrowserConsoleUI._fill_details = function (self, lobby_data)
 				matchmaking_type = "weave"
 			end
 		elseif mechanism == "deus" then
-			matchmaking_type = "deus"
+			matchmaking_type = matchmaking_type == "event" and "deus_weekly" or "deus"
 		end
 
 		local level_setting = LevelSettings[level_key]
@@ -2345,6 +2346,7 @@ LobbyBrowserConsoleUI._fill_deus_details = function (self, lobby_data)
 			deed = "lb_game_type_deed",
 			tutorial = "lb_game_type_prologue",
 			weave = "lb_game_type_weave",
+			deus_weekly = "cw_weekly_expedition_name_long",
 			custom = "lb_game_type_custom",
 			standard = "lb_game_type_quick_play",
 			weave_quick_play = "lb_game_type_weave_quick_play",
@@ -2367,7 +2369,7 @@ LobbyBrowserConsoleUI._fill_deus_details = function (self, lobby_data)
 				matchmaking_type = "weave"
 			end
 		elseif mechanism == "deus" then
-			matchmaking_type = "deus"
+			matchmaking_type = matchmaking_type == "event" and "deus_weekly" or "deus"
 		end
 
 		local level_setting = LevelSettings[level_key]

@@ -9047,8 +9047,8 @@ return function ()
 		}
 	})
 	define_rule({
-		name = "pdr_objective_dropping_grimoire",
 		response = "pdr_objective_dropping_grimoire",
+		name = "pdr_objective_dropping_grimoire",
 		criterias = {
 			{
 				"query_context",
@@ -9073,20 +9073,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_throwing_grimoire",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_throwing_grimoire",
-				OP.TIMESET
 			}
 		}
 	})
@@ -9267,8 +9253,8 @@ return function ()
 		}
 	})
 	define_rule({
-		name = "pdr_objective_picking_up_grimoire",
 		response = "pdr_objective_picking_up_grimoire",
+		name = "pdr_objective_picking_up_grimoire",
 		criterias = {
 			{
 				"query_context",
@@ -9280,7 +9266,7 @@ return function ()
 				"query_context",
 				"pickup_name",
 				OP.EQ,
-				"pickup_grimoire"
+				"wpn_grimoire_01"
 			},
 			{
 				"query_context",
@@ -9293,20 +9279,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_picking_up_grimoire",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_picking_up_grimoire",
-				OP.TIMESET
 			}
 		}
 	})
@@ -10513,13 +10485,13 @@ return function ()
 				1.9528332948685,
 				2.2222917079926,
 				1.4103125333786,
-				2.8293540477753,
 				1.7716666460037,
 				2.6246249675751,
 				2.4000000953674,
 				1.395708322525,
 				2.8242499828339,
-				3.5508542060852
+				3.5508542060852,
+				4.3178958892822
 			}
 		},
 		pdr_gameplay_bright_wizard_low_on_health = {
@@ -11075,9 +11047,9 @@ return function ()
 				1.1069166660309,
 				1.914958357811,
 				1.3749375343323,
-				1.1069166660309,
 				1.6329166889191,
-				2.5398333072662
+				2.5398333072662,
+				2.6967709064484
 			}
 		},
 		pdr_gameplay_empire_soldier_eaten = {
@@ -11209,13 +11181,13 @@ return function ()
 				1.4493541717529,
 				2.7625832557678,
 				3.6173748970032,
-				3.6173748970032,
 				2.6134583950043,
 				2.7363958358765,
 				3.4063541889191,
 				5.1488752365112,
 				5.2965416908264,
-				4.8476247787476
+				4.8476247787476,
+				4.9762916564941
 			}
 		},
 		pdr_gameplay_empire_soldier_low_on_health = {
@@ -12272,12 +12244,14 @@ return function ()
 		},
 		pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 8,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 6,
+			sound_events_n = 8,
 			category = "enemy_alerts_high",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 8,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12291,6 +12265,8 @@ return function ()
 				"face_fear",
 				"face_fear",
 				"face_fear",
+				"face_fear",
+				"face_fear",
 				"face_fear"
 			},
 			localization_strings = {
@@ -12299,7 +12275,9 @@ return function ()
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_04",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_05",
-				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06"
+				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06",
+				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_07",
+				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -12308,7 +12286,9 @@ return function ()
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_04",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_05",
-				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06"
+				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06",
+				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_07",
+				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			sound_events_duration = {
 				2.3980207443237,
@@ -12316,7 +12296,9 @@ return function ()
 				2.4221041202545,
 				1.1622707843781,
 				1.637791633606,
-				1.5051666498184
+				1.5051666498184,
+				1.8262083530426,
+				2.8139374256134
 			}
 		},
 		pdr_gameplay_hearing_a_chaos_spawn = {
@@ -12925,12 +12907,13 @@ return function ()
 		},
 		pdr_gameplay_hearing_a_globadier = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 9,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 8,
+			sound_events_n = 9,
 			category = "enemy_alerts_high",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 9,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -12948,9 +12931,11 @@ return function ()
 				"face_contempt",
 				"face_contempt",
 				"face_contempt",
+				"face_contempt",
 				"face_contempt"
 			},
 			localization_strings = {
+				"pdr_gameplay_hearing_a_globadier_01",
 				"pdr_gameplay_hearing_a_globadier_07",
 				"pdr_gameplay_hearing_a_globadier_08",
 				"pdr_gameplay_hearing_a_globadier_09",
@@ -12962,6 +12947,7 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_hearing_a_globadier_01",
 				"pdr_gameplay_hearing_a_globadier_07",
 				"pdr_gameplay_hearing_a_globadier_08",
 				"pdr_gameplay_hearing_a_globadier_09",
@@ -12979,7 +12965,8 @@ return function ()
 				3.3150207996368,
 				3.0870833396912,
 				1.587249994278,
-				2.3888750076294
+				2.3888750076294,
+				3.1968541145325
 			}
 		},
 		pdr_gameplay_hearing_a_globadier_combat = {
@@ -16347,12 +16334,13 @@ return function ()
 		},
 		pdr_gameplay_seeing_a_gutter_runner = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "enemy_alerts_high",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -16360,6 +16348,7 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
 				"face_surprise",
 				"face_contempt",
 				"face_contempt",
@@ -16367,6 +16356,7 @@ return function ()
 				"face_contempt"
 			},
 			localization_strings = {
+				"pdr_gameplay_seeing_a_gutter_runner_02",
 				"pdr_gameplay_seeing_a_gutter_runner_07",
 				"pdr_gameplay_seeing_a_gutter_runner_08",
 				"pdr_gameplay_seeing_a_gutter_runner_09",
@@ -16375,6 +16365,7 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_seeing_a_gutter_runner_02",
 				"pdr_gameplay_seeing_a_gutter_runner_07",
 				"pdr_gameplay_seeing_a_gutter_runner_08",
 				"pdr_gameplay_seeing_a_gutter_runner_09",
@@ -16386,7 +16377,8 @@ return function ()
 				2.2829582691193,
 				2.6864166259766,
 				2.4646248817444,
-				2.1197917461395
+				2.1197917461395,
+				1.2124583721161
 			}
 		},
 		pdr_gameplay_seeing_a_pm = {
@@ -17402,7 +17394,6 @@ return function ()
 			},
 			sound_events_duration = {
 				1.0678958892822,
-				1.0678958892822,
 				2.2196667194366,
 				1.8813542127609,
 				2.8519375324249,
@@ -17410,17 +17401,20 @@ return function ()
 				3.4181249141693,
 				1.7340208292007,
 				1.8232707977295,
-				1.3774791955948
+				1.3774791955948,
+				2.1222500801086
 			}
 		},
 		pdr_gameplay_spots_bomb = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 10,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 8,
+			sound_events_n = 10,
 			category = "seen_items",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -17438,9 +17432,13 @@ return function ()
 				"face_happy",
 				"face_happy",
 				"face_happy",
+				"face_happy",
+				"face_happy",
 				"face_happy"
 			},
 			localization_strings = {
+				"pdr_gameplay_spots_bomb_06",
+				"pdr_gameplay_spots_bomb_09",
 				"pdr_gameplay_spots_bomb_10",
 				"pdr_gameplay_spots_bomb_11",
 				"pdr_gameplay_spots_bomb_12",
@@ -17452,6 +17450,8 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_spots_bomb_06",
+				"pdr_gameplay_spots_bomb_09",
 				"pdr_gameplay_spots_bomb_10",
 				"pdr_gameplay_spots_bomb_11",
 				"pdr_gameplay_spots_bomb_12",
@@ -17462,14 +17462,16 @@ return function ()
 				"pdr_gameplay_spots_bomb_17"
 			},
 			sound_events_duration = {
-				1.5848749876022,
-				2.0525624752045,
+				2.8894166946411,
 				2.7321875095367,
 				2.8272082805634,
 				2.6578333377838,
 				2.1991250514984,
 				1.8385208845139,
-				2.5205416679382
+				2.5205416679382,
+				1.5076041221619,
+				2.693541765213,
+				1.838770866394
 			}
 		},
 		pdr_gameplay_spots_health = {
@@ -19402,7 +19404,7 @@ return function ()
 				1.4804791212082,
 				0.89908331632614,
 				1.1312291622162,
-				0.89908331632614
+				1.9812500476837
 			}
 		},
 		pdr_objective_correct_path_street = {
@@ -19539,16 +19541,12 @@ return function ()
 		},
 		pdr_objective_dropping_grimoire = {
 			randomize_indexes_n = 0,
-			face_animations_n = 9,
+			face_animations_n = 5,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 9,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 9,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -19560,17 +19558,9 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
-				"pdr_objective_dropping_grimoire_01",
-				"pdr_objective_dropping_grimoire_02",
-				"pdr_objective_dropping_grimoire_03",
-				"pdr_objective_dropping_grimoire_04",
 				"pdr_objective_dropping_grimoire_05",
 				"pdr_objective_dropping_grimoire_06",
 				"pdr_objective_dropping_grimoire_07",
@@ -19579,10 +19569,6 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"pdr_objective_dropping_grimoire_01",
-				"pdr_objective_dropping_grimoire_02",
-				"pdr_objective_dropping_grimoire_03",
-				"pdr_objective_dropping_grimoire_04",
 				"pdr_objective_dropping_grimoire_05",
 				"pdr_objective_dropping_grimoire_06",
 				"pdr_objective_dropping_grimoire_07",
@@ -19590,10 +19576,6 @@ return function ()
 				"pdr_objective_dropping_grimoire_09"
 			},
 			sound_events_duration = {
-				3.0792291164398,
-				3.0447499752045,
-				3.7088749408722,
-				3.5489583015442,
 				1.9136250019074,
 				2.9593124389648,
 				3.2139582633972,
@@ -19732,10 +19714,10 @@ return function ()
 			},
 			sound_events_duration = {
 				1.0929374694824,
-				1.0929374694824,
 				1.3843749761581,
 				1.4110416173935,
-				1.5655624866486
+				1.5655624866486,
+				1.3424166440964
 			}
 		},
 		pdr_objective_nearing_objective_deadline = {
@@ -19839,11 +19821,11 @@ return function ()
 				2.967791557312,
 				3.1603333950043,
 				3.5516042709351,
-				3.5516042709351,
 				2.9487292766571,
 				2.4619584083557,
 				2.9000833034515,
-				2.0781042575836
+				2.0781042575836,
+				2.5720207691193
 			}
 		},
 		pdr_special_ability_ironbreaker = {

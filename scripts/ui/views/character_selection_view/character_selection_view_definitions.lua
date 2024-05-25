@@ -275,6 +275,31 @@ local settings_by_screen = {
 		contains_new_content = function ()
 			return false
 		end
+	},
+	{
+		description = "Change loadout here",
+		name = "loadouts",
+		display_name = "LOADOUTS",
+		tab_screen = false,
+		draw_background_world = true,
+		state_name = "CharacterSelectionStateVersusLoadouts",
+		icons = {
+			selected = "tabs_icon_prestige_glow",
+			normal = "tabs_icon_prestige"
+		},
+		camera_position = {
+			0,
+			0,
+			-0.3
+		},
+		camera_rotation = {
+			0,
+			0,
+			-0.1
+		},
+		contains_new_content = function ()
+			return false
+		end
 	}
 }
 local title_text_style = {

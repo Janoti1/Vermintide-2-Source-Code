@@ -121,7 +121,6 @@ local unit_templates = {
 			"PlayerUnitVisualEffectsExtension",
 			"PlayerUnitWeaveLoadoutExtension",
 			"DialogueActorExtension",
-			"HealthTriggerExtension",
 			"GenericDialogueContextExtension",
 			"PlayerProximityExtension",
 			"SurroundingObserverExtension",
@@ -150,7 +149,6 @@ local unit_templates = {
 			"PlayerHuskVisualEffectsExtension",
 			"PlayerHuskWeaveLoadoutExtension",
 			"DialogueActorExtension",
-			"HealthTriggerExtension",
 			"GenericDialogueContextExtension",
 			"PlayerProximityExtension",
 			"SurroundingObserverHuskExtension",
@@ -200,7 +198,6 @@ local unit_templates = {
 			"SurroundingObserverExtension",
 			"PlayerWhereaboutsExtension",
 			"PlayerProximityExtension",
-			"HealthTriggerExtension",
 			"GenericDialogueContextExtension",
 			"PlayerOutlineExtension",
 			"PlayerTutorialExtension",
@@ -277,7 +274,6 @@ local unit_templates = {
 			"SurroundingObserverHuskExtension",
 			"PlayerHuskOutlineExtension",
 			"PlayerProximityExtension",
-			"HealthTriggerExtension",
 			"GenericDialogueContextExtension",
 			"PlayerHuskAttachmentExtension",
 			"StatisticsExtension",
@@ -386,7 +382,6 @@ local unit_templates = {
 			"SurroundingObserverHuskExtension",
 			"PlayerHuskOutlineExtension",
 			"PlayerProximityExtension",
-			"HealthTriggerExtension",
 			"GenericDialogueContextExtension",
 			"StatisticsExtension",
 			"PingTargetExtension",
@@ -2377,7 +2372,9 @@ local unit_templates = {
 		self_owned_extensions = {
 			"BuffAreaExtension"
 		},
-		husk_extensions = {}
+		husk_extensions = {
+			"BuffAreaExtension"
+		}
 	},
 	buff_unit = {
 		go_type = "buff_unit",

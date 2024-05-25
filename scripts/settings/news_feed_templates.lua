@@ -79,6 +79,12 @@ NewsFeedTemplates = {
 		infinite = false,
 		title = "news_feed_equipment_title",
 		condition_func = function (params)
+			local mechanism = Managers.mechanism:current_mechanism_name()
+
+			if mechanism == "versus" then
+				return false
+			end
+
 			local rarities_to_ignore = params.rarities_to_ignore
 
 			if ItemHelper.has_new_backend_ids_by_slot_type("trinket", rarities_to_ignore) then

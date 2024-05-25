@@ -12,12 +12,6 @@ end
 PlayerHuskGhostModeExtension.extensions_ready = function (self)
 	self._inventory_extension = ScriptUnit.extension(self._unit, "inventory_system")
 	self._breed = Unit.get_data(self._unit, "breed")
-
-	local start_in_ghost_mode = true
-
-	if start_in_ghost_mode then
-		self:husk_enter_ghost_mode()
-	end
 end
 
 PlayerHuskGhostModeExtension.destroy = function (self)
@@ -55,8 +49,8 @@ PlayerHuskGhostModeExtension._is_spectator = function (self)
 		return false
 	end
 
-	if self._is_spectator ~= nil then
-		return self._is_spectator
+	if self._is_spectator_cached ~= nil then
+		return self._is_spectator_cached
 	end
 
 	local player = Managers.player:local_player()
@@ -66,9 +60,9 @@ PlayerHuskGhostModeExtension._is_spectator = function (self)
 
 	fassert(player_party, "player not in a party")
 
-	self._is_spectator = player_party.name == "spectators"
+	self._is_spectator_cached = player_party.name == "spectators"
 
-	return self._is_spectator
+	return self._is_spectator_cached
 end
 
 PlayerHuskGhostModeExtension.husk_enter_ghost_mode = function (self)
@@ -95,12 +89,15 @@ PlayerHuskGhostModeExtension.husk_enter_ghost_mode = function (self)
 	if self:_in_same_side_as_local_player() then
 		self:_add_world_marker()
 	elseif not self:_is_spectator() then
-		Unit.set_unit_visibility(self._unit, false)
 		self._inventory_extension:show_third_person_inventory(false)
 	end
 
 	GhostModeSystem.set_sweep_actors(self._unit, self._breed, false)
 	Managers.state.event:trigger("set_new_enemy_role")
+
+	local dialogue_context_system = Managers.state.entity:system("dialogue_context_system")
+
+	dialogue_context_system:set_context_value(self._unit, "is_in_ghost_mode", true)
 end
 
 PlayerHuskGhostModeExtension._add_world_marker = function (self)
@@ -140,15 +137,8 @@ PlayerHuskGhostModeExtension.husk_leave_ghost_mode = function (self)
 
 	if self:_in_same_side_as_local_player() then
 		self:_clear_world_marker()
-	elseif not self:_is_spectator() then
-		Unit.set_unit_visibility(player_unit, true)
-
-		local career_extension = ScriptUnit.extension(player_unit, "career_system")
-		local career_data = career_extension:career_settings()
-
-		if not status_extension:get_unarmed() then
-			self._inventory_extension:show_third_person_inventory(true)
-		end
+	elseif not self:_is_spectator() and not status_extension:get_unarmed() then
+		self._inventory_extension:show_third_person_inventory(true)
 	end
 
 	GhostModeSystem.set_sweep_actors(player_unit, self._breed, true)
@@ -168,6 +158,10 @@ PlayerHuskGhostModeExtension.husk_leave_ghost_mode = function (self)
 
 		dialogue_input:trigger_dialogue_event("spawning")
 	end
+
+	local dialogue_context_system = Managers.state.entity:system("dialogue_context_system")
+
+	dialogue_context_system:set_context_value(player_unit, "is_in_ghost_mode", false)
 end
 
 PlayerHuskGhostModeExtension.set_safe_spot = function (self, safe_spot)

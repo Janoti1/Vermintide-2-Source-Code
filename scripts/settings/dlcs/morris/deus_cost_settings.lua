@@ -49,10 +49,11 @@ DeusCostSettings = DeusCostSettings or {
 			blessing_of_ranald = 200
 		},
 		power_ups = {
+			event = 100,
+			uncommon = 100,
 			exotic = 250,
-			unique = 300,
 			rare = 200,
-			uncommon = 100
+			unique = 300
 		}
 	},
 	deus_chest = {

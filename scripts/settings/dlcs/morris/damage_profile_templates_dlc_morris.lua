@@ -897,6 +897,122 @@ local damage_templates = {
 				impact = 0.5
 			}
 		}
+	},
+	deus_damage_drone = {
+		charge_value = "projectile",
+		no_stagger_damage_reduction_ranged = true,
+		armor_modifier = {
+			attack = {
+				0.2,
+				0.1,
+				0.4,
+				0.2,
+				0.4,
+				0.05
+			},
+			impact = {
+				0,
+				0,
+				0,
+				0,
+				0
+			}
+		},
+		default_target = {
+			boost_curve_type = "smiter_curve",
+			boost_curve_coefficient = 1,
+			attack_template = "bolt_sniper",
+			power_distribution = {
+				attack = 0.3,
+				impact = 0
+			}
+		}
+	},
+	boon_career_ability_lightning_aoe = {
+		charge_value = "light_attack",
+		no_stagger_damage_reduction_ranged = true,
+		no_stagger = true,
+		cleave_distribution = {
+			attack = 0.25,
+			impact = 0.25
+		},
+		armor_modifier = {
+			attack = {
+				0.45,
+				0.45,
+				0.45,
+				0.45,
+				0.45,
+				0.45
+			},
+			impact = {
+				0.45,
+				0.45,
+				0.45,
+				0.45,
+				0.45,
+				0.45
+			}
+		},
+		default_target = {
+			damage_type = "buff",
+			attack_template = "armor_breaker"
+		}
+	},
+	periodic_aoe_stagger = {
+		is_explosion = true,
+		charge_value = "ability",
+		cleave_distribution = "cleave_distribution_push_default",
+		default_target = "target_push_Ability",
+		no_friendly_fire = true,
+		no_damage = true,
+		armor_modifier = {
+			attack = {
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			},
+			impact = {
+				0.07,
+				0.3,
+				2,
+				0.3,
+				1,
+				1
+			}
+		}
+	},
+	boon_skulls_03 = {
+		is_explosion = true,
+		charge_value = "ability",
+		default_target = "target_push_Ability",
+		no_friendly_fire = true,
+		no_damage = true,
+		armor_modifier = {
+			attack = {
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			},
+			impact = {
+				1,
+				1,
+				15,
+				1,
+				1,
+				1
+			}
+		},
+		cleave_distribution = {
+			impact = 2,
+			atack = 0
+		}
 	}
 }
 

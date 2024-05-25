@@ -21,11 +21,14 @@ function flow_callback_hibernate_spawner(params)
 end
 
 function flow_callback_ai_move_group_command(params)
-	Managers.state.event:trigger("ai_move_group", params.player_name, params.group_name, params.target_unit, params.on_arrived_event_name)
+	error("'flow_callback_ai_move_group_command' is not deprecated")
 end
 
 function flow_callback_ai_move_single_command(params)
-	Managers.state.event:trigger("ai_move_single", params.move_unit, params.target_unit)
+	local move_unit = params.move_unit
+	local target_unit = params.target_unit
+
+	BLACKBOARDS[move_unit].goal_destination = Vector3Box(Unit.local_position(target_unit, 0))
 end
 
 function flow_callback_ai_override_breed_in_roamer_spawn_pool(params)
@@ -156,6 +159,12 @@ function flow_callback_spawn_ai_with_animation_and_move_to_unit(params)
 	local move_to_unit_1 = params.move_to_unit1
 	local move_to_unit_2 = params.move_to_unit2
 	local move_to_unit_3 = params.move_to_unit3
+	local level_event_name = params.on_spawn_event_name
+
+	if level_event_name == "" then
+		level_event_name = nil
+	end
+
 	local move_to_table = {}
 
 	move_to_table[#move_to_table + 1] = move_to_unit_1
@@ -200,10 +209,29 @@ function flow_callback_spawn_ai_with_animation_and_move_to_unit(params)
 
 				Unit.set_local_rotation(unit, 0, rot)
 			end
+
+			if level_event_name then
+				local world = Managers.state.conflict:world()
+				local level = LevelHelper:current_level(world)
+
+				Level.trigger_event(level, level_event_name)
+			end
 		end
 	}
+	local spawn_id = Managers.state.conflict:spawn_queued_unit(breed, spawn_position, QuaternionBox(Quaternion.identity()), "terror_event", nil, "terror_event", optional_data)
 
-	Managers.state.conflict:spawn_queued_unit(breed, spawn_position, QuaternionBox(Quaternion.identity()), "terror_event", nil, "terror_event", optional_data)
+	flow_return_table.spawn_handle = spawn_id
+
+	return flow_return_table
+end
+
+function flow_callback_get_spawned_unit(params)
+	local spawn_handle = params.spawn_handle
+	local unit = Managers.state.conflict:get_spawned_unit(spawn_handle)
+
+	flow_return_table.unit = unit
+
+	return flow_return_table
 end
 
 function trigger_ai_equipment_flow_event(params)
@@ -221,51 +249,43 @@ function trigger_ai_equipment_flow_event(params)
 end
 
 function flow_callback_ai_follow_path(params)
+	error("'flow_callback_ai_follow_path' is deprecated")
+
 	local ai_entity = params.ai_entity
 	local spline_name = params.spline_name
 	local finish_event = params.finish_event
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
-			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
-
-			ai_base:blackboard().move_orders[spline_name] = {
-				name = "follow",
-				finish_event = finish_event
-			}
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			-- Nothing
 		end
-	else
-		local ai_base = ScriptUnit.extension(ai_entity, "ai_system")
+	end
 
-		ai_base:blackboard().move_orders[spline_name] = {
-			name = "follow",
-			finish_event = finish_event
-		}
+	if false then
+		-- Nothing
 	end
 end
 
 function flow_callback_ai_patrol_path(params)
+	error("'flow_callback_ai_patrol_path' is deprecated")
+
 	local ai_entity = params.ai_entity
 	local spline_name = params.spline_name
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
-			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
-
-			ai_base:blackboard().move_orders[spline_name] = {
-				name = "patrol"
-			}
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			-- Nothing
 		end
-	else
-		local ai_base = ScriptUnit.extension(ai_entity, "ai_system")
+	end
 
-		ai_base:blackboard().move_orders[spline_name] = {
-			name = "patrol"
-		}
+	if false then
+		-- Nothing
 	end
 end
 
@@ -276,22 +296,15 @@ function flow_callback_ai_move_to_command(params)
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
-			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			local ai_unit = conflict_director:get_spawned_unit(ai_unit_handle)
 
-			ai_base:blackboard().move_orders[waypoint_unit] = {
-				name = "move",
-				finish_event = finish_event
-			}
+			BLACKBOARDS[ai_unit].goal_destination = Vector3Box(Unit.local_position(waypoint_unit, 0))
 		end
 	else
-		local ai_base = ScriptUnit.extension(ai_entity, "ai_system")
-
-		ai_base:blackboard().move_orders[waypoint_unit] = {
-			name = "move",
-			finish_event = finish_event
-		}
+		BLACKBOARDS[ai_entity].goal_destination = Vector3Box(Unit.local_position(waypoint_unit, 0))
 	end
 end
 
@@ -301,8 +314,10 @@ function flow_callback_ai_detect_player(params)
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			local ai_unit = conflict_director:get_spawned_unit(ai_unit_handle)
 			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
 
 			ai_base:blackboard().players[player_unit] = true
@@ -319,8 +334,10 @@ function flow_callback_ai_hold_position(params)
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			local ai_unit = conflict_director:get_spawned_unit(ai_unit_handle)
 			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
 
 			ai_base:steering():reset()
@@ -349,8 +366,10 @@ function flow_callback_set_ai_properties(params)
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			local ai_unit = conflict_director:get_spawned_unit(ai_unit_handle)
 			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
 
 			ai_base:set_properties(params)
@@ -367,8 +386,10 @@ function flow_callback_set_ai_perception(params)
 
 	if ScriptUnit.has_extension(ai_entity, "spawner_system") then
 		local spawner = ScriptUnit.extension(ai_entity, "spawner_system")
+		local conflict_director = Managers.state.conflict
 
-		for ai_unit, _ in pairs(spawner:spawned_enemies()) do
+		for _, ai_unit_handle in pairs(spawner:spawned_units()) do
+			local ai_unit = conflict_director:get_spawned_unit(ai_unit_handle)
 			local ai_base = ScriptUnit.extension(ai_unit, "ai_system")
 
 			ai_base:perception():set_config(params)

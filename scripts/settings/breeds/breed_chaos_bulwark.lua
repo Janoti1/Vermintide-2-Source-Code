@@ -867,6 +867,7 @@ local action_data = {
 		action_weight = 1,
 		difficulty_attack_intensity = AttackIntensityPerDifficulty,
 		considerations = UtilityConsiderations.chaos_bulwark_running_attack,
+		difficulty_damage = BreedTweaks.difficulty_damage.elite_attack,
 		fatigue_type = BreedTweaks.fatigue_types.elite_sweep.running_attack,
 		attacks = {
 			{
@@ -911,7 +912,9 @@ local action_data = {
 		}
 	},
 	running_attack_charging = {
-		damage = 20,
+		fatigue_type = "bulwark_shield_bash",
+		damage_type = "blunt",
+		damage = 0,
 		cooldown = 1,
 		target_running_velocity_threshold = 0,
 		attack_intensity_type = "running",
@@ -919,7 +922,7 @@ local action_data = {
 		no_block_stagger = true,
 		difficulty_attack_intensity = AttackIntensityPerDifficulty,
 		considerations = UtilityConsiderations.chaos_bulwark_running_attack_charging,
-		fatigue_type = BreedTweaks.fatigue_types.elite_sweep.running_attack,
+		difficulty_damage = BreedTweaks.difficulty_damage.elite_shield_push,
 		attacks = {
 			{
 				bot_threat_duration = 0.7,

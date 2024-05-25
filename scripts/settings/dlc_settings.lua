@@ -288,6 +288,10 @@ DLCSettings = DLCSettings or {
 			buff = "scripts/settings/dlcs/skulls_2023/buff_settings_skulls_2023"
 		}
 	},
+	skulls_2024 = {
+		localization = "localization/skulls_2024",
+		additional_settings = {}
+	},
 	fall_collection_2021 = {
 		package_name = "resource_packages/dlcs/fall_collection_2021",
 		additional_settings = {

@@ -189,13 +189,14 @@ local skins = {
 		name = "we_longbow_skin_02_magic_01",
 		data = {
 			description = "we_longbow_skin_02_magic_01_description",
+			ammo_unit = "units/weapons/player/wpn_we_quiver_t1/wpn_we_arrow_t1",
+			display_name = "we_longbow_skin_02_magic_01_name",
 			rarity = "magic",
-			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_bow",
 			inventory_icon = "icon_we_bow_01_t2_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_we_bow_01_t2/wpn_we_bow_01_t2_magic_01",
-			display_name = "we_longbow_skin_02_magic_01_name",
-			template = "longbow_template_1"
+			template = "longbow_template_1",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_bow"
 		}
 	},
 	{
@@ -309,26 +310,28 @@ local skins = {
 		name = "we_shortbow_skin_02_magic_01",
 		data = {
 			description = "we_shortbow_skin_02_magic_01_description",
+			ammo_unit = "units/weapons/player/wpn_we_quiver_t1/wpn_we_arrow_t1",
+			display_name = "we_shortbow_skin_02_magic_01_name",
 			rarity = "magic",
-			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_bow",
 			inventory_icon = "icon_we_bow_short_02_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_we_bow_short_02/wpn_we_bow_short_02_magic_01",
-			display_name = "we_shortbow_skin_02_magic_01_name",
-			template = "shortbow_template_1"
+			template = "shortbow_template_1",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_bow"
 		}
 	},
 	{
 		name = "we_shortbow_hagbane_skin_02_magic_01",
 		data = {
 			description = "we_shortbow_hagbane_skin_02_magic_01_description",
+			ammo_unit = "units/weapons/player/wpn_we_quiver_t1/wpn_we_poison_arrow_t1",
+			display_name = "we_shortbow_hagbane_skin_02_magic_01_name",
 			rarity = "magic",
-			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_bow",
 			inventory_icon = "icon_we_bow_short_02_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_we_bow_short_02/wpn_we_bow_short_02_magic_01",
-			display_name = "we_shortbow_hagbane_skin_02_magic_01_name",
-			template = "shortbow_hagbane_template_1"
+			template = "shortbow_hagbane_template_1",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_bow"
 		}
 	},
 	{

@@ -166,7 +166,7 @@ local skins = {
 			hud_icon = "hud_icon_default",
 			display_name = "bw_necromancy_staff_skin_02_magic_01_name",
 			inventory_icon = "icon_wpn_bw_necromancy_staff_02_magic_01",
-			left_hand_unit = "units/weapons/player/wpn_necromancy_skull/wpn_necromancy_skull",
+			left_hand_unit = "units/weapons/player/wpn_invisible_weapon",
 			right_hand_unit = "units/weapons/player/wpn_bw_necromancy_staff_02/wpn_bw_necromancy_staff_02_magic_01",
 			template = "staff_death"
 		}

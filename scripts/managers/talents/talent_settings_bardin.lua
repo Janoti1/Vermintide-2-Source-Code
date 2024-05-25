@@ -19,7 +19,20 @@ local buff_tweak_data = {
 		multiplier = 0.5
 	},
 	bardin_ironbreaker_gromril_delay = {
-		duration = 20
+		duration = 20,
+		duration_modifier_func = function (unit, sub_buff_template, duration, buff_extension, params)
+			local mechanism_name = Managers.mechanism:current_mechanism_name()
+
+			if mechanism_name == "versus" then
+				local talent_extension = ScriptUnit.extension(unit, "talent_system")
+
+				if talent_extension:has_talent("bardin_ironbreaker_gromril_stagger") then
+					duration = 30
+				end
+			end
+
+			return duration
+		end
 	},
 	bardin_ironbreaker_gromril_antistun = {
 		multiplier = -0.5
@@ -1056,18 +1069,16 @@ TalentBuffTemplates.dwarf_ranger = {
 	bardin_ranger_activated_ability = {
 		buffs = {
 			{
-				icon = "bardin_ranger_activated_ability",
+				area_unit_name = "units/hub_elements/empty",
 				name = "bardin_ranger_activated_ability",
 				buff_area_buff = "bardin_ranger_activated_ability_buff",
 				area_radius = 8,
-				enter_area_func = "enter_buff_area",
 				apply_buff_func = "play_sound_synced",
 				buff_self = true,
-				area_unit_name = "units/hub_elements/empty",
 				shared_area = true,
 				buff_area = true,
 				sound_to_play = "Play_career_ability_bardin_ranger_enter",
-				exit_area_func = "exit_buff_area",
+				icon = "bardin_ranger_activated_ability",
 				buff_sync_type = BuffSyncType.LocalAndServer,
 				duration_modifier_func = function (unit, sub_buff_template, duration, self, params)
 					local mechanism_name = Managers.mechanism:current_mechanism_name()
@@ -1225,16 +1236,14 @@ TalentBuffTemplates.dwarf_ranger = {
 	bardin_ranger_smoke_attack = {
 		buffs = {
 			{
-				area_radius = 8,
 				name = "bardin_ranger_activated_ability_attack",
 				buff_area_buff = "bardin_ranger_smoke_attack_buff",
-				enter_area_func = "enter_buff_area",
-				buff_self = true,
 				shared_area = true,
+				buff_self = true,
+				area_radius = 8,
 				buff_allies = true,
 				buff_area = true,
 				area_unit_name = "units/hub_elements/empty",
-				exit_area_func = "exit_buff_area",
 				buff_sync_type = BuffSyncType.All,
 				duration_modifier_func = function (unit, sub_buff_template, duration, self, params)
 					local mechanism_name = Managers.mechanism:current_mechanism_name()
@@ -1260,16 +1269,14 @@ TalentBuffTemplates.dwarf_ranger = {
 	bardin_ranger_smoke_heal = {
 		buffs = {
 			{
-				area_radius = 8,
 				name = "bardin_ranger_activated_ability_heal",
 				buff_area_buff = "bardin_ranger_smoke_heal_buff",
-				enter_area_func = "enter_buff_area",
-				buff_self = true,
 				shared_area = true,
+				buff_self = true,
+				area_radius = 8,
 				buff_allies = true,
 				buff_area = true,
 				area_unit_name = "units/hub_elements/empty",
-				exit_area_func = "exit_buff_area",
 				buff_sync_type = BuffSyncType.LocalAndServer,
 				duration_modifier_func = function (unit, sub_buff_template, duration, self, params)
 					local mechanism_name = Managers.mechanism:current_mechanism_name()

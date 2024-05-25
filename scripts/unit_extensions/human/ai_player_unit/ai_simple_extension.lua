@@ -35,7 +35,6 @@ AISimpleExtension.init = function (self, extension_init_context, unit, extension
 	blackboard.world = extension_init_context.world
 	blackboard.unit = unit
 	blackboard.level = LevelHelper:current_level(extension_init_context.world)
-	blackboard.move_orders = {}
 	blackboard.nav_world = self._nav_world
 	blackboard.node_data = {}
 	blackboard.running_nodes = {}
@@ -126,28 +125,27 @@ STATIC_BLACKBOARD_KEYS = STATIC_BLACKBOARD_KEYS or {
 	target_dist = true,
 	stagger_count = true,
 	node_data = true,
-	is_in_attack_cooldown = true,
+	spawn_type = true,
 	next_lean_index = true,
 	health_extension = true,
-	stagger_count_reset_at = true,
+	override_targets = true,
 	lean_dogpile = true,
-	next_smart_object_data = true,
 	navigation_extension = true,
 	locomotion_extension = true,
-	move_orders = true,
+	system_api = true,
 	lean_slots = true,
+	next_smart_object_data = true,
 	unit = true,
 	optional_spawn_data = true,
 	level = true,
-	system_api = true,
-	override_targets = true,
-	spawn_type = true,
-	running_nodes = true,
+	stagger_count_reset_at = true,
 	lean_unit_list = true,
+	world = true,
+	running_nodes = true,
+	is_in_attack_cooldown = true,
 	group_blackboard = true,
 	attack_cooldown_at = true,
 	stuck_check_time = true,
-	world = true,
 	inventory_extension = true,
 	is_passive = true,
 	breed = true,
@@ -180,7 +178,6 @@ AISimpleExtension.unfreeze = function (self, unit, data)
 
 	local side = Managers.state.side:add_unit_to_side(self._unit, side_id)
 
-	table.clear(blackboard.move_orders)
 	table.clear(blackboard.node_data)
 	table.clear(blackboard.running_nodes)
 	table.clear(blackboard.override_targets)

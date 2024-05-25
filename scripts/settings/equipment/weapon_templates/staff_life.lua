@@ -1,3 +1,4 @@
+local buff_perks = require("scripts/unit_extensions/default_player_unit/buffs/settings/buff_perk_names")
 local weapon_template = {}
 local anim_scale = 0.9
 
@@ -232,11 +233,10 @@ weapon_template.actions = {
 		},
 		cast_vortex = {
 			damage_window_start = 0.1,
-			overcharge_amount = 10,
 			fire_at_gaze_setting = "tobii_fire_at_gaze_geiser",
 			kind = "spirit_storm",
 			anim_end_event = "attack_finished",
-			fire_sound_on_husk = true,
+			overcharge_amount = 10,
 			is_spell = true,
 			damage_profile = "spirit_storm",
 			alert_enemies = true,
@@ -244,8 +244,9 @@ weapon_template.actions = {
 			alert_sound_range_fire = 12,
 			weapon_action_hand = "left",
 			fire_time = 0,
-			overcharge_amount_player_target = 35,
+			fire_sound_on_husk = true,
 			anim_event = "attack_shoot_fireball_charged",
+			player_target_buff = "staff_life_player_target_cooldown",
 			total_time = 1,
 			buff_data = {
 				{
@@ -289,14 +290,14 @@ weapon_template.actions = {
 	},
 	action_two = {
 		default = {
-			aim_time = 0,
 			default_zoom = "zoom_in_trueflight",
 			weapon_action_hand = "left",
 			kind = "career_true_flight_aim",
 			not_wield_previous = true,
-			hold_input = "action_two_hold",
+			aim_time = 0,
 			aim_sticky_target_size = 1,
 			aim_obstructed_by_walls = true,
+			hold_input = "action_two_hold",
 			minimum_hold_time = 0.2,
 			ignore_bosses = true,
 			anim_end_event = "attack_finished",
@@ -309,6 +310,15 @@ weapon_template.actions = {
 				return end_reason ~= "new_interupting_action"
 			end,
 			total_time = math.huge,
+			can_target_players = function (unit)
+				local buff_ext = ScriptUnit.has_extension(unit, "buff_system")
+
+				if buff_ext:has_buff_perk(buff_perks.sister_no_player_lift) then
+					return false
+				end
+
+				return true
+			end,
 			zoom_thresholds = {
 				"zoom_in_trueflight",
 				"zoom_in"
@@ -334,10 +344,26 @@ weapon_template.actions = {
 				beastmen_standard_bearer = 1,
 				skaven_storm_vermin_with_shield = 1
 			},
+			ignored_breeds = table.set({
+				"chaos_greed_pinata"
+			}),
 			condition_func = function (action_user, input_extension)
 				local overcharge_extension = ScriptUnit.extension(action_user, "overcharge_system")
 
-				return overcharge_extension:are_you_locked_out() == false
+				if overcharge_extension:are_you_locked_out() ~= false then
+					return false
+				end
+
+				return true
+			end,
+			chain_condition_func = function (action_user, input_extension)
+				local overcharge_extension = ScriptUnit.extension(action_user, "overcharge_system")
+
+				if overcharge_extension:are_you_locked_out() ~= false then
+					return false
+				end
+
+				return true
 			end,
 			allowed_chain_actions = {
 				{
@@ -404,12 +430,42 @@ weapon_template.actions = {
 			condition_func = function (action_user, input_extension)
 				local overcharge_extension = ScriptUnit.extension(action_user, "overcharge_system")
 
-				return overcharge_extension:get_overcharge_value() ~= 0 and overcharge_extension:are_you_locked_out() == false
+				if overcharge_extension:get_overcharge_value() == 0 then
+					return false
+				end
+
+				if overcharge_extension:are_you_locked_out() ~= false then
+					return false
+				end
+
+				local buff_extension = ScriptUnit.extension(action_user, "buff_system")
+				local can_vent = buff_extension:apply_buffs_to_value(1, "vent_speed")
+
+				if can_vent <= 0 then
+					return false
+				end
+
+				return true
 			end,
 			chain_condition_func = function (action_user, input_extension)
 				local overcharge_extension = ScriptUnit.extension(action_user, "overcharge_system")
 
-				return overcharge_extension:get_overcharge_value() ~= 0
+				if overcharge_extension:get_overcharge_value() == 0 then
+					return false
+				end
+
+				if overcharge_extension:are_you_locked_out() ~= false then
+					return false
+				end
+
+				local buff_extension = ScriptUnit.extension(action_user, "buff_system")
+				local can_vent = buff_extension:apply_buffs_to_value(1, "vent_speed")
+
+				if can_vent <= 0 then
+					return false
+				end
+
+				return true
 			end
 		}
 	},

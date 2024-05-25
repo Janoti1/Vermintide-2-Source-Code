@@ -9071,6 +9071,36 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pes_objective_dropping_grimoire",
+		name = "pes_objective_dropping_grimoire",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"throwing_item"
+			},
+			{
+				"query_context",
+				"item_type",
+				OP.EQ,
+				"grimoire"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			}
+		}
+	})
+	define_rule({
 		name = "pes_objective_goal_achieved_escape",
 		response = "pes_objective_goal_achieved_escape",
 		criterias = {
@@ -9243,6 +9273,36 @@ return function ()
 				"faction_memory",
 				"time_since_objective_nearing_objective_deadline_done",
 				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		response = "pes_objective_picking_up_grimoire",
+		name = "pes_objective_picking_up_grimoire",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"on_pickup"
+			},
+			{
+				"query_context",
+				"pickup_name",
+				OP.EQ,
+				"wpn_grimoire_01"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
 			}
 		}
 	})
@@ -11949,12 +12009,14 @@ return function ()
 		},
 		pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 8,
 			database = "empire_soldier_honduras",
-			sound_events_n = 6,
+			sound_events_n = 8,
 			category = "enemy_alerts_high",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 8,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11968,6 +12030,8 @@ return function ()
 				"face_fear",
 				"face_fear",
 				"face_fear",
+				"face_fear",
+				"face_fear",
 				"face_fear"
 			},
 			localization_strings = {
@@ -11976,7 +12040,9 @@ return function ()
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_04",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_05",
-				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06"
+				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06",
+				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_07",
+				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -11985,7 +12051,9 @@ return function ()
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_04",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_05",
-				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06"
+				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_06",
+				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_07",
+				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			sound_events_duration = {
 				0.92299997806549,
@@ -11993,7 +12061,9 @@ return function ()
 				1.2624167203903,
 				2.3858124017715,
 				2.1128125190735,
-				1.5776666402817
+				1.5776666402817,
+				1.4212499856949,
+				2.0916666984558
 			}
 		},
 		pes_gameplay_hearing_a_chaos_spawn = {
@@ -18662,8 +18732,8 @@ return function ()
 			sound_events_duration = {
 				0.88533335924149,
 				1.4690208435059,
-				0.88533335924149,
-				1.6513124704361
+				1.6513124704361,
+				1.1959999799728
 			}
 		},
 		pes_objective_correct_path_ladder_down = {
@@ -18934,6 +19004,50 @@ return function ()
 				0.84589582681656
 			}
 		},
+		pes_objective_dropping_grimoire = {
+			randomize_indexes_n = 0,
+			face_animations_n = 5,
+			database = "empire_soldier_honduras",
+			sound_events_n = 5,
+			category = "player_feedback",
+			dialogue_animations_n = 5,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pes_objective_dropping_grimoire_01",
+				"pes_objective_dropping_grimoire_02",
+				"pes_objective_dropping_grimoire_03",
+				"pes_objective_dropping_grimoire_04",
+				"pes_objective_dropping_grimoire_05"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pes_objective_dropping_grimoire_01",
+				"pes_objective_dropping_grimoire_02",
+				"pes_objective_dropping_grimoire_03",
+				"pes_objective_dropping_grimoire_04",
+				"pes_objective_dropping_grimoire_05"
+			},
+			sound_events_duration = {
+				1.6937916278839,
+				1.6610208749771,
+				0.78760415315628,
+				3.1894583702087,
+				3.4849998950958
+			}
+		},
 		pes_objective_goal_achieved_escape = {
 			randomize_indexes_n = 0,
 			face_animations_n = 6,
@@ -19118,6 +19232,45 @@ return function ()
 				0.48964583873749,
 				0.64520835876465,
 				1.5540624856949
+			}
+		},
+		pes_objective_picking_up_grimoire = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "empire_soldier_honduras",
+			sound_events_n = 4,
+			category = "player_feedback",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pes_objective_picking_up_grimoire_01",
+				"pes_objective_picking_up_grimoire_02",
+				"pes_objective_picking_up_grimoire_03",
+				"pes_objective_picking_up_grimoire_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pes_objective_picking_up_grimoire_01",
+				"pes_objective_picking_up_grimoire_02",
+				"pes_objective_picking_up_grimoire_03",
+				"pes_objective_picking_up_grimoire_04"
+			},
+			sound_events_duration = {
+				2.2848749160767,
+				3.4000208377838,
+				5.3183751106262,
+				3.5731666088104
 			}
 		},
 		pes_targeted_by_ratling = {

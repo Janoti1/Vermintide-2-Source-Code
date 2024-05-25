@@ -142,7 +142,9 @@ return {
 	display_name = "curse_egg_of_tzeentch_name",
 	icon = "deus_curse_tzeentch_01",
 	description = "curse_egg_of_tzeentch_desc",
-	curse_package_name = "resource_packages/mutators/mutator_curse_egg_of_tzeentch",
+	packages = {
+		"resource_packages/mutators/mutator_curse_egg_of_tzeentch"
+	},
 	client_start_function = function (context, data)
 		data.vfx_ids = {}
 		data.wwise_world = Managers.world:wwise_world(context.world)

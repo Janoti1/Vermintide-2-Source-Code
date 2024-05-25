@@ -6672,9 +6672,9 @@ return function ()
 				"pbw_gameplay_dwarf_ranger_low_on_health_07"
 			},
 			sound_events_duration = {
-				2.2264583110809,
 				2.80433344841,
-				1.534916639328
+				1.534916639328,
+				3.3312916755676
 			}
 		},
 		pbw_gameplay_empire_soldier_being_helped_up_drunk = {
@@ -6892,9 +6892,9 @@ return function ()
 				"pbw_gameplay_friendly_fire_witch_hunter_07"
 			},
 			sound_events_duration = {
-				2.15660405159,
 				2.424124956131,
-				2.6000833511352
+				2.6000833511352,
+				3.2588334083557
 			}
 		},
 		pbw_gameplay_friendly_fire_wood_elf_drunk = {
@@ -6922,8 +6922,8 @@ return function ()
 				[2] = "pbw_gameplay_friendly_fire_wood_elf_06"
 			},
 			sound_events_duration = {
-				[1] = 1.2641667127609,
-				[2] = 2.1018540859222
+				[1] = 4.1787710189819,
+				[2] = 4.3544998168945
 			}
 		},
 		pbw_gameplay_healing_draught_drunk = {
@@ -7625,9 +7625,9 @@ return function ()
 			},
 			sound_events_duration = {
 				1.1928124427795,
-				1.1928124427795,
 				2.1330208778381,
-				1.4213750362396
+				1.4213750362396,
+				2.2615833282471
 			}
 		},
 		pbw_gameplay_helped_by_empire_soldier_drunk = {
@@ -7663,9 +7663,9 @@ return function ()
 				"pbw_gameplay_healing_empire_soldier_09"
 			},
 			sound_events_duration = {
-				1.2418541908264,
 				1.3056458234787,
 				1.4301458597183,
+				1.8839374780655,
 				2.4242084026337
 			}
 		},
@@ -7698,9 +7698,9 @@ return function ()
 				"pbw_gameplay_helped_by_witch_hunter_07"
 			},
 			sound_events_duration = {
-				1.7616666555405,
 				1.93850004673,
-				2.2696459293366
+				2.2696459293366,
+				3.5965209007263
 			}
 		},
 		pbw_gameplay_helped_by_wood_elf_drunk = {
@@ -7732,9 +7732,9 @@ return function ()
 				"pbw_gameplay_helped_by_wood_elf_07"
 			},
 			sound_events_duration = {
-				1.3215416669846,
 				1.2043333053589,
-				2.0004999637604
+				2.0004999637604,
+				2.3414583206177
 			}
 		},
 		pbw_gameplay_incoming_skaven_rat_ogre_drunk = {
@@ -8200,13 +8200,12 @@ return function ()
 		},
 		pbw_gameplay_low_on_health_no_drunk = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 3,
 			database = "bright_wizard_game_play_crawl",
-			sound_events_n = 4,
+			sound_events_n = 3,
 			category = "player_feedback",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk"
@@ -8214,24 +8213,20 @@ return function ()
 			face_animations = {
 				"face_exhausted",
 				"face_exhausted",
-				"face_exhausted",
 				"face_exhausted"
 			},
 			localization_strings = {
-				"pbw_gameplay_low_on_health_09",
 				"pbw_gameplay_low_on_health_11",
 				"pbw_gameplay_low_on_health_13",
 				"pbw_gameplay_low_on_health_14"
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"pbw_gameplay_low_on_health_09",
 				"pbw_gameplay_low_on_health_11",
 				"pbw_gameplay_low_on_health_13",
 				"pbw_gameplay_low_on_health_14"
 			},
 			sound_events_duration = {
-				1.4831666946411,
 				1.79787504673,
 				1.8741562366486,
 				2.2006042003632

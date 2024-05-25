@@ -107,9 +107,11 @@ end
 
 return {
 	description = "description_mutator_geheimnisnacht_2021",
-	icon = "mutator_icon_death_spirits",
 	display_name = "display_name_mutator_geheimnisnacht_2021",
-	curse_package_name = "resource_packages/dlcs/geheimnisnacht_2021_event",
+	icon = "mutator_icon_death_spirits",
+	packages = {
+		"resource_packages/dlcs/geheimnisnacht_2021_event"
+	},
 	server_start_function = function (context, data)
 		local level_key = Managers.state.game_mode:level_key()
 		local settings = event_settings[level_key]

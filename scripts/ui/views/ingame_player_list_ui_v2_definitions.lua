@@ -144,7 +144,7 @@ local scenegraph_definition = {
 		horizontal_alignment = "left",
 		position = {
 			20,
-			-525,
+			-200,
 			1
 		},
 		offset = {
@@ -494,6 +494,39 @@ local scenegraph_definition = {
 	mutator_summary3 = {
 		vertical_alignment = "top",
 		parent = "mutator_summary2",
+		horizontal_alignment = "left",
+		position = {
+			0,
+			-100,
+			1
+		},
+		size = MUTATOR_SUMMARY_SIZE
+	},
+	mutator_summary4 = {
+		vertical_alignment = "top",
+		parent = "mutator_summary3",
+		horizontal_alignment = "left",
+		position = {
+			0,
+			-100,
+			1
+		},
+		size = MUTATOR_SUMMARY_SIZE
+	},
+	mutator_summary5 = {
+		vertical_alignment = "top",
+		parent = "mutator_summary4",
+		horizontal_alignment = "left",
+		position = {
+			0,
+			-100,
+			1
+		},
+		size = MUTATOR_SUMMARY_SIZE
+	},
+	mutator_summary6 = {
+		vertical_alignment = "top",
+		parent = "mutator_summary5",
 		horizontal_alignment = "left",
 		position = {
 			0,
@@ -1396,6 +1429,11 @@ local function create_node_info_widget()
 					}
 				}
 			}
+		},
+		offset = {
+			0,
+			0,
+			0
 		}
 	}
 end
@@ -4083,6 +4121,15 @@ local widget_definitions = {
 	}, nil, mutator_pass_styles),
 	mutator_summary3 = UIWidgets.create_simple_item_presentation("mutator_summary3", {
 		"mutators"
+	}, nil, mutator_pass_styles),
+	mutator_summary4 = UIWidgets.create_simple_item_presentation("mutator_summary4", {
+		"mutators"
+	}, nil, mutator_pass_styles),
+	mutator_summary5 = UIWidgets.create_simple_item_presentation("mutator_summary5", {
+		"mutators"
+	}, nil, mutator_pass_styles),
+	mutator_summary6 = UIWidgets.create_simple_item_presentation("mutator_summary6", {
+		"mutators"
 	}, nil, mutator_pass_styles)
 }
 local weave_objective_widgets = {
@@ -4099,6 +4146,7 @@ local specific_widget_definitions = {
 	input_description_text = UIWidgets.create_simple_text("player_list_show_mouse_description", "player_list_input_description", nil, nil, input_description_style),
 	private_checkbox = UIWidgets.create_checkbox_widget("start_game_window_private_game", "", "private_checkbox", private_checkbox_offset, nil)
 }
+local disable_unsupported = true
 
 return {
 	PLAYER_LIST_SIZE = PLAYER_LIST_SIZE,
@@ -4114,5 +4162,5 @@ return {
 	create_reward_item = create_reward_item,
 	create_node_info_widget = create_node_info_widget,
 	console_cursor_definition = UIWidgets.create_console_cursor("console_cursor"),
-	item_tooltip = UIWidgets.create_simple_item_presentation("item_tooltip", UISettings.console_tooltip_pass_definitions)
+	item_tooltip = UIWidgets.create_simple_item_presentation("item_tooltip", UISettings.console_tooltip_pass_definitions, nil, nil, disable_unsupported)
 }

@@ -445,9 +445,7 @@ HeroPreviewer._handle_hero_spawn_request = function (self)
 end
 
 HeroPreviewer._load_hero_unit = function (self, profile_name, career_index, callback, optional_skin, optional_scale)
-	if not self._delayed_spawn then
-		self:_unload_all_packages()
-	end
+	self:_unload_all_packages()
 
 	self._current_profile_name = profile_name
 
@@ -1173,7 +1171,7 @@ HeroPreviewer._unload_hero_packages = function (self)
 	local reference_name = self:_reference_name()
 
 	for _, package_name in pairs(package_names) do
-		if package_manager:has_loaded(package_name, reference_name) then
+		if package_manager:has_loaded(package_name, reference_name) or package_manager:is_loading(package_name, reference_name) then
 			package_manager:unload(package_name, reference_name)
 		end
 	end
@@ -1194,7 +1192,7 @@ HeroPreviewer._unload_prop_packages = function (self, data)
 	local reference_name = self:_reference_name()
 
 	for _, package_name in ipairs(data.settings.package_names) do
-		if package_manager:has_loaded(package_name, reference_name) then
+		if package_manager:has_loaded(package_name, reference_name) or package_manager:is_loading(package_name, reference_name) then
 			package_manager:unload(package_name, reference_name)
 		end
 	end
@@ -1210,7 +1208,7 @@ HeroPreviewer._unload_item_packages_by_slot = function (self, slot_type)
 		local reference_name = self:_reference_name()
 
 		for _, package_name in ipairs(package_names) do
-			if package_manager:has_loaded(package_name, reference_name) then
+			if package_manager:has_loaded(package_name, reference_name) or package_manager:is_loading(package_name, reference_name) then
 				package_manager:unload(package_name, reference_name)
 			end
 		end

@@ -616,11 +616,20 @@ local talents = {
 	{
 		description = "victor_priest_6_1_desc_new",
 		name = "victor_priest_6_1",
-		num_ranks = 1,
 		icon = "victor_priest_6_1",
+		num_ranks = 1,
 		description_values = {
 			{
 				value = CareerConstants.wh_priest.talent_6_1_improved_ability_duration
+			}
+		},
+		mechanism_overrides = {
+			versus = {
+				description_values = {
+					{
+						value = CareerConstants.wh_priest.talent_6_1_improved_ability_duration_versus
+					}
+				}
 			}
 		},
 		buffs = {}

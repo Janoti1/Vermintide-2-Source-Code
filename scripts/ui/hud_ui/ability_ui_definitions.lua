@@ -26,6 +26,20 @@ local scenegraph_definition = {
 			624,
 			66
 		}
+	},
+	ability_charges = {
+		vertical_alignment = "center",
+		parent = "ability_root",
+		horizontal_alignment = "right",
+		position = {
+			-10,
+			-10,
+			11
+		},
+		size = {
+			0,
+			0
+		}
 	}
 }
 local ability_widget_definition = {
