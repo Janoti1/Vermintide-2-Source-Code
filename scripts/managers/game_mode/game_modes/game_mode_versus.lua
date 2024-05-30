@@ -1857,9 +1857,8 @@ GameModeVersus._match_end_telemetry = function (self, results)
 	Managers.telemetry_events:versus_match_ended(match_id, is_draw, winning_party)
 end
 
-GameModeVersus.activated_ability_telemetry = function (self, ability_name)
+GameModeVersus.activated_ability_telemetry = function (self, ability_name, player)
 	local mechanism = Managers.mechanism:game_mechanism()
-	local player = Managers.player:local_player()
 	local game_round = mechanism:total_rounds_started()
 	local match_id = mechanism:match_id()
 	local player_id = player:telemetry_id()

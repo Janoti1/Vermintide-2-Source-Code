@@ -71,6 +71,29 @@ ModShim.patches = {
 		end
 	}
 }
+ModShim.error_handling = {
+	error_state = {},
+	state_bound_log = function (vmf_mod, identifier, message, ...)
+		local state = ModShim.error_handling.error_state[identifier] or {
+			printed = {}
+		}
+
+		ModShim.error_handling.error_state[identifier] = state
+
+		local game_mode = Managers.state.game_mode and Managers.state.game_mode:game_mode()
+
+		if not game_mode or state.printed[game_mode] then
+			return
+		end
+
+		state.printed[game_mode] = true
+
+		ModShim.error_handling.log(vmf_mod, message, ...)
+	end,
+	log = function (vmf_mod, message, ...)
+		vmf_mod:error(message, ...)
+	end
+}
 ModShim.wedges = {
 	{
 		date = "5/27/2024 10:15:00 PM",
@@ -90,7 +113,11 @@ ModShim.wedges = {
 						if hook_result ~= original_result then
 							local display_name = MechanismSettings[mechanism_name] and MechanismSettings[mechanism_name].display_name
 
-							vmf_mod:error("Unauthorized override of bot's inventory items. Not allowed in %s. Please refer to the official loadout system for bot overrides.", display_name and Localize(display_name) or mechanism_name)
+							if mechanism_name == "versus" then
+								ModShim.error_handling.state_bound_log(vmf_mod, "loadout_item", "Unauthorized override of inventory items. Not allowed in %s.", display_name and Localize(display_name) or mechanism_name)
+							else
+								ModShim.error_handling.state_bound_log(vmf_mod, "loadout_item", "Unauthorized override of bot's inventory items. Not allowed in %s. Please refer to the official loadout system for bot overrides.", display_name and Localize(display_name) or mechanism_name)
+							end
 						end
 
 						return original_result
@@ -111,7 +138,11 @@ ModShim.wedges = {
 						if hook_result ~= original_result then
 							local display_name = MechanismSettings[mechanism_name] and MechanismSettings[mechanism_name].display_name
 
-							vmf_mod:error("Unauthorized override of bot's talents. Not allowed in %s. Please refer to the official loadout system for bot overrides.", display_name and Localize(display_name) or mechanism_name)
+							if mechanism_name == "versus" then
+								ModShim.error_handling.state_bound_log(vmf_mod, "loadout_talent", "Unauthorized override of talents. Not allowed in %s.", display_name and Localize(display_name) or mechanism_name)
+							else
+								ModShim.error_handling.state_bound_log(vmf_mod, "loadout_talent", "Unauthorized override of bot's talents. Not allowed in %s. Please refer to the official loadout system for bot overrides.", display_name and Localize(display_name) or mechanism_name)
+							end
 						end
 
 						return original_result
@@ -128,10 +159,14 @@ ModShim.wedges = {
 				vmf_mod.restore_loadout = function (...)
 					local mechanism_name = Managers.mechanism:current_mechanism_name()
 
+					if mechanism_name == "versus" and not global_is_inside_inn then
+						return
+					end
+
 					if mechanism_name ~= "adventure" and (not global_is_inside_inn or mechanism_name == "versus") then
 						local display_name = MechanismSettings[mechanism_name] and MechanismSettings[mechanism_name].display_name
 
-						vmf_mod:error("Unauthorized override of loadout. Not allowed in %s", display_name and Localize(display_name) or mechanism_name)
+						ModShim.error_handling.state_bound_log(vmf_mod, "loadout_restore", "Unauthorized override of loadout. Not allowed in %s.", display_name and Localize(display_name) or mechanism_name)
 
 						return
 					end
@@ -140,6 +175,27 @@ ModShim.wedges = {
 				end
 			end
 		end
+	},
+	{
+		date = "5/30/2024 12:15:00 PM",
+		mods = {
+			"HideBuffs"
+		},
+		hooks = {
+			{
+				name = "UnitFrameUI.draw",
+				func = function (vmf_mod, mod_func, mod_name, hooked_function, self, ...)
+					local player = Managers.player:local_player()
+					local party = player and player:get_party()
+
+					if party and party.name == "dark_pact" then
+						return hooked_function(self, ...)
+					else
+						return mod_func(hooked_function, self, ...)
+					end
+				end
+			}
+		}
 	}
 }
 ModShim.warnings = ModShim.warnings or {}

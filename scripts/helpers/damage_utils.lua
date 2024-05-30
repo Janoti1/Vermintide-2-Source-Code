@@ -3267,8 +3267,9 @@ DamageUtils.process_projectile_hit = function (world, damage_source, owner_unit,
 			if is_character and owner_player then
 				local side = side_manager.side_by_unit[hit_unit]
 				local owner_side = side_manager.side_by_unit[owner_unit]
+				local units_on_same_side = side and owner_side and side.side_id == owner_side.side_id
 
-				if side and owner_side and side.side_id == owner_side.side_id then
+				if side and owner_side and units_on_same_side and not breed.boss then
 					block_processing = not allow_friendly_fire or breed.disable_friendly_fire
 				end
 			end
