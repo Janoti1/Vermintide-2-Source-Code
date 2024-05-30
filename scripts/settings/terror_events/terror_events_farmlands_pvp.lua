@@ -23,8 +23,7 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "oak_hill_event_spawner",
-			composition_type = "event_small",
-			difficulty_requirement = HARD
+			composition_type = "event_small"
 		},
 		{
 			"delay",
@@ -33,8 +32,7 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "oak_hill_event_spawner",
-			composition_type = "event_extra_spice_small",
-			difficulty_requirement = HARD
+			composition_type = "event_extra_spice_small"
 		},
 		{
 			"delay",
@@ -43,8 +41,7 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "oak_hill_event_spawner",
-			composition_type = "plague_monks_small",
-			difficulty_requirement = HARD
+			composition_type = "plague_monks_small"
 		},
 		{
 			"delay",
@@ -74,8 +71,7 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "farmlands_rat_ogre",
-			composition_type = "chaos_warriors",
-			difficulty_requirement = HARD
+			composition_type = "chaos_warriors"
 		},
 		{
 			"delay",
@@ -90,7 +86,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 1
 		},
 		{
 			"spawn_at_raw",
@@ -101,7 +97,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 1
+			duration = 5
 		},
 		{
 			"continue_when",
@@ -131,7 +127,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 1
 		},
 		{
 			"event_horde",
@@ -140,7 +136,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 5
 		},
 		{
 			"continue_when",
@@ -181,7 +177,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 1
 		},
 		{
 			"spawn_at_raw",
@@ -192,7 +188,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 5
 		},
 		{
 			"continue_when",
@@ -270,7 +266,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 5
+			duration = 1
 		},
 		{
 			"spawn_at_raw",
@@ -288,7 +284,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 5
 		},
 		{
 			"continue_when",
@@ -327,7 +323,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 5
 		},
 		{
 			"continue_when",
@@ -382,7 +378,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 1
 		},
 		{
 			"spawn_at_raw",
@@ -393,7 +389,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 5
 		},
 		{
 			"continue_when",
@@ -423,7 +419,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 1
 		},
 		{
 			"event_horde",
@@ -432,7 +428,7 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 3
+			duration = 1
 		},
 		{
 			"event_horde",

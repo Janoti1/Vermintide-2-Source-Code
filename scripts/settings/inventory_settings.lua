@@ -156,6 +156,21 @@ InventorySettings.loadouts = {
 		loadout_icon = "loadout_icon_3",
 		loadout_type = "custom",
 		loadout_index = 3
+	},
+	{
+		loadout_icon = "loadout_icon_4",
+		loadout_type = "custom",
+		loadout_index = 4
+	},
+	{
+		loadout_icon = "loadout_icon_5",
+		loadout_type = "custom",
+		loadout_index = 5
+	},
+	{
+		loadout_icon = "loadout_icon_6",
+		loadout_type = "custom",
+		loadout_index = 6
 	}
 }
 

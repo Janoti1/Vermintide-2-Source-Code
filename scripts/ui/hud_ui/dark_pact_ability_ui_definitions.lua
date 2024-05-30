@@ -1,5 +1,9 @@
 local SIZE_X, SIZE_Y = 1920, 1080
 local RETAINED_MODE_ENABLED = false
+local warpfire_cooldown_size = {
+	312.5,
+	70
+}
 local scenegraph_definition = {
 	screen = {
 		scale = "hud_scale_fit",
@@ -19,7 +23,7 @@ local scenegraph_definition = {
 		horizontal_alignment = "right",
 		position = {
 			-100,
-			100,
+			160,
 			10
 		},
 		size = {
@@ -55,6 +59,17 @@ local scenegraph_definition = {
 			1
 		}
 	},
+	warpfire_ammo_root = {
+		vertical_alignment = "center",
+		parent = "screen",
+		horizontal_alignment = "center",
+		position = {
+			0,
+			-200,
+			10
+		},
+		size = warpfire_cooldown_size
+	},
 	bottom_root = {
 		vertical_alignment = "bottom",
 		parent = "screen",
@@ -67,6 +82,20 @@ local scenegraph_definition = {
 		size = {
 			1,
 			1
+		}
+	},
+	ammo_parent = {
+		vertical_alignment = "bottom",
+		parent = "screen",
+		horizontal_alignment = "right",
+		position = {
+			-50,
+			100,
+			10
+		},
+		size = {
+			383,
+			86
 		}
 	}
 }
@@ -481,7 +510,7 @@ local function create_widget_priming()
 								1
 							}
 						}
-						style.texture_size[2] = 100 * content.parent.progress
+						style.texture_size[2] = 84 * content.parent.progress
 					end
 				},
 				{
@@ -502,7 +531,7 @@ local function create_widget_priming()
 								1
 							}
 						}
-						style.texture_size[2] = 100 * content.parent.progress
+						style.texture_size[2] = 84 * content.parent.progress
 					end
 				},
 				{
@@ -523,7 +552,7 @@ local function create_widget_priming()
 								1
 							}
 						}
-						style.texture_size[2] = 100 * content.parent.progress
+						style.texture_size[2] = 84 * content.parent.progress
 					end
 				}
 			}
@@ -587,7 +616,7 @@ local function create_widget_priming()
 			progress_1 = {
 				texture_size = {
 					108,
-					100
+					84
 				},
 				offset = {
 					-54,
@@ -599,7 +628,7 @@ local function create_widget_priming()
 			progress_2 = {
 				texture_size = {
 					108,
-					100
+					84
 				},
 				offset = {
 					-54,
@@ -611,7 +640,7 @@ local function create_widget_priming()
 			progress_3 = {
 				texture_size = {
 					108,
-					100
+					84
 				},
 				offset = {
 					-54,
@@ -913,7 +942,7 @@ local function create_widget_reload()
 		},
 		offset = {
 			0,
-			-350,
+			-370,
 			0
 		}
 	}
@@ -1021,6 +1050,16 @@ local function create_dark_pact_ability_widget()
 					content_check_function = function (content)
 						return content.ready
 					end
+				},
+				{
+					style_id = "input_text",
+					pass_type = "text",
+					text_id = "input_text"
+				},
+				{
+					pass_type = "texture",
+					style_id = "input_background",
+					texture_id = "input_background"
 				}
 			}
 		},
@@ -1029,7 +1068,9 @@ local function create_dark_pact_ability_widget()
 			ability_progress = "dark_pact_ability_progress_bar",
 			ability_effect = "dark_pact_ability_effect",
 			ready = false,
-			background = "horde_bar_background"
+			background = "horde_bar_background",
+			input_text = "-",
+			input_background = "info_window_background"
 		},
 		style = {
 			background = {
@@ -1047,12 +1088,12 @@ local function create_dark_pact_ability_widget()
 			ability_progress = {
 				gradient_threshold = 0,
 				size = {
-					356,
-					160
+					332,
+					106
 				},
 				offset = {
-					0,
-					0,
+					10,
+					26,
 					2
 				},
 				color = Colors.get_color_table_with_alpha("white", 255)
@@ -1085,12 +1126,350 @@ local function create_dark_pact_ability_widget()
 					4
 				},
 				color = Colors.get_color_table_with_alpha("white", 255)
+			},
+			input_text = {
+				word_wrap = false,
+				use_shadow = false,
+				localize = false,
+				font_size = 30,
+				horizontal_alignment = "left",
+				vertical_alignment = "center",
+				font_type = "hell_shark",
+				size = {
+					30,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("white", 255),
+				offset = {
+					284,
+					162,
+					2
+				}
+			},
+			input_background = {
+				vertical_alignment = "center",
+				horizontal_alignment = "center",
+				texture_size = {
+					110,
+					30
+				},
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					301,
+					180,
+					0
+				}
 			}
 		},
 		offset = {
 			0,
 			0,
 			10
+		}
+	}
+end
+
+local function create_warpfire_ammo_widget()
+	local size = warpfire_cooldown_size
+
+	return {
+		scenegraph_id = "warpfire_ammo_root",
+		element = {
+			passes = {
+				{
+					style_id = "icon",
+					texture_id = "icon",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return content.progress > 0.01
+					end,
+					content_change_function = function (content, style)
+						local progress = content.progress
+
+						if progress <= 0.3 then
+							style.color = style.range_colors.color_normal
+						elseif progress > 0.3 and progress < 0.8 then
+							style.color = style.range_colors.color_medium
+						else
+							style.color = style.range_colors.color_high
+						end
+
+						style.gradient_threshold = progress
+					end
+				},
+				{
+					pass_type = "texture",
+					style_id = "icon_shadow",
+					texture_id = "icon",
+					content_check_function = function (content)
+						return content.progress > 0.01
+					end
+				},
+				{
+					pass_type = "texture",
+					style_id = "bar_fg",
+					texture_id = "bar_fg",
+					content_check_function = function (content)
+						return content.progress > 0.01
+					end
+				},
+				{
+					style_id = "bar_1",
+					texture_id = "bar_1",
+					pass_type = "gradient_mask_texture",
+					content_check_function = function (content)
+						return content.progress > 0.01
+					end,
+					content_change_function = function (content, style)
+						local progress = content.progress
+
+						if progress <= 0.3 then
+							style.color = style.range_colors.color_normal
+						elseif progress > 0.3 and progress < 0.8 then
+							style.color = style.range_colors.color_medium
+						else
+							style.color = style.range_colors.color_high
+						end
+
+						style.gradient_threshold = progress
+					end
+				}
+			}
+		},
+		content = {
+			icon = "tabs_icon_all_selected",
+			progress = 0,
+			bar_1 = "dark_pact_overcharge_bar",
+			bar_fg = "circular_bar_background",
+			size = {
+				size[1] - 6,
+				size[2]
+			}
+		},
+		style = {
+			bar_1 = {
+				gradient_threshold = 0,
+				color = {
+					255,
+					0,
+					255,
+					76
+				},
+				offset = {
+					0,
+					0,
+					10
+				},
+				size = {
+					size[1],
+					size[2]
+				},
+				range_colors = {
+					color_normal = {
+						255,
+						144,
+						238,
+						144
+					},
+					color_medium = {
+						255,
+						38,
+						255,
+						0
+					},
+					color_high = {
+						255,
+						255,
+						0,
+						0
+					}
+				}
+			},
+			icon = {
+				size = {
+					38,
+					38
+				},
+				offset = {
+					size[1] - 30,
+					size[2] / 2 + 5,
+					5
+				},
+				color = {
+					100,
+					0,
+					0,
+					1
+				},
+				range_colors = {
+					color_normal = {
+						100,
+						144,
+						238,
+						144
+					},
+					color_medium = {
+						165,
+						38,
+						255,
+						0
+					},
+					color_high = {
+						255,
+						255,
+						0,
+						0
+					}
+				}
+			},
+			icon_shadow = {
+				size = {
+					34,
+					34
+				},
+				offset = {
+					size[1] + 2,
+					size[2] / 2 - 2,
+					5
+				},
+				color = {
+					0,
+					0,
+					0,
+					0
+				}
+			},
+			bar_fg = {
+				offset = {
+					0,
+					0,
+					5
+				},
+				color = {
+					204,
+					255,
+					255,
+					255
+				},
+				size = size
+			}
+		},
+		offset = {
+			0,
+			0,
+			2
+		}
+	}
+end
+
+local function create_ammo_widget()
+	return {
+		scenegraph_id = "ammo_parent",
+		element = {
+			passes = {
+				{
+					pass_type = "texture",
+					style_id = "ammo_background",
+					texture_id = "ammo_background"
+				},
+				{
+					style_id = "current_ammo",
+					pass_type = "text",
+					text_id = "current_ammo"
+				},
+				{
+					style_id = "ammo_divider",
+					pass_type = "text",
+					text_id = "ammo_divider"
+				},
+				{
+					style_id = "remaining_ammo",
+					pass_type = "text",
+					text_id = "remaining_ammo"
+				}
+			}
+		},
+		content = {
+			ammo_divider = "/",
+			ammo_background = "loot_objective_bg",
+			current_ammo = "-",
+			remaining_ammo = "-"
+		},
+		style = {
+			ammo_background = {
+				color = {
+					200,
+					255,
+					255,
+					255
+				}
+			},
+			current_ammo = {
+				font_size = 72,
+				use_shadow = true,
+				localize = false,
+				word_wrap = false,
+				horizontal_alignment = "right",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark_header",
+				size = {
+					20,
+					20
+				},
+				text_color = Colors.get_color_table_with_alpha("white", 255),
+				default_text_color = Colors.get_color_table_with_alpha("white", 255),
+				offset = {
+					161.5,
+					-8,
+					10
+				}
+			},
+			ammo_divider = {
+				word_wrap = false,
+				font_size = 40,
+				localize = false,
+				use_shadow = true,
+				horizontal_alignment = "center",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark_header",
+				text_color = Colors.get_color_table_with_alpha("white", 255),
+				default_text_color = Colors.get_color_table_with_alpha("white", 255),
+				offset = {
+					0,
+					0,
+					10
+				}
+			},
+			remaining_ammo = {
+				font_size = 40,
+				use_shadow = true,
+				localize = false,
+				word_wrap = false,
+				horizontal_alignment = "left",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark_header",
+				size = {
+					20,
+					20
+				},
+				text_color = Colors.get_color_table_with_alpha("white", 255),
+				default_text_color = Colors.get_color_table_with_alpha("white", 255),
+				offset = {
+					204.5,
+					0,
+					10
+				}
+			}
+		},
+		offset = {
+			0,
+			0,
+			1
 		}
 	}
 end
@@ -1321,30 +1700,22 @@ local pre_defined_widgets = {
 		end
 	},
 	ammo = {
-		definition = create_widget_ammo(),
+		definition = create_ammo_widget(),
+		update_function = function (dt, t, ui_renderer, career_extension, ability_id, widget, is_player_dead)
+			UIRenderer.draw_widget(ui_renderer, widget)
+		end
+	},
+	warpfire_ammo = {
+		definition = create_warpfire_ammo_widget(),
 		update_function = function (dt, t, ui_renderer, career_extension, ability_id, widget, is_player_dead)
 			local ability_cooldown, max_cooldown = career_extension:current_ability_cooldown(ability_id)
-			local ability_available = career_extension:can_use_activated_ability(ability_id)
+			local ability_data = career_extension:get_activated_ability_data(ability_id)
 			local uses_cooldown = career_extension:uses_cooldown(ability_id)
 			local content = widget.content
 			local style = widget.style
-			local default_size = style.progress.default_size
-			local texture_size = style.progress.texture_size
-			local cooldown_fraction = 0
 
-			if uses_cooldown then
-				cooldown_fraction = ability_cooldown / max_cooldown
-			else
-				cooldown_fraction = ability_available and 0 or 1
-			end
-
-			local progress = 1 - cooldown_fraction
-			local previous_progress = content.progress or 0
-
-			content.progress = progress
-
-			if progress <= previous_progress then
-				texture_size[1] = default_size[1] * progress
+			if ability_cooldown ~= 0 then
+				content.progress = math.clamp(ability_cooldown / max_cooldown, 0, content.current_progress or 1)
 			end
 
 			UIRenderer.draw_widget(ui_renderer, widget)
@@ -1440,6 +1811,23 @@ local pre_defined_widgets = {
 				content.actual_cooldown = cooldown_fraction
 			end
 
+			local gamepad_active = Managers.input:is_device_active("gamepad")
+
+			if gamepad_active ~= content.is_gamepad_active then
+				local input_action = "action_career"
+				local input_manager = Managers.input
+
+				if gamepad_active then
+					input_action = "ability"
+					content.input_text = "$KEY;Player__" .. input_action .. ":"
+				else
+					local input_service = input_manager:get_service("Player")
+					local _, input_text = UISettings.get_gamepad_input_texture_data(input_service, input_action, gamepad_active)
+
+					content.input_text = "[" .. input_text .. "]"
+				end
+			end
+
 			UIRenderer.draw_widget(ui_renderer, widget)
 		end
 	}
@@ -1476,28 +1864,28 @@ local profile_ability_templates = {
 	vs_ratling_gunner = {
 		fire = {
 			widget_definitions = {
-				priming = pre_defined_widgets.priming.definition,
 				reload = pre_defined_widgets.ratling_gunner_reload.definition,
 				ammo = pre_defined_widgets.ammo.definition
 			},
 			update_functions = {
-				priming = pre_defined_widgets.priming.update_function,
 				reload = pre_defined_widgets.ratling_gunner_reload.update_function,
 				ammo = pre_defined_widgets.ammo.update_function
+			},
+			events = {
+				on_dark_pact_ammo_changed = "event_on_dark_pact_ammo_changed"
 			}
 		}
 	},
 	vs_warpfire_thrower = {
 		fire = {
 			widget_definitions = {
-				priming = pre_defined_widgets.priming.definition,
-				reload = pre_defined_widgets.reload.definition,
-				ammo = pre_defined_widgets.ammo.definition
+				ammo = pre_defined_widgets.warpfire_ammo.definition
 			},
 			update_functions = {
-				priming = pre_defined_widgets.priming.update_function,
-				reload = pre_defined_widgets.reload.update_function,
-				ammo = pre_defined_widgets.ammo.update_function
+				ammo = pre_defined_widgets.warpfire_ammo.update_function
+			},
+			events = {
+				on_warpfire_thrower_ammo_changed = "event_on_warpfire_thrower_ammo_changed"
 			}
 		}
 	},

@@ -3425,7 +3425,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 				word_wrap = true,
 				upper_case = false,
 				localize = false,
-				dynamic_font_size_word_wrap = false,
+				dynamic_font_size_word_wrap = true,
 				font_size = 28,
 				horizontal_alignment = "left",
 				vertical_alignment = "top",
@@ -3438,7 +3438,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 				},
 				size = {
 					background_size[1] - 50,
-					is_twitch and background_size[2] / 2 - 10 or background_size[2] / 2 + 10
+					is_twitch and background_size[2] / 2 or background_size[2] / 2 + 10
 				}
 			},
 			expedition_highlight_text = {
@@ -3457,7 +3457,7 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 				},
 				size = {
 					background_size[1] - 50,
-					background_size[2] / 2
+					is_twitch and background_size[2] / 2 + 10 or background_size[2] / 2
 				}
 			},
 			note_text = {

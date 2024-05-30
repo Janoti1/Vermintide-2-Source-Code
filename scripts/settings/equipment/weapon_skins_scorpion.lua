@@ -284,13 +284,14 @@ local skins = {
 		name = "es_longbow_skin_04_magic_01",
 		data = {
 			description = "es_longbow_skin_04_magic_01_description",
+			ammo_unit = "units/weapons/player/wpn_emp_arrows/wpn_es_arrow_t1",
+			display_name = "es_longbow_skin_04_magic_01_name",
 			rarity = "magic",
-			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_longbow",
 			inventory_icon = "icon_emp_bow_04_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_emp_bow_04/wpn_emp_bow_04_magic_01",
-			display_name = "es_longbow_skin_04_magic_01_name",
-			template = "longbow_empire_template"
+			template = "longbow_empire_template",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_longbow"
 		}
 	},
 	{

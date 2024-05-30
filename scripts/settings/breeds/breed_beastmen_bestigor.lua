@@ -50,10 +50,10 @@ local breed_data = {
 	smart_targeting_width = 0.2,
 	is_bot_aid_threat = true,
 	behavior = "bestigor",
-	bots_should_flank = true,
 	awards_positive_reinforcement_message = true,
-	has_inventory = true,
+	bots_should_flank = true,
 	smart_object_template = "special",
+	has_inventory = true,
 	run_speed = 4.8,
 	follow_reach = 1,
 	ai_toughness = 4,
@@ -160,8 +160,6 @@ local breed_data = {
 	end,
 	run_on_spawn = AiBreedSnippets.on_beastmen_bestigor_spawn,
 	run_on_update = AiBreedSnippets.on_beastmen_bestigor_update,
-	run_on_death = AiBreedSnippets.on_beastmen_bestigor_death,
-	run_on_despawn = AiBreedSnippets.on_beastmen_bestigor_death,
 	hitzone_multiplier_types = {
 		head = "headshot"
 	},

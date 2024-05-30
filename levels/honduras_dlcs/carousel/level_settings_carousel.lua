@@ -189,6 +189,7 @@ LevelSettings.farmlands_pvp = {
 	boss_spawning_method = "hand_placed",
 	default_surface_material = "dirt",
 	dlc_name = "carousel",
+	override_map_start_section = true,
 	source_aux_bus_name = "environment_reverb_outside_source",
 	packages = {
 		"resource_packages/levels/honduras/farmlands_common",

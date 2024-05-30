@@ -3128,6 +3128,14 @@ DamageUtils._projectile_hit_character = function (current_action, owner_unit, ow
 
 			deal_damage = not ranged_block
 			shield_blocked = ranged_block
+
+			if ranged_block and Managers.state.side:versus_is_dark_pact(owner_unit) then
+				WwiseUtils.trigger_unit_event(world, "Play_versus_ui_damage_mitigated_indicator", hit_unit)
+			end
+		end
+
+		if breed.boss and Managers.state.side:versus_is_dark_pact(owner_unit) then
+			deal_damage = false
 		end
 
 		if deal_damage then

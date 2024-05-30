@@ -10,28 +10,7 @@ ItemMasterList.frame_skulls_2023 = {
 	rarity = "promo",
 	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = {
-		"bw_scholar",
-		"bw_adept",
-		"bw_unchained",
-		"bw_necromancer",
-		"we_shade",
-		"we_maidenguard",
-		"we_waywatcher",
-		"we_thornsister",
-		"dr_ironbreaker",
-		"dr_slayer",
-		"dr_ranger",
-		"dr_engineer",
-		"wh_zealot",
-		"wh_bountyhunter",
-		"wh_captain",
-		"wh_priest",
-		"es_huntsman",
-		"es_knight",
-		"es_mercenary",
-		"es_questingknight"
-	}
+	can_wield = CanWieldAllItemTemplates
 }
 ItemMasterList.es_2h_sword_exe_skin_05_runed_04 = {
 	description = "es_2h_sword_exe_skin_05_runed_04_description",

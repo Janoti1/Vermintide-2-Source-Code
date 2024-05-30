@@ -546,6 +546,10 @@ HeroView.set_loadout_dirty = function (self)
 	self._loadout_dirty = true
 end
 
+HeroView.is_loadout_dirty = function (self)
+	return self._loadout_dirty
+end
+
 HeroView._handle_view_popups = function (self)
 	local console_friends_view = self.ingame_ui.views.console_friends_view
 

@@ -977,7 +977,7 @@ local damage_templates = {
 			},
 			impact = {
 				0.07,
-				0.3,
+				0.5,
 				2,
 				0.3,
 				1,

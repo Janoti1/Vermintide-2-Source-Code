@@ -219,7 +219,10 @@ local components = {
 		visibility_groups = {
 			"alive",
 			"spectator"
-		}
+		},
+		validation_function = function ()
+			return not is_dark_pact_validate_function()
+		end
 	},
 	{
 		use_hud_scale = true,
@@ -227,7 +230,10 @@ local components = {
 		filename = "scripts/ui/hud_ui/gamepad_equipment_ui",
 		visibility_groups = {
 			"alive"
-		}
+		},
+		validation_function = function ()
+			return not is_dark_pact_validate_function()
+		end
 	},
 	{
 		use_hud_scale = true,

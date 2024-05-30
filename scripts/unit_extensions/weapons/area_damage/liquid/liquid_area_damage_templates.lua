@@ -206,7 +206,7 @@ LiquidAreaDamageTemplates.templates = {
 		sfx_name_stop = "Stop_enemy_troll_puke_loop",
 		cell_size = 1,
 		liquid_spread_function = "pour_spread",
-		starting_pressure = 20,
+		starting_pressure = 30,
 		apply_buff_to_player = true,
 		do_direct_damage_player = false,
 		buff_template_name = "bile_troll_vomit_ground_base",
@@ -218,7 +218,7 @@ LiquidAreaDamageTemplates.templates = {
 		fx_name_filled = "fx/wpnfx_troll_vomit_impact_01",
 		apply_buff_to_ai = false,
 		time_of_life = 7,
-		max_liquid = 30,
+		max_liquid = 80,
 		update_function = "vs_bile_troll_vomit_update",
 		use_nav_cost_map_volumes = true,
 		buff_template_type = "troll_bile_ground",
@@ -239,67 +239,67 @@ LiquidAreaDamageTemplates.templates = {
 		},
 		difficulty_direct_damage = {
 			easy = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			normal = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			hard = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			harder = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			hardest = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			cataclysm = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			cataclysm_2 = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			cataclysm_3 = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			versus_base = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			}
 		}
 	},
@@ -307,8 +307,8 @@ LiquidAreaDamageTemplates.templates = {
 		do_direct_damage_ai = true,
 		sfx_name_stop = "Stop_enemy_troll_puke_loop",
 		cell_size = 1,
-		liquid_spread_function = "default_spread",
-		starting_pressure = 20,
+		liquid_spread_function = "pour_spread",
+		starting_pressure = 30,
 		apply_buff_to_player = true,
 		do_direct_damage_player = false,
 		buff_template_name = "bile_troll_vomit_ground_base",
@@ -320,7 +320,7 @@ LiquidAreaDamageTemplates.templates = {
 		fx_name_filled = "fx/wpnfx_troll_vomit_impact_01",
 		apply_buff_to_ai = false,
 		time_of_life = 7,
-		max_liquid = 20,
+		max_liquid = 80,
 		update_function = "vs_bile_troll_vomit_update",
 		use_nav_cost_map_volumes = true,
 		buff_template_type = "troll_bile_ground",
@@ -341,67 +341,67 @@ LiquidAreaDamageTemplates.templates = {
 		},
 		difficulty_direct_damage = {
 			easy = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			normal = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			hard = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			harder = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			hardest = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			cataclysm = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			cataclysm_2 = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			cataclysm_3 = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			},
 			versus_base = {
-				1,
-				1,
+				2,
+				2,
 				0,
 				0,
-				1
+				2
 			}
 		},
 		hit_player_function = function (player_unit, player_and_bot_units, source_unit)

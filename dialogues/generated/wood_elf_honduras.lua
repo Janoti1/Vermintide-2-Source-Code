@@ -3844,7 +3844,14 @@ return function ()
 				"query_context",
 				"enemy_tag",
 				OP.EQ,
-				"chaos_troll"
+				"chaos_troll",
+				CombiningOP.OR_NEXT
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"vs_chaos_troll"
 			},
 			{
 				"user_context",
@@ -3901,7 +3908,14 @@ return function ()
 				"query_context",
 				"enemy_tag",
 				OP.EQ,
-				"chaos_troll"
+				"chaos_troll",
+				CombiningOP.OR_NEXT
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"vs_chaos_troll"
 			},
 			{
 				"user_context",
@@ -6980,7 +6994,14 @@ return function ()
 				"query_context",
 				"enemy_tag",
 				OP.EQ,
-				"chaos_troll"
+				"chaos_troll",
+				CombiningOP.OR_NEXT
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"vs_chaos_troll"
 			},
 			{
 				"query_context",

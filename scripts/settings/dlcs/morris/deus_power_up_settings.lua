@@ -4571,9 +4571,11 @@ DeusPowerUpTemplates = DeusPowerUpTemplates or {
 		buff_template = {
 			buffs = {
 				{
-					update_func = "periodic_aoe_stagger",
+					min_update_frequency = 2.5,
 					name = "boon_aura_03",
 					explosion_template_name = "periodic_aoe_stagger",
+					min_update_frequency_at = 0.3,
+					update_func = "periodic_aoe_stagger",
 					update_frequency = 5
 				}
 			}
@@ -6693,9 +6695,9 @@ DeusPowerUpRarities = DeusPowerUpRarities or {
 DeusPowerUpRarityWeights = DeusPowerUpRarityWeights or {
 	default = {
 		event = {
-			150,
-			150,
-			150
+			60,
+			60,
+			60
 		},
 		rare = {
 			60,

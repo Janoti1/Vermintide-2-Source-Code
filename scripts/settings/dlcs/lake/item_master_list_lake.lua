@@ -373,7 +373,7 @@ ItemMasterList.es_bastard_sword_skin_04_magic_01 = {
 	information_text = "information_weapon_skin",
 	template = "bastard_sword_template",
 	right_hand_unit = "units/weapons/player/wpn_emp_gk_sword_02_t2/wpn_emp_gk_sword_02_t2_magic_01",
-	required_dlc = "lake_upgrade",
+	required_dlc = "lake",
 	display_unit = "units/weapons/weapon_display/display_2h_swords",
 	item_type = "weapon_skin",
 	matching_item_key = "es_bastard_sword",
@@ -563,7 +563,7 @@ ItemMasterList.es_sword_shield_breton_skin_04_magic_01_magic_01 = {
 	left_hand_unit = "units/weapons/player/wpn_emp_gk_shield_01/wpn_emp_gk_shield_01_magic_01",
 	display_unit = "units/weapons/weapon_display/display_shield_sword",
 	item_type = "weapon_skin",
-	required_dlc = "lake_upgrade",
+	required_dlc = "lake",
 	matching_item_key = "es_sword_shield_breton",
 	can_wield = {
 		"es_questingknight"

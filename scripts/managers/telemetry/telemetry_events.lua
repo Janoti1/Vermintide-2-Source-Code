@@ -145,6 +145,18 @@ TelemetryEvents.versus_objective_section_completed = function (self, match_id, o
 	self._manager:register_event(event)
 end
 
+TelemetryEvents.versus_activated_ability = function (self, match_id, game_round, player_id, ability_name)
+	local event = self:_create_event("versus_activated_ability")
+
+	event:set_data({
+		match_id = match_id,
+		game_round = game_round,
+		player_id = player_id,
+		ability_name = ability_name
+	})
+	self._manager:register_event(event)
+end
+
 TelemetryEvents.weave_activated = function (self, wind, tier)
 	local event = self:_create_event("weave_activated")
 
@@ -261,6 +273,25 @@ TelemetryEvents.ai_despawned = function (self, breed, position, reason)
 	self._manager:register_event(event)
 end
 
+local function matchmaking_peers()
+	local party_peers
+	local party = Managers.party:get_local_player_party()
+
+	if party then
+		local occupied_slots = party.occupied_slots
+
+		party_peers = table.select_array(occupied_slots, function (_, status)
+			local peer_id, local_player_id = status.peer_id, status.local_player_id
+
+			if peer_id and local_player_id then
+				return PlayerUtils.unique_player_id(peer_id, local_player_id)
+			end
+		end)
+	end
+
+	return party_peers or {}
+end
+
 TelemetryEvents.matchmaking_search = function (self, player, data)
 	if player and player.remote then
 		return
@@ -269,7 +300,8 @@ TelemetryEvents.matchmaking_search = function (self, player, data)
 	local event = self:_create_event("matchmaking")
 
 	event:set_data(table.merge({
-		state = "search"
+		state = "search",
+		party_peers = matchmaking_peers()
 	}, data))
 	self._manager:register_event(event)
 end
@@ -283,7 +315,8 @@ TelemetryEvents.matchmaking_search_timeout = function (self, player, time_taken,
 
 	event:set_data(table.merge({
 		state = "search_timeout",
-		time_taken = time_taken
+		time_taken = time_taken,
+		party_peers = matchmaking_peers()
 	}, data))
 	self._manager:register_event(event)
 end
@@ -297,7 +330,8 @@ TelemetryEvents.matchmaking_cancelled = function (self, player, time_taken, data
 
 	event:set_data(table.merge({
 		state = "cancelled",
-		time_taken = time_taken
+		time_taken = time_taken,
+		party_peers = matchmaking_peers()
 	}, data))
 	self._manager:register_event(event)
 end
@@ -311,7 +345,8 @@ TelemetryEvents.matchmaking_hosting = function (self, player, time_taken, data)
 
 	event:set_data(table.merge({
 		state = "hosting",
-		time_taken = time_taken
+		time_taken = time_taken,
+		party_peers = matchmaking_peers()
 	}, data))
 	self._manager:register_event(event)
 end
@@ -325,7 +360,8 @@ TelemetryEvents.matchmaking_starting_game = function (self, player, time_taken, 
 
 	event:set_data(table.merge({
 		state = "starting_game",
-		time_taken = time_taken
+		time_taken = time_taken,
+		party_peers = matchmaking_peers()
 	}, data))
 	self._manager:register_event(event)
 end
@@ -339,7 +375,8 @@ TelemetryEvents.matchmaking_player_joined = function (self, player, time_taken, 
 
 	event:set_data(table.merge({
 		state = "player_joined",
-		time_taken = time_taken
+		time_taken = time_taken,
+		party_peers = matchmaking_peers()
 	}, data))
 	self._manager:register_event(event)
 end

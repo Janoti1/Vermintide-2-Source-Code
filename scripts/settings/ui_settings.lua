@@ -754,7 +754,7 @@ UISettings.item_type_store_icons = {
 	weapon_skin = "store_tag_icon_weapon",
 	hat = "store_tag_icon_hat",
 	bundle = "store_tag_icon_bundle",
-	frame = "store_tag_icon_skin",
+	frame = "store_tag_icon_portrait_frame",
 	skin = "store_tag_icon_skin"
 }
 

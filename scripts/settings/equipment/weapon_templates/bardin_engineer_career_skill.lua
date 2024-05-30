@@ -240,7 +240,7 @@ weapon_template.actions = {
 			anim_end_event = "attack_finished",
 			visual_spinup_min = 0.4,
 			kind = "career_dr_four_spin",
-			charge_sound_name = "Play_player_engineer_engine_charge",
+			charge_sound_husk_stop_event = "Stop_player_engineer_engine_loop_husk",
 			override_visual_spinup = true,
 			windup_max = 0,
 			initial_windup = 0,
@@ -248,9 +248,10 @@ weapon_template.actions = {
 			visual_spinup_max = 0.5,
 			charge_sound_husk_name = "Play_player_engineer_engine_loop_husk",
 			windup_speed = 0,
+			audio_loop_id = "engineer_weapon_spin",
 			hold_input = "action_two_hold",
 			anim_event = "attack_charge_loop",
-			charge_sound_husk_stop_event = "Stop_player_engineer_engine_loop_husk",
+			charge_sound_name = "Play_player_engineer_engine_charge",
 			anim_end_event_condition_func = function (unit, end_reason)
 				return end_reason ~= "new_interupting_action"
 			end,
@@ -481,10 +482,6 @@ weapon_template.particle_fx = {
 	}
 }
 weapon_template.particle_fx_lookup = table.mirror_array_inplace(table.keys(weapon_template.particle_fx))
-weapon_template.wwise_dep_right_hand = {
-	"wwise/drakegun",
-	"wwise/flamethrower"
-}
 weapon_template.visual_heat_cooldown_speed = visual_heat_cooldown_speed
 weapon_template.custom_data = {
 	windup = 0,

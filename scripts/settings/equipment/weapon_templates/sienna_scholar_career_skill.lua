@@ -188,9 +188,6 @@ weapon_template.aim_assist_settings = {
 		skaven_slave = 1
 	}
 }
-weapon_template.wwise_dep_right_hand = {
-	"wwise/staff"
-}
 
 return {
 	sienna_scholar_career_skill_weapon = table.clone(weapon_template)

@@ -1,5 +1,5 @@
 local settings = DLCSettings.skulls_2023
-local BUFF_DURATION = 20
+local BUFF_DURATION = 30
 local MAX_STACKS = 5
 local BUFF_REFRESH_STACKS = 1
 local buff_order = {
@@ -9,8 +9,8 @@ local buff_order = {
 	"skulls_2023_buff_movement_speed",
 	"skulls_2023_buff_cooldown_regen"
 }
-local MIN_BUFF_DURATION = 20
-local BUFF_DURATION_PER_STACK = 10
+local MIN_BUFF_DURATION = 30
+local BUFF_DURATION_PER_STACK = 15
 local DEBUFF_DURATION = 20
 
 local function buff_duration_func(current_stacks)

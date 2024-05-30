@@ -571,6 +571,11 @@ else
 					fade = false,
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			host = {
@@ -609,6 +614,11 @@ else
 					fade = false,
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			client = {
@@ -647,6 +657,11 @@ else
 					fade = false,
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			demo = {
@@ -690,6 +705,11 @@ else
 					fade = false,
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			host = {
@@ -713,6 +733,11 @@ else
 					fade = false,
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			client = {
@@ -736,6 +761,11 @@ else
 					fade = false,
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			tutorial = {
@@ -755,6 +785,11 @@ else
 				{
 					transition = "return_to_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			},
 			demo = {
@@ -773,6 +808,11 @@ else
 				{
 					transition = "return_to_demo_title_screen",
 					display_name = "menu_return_to_title_screen"
+				},
+				{
+					fade = false,
+					transition = "quit_game_hero_view",
+					display_name = "quit_menu_button_name"
 				}
 			}
 		}
