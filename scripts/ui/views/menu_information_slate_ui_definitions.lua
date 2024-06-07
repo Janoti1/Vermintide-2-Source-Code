@@ -26,6 +26,20 @@ local scenegraph_definition = {
 			0
 		}
 	},
+	switch_panel = {
+		vertical_alignment = "top",
+		parent = "area",
+		horizontal_alignment = "right",
+		size = {
+			0,
+			64
+		},
+		position = {
+			-50,
+			-50,
+			0
+		}
+	},
 	panel = {
 		vertical_alignment = "top",
 		parent = "area",
@@ -449,6 +463,179 @@ function create_gamepad_input(scenegraph_id, color)
 	return definition
 end
 
+local function create_switch_panel(scenegraph_id)
+	local indent = 20
+	local spacing = 5
+	local dot_icon_width = 44
+	local switch_icon_width = 30
+	local base_width = indent + dot_icon_width + switch_icon_width + spacing * 2
+	local definition = {
+		element = {
+			passes = {
+				{
+					style_id = "switch_icon",
+					pass_type = "hotspot",
+					content_id = "hotspot"
+				},
+				{
+					pass_type = "rect",
+					style_id = "background"
+				},
+				{
+					pass_type = "rect",
+					style_id = "top_banner"
+				},
+				{
+					style_id = "switch_icon",
+					texture_id = "switch_icon",
+					pass_type = "texture",
+					content_change_function = function (content, style)
+						if content.hotspot.is_hover then
+							style.color = style.selected_color
+						else
+							style.color = style.unselected_color
+						end
+					end
+				},
+				{
+					pass_type = "texture",
+					style_id = "dot_icon",
+					texture_id = "dot_icon"
+				},
+				{
+					style_id = "header",
+					pass_type = "text",
+					text_id = "header"
+				}
+			}
+		},
+		content = {
+			header = "PLACEHOLDER",
+			switch_icon = "athanor_icon_loading",
+			dot_icon = "dot",
+			base_width = base_width,
+			hotspot = {}
+		},
+		style = {
+			background = {
+				vertical_alignment = "top",
+				horizontal_alignment = "right",
+				texture_size = {
+					base_width,
+					scenegraph_definition[scenegraph_id].size[2]
+				},
+				color = {
+					90,
+					0,
+					0,
+					0
+				},
+				offset = {
+					0,
+					0,
+					0
+				}
+			},
+			top_banner = {
+				vertical_alignment = "top",
+				horizontal_alignment = "right",
+				texture_size = {
+					base_width,
+					3
+				},
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					0,
+					0,
+					1
+				}
+			},
+			switch_icon = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				texture_size = {
+					switch_icon_width,
+					switch_icon_width
+				},
+				selected_color = {
+					255,
+					255,
+					255,
+					255
+				},
+				unselected_color = {
+					128,
+					255,
+					255,
+					255
+				},
+				color = {
+					128,
+					255,
+					255,
+					255
+				},
+				offset = {
+					indent,
+					0,
+					2
+				}
+			},
+			dot_icon = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				texture_size = {
+					dot_icon_width,
+					dot_icon_width
+				},
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					indent + switch_icon_width + spacing,
+					0,
+					2
+				}
+			},
+			header = {
+				vertical_alignment = "center",
+				upper_case = true,
+				localize = false,
+				horizontal_alignment = "left",
+				font_size = 30,
+				font_type = "hell_shark_header",
+				text_color = {
+					255,
+					192,
+					192,
+					192
+				},
+				offset = {
+					base_width,
+					-3,
+					0
+				}
+			}
+		},
+		offset = {
+			0,
+			0,
+			0
+		},
+		scenegraph_id = scenegraph_id
+	}
+
+	return definition
+end
+
 local disable_with_gamepad = true
 local widgets = {
 	panel = UIWidgets.create_simple_rect("panel", {
@@ -532,9 +719,46 @@ local widgets = {
 		255,
 		255,
 		255
-	})
+	}),
+	switch_panel = create_switch_panel("switch_panel")
 }
 local animation_definitions = {
+	animate_switch_panel_in = {
+		{
+			name = "fade_in",
+			start_progress = 0,
+			end_progress = 0.5,
+			init = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				ui_scenegraph.switch_panel.position[1] = 200
+			end,
+			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
+				local anim_progress = math.easeOutCubic(progress)
+
+				ui_scenegraph.switch_panel.position[1] = 200 - 250 * anim_progress
+			end,
+			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				return
+			end
+		}
+	},
+	animate_switch_panel_out = {
+		{
+			name = "fade_in",
+			start_progress = 0,
+			end_progress = 0.5,
+			init = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				ui_scenegraph.switch_panel.position[1] = 0
+			end,
+			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
+				local anim_progress = math.easeOutCubic(progress)
+
+				ui_scenegraph.panel.position[1] = 250 * anim_progress
+			end,
+			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				return
+			end
+		}
+	},
 	animate_in = {
 		{
 			name = "fade_in",
@@ -625,6 +849,29 @@ local animation_definitions = {
 			name = "collapse",
 			start_progress = 0,
 			end_progress = 0.5,
+			init = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				ui_scenegraph.panel_mask.size[2] = 590
+				widgets.more_information.content.visible = true
+				widgets.less_information.content.visible = false
+				widgets.triangle_right.content.visible = true
+				widgets.triangle_down.content.visible = false
+			end,
+			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
+				local anim_progress = math.easeOutCubic(progress)
+
+				ui_scenegraph.panel_mask.size[2] = 590 * (1 - anim_progress)
+				widgets.panel.style.rect.texture_size[2] = math.lerp(scenegraph_definition.panel.size[2], scenegraph_definition.top_panel.size[2], anim_progress)
+			end,
+			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				return
+			end
+		}
+	},
+	collapse_instantly = {
+		{
+			name = "collapse",
+			start_progress = 0,
+			end_progress = 0,
 			init = function (ui_scenegraph, scenegraph_definition, widgets, params)
 				ui_scenegraph.panel_mask.size[2] = 590
 				widgets.more_information.content.visible = true

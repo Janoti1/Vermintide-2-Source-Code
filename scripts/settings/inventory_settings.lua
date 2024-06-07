@@ -186,6 +186,15 @@ InventorySettings.MAX_NUM_CUSTOM_LOADOUTS = max_num_custom_loadouts
 InventorySettings.default_loadout_allowed_game_modes = {
 	versus = true
 }
+InventorySettings.save_local_loadout_selection = {
+	inn_vs = true,
+	versus = true
+}
+InventorySettings.inventory_loadout_access_supported_game_modes = {
+	inn_deus = true,
+	inn = true,
+	inn_vs = true
+}
 InventorySettings.bot_loadout_allowed_game_modes = {
 	inn_deus = true,
 	map_deus = true,

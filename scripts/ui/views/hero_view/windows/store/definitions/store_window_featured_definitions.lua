@@ -664,18 +664,20 @@ local function create_slideshow_definition(scenegraph_id, size)
 			font_size = 36,
 			upper_case = false,
 			localize = false,
+			dynamic_font_size_word_wrap = true,
 			word_wrap = true,
 			horizontal_alignment = "left",
 			vertical_alignment = "center",
+			dynamic_font_size = true,
 			font_type = "hell_shark_header",
 			size = {
 				size[1] * 0.33 - 30,
-				40
+				110
 			},
 			text_color = Colors.get_color_table_with_alpha("font_title", 255),
 			offset = {
 				15,
-				-80,
+				-110,
 				6
 			}
 		},
@@ -683,18 +685,20 @@ local function create_slideshow_definition(scenegraph_id, size)
 			font_size = 36,
 			upper_case = false,
 			localize = false,
+			dynamic_font_size_word_wrap = true,
 			word_wrap = true,
 			horizontal_alignment = "left",
 			vertical_alignment = "center",
+			dynamic_font_size = true,
 			font_type = "hell_shark_header",
 			size = {
 				size[1] * 0.33 - 30,
-				40
+				110
 			},
 			text_color = Colors.get_color_table_with_alpha("black", 255),
 			offset = {
 				17,
-				-82,
+				-112,
 				5
 			}
 		},
