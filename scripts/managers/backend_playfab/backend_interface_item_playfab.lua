@@ -552,7 +552,7 @@ BackendInterfaceItemPlayfab.get_filtered_items = function (self, filter, params)
 	return items
 end
 
-BackendInterfaceItemPlayfab.set_loadout_item = function (self, item_id, career_name, slot_name)
+BackendInterfaceItemPlayfab.set_loadout_item = function (self, item_id, career_name, slot_name, optional_loadout_index)
 	local all_items = self:get_all_backend_items()
 	local item
 
@@ -578,7 +578,7 @@ BackendInterfaceItemPlayfab.set_loadout_item = function (self, item_id, career_n
 		item_id = item.override_id or item.ItemId
 	end
 
-	self._backend_mirror:set_character_data(career_name, slot_name, item_id)
+	self._backend_mirror:set_character_data(career_name, slot_name, item_id, nil, optional_loadout_index)
 
 	self._dirty = true
 

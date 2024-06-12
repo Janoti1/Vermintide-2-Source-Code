@@ -265,7 +265,7 @@ CareerSettings.vs_packmaster = {
 	passive_ability = PassiveAbilitySettings.vs_packmaster,
 	attributes = {
 		base_critical_strike_chance = 0.05,
-		max_hp = 30
+		max_hp = 50
 	},
 	video = {
 		material_name = "dr_slayer",
@@ -541,7 +541,7 @@ CareerSettings.vs_chaos_troll = {
 	passive_ability = PassiveAbilitySettings.vs_chaos_troll,
 	attributes = {
 		base_critical_strike_chance = 0.05,
-		max_hp = 600
+		max_hp = 750
 	},
 	video = {
 		material_name = "dr_slayer",
