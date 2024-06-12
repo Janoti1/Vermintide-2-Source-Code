@@ -15,6 +15,102 @@ DarkPactSelectionUI._input_methods = {
 	"mouse",
 	"gamepad"
 }
+DarkPactSelectionUIKeymaps = {
+	win32 = {
+		switch_dark_pact_profile = {
+			"keyboard",
+			"h",
+			"pressed"
+		},
+		cursor = {
+			"mouse",
+			"cursor",
+			"axis"
+		},
+		left_release = {
+			"mouse",
+			"left",
+			"released"
+		},
+		left_hold = {
+			"mouse",
+			"left",
+			"held"
+		},
+		left_press = {
+			"mouse",
+			"left",
+			"pressed"
+		},
+		right_press = {
+			"mouse",
+			"right",
+			"pressed"
+		},
+		next_observer_target = {
+			"mouse",
+			"left",
+			"pressed"
+		},
+		previous_observer_target = {
+			"mouse",
+			"right",
+			"pressed"
+		},
+		enable_camera_movement = {
+			"keyboard",
+			"left alt",
+			"pressed"
+		},
+		camera_movement_held = {
+			"keyboard",
+			"left alt",
+			"held"
+		}
+	},
+	xb1 = {
+		confirm = {
+			"gamepad",
+			"a",
+			"released"
+		},
+		move_left = {
+			"gamepad",
+			"d_left",
+			"pressed"
+		},
+		move_right = {
+			"gamepad",
+			"d_right",
+			"pressed"
+		},
+		move_left_hold = {
+			"gamepad",
+			"d_left",
+			"held"
+		},
+		move_right_hold = {
+			"gamepad",
+			"d_right",
+			"held"
+		},
+		analog_input = {
+			"gamepad",
+			"left",
+			"axis"
+		},
+		next_observer_target = {
+			"gamepad",
+			"right_shoulder",
+			"pressed"
+		},
+		previous_observer_target = {
+			"gamepad",
+			"left_shoulder",
+			"pressed"
+		}
+	}
+}
 
 local darkpact_role_lookup = {
 	disabler = "Disabler",
@@ -38,13 +134,6 @@ DarkPactSelectionUI.init = function (self, ingame_hud, ingame_ui_context)
 	self._party = Managers.party:get_local_player_party()
 	self._ui_animator = UIAnimator:new(self._ui_scenegraph, definitions.animation_definitions)
 	self._current_anim_id = 0
-	self._analog_data = {
-		cycle_t = 0,
-		hold_cycle_continuous = 0.35,
-		hold_cycle_delay = 0.8,
-		last_x = 0,
-		last_t = 0
-	}
 	self._selected_index = 1
 	self._input_captured = false
 	self._pending_profile = false
@@ -175,6 +264,14 @@ DarkPactSelectionUI._show = function (self, play_speed)
 	self._show_play_speed = play_speed
 
 	self:_request_careers()
+
+	local gamepad_active = Managers.input:is_device_active("gamepad")
+
+	if gamepad_active then
+		self:_set_selected(1, true)
+
+		self._selected_index = 1
+	end
 end
 
 DarkPactSelectionUI._hide = function (self, play_speed)
@@ -252,9 +349,9 @@ DarkPactSelectionUI.update = function (self, dt, t, player)
 
 	if self._gamepad_active ~= gamepad_active then
 		if gamepad_active then
-			self:_select(1)
+			self:_set_selected(1, true)
 		else
-			self:_deselect()
+			self:_set_selected(self._selected_index, false)
 		end
 
 		self._gamepad_active = gamepad_active
@@ -305,54 +402,36 @@ DarkPactSelectionUI._handle_mouse_input = function (self, dt, t, input_service, 
 end
 
 DarkPactSelectionUI._handle_gamepad_input = function (self, dt, t, input_service, profile_requester)
-	local analog_move = input_service:get("analog_input")
-	local analog_data = self._analog_data
-	local analog_swapped = analog_data.last_x * analog_move.x < 0
-	local analog_cycling = false
+	local selected_index = self._selected_index
 
-	if analog_move.x ~= 0 then
-		if analog_data.last_x == 0 or analog_swapped then
-			analog_data.cycle_t = t + analog_data.hold_cycle_delay
-		end
+	if input_service:get("move_right") then
+		self:_set_selected(selected_index, false)
 
-		if t > analog_data.cycle_t then
-			analog_data.cycle_t = t + analog_data.hold_cycle_continuous
-			analog_cycling = true
-		end
-	end
-
-	local analog_ready = analog_data.reset or analog_swapped or analog_cycling
-
-	analog_data.last_x = analog_move.x
-
-	if input_service:get("move_right") or analog_ready and analog_move.x > 0 then
-		local selected_index = math.index_wrapper(self._selected_index + 1, #self._selector_widgets)
+		selected_index = selected_index + 1 <= #self._selector_widgets and selected_index + 1 or 1
 
 		self._ingame_ui:play_sound("menu_versus_pactsworn_hover")
-		self:_select(selected_index)
-	elseif input_service:get("move_left") or analog_ready and analog_move.x < 0 then
-		local selected_index = math.index_wrapper(self._selected_index - 1, #self._selector_widgets)
+		self:_set_selected(selected_index, true)
+	elseif input_service:get("move_left") then
+		self:_set_selected(selected_index, false)
+
+		selected_index = selected_index - 1 >= 1 and selected_index - 1 or #self._selector_widgets
 
 		self._ingame_ui:play_sound("menu_versus_pactsworn_hover")
-		self:_select(selected_index)
+		self:_set_selected(selected_index, true)
 	end
 
-	analog_data.reset = analog_move.x == 0
+	self._selected_index = selected_index
 
 	if input_service:get("confirm") then
-		self:_confirm_choice(self._selected_index, profile_requester)
+		self:_confirm_choice(selected_index, profile_requester)
 	end
 end
 
-DarkPactSelectionUI._select = function (self, index)
-	self:_deselect()
-
-	self._selected_index = index
-
+DarkPactSelectionUI._set_selected = function (self, index, value)
 	local widget = self._selector_widgets[index]
 	local content = widget.content
 
-	content.selected = true
+	content.selected = value
 
 	local profile_name = content.profile_name
 	local display_name = CareerSettings[profile_name].display_name
@@ -361,19 +440,9 @@ DarkPactSelectionUI._select = function (self, index)
 	self:_set_enemy_pick_info_text(profile_name)
 end
 
-DarkPactSelectionUI._deselect = function (self)
-	local selector_widgets = self._selector_widgets
-
-	for _, widget in pairs(selector_widgets) do
-		widget.content.selected = false
-	end
-end
-
-DarkPactSelectionUI._confirm_choice = function (self, selected_index, profile_requester)
-	selected_index = math.clamp(selected_index, 1, #self._selector_widgets)
-
+DarkPactSelectionUI._confirm_choice = function (self, selcetd_index, profile_requester)
 	local peer_id, local_player_id = self._peer_id, self._local_player_id
-	local widget = self._selector_widgets[selected_index]
+	local widget = self._selector_widgets[selcetd_index]
 	local content = widget.content
 
 	content.selected = false
@@ -447,7 +516,7 @@ DarkPactSelectionUI.event_versus_received_selectable_careers_response = function
 	local gamepad_active = Managers.input:is_device_active("gamepad")
 
 	if gamepad_active then
-		self:_select(1)
+		self:_set_selected(1, true)
 	end
 
 	local selected_career_name = self:_get_current_selected_career_name()

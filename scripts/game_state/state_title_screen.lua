@@ -31,11 +31,9 @@ StateTitleScreen.on_enter = function (self, params)
 	end
 
 	if IS_CONSOLE then
-		local current_mechanism_name = Managers.mechanism:current_mechanism_name()
-
 		Managers.mechanism:destroy()
 
-		Managers.mechanism = GameMechanismManager:new(current_mechanism_name)
+		Managers.mechanism = GameMechanismManager:new()
 
 		if rawget(_G, "LobbyInternal") and LobbyInternal.network_initialized() and (IS_PS4 or Managers.account:offline_mode()) then
 			if Managers.party:has_party_lobby() then

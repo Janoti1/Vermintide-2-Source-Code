@@ -159,8 +159,8 @@ local function check_bool_string(text)
 	end
 end
 
-GameMechanismManager.init = function (self, optional_mechanism_key)
-	self._mechanism_key = optional_mechanism_key
+GameMechanismManager.init = function (self)
+	self._mechanism_key = nil
 	self._game_mechanism = nil
 	self._level_seed = nil
 	self._locked_director_functions = nil
@@ -817,7 +817,7 @@ end
 GameMechanismManager.try_reserve_game_server_slots = function (self, reserver, peers, invitee)
 	local game_mode_manager = Managers.state.game_mode
 
-	if game_mode_manager and not game_mode_manager:is_reservable() then
+	if game_mode_manager and not game_mode_manager:is_joinable() then
 		print("Rejected game server reservation because game mode denies joining")
 
 		return false

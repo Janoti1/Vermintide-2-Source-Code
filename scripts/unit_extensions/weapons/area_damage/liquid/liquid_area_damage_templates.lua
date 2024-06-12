@@ -341,67 +341,67 @@ LiquidAreaDamageTemplates.templates = {
 		},
 		difficulty_direct_damage = {
 			easy = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			normal = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			hard = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			harder = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			hardest = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			cataclysm = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			cataclysm_2 = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			cataclysm_3 = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			},
 			versus_base = {
-				2.8,
-				2.8,
+				2,
+				2,
 				0,
 				0,
-				2.8
+				2
 			}
 		},
 		hit_player_function = function (player_unit, player_and_bot_units, source_unit)
@@ -1056,7 +1056,7 @@ LiquidAreaDamageTemplates.vs_bile_troll_vomit_init = function (self, t)
 		local vomit_unit
 		local player = Managers.player:unit_owner(troll_unit)
 
-		if player and player.remote then
+		if player.remote then
 			local tongue_node = Unit.node(troll_unit, "j_tongue_01")
 			local tongue_pos = Unit.world_position(troll_unit, tongue_node)
 
@@ -1064,26 +1064,21 @@ LiquidAreaDamageTemplates.vs_bile_troll_vomit_init = function (self, t)
 
 			World.link_unit(world, vomit_unit, troll_unit, tongue_node)
 			Unit.flow_event(vomit_unit, "fade_in")
-
-			self._fade_out_vomit = true
 		else
 			local first_person_extension = ScriptUnit.has_extension(troll_unit, "first_person_system")
 			local local_player = Managers.player:local_player()
+			local vp_name = local_player.viewport_name
+			local vp = ScriptWorld.viewport(self._world, vp_name, true)
+			local camera = ScriptViewport.camera(vp)
+			local camera_unit = Camera.get_data(camera, "unit")
+			local camera_position = first_person_extension:current_position()
 
-			if local_player then
-				local vp_name = local_player.viewport_name
-				local vp = ScriptWorld.viewport(self._world, vp_name, true)
-				local camera = ScriptViewport.camera(vp)
-				local camera_unit = Camera.get_data(camera, "unit")
-				local camera_position = first_person_extension:current_position()
+			vomit_unit = unit_spawner:spawn_local_unit(vomit_unit_name, camera_position, nil, nil)
 
-				vomit_unit = unit_spawner:spawn_local_unit(vomit_unit_name, camera_position, nil, nil)
-
-				World.link_unit(world, vomit_unit, camera_unit, 0)
-				Unit.set_local_position(vomit_unit, 0, Vector3(0, 0, -0.5))
-				Unit.set_local_rotation(vomit_unit, 0, Quaternion.axis_angle(Vector3.up(), math.pi / 2))
-				Unit.flow_event(vomit_unit, "spawn_1p_effect")
-			end
+			World.link_unit(world, vomit_unit, camera_unit, 0)
+			Unit.set_local_position(vomit_unit, 0, Vector3(0, 0, -0.5))
+			Unit.set_local_rotation(vomit_unit, 0, Quaternion.axis_angle(Vector3.up(), math.pi / 2))
+			Unit.flow_event(vomit_unit, "spawn_1p_effect")
 		end
 
 		self._vomit_unit = vomit_unit
@@ -1154,8 +1149,14 @@ LiquidAreaDamageTemplates.vs_bile_troll_vomit_update = function (self, t, dt)
 		return true
 	else
 		if vomit_unit ~= nil then
-			if self._fade_out_vomit then
+			local player = Managers.player:unit_owner(troll_unit)
+
+			if player.remote then
 				Unit.flow_event(vomit_unit, "fade_out")
+			end
+
+			if false then
+				-- Nothing
 			end
 
 			self._vomit_unit = nil

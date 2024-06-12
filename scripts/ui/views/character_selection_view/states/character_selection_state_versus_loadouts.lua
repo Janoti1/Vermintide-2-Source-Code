@@ -1366,7 +1366,8 @@ CharacterSelectionStateVersusLoadouts._populate_loadout = function (self, profil
 	local talent_interface = Managers.backend:get_interface("talents")
 
 	if optional_talents then
-		selected_talents = optional_talents
+		local selected_talents = optional_talents
+
 		talent_ids = talent_interface:get_talent_ids(career_name, selected_talents)
 	else
 		talent_ids = talent_interface:get_talent_ids(career_name)

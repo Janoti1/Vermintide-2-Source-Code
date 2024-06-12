@@ -37,13 +37,9 @@ MatchmakingStateRequestProfiles.update = function (self, dt, t)
 			if self.search_config == nil then
 				self._matchmaking_manager:cancel_matchmaking()
 			else
-				local search_config = self.search_config
+				local matchmaking_type = self.search_config.matchmaking_type
 
-				if search_config and search_config.dedicated_server and search_config.join_method == "party" then
-					self._next_state = MatchmakingStateReserveLobby
-				else
-					self._next_state = MatchmakingStateSearchGame
-				end
+				self._next_state = MatchmakingStateSearchGame
 			end
 		end
 	end

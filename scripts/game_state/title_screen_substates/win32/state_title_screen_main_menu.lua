@@ -51,13 +51,7 @@ StateTitleScreenMainMenu._start_game = function (self, level_key)
 	Managers.level_transition_handler:set_next_level(level_key)
 	Managers.level_transition_handler:promote_next_level_data()
 
-	local current_mechanism_name
-
-	if Managers.mechanism then
-		current_mechanism_name = Managers.mechanism:current_mechanism_name()
-	end
-
-	Managers.mechanism = GameMechanismManager:new(current_mechanism_name)
+	Managers.mechanism = GameMechanismManager:new()
 	self._input_disabled = true
 
 	Managers.transition:show_loading_icon(false)

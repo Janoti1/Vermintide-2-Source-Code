@@ -2595,17 +2595,12 @@ HeroWindowItemCustomization._upgrade_item_craft_complete = function (self, resul
 			local career_name = career.name
 
 			if career and not backend_dlcs:is_unreleased_career(career_name) then
-				local career_loadouts = backend_items:get_career_loadouts(career_name)
-
 				for _, slot_data in pairs(InventorySettings.equipment_slots) do
 					local equipment_slot_name = slot_data.name
+					local equipped_item_backend_id = backend_items:get_loadout_item_id(career_name, equipment_slot_name)
 
-					for loadout_index, loadout in ipairs(career_loadouts) do
-						local equipped_item_backend_id = loadout[equipment_slot_name]
-
-						if equipped_item_backend_id == old_item_backend_id then
-							backend_items:set_loadout_item(backend_id, career_name, equipment_slot_name, loadout_index)
-						end
+					if equipped_item_backend_id == old_item_backend_id then
+						backend_items:set_loadout_item(backend_id, career_name, equipment_slot_name)
 					end
 				end
 			end
