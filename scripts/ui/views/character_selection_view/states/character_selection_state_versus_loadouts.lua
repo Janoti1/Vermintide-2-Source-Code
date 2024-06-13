@@ -607,20 +607,6 @@ CharacterSelectionStateVersusLoadouts._handle_keyboard_selection = function (sel
 				self:_change_loadout(new_loadout_index)
 			end
 		end
-	elseif input_service:get("move_left") then
-		local old_career_index = self._selected_career_index
-		local new_career_index = math.clamp(self._selected_career_index - 1, 1, #self._hero_widgets)
-
-		if new_career_index ~= old_career_index then
-			self:_select_hero(self._profile_index, new_career_index)
-		end
-	elseif input_service:get("move_right") then
-		local old_career_index = self._selected_career_index
-		local new_career_index = math.clamp(self._selected_career_index + 1, 1, #self._hero_widgets)
-
-		if new_career_index ~= old_career_index then
-			self:_select_hero(self._profile_index, new_career_index)
-		end
 	elseif input_service:get("confirm") then
 		self:_confirm_loadout()
 	elseif input_service:get("toggle_menu", true) or input_service:get("back", true) then

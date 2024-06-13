@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2024-06-13  |  5.5.7  | [Hotfix](https://forums.fatsharkgames.com/t/versus-alpha-test-extended-to-june-17th-hotfix-5-5-6-5-5-7/95643)
 2024-06-12  |  5.5.6  | [Hotfix](https://forums.fatsharkgames.com/t/versus-alpha-test-extended-to-june-17th-hotfix-5-5-6/95643)
 2024-06-04  |  5.5.5  | [Hotfix Versus] (https://forums.fatsharkgames.com/t/versus-the-returning-alpha-test-is-now-live-hotfix-5-5-2-5-5-3-5-5-4-5-5-5)
 2024-05-31  |  5.5.4  | [Hotfix] (https://forums.fatsharkgames.com/t/versus-the-returning-alpha-test-is-now-live-hotfix-5-5-2-5-5-3-5-5-4-5-5-5) NOT AVAILABLE
