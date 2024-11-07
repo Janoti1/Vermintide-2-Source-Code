@@ -627,6 +627,18 @@ UIPlayerPortraitFrameSettings = {
 			}
 		}
 	},
+	frame_geheimnisnacht_2024 = {
+		{
+			texture = "portrait_frame_geheimnisnacht_2024",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
 	frame_gotwf_01 = {
 		{
 			texture = "portrait_frame_gotwf_01_child",
@@ -2281,6 +2293,30 @@ UIPlayerPortraitFrameSettings = {
 				0,
 				-59,
 				0
+			}
+		}
+	},
+	frame_beta_2024 = {
+		{
+			texture = "portrait_frame_beta_2024",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_streamer = {
+		{
+			texture = "portrait_frame_streamer",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
 			}
 		}
 	},

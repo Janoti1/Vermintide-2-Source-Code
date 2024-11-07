@@ -1746,7 +1746,9 @@ ItemMasterList.frame_geheimnisnacht_01 = {
 	inventory_icon = "icon_portrait_frame_geheimnisnacht_01",
 	slot_type = "frame",
 	information_text = "information_text_frame",
+	event_item = true,
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }
@@ -1758,7 +1760,9 @@ ItemMasterList.frame_geheimnisnacht_02 = {
 	inventory_icon = "icon_portrait_frame_geheimnisnacht_02",
 	slot_type = "frame",
 	information_text = "information_text_frame",
+	event_item = true,
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }
@@ -1770,7 +1774,9 @@ ItemMasterList.frame_geheimnisnacht_03 = {
 	inventory_icon = "icon_portrait_frame_geheimnisnacht_03",
 	slot_type = "frame",
 	information_text = "information_text_frame",
+	event_item = true,
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }
@@ -13610,4 +13616,28 @@ ItemMasterList.we_spear_skin = {
 		"we_maidenguard",
 		"we_shade"
 	}
+}
+ItemMasterList.frame_beta_2024 = {
+	description = "frame_beta_2024_description",
+	temporary_template = "frame_beta_2024",
+	display_name = "frame_beta_2024_name",
+	hud_icon = "unit_frame_02",
+	inventory_icon = "icon_portrait_frame_beta_2024",
+	slot_type = "frame",
+	information_text = "information_text_frame",
+	rarity = "promo",
+	item_type = "frame",
+	can_wield = CanWieldAllItemTemplates
+}
+ItemMasterList.frame_streamer = {
+	description = "frame_streamer_description",
+	temporary_template = "frame_streamer",
+	display_name = "frame_streamer_name",
+	hud_icon = "unit_frame_02",
+	inventory_icon = "icon_portrait_frame_streamer",
+	slot_type = "frame",
+	information_text = "information_text_frame",
+	rarity = "promo",
+	item_type = "frame",
+	can_wield = CanWieldAllItemTemplates
 }

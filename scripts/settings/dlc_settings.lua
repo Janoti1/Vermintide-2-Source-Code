@@ -279,6 +279,9 @@ DLCSettings = DLCSettings or {
 			buff = "scripts/settings/dlcs/geheimnisnacht_2021/buff_settings_geheimnisnacht_2021"
 		}
 	},
+	geheimnisnacht_2024 = {
+		localization = "localization/geheimnisnacht_2024"
+	},
 	skulls_2023 = {
 		localization = "localization/skulls_2023",
 		package_name = "resource_packages/dlcs/skulls_2023",

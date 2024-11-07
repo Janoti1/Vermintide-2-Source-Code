@@ -974,12 +974,12 @@ StartGameStateSettingsOverview.play = function (self, t, vote_type, force_close_
 		self.parent:start_game(params)
 	elseif vote_type == "weave_quick_play" then
 		local params = {
+			private_game = false,
 			mechanism = "weave",
 			quick_game = true,
 			strict_matchmaking = false,
 			matchmaking_type = "standard",
 			difficulty = self._selected_difficulty_key,
-			private_game = is_offline,
 			always_host = is_offline,
 			request_type = vote_type
 		}
@@ -1100,7 +1100,7 @@ StartGameStateSettingsOverview.play = function (self, t, vote_type, force_close_
 		local weave_template = WeaveSettings.templates[weave_name]
 		local difficulty = weave_template.difficulty_key
 		local objective_index = self:get_selected_weave_objective_index()
-		local is_private = is_offline or self:is_private_option_enabled()
+		local is_private = self:is_private_option_enabled()
 		local always_host = is_offline
 		local params = {
 			matchmaking_type = "custom",

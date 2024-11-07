@@ -218,10 +218,10 @@ local talent_buff_templates = {
 	bardin_engineer_2_1 = {
 		buffs = {
 			{
-				update_start_delay = 80,
+				update_start_delay = 180,
 				update_func = "bardin_engineer_bomb_grant",
 				cooldown_buff = "bardin_engineer_2_1_cooldown",
-				update_frequency = 80,
+				update_frequency = 180,
 				perks = {
 					buff_perks.no_explosion_friendly_fire
 				}
