@@ -62,6 +62,34 @@ settings.buff_templates = {
 			}
 		}
 	},
+	grudge_mark_termite_health = {
+		buffs = {
+			{
+				multiplier = 2,
+				name = "grudge_mark_health",
+				stat_buff = "max_health"
+			},
+			{
+				remove_buff_func = "ai_update_max_health",
+				name = "grudge_mark_health_update",
+				apply_buff_func = "ai_update_max_health"
+			}
+		}
+	},
+	grudge_mark_termite_health_small = {
+		buffs = {
+			{
+				multiplier = -0.5,
+				name = "grudge_mark_health",
+				stat_buff = "max_health"
+			},
+			{
+				remove_buff_func = "ai_update_max_health",
+				name = "grudge_mark_health_update",
+				apply_buff_func = "ai_update_max_health"
+			}
+		}
+	},
 	grudge_mark_damage = {
 		buffs = {
 			{
@@ -1040,7 +1068,7 @@ settings.buff_function_templates = {
 			local player = Managers.player:owner(unit)
 
 			if player and not player.remote then
-				MOOD_BLACKBOARD.skill_zealot = true
+				Managers.state.camera:set_mood("skill_zealot", buff, true)
 			end
 
 			local first_person_extension = ScriptUnit.has_extension(unit, "first_person_system")
@@ -1055,7 +1083,7 @@ settings.buff_function_templates = {
 			local player = Managers.player:owner(unit)
 
 			if player and not player.remote then
-				MOOD_BLACKBOARD.skill_zealot = false
+				Managers.state.camera:set_mood("skill_zealot", buff, false)
 			end
 		end
 	end,

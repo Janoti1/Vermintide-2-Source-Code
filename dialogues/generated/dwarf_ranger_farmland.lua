@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pdr_farmlands_intro_a",
 		response = "pdr_farmlands_intro_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_farmlands_intro_b",
 		response = "pdr_farmlands_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_farmlands_intro_c",
 		response = "pdr_farmlands_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmland_stick_to_the_road_01",
 		response = "pdr_level_farmland_stick_to_the_road_01",
 		criterias = {
@@ -164,6 +168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_cart_01",
 		response = "pdr_level_farmlands_cart_01",
 		criterias = {
@@ -208,6 +213,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_deserted_01",
 		response = "pdr_level_farmlands_deserted_01",
 		criterias = {
@@ -252,6 +258,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_end_level_01",
 		response = "pdr_level_farmlands_end_level_01",
 		criterias = {
@@ -296,6 +303,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_fence_01",
 		response = "pdr_level_farmlands_fence_01",
 		criterias = {
@@ -340,6 +348,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_investigate_farm_01",
 		response = "pdr_level_farmlands_investigate_farm_01",
 		criterias = {
@@ -384,6 +393,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_kill_the_brute_01",
 		response = "pdr_level_farmlands_kill_the_brute_01",
 		criterias = {
@@ -428,6 +438,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_last_farm_01",
 		response = "pdr_level_farmlands_last_farm_01",
 		criterias = {
@@ -472,6 +483,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_locked_gate_01",
 		response = "pdr_level_farmlands_locked_gate_01",
 		criterias = {
@@ -516,6 +528,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_monster_in_barn_01",
 		response = "pdr_level_farmlands_monster_in_barn_01",
 		criterias = {
@@ -560,6 +573,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_move_on_01",
 		response = "pdr_level_farmlands_move_on_01",
 		criterias = {
@@ -604,6 +618,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_next_farm_01",
 		response = "pdr_level_farmlands_next_farm_01",
 		criterias = {
@@ -648,6 +663,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_no_prisoners_01",
 		response = "pdr_level_farmlands_no_prisoners_01",
 		criterias = {
@@ -692,6 +708,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_portal_01",
 		response = "pdr_level_farmlands_portal_01",
 		criterias = {
@@ -736,6 +753,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_prisoners_01",
 		response = "pdr_level_farmlands_prisoners_01",
 		criterias = {
@@ -780,6 +798,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_smoke_plume_01",
 		response = "pdr_level_farmlands_smoke_plume_01",
 		criterias = {
@@ -824,6 +843,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_through_the_barn_01",
 		response = "pdr_level_farmlands_through_the_barn_01",
 		criterias = {
@@ -868,6 +888,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_farmlands_unlocking_the_cage_01",
 		response = "pdr_level_farmlands_unlocking_the_cage_01",
 		criterias = {

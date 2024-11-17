@@ -19,6 +19,31 @@ local skulls_buffs_to_refresh = {
 	"boon_skulls_05_stack",
 	"boon_skulls_05_surge"
 }
+local next_support_bomb_rotation = 0
+
+local function get_bomb_zone_rotation()
+	local rot_delta = 0.2
+	local rot = next_support_bomb_rotation
+
+	assert(rot < math.tau, "Bomb zone fx may overlap. Lower rot_delta")
+
+	next_support_bomb_rotation = next_support_bomb_rotation + math.tau * rot_delta
+
+	return Quaternion.axis_angle(Vector3.up(), rot)
+end
+
+local next_cursed_zone_rotation = 0
+
+local function get_cursed_zone_rotation()
+	local rot_delta = 0.5
+	local rot = next_cursed_zone_rotation
+
+	assert(rot < math.tau, "Cursed zone fx may overlap. Lower rot_delta")
+
+	next_support_bomb_rotation = next_support_bomb_rotation + math.tau * rot_delta
+
+	return Quaternion.axis_angle(Vector3.up(), rot)
+end
 
 DeusPowerUpBuffTemplates = {
 	deus_coin_pickup_regen_buff = {
@@ -598,7 +623,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -664,7 +690,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -728,7 +755,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -792,7 +820,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -856,7 +885,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -981,7 +1011,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -1047,7 +1078,8 @@ DeusPowerUpBuffTemplates = {
 									1
 								}
 							}
-						}
+						},
+						material_variables = {}
 					}
 				}
 			}
@@ -4313,7 +4345,7 @@ DeusPowerUpTemplates = DeusPowerUpTemplates or {
 				{
 					name = "boon_careerskill_02",
 					authority = "server",
-					buff_func = "apply_dot_to_adjecent_enemies",
+					buff_func = "career_ability_apply_dot_to_adjecent_enemies",
 					event = "on_ability_activated",
 					dot_template_name = "boon_career_ability_burning_aoe",
 					area_radius = MorrisBuffTweakData.boon_career_ability_burning_aoe_data.radius
@@ -4332,7 +4364,7 @@ DeusPowerUpTemplates = DeusPowerUpTemplates or {
 				{
 					name = "boon_careerskill_03",
 					authority = "server",
-					buff_func = "apply_dot_to_adjecent_enemies",
+					buff_func = "career_ability_apply_dot_to_adjecent_enemies",
 					event = "on_ability_activated",
 					dot_template_name = "boon_career_ability_poison_aoe",
 					area_radius = MorrisBuffTweakData.boon_career_ability_poison_aoe_data.radius
@@ -4351,7 +4383,7 @@ DeusPowerUpTemplates = DeusPowerUpTemplates or {
 				{
 					name = "boon_careerskill_04",
 					authority = "server",
-					buff_func = "apply_dot_to_adjecent_enemies",
+					buff_func = "career_ability_apply_dot_to_adjecent_enemies",
 					event = "on_ability_activated",
 					dot_template_name = "boon_career_ability_bleed_aoe",
 					area_radius = MorrisBuffTweakData.boon_career_ability_bleed_aoe_data.radius
@@ -4391,7 +4423,7 @@ DeusPowerUpTemplates = DeusPowerUpTemplates or {
 				{
 					name = "boon_careerskill_07",
 					authority = "server",
-					buff_func = "spawn_drones_proc",
+					buff_func = "spawn_drones_proc_ability",
 					event = "on_ability_activated",
 					damage_profile_name = "deus_damage_drone",
 					num_drones = MorrisBuffTweakData.boon_careerskill_07_data.num_drones,

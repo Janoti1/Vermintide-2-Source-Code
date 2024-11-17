@@ -5,6 +5,62 @@ level_images_atlas = {
 			58
 		},
 		uv00 = {
+			0.751465,
+			0.458984
+		},
+		uv11 = {
+			0.798828,
+			0.515625
+		}
+	},
+	dlc_portals_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.702148,
+			0.882813
+		},
+		uv11 = {
+			0.749512,
+			0.939453
+		}
+	},
+	bell_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.702148,
+			0.822266
+		},
+		uv11 = {
+			0.749512,
+			0.878906
+		}
+	},
+	inn_level_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.702148,
+			0.761719
+		},
+		uv11 = {
+			0.749512,
+			0.818359
+		}
+	},
+	dlc_wizards_trail_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
 			0.702148,
 			0.701172
 		},
@@ -13,7 +69,7 @@ level_images_atlas = {
 			0.757813
 		}
 	},
-	dlc_portals_small_image = {
+	cemetery_small_image = {
 		size = {
 			97,
 			58
@@ -27,7 +83,7 @@ level_images_atlas = {
 			0.697266
 		}
 	},
-	bell_small_image = {
+	dlc_bogenhafen_slum_small_image = {
 		size = {
 			97,
 			58
@@ -41,7 +97,7 @@ level_images_atlas = {
 			0.636719
 		}
 	},
-	inn_level_small_image = {
+	crater_small_image = {
 		size = {
 			97,
 			58
@@ -55,7 +111,7 @@ level_images_atlas = {
 			0.576172
 		}
 	},
-	dlc_wizards_trail_small_image = {
+	dlc_wizards_tower_small_image = {
 		size = {
 			97,
 			58
@@ -69,7 +125,7 @@ level_images_atlas = {
 			0.515625
 		}
 	},
-	cemetery_small_image = {
+	dlc_bastion_small_image = {
 		size = {
 			97,
 			58
@@ -80,62 +136,6 @@ level_images_atlas = {
 		},
 		uv11 = {
 			0.996094,
-			0.455078
-		}
-	},
-	dlc_bogenhafen_slum_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.899414,
-			0.398438
-		},
-		uv11 = {
-			0.946777,
-			0.455078
-		}
-	},
-	crater_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.850098,
-			0.398438
-		},
-		uv11 = {
-			0.897461,
-			0.455078
-		}
-	},
-	dlc_wizards_tower_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.800781,
-			0.398438
-		},
-		uv11 = {
-			0.848145,
-			0.455078
-		}
-	},
-	dlc_bastion_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.751465,
-			0.398438
-		},
-		uv11 = {
-			0.798828,
 			0.455078
 		}
 	},
@@ -145,6 +145,62 @@ level_images_atlas = {
 			58
 		},
 		uv00 = {
+			0.899414,
+			0.398438
+		},
+		uv11 = {
+			0.946777,
+			0.455078
+		}
+	},
+	dlc_bogenhafen_city_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.850098,
+			0.398438
+		},
+		uv11 = {
+			0.897461,
+			0.455078
+		}
+	},
+	farmlands_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.800781,
+			0.398438
+		},
+		uv11 = {
+			0.848145,
+			0.455078
+		}
+	},
+	forest_ambush_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.751465,
+			0.398438
+		},
+		uv11 = {
+			0.798828,
+			0.455078
+		}
+	},
+	fort_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
 			0.702148,
 			0.398438
 		},
@@ -153,7 +209,7 @@ level_images_atlas = {
 			0.455078
 		}
 	},
-	dlc_bogenhafen_city_small_image = {
+	ground_zero_small_image = {
 		size = {
 			97,
 			58
@@ -167,7 +223,7 @@ level_images_atlas = {
 			0.394531
 		}
 	},
-	farmlands_small_image = {
+	deus_small_image = {
 		size = {
 			97,
 			58
@@ -181,7 +237,7 @@ level_images_atlas = {
 			0.394531
 		}
 	},
-	forest_ambush_small_image = {
+	catacombs_small_image = {
 		size = {
 			97,
 			58
@@ -195,7 +251,7 @@ level_images_atlas = {
 			0.394531
 		}
 	},
-	fort_small_image = {
+	dlc_whaling_village_small_image = {
 		size = {
 			97,
 			58
@@ -209,7 +265,7 @@ level_images_atlas = {
 			0.394531
 		}
 	},
-	ground_zero_small_image = {
+	dlc_castle_small_image = {
 		size = {
 			97,
 			58
@@ -223,7 +279,7 @@ level_images_atlas = {
 			0.394531
 		}
 	},
-	deus_small_image = {
+	dlc_celebrate_crawl_small_image = {
 		size = {
 			97,
 			58
@@ -237,88 +293,32 @@ level_images_atlas = {
 			0.394531
 		}
 	},
-	catacombs_small_image = {
+	dlc_dwarf_beacons_small_image = {
 		size = {
 			97,
 			58
 		},
 		uv00 = {
 			0.618164,
-			0.929688
+			0.916016
 		},
 		uv11 = {
 			0.665527,
-			0.986328
+			0.972656
 		}
 	},
-	dlc_whaling_village_small_image = {
+	nurgle_small_image = {
 		size = {
 			97,
 			58
 		},
 		uv00 = {
 			0.618164,
-			0.869141
+			0.855469
 		},
 		uv11 = {
 			0.665527,
-			0.925781
-		}
-	},
-	dlc_castle_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.618164,
-			0.808594
-		},
-		uv11 = {
-			0.665527,
-			0.865234
-		}
-	},
-	dlc_celebrate_crawl_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.618164,
-			0.748047
-		},
-		uv11 = {
-			0.665527,
-			0.804688
-		}
-	},
-	dlc_dwarf_exterior_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.618164,
-			0.6875
-		},
-		uv11 = {
-			0.665527,
-			0.744141
-		}
-	},
-	military_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.618164,
-			0.626953
-		},
-		uv11 = {
-			0.665527,
-			0.683594
+			0.912109
 		}
 	},
 	prologue_small_image = {
@@ -328,25 +328,53 @@ level_images_atlas = {
 		},
 		uv00 = {
 			0.618164,
-			0.566406
+			0.794922
 		},
 		uv11 = {
 			0.665527,
-			0.623047
+			0.851563
 		}
 	},
-	magnus_small_image = {
+	military_small_image = {
 		size = {
 			97,
 			58
 		},
 		uv00 = {
 			0.618164,
-			0.505859
+			0.734375
 		},
 		uv11 = {
 			0.665527,
-			0.5625
+			0.791016
+		}
+	},
+	plaza_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.618164,
+			0.673828
+		},
+		uv11 = {
+			0.665527,
+			0.730469
+		}
+	},
+	carousel_hub_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.53418,
+			0.902344
+		},
+		uv11 = {
+			0.581543,
+			0.958984
 		}
 	},
 	mines_small_image = {
@@ -356,56 +384,42 @@ level_images_atlas = {
 		},
 		uv00 = {
 			0.53418,
-			0.902344
-		},
-		uv11 = {
-			0.581543,
-			0.958984
-		}
-	},
-	dlc_dwarf_beacons_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.53418,
 			0.841797
 		},
 		uv11 = {
 			0.581543,
-			0.898438
-		}
-	},
-	nurgle_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.450195,
-			0.902344
-		},
-		uv11 = {
-			0.497559,
-			0.958984
-		}
-	},
-	plaza_small_image = {
-		size = {
-			97,
-			58
-		},
-		uv00 = {
-			0.450195,
-			0.841797
-		},
-		uv11 = {
-			0.497559,
 			0.898438
 		}
 	},
 	skaven_stronghold_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.450195,
+			0.902344
+		},
+		uv11 = {
+			0.497559,
+			0.958984
+		}
+	},
+	magnus_small_image = {
+		size = {
+			97,
+			58
+		},
+		uv00 = {
+			0.450195,
+			0.841797
+		},
+		uv11 = {
+			0.497559,
+			0.898438
+		}
+	},
+	dlc_dwarf_exterior_small_image = {
 		size = {
 			97,
 			58
@@ -419,7 +433,7 @@ level_images_atlas = {
 			0.982422
 		}
 	},
-	skittergate_small_image = {
+	ussingen_small_image = {
 		size = {
 			97,
 			58
@@ -447,7 +461,7 @@ level_images_atlas = {
 			0.957031
 		}
 	},
-	weaves_small_image = {
+	skittergate_small_image = {
 		size = {
 			97,
 			58
@@ -461,7 +475,7 @@ level_images_atlas = {
 			0.957031
 		}
 	},
-	ussingen_small_image = {
+	weaves_small_image = {
 		size = {
 			97,
 			58
@@ -489,7 +503,21 @@ level_images_atlas = {
 			0.957031
 		}
 	},
-	level_icon_11 = {
+	level_icon_08 = {
+		size = {
+			168,
+			168
+		},
+		uv00 = {
+			0.618164,
+			0.505859
+		},
+		uv11 = {
+			0.700195,
+			0.669922
+		}
+	},
+	morris_level_icon_04 = {
 		size = {
 			168,
 			168
@@ -503,7 +531,7 @@ level_images_atlas = {
 			0.501953
 		}
 	},
-	level_image_castle = {
+	level_image_bastion = {
 		size = {
 			168,
 			168
@@ -517,7 +545,7 @@ level_images_atlas = {
 			0.333984
 		}
 	},
-	level_icon_12 = {
+	level_icon_13 = {
 		size = {
 			168,
 			168
@@ -531,7 +559,7 @@ level_images_atlas = {
 			0.333984
 		}
 	},
-	level_icon_13 = {
+	level_icon_12 = {
 		size = {
 			168,
 			168
@@ -545,7 +573,7 @@ level_images_atlas = {
 			0.333984
 		}
 	},
-	morris_level_icon_04 = {
+	level_icon_11 = {
 		size = {
 			168,
 			168
@@ -559,7 +587,7 @@ level_images_atlas = {
 			0.333984
 		}
 	},
-	level_icon_10 = {
+	level_image_castle = {
 		size = {
 			168,
 			168
@@ -573,7 +601,7 @@ level_images_atlas = {
 			0.837891
 		}
 	},
-	level_icon_08 = {
+	level_image_any = {
 		size = {
 			168,
 			168
@@ -587,7 +615,7 @@ level_images_atlas = {
 			0.669922
 		}
 	},
-	level_image_any = {
+	level_icon_02 = {
 		size = {
 			168,
 			168
@@ -601,7 +629,7 @@ level_images_atlas = {
 			0.501953
 		}
 	},
-	level_image_bastion = {
+	level_icon_07 = {
 		size = {
 			168,
 			168
@@ -615,7 +643,7 @@ level_images_atlas = {
 			0.333984
 		}
 	},
-	level_icon_04 = {
+	morris_level_icon_02 = {
 		size = {
 			168,
 			168
@@ -629,7 +657,7 @@ level_images_atlas = {
 			0.166016
 		}
 	},
-	level_icon_07 = {
+	level_icon_05 = {
 		size = {
 			168,
 			168
@@ -685,7 +713,7 @@ level_images_atlas = {
 			0.166016
 		}
 	},
-	level_icon_05 = {
+	level_icon_06 = {
 		size = {
 			168,
 			168
@@ -699,7 +727,7 @@ level_images_atlas = {
 			0.837891
 		}
 	},
-	level_icon_06 = {
+	morris_level_icon_03 = {
 		size = {
 			168,
 			168
@@ -713,7 +741,7 @@ level_images_atlas = {
 			0.669922
 		}
 	},
-	morris_level_icon_03 = {
+	level_icon_10 = {
 		size = {
 			168,
 			168
@@ -727,7 +755,7 @@ level_images_atlas = {
 			0.501953
 		}
 	},
-	level_icon_09 = {
+	level_image_carousel_hub = {
 		size = {
 			168,
 			168
@@ -741,7 +769,7 @@ level_images_atlas = {
 			0.333984
 		}
 	},
-	morris_level_icon_02 = {
+	level_icon_04 = {
 		size = {
 			168,
 			168
@@ -769,7 +797,7 @@ level_images_atlas = {
 			0.861328
 		}
 	},
-	level_icon_02 = {
+	level_icon_09 = {
 		size = {
 			168,
 			168
@@ -797,7 +825,7 @@ level_images_atlas = {
 			0.525391
 		}
 	},
-	dlc_wizards_trail = {
+	level_icon_weaves = {
 		size = {
 			180,
 			180
@@ -811,7 +839,7 @@ level_images_atlas = {
 			0.357422
 		}
 	},
-	level_icon_ubersreik_cemetary = {
+	area_icon_karak_azgaraz = {
 		size = {
 			180,
 			180
@@ -825,7 +853,7 @@ level_images_atlas = {
 			0.177734
 		}
 	},
-	level_icon_ubersreik_forest = {
+	area_icon_bogenhafen = {
 		size = {
 			180,
 			180
@@ -839,7 +867,7 @@ level_images_atlas = {
 			0.896484
 		}
 	},
-	dlc_dwarf_beacons = {
+	area_icon_helmgart = {
 		size = {
 			180,
 			180
@@ -851,34 +879,6 @@ level_images_atlas = {
 		uv11 = {
 			0.358398,
 			0.716797
-		}
-	},
-	area_icon_karak_azgaraz = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.270508,
-			0.361328
-		},
-		uv11 = {
-			0.358398,
-			0.537109
-		}
-	},
-	area_icon_ubersreik = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.270508,
-			0.181641
-		},
-		uv11 = {
-			0.358398,
-			0.357422
 		}
 	},
 	dlc_whaling_village = {
@@ -888,6 +888,34 @@ level_images_atlas = {
 		},
 		uv00 = {
 			0.270508,
+			0.361328
+		},
+		uv11 = {
+			0.358398,
+			0.537109
+		}
+	},
+	level_icon_ubersreik_plaza = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.270508,
+			0.181641
+		},
+		uv11 = {
+			0.358398,
+			0.357422
+		}
+	},
+	level_icon_ubersreik_magnus = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.270508,
 			0.001953
 		},
 		uv11 = {
@@ -895,7 +923,7 @@ level_images_atlas = {
 			0.177734
 		}
 	},
-	area_icon_drachenfels = {
+	dlc_dwarf_beacons = {
 		size = {
 			180,
 			180
@@ -907,20 +935,6 @@ level_images_atlas = {
 		uv11 = {
 			0.268555,
 			0.896484
-		}
-	},
-	dlc_dwarf_exterior = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.180664,
-			0.541016
-		},
-		uv11 = {
-			0.268555,
-			0.716797
 		}
 	},
 	level_icon_bgh_pit = {
@@ -930,25 +944,25 @@ level_images_atlas = {
 		},
 		uv00 = {
 			0.180664,
-			0.361328
+			0.541016
 		},
 		uv11 = {
 			0.268555,
-			0.537109
+			0.716797
 		}
 	},
-	dlc_dwarf_interior = {
+	area_icon_ubersreik = {
 		size = {
 			180,
 			180
 		},
 		uv00 = {
 			0.180664,
-			0.181641
+			0.361328
 		},
 		uv11 = {
 			0.268555,
-			0.357422
+			0.537109
 		}
 	},
 	level_icon_bgh_city = {
@@ -958,67 +972,25 @@ level_images_atlas = {
 		},
 		uv00 = {
 			0.180664,
+			0.181641
+		},
+		uv11 = {
+			0.268555,
+			0.357422
+		}
+	},
+	area_icon_wizards = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.180664,
 			0.001953
 		},
 		uv11 = {
 			0.268555,
 			0.177734
-		}
-	},
-	area_icon_wom = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.09082,
-			0.720703
-		},
-		uv11 = {
-			0.178711,
-			0.896484
-		}
-	},
-	level_icon_crater = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.09082,
-			0.541016
-		},
-		uv11 = {
-			0.178711,
-			0.716797
-		}
-	},
-	level_icon_ubersreik_plaza = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.09082,
-			0.361328
-		},
-		uv11 = {
-			0.178711,
-			0.537109
-		}
-	},
-	level_icon_weaves = {
-		size = {
-			180,
-			180
-		},
-		uv00 = {
-			0.09082,
-			0.181641
-		},
-		uv11 = {
-			0.178711,
-			0.357422
 		}
 	},
 	level_icon_inn_level = {
@@ -1028,6 +1000,62 @@ level_images_atlas = {
 		},
 		uv00 = {
 			0.09082,
+			0.720703
+		},
+		uv11 = {
+			0.178711,
+			0.896484
+		}
+	},
+	level_icon_ubersreik_cemetary = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.09082,
+			0.541016
+		},
+		uv11 = {
+			0.178711,
+			0.716797
+		}
+	},
+	dlc_wizards_trail = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.09082,
+			0.361328
+		},
+		uv11 = {
+			0.178711,
+			0.537109
+		}
+	},
+	area_icon_wom = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.09082,
+			0.181641
+		},
+		uv11 = {
+			0.178711,
+			0.357422
+		}
+	},
+	area_icon_drachenfels = {
+		size = {
+			180,
+			180
+		},
+		uv00 = {
+			0.09082,
 			0.001953
 		},
 		uv11 = {
@@ -1035,7 +1063,7 @@ level_images_atlas = {
 			0.177734
 		}
 	},
-	area_icon_wizards = {
+	dlc_dwarf_interior = {
 		size = {
 			180,
 			180
@@ -1049,7 +1077,7 @@ level_images_atlas = {
 			0.896484
 		}
 	},
-	level_icon_ubersreik_magnus = {
+	level_icon_crater = {
 		size = {
 			180,
 			180
@@ -1063,7 +1091,7 @@ level_images_atlas = {
 			0.716797
 		}
 	},
-	level_icon_celebrate_crawl = {
+	level_icon_ubersreik_forest = {
 		size = {
 			180,
 			180
@@ -1077,7 +1105,7 @@ level_images_atlas = {
 			0.537109
 		}
 	},
-	area_icon_helmgart = {
+	dlc_dwarf_exterior = {
 		size = {
 			180,
 			180
@@ -1091,7 +1119,7 @@ level_images_atlas = {
 			0.357422
 		}
 	},
-	area_icon_bogenhafen = {
+	level_icon_celebrate_crawl = {
 		size = {
 			180,
 			180

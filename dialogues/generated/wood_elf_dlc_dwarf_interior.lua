@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwe_dummy_memory_trigger_end_event",
 		response = "pwe_dummy_memory_trigger_end_event",
 		criterias = {
@@ -38,6 +39,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_brewery_a",
 		response = "pwe_dwarf_internal_brewery_a",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_brewery_speaking_tube_interact_one_a",
 		response = "pwe_dwarf_internal_brewery_speaking_tube_interact_one_a",
 		criterias = {
@@ -126,6 +129,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_brewery_speaking_tube_interact_two_a",
 		response = "pwe_dwarf_internal_brewery_speaking_tube_interact_two_a",
 		criterias = {
@@ -170,6 +174,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_dead_dwarfs",
 		response = "pwe_dwarf_internal_dead_dwarfs",
 		criterias = {
@@ -214,6 +219,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_dwarf_sign",
 		response = "pwe_dwarf_internal_dwarf_sign",
 		criterias = {
@@ -258,6 +264,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_end_conversation_a",
 		response = "pwe_dwarf_internal_end_conversation_a",
 		criterias = {
@@ -344,6 +351,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_end_event_interact_a",
 		response = "pwe_dwarf_internal_end_event_interact_a",
 		criterias = {
@@ -388,6 +396,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_end_event_interact_c",
 		response = "pwe_dwarf_internal_end_event_interact_c",
 		criterias = {
@@ -432,6 +441,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_end_event_speaking_tube_PLAN_A_b",
 		response = "pwe_dwarf_internal_end_event_speaking_tube_PLAN_A_b",
 		criterias = {
@@ -482,6 +492,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_end_event_speaking_tube_PLAN_B",
 		response = "pwe_dwarf_internal_end_event_speaking_tube_PLAN_B",
 		criterias = {
@@ -526,6 +537,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_hasnt_improved",
 		response = "pwe_dwarf_internal_hasnt_improved",
 		criterias = {
@@ -570,6 +582,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_massing_skaven_a",
 		response = "pwe_dwarf_internal_massing_skaven_a",
 		criterias = {
@@ -625,6 +638,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_mid_conversation_bardin_c",
 		response = "pwe_dwarf_internal_mid_conversation_bardin_c",
 		criterias = {
@@ -675,6 +689,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_mid_conversation_no_bardin_a",
 		response = "pwe_dwarf_internal_mid_conversation_no_bardin_a",
 		criterias = {
@@ -767,6 +782,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_skaven_works",
 		response = "pwe_dwarf_internal_skaven_works",
 		criterias = {
@@ -822,6 +838,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_start_banter_a",
 		response = "pwe_dwarf_internal_start_banter_a",
 		criterias = {
@@ -862,6 +879,7 @@ return function ()
 	define_rule({
 		response = "pwe_dwarf_internal_start_banter_b",
 		name = "pwe_dwarf_internal_start_banter_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -892,6 +910,7 @@ return function ()
 	define_rule({
 		response = "pwe_dwarf_internal_start_banter_c",
 		name = "pwe_dwarf_internal_start_banter_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -920,6 +939,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_steam_clearing",
 		response = "pwe_dwarf_internal_steam_clearing",
 		criterias = {
@@ -975,6 +995,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_still_a_maze",
 		response = "pwe_dwarf_internal_still_a_maze",
 		criterias = {
@@ -1019,6 +1040,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_dwarf_internal_valaya",
 		response = "pwe_dwarf_internal_valaya",
 		criterias = {

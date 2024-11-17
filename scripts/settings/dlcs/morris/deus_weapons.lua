@@ -4,9 +4,10 @@ local property_table_mapping = {
 }
 local trait_table_mapping = {
 	melee = "deus_melee",
+	trollhammer_torpedo = "deus_trollhammer_torpedo",
+	ranged_energy = "deus_ranged_energy",
 	ranged_heat = "deus_ranged_heat",
-	ranged_ammo = "deus_ranged_ammo",
-	ranged_energy = "deus_ranged_energy"
+	ranged_ammo = "deus_ranged_ammo"
 }
 
 DeusWeapons = DeusWeapons or {
@@ -250,7 +251,7 @@ DeusWeapons = DeusWeapons or {
 	},
 	deus_dr_deus_01 = {
 		base_item = "dr_deus_01",
-		property_table_name = "deus_ranged_ammo"
+		property_table_name = "deus_trollhammer_torpedo"
 	},
 	deus_wh_deus_01 = {
 		base_item = "wh_deus_01"

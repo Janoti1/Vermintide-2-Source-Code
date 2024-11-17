@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "ecc_prologue_dialogue_answer_bang",
 		name = "ecc_prologue_dialogue_answer_bang",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -26,6 +27,7 @@ return function ()
 	define_rule({
 		response = "ecc_prologue_dialogue_answer_lack_of_patience",
 		name = "ecc_prologue_dialogue_answer_lack_of_patience",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -50,6 +52,7 @@ return function ()
 	define_rule({
 		response = "egs_level_prologue_skittergate_distance_01",
 		name = "egs_level_prologue_skittergate_distance_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -74,6 +77,7 @@ return function ()
 	define_rule({
 		response = "egs_level_prologue_skittergate_distance_02",
 		name = "egs_level_prologue_skittergate_distance_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -98,6 +102,7 @@ return function ()
 	define_rule({
 		response = "egs_level_prologue_skittergate_distance_03",
 		name = "egs_level_prologue_skittergate_distance_03",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -122,6 +127,7 @@ return function ()
 	define_rule({
 		response = "egs_prologue_dialogue_bang",
 		name = "egs_prologue_dialogue_bang",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -146,6 +152,7 @@ return function ()
 	define_rule({
 		response = "egs_prologue_dialogue_excuse",
 		name = "egs_prologue_dialogue_excuse",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -170,6 +177,7 @@ return function ()
 	define_rule({
 		response = "egs_prologue_intro_from_far",
 		name = "egs_prologue_intro_from_far",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -194,6 +202,7 @@ return function ()
 	define_rule({
 		response = "egs_prologue_ranting_at_skavens",
 		name = "egs_prologue_ranting_at_skavens",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -218,6 +227,7 @@ return function ()
 	define_rule({
 		response = "nfl_prologue_intro_a",
 		name = "nfl_prologue_intro_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -234,6 +244,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_prologue_intro_c",
 		response = "nfl_prologue_intro_c",
 		criterias = {
@@ -268,6 +279,7 @@ return function ()
 	define_rule({
 		response = "nfl_prologue_intro_e",
 		name = "nfl_prologue_intro_e",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -286,6 +298,7 @@ return function ()
 	define_rule({
 		response = "nfl_prologue_portal_e",
 		name = "nfl_prologue_portal_e",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -310,6 +323,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_prologue_elevator_ride_sienna",
 		name = "pbw_level_prologue_elevator_ride_sienna",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -334,6 +348,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_prologue_elevator_ride_sienna_02",
 		name = "pbw_level_prologue_elevator_ride_sienna_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -358,6 +373,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_prologue_reached_surface_sienna",
 		name = "pbw_level_prologue_reached_surface_sienna",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -382,6 +398,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_prologue_seeing_crater_sienna",
 		name = "pbw_level_prologue_seeing_crater_sienna",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -406,6 +423,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_prologue_sienna_up_01",
 		name = "pbw_level_prologue_sienna_up_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -430,6 +448,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_prologue_skittergate_afar_01",
 		name = "pbw_level_prologue_skittergate_afar_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -454,6 +473,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_bardin_fallling_01",
 		name = "pdr_level_prologue_bardin_fallling_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -482,6 +502,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_prologue_bardin_passing_one_00",
 		response = "pdr_level_prologue_bardin_passing_one_00",
 		criterias = {
@@ -520,6 +541,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_prologue_bardin_passing_one_bardin_01",
 		response = "pdr_level_prologue_bardin_passing_one_bardin_01",
 		criterias = {
@@ -558,6 +580,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_prologue_bardin_passing_two_01",
 		response = "pdr_level_prologue_bardin_passing_two_01",
 		criterias = {
@@ -598,6 +621,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_bardin_passing_two_02",
 		name = "pdr_level_prologue_bardin_passing_two_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -616,6 +640,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_elevator_ride_01",
 		name = "pdr_level_prologue_elevator_ride_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -640,6 +665,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_elevator_ride_bardin",
 		name = "pdr_level_prologue_elevator_ride_bardin",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -664,6 +690,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_freeing_bardin_01",
 		name = "pdr_level_prologue_freeing_bardin_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -694,6 +721,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_reached_surface_02",
 		name = "pdr_level_prologue_reached_surface_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -718,6 +746,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_reached_surface_bardin",
 		name = "pdr_level_prologue_reached_surface_bardin",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -742,6 +771,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_seeing_crater_01",
 		name = "pdr_level_prologue_seeing_crater_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -766,6 +796,7 @@ return function ()
 	define_rule({
 		response = "pdr_level_prologue_wizard_down_b",
 		name = "pdr_level_prologue_wizard_down_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -790,6 +821,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_bardin_dazed_01",
 		name = "pdr_prologue_bardin_dazed_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -820,6 +852,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_bardin_healed_01",
 		name = "pdr_prologue_bardin_healed_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -850,6 +883,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_bardin_revived_01",
 		name = "pdr_prologue_bardin_revived_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -880,6 +914,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_gate_opens_01",
 		name = "pdr_prologue_gate_opens_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -904,6 +939,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_heal_bardin_01",
 		name = "pdr_prologue_heal_bardin_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -934,6 +970,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_heal_bardin_take_time_02",
 		name = "pdr_prologue_heal_bardin_take_time_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -958,6 +995,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_kerillian_fight_01",
 		name = "pdr_prologue_kerillian_fight_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -982,6 +1020,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_meeting_kerillian_01",
 		name = "pdr_prologue_meeting_kerillian_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1006,6 +1045,7 @@ return function ()
 	define_rule({
 		response = "pdr_prologue_portal_bardin",
 		name = "pdr_prologue_portal_bardin",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1030,6 +1070,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_ability",
 		name = "pes_level_prologue_ability",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1060,6 +1101,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_bardin_fallling_01",
 		name = "pes_level_prologue_bardin_fallling_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1082,6 +1124,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_prologue_bardin_passing_one_01",
 		response = "pes_level_prologue_bardin_passing_one_01",
 		criterias = {
@@ -1120,6 +1163,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_prologue_bardin_passing_one_02",
 		response = "pes_level_prologue_bardin_passing_one_02",
 		criterias = {
@@ -1154,6 +1198,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_bardin_passing_two_03",
 		name = "pes_level_prologue_bardin_passing_two_03",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1172,6 +1217,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_bardin_passing_two_kruber_01",
 		name = "pes_level_prologue_bardin_passing_two_kruber_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1190,6 +1236,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_block",
 		name = "pes_level_prologue_block",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1220,6 +1267,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_cage_fall",
 		name = "pes_level_prologue_cage_fall",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1250,6 +1298,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_cage_land",
 		name = "pes_level_prologue_cage_land",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1280,6 +1329,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_cage_see_weapon",
 		name = "pes_level_prologue_cage_see_weapon",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1310,6 +1360,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_dodge",
 		name = "pes_level_prologue_dodge",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1340,6 +1391,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_elevator_ride",
 		name = "pes_level_prologue_elevator_ride",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1370,6 +1422,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_elevator_ride_02",
 		name = "pes_level_prologue_elevator_ride_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1394,6 +1447,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_elevator_ride_03",
 		name = "pes_level_prologue_elevator_ride_03",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1418,6 +1472,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_fighting_pit",
 		name = "pes_level_prologue_fighting_pit",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1448,6 +1503,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_fighting_pit_fight",
 		name = "pes_level_prologue_fighting_pit_fight",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1478,6 +1534,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_first_payback",
 		name = "pes_level_prologue_first_payback",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1508,6 +1565,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_freeing_bardin_01",
 		name = "pes_level_prologue_freeing_bardin_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1538,6 +1596,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_got_bow",
 		name = "pes_level_prologue_got_bow",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1568,6 +1627,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_grab_weapon",
 		name = "pes_level_prologue_grab_weapon",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1598,6 +1658,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_reached_surface",
 		name = "pes_level_prologue_reached_surface",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1628,6 +1689,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_seeing_crater_kruber",
 		name = "pes_level_prologue_seeing_crater_kruber",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1658,6 +1720,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_sienna_up",
 		name = "pes_level_prologue_sienna_up",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1688,6 +1751,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_skittergate_afar",
 		name = "pes_level_prologue_skittergate_afar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1718,6 +1782,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_strong",
 		name = "pes_level_prologue_strong",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1748,6 +1813,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_supply",
 		name = "pes_level_prologue_supply",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1778,6 +1844,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_travel",
 		name = "pes_level_prologue_travel",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1808,6 +1875,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_waking_up",
 		name = "pes_level_prologue_waking_up",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1838,6 +1906,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_wizard_down_a",
 		name = "pes_level_prologue_wizard_down_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1868,6 +1937,7 @@ return function ()
 	define_rule({
 		response = "pes_level_prologue_wizard_sound",
 		name = "pes_level_prologue_wizard_sound",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1898,6 +1968,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_bardin_dazed_01",
 		name = "pes_prologue_bardin_dazed_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1922,6 +1993,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_bardin_healed_01",
 		name = "pes_prologue_bardin_healed_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1946,6 +2018,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_bardin_revived_01",
 		name = "pes_prologue_bardin_revived_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1970,6 +2043,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_gate_opens_01",
 		name = "pes_prologue_gate_opens_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2000,6 +2074,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_heal_bardin_kruber_01",
 		name = "pes_prologue_heal_bardin_kruber_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2024,6 +2099,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_intro_b",
 		name = "pes_prologue_intro_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2042,6 +2118,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_intro_d",
 		name = "pes_prologue_intro_d",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2060,6 +2137,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_intro_f",
 		name = "pes_prologue_intro_f",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2078,6 +2156,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_kerillian_fight_01",
 		name = "pes_prologue_kerillian_fight_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2106,6 +2185,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_prologue_meeting_kerillian_01",
 		response = "pes_prologue_meeting_kerillian_01",
 		criterias = {
@@ -2150,6 +2230,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_prologue_meeting_kerillian_02",
 		response = "pes_prologue_meeting_kerillian_02",
 		criterias = {
@@ -2190,6 +2271,7 @@ return function ()
 	define_rule({
 		response = "pes_prologue_portal_kruber",
 		name = "pes_prologue_portal_kruber",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2214,6 +2296,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_elevator_ride_kerillian",
 		name = "pwe_level_prologue_elevator_ride_kerillian",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2238,6 +2321,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_elevator_ride_kerillian_02",
 		name = "pwe_level_prologue_elevator_ride_kerillian_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2262,6 +2346,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_reached_surface_kerillian",
 		name = "pwe_level_prologue_reached_surface_kerillian",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2286,6 +2371,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_seeing_crater_kerillian",
 		name = "pwe_level_prologue_seeing_crater_kerillian",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2310,6 +2396,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_sienna_up_01",
 		name = "pwe_level_prologue_sienna_up_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2334,6 +2421,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_skittergate_afar_01",
 		name = "pwe_level_prologue_skittergate_afar_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2358,6 +2446,7 @@ return function ()
 	define_rule({
 		response = "pwe_level_prologue_wizard_sound",
 		name = "pwe_level_prologue_wizard_sound",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2382,6 +2471,7 @@ return function ()
 	define_rule({
 		response = "pwe_prologue_kerillian_fight_01",
 		name = "pwe_prologue_kerillian_fight_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2412,6 +2502,7 @@ return function ()
 	define_rule({
 		response = "pwe_prologue_meeting_kerillian_02",
 		name = "pwe_prologue_meeting_kerillian_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2434,6 +2525,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_prologue_meeting_kerillian_kerillian_01",
 		response = "pwe_prologue_meeting_kerillian_kerillian_01",
 		criterias = {
@@ -2474,6 +2566,7 @@ return function ()
 	define_rule({
 		response = "pwe_prologue_portal_kerillian",
 		name = "pwe_prologue_portal_kerillian",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2498,6 +2591,7 @@ return function ()
 	define_rule({
 		response = "pwh_prologue_portal",
 		name = "pwh_prologue_portal",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2528,6 +2622,7 @@ return function ()
 	define_rule({
 		response = "pwh_prologue_portal_salty",
 		name = "pwh_prologue_portal_salty",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2552,6 +2647,7 @@ return function ()
 	define_rule({
 		response = "pwh_prologue_portal_salty_02",
 		name = "pwh_prologue_portal_salty_02",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

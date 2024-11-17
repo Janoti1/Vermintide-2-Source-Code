@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pes_portals_castle_gate",
 		response = "pes_portals_castle_gate",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_castle_road",
 		response = "pes_portals_castle_road",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_crypt_event_blood",
 		response = "pes_portals_crypt_event_blood",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_crypt_event_entering_crypt",
 		response = "pes_portals_crypt_event_entering_crypt",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_crypt_event_hole",
 		response = "pes_portals_crypt_event_hole",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_crypt_exit",
 		response = "pes_portals_crypt_exit",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_enter_village",
 		response = "pes_portals_enter_village",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_event_missing_gargoyle_heads",
 		response = "pes_portals_event_missing_gargoyle_heads",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_everyone_gone",
 		response = "pes_portals_everyone_gone",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_find_map",
 		response = "pes_portals_find_map",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_find_survivors",
 		response = "pes_portals_find_survivors",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_follow_trail",
 		response = "pes_portals_follow_trail",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_get_out",
 		response = "pes_portals_get_out",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_get_to_temple",
 		response = "pes_portals_get_to_temple",
 		criterias = {
@@ -616,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_help_search",
 		response = "pes_portals_help_search",
 		criterias = {
@@ -660,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_intro_line_a",
 		response = "pes_portals_intro_line_a",
 		criterias = {
@@ -704,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_intro_line_b",
 		response = "pes_portals_intro_line_b",
 		criterias = {
@@ -748,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_intro_line_c",
 		response = "pes_portals_intro_line_c",
 		criterias = {
@@ -792,6 +810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_kidnapped_traces",
 		response = "pes_portals_kidnapped_traces",
 		criterias = {
@@ -836,6 +855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_map_first_clue",
 		response = "pes_portals_map_first_clue",
 		criterias = {
@@ -880,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_map_second_clue",
 		response = "pes_portals_map_second_clue",
 		criterias = {
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_memory_path",
 		response = "pes_portals_memory_path",
 		criterias = {
@@ -968,6 +990,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_memory_portals",
 		response = "pes_portals_memory_portals",
 		criterias = {
@@ -1012,6 +1035,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_objective_recap",
 		response = "pes_portals_objective_recap",
 		criterias = {
@@ -1056,6 +1080,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_pes_castle_vista",
 		response = "pes_portals_pes_castle_vista",
 		criterias = {
@@ -1100,6 +1125,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_portal_event",
 		response = "pes_portals_portal_event",
 		criterias = {
@@ -1144,6 +1170,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_portal_interact_one",
 		response = "pes_portals_portal_interact_one",
 		criterias = {
@@ -1188,6 +1215,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_portal_interact_three",
 		response = "pes_portals_portal_interact_three",
 		criterias = {
@@ -1232,6 +1260,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_portal_interact_two",
 		response = "pes_portals_portal_interact_two",
 		criterias = {
@@ -1276,6 +1305,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_raid_trace",
 		response = "pes_portals_raid_trace",
 		criterias = {
@@ -1320,6 +1350,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_secret_entrance_gate_opens",
 		response = "pes_portals_secret_entrance_gate_opens",
 		criterias = {
@@ -1364,6 +1395,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_stairs",
 		response = "pes_portals_stairs",
 		criterias = {
@@ -1408,6 +1440,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_temple_bell_tower",
 		response = "pes_portals_temple_bell_tower",
 		criterias = {
@@ -1452,6 +1485,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_temple_event",
 		response = "pes_portals_temple_event",
 		criterias = {
@@ -1496,6 +1530,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_temple_locked",
 		response = "pes_portals_temple_locked",
 		criterias = {
@@ -1540,6 +1575,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_the_map",
 		response = "pes_portals_the_map",
 		criterias = {
@@ -1584,6 +1620,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_the_temple",
 		response = "pes_portals_the_temple",
 		criterias = {
@@ -1628,6 +1665,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_trail_found",
 		response = "pes_portals_trail_found",
 		criterias = {
@@ -1672,6 +1710,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_village_raided",
 		response = "pes_portals_village_raided",
 		criterias = {
@@ -1716,6 +1755,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_portals_waystone",
 		response = "pes_portals_waystone",
 		criterias = {
@@ -1793,10 +1833,10 @@ return function ()
 				"pes_portals_pes_castle_gate_04"
 			},
 			sound_events_duration = {
-				3.6137917041779,
-				2.9426457881927,
-				2.7608957290649,
-				2.1520416736603
+				3.6129791736603,
+				2.9419791698456,
+				2.7599792480469,
+				2.1519792079926
 			}
 		},
 		pes_portals_castle_road = {
@@ -1832,10 +1872,10 @@ return function ()
 				"pes_portals_pes_castle_road_04"
 			},
 			sound_events_duration = {
-				2.3881249427795,
-				2.7681250572205,
-				1.7300833463669,
-				3.7454166412353
+				2.3879792690277,
+				2.7679998874664,
+				1.7299791574478,
+				3.7449791431427
 			}
 		},
 		pes_portals_crypt_event_blood = {
@@ -1871,10 +1911,10 @@ return function ()
 				"pes_portals_crypt_event_blood_04"
 			},
 			sound_events_duration = {
-				2.3939790725708,
-				2.8158957958221,
-				1.8687916994095,
-				4.0618543624878
+				2.3929791450501,
+				2.8149790763855,
+				1.8679791688919,
+				4.0609793663025
 			}
 		},
 		pes_portals_crypt_event_entering_crypt = {
@@ -1910,10 +1950,10 @@ return function ()
 				"pes_portals_crypt_event_entering_crypt_04"
 			},
 			sound_events_duration = {
-				2.5039167404175,
-				2.1358957290649,
-				2.2382917404175,
-				3.1650624275208
+				2.5029792785645,
+				2.1349792480469,
+				2.2379791736603,
+				3.1649792194366
 			}
 		},
 		pes_portals_crypt_event_hole = {
@@ -1949,10 +1989,10 @@ return function ()
 				"pes_portals_crypt_event_hole_04"
 			},
 			sound_events_duration = {
-				1.5861041545868,
-				1.2460625171661,
-				1.228875041008,
-				2.0278959274292
+				1.5859999656677,
+				1.2459791898727,
+				1.227979183197,
+				2.0269792079926
 			}
 		},
 		pes_portals_crypt_exit = {
@@ -1988,10 +2028,10 @@ return function ()
 				"pes_portals_crypt_exit_04"
 			},
 			sound_events_duration = {
-				4.5378332138061,
-				2.3399167060852,
-				4.7101039886475,
-				3.9469375610352
+				4.5369791984558,
+				2.3389999866486,
+				4.709979057312,
+				3.9460000991821
 			}
 		},
 		pes_portals_enter_village = {
@@ -2027,10 +2067,10 @@ return function ()
 				"pes_portals_enter_village_04"
 			},
 			sound_events_duration = {
-				1.8130208253861,
-				2.8776249885559,
-				5.0993123054504,
-				2.5949165821075
+				1.812979221344,
+				2.8769791126251,
+				5.0989789962769,
+				2.5939791202545
 			}
 		},
 		pes_portals_event_missing_gargoyle_heads = {
@@ -2066,10 +2106,10 @@ return function ()
 				"pes_portals_event_missing_gargoyle_heads_04"
 			},
 			sound_events_duration = {
-				2.6597707271576,
-				1.8550208806992,
-				6.775333404541,
-				2.3813540935516
+				2.658979177475,
+				1.8549791574478,
+				6.7749791145325,
+				2.3809790611267
 			}
 		},
 		pes_portals_everyone_gone = {
@@ -2105,10 +2145,10 @@ return function ()
 				"pes_portals_everyone_gone_04"
 			},
 			sound_events_duration = {
-				4.3850002288818,
-				3.3027708530426,
-				4.0303335189819,
-				1.8933124542236
+				4.3849792480469,
+				3.3019790649414,
+				4.0299792289734,
+				1.89297914505
 			}
 		},
 		pes_portals_find_map = {
@@ -2144,10 +2184,10 @@ return function ()
 				"pes_portals_find_map_04"
 			},
 			sound_events_duration = {
-				1.8250833749771,
-				1.603354215622,
-				2.1428542137146,
-				2.318437576294
+				1.824979186058,
+				1.602979183197,
+				2.1419792175293,
+				2.3179790973663
 			}
 		},
 		pes_portals_find_survivors = {
@@ -2183,10 +2223,10 @@ return function ()
 				"pes_portals_find_survivors_04"
 			},
 			sound_events_duration = {
-				1.1026250123978,
-				1.1799792051315,
-				2.369916677475,
-				1.1166249513626
+				1.1019999980927,
+				1.1790000200272,
+				2.368979215622,
+				1.1160000562668
 			}
 		},
 		pes_portals_follow_trail = {
@@ -2222,10 +2262,10 @@ return function ()
 				"pes_portals_follow_trail_04"
 			},
 			sound_events_duration = {
-				1.3613333702087,
-				1.4367500543594,
-				1.8642708063126,
-				3.4308333396912
+				1.3609791994095,
+				1.4359791278839,
+				1.8639792203903,
+				3.4299790859222
 			}
 		},
 		pes_portals_get_out = {
@@ -2261,10 +2301,10 @@ return function ()
 				"pes_portals_get_out_04"
 			},
 			sound_events_duration = {
-				2.321624994278,
-				1.8895208835602,
-				1.5863332748413,
-				3.4001042842865
+				2.3209791183472,
+				1.8889791965485,
+				1.5859999656677,
+				3.3999791145325
 			}
 		},
 		pes_portals_get_to_temple = {
@@ -2300,10 +2340,10 @@ return function ()
 				"pes_portals_get_to_temple_04"
 			},
 			sound_events_duration = {
-				3.5826458930969,
-				3.2547500133514,
-				4.2058334350586,
-				2.7102084159851
+				3.5819792747498,
+				3.2539792060852,
+				4.2049789428711,
+				2.709979057312
 			}
 		},
 		pes_portals_help_search = {
@@ -2339,10 +2379,10 @@ return function ()
 				"pes_portals_help_search_04"
 			},
 			sound_events_duration = {
-				1.8278958797455,
-				1.5694999694824,
-				3.0624165534973,
-				4.2185206413269
+				1.8269791603088,
+				1.5689791440964,
+				3.0619790554047,
+				4.2179789543152
 			}
 		},
 		pes_portals_intro_line_a = {
@@ -2370,8 +2410,8 @@ return function ()
 				[2] = "pes_portals_intro_line_a_02"
 			},
 			sound_events_duration = {
-				[1] = 2.3200623989105,
-				[2] = 3.8559792041779
+				[1] = 2.3199791908264,
+				[2] = 3.8549792766571
 			}
 		},
 		pes_portals_intro_line_b = {
@@ -2399,8 +2439,8 @@ return function ()
 				[2] = "pes_portals_intro_line_b_02"
 			},
 			sound_events_duration = {
-				[1] = 2.8004999160767,
-				[2] = 1.7994999885559
+				[1] = 2.7999792098999,
+				[2] = 1.7989791631699
 			}
 		},
 		pes_portals_intro_line_c = {
@@ -2428,8 +2468,8 @@ return function ()
 				[2] = "pes_portals_intro_line_c_02"
 			},
 			sound_events_duration = {
-				[1] = 4.9582290649414,
-				[2] = 4.9979581832886
+				[1] = 4.9579792022705,
+				[2] = 4.9969792366028
 			}
 		},
 		pes_portals_kidnapped_traces = {
@@ -2465,10 +2505,10 @@ return function ()
 				"pes_portals_kidnapped_traces_04"
 			},
 			sound_events_duration = {
-				3.6063125133514,
-				3.1078958511352,
-				5.2538747787476,
-				6.0233750343323
+				3.6059792041779,
+				3.1069791316986,
+				5.2529792785644,
+				6.022979259491
 			}
 		},
 		pes_portals_map_first_clue = {
@@ -2504,10 +2544,10 @@ return function ()
 				"pes_portals_map_first_clue_04"
 			},
 			sound_events_duration = {
-				2.3164167404175,
-				2.7548959255219,
-				2.7600417137146,
-				4.1272706985474
+				2.3159792423248,
+				2.7539792060852,
+				2.7599792480469,
+				4.1269793510437
 			}
 		},
 		pes_portals_map_second_clue = {
@@ -2543,10 +2583,10 @@ return function ()
 				"pes_portals_map_second_clue_04"
 			},
 			sound_events_duration = {
-				4.1353960037231,
-				3.9464166164398,
-				2.7651875019074,
-				4.601083278656
+				4.1349792480469,
+				3.9459791183472,
+				2.7649791240692,
+				4.6009793281555
 			}
 		},
 		pes_portals_memory_path = {
@@ -2582,10 +2622,10 @@ return function ()
 				"pes_portals_memory_path_04"
 			},
 			sound_events_duration = {
-				2.3348333835602,
-				2.0351667404175,
-				3.3875207901001,
-				1.3869792222977
+				2.3339791297913,
+				2.0349791049957,
+				3.3869791030884,
+				1.3860000371933
 			}
 		},
 		pes_portals_memory_portals = {
@@ -2621,10 +2661,10 @@ return function ()
 				"pes_portals_memory_portals_04"
 			},
 			sound_events_duration = {
-				2.411229133606,
-				1.8528125286102,
-				4.0036873817444,
-				3.2008125782013
+				2.4109792709351,
+				1.851979136467,
+				4.0029792785644,
+				3.1999790668488
 			}
 		},
 		pes_portals_objective_recap = {
@@ -2660,10 +2700,10 @@ return function ()
 				"pes_portals_objective_recap_04"
 			},
 			sound_events_duration = {
-				3.2065417766571,
-				3.6052083969116,
-				3.4822707176209,
-				4.3544583320618
+				3.2059791088104,
+				3.6049792766571,
+				3.4819791316986,
+				4.3539791107178
 			}
 		},
 		pes_portals_pes_castle_vista = {
@@ -2699,10 +2739,10 @@ return function ()
 				"pes_portals_pes_castle_vista_04"
 			},
 			sound_events_duration = {
-				4.6535835266113,
-				3.8447291851044,
-				4.3029584884644,
-				5.2277083396912
+				4.6529793739319,
+				3.8439791202545,
+				4.3019790649414,
+				5.2269792556763
 			}
 		},
 		pes_portals_portal_event = {
@@ -2738,10 +2778,10 @@ return function ()
 				"pes_portals_portal_event_04"
 			},
 			sound_events_duration = {
-				1.3688541650772,
-				2.7437083721161,
-				1.8569999933243,
-				2.3892500400543
+				1.3679791688919,
+				2.7429790496826,
+				1.8569791316986,
+				2.3889791965485
 			}
 		},
 		pes_portals_portal_interact_one = {
@@ -2777,10 +2817,10 @@ return function ()
 				"pes_portals_portal_interact_one_04"
 			},
 			sound_events_duration = {
-				1.8357917070389,
-				1.7487083673477,
-				0.94720834493637,
-				1.2812708616257
+				1.8349791765213,
+				1.7479791641235,
+				0.94697916507721,
+				1.2809791564941
 			}
 		},
 		pes_portals_portal_interact_three = {
@@ -2816,10 +2856,10 @@ return function ()
 				"pes_portals_portal_interact_three_04"
 			},
 			sound_events_duration = {
-				2.0226666927338,
-				3.3077082633972,
-				2.8097083568573,
-				2.8186249732971
+				2.0219790935516,
+				3.3069791793823,
+				2.8089792728424,
+				2.8179790973663
 			}
 		},
 		pes_portals_portal_interact_two = {
@@ -2855,10 +2895,10 @@ return function ()
 				"pes_portals_portal_interact_two_04"
 			},
 			sound_events_duration = {
-				1.6765625476837,
-				2.0279166698456,
-				2.6119792461395,
-				1.836833357811
+				1.6759791374207,
+				2.0269792079926,
+				2.6109790802002,
+				1.8359792232513
 			}
 		},
 		pes_portals_raid_trace = {
@@ -2894,10 +2934,10 @@ return function ()
 				"pes_portals_raid_trace_04"
 			},
 			sound_events_duration = {
-				2.0231666564941,
-				3.0630624294281,
-				3.5234167575836,
-				5.0485625267029
+				2.022979259491,
+				3.062979221344,
+				3.522979259491,
+				5.0479793548584
 			}
 		},
 		pes_portals_secret_entrance_gate_opens = {
@@ -2933,10 +2973,10 @@ return function ()
 				"pes_portals_secret_entrance_gate_opens_04"
 			},
 			sound_events_duration = {
-				1.583166718483,
-				2.7942500114441,
-				4.7796459197998,
-				3.3185000419617
+				1.5829792022705,
+				2.7939791679382,
+				4.7789793014526,
+				3.3179790973663
 			}
 		},
 		pes_portals_stairs = {
@@ -2972,10 +3012,10 @@ return function ()
 				"pes_portals_stairs_04"
 			},
 			sound_events_duration = {
-				5.0141458511353,
-				4.519166469574,
-				5.2022085189819,
-				1.946624994278
+				5.0139789581299,
+				4.5189790725708,
+				5.2019791603088,
+				1.9459791183472
 			}
 		},
 		pes_portals_temple_bell_tower = {
@@ -3011,10 +3051,10 @@ return function ()
 				"pes_portals_temple_bell_tower_04"
 			},
 			sound_events_duration = {
-				1.1938749551773,
-				1.5760416984558,
-				1.8139375448227,
-				1.7616250514984
+				1.1929792165756,
+				1.5759791135788,
+				1.812979221344,
+				1.7609791755676
 			}
 		},
 		pes_portals_temple_event = {
@@ -3050,10 +3090,10 @@ return function ()
 				"pes_portals_temple_event_04"
 			},
 			sound_events_duration = {
-				1.2543749809265,
-				1.5116457939148,
-				1.2841458320618,
-				2.0676457881927
+				1.2539792060852,
+				1.5109791755676,
+				1.283979177475,
+				2.0669791698456
 			}
 		},
 		pes_portals_temple_locked = {
@@ -3089,10 +3129,10 @@ return function ()
 				"pes_portals_temple_locked_04"
 			},
 			sound_events_duration = {
-				3.842333316803,
-				2.1356875896454,
-				1.5652916431427,
-				3.2523541450501
+				3.841979265213,
+				2.1349792480469,
+				1.5649791955948,
+				3.2519791126251
 			}
 		},
 		pes_portals_the_map = {
@@ -3128,10 +3168,10 @@ return function ()
 				"pes_portals_the_map_04"
 			},
 			sound_events_duration = {
-				1.0474791526794,
-				2.3488125801086,
-				4.2508335113525,
-				2.8848125934601
+				1.0470000505447,
+				2.3479790687561,
+				4.249979019165,
+				2.8839790821075
 			}
 		},
 		pes_portals_the_temple = {
@@ -3167,10 +3207,10 @@ return function ()
 				"pes_portals_the_temple_04"
 			},
 			sound_events_duration = {
-				1.2401875257492,
-				1.2502083778381,
-				1.0421249866486,
-				1.8466249704361
+				1.2399791479111,
+				1.2499791383743,
+				1.0419791936874,
+				1.8459792137146
 			}
 		},
 		pes_portals_trail_found = {
@@ -3206,10 +3246,10 @@ return function ()
 				"pes_portals_trail_found_04"
 			},
 			sound_events_duration = {
-				1.7084791660309,
-				5.9158749580383,
-				3.1068124771118,
-				2.4146459102631
+				1.7079792022705,
+				5.9149789810181,
+				3.1059792041779,
+				2.4139790534973
 			}
 		},
 		pes_portals_village_raided = {
@@ -3245,10 +3285,10 @@ return function ()
 				"pes_portals_village_raided_04"
 			},
 			sound_events_duration = {
-				2.4010000228882,
-				2.6698958873749,
-				2.1918542385101,
-				5.0015416145325
+				2.4009792804718,
+				2.6689791679382,
+				2.1909792423248,
+				5.0009789466858
 			}
 		},
 		pes_portals_waystone = {
@@ -3284,10 +3324,10 @@ return function ()
 				"pes_portals_waystone_04"
 			},
 			sound_events_duration = {
-				2.7353541851044,
-				3.4910209178925,
-				3.6686041355133,
-				4.264187335968
+				2.7349791526794,
+				3.4909791946411,
+				3.6679792404175,
+				4.2639789581299
 			}
 		}
 	})

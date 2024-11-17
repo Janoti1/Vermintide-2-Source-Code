@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pdr_activate_ability_dwarf_engineer",
 		response = "pdr_activate_ability_dwarf_engineer",
 		criterias = {
@@ -33,6 +34,12 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				20
+			},
+			{
+				"faction_memory",
+				"ability_vo_disabled",
+				OP.NEQ,
+				1
 			}
 		},
 		on_done = {

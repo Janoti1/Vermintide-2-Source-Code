@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_level_conversations_tower_twelve_01",
 		response = "pbw_morris_level_conversations_tower_twelve_01",
 		criterias = {
@@ -37,6 +38,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_tower_lair",
 		response = "pbw_morris_tower_lair",
 		criterias = {
@@ -81,6 +83,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_tower_ledge",
 		response = "pbw_morris_tower_ledge",
 		criterias = {
@@ -125,6 +128,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_tower_library",
 		response = "pbw_morris_tower_library",
 		criterias = {
@@ -169,6 +173,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_tower_lookout",
 		response = "pbw_morris_tower_lookout",
 		criterias = {
@@ -213,6 +218,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_tower_stairs",
 		response = "pbw_morris_tower_stairs",
 		criterias = {
@@ -257,6 +263,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_tower_towervista",
 		response = "pbw_morris_tower_towervista",
 		criterias = {
@@ -301,6 +308,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_level_conversations_tower_twelve_01",
 		response = "pdr_morris_level_conversations_tower_twelve_01",
 		criterias = {
@@ -381,6 +389,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_tower_lair",
 		response = "pdr_morris_tower_lair",
 		criterias = {
@@ -425,6 +434,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_tower_ledge",
 		response = "pdr_morris_tower_ledge",
 		criterias = {
@@ -469,6 +479,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_tower_library",
 		response = "pdr_morris_tower_library",
 		criterias = {
@@ -513,6 +524,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_tower_lookout",
 		response = "pdr_morris_tower_lookout",
 		criterias = {
@@ -557,6 +569,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_tower_stairs",
 		response = "pdr_morris_tower_stairs",
 		criterias = {
@@ -601,6 +614,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_tower_towervista",
 		response = "pdr_morris_tower_towervista",
 		criterias = {
@@ -645,6 +659,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_level_conversations_tower_thirteen_01",
 		response = "pes_morris_level_conversations_tower_thirteen_01",
 		criterias = {
@@ -719,6 +734,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_level_conversations_tower_thirteen_02",
 		response = "pes_morris_level_conversations_tower_thirteen_02",
 		criterias = {
@@ -756,6 +772,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_tower_lair",
 		response = "pes_morris_tower_lair",
 		criterias = {
@@ -800,6 +817,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_tower_ledge",
 		response = "pes_morris_tower_ledge",
 		criterias = {
@@ -844,6 +862,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_tower_library",
 		response = "pes_morris_tower_library",
 		criterias = {
@@ -888,6 +907,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_tower_lookout",
 		response = "pes_morris_tower_lookout",
 		criterias = {
@@ -932,6 +952,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_tower_stairs",
 		response = "pes_morris_tower_stairs",
 		criterias = {
@@ -976,6 +997,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_tower_towervista",
 		response = "pes_morris_tower_towervista",
 		criterias = {
@@ -1020,6 +1042,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_tower_lair",
 		response = "pwe_morris_tower_lair",
 		criterias = {
@@ -1064,6 +1087,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_tower_ledge",
 		response = "pwe_morris_tower_ledge",
 		criterias = {
@@ -1108,6 +1132,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_tower_library",
 		response = "pwe_morris_tower_library",
 		criterias = {
@@ -1152,6 +1177,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_tower_lookout",
 		response = "pwe_morris_tower_lookout",
 		criterias = {
@@ -1196,6 +1222,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_tower_stairs",
 		response = "pwe_morris_tower_stairs",
 		criterias = {
@@ -1240,6 +1267,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_tower_towervista",
 		response = "pwe_morris_tower_towervista",
 		criterias = {
@@ -1284,6 +1312,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_level_conversations_tower_thirteen_01",
 		response = "pwh_morris_level_conversations_tower_thirteen_01",
 		criterias = {
@@ -1321,6 +1350,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_level_conversations_tower_thirteen_02",
 		response = "pwh_morris_level_conversations_tower_thirteen_02",
 		criterias = {
@@ -1358,6 +1388,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_level_conversations_tower_twelve_01",
 		response = "pwh_morris_level_conversations_tower_twelve_01",
 		criterias = {
@@ -1395,6 +1426,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_tower_lair",
 		response = "pwh_morris_tower_lair",
 		criterias = {
@@ -1439,6 +1471,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_tower_ledge",
 		response = "pwh_morris_tower_ledge",
 		criterias = {
@@ -1483,6 +1516,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_tower_library",
 		response = "pwh_morris_tower_library",
 		criterias = {
@@ -1527,6 +1561,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_tower_lookout",
 		response = "pwh_morris_tower_lookout",
 		criterias = {
@@ -1571,6 +1606,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_tower_stairs",
 		response = "pwh_morris_tower_stairs",
 		criterias = {
@@ -1615,6 +1651,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_tower_towervista",
 		response = "pwh_morris_tower_towervista",
 		criterias = {

@@ -100,11 +100,11 @@ local buff_tweak_data = {
 		multiplier = 0.01
 	},
 	victor_bountyhunter_attack_speed_on_no_ammo_buff = {
-		duration = 15,
+		duration = 10,
 		multiplier = 0.15
 	},
 	victor_bountyhunter_power_on_no_ammo_buff = {
-		duration = 15,
+		duration = 10,
 		multiplier = 0.15
 	},
 	victor_bountyhunter_blessed_melee_damage_buff = {
@@ -680,10 +680,25 @@ TalentBuffTemplates.witch_hunter = {
 			}
 		}
 	},
+	victor_bountyhunter_reaper = {
+		buffs = {
+			{
+				multiplier = -0.05,
+				name = "reaper",
+				buff_func = "heal_damage_targets_on_melee",
+				event = "on_player_damage_dealt",
+				max_targets = 5,
+				bonus = 0.25,
+				perks = {
+					buff_perks.linesman_healing
+				}
+			}
+		}
+	},
 	victor_bountyhunter_increased_melee_damage_on_no_ammo_add = {
 		buffs = {
 			{
-				event = "on_last_ammo_used",
+				event = "on_ammo_clip_used",
 				buff_func = "add_buff_on_out_of_ammo",
 				buffs_to_add = {
 					"victor_bountyhunter_attack_speed_on_no_ammo_buff",
@@ -697,7 +712,7 @@ TalentBuffTemplates.witch_hunter = {
 			{
 				refresh_durations = true,
 				name = "bardin_slayer_frenzy",
-				stat_buff = "attack_speed",
+				stat_buff = "attack_speed_melee",
 				max_stacks = 1,
 				icon = "victor_bountyhunter_melee_damage_on_no_ammo"
 			}
@@ -708,7 +723,7 @@ TalentBuffTemplates.witch_hunter = {
 			{
 				max_stacks = 1,
 				refresh_durations = true,
-				stat_buff = "power_level",
+				stat_buff = "power_level_melee",
 				priority_buff = true
 			}
 		}
@@ -1122,7 +1137,7 @@ TalentBuffTemplates.witch_hunter = {
 	victor_witchhunter_critical_hit_chance_on_ping_target_killed = {
 		buffs = {
 			{
-				event = "on_ping_target_killed",
+				event = "on_pingable_target_killed",
 				buff_to_add = "victor_witchhunter_ping_target_crit_chance",
 				buff_func = "add_buff_to_all_players"
 			}
@@ -1631,14 +1646,20 @@ Talents.witch_hunter = {
 		}
 	},
 	{
-		description = "regrowth_desc_3",
+		description = "regrowth_desc_4",
 		name = "victor_bountyhunter_regrowth_2",
 		buffer = "both",
 		num_ranks = 1,
 		icon = "victor_bountyhunter_regrowth",
 		description_values = {
 			{
-				value = BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus / 4)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus * 2)
 			}
 		},
 		buffs = {
@@ -1646,19 +1667,18 @@ Talents.witch_hunter = {
 		}
 	},
 	{
-		description = "bloodlust_desc_3",
+		description = "reaper_desc",
 		name = "victor_bountyhunter_bloodlust_2",
 		buffer = "server",
 		num_ranks = 1,
 		icon = "victor_bountyhunter_bloodlust",
 		description_values = {
 			{
-				value_type = "percent",
-				value = BuffUtils.get_buff_template("bloodlust", "adventure").buffs[1].multiplier
+				value = BuffUtils.get_buff_template("reaper", "adventure").buffs[1].max_targets
 			}
 		},
 		buffs = {
-			"victor_bountyhunter_bloodlust"
+			"victor_bountyhunter_reaper"
 		}
 	},
 	{
@@ -1678,9 +1698,9 @@ Talents.witch_hunter = {
 		}
 	},
 	{
-		description = "victor_bountyhunter_power_burst_on_no_ammo_desc",
+		description = "victor_bountyhunter_power_burst_on_no_ammo_desc_2",
 		name = "victor_bountyhunter_power_burst_on_no_ammo",
-		buffer = "server",
+		buffer = "both",
 		num_ranks = 1,
 		icon = "victor_bountyhunter_melee_damage_on_no_ammo",
 		description_values = {
@@ -1944,14 +1964,20 @@ Talents.witch_hunter = {
 		}
 	},
 	{
-		description = "regrowth_desc_3",
+		description = "regrowth_desc_4",
 		name = "victor_witchhunter_regrowth_2",
 		buffer = "both",
 		num_ranks = 1,
 		icon = "victor_witchhunter_regrowth",
 		description_values = {
 			{
-				value = BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus / 4)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus * 2)
 			}
 		},
 		buffs = {

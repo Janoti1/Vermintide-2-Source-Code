@@ -7,11 +7,12 @@ MechanismSettings = {
 		default_inventory = true,
 		display_name = "game_mode_adventure",
 		check_matchmaking_hero_availability = true,
-		server_port = 27015,
+		server_universe = "carousel",
 		tobii_available = true,
 		vote_switch_mechanism_background = "vote_switch_mechanism_adventure_background",
 		vote_switch_mechanism_text = "vote_switch_mechanism_adventure_description",
-		server_universe = "carousel",
+		server_port = 27015,
+		default_difficulty = "hard",
 		class_name = "AdventureMechanism",
 		states = {
 			"inn",
@@ -140,7 +141,6 @@ local rpcs = {
 	"rpc_set_current_mechanism_state",
 	"rpc_level_load_started",
 	"rpc_carousel_set_local_match",
-	"rpc_carousel_update_set_count",
 	"rpc_carousel_set_private_lobby",
 	"rpc_set_peer_backend_id",
 	"rpc_dedicated_or_player_hosted_search",
@@ -223,9 +223,9 @@ GameMechanismManager.get_level_seed = function (self, optional_system)
 	end
 end
 
-GameMechanismManager.get_end_of_level_rewards_arguments = function (self, game_won, quickplay, statistics_db, stats_id)
+GameMechanismManager.get_end_of_level_rewards_arguments = function (self, game_won, quickplay, statistics_db, stats_id, level_key, hero_name)
 	if self._game_mechanism.get_end_of_level_rewards_arguments then
-		return self._game_mechanism:get_end_of_level_rewards_arguments(game_won, quickplay, statistics_db, stats_id)
+		return self._game_mechanism:get_end_of_level_rewards_arguments(game_won, quickplay, statistics_db, stats_id, level_key, hero_name)
 	else
 		return {}
 	end
@@ -239,13 +239,13 @@ GameMechanismManager.get_end_of_level_extra_mission_results = function (self)
 	end
 end
 
-GameMechanismManager.sync_players_session_score = function (self, statistics_db, profile_synchronizer, players_session_score)
+GameMechanismManager.sync_players_session_score = function (self, players_session_score)
 	local peer_ids = {}
 	local local_player_ids = {}
 	local scores = {}
 
 	if self._game_mechanism.sync_players_session_score then
-		self._game_mechanism:sync_players_session_score(statistics_db, profile_synchronizer, players_session_score, peer_ids, local_player_ids, scores)
+		self._game_mechanism:sync_players_session_score(players_session_score, peer_ids, local_player_ids, scores)
 	else
 		for _, player_data in pairs(players_session_score) do
 			peer_ids[#peer_ids + 1] = player_data.peer_id
@@ -260,6 +260,7 @@ GameMechanismManager.sync_players_session_score = function (self, statistics_db,
 	end
 
 	self:send_rpc_clients("rpc_sync_players_session_score", peer_ids, local_player_ids, scores)
+	Managers.state.event:trigger("player_session_scores_synced")
 end
 
 GameMechanismManager.network_server = function (self)
@@ -311,6 +312,8 @@ GameMechanismManager.destroy = function (self)
 
 	if self._game_mechanism.destroy then
 		self._game_mechanism:destroy()
+
+		self._game_mechanism = nil
 	end
 
 	if self._network_event_delegate then
@@ -370,18 +373,26 @@ GameMechanismManager.network_context_created = function (self, lobby, server_pee
 	self._peer_id = own_peer_id
 	self._is_server = is_server
 
-	if is_server then
-		self._network_server = network_handler
-		self._network_client = nil
-	else
-		self._network_client = network_handler
-		self._network_server = nil
-	end
-
 	local game_mechanism = self._game_mechanism
 
 	if game_mechanism and game_mechanism.network_context_created then
 		game_mechanism:network_context_created(lobby, server_peer_id, own_peer_id, is_server, network_handler)
+	end
+end
+
+GameMechanismManager.set_network_server = function (self, network_server)
+	self._network_server = network_server
+
+	if network_server then
+		self._network_client = nil
+	end
+end
+
+GameMechanismManager.set_network_client = function (self, network_client)
+	self._network_client = network_client
+
+	if network_client then
+		self._network_server = nil
 	end
 end
 
@@ -399,8 +410,6 @@ GameMechanismManager.network_context_destroyed = function (self, level_key)
 	self._lobby = nil
 	self._server_peer_id = nil
 	self._peer_id = nil
-	self._network_client = nil
-	self._network_server = nil
 	self._is_server = nil
 
 	if self._game_mechanism and self._game_mechanism.network_context_destroyed then
@@ -469,8 +478,16 @@ GameMechanismManager._init_mechanism = function (self)
 	self:_unregister_mechanism_rpcs()
 
 	if not self._game_mechanism or switching_mechanism then
-		if self._game_mechanism and self._game_mechanism.left_mechanism_due_to_switch then
-			self._game_mechanism:left_mechanism_due_to_switch()
+		if self._game_mechanism then
+			if self._game_mechanism.left_mechanism_due_to_switch then
+				self._game_mechanism:left_mechanism_due_to_switch()
+			end
+
+			if self._game_mechanism.destroy then
+				self._game_mechanism:destroy()
+
+				self._game_mechanism = nil
+			end
 		end
 
 		self:_setup_mechanism_specific_career_settings()
@@ -484,6 +501,7 @@ GameMechanismManager._init_mechanism = function (self)
 		end
 
 		if switching_mechanism then
+			MechanismOverrides.mechanism_switched()
 			Managers.backend:commit(true, function ()
 				Managers.backend:switch_mechanism(mechanism_key)
 				Managers.backend:load_mechanism_loadout(mechanism_key)
@@ -499,6 +517,35 @@ GameMechanismManager._init_mechanism = function (self)
 	SaveData.last_mechanism = mechanism_key
 
 	self:reset_party_data(false)
+	self:clear_stored_challenge_progression_status()
+end
+
+GameMechanismManager.mechanism_try_call = function (self, method_name, ...)
+	local mechanism = self._game_mechanism
+
+	if mechanism then
+		local method = mechanism[method_name]
+
+		if method then
+			return true, method(mechanism, ...)
+		end
+	end
+
+	return false
+end
+
+GameMechanismManager.mechanism_try_call = function (self, method_name, ...)
+	local mechanism = self._game_mechanism
+
+	if mechanism then
+		local method = mechanism[method_name]
+
+		if method then
+			return true, method(mechanism, ...)
+		end
+	end
+
+	return false
 end
 
 GameMechanismManager.rpc_level_load_started = function (self, channel_id, session_id)
@@ -696,14 +743,6 @@ GameMechanismManager.load_packages = function (self)
 	end
 end
 
-GameMechanismManager.profile_available = function (self, profile_name, career_name)
-	if self._game_mechanism then
-		return self._game_mechanism:profile_available(self._profile_synchronizer, profile_name, career_name)
-	end
-
-	return true
-end
-
 GameMechanismManager.preferred_slot_id = function (self, party_id, peer_id, local_player_id)
 	if self._game_mechanism and self._game_mechanism.preferred_slot_id then
 		return self._game_mechanism:preferred_slot_id(party_id, peer_id, local_player_id)
@@ -712,12 +751,10 @@ GameMechanismManager.preferred_slot_id = function (self, party_id, peer_id, loca
 	return nil
 end
 
-GameMechanismManager.profile_available_for_peer = function (self, peer_id, local_player_id, profile_name, career_name)
-	if self._game_mechanism then
-		return self._game_mechanism:profile_available_for_peer(self._profile_synchronizer, peer_id, local_player_id, profile_name, career_name)
-	end
+GameMechanismManager.profile_available_for_peer = function (self, party_id, peer_id, profile_index)
+	local reserver_peer_id = self._profile_synchronizer:get_profile_index_reservation(party_id, profile_index)
 
-	return false
+	return not reserver_peer_id or reserver_peer_id == peer_id
 end
 
 GameMechanismManager.profile_changed = function (self, peer_id, local_player_id, profile_index, career_index, is_bot)
@@ -793,7 +830,7 @@ GameMechanismManager.default_level_key = function (self)
 	end
 
 	local attract_mode_level = check_bool_string(Development.parameter("attract_mode")) and BenchmarkSettings.auto_host_level
-	local level_name = check_bool_string(Development.parameter("auto_host_level")) or attract_mode_level or self:get_starting_level()
+	local level_name = check_bool_string(Development.parameter("auto_host_level")) or Development.parameter("vs_auto_search") and "carousel_hub" or attract_mode_level or self:get_starting_level()
 
 	return level_name
 end
@@ -924,17 +961,6 @@ GameMechanismManager.rpc_set_current_mechanism_state = function (self, channel_i
 	fassert(state_name, "No corresponding state_name for state_id (mechanism:%s)", self._mechanism_key)
 	print("Received new state from server", state_name)
 	self._game_mechanism:set_current_state(state_name)
-end
-
-GameMechanismManager.rpc_carousel_update_set_count = function (self, channel_id, set, last_set)
-	fassert(not self._is_server, "Server handles the set internally, this should only end up on clients.")
-	print("Received set from server ", set)
-
-	if last_set then
-		self._game_mechanism:set_should_start_next_set(false)
-	else
-		self._game_mechanism:update_set_count_clients(set)
-	end
 end
 
 GameMechanismManager.rpc_carousel_set_local_match = function (self, channel_id, local_match)
@@ -1069,6 +1095,8 @@ GameMechanismManager.rpc_sync_players_session_score = function (self, channel_id
 	end
 
 	self.synced_players_session_score = unsynced_players_session_score
+
+	Managers.state.event:trigger("player_session_scores_synced")
 end
 
 GameMechanismManager.dedicated_server_peer_id = function (self)
@@ -1094,12 +1122,6 @@ GameMechanismManager.send_rpc_clients = function (self, rpc_name, ...)
 		if peer_id ~= self._peer_id and channel_id then
 			rpc_func(channel_id, ...)
 		end
-	end
-end
-
-GameMechanismManager.peer_disconnected = function (self, peer_id)
-	if self._game_mechanism.peer_disconnected then
-		self._game_mechanism:peer_disconnected(peer_id)
 	end
 end
 
@@ -1148,10 +1170,16 @@ GameMechanismManager.setup_mechanism_parties = function (self)
 	Managers.party:register_parties(party_data)
 
 	if self._game_mechanism.setup_mechanism_parties then
-		self._game_mechanism:setup_mechanism_parties()
+		self._game_mechanism:setup_mechanism_parties(self)
 	end
 
 	if not IS_CONSOLE and self._lobby and self._lobby.set_max_members then
+		self._lobby:set_max_members(self:max_instance_members())
+	end
+end
+
+GameMechanismManager.update_lobby_max_members = function (self)
+	if self._lobby.set_max_members then
 		self._lobby:set_max_members(self:max_instance_members())
 	end
 end
@@ -1179,12 +1207,6 @@ end
 GameMechanismManager.get_slot_reservation_handler = function (self)
 	if self._game_mechanism.get_slot_reservation_handler then
 		return self._game_mechanism:get_slot_reservation_handler()
-	end
-end
-
-GameMechanismManager.clear_player_reservation_handler = function (self)
-	if self._game_mechanism.clear_player_reservation_handler then
-		self._game_mechanism:clear_player_reservation_handler()
 	end
 end
 
@@ -1236,8 +1258,68 @@ GameMechanismManager.update_testify = function (self, dt, t)
 	end
 end
 
-GameMechanismManager.player_joined_party = function (self, peer_id, local_player_id, party_id, slot_id)
+GameMechanismManager.player_joined_party = function (self, peer_id, local_player_id, party_id, slot_id, is_bot)
 	if self._game_mechanism.player_joined_party then
-		self._game_mechanism:player_joined_party(peer_id, local_player_id, party_id, slot_id)
+		self._game_mechanism:player_joined_party(peer_id, local_player_id, party_id, slot_id, is_bot)
+	end
+end
+
+GameMechanismManager.reserved_party_id_by_peer = function (self, peer_id)
+	return self._game_mechanism:reserved_party_id_by_peer(peer_id)
+end
+
+GameMechanismManager.try_reserve_profile_for_peer_by_mechanism = function (self, peer_id, profile_index, career_index, allow_switching)
+	return self._game_mechanism:try_reserve_profile_for_peer_by_mechanism(self._profile_synchronizer, peer_id, profile_index, career_index, allow_switching)
+end
+
+GameMechanismManager.get_persistent_profile_index_reservation = function (self, peer_id)
+	if self._profile_synchronizer then
+		local profile_index, career_index = self._profile_synchronizer:get_persistent_profile_index_reservation(peer_id)
+
+		return profile_index, career_index
+	end
+end
+
+GameMechanismManager.remote_client_connecting = function (self, peer_id)
+	if self._game_mechanism.remote_client_connecting then
+		self._game_mechanism:remote_client_connecting(peer_id)
+	end
+end
+
+GameMechanismManager.remote_client_disconnected = function (self, peer_id)
+	if self._game_mechanism.remote_client_disconnected then
+		self._game_mechanism:remote_client_disconnected(peer_id)
+	end
+end
+
+local EMPTY_TABLE = {}
+
+GameMechanismManager.get_challenge_progression_status = function (self, optional_category)
+	return Managers.state.achievement and Managers.state.achievement:get_challenge_progression(optional_category) or EMPTY_TABLE
+end
+
+GameMechanismManager.store_challenge_progression_status = function (self, force_store, optional_category)
+	if self._game_mechanism.store_challenge_progression_status then
+		self._game_mechanism:store_challenge_progression_status(force_store, optional_category)
+	end
+end
+
+GameMechanismManager.get_stored_challenge_progression_status = function (self, optional_category)
+	if self._game_mechanism.get_stored_challenge_progression_status then
+		return self._game_mechanism:get_stored_challenge_progression_status(optional_category)
+	end
+
+	return EMPTY_TABLE
+end
+
+GameMechanismManager.clear_stored_challenge_progression_status = function (self, optional_category)
+	if self._game_mechanism.clear_stored_challenge_progression_status then
+		return self._game_mechanism:clear_stored_challenge_progression_status(optional_category)
+	end
+end
+
+GameMechanismManager.state_context_set_up = function (self)
+	if self._game_mechanism.state_context_set_up then
+		return self._game_mechanism:state_context_set_up()
 	end
 end

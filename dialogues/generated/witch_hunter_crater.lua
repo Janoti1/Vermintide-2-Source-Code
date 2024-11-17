@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_ambush_done",
 		response = "pwh_crater_ambush_done",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_ambush_interactable",
 		response = "pwh_crater_ambush_interactable",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_arena_end",
 		response = "pwh_crater_arena_end",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_arena_standard",
 		response = "pwh_crater_arena_standard",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_arena_standard_02",
 		response = "pwh_crater_arena_standard_02",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_arena_waystone",
 		response = "pwh_crater_arena_waystone",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_bridge_sighted",
 		response = "pwh_crater_bridge_sighted",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_climb_top",
 		response = "pwh_crater_climb_top",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_devastation",
 		response = "pwh_crater_devastation",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_dummy",
 		response = "pwh_crater_dummy",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_forest_ascent_top",
 		response = "pwh_crater_forest_ascent_top",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_intro_banter_a",
 		response = "pwh_crater_intro_banter_a",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_intro_banter_b",
 		response = "pwh_crater_intro_banter_b",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_intro_banter_c",
 		response = "pwh_crater_intro_banter_c",
 		criterias = {
@@ -616,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_plan_banter_a",
 		response = "pwh_crater_plan_banter_a",
 		criterias = {
@@ -660,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_plan_banter_b",
 		response = "pwh_crater_plan_banter_b",
 		criterias = {
@@ -704,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_plan_banter_c",
 		response = "pwh_crater_plan_banter_c",
 		criterias = {
@@ -748,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_rim_vista",
 		response = "pwh_crater_rim_vista",
 		criterias = {
@@ -792,6 +810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_tracking_camp",
 		response = "pwh_crater_tracking_camp",
 		criterias = {
@@ -836,6 +855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_vista_reveal",
 		response = "pwh_crater_vista_reveal",
 		criterias = {
@@ -880,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_wasteland_intro",
 		response = "pwh_crater_wasteland_intro",
 		criterias = {
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_crater_wasteland_tree_push",
 		response = "pwh_crater_wasteland_tree_push",
 		criterias = {
@@ -1001,10 +1023,10 @@ return function ()
 				"pwh_crater_ambush_done_04"
 			},
 			sound_events_duration = {
-				6.7250833511353,
-				9.4347085952759,
-				8.3377914428711,
-				5.97420835495
+				6.7249794006348,
+				9.4339790344238,
+				8.3369789123535,
+				5.9739789962769
 			}
 		},
 		pwh_crater_ambush_interactable = {
@@ -1040,10 +1062,10 @@ return function ()
 				"pwh_crater_ambush_interactable_04"
 			},
 			sound_events_duration = {
-				7.6913957595825,
-				4.2243957519531,
-				5.3082499504089,
-				6.2811040878296
+				7.6909790039063,
+				4.2239789962769,
+				5.3079791069031,
+				6.2809791564941
 			}
 		},
 		pwh_crater_arena_end = {
@@ -1079,10 +1101,10 @@ return function ()
 				"pwh_crater_arena_end_04"
 			},
 			sound_events_duration = {
-				8.845624923706,
-				3.8366875648499,
-				5.4352917671204,
-				6.3052916526794
+				8.2429790496826,
+				3.8359792232513,
+				5.4349789619446,
+				6.3049793243408
 			}
 		},
 		pwh_crater_arena_standard = {
@@ -1118,10 +1140,10 @@ return function ()
 				"pwh_crater_arena_standard_04"
 			},
 			sound_events_duration = {
-				4.3362293243408,
-				2.709625005722,
-				3.8717083930969,
-				2.4110832214356
+				4.3359789848328,
+				2.7089791297913,
+				3.8709790706634,
+				2.4110000133514
 			}
 		},
 		pwh_crater_arena_standard_02 = {
@@ -1157,10 +1179,10 @@ return function ()
 				"pwh_crater_arena_standard_02_04"
 			},
 			sound_events_duration = {
-				3.0724792480469,
-				4.4366459846497,
-				3.1828334331513,
-				3.4582290649414
+				3.0719792842865,
+				4.4359793663025,
+				3.1819791793823,
+				3.4579792022705
 			}
 		},
 		pwh_crater_arena_waystone = {
@@ -1196,10 +1218,10 @@ return function ()
 				"pwh_crater_arena_waystone_04"
 			},
 			sound_events_duration = {
-				5.1129789352417,
-				5.3533749580383,
-				6.7864999771118,
-				5.3348956108093
+				5.1119790077209,
+				5.352979183197,
+				6.7859792709351,
+				5.3339791297913
 			}
 		},
 		pwh_crater_bridge_sighted = {
@@ -1235,10 +1257,10 @@ return function ()
 				"pwh_crater_bridge_sighted_04"
 			},
 			sound_events_duration = {
-				3.2266249656677,
-				3.1721665859222,
-				4.201708316803,
-				6.8073749542236
+				3.2259790897369,
+				3.1719791889191,
+				4.2009792327881,
+				6.8069791793823
 			}
 		},
 		pwh_crater_climb_top = {
@@ -1274,10 +1296,10 @@ return function ()
 				"pwh_crater_climb_top_04"
 			},
 			sound_events_duration = {
-				4.2068958282471,
-				4.5256252288818,
-				7.7026042938232,
-				8.8774585723877
+				4.205979347229,
+				4.5249791145325,
+				7.7019791603088,
+				8.8769788742065
 			}
 		},
 		pwh_crater_devastation = {
@@ -1313,10 +1335,10 @@ return function ()
 				"pwh_crater_devastation_04"
 			},
 			sound_events_duration = {
-				6.0745625495911,
-				5.8988752365112,
-				7.9145002365112,
-				7.0361456871033
+				6.0739793777466,
+				5.897979259491,
+				7.9139790534973,
+				7.0359792709351
 			}
 		},
 		pwh_crater_dummy = {
@@ -1374,10 +1396,10 @@ return function ()
 				"pwh_crater_forest_ascent_top_04"
 			},
 			sound_events_duration = {
-				7.5020623207092,
-				4.2505207061768,
-				8.0700836181641,
-				4.8642706871033
+				7.5019793510437,
+				4.249979019165,
+				8.0699787139893,
+				4.8639793395996
 			}
 		},
 		pwh_crater_intro_banter_a = {
@@ -1405,8 +1427,8 @@ return function ()
 				[2] = "pwh_crater_intro_banter_a_02"
 			},
 			sound_events_duration = {
-				[1] = 5.2951874732971,
-				[2] = 4.3419375419617
+				[1] = 5.294979095459,
+				[2] = 4.3409790992737
 			}
 		},
 		pwh_crater_intro_banter_b = {
@@ -1434,8 +1456,8 @@ return function ()
 				[2] = "pwh_crater_intro_banter_b_02"
 			},
 			sound_events_duration = {
-				[1] = 6.6467289924622,
-				[2] = 8.1680212020874
+				[1] = 6.6459794044495,
+				[2] = 8.1679792404175
 			}
 		},
 		pwh_crater_intro_banter_c = {
@@ -1463,8 +1485,8 @@ return function ()
 				[2] = "pwh_crater_intro_banter_c_02"
 			},
 			sound_events_duration = {
-				[1] = 2.6116666793823,
-				[2] = 7.7566876411438
+				[1] = 2.6110000610352,
+				[2] = 7.7559790611267
 			}
 		},
 		pwh_crater_plan_banter_a = {
@@ -1492,8 +1514,8 @@ return function ()
 				[2] = "pwh_crater_plan_banter_a_02"
 			},
 			sound_events_duration = {
-				[1] = 11.288687705994,
-				[2] = 8.989146232605
+				[1] = 11.287979125977,
+				[2] = 8.9889793395996
 			}
 		},
 		pwh_crater_plan_banter_b = {
@@ -1521,8 +1543,8 @@ return function ()
 				[2] = "pwh_crater_plan_banter_b_02"
 			},
 			sound_events_duration = {
-				[1] = 6.9970207214356,
-				[2] = 8.9522495269775
+				[1] = 6.9969792366028,
+				[2] = 8.951979637146
 			}
 		},
 		pwh_crater_plan_banter_c = {
@@ -1550,8 +1572,8 @@ return function ()
 				[2] = "pwh_crater_plan_banter_c_02"
 			},
 			sound_events_duration = {
-				[1] = 8.9276456832886,
-				[2] = 7.9561877250671
+				[1] = 8.9269790649414,
+				[2] = 7.955979347229
 			}
 		},
 		pwh_crater_rim_vista = {
@@ -1587,10 +1609,10 @@ return function ()
 				"pwh_crater_rim_vista_04"
 			},
 			sound_events_duration = {
-				6.9726667404175,
-				11.241062164307,
-				5.9646458625794,
-				9.5170412063599
+				6.9719791412353,
+				11.240979194641,
+				5.9639792442322,
+				9.5169792175293
 			}
 		},
 		pwh_crater_tracking_camp = {
@@ -1626,10 +1648,10 @@ return function ()
 				"pwh_crater_tracking_camp_04"
 			},
 			sound_events_duration = {
-				5.092791557312,
-				6.548791885376,
-				4.5051460266113,
-				5.6216459274292
+				5.0919790267944,
+				6.5479793548584,
+				4.504979133606,
+				5.620979309082
 			}
 		},
 		pwh_crater_vista_reveal = {
@@ -1665,10 +1687,10 @@ return function ()
 				"pwh_crater_vista_reveal_04"
 			},
 			sound_events_duration = {
-				7.6456875801086,
-				5.6216249465942,
-				7.0188956260681,
-				8.4849796295166
+				7.6449790000916,
+				5.620979309082,
+				7.01797914505,
+				8.4840002059937
 			}
 		},
 		pwh_crater_wasteland_intro = {
@@ -1704,10 +1726,10 @@ return function ()
 				"pwh_crater_wasteland_intro_04"
 			},
 			sound_events_duration = {
-				10.13277053833,
-				8.5833539962769,
-				9.2643957138062,
-				10.152000427246
+				10.131978988648,
+				8.5829792022705,
+				9.2639789581299,
+				10.151979446411
 			}
 		},
 		pwh_crater_wasteland_tree_push = {
@@ -1743,10 +1765,10 @@ return function ()
 				"pwh_crater_wasteland_tree_push_04"
 			},
 			sound_events_duration = {
-				3.7486457824707,
-				3.2706875801086,
-				4.4942083358765,
-				3.8651249408722
+				3.7479791641235,
+				3.2699792385101,
+				4.4939789772034,
+				3.8649792671204
 			}
 		}
 	})

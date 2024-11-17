@@ -3,6 +3,7 @@ require("scripts/settings/dlcs/morris/deus_meta_progression_settings")
 BackendInterfaceDeusBase = class(BackendInterfaceDeusBase)
 
 local LOADOUT_INTERFACE_OVERRIDES = {
+	slot_pose = "items",
 	slot_hat = "items",
 	slot_skin = "items",
 	slot_frame = "items",

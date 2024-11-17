@@ -745,17 +745,21 @@ UISettings.slot_icons = {
 	melee = "tabs_icon_equipment",
 	forge = "tabs_icon_anvil",
 	portrait_frame = "tabs_icon_portrait_frame",
+	pose = "tabs_icon_prestige",
 	hat = "tabs_icon_cosmetics",
 	ring = "tabs_icon_charm",
 	ranged = "tabs_icon_ranged",
 	skins = "tabs_icon_character_skins"
 }
 UISettings.item_type_store_icons = {
+	chips = "store_tag_icon_versus_coin",
 	weapon_skin = "store_tag_icon_weapon",
 	hat = "store_tag_icon_hat",
 	bundle = "store_tag_icon_bundle",
 	frame = "store_tag_icon_portrait_frame",
-	skin = "store_tag_icon_skin"
+	skin = "store_tag_icon_skin",
+	cosmetic_bundle = "store_tag_icon_skin",
+	weapon_pose_bundle = "store_tag_icon_pose"
 }
 
 DLCUtils.merge("item_type_store_icons", UISettings.item_type_store_icons)
@@ -1080,6 +1084,36 @@ UISettings.hero_hat_camera_position_by_character = {
 		x = 0,
 		y = -2.1
 	},
+	vs_chaos_troll = {
+		z = 1.4,
+		x = 0.8,
+		y = -0.2
+	},
+	vs_gutter_runner = {
+		z = 0.2,
+		x = 0.6,
+		y = -0.9
+	},
+	vs_packmaster = {
+		z = 0.1,
+		x = 0.6,
+		y = -0.8
+	},
+	vs_ratling_gunner = {
+		z = 0.1,
+		x = 0.6,
+		y = -0.8
+	},
+	vs_warpfire_thrower = {
+		z = 0.1,
+		x = 0.6,
+		y = -0.8
+	},
+	vs_poison_wind_globadier = {
+		z = 0.2,
+		x = 0.6,
+		y = -0.8
+	},
 	default = {
 		z = 0,
 		x = 0,
@@ -1116,6 +1150,36 @@ UISettings.hero_skin_camera_position_by_character = {
 		z = 0.25,
 		x = 0,
 		y = -1.2
+	},
+	vs_chaos_troll = {
+		z = 1.4,
+		x = 0.8,
+		y = -0.2
+	},
+	vs_gutter_runner = {
+		z = 0,
+		x = 0,
+		y = -1
+	},
+	vs_packmaster = {
+		z = 0,
+		x = 0,
+		y = -1
+	},
+	vs_ratling_gunner = {
+		z = 0,
+		x = 0,
+		y = -1
+	},
+	vs_warpfire_thrower = {
+		z = 0,
+		x = 0,
+		y = -1
+	},
+	vs_poison_wind_globadier = {
+		z = 0,
+		x = 0,
+		y = -1
 	},
 	default = {
 		z = 0,
@@ -2433,6 +2497,7 @@ UISettings.crosshair_styles = {
 		crosshair_icon = "icon_crosshair_01"
 	}
 }
+UISettings.INSIGNIA_OFFSET = 45
 UISettings.default_loadout_settings = {
 	we_shade = {
 		{

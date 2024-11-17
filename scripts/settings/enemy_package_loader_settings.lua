@@ -62,7 +62,9 @@ EnemyPackageLoaderSettings.categories = {
 			"chaos_skeleton",
 			"chaos_tentacle",
 			"chaos_tentacle_sorcerer",
-			"skaven_stormfiend_demo"
+			"skaven_stormfiend_demo",
+			"human_pleb",
+			"human_soldier"
 		}
 	},
 	{

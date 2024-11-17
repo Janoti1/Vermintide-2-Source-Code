@@ -74,6 +74,8 @@ local DO_RELOAD = true
 ImguiUITool.update = function (self)
 	if DO_RELOAD then
 		self:init()
+		self:on_hide()
+		self:on_show()
 
 		DO_RELOAD = false
 	end

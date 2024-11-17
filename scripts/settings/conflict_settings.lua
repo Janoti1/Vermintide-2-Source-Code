@@ -169,9 +169,9 @@ HordeSettings = {
 				}
 			},
 			versus_base = {
-				vector_blob_composition = "large",
-				ambush_composition = "large",
-				vector_composition = "large"
+				vector_blob_composition = "large_vs",
+				ambush_composition = "large_vs",
+				vector_composition = "large_vs"
 			}
 		}
 	},
@@ -266,9 +266,9 @@ HordeSettings = {
 				}
 			},
 			versus_base = {
-				vector_blob_composition = "large",
-				ambush_composition = "large",
-				vector_composition = "large"
+				vector_blob_composition = "large_vs",
+				ambush_composition = "large_vs",
+				vector_composition = "large_vs"
 			}
 		}
 	},
@@ -363,9 +363,9 @@ HordeSettings = {
 				}
 			},
 			versus_base = {
-				vector_blob_composition = "chaos_large",
-				ambush_composition = "chaos_large",
-				vector_composition = "chaos_large"
+				vector_blob_composition = "chaos_large_vs",
+				ambush_composition = "chaos_large_vs",
+				vector_composition = "chaos_large_vs"
 			}
 		}
 	},
@@ -460,9 +460,9 @@ HordeSettings = {
 				}
 			},
 			versus_base = {
-				vector_blob_composition = "chaos_large",
-				ambush_composition = "chaos_large",
-				vector_composition = "chaos_large"
+				vector_blob_composition = "chaos_large_vs",
+				ambush_composition = "chaos_large_vs",
+				vector_composition = "chaos_large_vs"
 			}
 		}
 	},
@@ -539,9 +539,9 @@ HordeSettings = {
 				}
 			},
 			versus_base = {
-				vector_blob_composition = "beastmen_large",
-				ambush_composition = "beastmen_large",
-				vector_composition = "beastmen_large"
+				vector_blob_composition = "beastmen_large_vs",
+				ambush_composition = "beastmen_large_vs",
+				vector_composition = "beastmen_large_vs"
 			}
 		}
 	},
@@ -591,9 +591,9 @@ HordeSettings = {
 				vector_composition = "huge"
 			},
 			versus_base = {
-				vector_blob_composition = "large",
-				ambush_composition = "large",
-				vector_composition = "large"
+				vector_blob_composition = "large_vs",
+				ambush_composition = "large_vs",
+				vector_composition = "large_vs"
 			}
 		}
 	}

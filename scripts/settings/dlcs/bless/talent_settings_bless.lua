@@ -29,7 +29,7 @@ local buff_tweak_data = {
 		chunk_size = 40
 	},
 	victor_priest_5_1_buff = {
-		multiplier = 0.25
+		multiplier = 0.15
 	},
 	victor_priest_5_2_buff = {
 		multiplier = 0.25
@@ -552,7 +552,7 @@ local talents = {
 	{
 		description = "victor_priest_4_3_desc_new",
 		name = "victor_priest_4_3",
-		buffer = "server",
+		buffer = "both",
 		num_ranks = 1,
 		icon = "victor_priest_4_3",
 		description_values = {

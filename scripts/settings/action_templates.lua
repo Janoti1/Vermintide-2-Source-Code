@@ -154,7 +154,11 @@ ActionTemplates.action_inspect = {
 		weapon_action_hand = "either",
 		kind = "dummy",
 		total_time = 1,
-		condition_func = function (action_user, input_extension)
+		condition_func = function (action_user, input_extension, ammo_extension)
+			if ammo_extension and ammo_extension:is_reloading() then
+				return false
+			end
+
 			if Managers.input:is_device_active("gamepad") then
 				local level_key = Managers.state.game_mode:level_key()
 				local level_settings = LevelSettings[level_key]

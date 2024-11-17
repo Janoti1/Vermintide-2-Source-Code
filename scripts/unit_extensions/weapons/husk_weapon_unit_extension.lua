@@ -10,7 +10,7 @@ HuskWeaponUnitExtension.init = function (self, extension_init_context, unit, ext
 	local weapon_template_name = item_data and item_data.template
 
 	if weapon_template_name then
-		local template = Weapons[weapon_template_name]
+		local template = WeaponUtils.get_weapon_template(weapon_template_name)
 
 		self._synced_weapon_state = nil
 		self._synced_weapon_states = template and template.synced_states
@@ -45,7 +45,7 @@ HuskWeaponUnitExtension._is_local_player = function (self)
 	return false
 end
 
-HuskWeaponUnitExtension.change_synced_state = function (self, state_name)
+HuskWeaponUnitExtension.change_synced_state = function (self, state_name, skip_sync)
 	if self._synced_weapon_state then
 		local weapon_state = self._synced_weapon_states[self._synced_weapon_state]
 

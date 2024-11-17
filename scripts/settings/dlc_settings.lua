@@ -301,24 +301,6 @@ DLCSettings = DLCSettings or {
 			common = "scripts/settings/dlcs/fall_collection_2021/fall_collection_2021_common_settings"
 		}
 	},
-	carousel = {
-		package_name = "resource_packages/dlcs/carousel",
-		localization = "localization/carousel",
-		level_settings = "levels/honduras_dlcs/carousel/level_settings_carousel",
-		additional_settings = {
-			game_object_initializers = "scripts/settings/dlcs/carousel/carousel_game_object_initializers",
-			sound = "scripts/settings/dlcs/carousel/carousel_sound_settings",
-			common = "scripts/settings/dlcs/carousel/carousel_common_settings",
-			buff = "scripts/settings/dlcs/carousel/carousel_buff_settings",
-			character_states = "scripts/settings/dlcs/carousel/carousel_character_state_settings",
-			game_object_templates = "scripts/settings/dlcs/carousel/carousel_game_object_templates",
-			backend = "scripts/settings/dlcs/carousel/carousel_backend_settings",
-			equipment = "scripts/settings/dlcs/carousel/carousel_equipment_settings",
-			experience = "scripts/settings/dlcs/carousel/carousel_experience_settings",
-			ui = "scripts/settings/dlcs/carousel/carousel_ui_settings",
-			badges = "scripts/settings/dlcs/carousel/carousel_badge_definitions"
-		}
-	},
 	gotwf = {
 		localization = "localization/gotwf_balance",
 		package_name = "resource_packages/dlcs/gotwf",
@@ -455,5 +437,39 @@ DLCSettings = DLCSettings or {
 		additional_settings = {
 			common = "scripts/settings/dlcs/premium_career_bundle/premium_career_bundle_common_settings"
 		}
+	},
+	carousel = {
+		package_name = "resource_packages/dlcs/carousel",
+		localization = "localization/carousel",
+		level_unlock_settings = "levels/honduras_dlcs/carousel/level_unlock_settings_carousel",
+		level_settings = "levels/honduras_dlcs/carousel/level_settings_carousel",
+		additional_settings = {
+			game_object_initializers = "scripts/settings/dlcs/carousel/carousel_game_object_initializers",
+			sound = "scripts/settings/dlcs/carousel/carousel_sound_settings",
+			common = "scripts/settings/dlcs/carousel/carousel_common_settings",
+			buff = "scripts/settings/dlcs/carousel/carousel_buff_settings",
+			character_states = "scripts/settings/dlcs/carousel/carousel_character_state_settings",
+			game_object_templates = "scripts/settings/dlcs/carousel/carousel_game_object_templates",
+			backend = "scripts/settings/dlcs/carousel/carousel_backend_settings",
+			achievements = "scripts/settings/dlcs/carousel/carousel_achievements_settings",
+			equipment = "scripts/settings/dlcs/carousel/carousel_equipment_settings",
+			experience = "scripts/settings/dlcs/carousel/carousel_experience_settings",
+			ui = "scripts/settings/dlcs/carousel/carousel_ui_settings",
+			badges = "scripts/settings/dlcs/carousel/carousel_badge_definitions"
+		}
+	},
+	pose_cosmetics = {
+		package_name = "resource_packages/pose_cosmetics"
+	},
+	cosmetics_2024_q2 = {
+		localization = "localization/cosmetics_2024_q2",
+		package_name = "resource_packages/dlcs/cosmetics_2024_q2",
+		additional_settings = {
+			common = "scripts/settings/dlcs/cosmetics_2024_q2/cosmetics_2024_q2_common_settings",
+			equipment = "scripts/settings/dlcs/cosmetics_2024_q2/cosmetics_2024_q2_equipment_settings"
+		}
+	},
+	handbook = {
+		localization = "localization/handbook_tutorials"
 	}
 }

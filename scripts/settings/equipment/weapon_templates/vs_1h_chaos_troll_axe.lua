@@ -1,6 +1,193 @@
 local time_mod = 0.9
 local extra_range_add = 1.1
 local weapon_template = {}
+local planted_decrease_movement_settings = {
+	charge = {
+		{
+			start_time = 0,
+			external_multiplier = 0.2,
+			buff_name = "planted_charging_decrease_movement"
+		},
+		{
+			start_time = 0,
+			external_value = 2,
+			buff_name = "set_rotation_limit"
+		},
+		{
+			start_time = 0,
+			external_multiplier = 0.75,
+			buff_name = "planted_decrease_rotation_speed"
+		}
+	},
+	light_attack_1 = {
+		{
+			start_time = 0,
+			external_multiplier = 1.4,
+			end_time = 0.35,
+			buff_name = "planted_decrease_movement"
+		},
+		{
+			start_time = 0.35,
+			external_multiplier = 0.6,
+			end_time = 0.7,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 0.7,
+			external_multiplier = 1,
+			end_time = 1,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 1,
+			external_multiplier = 0.4,
+			end_time = 1.2,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 1.2,
+			buff_name = "planted_return_to_normal_walk_movement"
+		},
+		{
+			start_time = 0.6,
+			external_value = 1,
+			end_time = 1.3,
+			buff_name = "set_rotation_limit"
+		},
+		{
+			start_time = 0,
+			external_multiplier = 0.75,
+			end_time = 0.35,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 0.35,
+			external_multiplier = 0.5,
+			end_time = 0.7,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 0.7,
+			external_multiplier = 0.75,
+			end_time = 1,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 1,
+			external_multiplier = 0.75,
+			end_time = 1.2,
+			buff_name = "planted_decrease_rotation_speed"
+		}
+	},
+	light_attack_2 = {
+		{
+			start_time = 0,
+			external_multiplier = 1.4,
+			end_time = 0.35,
+			buff_name = "planted_decrease_movement"
+		},
+		{
+			start_time = 0.35,
+			external_multiplier = 0.6,
+			end_time = 0.7,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 0.7,
+			external_multiplier = 1,
+			end_time = 1,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 1,
+			external_multiplier = 0.4,
+			end_time = 1.2,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 1.2,
+			buff_name = "planted_return_to_normal_walk_movement"
+		},
+		{
+			start_time = 0.6,
+			external_value = 1,
+			end_time = 1.3,
+			buff_name = "set_rotation_limit"
+		},
+		{
+			start_time = 0,
+			external_multiplier = 0.75,
+			end_time = 0.35,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 0.35,
+			external_multiplier = 0.5,
+			end_time = 0.7,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 0.7,
+			external_multiplier = 0.75,
+			end_time = 1,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 1,
+			external_multiplier = 0.75,
+			end_time = 1.2,
+			buff_name = "planted_decrease_rotation_speed"
+		}
+	},
+	heavy_attack = {
+		{
+			start_time = 0,
+			external_multiplier = 0.6,
+			end_time = 0.1,
+			buff_name = "planted_fast_decrease_movement"
+		},
+		{
+			start_time = 0.1,
+			external_multiplier = 1.2,
+			end_time = 0.7,
+			buff_name = "planted_decrease_movement"
+		},
+		{
+			start_time = 0.7,
+			external_multiplier = 0.1,
+			end_time = 1,
+			buff_name = "planted_decrease_movement"
+		},
+		{
+			start_time = 1.1,
+			buff_name = "planted_return_to_normal_walk_movement"
+		},
+		{
+			start_time = 0,
+			external_value = 0.1,
+			end_time = 0.7,
+			buff_name = "set_rotation_limit"
+		},
+		{
+			start_time = 0,
+			external_multiplier = 0.5,
+			end_time = 0.1,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 0.1,
+			external_multiplier = 0.5,
+			end_time = 0.7,
+			buff_name = "planted_decrease_rotation_speed"
+		},
+		{
+			start_time = 0.7,
+			external_multiplier = 0.75,
+			end_time = 1,
+			buff_name = "planted_decrease_rotation_speed"
+		}
+	}
+}
 local knockback_tables = {
 	frenzy = {
 		player_catapult_speed_blocked = 12,
@@ -29,12 +216,13 @@ weapon_template.actions = {
 		default = {
 			attack_hold_input = "action_one_hold",
 			anim_end_event = "attack_finished",
+			disallow_ghost_mode = true,
 			kind = "melee_start",
 			first_person_hit_anim = "shake_hit",
 			no_damage_impact_sound_event = "blunt_hit_armour",
-			use_precision_sweep = false,
 			width_mod = 15,
-			hit_effect = "melee_hit_hammers_2h",
+			use_precision_sweep = false,
+			hit_effect = "vs_chaos_troll_axe_light",
 			additional_critical_strike_chance = 0.1,
 			impact_sound_event = "axe_boss_1h_hit",
 			weapon_action_hand = "left",
@@ -51,34 +239,10 @@ weapon_template.actions = {
 				return not is_in_ghost_mode
 			end,
 			total_time = math.huge,
-			buff_data = {
-				{
-					start_time = 0,
-					external_multiplier = 0.4,
-					end_time = 0.4,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.4,
-					external_multiplier = 0.6,
-					end_time = 0.6,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.6,
-					external_multiplier = 0.4,
-					end_time = 0.8,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.8,
-					external_multiplier = 0.2,
-					buff_name = "planted_decrease_movement"
-				}
-			},
+			buff_data = planted_decrease_movement_settings.charge,
 			allowed_chain_actions = {
 				{
-					sub_action = "attack_sweep",
+					sub_action = "attack_sweep_1",
 					start_time = 0,
 					action = "action_one",
 					end_time = 0.4,
@@ -111,17 +275,18 @@ weapon_template.actions = {
 			}
 		},
 		default_2 = {
-			weapon_action_hand = "left",
 			attack_hold_input = "action_one_hold",
 			anim_end_event = "attack_finished",
+			disallow_ghost_mode = true,
 			kind = "melee_start",
 			first_person_hit_anim = "shake_hit",
+			no_damage_impact_sound_event = "blunt_hit_armour",
 			use_precision_sweep = false,
 			width_mod = 15,
-			hit_effect = "melee_hit_hammers_2h",
+			hit_effect = "vs_chaos_troll_axe_light",
 			additional_critical_strike_chance = 0.1,
 			impact_sound_event = "axe_1h_hit",
-			no_damage_impact_sound_event = "blunt_hit_armour",
+			weapon_action_hand = "left",
 			dedicated_target_range = 2,
 			uninterruptible = true,
 			anim_event = "attack_cleave_charge",
@@ -129,31 +294,7 @@ weapon_template.actions = {
 				return end_reason ~= "new_interupting_action" and end_reason ~= "action_complete"
 			end,
 			total_time = math.huge,
-			buff_data = {
-				{
-					start_time = 0,
-					external_multiplier = 0.4,
-					end_time = 0.4,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.4,
-					external_multiplier = 0.6,
-					end_time = 0.6,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.6,
-					external_multiplier = 0.4,
-					end_time = 0.8,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.8,
-					external_multiplier = 0.2,
-					buff_name = "planted_decrease_movement"
-				}
-			},
+			buff_data = planted_decrease_movement_settings.charge,
 			allowed_chain_actions = {
 				{
 					sub_action = "attack_shove",
@@ -188,25 +329,26 @@ weapon_template.actions = {
 				}
 			}
 		},
-		attack_sweep = {
+		attack_sweep_1 = {
 			damage_window_start = 0.7,
 			push_radius = 2,
 			anim_end_event = "attack_finished",
 			outer_push_angle = 180,
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
-			additional_critical_strike_chance = 0.1,
-			use_precision_sweep = false,
-			width_mod = 15,
-			damage_profile = "bile_troll_sweep",
-			dedicated_target_range = 2,
-			push_angle = 100,
 			range_mod = 1.65,
-			hit_effect = "melee_hit_hammers_2h",
+			additional_critical_strike_chance = 0.1,
+			width_mod = 15,
+			use_precision_sweep = false,
+			damage_profile = "bile_troll_sweep",
+			push_angle = 100,
+			dedicated_target_range = 2,
+			disallow_ghost_mode = true,
 			damage_window_end = 1,
 			impact_sound_event = "axe_boss_1h_hit",
 			charge_value = "action_push",
 			weapon_action_hand = "left",
+			hit_effect = "vs_chaos_troll_axe_light",
 			no_damage_impact_sound_event = "blunt_hit_armour",
 			uninterruptible = true,
 			anim_event = "attack_sweep",
@@ -215,37 +357,7 @@ weapon_template.actions = {
 				return end_reason ~= "new_interupting_action" and end_reason ~= "action_complete"
 			end,
 			knockback_data = knockback_tables.frenzy,
-			buff_data = {
-				{
-					start_time = 0,
-					external_multiplier = 1.4,
-					end_time = 0.35,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.35,
-					external_multiplier = 0.6,
-					end_time = 0.7,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.7,
-					external_multiplier = 1,
-					end_time = 1,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 1,
-					external_multiplier = 0.4,
-					end_time = 1.2,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 1.2,
-					external_multiplier = 0.6,
-					buff_name = "planted_decrease_movement"
-				}
-			},
+			buff_data = planted_decrease_movement_settings.light_attack_1,
 			allowed_chain_actions = {
 				{
 					sub_action = "default_2",
@@ -337,6 +449,7 @@ weapon_template.actions = {
 		attack_shove = {
 			damage_window_start = 0.8,
 			push_radius = 2,
+			disallow_ghost_mode = true,
 			outer_push_angle = 180,
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
@@ -346,7 +459,7 @@ weapon_template.actions = {
 			dedicated_target_range = 2,
 			push_angle = 100,
 			range_mod = 1.65,
-			hit_effect = "melee_hit_hammers_2h",
+			hit_effect = "vs_chaos_troll_axe_light",
 			damage_window_end = 1,
 			impact_sound_event = "axe_boss_1h_hit",
 			no_damage_impact_sound_event = "blunt_hit_armour",
@@ -358,56 +471,18 @@ weapon_template.actions = {
 			aim_assist_ramp_multiplier = 0.4,
 			anim_event = "attack_shove",
 			damage_profile_inner = "medium_push",
-			total_time = 2,
+			total_time = 2.4,
 			anim_end_event_condition_func = function (unit, end_reason)
 				return end_reason ~= "new_interupting_action" and end_reason ~= "action_complete"
 			end,
 			knockback_data = knockback_tables.frenzy,
-			anim_time_scale = time_mod * 1.15,
-			buff_data = {
-				{
-					start_time = 0,
-					external_multiplier = 1.4,
-					end_time = 0.4,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.4,
-					external_multiplier = 0.6,
-					end_time = 0.8,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.8,
-					external_multiplier = 1,
-					end_time = 1,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 1,
-					external_multiplier = 0.4,
-					end_time = 1.2,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 1.1,
-					external_multiplier = 1,
-					buff_name = "planted_decrease_movement"
-				}
-			},
+			buff_data = planted_decrease_movement_settings.light_attack_2,
 			allowed_chain_actions = {
-				{
-					sub_action = "default",
-					start_time = 1.1,
-					action = "action_one",
-					end_time = 1.5,
-					input = "action_one"
-				},
 				{
 					sub_action = "default",
 					start_time = 1.5,
 					action = "action_one",
-					input = "action_one"
+					input = "action_one_hold"
 				}
 			},
 			baked_sweep = {
@@ -485,12 +560,13 @@ weapon_template.actions = {
 		},
 		attack_cleave = {
 			damage_window_start = 0.55,
+			disallow_ghost_mode = true,
 			anim_end_event = "attack_finished",
 			weapon_action_hand = "left",
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
 			width_mod = 80,
-			hit_effect = "melee_hit_hammers_2h",
+			hit_effect = "vs_chaos_troll_axe_heavy",
 			no_damage_impact_sound_event = "blunt_hit_armour",
 			additional_critical_strike_chance = 0.1,
 			use_precision_sweep = false,
@@ -506,34 +582,9 @@ weapon_template.actions = {
 			anim_end_event_condition_func = function (unit, end_reason)
 				return end_reason ~= "new_interupting_action" and end_reason ~= "action_complete"
 			end,
-			anim_time_scale = time_mod * 1.15,
 			range_mod = extra_range_add * 1.65,
 			knockback_data = knockback_tables.scrambler,
-			buff_data = {
-				{
-					start_time = 0,
-					external_multiplier = 0.6,
-					end_time = 0.1,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.1,
-					external_multiplier = 1.2,
-					end_time = 0.7,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 0.7,
-					external_multiplier = 0.1,
-					end_time = 1,
-					buff_name = "planted_decrease_movement"
-				},
-				{
-					start_time = 1.1,
-					external_multiplier = 1,
-					buff_name = "planted_decrease_movement"
-				}
-			},
+			buff_data = planted_decrease_movement_settings.heavy_attack,
 			allowed_chain_actions = {
 				{
 					sub_action = "default_2",
@@ -630,6 +681,15 @@ weapon_template.actions = {
 	},
 	action_inspect = ActionTemplates.action_inspect,
 	action_wield = ActionTemplates.wield
+}
+weapon_template.weapon_sway_settings = {
+	camera_look_sensitivity = 1,
+	sway_range = 1,
+	recetner_dampening = 1,
+	look_sensitivity = 0.5,
+	recenter_max_vel = 5,
+	recenter_acc = 5,
+	lerp_speed = math.huge
 }
 weapon_template.left_hand_unit = "units/weapons/player/dark_pact/wpn_chaos_troll/wpn_chaos_troll_01"
 weapon_template.left_hand_attachment_node_linking = AttachmentNodeLinking.vs_chaos_troll_axe.left

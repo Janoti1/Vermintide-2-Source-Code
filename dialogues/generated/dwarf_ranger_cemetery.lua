@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pdr_cemetary_intro",
 		response = "pdr_cemetary_intro",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_cemetary_intro_b",
 		response = "pdr_cemetary_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_cemetary_intro_c",
 		response = "pdr_cemetary_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_bringing_down_first_attachment",
 		response = "pdr_objective_cemetery_bringing_down_first_attachment",
 		criterias = {
@@ -164,6 +168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_bringing_down_fourth_attachment",
 		response = "pdr_objective_cemetery_bringing_down_fourth_attachment",
 		criterias = {
@@ -208,6 +213,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_bringing_down_second_attachment",
 		response = "pdr_objective_cemetery_bringing_down_second_attachment",
 		criterias = {
@@ -252,6 +258,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_bringing_down_third_attachment",
 		response = "pdr_objective_cemetery_bringing_down_third_attachment",
 		criterias = {
@@ -296,6 +303,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_destroyed_plague_cauldron",
 		response = "pdr_objective_cemetery_destroyed_plague_cauldron",
 		criterias = {
@@ -340,6 +348,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_crypt_maze",
 		response = "pdr_objective_cemetery_spotting_crypt_maze",
 		criterias = {
@@ -384,6 +393,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_graveyard",
 		response = "pdr_objective_cemetery_spotting_graveyard",
 		criterias = {
@@ -428,6 +438,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_hedge_maze",
 		response = "pdr_objective_cemetery_spotting_hedge_maze",
 		criterias = {
@@ -472,6 +483,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_mausoleum",
 		response = "pdr_objective_cemetery_spotting_mausoleum",
 		criterias = {
@@ -516,6 +528,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_plague_brew_stains",
 		response = "pdr_objective_cemetery_spotting_plague_brew_stains",
 		criterias = {
@@ -560,6 +573,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_plague_cauldron",
 		response = "pdr_objective_cemetery_spotting_plague_cauldron",
 		criterias = {
@@ -604,6 +618,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_plague_pyre",
 		response = "pdr_objective_cemetery_spotting_plague_pyre",
 		criterias = {
@@ -648,6 +663,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_skaven_tunnels",
 		response = "pdr_objective_cemetery_spotting_skaven_tunnels",
 		criterias = {
@@ -692,6 +708,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_the_attachements",
 		response = "pdr_objective_cemetery_spotting_the_attachements",
 		criterias = {
@@ -736,6 +753,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_spotting_victim",
 		response = "pdr_objective_cemetery_spotting_victim",
 		criterias = {
@@ -780,6 +798,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_through_crypt_a",
 		response = "pdr_objective_cemetery_through_crypt_a",
 		criterias = {
@@ -824,6 +843,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_through_crypt_b",
 		response = "pdr_objective_cemetery_through_crypt_b",
 		criterias = {
@@ -868,6 +888,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_cemetery_through_crypt_c",
 		response = "pdr_objective_cemetery_through_crypt_c",
 		criterias = {
@@ -912,6 +933,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_ojective_cemetery_done",
 		response = "pdr_ojective_cemetery_done",
 		criterias = {

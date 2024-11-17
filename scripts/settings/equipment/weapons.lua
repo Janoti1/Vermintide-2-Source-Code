@@ -194,21 +194,22 @@ Dots = {
 	end
 }
 DotTypeLookup = DotTypeLookup or {
-	burning_dot_unchained_push = "burning_dot",
-	burning_dot = "burning_dot",
-	burning_dot_3tick = "burning_dot",
-	arrow_poison_dot = "poison_dot",
+	aoe_poison_dot = "poison_dot",
+	vs_ratling_gunner_slow = "burning_dot",
+	burning_dot_fire_grenade = "burning_dot",
+	weapon_bleed_dot_maidenguard = "poison_dot",
 	weapon_bleed_dot_whc = "poison_dot",
 	burning_dot_1tick = "burning_dot",
-	weapon_bleed_dot_maidenguard = "poison_dot",
+	arrow_poison_dot = "poison_dot",
 	beam_burning_dot = "burning_dot",
 	weapon_bleed_dot_dagger = "poison_dot",
-	burning_dot_fire_grenade = "burning_dot",
-	sienna_necromancer_4_3_dot = "burning_dot",
+	burning_dot_3tick = "burning_dot",
+	burning_dot_unchained_push = "burning_dot",
 	burning_flamethrower_dot = "burning_dot",
-	aoe_poison_dot = "poison_dot",
 	death_staff_dot = "burning_dot",
-	vs_ratling_gunner_slow = "burning_dot",
+	burning_dot = "burning_dot",
+	burning_dot_1tick_vs = "burning_dot",
+	sienna_necromancer_4_3_dot = "burning_dot",
 	chaos_zombie_explosion = "poison_dot"
 }
 
@@ -234,7 +235,7 @@ for _, item in pairs(ItemMasterList) do
 	if slot_type == "melee" or slot_type == "ranged" or slot_type == "grenade" or slot_type == "healthkit" or slot_type == "potion" then
 		local template_name = item.template or item.temporary_template
 
-		fassert(Weapons[template_name], "Weapon template [\"%s\"] does not exist!", template_name)
+		fassert(rawget(Weapons, template_name), "Weapon template [\"%s\"] does not exist!", template_name)
 
 		local careers = item.can_wield
 
@@ -247,7 +248,7 @@ for _, item in pairs(ItemMasterList) do
 			if checked_templates[profile_name] and not checked_templates[profile_name][template_name] then
 				checked_templates[profile_name][template_name] = true
 
-				local template = Weapons[template_name]
+				local template = rawget(Weapons, template_name)
 				local actions = template.actions
 
 				for j = 1, #action_names do

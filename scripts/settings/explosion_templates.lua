@@ -174,6 +174,66 @@ ExplosionTemplates.grenade = {
 		}
 	}
 }
+ExplosionTemplates.engineer_grenade = {
+	is_grenade = true,
+	explosion = {
+		dont_rotate_fx = true,
+		radius = 2.5,
+		max_damage_radius = 1,
+		alert_enemies_radius = 20,
+		sound_event_name = "player_combat_weapon_grenade_explosion",
+		attack_template = "grenade",
+		damage_profile_glance = "engineer_grenade_glance",
+		alert_enemies = true,
+		damage_profile = "engineer_grenade",
+		effect_name = "fx/wpnfx_grenade_impact",
+		difficulty_power_level = {
+			easy = {
+				power_level_glance = 100,
+				power_level = 200
+			},
+			normal = {
+				power_level_glance = 200,
+				power_level = 400
+			},
+			hard = {
+				power_level_glance = 300,
+				power_level = 600
+			},
+			harder = {
+				power_level_glance = 400,
+				power_level = 800
+			},
+			hardest = {
+				power_level_glance = 500,
+				power_level = 1000
+			},
+			cataclysm = {
+				power_level_glance = 550,
+				power_level = 1100
+			},
+			cataclysm_2 = {
+				power_level_glance = 575,
+				power_level = 1150
+			},
+			cataclysm_3 = {
+				power_level_glance = 600,
+				power_level = 1200
+			},
+			versus_base = {
+				power_level_glance = 200,
+				power_level = 400
+			}
+		},
+		camera_effect = {
+			near_distance = 5,
+			near_scale = 0.5,
+			shake_name = "frag_grenade_explosion",
+			far_scale = 0.15,
+			far_distance = 20
+		}
+	}
+}
 ExplosionTemplates.explosive_barrel = {
 	explosion = {
 		radius = 6,
@@ -621,6 +681,24 @@ ExplosionTemplates.conflag = {
 		}
 	}
 }
+ExplosionTemplates.conflag_vs = {
+	aoe = {
+		dot_template_name = "burning_dot_1tick_vs",
+		radius = 4,
+		nav_tag_volume_layer = "fire_grenade",
+		dot_balefire_variant = true,
+		create_nav_tag_volume = true,
+		attack_template = "wizard_staff_geiser",
+		damage_interval = 1,
+		duration = 2,
+		area_damage_template = "explosion_template_aoe",
+		nav_mesh_effect = {
+			particle_radius = 2,
+			particle_name = "fx/wpnfx_fire_grenade_impact_remains_remap",
+			particle_spacing = 0.9
+		}
+	}
+}
 ExplosionTemplates.portal_transformer = {
 	explosion = {
 		radius = 5,
@@ -658,6 +736,18 @@ ExplosionTemplates.military_finish = {
 		collision_filter = "filter_simple_explosion_overlap"
 	}
 }
+ExplosionTemplates.doomwheel_finish = {
+	explosion = {
+		no_aggro = true,
+		radius = 5,
+		player_push_speed = 5,
+		alert_enemies = false,
+		damage_profile = "military_finish",
+		power_level = 1000,
+		level_unit_damage = true,
+		collision_filter = "filter_simple_explosion_overlap"
+	}
+}
 ExplosionTemplates.bardin_slayer_activated_ability_landing_stagger = {
 	explosion = {
 		no_prop_damage = true,
@@ -683,6 +773,7 @@ ExplosionTemplates.cannon_ball_throw = {
 		radius = 10,
 		effect_name = "fx/wpnfx_frag_grenade_impact",
 		max_damage_radius = 5,
+		ignore_players = true,
 		attack_template = "drakegun",
 		sound_event_name = "player_combat_weapon_grenade_explosion",
 		damage_profile = "cannonball_impact",

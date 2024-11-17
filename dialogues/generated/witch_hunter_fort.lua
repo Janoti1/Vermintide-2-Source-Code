@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwh_fort_intro_a",
 		response = "pwh_fort_intro_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_fort_intro_b",
 		response = "pwh_fort_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_fort_intro_c",
 		response = "pwh_fort_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_cannonballs",
 		response = "pwh_level_fort_cannonballs",
 		criterias = {
@@ -164,6 +168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_cannons_silenced",
 		response = "pwh_level_fort_cannons_silenced",
 		criterias = {
@@ -208,6 +213,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_cross_here",
 		response = "pwh_level_fort_cross_here",
 		criterias = {
@@ -252,6 +258,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_final_fire",
 		response = "pwh_level_fort_fire_cannon_final_fire",
 		criterias = {
@@ -296,6 +303,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_final_hit",
 		response = "pwh_level_fort_fire_cannon_final_hit",
 		criterias = {
@@ -340,6 +348,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_first",
 		response = "pwh_level_fort_fire_cannon_first",
 		criterias = {
@@ -384,6 +393,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_first_hit",
 		response = "pwh_level_fort_fire_cannon_first_hit",
 		criterias = {
@@ -428,6 +438,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_fuse_is_lit",
 		response = "pwh_level_fort_fire_cannon_fuse_is_lit",
 		criterias = {
@@ -472,6 +483,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_second",
 		response = "pwh_level_fort_fire_cannon_second",
 		criterias = {
@@ -516,6 +528,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_fire_cannon_second_hit",
 		response = "pwh_level_fort_fire_cannon_second_hit",
 		criterias = {
@@ -560,6 +573,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_gate_fallen",
 		response = "pwh_level_fort_gate_fallen",
 		criterias = {
@@ -604,6 +618,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_getting_closer",
 		response = "pwh_level_fort_getting_closer",
 		criterias = {
@@ -648,6 +663,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_plague_claw_shelling",
 		response = "pwh_level_fort_plague_claw_shelling",
 		criterias = {
@@ -692,6 +708,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_plague_claw_shelling_move",
 		response = "pwh_level_fort_plague_claw_shelling_move",
 		criterias = {
@@ -736,6 +753,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_river",
 		response = "pwh_level_fort_river",
 		criterias = {
@@ -780,6 +798,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_skaven_everywhere",
 		response = "pwh_level_fort_skaven_everywhere",
 		criterias = {
@@ -824,6 +843,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_skaven_run",
 		response = "pwh_level_fort_skaven_run",
 		criterias = {
@@ -868,6 +888,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_under_attack",
 		response = "pwh_level_fort_under_attack",
 		criterias = {
@@ -912,6 +933,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_fort_use_cannons",
 		response = "pwh_level_fort_use_cannons",
 		criterias = {

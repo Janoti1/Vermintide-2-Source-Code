@@ -4087,20 +4087,17 @@ BreedPacks = {
 						Breeds.skaven_clan_rat
 					}
 				},
-				hardest_bajs = {
+				versus_base = {
 					{
 						{
-							10,
-							12
+							4,
+							6
 						},
 						"skaven_plague_monk",
 						Breeds.skaven_clan_rat
 					},
 					{
-						{
-							6,
-							7
-						},
+						2,
 						"skaven_storm_vermin_commander",
 						Breeds.skaven_clan_rat
 					}
@@ -4158,19 +4155,19 @@ BreedPacks = {
 						Breeds.skaven_clan_rat
 					}
 				},
-				hardest_bajs = {
+				versus_base = {
 					{
 						{
-							5,
-							6
+							0,
+							3
 						},
 						"skaven_plague_monk",
 						Breeds.skaven_clan_rat
 					},
 					{
 						{
-							2,
-							3
+							0,
+							1
 						},
 						"skaven_storm_vermin_commander",
 						Breeds.skaven_clan_rat
@@ -7896,7 +7893,8 @@ BreedPacks = {
 						"skaven_storm_vermin_commander",
 						Breeds.skaven_poison_wind_globadier
 					}
-				}
+				},
+				versus_base = {}
 			},
 			clamp_breeds_low = {
 				hi = "LOW ZONE",
@@ -7906,7 +7904,8 @@ BreedPacks = {
 						"skaven_storm_vermin_commander",
 						Breeds.skaven_ratling_gunner
 					}
-				}
+				},
+				versus_base = {}
 			}
 		},
 		{
@@ -7997,9 +7996,6 @@ end
 
 local function generate_breed_pack_by_size(breed_packs, roaming_set_name)
 	local num_breed_packs = calc_num_in_packs(breed_packs, roaming_set_name)
-
-	assert("BreedPack of size have no matching interestpoint of that size.")
-
 	local breed_pack_by_size = {}
 	local by_size = {}
 
@@ -8073,6 +8069,17 @@ if #InterestPointPickListIndexLookup == 0 then
 	end
 
 	InterestPointPickList = weight_lookup
+end
+
+for pack_name, pack_data in pairs(BreedPacks) do
+	local zone_checks = pack_data.zone_checks
+	local clamp_breeds_hi = zone_checks.clamp_breeds_hi
+
+	fassert(not clamp_breeds_hi or clamp_breeds_hi.versus_base, "[BreedPacks] '%s' is missing a 'clamp_breeds_hi' setting for versus and won't be able to limit amount of breeds.", pack_name)
+
+	local clamp_breeds_low = zone_checks.clamp_breeds_low
+
+	fassert(not clamp_breeds_low or clamp_breeds_low.versus_base, "[BreedPacks] '%s' is missing a 'clamp_breeds_low' setting for versus and won't be able to limit amount of breeds.", pack_name)
 end
 
 BenchmarkSettings.demo_mode_overrides()

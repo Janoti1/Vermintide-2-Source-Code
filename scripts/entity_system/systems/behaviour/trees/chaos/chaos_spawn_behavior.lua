@@ -48,12 +48,13 @@ BreedBehaviors.chaos_spawn = {
 				"BTMeleeOverlapAttackAction",
 				enter_hook = "attack_grabbed_smash",
 				name = "attack_grabbed_smash",
-				leave_hook = "leave_attack_grabbed_smash",
+				leave_hook = "leave_attack_grabbed",
 				action_data = ACTIONS.attack_grabbed_smash
 			},
 			{
 				"BTChewAttackAction",
 				name = "attack_grabbed_chew",
+				leave_hook = "leave_attack_grabbed",
 				action_data = ACTIONS.attack_grabbed_chew
 			},
 			condition = "chaos_spawn_grabbed_combat",

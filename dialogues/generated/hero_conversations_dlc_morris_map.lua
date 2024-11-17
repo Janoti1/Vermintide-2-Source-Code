@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_before_shrine_tutorial_01",
 		name = "nfl_morris_before_shrine_tutorial_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -26,6 +27,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_shrine_tutorial_one",
 		name = "nfl_morris_map_shrine_tutorial_one",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -50,6 +52,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_shrine_tutorial_three",
 		name = "nfl_morris_map_shrine_tutorial_three",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -74,6 +77,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_shrine_tutorial_two",
 		name = "nfl_morris_map_shrine_tutorial_two",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -98,6 +102,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_tutorial_five",
 		name = "nfl_morris_map_tutorial_five",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -122,6 +127,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_tutorial_one",
 		name = "nfl_morris_map_tutorial_one",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -152,6 +158,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_tutorial_three",
 		name = "nfl_morris_map_tutorial_three",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -176,6 +183,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_map_tutorial_two",
 		name = "nfl_morris_map_tutorial_two",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -198,6 +206,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_purchasing_blessing",
 		response = "pbw_gameplay_purchasing_blessing",
 		criterias = {
@@ -238,6 +247,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_shrine_hurry",
 		name = "pbw_gameplay_shrine_hurry",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -260,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_purchasing_blessing",
 		response = "pdr_gameplay_purchasing_blessing",
 		criterias = {
@@ -300,6 +311,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_shrine_hurry",
 		name = "pdr_gameplay_shrine_hurry",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -322,6 +334,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_purchasing_blessing",
 		response = "pes_gameplay_purchasing_blessing",
 		criterias = {
@@ -362,6 +375,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_shrine_hurry",
 		name = "pes_gameplay_shrine_hurry",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -384,6 +398,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_purchasing_blessing",
 		response = "pwe_gameplay_purchasing_blessing",
 		criterias = {
@@ -424,6 +439,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_shrine_hurry",
 		name = "pwe_gameplay_shrine_hurry",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -446,6 +462,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_purchasing_blessing",
 		response = "pwh_gameplay_purchasing_blessing",
 		criterias = {
@@ -486,6 +503,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_shrine_hurry",
 		name = "pwh_gameplay_shrine_hurry",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

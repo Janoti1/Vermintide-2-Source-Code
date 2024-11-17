@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pes_ground_zero_intro_a",
 		response = "pes_ground_zero_intro_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_ground_zero_intro_b",
 		response = "pes_ground_zero_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_ground_zero_intro_c",
 		response = "pes_ground_zero_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_boss_spotted",
 		response = "pes_level_ground_zero_boss_spotted",
 		criterias = {
@@ -158,6 +162,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_boss_taunt_reply",
 		response = "pes_level_ground_zero_boss_taunt_reply",
 		criterias = {
@@ -196,6 +201,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_canal_crossing",
 		response = "pes_level_ground_zero_canal_crossing",
 		criterias = {
@@ -240,6 +246,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_canals",
 		response = "pes_level_ground_zero_canals",
 		criterias = {
@@ -284,6 +291,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_cargo_elevator",
 		response = "pes_level_ground_zero_cargo_elevator",
 		criterias = {
@@ -328,6 +336,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_complete",
 		response = "pes_level_ground_zero_complete",
 		criterias = {
@@ -372,6 +381,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_corruption_everywhere",
 		response = "pes_level_ground_zero_corruption_everywhere",
 		criterias = {
@@ -416,6 +426,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_crumbling",
 		response = "pes_level_ground_zero_crumbling",
 		criterias = {
@@ -460,6 +471,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_landslide",
 		response = "pes_level_ground_zero_landslide",
 		criterias = {
@@ -504,6 +516,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_looking_for_elevator",
 		response = "pes_level_ground_zero_looking_for_elevator",
 		criterias = {
@@ -548,6 +561,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_precarious",
 		response = "pes_level_ground_zero_precarious",
 		criterias = {
@@ -592,6 +606,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_smell",
 		response = "pes_level_ground_zero_smell",
 		criterias = {
@@ -636,6 +651,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_the_hole",
 		response = "pes_level_ground_zero_the_hole",
 		criterias = {
@@ -680,6 +696,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_the_hole_second_view",
 		response = "pes_level_ground_zero_the_hole_second_view",
 		criterias = {
@@ -724,6 +741,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_ground_zero_welcoming_committee",
 		response = "pes_level_ground_zero_welcoming_committee",
 		criterias = {

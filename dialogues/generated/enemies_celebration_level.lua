@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "ecb_gameplay_running_towards_players_celebration_level",
 		name = "ecb_gameplay_running_towards_players_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -18,6 +19,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecm_gameplay_dogpile_shouts_celebration_level",
 		response = "ecm_gameplay_dogpile_shouts_celebration_level",
 		criterias = {
@@ -62,6 +64,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecm_gameplay_flanking_players_celebration_level",
 		response = "ecm_gameplay_flanking_players_celebration_level",
 		criterias = {
@@ -94,6 +97,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecm_gameplay_running_towards_players_celebration_level",
 		response = "ecm_gameplay_running_towards_players_celebration_level",
 		criterias = {
@@ -132,6 +136,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_attacking_bright_wizard_backstab_celebration_level",
 		response = "ecr_gameplay_attacking_bright_wizard_backstab_celebration_level",
 		criterias = {
@@ -170,6 +175,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_attacking_dwarf_ranger_backstab_celebration_level",
 		response = "ecr_gameplay_attacking_dwarf_ranger_backstab_celebration_level",
 		criterias = {
@@ -208,6 +214,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_attacking_empire_soldier_backstab_celebration_level",
 		response = "ecr_gameplay_attacking_empire_soldier_backstab_celebration_level",
 		criterias = {
@@ -246,6 +253,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_attacking_witch_hunter_backstab_celebration_level",
 		response = "ecr_gameplay_attacking_witch_hunter_backstab_celebration_level",
 		criterias = {
@@ -284,6 +292,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_attacking_wood_elf_backstab_celebration_level",
 		response = "ecr_gameplay_attacking_wood_elf_backstab_celebration_level",
 		criterias = {
@@ -322,6 +331,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_bright_wizard_knocked_down_celebration_level",
 		response = "ecr_gameplay_bright_wizard_knocked_down_celebration_level",
 		criterias = {
@@ -360,6 +370,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_dwarf_ranger_knocked_down_celebration_level",
 		response = "ecr_gameplay_dwarf_ranger_knocked_down_celebration_level",
 		criterias = {
@@ -398,6 +409,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_empire_soldier_knocked_down_celebration_level",
 		response = "ecr_gameplay_empire_soldier_knocked_down_celebration_level",
 		criterias = {
@@ -438,6 +450,7 @@ return function ()
 	define_rule({
 		response = "ecr_gameplay_fall_celebration_level",
 		name = "ecr_gameplay_fall_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -454,6 +467,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_fleeing_celebration_level",
 		response = "ecr_gameplay_fleeing_celebration_level",
 		criterias = {
@@ -486,6 +500,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_killing_a_player_celebration_level",
 		response = "ecr_gameplay_killing_a_player_celebration_level",
 		criterias = {
@@ -520,6 +535,7 @@ return function ()
 	define_rule({
 		response = "ecr_gameplay_land_celebration_level",
 		name = "ecr_gameplay_land_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -536,6 +552,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_player_knocked_down_celebration_level",
 		response = "ecr_gameplay_player_knocked_down_celebration_level",
 		criterias = {
@@ -568,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_running_in_horde_celebration_level",
 		response = "ecr_gameplay_running_in_horde_celebration_level",
 		criterias = {
@@ -612,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_running_towards_players_alone_celebration_level",
 		response = "ecr_gameplay_running_towards_players_alone_celebration_level",
 		criterias = {
@@ -650,6 +669,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_running_towards_players_celebration_level",
 		response = "ecr_gameplay_running_towards_players_celebration_level",
 		criterias = {
@@ -681,6 +701,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_seeing_bomb_thrown_celebration_level",
 		response = "ecr_gameplay_seeing_bomb_thrown_celebration_level",
 		criterias = {
@@ -719,6 +740,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_seeing_weapon_special_activated_celebration_level",
 		response = "ecr_gameplay_seeing_weapon_special_activated_celebration_level",
 		criterias = {
@@ -751,6 +773,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_startled_celebration_level",
 		response = "ecr_gameplay_startled_celebration_level",
 		criterias = {
@@ -783,6 +806,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_striking_a_player_celebration_level",
 		response = "ecr_gameplay_striking_a_player_celebration_level",
 		criterias = {
@@ -815,6 +839,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_witch_hunter_knocked_down_celebration_level",
 		response = "ecr_gameplay_witch_hunter_knocked_down_celebration_level",
 		criterias = {
@@ -853,6 +878,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_gameplay_wood_elf_knocked_down_celebration_level",
 		response = "ecr_gameplay_wood_elf_knocked_down_celebration_level",
 		criterias = {
@@ -891,6 +917,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_shield_gameplay_running_in_horde_celebration_level",
 		response = "ecr_shield_gameplay_running_in_horde_celebration_level",
 		criterias = {
@@ -935,6 +962,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_shield_gameplay_running_towards_players_alone_celebration_level",
 		response = "ecr_shield_gameplay_running_towards_players_alone_celebration_level",
 		criterias = {
@@ -973,6 +1001,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_shield_gameplay_running_towards_players_celebration_level",
 		response = "ecr_shield_gameplay_running_towards_players_celebration_level",
 		criterias = {
@@ -1011,6 +1040,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_shield_gameplay_startled_celebration_level",
 		response = "ecr_shield_gameplay_startled_celebration_level",
 		criterias = {
@@ -1036,6 +1066,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecr_shield_gameplay_striking_a_player_celebration_level",
 		response = "ecr_shield_gameplay_striking_a_player_celebration_level",
 		criterias = {
@@ -1068,6 +1099,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_alert_celebration_level",
 		response = "ecw_gameplay_alert_celebration_level",
 		criterias = {
@@ -1100,6 +1132,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_downing_a_player_celebration_level",
 		response = "ecw_gameplay_downing_a_player_celebration_level",
 		criterias = {
@@ -1132,6 +1165,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_no_damage_celebration_level",
 		response = "ecw_gameplay_no_damage_celebration_level",
 		criterias = {
@@ -1164,6 +1198,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_targeting_bright_wizard_celebration_level",
 		response = "ecw_gameplay_targeting_bright_wizard_celebration_level",
 		criterias = {
@@ -1202,6 +1237,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_targeting_dwarf_ranger_celebration_level",
 		response = "ecw_gameplay_targeting_dwarf_ranger_celebration_level",
 		criterias = {
@@ -1240,6 +1276,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_targeting_empire_soldier_celebration_level",
 		response = "ecw_gameplay_targeting_empire_soldier_celebration_level",
 		criterias = {
@@ -1278,6 +1315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_targeting_witch_hunter_celebration_level",
 		response = "ecw_gameplay_targeting_witch_hunter_celebration_level",
 		criterias = {
@@ -1316,6 +1354,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ecw_gameplay_targeting_wood_elf_celebration_level",
 		response = "ecw_gameplay_targeting_wood_elf_celebration_level",
 		criterias = {
@@ -1356,6 +1395,7 @@ return function ()
 	define_rule({
 		response = "epm_gameplay_running_celebration_level",
 		name = "epm_gameplay_running_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1374,6 +1414,7 @@ return function ()
 	define_rule({
 		response = "epm_gameplay_startled_celebration_level",
 		name = "epm_gameplay_startled_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1390,6 +1431,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "epwg_gameplay_begin_suicide_run_celebration_level",
 		response = "epwg_gameplay_begin_suicide_run_celebration_level",
 		criterias = {
@@ -1427,6 +1469,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "epwg_gameplay_hitting_a_player_celebration_level",
 		response = "epwg_gameplay_hitting_a_player_celebration_level",
 		criterias = {
@@ -1465,6 +1508,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "epwg_gameplay_hitting_multiple_players_celebration_level",
 		response = "epwg_gameplay_hitting_multiple_players_celebration_level",
 		criterias = {
@@ -1503,6 +1547,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "epwg_gameplay_hitting_only_skaven_celebration_level",
 		response = "epwg_gameplay_hitting_only_skaven_celebration_level",
 		criterias = {
@@ -1541,6 +1586,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "epwg_gameplay_throwing_globe_celebration_level",
 		response = "epwg_gameplay_throwing_globe_celebration_level",
 		criterias = {
@@ -1573,6 +1619,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_bright_wizard_knocked_down_celebration_level",
 		response = "esr_gameplay_bright_wizard_knocked_down_celebration_level",
 		criterias = {
@@ -1611,6 +1658,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_dwarf_ranger_knocked_down_celebration_level",
 		response = "esr_gameplay_dwarf_ranger_knocked_down_celebration_level",
 		criterias = {
@@ -1649,6 +1697,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_empire_soldier_knocked_down_celebration_level",
 		response = "esr_gameplay_empire_soldier_knocked_down_celebration_level",
 		criterias = {
@@ -1689,6 +1738,7 @@ return function ()
 	define_rule({
 		response = "esr_gameplay_fall_celebration_level",
 		name = "esr_gameplay_fall_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1707,6 +1757,7 @@ return function ()
 	define_rule({
 		response = "esr_gameplay_land_celebration_level",
 		name = "esr_gameplay_land_celebration_level",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1723,6 +1774,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_player_knocked_down_celebration_level",
 		response = "esr_gameplay_player_knocked_down_celebration_level",
 		criterias = {
@@ -1755,6 +1807,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_shouting_celebration_level",
 		response = "esr_gameplay_shouting_celebration_level",
 		criterias = {
@@ -1787,6 +1840,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_witch_hunter_knocked_down_celebration_level",
 		response = "esr_gameplay_witch_hunter_knocked_down_celebration_level",
 		criterias = {
@@ -1825,6 +1879,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esr_gameplay_wood_elf_knocked_down_celebration_level",
 		response = "esr_gameplay_wood_elf_knocked_down_celebration_level",
 		criterias = {
@@ -1863,6 +1918,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_cheering_on_player_kill_celebration_level",
 		response = "esv_gameplay_cheering_on_player_kill_celebration_level",
 		criterias = {
@@ -1895,6 +1951,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_fleeing_celebration_level",
 		response = "esv_gameplay_fleeing_celebration_level",
 		criterias = {
@@ -1927,6 +1984,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_killing_a_player_celebration_level",
 		response = "esv_gameplay_killing_a_player_celebration_level",
 		criterias = {
@@ -1965,6 +2023,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_player_knocked_down_celebration_level",
 		response = "esv_gameplay_player_knocked_down_celebration_level",
 		criterias = {
@@ -1997,6 +2056,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_rally_fleeing_clanrats_celebration_level",
 		response = "esv_gameplay_rally_fleeing_clanrats_celebration_level",
 		criterias = {
@@ -2029,6 +2089,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_running_towards_players_alone_celebration_level",
 		response = "esv_gameplay_running_towards_players_alone_celebration_level",
 		criterias = {
@@ -2073,6 +2134,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_running_towards_players_celebration_level",
 		response = "esv_gameplay_running_towards_players_celebration_level",
 		criterias = {
@@ -2117,6 +2179,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_set_on_fire_celebration_level",
 		response = "esv_gameplay_set_on_fire_celebration_level",
 		criterias = {
@@ -2149,6 +2212,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_startled_celebration_level",
 		response = "esv_gameplay_startled_celebration_level",
 		criterias = {
@@ -2174,6 +2238,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "esv_gameplay_striking_a_player_celebration_level",
 		response = "esv_gameplay_striking_a_player_celebration_level",
 		criterias = {
@@ -2665,7 +2730,7 @@ return function ()
 				[1] = "ecr_gameplay_fall"
 			},
 			sound_events_duration = {
-				[1] = 3.5791234374046
+				[1] = 3.1496770977974
 			}
 		},
 		ecr_gameplay_fleeing_celebration_level = {
@@ -2980,14 +3045,14 @@ return function ()
 				"ecr_gameplay_running_towards_players_alone_08"
 			},
 			sound_events_duration = {
-				1.7922794222832,
-				2.0397656559944,
-				2.6266366839409,
-				2.0784459710121,
-				1.7603061795235,
-				1.7603061795235,
-				1.7603061795235,
-				1.7703519463539
+				1.6190377473831,
+				1.8738412857056,
+				2.0356508493424,
+				1.4628485441208,
+				1.3138682842255,
+				1.2950078248978,
+				1.2950078248978,
+				1.3484325408936
 			}
 		},
 		ecr_gameplay_running_towards_players_celebration_level = {
@@ -4900,7 +4965,7 @@ return function ()
 				[1] = "esr_gameplay_fall"
 			},
 			sound_events_duration = {
-				[1] = 3.5635517239571
+				[1] = 3.1496770977974
 			}
 		},
 		esr_gameplay_land_celebration_level = {

@@ -74,7 +74,10 @@ local window_layouts = {
 			options = 1,
 			inventory = 3,
 			crafting = 2
-		}
+		},
+		can_add_function = function (mechanism_name)
+			return mechanism_name ~= "versus" and mechanism_name ~= "inn_vs"
+		end
 	},
 	{
 		sound_event_enter = "play_gui_cosmetics_button",

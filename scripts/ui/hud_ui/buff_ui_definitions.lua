@@ -18,7 +18,7 @@ local scenegraph_definition = {
 		parent = "root",
 		horizontal_alignment = "left",
 		position = {
-			150,
+			200,
 			18,
 			1
 		},

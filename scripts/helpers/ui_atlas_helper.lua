@@ -17,6 +17,7 @@ require("scripts/ui/atlas_settings/gui_menus_atlas")
 require("scripts/ui/atlas_settings/gui_country_flags_atlas")
 require("scripts/ui/atlas_settings/gui_mission_selection_atlas")
 require("scripts/ui/atlas_settings/gui_lock_test_atlas")
+require("scripts/ui/atlas_settings/gui_pose_items_atlas")
 
 UIAtlasHelper = UIAtlasHelper or {}
 
@@ -185,7 +186,11 @@ local standalone_texture = {
 	dark_pact_ability_effect_bar_top = true,
 	radial_chat_wedge = true,
 	unit_frame_portrait_kruber_huntsman_twitch_icon = true,
+	dark_pact_ability_effect_halo = true,
 	game_mode_selection_glow_02 = true,
+	dark_pact_ability_icon_cooldown_gradient = true,
+	dark_pact_selection_portrait_mask = true,
+	crystals_01_child = true,
 	options_menu_divider_glow_02 = true,
 	loot_presentation_circle_glow_plentiful = true,
 	unit_frame_portrait_kruber_questingknight_twitch = true,
@@ -337,6 +342,7 @@ local standalone_texture = {
 	unit_frame_portrait_kruber_knight_twitch = true,
 	twitch_healing_draught = true,
 	end_screen_banner_defeat = true,
+	dark_pact_ability_icon_gradient_mask = true,
 	gradient_friend_list = true,
 	gradient_enchantment_craft = true,
 	unit_frame_portrait_bardin_slayer = true,
@@ -361,7 +367,8 @@ local ui_atlas_setting_tables = {
 	gui_frames_atlas = frames_atlas,
 	gui_level_images_atlas = level_images_atlas,
 	gui_country_flags_atlas = country_flags_atlas,
-	gui_lock_test_atlas = lock_test_atlas
+	gui_lock_test_atlas = lock_test_atlas,
+	gui_pose_items_atlas = pose_items_atlas
 }
 local masked_materials = {
 	gui_achievement_icons_atlas = "gui_achievement_icons_atlas_masked",
@@ -376,14 +383,16 @@ local masked_materials = {
 	gui_lock_test_atlas = "gui_lock_test_atlas_masked",
 	gui_season_emblems_atlas = "gui_season_emblems_atlas_masked",
 	gui_country_flags_atlas = "gui_country_flags_atlas_masked",
+	gui_pose_items_atlas = "gui_pose_items_atlas_masked",
 	gui_icons_atlas = "gui_icons_atlas_masked",
 	gui_items_atlas = "gui_items_atlas_masked"
 }
 local saturated_materials = {
 	gui_level_images_atlas = "gui_level_images_atlas_saturated",
 	gui_frames_atlas = "gui_frames_atlas_saturated",
-	gui_lock_test_atlas = "gui_lock_test_atlas_saturated",
+	gui_pose_items_atlas = "gui_pose_items_atlas_saturated",
 	gui_hud_atlas = "gui_hud_atlas_saturated",
+	gui_lock_test_atlas = "gui_lock_test_atlas_saturated",
 	gui_achievement_icons_atlas = "gui_achievement_icons_atlas_saturated",
 	gui_menu_buttons_atlas = "gui_menu_buttons_atlas_saturated",
 	gui_menus_atlas = "gui_menus_atlas_saturated",
@@ -394,6 +403,7 @@ local saturated_materials = {
 local masked_saturated_materials = {
 	gui_achievement_icons_atlas = "gui_achievement_icons_atlas_masked_saturated",
 	gui_lock_test_atlas = "gui_lock_test_atlas_masked_saturated",
+	gui_pose_items_atlas = "gui_pose_items_atlas_masked_saturated",
 	gui_hud_atlas = "gui_hud_atlas_point_sample_masked_saturated",
 	gui_icons_atlas = "gui_icons_atlas_masked_saturated",
 	gui_items_atlas = "gui_items_atlas_masked_saturated",
@@ -412,6 +422,7 @@ local masked_point_sample_materials = {
 	gui_start_screen_atlas = "gui_start_screen_atlas_point_sample_masked",
 	gui_lock_test_atlas = "gui_lock_test_atlas_point_sample_masked",
 	gui_frames_atlas = "gui_frames_atlas_point_sample_masked",
+	gui_pose_items_atlas = "gui_pose_items_atlas_point_sample_masked",
 	gui_menus_atlas = "gui_menus_atlas_point_sample_masked",
 	gui_season_emblems_atlas = "gui_season_emblems_atlas_point_sample_masked",
 	gui_icons_atlas = "gui_icons_atlas_point_sample_masked",
@@ -425,7 +436,7 @@ local masked_saturated_point_sample_materials = {
 local point_sample_materials = {
 	controller_image_xb1 = "controller_image_xb1_point_sample",
 	gui_settings_atlas = "gui_settings_atlas_point_sample",
-	gui_voice_chat_atlas = "gui_voice_chat_atlas_point_sample",
+	gui_pose_items_atlas = "gui_pose_items_atlas_point_sample",
 	overchargecircle_fill = "overchargecircle_fill_point_sample",
 	gui_start_screen_atlas = "gui_start_screen_atlas_point_sample",
 	gui_season_emblems_atlas = "gui_season_emblems_atlas_point_sample",
@@ -439,6 +450,7 @@ local point_sample_materials = {
 	gui_icons_atlas = "gui_icons_atlas_point_sample",
 	end_screen_effect_victory_1 = "end_screen_effect_victory_1_point_sample",
 	end_screen_effect_victory_2 = "end_screen_effect_victory_2_point_sample",
+	gui_voice_chat_atlas = "gui_voice_chat_atlas_point_sample",
 	end_screen_banner_defeat = "end_screen_banner_defeat_point_sample",
 	gui_chat_atlas = "gui_chat_atlas_point_sample",
 	gui_hud_atlas = "gui_hud_atlas_point_sample",
@@ -605,4 +617,45 @@ UIAtlasHelper.add_standalone_texture_by_name = function (texture_name)
 	else
 		standalone_texture[texture_name] = true
 	end
+end
+
+UIAtlasHelper.get_insignia_texture_settings_from_level = function (level)
+	local level = math.min(level, ExperienceSettings.max_versus_level)
+	local insignia_uv_size = {
+		0.2,
+		0.1
+	}
+	local insignia_level = math.floor((level - 1) / 50)
+	local insignia_type = math.floor((level - 1) / 5) % 10
+	local insignia_main_uvs = {
+		{
+			insignia_level * insignia_uv_size[1],
+			insignia_type * insignia_uv_size[2]
+		},
+		{
+			insignia_level * insignia_uv_size[1] + insignia_uv_size[1],
+			insignia_type * insignia_uv_size[2] + insignia_uv_size[2]
+		}
+	}
+	local insignia_addon_uv_size = {
+		0.25,
+		1
+	}
+	local addon_level = math.floor(level - 1) % 5
+	local insignia_addon_uvs
+
+	if addon_level > 0 then
+		insignia_addon_uvs = {
+			{
+				(addon_level - 1) * insignia_addon_uv_size[1],
+				0
+			},
+			{
+				(addon_level - 1) * insignia_addon_uv_size[1] + insignia_addon_uv_size[1],
+				1
+			}
+		}
+	end
+
+	return insignia_main_uvs, insignia_addon_uvs
 end

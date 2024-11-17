@@ -336,7 +336,7 @@ StartMenuStateOverview._populate_career_page = function (self, hero_name, career
 	local level
 
 	if Managers.mechanism:current_mechanism_name() == "versus" then
-		local experience = ExperienceSettings.get_versus_profile_experience()
+		local experience = ExperienceSettings.get_versus_experience()
 
 		level = ExperienceSettings.get_versus_profile_level_from_experience(experience)
 	else

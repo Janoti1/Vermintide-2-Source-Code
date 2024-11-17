@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "ndw_daemon_whispers_bright_wizard",
 		name = "ndw_daemon_whispers_bright_wizard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -32,6 +33,7 @@ return function ()
 	define_rule({
 		response = "ndw_daemon_whispers_dwarf_ranger",
 		name = "ndw_daemon_whispers_dwarf_ranger",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -56,6 +58,7 @@ return function ()
 	define_rule({
 		response = "ndw_daemon_whispers_empire_soldier",
 		name = "ndw_daemon_whispers_empire_soldier",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -80,6 +83,7 @@ return function ()
 	define_rule({
 		response = "ndw_daemon_whispers_witch_hunter",
 		name = "ndw_daemon_whispers_witch_hunter",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -104,6 +108,7 @@ return function ()
 	define_rule({
 		response = "ndw_daemon_whispers_wood_elf",
 		name = "ndw_daemon_whispers_wood_elf",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -128,6 +133,7 @@ return function ()
 	define_rule({
 		response = "pbw_archdaemon_response",
 		name = "pbw_archdaemon_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -152,6 +158,7 @@ return function ()
 	define_rule({
 		response = "pbw_archdaemon_response_overheard",
 		name = "pbw_archdaemon_response_overheard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -182,6 +189,7 @@ return function ()
 	define_rule({
 		response = "pdr_archdaemon_response",
 		name = "pdr_archdaemon_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -206,6 +214,7 @@ return function ()
 	define_rule({
 		response = "pdr_archdaemon_response_overheard",
 		name = "pdr_archdaemon_response_overheard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -236,6 +245,7 @@ return function ()
 	define_rule({
 		response = "pes_archdaemon_response",
 		name = "pes_archdaemon_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -260,6 +270,7 @@ return function ()
 	define_rule({
 		response = "pes_archdaemon_response_overheard",
 		name = "pes_archdaemon_response_overheard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -290,6 +301,7 @@ return function ()
 	define_rule({
 		response = "pwe_archdaemon_response",
 		name = "pwe_archdaemon_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -314,6 +326,7 @@ return function ()
 	define_rule({
 		response = "pwe_archdaemon_response_overheard",
 		name = "pwe_archdaemon_response_overheard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -344,6 +357,7 @@ return function ()
 	define_rule({
 		response = "pwh_archdaemon_response",
 		name = "pwh_archdaemon_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -368,6 +382,7 @@ return function ()
 	define_rule({
 		response = "pwh_archdaemon_response_overheard",
 		name = "pwh_archdaemon_response_overheard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -794,10 +809,10 @@ return function ()
 				"pbw_archdaemon_response_04"
 			},
 			sound_events_duration = {
-				1.0526249408722,
-				1.2081874608993,
-				3.3553957939148,
-				1.9626458883286
+				1.0520000457764,
+				1.2079999446869,
+				3.3549792766571,
+				1.9619791507721
 			}
 		},
 		pbw_archdaemon_response_overheard = {
@@ -833,10 +848,10 @@ return function ()
 				"pbw_archdaemon_response_overheard_04"
 			},
 			sound_events_duration = {
-				0.61360418796539,
-				1.5746874809265,
+				0.61297917366028,
+				1.573979139328,
 				0.90799999237061,
-				0.95272916555405
+				0.95197916030884
 			}
 		},
 		pdr_archdaemon_response = {
@@ -872,10 +887,10 @@ return function ()
 				"pdr_archdaemon_response_04"
 			},
 			sound_events_duration = {
-				1.3005833625793,
-				0.97733330726624,
-				1.1853541135788,
-				0.87972915172577
+				1.2999792098999,
+				0.97697919607162,
+				1.1849792003632,
+				0.87897914648056
 			}
 		},
 		pdr_archdaemon_response_overheard = {
@@ -911,10 +926,10 @@ return function ()
 				"pdr_archdaemon_response_overheard_04"
 			},
 			sound_events_duration = {
-				1.4652708768845,
-				0.68402081727982,
-				1.4239791631699,
-				1.3405833244324
+				1.4649791717529,
+				0.68397915363312,
+				1.4229791164398,
+				1.3399791717529
 			}
 		},
 		pes_archdaemon_response = {
@@ -950,10 +965,10 @@ return function ()
 				"pes_archdaemon_response_04"
 			},
 			sound_events_duration = {
-				1.9077708721161,
-				0.69670832157135,
-				1.2392083406448,
-				1.3866666555405
+				1.9069792032242,
+				0.69599997997284,
+				1.2389792203903,
+				1.3859791755676
 			}
 		},
 		pes_archdaemon_response_overheard = {
@@ -989,10 +1004,10 @@ return function ()
 				"pes_archdaemon_response_overheard_04"
 			},
 			sound_events_duration = {
-				0.72358334064484,
-				0.65302085876465,
-				1.1392707824707,
-				0.70633333921432
+				0.72297918796539,
+				0.65299999713898,
+				1.1389791965485,
+				0.70597916841507
 			}
 		},
 		pwe_archdaemon_response = {
@@ -1028,10 +1043,10 @@ return function ()
 				"pwe_archdaemon_response_04"
 			},
 			sound_events_duration = {
-				1.6076250076294,
-				1.4716666936874,
-				2.2540209293366,
-				1.6086875200272
+				1.6069791316986,
+				1.4709792137146,
+				2.2539792060852,
+				1.6080000400543
 			}
 		},
 		pwe_archdaemon_response_overheard = {
@@ -1067,10 +1082,10 @@ return function ()
 				"pwe_archdaemon_response_overheard_04"
 			},
 			sound_events_duration = {
-				1.1503958702087,
-				1.9968333244324,
-				1.4216250181198,
-				0.9072083234787
+				1.1499791145325,
+				1.9959791898727,
+				1.420979142189,
+				0.90697914361954
 			}
 		},
 		pwh_archdaemon_response = {
@@ -1106,10 +1121,10 @@ return function ()
 				"pwh_archdaemon_response_04"
 			},
 			sound_events_duration = {
-				1.402583360672,
-				2.910395860672,
-				1.1788333654404,
-				2.7004792690277
+				1.4019792079925,
+				2.9099791049957,
+				1.1779791116715,
+				2.6999790668488
 			}
 		},
 		pwh_archdaemon_response_overheard = {
@@ -1145,10 +1160,10 @@ return function ()
 				"pwh_archdaemon_response_overheard_04"
 			},
 			sound_events_duration = {
-				0.89262497425079,
-				1.3445833921433,
-				0.87381249666214,
-				1.1336666345596
+				0.89197915792465,
+				1.3439999818802,
+				0.87297916412354,
+				1.1329791545868
 			}
 		}
 	})

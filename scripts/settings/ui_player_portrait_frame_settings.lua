@@ -3005,6 +3005,183 @@ UIPlayerPortraitFrameSettings = {
 				255
 			}
 		}
+	},
+	frame_globadier_01 = {
+		{
+			texture = "portrait_frame_globadier_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_globadier_02 = {
+		{
+			texture = "portrait_frame_globadier_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_gutter_runner_01 = {
+		{
+			texture = "portrait_frame_gutter_runner_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_gutter_runner_02 = {
+		{
+			texture = "portrait_frame_gutter_runner_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_packmaster_01 = {
+		{
+			texture = "portrait_frame_packmaster_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_packmaster_02 = {
+		{
+			texture = "portrait_frame_packmaster_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_ratling_gunner_01 = {
+		{
+			texture = "portrait_frame_ratling_gunner_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_ratling_gunner_02 = {
+		{
+			texture = "portrait_frame_ratling_gunner_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_troll_01 = {
+		{
+			texture = "portrait_frame_troll_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_troll_02 = {
+		{
+			texture = "portrait_frame_troll_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_warpfire_thrower_01 = {
+		{
+			texture = "portrait_frame_warpfire_thrower_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_warpfire_thrower_02 = {
+		{
+			texture = "portrait_frame_warpfire_thrower_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_versus_01 = {
+		{
+			texture = "portrait_frame_versus_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_versus_02 = {
+		{
+			texture = "crystals_01_child",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			},
+			size = {
+				128,
+				140
+			},
+			offset = {
+				0,
+				-61,
+				0
+			}
+		}
 	}
 }
 

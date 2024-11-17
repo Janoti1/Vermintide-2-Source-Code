@@ -206,7 +206,21 @@ local scenegraph_definition = {
 		parent = "banner_left",
 		horizontal_alignment = "left",
 		position = {
-			100,
+			100 + UISettings.INSIGNIA_OFFSET,
+			-100,
+			10
+		},
+		size = {
+			0,
+			0
+		}
+	},
+	player_insignia = {
+		vertical_alignment = "top",
+		parent = "banner_left",
+		horizontal_alignment = "left",
+		position = {
+			UISettings.INSIGNIA_OFFSET,
 			-100,
 			10
 		},
@@ -612,9 +626,23 @@ local scenegraph_definition = {
 		parent = "player_list",
 		horizontal_alignment = "left",
 		position = {
-			80,
+			80 + UISettings.INSIGNIA_OFFSET,
 			-7,
 			1
+		},
+		size = {
+			0,
+			0
+		}
+	},
+	player_list_insignia = {
+		vertical_alignment = "center",
+		parent = "player_list",
+		horizontal_alignment = "left",
+		position = {
+			35,
+			-7,
+			10
 		},
 		size = {
 			0,
@@ -1751,6 +1779,10 @@ local function player_widget_definition(index)
 	local frame_settings = UIFrameSettings.menu_frame_09
 	local background_texture = "talent_tree_bg_01"
 	local background_texture_settings = UIAtlasHelper.get_atlas_settings_by_texture_name(background_texture)
+	local insignia_offset = 0
+
+	insignia_offset = UISettings.INSIGNIA_OFFSET
+
 	local definition = {
 		element = {
 			passes = {
@@ -2052,7 +2084,7 @@ local function player_widget_definition(index)
 					pass_type = "texture_uv",
 					content_id = "grimoire_bar",
 					content_change_function = function (content, style)
-						style.texture_size[1] = 200 * style.grimoire_debuff
+						style.texture_size[1] = (200 - insignia_offset) * style.grimoire_debuff
 						content.uvs[1][1] = 1 - style.grimoire_debuff
 					end
 				},
@@ -2064,7 +2096,7 @@ local function player_widget_definition(index)
 						local grimoire_debuff = style.grimoire_debuff
 						local offset = style.offset
 
-						offset[1] = style.base_offset[1] - 200 * grimoire_debuff
+						offset[1] = style.base_offset[1] - (200 - insignia_offset) * grimoire_debuff
 					end
 				},
 				{
@@ -3088,7 +3120,7 @@ local function player_widget_definition(index)
 				horizontal_alignment = "left",
 				gradient_threshold = 1,
 				texture_size = {
-					200,
+					200 - insignia_offset,
 					18
 				},
 				color = {
@@ -3098,7 +3130,7 @@ local function player_widget_definition(index)
 					0
 				},
 				offset = {
-					150,
+					150 + insignia_offset,
 					-82,
 					14
 				}
@@ -3108,7 +3140,7 @@ local function player_widget_definition(index)
 				horizontal_alignment = "left",
 				gradient_threshold = 1,
 				texture_size = {
-					200,
+					200 - insignia_offset,
 					18
 				},
 				color = {
@@ -3118,7 +3150,7 @@ local function player_widget_definition(index)
 					255
 				},
 				offset = {
-					150,
+					150 + insignia_offset,
 					-82,
 					13
 				}
@@ -3127,11 +3159,11 @@ local function player_widget_definition(index)
 				vertical_alignment = "top",
 				horizontal_alignment = "left",
 				full_size = {
-					194,
+					194 - insignia_offset,
 					10
 				},
 				texture_size = {
-					200,
+					200 - insignia_offset,
 					12
 				},
 				color = {
@@ -3141,7 +3173,7 @@ local function player_widget_definition(index)
 					255
 				},
 				offset = {
-					153,
+					153 + insignia_offset,
 					-100,
 					13
 				}
@@ -3151,7 +3183,7 @@ local function player_widget_definition(index)
 				horizontal_alignment = "right",
 				grimoire_debuff = 0,
 				texture_size = {
-					200,
+					200 - insignia_offset,
 					18
 				},
 				color = {
@@ -3199,7 +3231,7 @@ local function player_widget_definition(index)
 					20
 				},
 				texture_size = {
-					200,
+					200 - insignia_offset,
 					30
 				},
 				tile_offset = {
@@ -3207,7 +3239,7 @@ local function player_widget_definition(index)
 					false
 				},
 				offset = {
-					150,
+					150 + insignia_offset,
 					-82,
 					10
 				},
@@ -3226,7 +3258,7 @@ local function player_widget_definition(index)
 					35
 				},
 				offset = {
-					150,
+					150 + insignia_offset,
 					-80,
 					15
 				},
@@ -3241,11 +3273,11 @@ local function player_widget_definition(index)
 				vertical_alignment = "top",
 				horizontal_alignment = "left",
 				texture_size = {
-					160,
+					160 - insignia_offset,
 					35
 				},
 				offset = {
-					170,
+					170 + insignia_offset,
 					-80,
 					15
 				},
@@ -3683,11 +3715,11 @@ local function player_widget_definition(index)
 				dynamic_font_size = true,
 				font_type = "arial",
 				size = {
-					210,
+					210 - insignia_offset,
 					30
 				},
 				offset = {
-					150,
+					150 + insignia_offset,
 					121,
 					3
 				},
@@ -3702,11 +3734,11 @@ local function player_widget_definition(index)
 				dynamic_font_size = true,
 				font_size = 20,
 				size = {
-					210,
+					210 - insignia_offset,
 					30
 				},
 				offset = {
-					152,
+					152 + insignia_offset,
 					119,
 					2
 				},
@@ -3721,11 +3753,11 @@ local function player_widget_definition(index)
 				dynamic_font_size = true,
 				font_type = "hell_shark_header",
 				size = {
-					210,
+					210 - insignia_offset,
 					30
 				},
 				offset = {
-					150,
+					150 + insignia_offset,
 					90,
 					3
 				},
@@ -3742,11 +3774,11 @@ local function player_widget_definition(index)
 				dynamic_font_size = true,
 				font_type = "hell_shark_header",
 				size = {
-					210,
+					210 - insignia_offset,
 					30
 				},
 				offset = {
-					152,
+					152 + insignia_offset,
 					88,
 					2
 				},

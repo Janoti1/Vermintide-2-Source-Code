@@ -20,7 +20,7 @@ local scenegraph_definition = {
 		parent = "root",
 		horizontal_alignment = "left",
 		position = {
-			0,
+			50,
 			0,
 			1
 		},
@@ -57,6 +57,34 @@ local scenegraph_definition = {
 		vertical_alignment = "center",
 		parent = "pivot",
 		horizontal_alignment = "center",
+		position = {
+			0,
+			0,
+			0
+		},
+		size = {
+			0,
+			0
+		}
+	},
+	insignia_pivot_parent = {
+		vertical_alignment = "top",
+		parent = "root",
+		horizontal_alignment = "left",
+		position = {
+			-40,
+			0,
+			1
+		},
+		size = {
+			0,
+			0
+		}
+	},
+	insignia_pivot = {
+		vertical_alignment = "top",
+		parent = "insignia_pivot_parent",
+		horizontal_alignment = "left",
 		position = {
 			0,
 			0,
@@ -1633,7 +1661,8 @@ local widget_definitions = {
 	default_dynamic = create_dynamic_portait_widget(),
 	default_static = create_static_widget(),
 	health_dynamic = create_dynamic_health_widget(),
-	ability_dynamic = create_dynamic_ability_widget()
+	ability_dynamic = create_dynamic_ability_widget(),
+	versus_insignia_static = UIWidgets.create_small_insignia("insignia_pivot", 0, nil, nil, nil, RETAINED_MODE_ENABLED)
 }
 local features_list = {
 	equipment = true,
@@ -1645,8 +1674,9 @@ local widget_name_by_feature = {
 	static = {
 		default = "default_static",
 		player_name = "default_static",
-		level = "default_static",
-		portrait_frame = "portrait_static"
+		versus_insignia = "versus_insignia_static",
+		portrait_frame = "portrait_static",
+		level = "default_static"
 	},
 	dynamic = {
 		default = "default_dynamic",

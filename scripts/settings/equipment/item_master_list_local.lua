@@ -143,6 +143,20 @@ ItemMasterList.grenade_fire_02 = {
 	item_type = "grenade",
 	can_wield = CanWieldAllItemTemplates
 }
+ItemMasterList.grenade_engineer = {
+	description = "description_grenade_frag_01",
+	temporary_template = "engineer_grenade_t1",
+	right_hand_unit = "units/weapons/player/wpn_emp_grenade_01_t1/wpn_emp_grenade_01_t1",
+	is_local = true,
+	inventory_icon = "icons_placeholder",
+	left_hand_unit = "units/weapons/player/wpn_emp_grenade_01_t1/wpn_emp_grenade_lighter_01_t1",
+	slot_type = "grenade",
+	rarity = "plentiful",
+	gamepad_hud_icon = "hud_icon_bomb_01",
+	hud_icon = "hud_inventory_icon_bomb",
+	item_type = "grenade",
+	can_wield = CanWieldAllItemTemplates
+}
 ItemMasterList.grain_sack = {
 	temporary_template = "sack",
 	slot_type = "healthkit",

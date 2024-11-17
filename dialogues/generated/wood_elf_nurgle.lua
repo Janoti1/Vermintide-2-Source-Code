@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwe_level_nurgle_coming_down",
 		response = "pwe_level_nurgle_coming_down",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_nurgle_spotting_objective",
 		response = "pwe_level_nurgle_spotting_objective",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_nurgle_swift_river",
 		response = "pwe_level_nurgle_swift_river",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_nurgle_intro_a",
 		response = "pwe_nurgle_intro_a",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_nurgle_intro_b",
 		response = "pwe_nurgle_intro_b",
 		criterias = {

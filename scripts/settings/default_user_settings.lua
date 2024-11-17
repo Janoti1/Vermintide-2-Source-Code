@@ -83,7 +83,7 @@ local default_user_settings = {
 	use_razer_chroma = false,
 	friendly_fire_crosshair = true,
 	language_id = "en",
-	persistent_ammo_counter = false,
+	toggle_pactsworn_overhead_name_ui = true,
 	friendly_fire_hit_marker = true,
 	vs_floating_damage = "both",
 	hud_damage_feedback_in_world = true,
@@ -100,19 +100,21 @@ local default_user_settings = {
 	twitch_time_between_votes = 30,
 	music_bus_volume = 100,
 	toggle_alternate_attack = false,
-	subtitles_font_size = 20,
+	persistent_ammo_counter = false,
+	toggle_versus_level_in_all_game_modes = true,
 	mute_in_background = false,
 	voip_bus_volume = 100,
 	blood_enabled = true,
+	subtitles_font_size = 20,
+	gamepad_look_sensitivity = 0,
 	subtitles_background_opacity = 20,
 	fsr2_enabled = false,
-	gamepad_look_sensitivity = 0,
-	root_scale_x = 1,
 	motion_sickness_hit = "normal",
-	weapon_trails = "normal",
+	root_scale_x = 1,
 	motion_sickness_swing = "normal",
 	dismemberment_enabled = true,
 	head_bob = true,
+	weapon_trails = "normal",
 	melee_camera_movement = true,
 	numeric_ui = false,
 	minion_outlines = "off",
@@ -172,6 +174,7 @@ local default_render_settings = {
 	fov = script_data.settings.default_fov or CameraSettings.first_person._node.vertical_fov,
 	nv_low_latency_mode = not not reflex_supported
 }
+local default_versus_settings = {}
 local default_texture_settings = {}
 local char_texture_settings = TextureQuality.characters[default_user_settings.char_texture_quality]
 local env_texture_settings = TextureQuality.environment[default_user_settings.env_texture_quality]
@@ -261,6 +264,14 @@ DefaultUserSettings.set_default_user_settings = function ()
 		end
 	end
 
+	for key, value in pairs(default_versus_settings) do
+		if Application.user_setting("versus_settings", key) == nil then
+			Application.set_user_setting("versus_settings", key, value)
+
+			set_default = true
+		end
+	end
+
 	if reload then
 		Application.apply_user_settings()
 
@@ -287,6 +298,8 @@ DefaultUserSettings.get = function (setting_type, setting_name)
 		setting = default_render_settings[setting_name]
 	elseif setting_type == "texture_settings" then
 		setting = default_texture_settings[setting_name]
+	elseif setting_type == "versus_settings" then
+		setting = default_versus_settings[setting_name]
 	end
 
 	fassert(setting ~= nil, "No default setting set for setting %s", setting_name)

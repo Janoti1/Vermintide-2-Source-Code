@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2024-11-17  |  6.0.3  | [Versus Release and Hotfixes](https://forums.fatsharkgames.com/t/versus-is-out-now-free-new-pvp-game-mode-patch-6-0-0-hotfix-6-0-3/101222)
 2024-11-04  |  5.6.1  | [Geheimnisnacht Update (5.6.0) and Hotfix](https://forums.fatsharkgames.com/t/patch-5-6-0-geheimnisnacht-double-xp-live-now-hotfix-5-6-1/100685)
 2024-06-13  |  5.5.7  | [Hotfix](https://forums.fatsharkgames.com/t/versus-alpha-test-extended-to-june-17th-hotfix-5-5-6-5-5-7/95643)
 2024-06-12  |  5.5.6  | [Hotfix](https://forums.fatsharkgames.com/t/versus-alpha-test-extended-to-june-17th-hotfix-5-5-6/95643)

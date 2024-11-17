@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "nik_greeting_skulls_event_first",
 		name = "nik_greeting_skulls_event_first",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -20,6 +21,7 @@ return function ()
 	define_rule({
 		response = "nik_greeting_skulls_event_second",
 		name = "nik_greeting_skulls_event_second",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -38,6 +40,7 @@ return function ()
 	define_rule({
 		response = "nik_hub_backstory_interaction_skulls",
 		name = "nik_hub_backstory_interaction_skulls",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -56,6 +59,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_bastion",
 		name = "nik_skulls_event_start_banter_d_bastion",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -80,6 +84,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_bell",
 		name = "nik_skulls_event_start_banter_d_bell",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -104,6 +109,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_bogenhafen_city",
 		name = "nik_skulls_event_start_banter_d_bogenhafen_city",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -128,6 +134,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_bogenhafen_slum",
 		name = "nik_skulls_event_start_banter_d_bogenhafen_slum",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -152,6 +159,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_castle",
 		name = "nik_skulls_event_start_banter_d_castle",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -176,6 +184,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_catacombs",
 		name = "nik_skulls_event_start_banter_d_catacombs",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -200,6 +209,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_crater",
 		name = "nik_skulls_event_start_banter_d_crater",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -224,6 +234,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_elven_ruins",
 		name = "nik_skulls_event_start_banter_d_elven_ruins",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -248,6 +259,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_farmlands",
 		name = "nik_skulls_event_start_banter_d_farmlands",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -272,6 +284,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_fort",
 		name = "nik_skulls_event_start_banter_d_fort",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -296,6 +309,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_ground_zero",
 		name = "nik_skulls_event_start_banter_d_ground_zero",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -320,6 +334,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_military",
 		name = "nik_skulls_event_start_banter_d_military",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -344,6 +359,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_mine",
 		name = "nik_skulls_event_start_banter_d_mine",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -368,6 +384,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_nurgle",
 		name = "nik_skulls_event_start_banter_d_nurgle",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -392,6 +409,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_portals",
 		name = "nik_skulls_event_start_banter_d_portals",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -416,6 +434,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_skaven_stronghold",
 		name = "nik_skulls_event_start_banter_d_skaven_stronghold",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -440,6 +459,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_skittergate",
 		name = "nik_skulls_event_start_banter_d_skittergate",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -464,6 +484,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_ussingen",
 		name = "nik_skulls_event_start_banter_d_ussingen",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -488,6 +509,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_warcamp",
 		name = "nik_skulls_event_start_banter_d_warcamp",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -512,6 +534,7 @@ return function ()
 	define_rule({
 		response = "nik_skulls_event_start_banter_d_wizards_trail",
 		name = "nik_skulls_event_start_banter_d_wizards_trail",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

@@ -145,6 +145,26 @@ local morris_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "morspecials",
+				weight = 2,
+				breeds = {
+					"skaven_warpfire_thrower",
+					{
+						1,
+						2
+					},
+					"skaven_poison_wind_globadier",
+					1,
+					"skaven_ratling_gunner",
+					{
+						1,
+						2
+					}
+				}
+			}
 		}
 	},
 	morris_storm_vermin_large = {
@@ -382,6 +402,40 @@ local morris_compositions = {
 					{
 						8,
 						9
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "somevermin",
+				weight = 7,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					{
+						2,
+						3
+					},
+					"skaven_storm_vermin_commander",
+					{
+						4,
+						5
+					}
+				}
+			},
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					{
+						4,
+						5
+					},
+					"skaven_storm_vermin_commander",
+					{
+						2,
+						3
 					}
 				}
 			}
@@ -737,6 +791,56 @@ local morris_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_fanatic",
+					{
+						12,
+						14
+					}
+				}
+			},
+			{
+				name = "plain",
+				weight = 3,
+				breeds = {
+					"chaos_marauder",
+					{
+						6,
+						7
+					},
+					"chaos_fanatic",
+					{
+						6,
+						7
+					}
+				}
+			},
+			{
+				name = "mixed",
+				weight = 2,
+				breeds = {
+					"chaos_marauder_with_shield",
+					{
+						2,
+						3
+					},
+					"chaos_marauder",
+					{
+						3,
+						4
+					},
+					"chaos_fanatic",
+					{
+						6,
+						7
+					}
+				}
+			}
 		}
 	},
 	morris_small_beastmen = {
@@ -1019,6 +1123,46 @@ local morris_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 3,
+				breeds = {
+					"beastmen_gor",
+					{
+						6,
+						7
+					}
+				}
+			},
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_ungor",
+					{
+						12,
+						14
+					}
+				}
+			},
+			{
+				name = "mixed",
+				weight = 3,
+				breeds = {
+					"beastmen_gor",
+					{
+						2,
+						3
+					},
+					"beastmen_ungor",
+					{
+						6,
+						7
+					}
+				}
+			}
 		}
 	},
 	morris_plague_monk_medium = {
@@ -1144,6 +1288,24 @@ local morris_compositions = {
 					{
 						6,
 						7
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "mixed",
+				weight = 1,
+				breeds = {
+					"skaven_plague_monk",
+					{
+						4,
+						5
+					},
+					"skaven_clan_rat",
+					{
+						4,
+						6
 					}
 				}
 			}
@@ -1463,6 +1625,29 @@ local morris_compositions = {
 					{
 						3,
 						4
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "mixed",
+				weight = 3,
+				breeds = {
+					"chaos_marauder_with_shield",
+					{
+						6,
+						7
+					},
+					"chaos_marauder",
+					{
+						7,
+						8
+					},
+					"chaos_fanatic",
+					{
+						12,
+						14
 					}
 				}
 			}
@@ -1914,6 +2099,69 @@ local morris_compositions = {
 					{
 						8,
 						9
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					{
+						4,
+						5
+					}
+				}
+			},
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					{
+						3,
+						4
+					},
+					"skaven_clan_rat_with_shield",
+					{
+						2,
+						3
+					}
+				}
+			},
+			{
+				name = "mixed",
+				weight = 4,
+				breeds = {
+					"skaven_plague_monk",
+					{
+						4,
+						5
+					},
+					"skaven_clan_rat",
+					{
+						4,
+						6
+					}
+				}
+			},
+			{
+				name = "warpfire",
+				weight = 2,
+				breeds = {
+					"skaven_warpfire_thrower",
+					2,
+					"skaven_clan_rat",
+					{
+						3,
+						4
+					},
+					"skaven_clan_rat_with_shield",
+					{
+						2,
+						3
 					}
 				}
 			}
@@ -2538,6 +2786,79 @@ local morris_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "mixed",
+				weight = 3,
+				breeds = {
+					"chaos_marauder_with_shield",
+					{
+						3,
+						4
+					},
+					"chaos_marauder",
+					{
+						6,
+						7
+					},
+					"chaos_fanatic",
+					{
+						11,
+						13
+					}
+				}
+			},
+			{
+				name = "raiders",
+				weight = 3,
+				breeds = {
+					"chaos_marauder",
+					{
+						4,
+						6
+					},
+					"chaos_raider",
+					{
+						3,
+						4
+					}
+				}
+			},
+			{
+				name = "berzerkers",
+				weight = 3,
+				breeds = {
+					"chaos_marauder",
+					{
+						4,
+						6
+					},
+					"chaos_berzerker",
+					{
+						3,
+						4
+					}
+				}
+			},
+			{
+				name = "warriors",
+				weight = 3,
+				breeds = {
+					"chaos_warrior",
+					2,
+					"chaos_marauder",
+					{
+						7,
+						8
+					},
+					"chaos_fanatic",
+					{
+						11,
+						13
+					}
+				}
+			}
 		}
 	},
 	morris_elite_medium_beastmen = {
@@ -2854,6 +3175,53 @@ local morris_compositions = {
 					{
 						6,
 						7
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "mixed",
+				weight = 7,
+				breeds = {
+					"beastmen_standard_bearer",
+					1,
+					"beastmen_gor",
+					{
+						5,
+						6
+					},
+					"beastmen_ungor",
+					{
+						14,
+						15
+					}
+				}
+			},
+			{
+				name = "archers",
+				weight = 7,
+				breeds = {
+					"beastmen_ungor_archer",
+					{
+						6,
+						7
+					},
+					"beastmen_ungor",
+					{
+						14,
+						15
+					}
+				}
+			},
+			{
+				name = "bestigors",
+				weight = 7,
+				breeds = {
+					"beastmen_bestigor",
+					{
+						3,
+						4
 					}
 				}
 			}
@@ -3444,6 +3812,90 @@ local morris_compositions = {
 					{
 						8,
 						9
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "monster",
+				weight = 3,
+				breeds = {
+					"skaven_rat_ogre",
+					{
+						1,
+						1
+					}
+				}
+			},
+			{
+				name = "monster",
+				weight = 3,
+				breeds = {
+					"skaven_stormfiend",
+					{
+						1,
+						1
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 2,
+				breeds = {
+					"skaven_ratling_gunner",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 2,
+				breeds = {
+					"skaven_warpfire_thrower",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 2,
+				breeds = {
+					"skaven_poison_wind_globadier",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					{
+						4,
+						5
+					},
+					"skaven_clan_rat_with_shield",
+					{
+						3,
+						4
 					}
 				}
 			}
@@ -4140,6 +4592,100 @@ local morris_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "monster",
+				weight = 3,
+				breeds = {
+					"chaos_troll",
+					{
+						1,
+						1
+					}
+				}
+			},
+			{
+				name = "monster",
+				weight = 3,
+				breeds = {
+					"chaos_spawn",
+					{
+						1,
+						1
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 2,
+				breeds = {
+					"skaven_ratling_gunner",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 2,
+				breeds = {
+					"skaven_warpfire_thrower",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 2,
+				breeds = {
+					"skaven_poison_wind_globadier",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "raiders",
+				weight = 3,
+				breeds = {
+					"chaos_marauder",
+					{
+						4,
+						6
+					},
+					"chaos_raider",
+					{
+						4,
+						5
+					}
+				}
+			},
+			{
+				name = "warriors",
+				weight = 3,
+				breeds = {
+					"chaos_warrior",
+					{
+						2,
+						3
+					},
+					"chaos_marauder",
+					{
+						7,
+						8
+					},
+					"chaos_fanatic",
+					{
+						11,
+						13
+					}
+				}
+			}
 		}
 	},
 	cursed_chest_challenge_beastmen = {
@@ -4541,9 +5087,79 @@ local morris_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "monster",
+				weight = 3,
+				breeds = {
+					"beastmen_minotaur",
+					{
+						1,
+						1
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 1,
+				breeds = {
+					"skaven_ratling_gunner",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 1,
+				breeds = {
+					"skaven_warpfire_thrower",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "special",
+				weight = 1,
+				breeds = {
+					"skaven_poison_wind_globadier",
+					{
+						5,
+						6
+					}
+				}
+			},
+			{
+				name = "bestigors",
+				weight = 3,
+				breeds = {
+					"beastmen_bestigor",
+					{
+						5,
+						6
+					}
+				}
+			}
 		}
 	},
 	cursed_chest_challenge_test = {
+		{
+			{
+				name = "special",
+				weight = 1,
+				breeds = {
+					"skaven_ratling_gunner",
+					{
+						10,
+						10
+					}
+				}
+			}
+		},
 		{
 			{
 				name = "special",
@@ -4706,9 +5322,29 @@ local morris_compositions = {
 					20
 				}
 			}
+		},
+		{
+			{
+				name = "skaven_slave",
+				weight = 3,
+				breeds = {
+					"skaven_slave",
+					20
+				}
+			}
 		}
 	},
 	morris_TEST_skaven_slave = {
+		{
+			{
+				name = "skaven_slave",
+				weight = 3,
+				breeds = {
+					"skaven_slave",
+					60
+				}
+			}
+		},
 		{
 			{
 				name = "skaven_slave",
@@ -4850,9 +5486,29 @@ local morris_compositions = {
 					60
 				}
 			}
+		},
+		{
+			{
+				name = "skaven_clan_rat",
+				weight = 3,
+				breeds = {
+					"skaven_clan_rat",
+					60
+				}
+			}
 		}
 	},
 	morris_TEST_skaven_clan_rat_with_shield = {
+		{
+			{
+				name = "skaven_clan_rat_with_shield",
+				weight = 3,
+				breeds = {
+					"skaven_clan_rat_with_shield",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "skaven_clan_rat_with_shield",
@@ -4994,9 +5650,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "skaven_plague_monk",
+				weight = 3,
+				breeds = {
+					"skaven_plague_monk",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_skaven_storm_vermin = {
+		{
+			{
+				name = "skaven_storm_vermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "skaven_storm_vermin",
@@ -5138,9 +5814,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "skaven_storm_vermin_commander",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_skaven_storm_vermin_with_shield = {
+		{
+			{
+				name = "skaven_storm_vermin_with_shield",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "skaven_storm_vermin_with_shield",
@@ -5282,9 +5978,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "skaven_explosive_loot_rat",
+				weight = 3,
+				breeds = {
+					"skaven_explosive_loot_rat",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_chaos_fanatic = {
+		{
+			{
+				name = "chaos_fanatic",
+				weight = 3,
+				breeds = {
+					"chaos_fanatic",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "chaos_fanatic",
@@ -5426,9 +6142,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "chaos_marauder",
+				weight = 3,
+				breeds = {
+					"chaos_marauder",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_chaos_marauder_with_shield = {
+		{
+			{
+				name = "chaos_marauder_with_shield",
+				weight = 3,
+				breeds = {
+					"chaos_marauder_with_shield",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "chaos_marauder_with_shield",
@@ -5570,9 +6306,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "chaos_berzerker",
+				weight = 3,
+				breeds = {
+					"chaos_berzerker",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_chaos_raider = {
+		{
+			{
+				name = "chaos_raider",
+				weight = 3,
+				breeds = {
+					"chaos_raider",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "chaos_raider",
@@ -5714,9 +6470,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "chaos_warrior",
+				weight = 3,
+				breeds = {
+					"chaos_warrior",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_beastmen_ungor = {
+		{
+			{
+				name = "beastmen_ungor",
+				weight = 3,
+				breeds = {
+					"beastmen_ungor",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "beastmen_ungor",
@@ -5858,6 +6634,16 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "beastmen_ungor_archer",
+				weight = 3,
+				breeds = {
+					"beastmen_ungor_archer",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_beastmen_gor = {
@@ -5930,9 +6716,29 @@ local morris_compositions = {
 					40
 				}
 			}
+		},
+		{
+			{
+				name = "beastmen_gor",
+				weight = 3,
+				breeds = {
+					"beastmen_gor",
+					40
+				}
+			}
 		}
 	},
 	morris_TEST_beastmen_bestigor = {
+		{
+			{
+				name = "beastmen_bestigor",
+				weight = 3,
+				breeds = {
+					"beastmen_bestigor",
+					40
+				}
+			}
+		},
 		{
 			{
 				name = "beastmen_bestigor",

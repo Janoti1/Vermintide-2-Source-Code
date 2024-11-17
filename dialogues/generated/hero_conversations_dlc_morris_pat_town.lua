@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_town_arena",
 		response = "pbw_morris_town_arena",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_town_behind",
 		response = "pbw_morris_town_behind",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_town_harbour",
 		response = "pbw_morris_town_harbour",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_town_settlement",
 		response = "pbw_morris_town_settlement",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_town_shipwreck",
 		response = "pbw_morris_town_shipwreck",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_town_arena",
 		response = "pdr_morris_town_arena",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_town_behind",
 		response = "pdr_morris_town_behind",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_town_harbour",
 		response = "pdr_morris_town_harbour",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_town_settlement",
 		response = "pdr_morris_town_settlement",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_town_shipwreck",
 		response = "pdr_morris_town_shipwreck",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_town_arena",
 		response = "pes_morris_town_arena",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_town_behind",
 		response = "pes_morris_town_behind",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_town_harbour",
 		response = "pes_morris_town_harbour",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_town_settlement",
 		response = "pes_morris_town_settlement",
 		criterias = {
@@ -616,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_town_shipwreck",
 		response = "pes_morris_town_shipwreck",
 		criterias = {
@@ -660,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_town_arena",
 		response = "pwe_morris_town_arena",
 		criterias = {
@@ -704,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_town_behind",
 		response = "pwe_morris_town_behind",
 		criterias = {
@@ -748,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_town_harbour",
 		response = "pwe_morris_town_harbour",
 		criterias = {
@@ -792,6 +810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_town_settlement",
 		response = "pwe_morris_town_settlement",
 		criterias = {
@@ -836,6 +855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_town_shipwreck",
 		response = "pwe_morris_town_shipwreck",
 		criterias = {
@@ -880,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_town_arena",
 		response = "pwh_morris_town_arena",
 		criterias = {
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_town_behind",
 		response = "pwh_morris_town_behind",
 		criterias = {
@@ -968,6 +990,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_town_harbour",
 		response = "pwh_morris_town_harbour",
 		criterias = {
@@ -1012,6 +1035,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_town_settlement",
 		response = "pwh_morris_town_settlement",
 		criterias = {
@@ -1056,6 +1080,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_town_shipwreck",
 		response = "pwh_morris_town_shipwreck",
 		criterias = {

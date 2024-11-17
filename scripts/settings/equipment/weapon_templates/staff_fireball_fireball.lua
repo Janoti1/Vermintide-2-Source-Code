@@ -355,7 +355,35 @@ weapon_template.tooltip_detail = {
 
 local fireball_vs = table.clone(weapon_template)
 
+fireball_vs.actions.action_one.default.allowed_chain_actions = {
+	{
+		sub_action = "default",
+		start_time = 0.5,
+		action = "action_wield",
+		input = "action_wield"
+	},
+	{
+		sub_action = "default",
+		start_time = 0.5,
+		action = "action_one",
+		release_required = "action_one_hold",
+		input = "action_one"
+	},
+	{
+		sub_action = "default",
+		start_time = 0.6,
+		action = "action_two",
+		input = "action_two_hold"
+	},
+	{
+		sub_action = "default",
+		start_time = 0.3,
+		action = "weapon_reload",
+		input = "weapon_reload"
+	}
+}
 fireball_vs.actions.action_one.default.impact_data.damage_profile = "staff_fireball_vs"
+fireball_vs.actions.action_one.shoot_charged.impact_data.damage_profile = "staff_fireball_charged_vs"
 
 return {
 	staff_fireball_fireball_template_1 = table.clone(weapon_template),

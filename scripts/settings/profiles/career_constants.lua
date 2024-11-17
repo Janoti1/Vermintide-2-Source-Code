@@ -13,7 +13,9 @@ CareerConstants = {
 		talent_4_2_cooldown = 0.25,
 		num_starting_bombs = 2,
 		talent_4_2_crit = 0.08,
+		talent_6_2_starting_rps_vs = 0.5,
 		talent_4_2_damage_taken = 0.2,
+		talent_6_2_starting_rps = 1,
 		talent_4_3_stack_duration = 1.5
 	},
 	wh_priest = {

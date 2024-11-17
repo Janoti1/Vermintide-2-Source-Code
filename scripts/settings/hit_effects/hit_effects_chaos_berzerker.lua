@@ -44,21 +44,6 @@ HitEffectsChaosBerzerker = {
 			"ragdoll"
 		}
 	},
-	heavy_slashing_buffed = {
-		inherits = "default",
-		do_dismember = true,
-		extra_conditions = {
-			damage_type = "heavy_slashing_buffed"
-		},
-		animations = {
-			"ragdoll"
-		},
-		push = {
-			distal_force = 30,
-			vertical_force = 35,
-			lateral_force = 40
-		}
-	},
 	light_slashing_linesman_death = {
 		inherits = "default_death",
 		extra_conditions = {

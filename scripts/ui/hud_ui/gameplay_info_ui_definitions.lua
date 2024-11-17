@@ -51,7 +51,7 @@ local scenegraph_definition = {
 		},
 		position = {
 			0,
-			-50,
+			110,
 			2
 		}
 	},
@@ -65,7 +65,7 @@ local scenegraph_definition = {
 		},
 		position = {
 			0,
-			-35,
+			-48,
 			2
 		}
 	},
@@ -85,7 +85,7 @@ local scenegraph_definition = {
 	},
 	spawn_info_text = {
 		vertical_alignment = "center",
-		parewnt = "spawn_info",
+		parent = "spawn_info",
 		horizontal_alignment = "right",
 		size = {
 			400,
@@ -102,55 +102,70 @@ local teleport_text_style = {
 	word_wrap = true,
 	upper_case = false,
 	localize = false,
-	use_shadow = false,
+	use_shadow = true,
 	font_size = 24,
 	horizontal_alignment = "center",
 	vertical_alignment = "center",
 	dynamic_font_size = false,
 	draw_text_rect = true,
 	font_type = "hell_shark",
-	text_color = Colors.get_color_table_with_alpha("white", 255),
-	rect_color = Colors.get_color_table_with_alpha("black", 90),
+	text_color = Colors.get_color_table_with_alpha("light_gray", 255),
+	rect_color = Colors.get_color_table_with_alpha("black", 0),
 	offset = {
 		0,
 		0,
 		2
+	},
+	shadow_offset = {
+		1,
+		1,
+		0
 	}
 }
 local spawn_text_style = {
-	font_size = 28,
+	font_size = 40,
 	upper_case = false,
 	localize = false,
-	use_shadow = false,
+	use_shadow = true,
+	word_wrap = true,
+	horizontal_alignment = "center",
+	vertical_alignment = "center",
+	draw_text_rect = true,
+	font_type = "hell_shark_header",
+	text_color = Colors.get_color_table_with_alpha("white", 255),
+	rect_color = Colors.get_color_table_with_alpha("black", 0),
+	offset = {
+		0,
+		0,
+		10
+	},
+	shadow_offset = {
+		1,
+		1,
+		0
+	}
+}
+local spawn_reason_text_style = {
+	font_size = 24,
+	upper_case = false,
+	localize = false,
+	use_shadow = true,
 	word_wrap = true,
 	horizontal_alignment = "center",
 	vertical_alignment = "center",
 	draw_text_rect = true,
 	font_type = "hell_shark",
 	text_color = Colors.get_color_table_with_alpha("white", 255),
-	rect_color = Colors.get_color_table_with_alpha("black", 90),
+	rect_color = Colors.get_color_table_with_alpha("dark_red", 100),
 	offset = {
 		0,
 		0,
 		10
-	}
-}
-local spawn_reason_text_style = {
-	font_size = 20,
-	upper_case = false,
-	localize = false,
-	use_shadow = false,
-	word_wrap = true,
-	horizontal_alignment = "center",
-	vertical_alignment = "center",
-	draw_text_rect = true,
-	font_type = "hell_shark",
-	text_color = Colors.get_color_table_with_alpha("red", 255),
-	rect_color = Colors.get_color_table_with_alpha("black", 90),
-	offset = {
-		0,
-		0,
-		10
+	},
+	shadow_offset = {
+		1,
+		1,
+		0
 	}
 }
 local widgets = {

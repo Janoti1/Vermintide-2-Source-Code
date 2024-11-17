@@ -30,9 +30,23 @@ local scenegraph_definition = {
 			SIZE_Y
 		}
 	},
-	pivot = {
+	pivot_parent = {
 		vertical_alignment = "bottom",
 		parent = "root",
+		horizontal_alignment = "center",
+		position = {
+			50,
+			0,
+			5
+		},
+		size = {
+			0,
+			0
+		}
+	},
+	pivot = {
+		vertical_alignment = "bottom",
+		parent = "pivot_parent",
 		horizontal_alignment = "center",
 		position = {
 			0,
@@ -45,15 +59,42 @@ local scenegraph_definition = {
 		}
 	},
 	player_status = {
-		parent = "pivot",
+		vertical_alignment = "bottom",
+		parent = "root",
+		horizontal_alignment = "center",
 		position = {
+			0 + UISettings.INSIGNIA_OFFSET,
 			0,
-			0,
-			0
+			5
 		},
 		size = {
 			86,
 			108
+		}
+	},
+	insignia_pivot_parent = {
+		vertical_alignment = "bottom",
+		parent = "root",
+		horizontal_alignment = "left",
+		position = {
+			0,
+			0,
+			10
+		},
+		size = portrait_area
+	},
+	insignia_pivot = {
+		vertical_alignment = "top",
+		parent = "insignia_pivot_parent",
+		horizontal_alignment = "left",
+		position = {
+			40,
+			-25,
+			0
+		},
+		size = {
+			0,
+			0
 		}
 	},
 	portrait_pivot_parent = {
@@ -61,7 +102,7 @@ local scenegraph_definition = {
 		parent = "root",
 		horizontal_alignment = "left",
 		position = {
-			80,
+			80 + UISettings.INSIGNIA_OFFSET,
 			80,
 			10
 		},
@@ -114,22 +155,23 @@ local scenegraph_definition = {
 	}
 }
 local inventory_consumable_icons = {
+	"hud_inventory_icon_heal_01",
+	"hud_inventory_icon_bomb",
+	"hud_inventory_icon_potion",
 	wpn_grimoire_01 = "hud_inventory_icon_grimoire",
-	potion_cooldown_reduction_01 = "hud_inventory_icon_potion_cooldown_reduction",
-	potion_healing_draught_01 = "hud_inventory_icon_heal_02",
-	grenade_frag_02 = "hud_inventory_icon_bomb",
-	[3] = "hud_inventory_icon_potion",
-	grenade_frag_01 = "hud_inventory_icon_bomb",
 	grenade_smoke_02 = "hud_inventory_icon_bomb",
-	grenade_smoke_01 = "hud_inventory_icon_bomb",
-	grenade_fire_01 = "hud_inventory_icon_bomb",
+	potion_healing_draught_01 = "hud_inventory_icon_heal_02",
 	grenade_fire_02 = "hud_inventory_icon_bomb",
-	[1] = "hud_inventory_icon_heal_01",
-	[2] = "hud_inventory_icon_bomb",
+	potion_speed_boost_01 = "hud_inventory_icon_potion_speed",
+	grenade_fire_01 = "hud_inventory_icon_bomb",
+	grenade_engineer = "hud_inventory_icon_bomb",
+	grenade_frag_02 = "hud_inventory_icon_bomb",
+	grenade_frag_01 = "hud_inventory_icon_bomb",
+	potion_cooldown_reduction_01 = "hud_inventory_icon_potion_cooldown_reduction",
+	grenade_smoke_01 = "hud_inventory_icon_bomb",
 	wpn_side_objective_tome_01 = "hud_inventory_icon_tome",
 	potion_damage_boost_01 = "hud_inventory_icon_potion_strength",
-	healthkit_first_aid_kit_01 = "hud_inventory_icon_heal_01",
-	potion_speed_boost_01 = "hud_inventory_icon_potion_speed"
+	healthkit_first_aid_kit_01 = "hud_inventory_icon_heal_01"
 }
 local inventory_index_by_slot = {
 	slot_potion = 3,
@@ -836,7 +878,8 @@ local widget_definitions = {
 	default_static = create_static_widget(),
 	health_dynamic = create_dynamic_health_widget(),
 	ability_dynamic = create_dynamic_ability_widget(),
-	respawn_dynamic = create_respawn_countdown_widget()
+	respawn_dynamic = create_respawn_countdown_widget(),
+	versus_insignia_static = UIWidgets.create_small_insignia("insignia_pivot", 1, nil, nil, nil, RETAINED_MODE_ENABLED)
 }
 local features_list = {
 	ability = true,
@@ -849,6 +892,7 @@ local widget_name_by_feature = {
 	static = {
 		default = "default_static",
 		level = "default_static",
+		versus_insignia = "versus_insignia_static",
 		portrait_frame = "portrait_static"
 	},
 	dynamic = {

@@ -1,17 +1,8 @@
 OutlineSettings = OutlineSettings or {}
 OutlineSettings.colors = {
 	ally = {
-		variable = "outline_color_alpha",
-		outline_multiplier = 7,
 		pulse_multiplier = 50,
 		pulsate = false,
-		outline_multiplier_variable = "outline_multiplier_alpha",
-		channel = {
-			255,
-			0,
-			0,
-			0
-		},
 		color = {
 			255,
 			118,
@@ -20,17 +11,8 @@ OutlineSettings.colors = {
 		}
 	},
 	knocked_down = {
-		variable = "outline_color_red",
-		outline_multiplier = 7,
 		pulse_multiplier = 50,
 		pulsate = false,
-		outline_multiplier_variable = "outline_multiplier_red",
-		channel = {
-			0,
-			255,
-			0,
-			0
-		},
 		color = {
 			255,
 			227,
@@ -39,17 +21,8 @@ OutlineSettings.colors = {
 		}
 	},
 	interactable = {
-		variable = "outline_color_green",
-		outline_multiplier = 4,
 		pulse_multiplier = 50,
 		pulsate = false,
-		outline_multiplier_variable = "outline_multiplier_green",
-		channel = {
-			0,
-			0,
-			255,
-			0
-		},
 		color = {
 			255,
 			255,
@@ -58,17 +31,8 @@ OutlineSettings.colors = {
 		}
 	},
 	player_attention = {
-		variable = "outline_color_blue",
-		outline_multiplier = 6,
 		pulse_multiplier = 15,
-		pulsate = true,
-		outline_multiplier_variable = "outline_multiplier_blue",
-		channel = {
-			0,
-			0,
-			0,
-			255
-		},
+		pulsate = false,
 		color = {
 			255,
 			30,
@@ -77,22 +41,13 @@ OutlineSettings.colors = {
 		}
 	},
 	necromancer_command = {
-		variable = "outline_color_green",
-		outline_multiplier = 0,
 		pulse_multiplier = 0,
 		pulsate = false,
-		outline_multiplier_variable = "outline_multiplier_alpha",
-		channel = {
-			255,
-			0,
-			0,
-			187
-		},
 		color = {
 			255,
-			0,
-			0,
-			0
+			89,
+			218,
+			158
 		}
 	}
 }
@@ -167,6 +122,12 @@ OutlineSettings.templates = {
 		priority = 20,
 		method = "always",
 		outline_color = OutlineSettings.colors.necromancer_command,
+		flag = OutlineSettings.flags.non_wall_occluded
+	},
+	horde_ability = {
+		priority = 20,
+		method = "always",
+		outline_color = OutlineSettings.colors.local_player_team_lighter,
 		flag = OutlineSettings.flags.non_wall_occluded
 	}
 }

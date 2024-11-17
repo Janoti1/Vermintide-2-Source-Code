@@ -377,6 +377,40 @@ weapon_template.tooltip_detail = {
 	}
 }
 
+local weapon_template_vs = table.clone(weapon_template)
+
+weapon_template_vs.actions.action_one.default.allowed_chain_actions = {
+	{
+		sub_action = "default",
+		start_time = 0.5,
+		action = "action_wield",
+		input = "action_wield"
+	},
+	{
+		sub_action = "default",
+		start_time = 0.5,
+		action = "action_one",
+		release_required = "action_one_hold",
+		input = "action_one"
+	},
+	{
+		sub_action = "default",
+		start_time = 0.6,
+		action = "action_two",
+		input = "action_two"
+	},
+	{
+		sub_action = "default",
+		start_time = 0.4,
+		action = "weapon_reload",
+		input = "weapon_reload"
+	}
+}
+weapon_template_vs.actions.action_one.default.impact_data.damage_profile = "staff_fireball_vs"
+weapon_template_vs.actions.action_one.geiser_launch.damage_profile = "geiser_vs"
+weapon_template_vs.actions.action_one.geiser_launch.aoe_name = "conflag_vs"
+
 return {
-	staff_fireball_geiser_template_1 = table.clone(weapon_template)
+	staff_fireball_geiser_template_1 = table.clone(weapon_template),
+	staff_fireball_geiser_template_1_vs = table.clone(weapon_template_vs)
 }

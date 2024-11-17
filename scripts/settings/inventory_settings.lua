@@ -1,8 +1,9 @@
 ItemType = {
 	MELEE = "melee",
-	FRAME = "frame",
+	POSE = "weapon_pose",
 	HAT = "hat",
 	RANGED = "ranged",
+	FRAME = "frame",
 	RING = "ring",
 	NECKLACE = "necklace",
 	TRINKET = "trinket",
@@ -16,6 +17,7 @@ InventorySettings = {
 			wield_input = "wield_1",
 			category = "weapon",
 			slot_index = 1,
+			stored_in_backend = true,
 			hud_index = 1,
 			ui_slot_index = 1,
 			type = ItemType.MELEE
@@ -25,6 +27,7 @@ InventorySettings = {
 			wield_input = "wield_2",
 			category = "weapon",
 			slot_index = 2,
+			stored_in_backend = true,
 			hud_index = 2,
 			ui_slot_index = 2,
 			type = ItemType.RANGED
@@ -34,6 +37,7 @@ InventorySettings = {
 			slot_index = 3,
 			category = "attachment",
 			unequippable = true,
+			stored_in_backend = true,
 			ui_slot_index = 3,
 			type = ItemType.NECKLACE
 		},
@@ -42,6 +46,7 @@ InventorySettings = {
 			slot_index = 4,
 			category = "attachment",
 			unequippable = true,
+			stored_in_backend = true,
 			ui_slot_index = 4,
 			type = ItemType.RING
 		},
@@ -50,6 +55,7 @@ InventorySettings = {
 			slot_index = 5,
 			category = "attachment",
 			unequippable = true,
+			stored_in_backend = true,
 			ui_slot_index = 5,
 			type = ItemType.TRINKET
 		},
@@ -58,6 +64,7 @@ InventorySettings = {
 			slot_index = 6,
 			category = "attachment",
 			cosmetic_index = 1,
+			stored_in_backend = true,
 			type = ItemType.HAT
 		},
 		{
@@ -65,6 +72,7 @@ InventorySettings = {
 			slot_index = 8,
 			category = "cosmetic",
 			cosmetic_index = 2,
+			stored_in_backend = true,
 			type = ItemType.SKIN
 		},
 		{
@@ -72,13 +80,24 @@ InventorySettings = {
 			slot_index = 9,
 			category = "cosmetic",
 			cosmetic_index = 3,
+			stored_in_backend = true,
 			type = ItemType.FRAME
+		},
+		{
+			name = "slot_pose",
+			slot_index = 10,
+			category = "cosmetic",
+			cosmetic_index = 4,
+			stored_in_backend = true,
+			layout_name = "pose_selection",
+			type = ItemType.POSE
 		},
 		{
 			name = "slot_healthkit",
 			wield_input = "wield_3",
 			category = "weapon",
 			hud_index = 3,
+			stored_in_backend = false,
 			console_hud_index = 2,
 			drop_reasons = {
 				death = true
@@ -89,8 +108,9 @@ InventorySettings = {
 			wield_input = "wield_4",
 			category = "weapon",
 			hud_index = 4,
-			wield_input_alt = "wield_4_alt",
+			stored_in_backend = false,
 			console_hud_index = 4,
+			wield_input_alt = "wield_4_alt",
 			drop_reasons = {
 				death = true
 			}
@@ -100,6 +120,7 @@ InventorySettings = {
 			wield_input = "wield_5",
 			category = "weapon",
 			hud_index = 5,
+			stored_in_backend = false,
 			console_hud_index = 3,
 			drop_reasons = {
 				death = true
@@ -107,6 +128,7 @@ InventorySettings = {
 		},
 		{
 			name = "slot_packmaster_claw",
+			stored_in_backend = false,
 			category = "enemy_weapon",
 			drop_reasons = {
 				death = true
@@ -114,6 +136,7 @@ InventorySettings = {
 		},
 		{
 			name = "slot_level_event",
+			stored_in_backend = false,
 			category = "level_event",
 			drop_reasons = {
 				grabbed_by_chaos_spawn = true,
@@ -129,9 +152,17 @@ InventorySettings = {
 		{
 			hud_index = 6,
 			name = "slot_career_skill_weapon",
+			stored_in_backend = false,
 			category = "career_skill_weapon"
 		}
 	}
+}
+InventorySettings.customize_default_slot_types_allowed = {
+	versus = {
+		melee = true,
+		ranged = true
+	},
+	default = {}
 }
 InventorySettings.loadouts = {
 	{
@@ -292,20 +323,39 @@ for index, slot in ipairs(InventorySettings.slots) do
 end
 
 local equipment_slots = {
-	slot_necklace = true,
-	slot_trinket_1 = true,
-	slot_ring = true,
-	slot_melee = true,
-	slot_ranged = true
+	default = {
+		slot_necklace = true,
+		slot_trinket_1 = true,
+		slot_ring = true,
+		slot_melee = true,
+		slot_ranged = true
+	},
+	deus = {
+		slot_ranged = true,
+		slot_melee = true
+	},
+	versus = {
+		slot_ranged = true,
+		slot_melee = true
+	}
 }
 
 InventorySettings.equipment_slots = {}
+InventorySettings.equipment_slots_by_mechanism = {}
 
-for index, slot in ipairs(InventorySettings.slots) do
-	if equipment_slots[slot.name] then
-		InventorySettings.equipment_slots[#InventorySettings.equipment_slots + 1] = slot
+for mechanism, mechanism_equipment_slots in pairs(equipment_slots) do
+	for index, slot in ipairs(InventorySettings.slots) do
+		InventorySettings.equipment_slots_by_mechanism[mechanism] = InventorySettings.equipment_slots_by_mechanism[mechanism] or {}
+
+		local equipment_slots_by_mechanism = InventorySettings.equipment_slots_by_mechanism[mechanism]
+
+		if mechanism_equipment_slots[slot.name] then
+			equipment_slots_by_mechanism[#equipment_slots_by_mechanism + 1] = slot
+		end
 	end
 end
+
+InventorySettings.equipment_slots = InventorySettings.equipment_slots_by_mechanism.default
 
 local jewellery_slots = {
 	slot_necklace = true,

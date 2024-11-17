@@ -263,33 +263,6 @@ settings.projectiles = {
 		end
 	}
 }
-settings.default_items = {
-	dr_deus_01 = {
-		inventory_icon = "icon_wpn_dw_trollhammer_t1",
-		description = "dr_deus_01_description",
-		display_name = "dr_deus_01_name"
-	},
-	es_deus_01 = {
-		inventory_icon = "icon_wpn_empire_spearshield_t1",
-		description = "es_deus_01_description",
-		display_name = "es_deus_01_name"
-	},
-	bw_deus_01 = {
-		inventory_icon = "icon_wpn_brw_magmastaff_t1",
-		description = "bw_deus_01_description",
-		display_name = "bw_deus_01_name"
-	},
-	we_deus_01 = {
-		inventory_icon = "icon_wpn_we_moonfire_t1",
-		description = "we_deus_01_description",
-		display_name = "we_deus_01_name"
-	},
-	wh_deus_01 = {
-		inventory_icon = "icon_wpn_emp_duckfoot_t1",
-		description = "wh_deus_01_description",
-		display_name = "wh_deus_01_name"
-	}
-}
 settings.spread_templates = {
 	wh_deus_01 = {
 		continuous = {

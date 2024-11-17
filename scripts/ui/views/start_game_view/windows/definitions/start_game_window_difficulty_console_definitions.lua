@@ -235,9 +235,65 @@ local scenegraph_definition = {
 			1
 		}
 	},
-	difficulty_bottom_divider = {
-		vertical_alignment = "bottom",
+	rewards_title = {
+		vertical_alignment = "top",
 		parent = "description_background",
+		horizontal_alignment = "center",
+		size = {
+			window_text_width,
+			30
+		},
+		position = {
+			0,
+			-160,
+			0
+		}
+	},
+	difficulty_xp_multiplier = {
+		vertical_alignment = "top",
+		parent = "rewards_title",
+		horizontal_alignment = "center",
+		size = {
+			window_text_width,
+			20
+		},
+		position = {
+			0,
+			-30,
+			0
+		}
+	},
+	difficulty_rewards_anchor = {
+		vertical_alignment = "top",
+		parent = "difficulty_xp_multiplier",
+		horizontal_alignment = "center",
+		size = {
+			0,
+			40
+		},
+		position = {
+			0,
+			-35,
+			1
+		}
+	},
+	difficulty_chest_info = {
+		vertical_alignment = "top",
+		parent = "difficulty_rewards_anchor",
+		horizontal_alignment = "center",
+		size = {
+			window_text_width,
+			20
+		},
+		position = {
+			0,
+			-65,
+			0
+		}
+	},
+	difficulty_bottom_divider = {
+		vertical_alignment = "top",
+		parent = "difficulty_chest_info",
 		horizontal_alignment = "center",
 		size = {
 			264,
@@ -245,41 +301,41 @@ local scenegraph_definition = {
 		},
 		position = {
 			0,
-			0,
+			-20,
 			1
 		}
 	},
-	warning_bg = {
-		vertical_alignment = "bottom",
-		parent = "description_background",
+	difficulty_is_locked_text = {
+		vertical_alignment = "top",
+		parent = "difficulty_bottom_divider",
 		horizontal_alignment = "center",
 		size = {
-			window_size[1],
-			100
+			window_text_width,
+			20
 		},
 		position = {
 			0,
-			-100,
-			1
+			-70,
+			0
 		}
 	},
-	warning_texture = {
-		vertical_alignment = "center",
-		parent = "warning_bg",
+	difficulty_lock_text = {
+		vertical_alignment = "top",
+		parent = "difficulty_is_locked_text",
 		horizontal_alignment = "center",
 		size = {
-			485,
-			103
+			window_text_width,
+			20
 		},
 		position = {
 			0,
 			0,
-			1
+			0
 		}
 	},
 	requirement_bg = {
-		vertical_alignment = "bottom",
-		parent = "warning_bg",
+		vertical_alignment = "top",
+		parent = "difficulty_lock_text",
 		horizontal_alignment = "center",
 		size = {
 			window_size[1],
@@ -287,7 +343,7 @@ local scenegraph_definition = {
 		},
 		position = {
 			0,
-			-100,
+			0,
 			1
 		}
 	},
@@ -303,62 +359,6 @@ local scenegraph_definition = {
 			0,
 			-10,
 			40
-		}
-	},
-	difficulty_chest_info = {
-		vertical_alignment = "bottom",
-		parent = "description_background",
-		horizontal_alignment = "center",
-		size = {
-			window_text_width,
-			20
-		},
-		position = {
-			0,
-			30,
-			0
-		}
-	},
-	difficulty_xp_multiplier = {
-		vertical_alignment = "top",
-		parent = "difficulty_chest_info",
-		horizontal_alignment = "center",
-		size = {
-			window_text_width,
-			20
-		},
-		position = {
-			0,
-			-30,
-			0
-		}
-	},
-	difficulty_lock_text = {
-		vertical_alignment = "top",
-		parent = "difficulty_xp_multiplier",
-		horizontal_alignment = "center",
-		size = {
-			window_text_width,
-			20
-		},
-		position = {
-			0,
-			-55,
-			0
-		}
-	},
-	difficulty_is_locked_text = {
-		vertical_alignment = "top",
-		parent = "difficulty_lock_text",
-		horizontal_alignment = "center",
-		size = {
-			window_text_width,
-			20
-		},
-		position = {
-			0,
-			-30,
-			0
 		}
 	},
 	title_button_start = {
@@ -411,6 +411,21 @@ local title_text_style = {
 		2
 	}
 }
+local title_text_style_small = {
+	font_size = 32,
+	upper_case = true,
+	localize = false,
+	use_shadow = true,
+	horizontal_alignment = "center",
+	vertical_alignment = "bottom",
+	font_type = "hell_shark_header",
+	text_color = Colors.get_color_table_with_alpha("font_title", 255),
+	offset = {
+		0,
+		0,
+		2
+	}
+}
 local description_text_style = {
 	word_wrap = true,
 	font_size = 18,
@@ -448,7 +463,7 @@ local difficulty_chest_info_style = {
 	}
 }
 local difficulty_xp_multiplier_style = {
-	font_size = 22,
+	font_size = 18,
 	upper_case = false,
 	localize = false,
 	use_shadow = true,
@@ -456,7 +471,12 @@ local difficulty_xp_multiplier_style = {
 	horizontal_alignment = "center",
 	vertical_alignment = "top",
 	font_type = "hell_shark",
-	text_color = Colors.get_color_table_with_alpha("cyan", 255),
+	text_color = {
+		255,
+		250,
+		250,
+		250
+	},
 	offset = {
 		0,
 		0,
@@ -709,7 +729,9 @@ local function create_difficulty_button(scenegraph_id, button_size)
 			return content[icon_texture_name]
 		end,
 		content_change_function = function (content, style)
-			if content.button_hotspot.disable_button then
+			local should_saturate = content.locked
+
+			if should_saturate then
 				style.saturated = true
 			else
 				style.saturated = false
@@ -736,6 +758,8 @@ local function create_difficulty_button(scenegraph_id, button_size)
 		},
 		offset = icon_offset
 	}
+	content.icon_locked_z_offset = 1
+	content.icon_unlocked_z_offset = 5
 
 	local icon_background_name = "icon_background"
 
@@ -753,7 +777,7 @@ local function create_difficulty_button(scenegraph_id, button_size)
 		offset = {
 			icon_offset[1],
 			icon_offset[2],
-			icon_offset[3] - 3
+			icon_offset[3] - 6
 		}
 	}
 
@@ -767,7 +791,9 @@ local function create_difficulty_button(scenegraph_id, button_size)
 			return content[icon_texture_name]
 		end,
 		content_change_function = function (content, style)
-			if content.button_hotspot.disable_button then
+			local should_saturate = content.locked
+
+			if should_saturate then
 				style.saturated = true
 			else
 				style.saturated = false
@@ -816,7 +842,57 @@ local function create_difficulty_button(scenegraph_id, button_size)
 		offset = {
 			icon_offset[1],
 			icon_offset[2],
+			icon_offset[3] - 5
+		}
+	}
+	passes[#passes + 1] = {
+		pass_type = "texture",
+		style_id = "lock",
+		texture_id = "lock",
+		content_check_function = function (content)
+			return content.locked
+		end
+	}
+	passes[#passes + 1] = {
+		pass_type = "texture",
+		style_id = "lock_fade",
+		texture_id = "lock_fade",
+		content_check_function = function (content)
+			return content.locked
+		end
+	}
+	content.lock = "map_frame_lock"
+	content.lock_fade = "map_frame_fade"
+	style.lock = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		texture_size = frame_size,
+		offset = {
+			icon_offset[1],
+			icon_offset[2],
+			icon_offset[3] + 3
+		},
+		color = {
+			255,
+			255,
+			255,
+			255
+		}
+	}
+	style.lock_fade = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		texture_size = frame_size,
+		offset = {
+			icon_offset[1],
+			icon_offset[2],
 			icon_offset[3] - 2
+		},
+		color = {
+			255,
+			255,
+			255,
+			255
 		}
 	}
 
@@ -964,6 +1040,200 @@ local function create_title_button(scenegraph_id, text, font_size, optional_offs
 	}
 end
 
+local function create_difficulty_reward_widget(difficulty_key, item_name, reward_i, num_rewards, spacing)
+	local widget_definition = {}
+	local element = {}
+	local passes = {}
+	local content = {}
+	local style = {}
+	local icon_size = 52
+	local separator_size = 16
+	local spacing = icon_size + separator_size * 1.5
+	local offset_x = (reward_i - 1 - (num_rewards - 0.5) * 0.5) * spacing
+	local include_separator = reward_i ~= num_rewards
+
+	passes[#passes + 1] = {
+		pass_type = "texture",
+		style_id = "icon",
+		texture_id = "icon"
+	}
+	passes[#passes + 1] = {
+		pass_type = "texture",
+		style_id = "frame",
+		texture_id = "frame"
+	}
+	passes[#passes + 1] = {
+		style_id = "hotspot",
+		pass_type = "hotspot",
+		content_id = "hotspot"
+	}
+	passes[#passes + 1] = {
+		pass_type = "texture",
+		style_id = "reward_hover",
+		texture_id = "reward_hover",
+		content_check_function = function (content)
+			return content.hotspot.is_hover and content.item and content.tooltip
+		end
+	}
+	passes[#passes + 1] = {
+		item_id = "item",
+		style_id = "tooltip",
+		pass_type = "item_tooltip",
+		text_id = "tooltip",
+		content_check_function = function (content)
+			return content.hotspot.is_hover and content.item and content.tooltip
+		end
+	}
+
+	if include_separator then
+		passes[#passes + 1] = {
+			pass_type = "texture",
+			style_id = "separator",
+			texture_id = "separator"
+		}
+	end
+
+	local reward_item = ItemMasterList[item_name]
+
+	content.tooltip = "tooltip_text"
+	content.item_tooltip = {}
+	content.hotspot = {}
+	content.frame = "button_frame_01"
+	content.icon = reward_item.inventory_icon or "icons_placeholder"
+	content.visible = false
+	content.difficulty_key = difficulty_key
+	content.item = {
+		data = reward_item
+	}
+	content.force_equipped = nil
+	content.reward_hover = "item_icon_hover"
+
+	if include_separator then
+		content.separator = "menu_frame_12_divider_middle"
+	end
+
+	style.icon = {
+		vertical_alignment = "top",
+		horizontal_alignment = "left",
+		color = {
+			255,
+			255,
+			255,
+			255
+		},
+		texture_size = {
+			icon_size,
+			icon_size
+		},
+		offset = {
+			0,
+			0,
+			0
+		}
+	}
+	style.frame = {
+		vertical_alignment = "top",
+		horizontal_alignment = "left",
+		color = {
+			255,
+			255,
+			255,
+			255
+		},
+		texture_size = {
+			icon_size,
+			icon_size
+		},
+		offset = {
+			0,
+			0,
+			1
+		}
+	}
+	style.tooltip = {
+		font_size = 18,
+		font_type = "hell_shark",
+		localize = true,
+		horizontal_alignment = "left",
+		vertical_alignment = "bottom",
+		max_width = 1500,
+		size = {
+			400,
+			0
+		},
+		text_color = Colors.get_color_table_with_alpha("white", 255),
+		line_colors = {
+			Colors.get_color_table_with_alpha("font_title", 255),
+			Colors.get_color_table_with_alpha("white", 255)
+		}
+	}
+	style.hotspot = {
+		size = {
+			icon_size,
+			icon_size
+		},
+		offset = {
+			0,
+			-12,
+			0
+		}
+	}
+	style.reward_hover = {
+		vertical_alignment = "top",
+		horizontal_alignment = "left",
+		texture_size = {
+			icon_size * 1.6,
+			icon_size * 1.6
+		},
+		color = {
+			255,
+			255,
+			255,
+			255
+		},
+		offset = {
+			-15,
+			15,
+			1
+		}
+	}
+
+	if include_separator then
+		style.separator = {
+			vertical_alignment = "top",
+			horizontal_alignment = "left",
+			color = {
+				255,
+				255,
+				255,
+				255
+			},
+			texture_size = {
+				separator_size,
+				separator_size
+			},
+			offset = {
+				icon_size * 0.5 + spacing * 0.5 - separator_size * 0.5,
+				-icon_size * 0.5 + separator_size * 0.5,
+				1
+			}
+		}
+	end
+
+	element.passes = passes
+	widget_definition.element = element
+	widget_definition.content = content
+	widget_definition.style = style
+	widget_definition.scenegraph_id = "difficulty_rewards_anchor"
+	widget_definition.offset = {
+		offset_x,
+		0,
+		2
+	}
+
+	return widget_definition
+end
+
 local title_button_definitions = {}
 local num_buttons = 10
 
@@ -978,12 +1248,12 @@ local widgets = {
 	difficulty_title_divider = UIWidgets.create_simple_texture("divider_01_top", "difficulty_title_divider"),
 	description_text = UIWidgets.create_simple_text(Localize("start_game_window_adventure_desc"), "description_text", nil, nil, description_text_style),
 	difficulty_bottom_divider = UIWidgets.create_simple_texture("divider_01_bottom", "difficulty_bottom_divider"),
-	extreme_difficulty_bg = UIWidgets.create_simple_texture("extreme_difficulty_bg", "warning_texture"),
-	extremely_hard_text = UIWidgets.create_simple_text(Localize("difficulty_cataclysm_warning"), "warning_bg", nil, nil, extreme_difficulty_text_style),
+	rewards_title = UIWidgets.create_simple_text(Localize("deed_reward_title"), "rewards_title", nil, nil, title_text_style_small),
 	difficulty_chest_info = UIWidgets.create_simple_text("", "difficulty_chest_info", nil, nil, difficulty_chest_info_style),
-	difficulty_lock_text = UIWidgets.create_simple_text("difficulty_lock_text", "requirement_bg", nil, nil, difficulty_lock_text_style),
+	xp_multiplier = UIWidgets.create_simple_text("", "difficulty_xp_multiplier", nil, nil, difficulty_xp_multiplier_style),
+	difficulty_lock_text = UIWidgets.create_simple_text("difficulty_lock_text", "difficulty_is_locked_text", nil, nil, difficulty_lock_text_style),
+	difficulty_is_locked_text = UIWidgets.create_simple_text("Some people in your party do not meet the required Hero Power.", "difficulty_is_locked_text", nil, nil, difficulty_is_locked_text_style),
 	difficulty_second_lock_text = UIWidgets.create_simple_text("KIll all the lords on Legend Difficulty", "requirement_bg", nil, nil, difficulty_second_lock_text_style),
-	difficulty_is_locked_text = UIWidgets.create_simple_text("Some people in your party do not meet the required Hero Power.", "requirement_bg", nil, nil, difficulty_is_locked_text_style),
 	dlc_lock_text = UIWidgets.create_simple_text(Localize("cataclysm_no_wom"), "buy_button", nil, nil, dlc_is_locked_text_style),
 	buy_button = create_buy_button("buy_button", scenegraph_definition.buy_button.size, nil, "wom_button", Localize("menu_weave_area_no_wom_button"), 32, nil, nil, nil, false)
 }
@@ -993,5 +1263,6 @@ return {
 	title_button_definitions = title_button_definitions,
 	create_difficulty_button = create_difficulty_button,
 	scenegraph_definition = scenegraph_definition,
-	animation_definitions = animation_definitions
+	animation_definitions = animation_definitions,
+	create_difficulty_reward_widget = create_difficulty_reward_widget
 }

@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pes_catacombs_intro_a",
 		response = "pes_catacombs_intro_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_catacombs_intro_b",
 		response = "pes_catacombs_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_catacombs_intro_c",
 		response = "pes_catacombs_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_apothercary_room",
 		response = "pes_level_catacombs_apothercary_room",
 		criterias = {
@@ -164,6 +168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_confinement_cells",
 		response = "pes_level_catacombs_confinement_cells",
 		criterias = {
@@ -214,6 +219,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_correct_switch",
 		response = "pes_level_catacombs_correct_switch",
 		criterias = {
@@ -258,6 +264,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_cultist_door",
 		response = "pes_level_catacombs_cultist_door",
 		criterias = {
@@ -302,6 +309,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_healing_ward",
 		response = "pes_level_catacombs_healing_ward",
 		criterias = {
@@ -346,6 +354,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_hear_chanting",
 		response = "pes_level_catacombs_hear_chanting",
 		criterias = {
@@ -390,6 +399,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_jump_into_intestine_hole",
 		response = "pes_level_catacombs_jump_into_intestine_hole",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_mausoleum_entrance",
 		response = "pes_level_catacombs_mausoleum_entrance",
 		criterias = {
@@ -490,6 +501,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_nurgle_water",
 		response = "pes_level_catacombs_nurgle_water",
 		criterias = {
@@ -540,6 +552,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_one_sorcerer_dead",
 		response = "pes_level_catacombs_one_sorcerer_dead",
 		criterias = {
@@ -584,6 +597,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_ritual_disrupted_ritual",
 		response = "pes_level_catacombs_ritual_disrupted_ritual",
 		criterias = {
@@ -628,6 +642,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_ritual_exit_through_portal",
 		response = "pes_level_catacombs_ritual_exit_through_portal",
 		criterias = {
@@ -672,6 +687,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_sabotage_ritual",
 		response = "pes_level_catacombs_sabotage_ritual",
 		criterias = {
@@ -716,6 +732,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_sewers",
 		response = "pes_level_catacombs_sewers",
 		criterias = {
@@ -766,6 +783,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_sewers_nurglefication_heavy",
 		response = "pes_level_catacombs_sewers_nurglefication_heavy",
 		criterias = {
@@ -816,6 +834,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_sewers_nurglefication_light",
 		response = "pes_level_catacombs_sewers_nurglefication_light",
 		criterias = {
@@ -866,6 +885,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_slime_trail",
 		response = "pes_level_catacombs_slime_trail",
 		criterias = {
@@ -910,6 +930,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_spot_ritual",
 		response = "pes_level_catacombs_spot_ritual",
 		criterias = {
@@ -954,6 +975,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_switch_instructions",
 		response = "pes_level_catacombs_switch_instructions",
 		criterias = {
@@ -998,6 +1020,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_two_sorcerer_dead",
 		response = "pes_level_catacombs_two_sorcerer_dead",
 		criterias = {
@@ -1042,6 +1065,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_way_is_clear",
 		response = "pes_level_catacombs_way_is_clear",
 		criterias = {
@@ -1086,6 +1110,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_whoa_wrong_switch",
 		response = "pes_level_catacombs_whoa_wrong_switch",
 		criterias = {

@@ -102,15 +102,17 @@ ItemMasterList.skin_dr_engineer_white = {
 ItemMasterList.bardin_engineer_career_skill_weapon = {
 	right_hand_unit = "units/weapons/player/wpn_dw_rotary_gun_01_t1/wpn_dw_rotary_gun_01_t1",
 	rarity = "plentiful",
-	template = "bardin_engineer_career_skill_weapon",
 	is_local = true,
+	item_type = "bardin_engineer_career_skill_weapon",
+	template = "bardin_engineer_career_skill_weapon",
 	can_wield = {}
 }
 ItemMasterList.bardin_engineer_career_skill_weapon_heavy = {
 	right_hand_unit = "units/weapons/player/wpn_dw_rotary_gun_01_t2/wpn_dw_rotary_gun_01_t2",
 	rarity = "plentiful",
-	template = "bardin_engineer_career_skill_weapon_special",
 	is_local = true,
+	item_type = "bardin_engineer_career_skill_weapon_heavy",
+	template = "bardin_engineer_career_skill_weapon_special",
 	can_wield = {}
 }
 ItemMasterList.engineer_hat_0000 = {

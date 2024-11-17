@@ -64,7 +64,9 @@ TitleMainUI._create_ui_renderer = function (self)
 		"material",
 		"materials/fonts/gw_fonts",
 		"material",
-		"materials/ui/ui_1080p_common"
+		"materials/ui/ui_1080p_common",
+		"material",
+		"materials/ui/ui_1080p_versus_available_common"
 	}
 
 	for name, data in pairs(menu_videos) do

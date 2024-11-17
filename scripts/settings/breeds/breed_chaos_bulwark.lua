@@ -301,7 +301,7 @@ local breed_data = {
 		},
 		{
 			shield_block_threshold = 2,
-			shield_open_stagger_threshold = 8,
+			shield_open_stagger_threshold = 6,
 			stagger_regen_rate = {
 				1,
 				0.1
@@ -886,6 +886,7 @@ local action_data = {
 				ignore_targets_behind = true,
 				offset_up = 0.5,
 				player_push_speed_z = 2,
+				freeze_intensity_decay_time = -1,
 				range = 2.5,
 				lock_attack_time = 2.1,
 				bot_threat_duration = 0.7,
@@ -937,6 +938,7 @@ local action_data = {
 				bot_threat_start_time = 0.5,
 				ignore_targets_behind = true,
 				player_push_speed_blocked_z = 1,
+				freeze_intensity_decay_time = -1,
 				offset_up = 0.5,
 				player_push_speed_z = 1,
 				range = 2,

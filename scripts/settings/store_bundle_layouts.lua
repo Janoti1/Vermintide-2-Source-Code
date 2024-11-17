@@ -2006,5 +2006,221 @@ StoreBundleLayouts = {
 		{
 			type = "spacing"
 		}
+	},
+	skaven_skins_bundle_0001 = {
+		{
+			id = "dlc_logo",
+			type = "big_image",
+			settings = {
+				text = "",
+				texture_path = "gui/1080p/single_textures/store/slideshow/store_slideshow_bundle_skaven_skins_bundle_0001",
+				localize = false,
+				show_frame = true,
+				texture_package = "resource_packages/store/bundle_icons/store_item_icon_skaven_skins_bundle_0001",
+				image_size = {
+					800.4,
+					591.6
+				},
+				size = {
+					800.4,
+					591.6
+				}
+			}
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "divider_horizontal"
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "header_text",
+			settings = {
+				text = "menu_store_dlc_title_including",
+				localize = true
+			}
+		},
+		{
+			type = "spacing",
+			settings = {
+				size = {
+					260,
+					0
+				}
+			}
+		},
+		{
+			id = "skaven_warpfire_thrower_skin_1001_bundle",
+			type = "item",
+			settings = {
+				hide_price = false,
+				hide_new = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "display_name_skaven_warpfire_thrower_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "description_skaven_warpfire_thrower_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "spacing",
+			settings = {
+				size = {
+					260,
+					0
+				}
+			}
+		},
+		{
+			id = "skaven_ratling_gunner_skin_1001_bundle",
+			type = "item",
+			settings = {
+				hide_price = false,
+				hide_new = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "display_name_skaven_ratling_gunner_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "description_skaven_ratling_gunner_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "spacing",
+			settings = {
+				size = {
+					260,
+					0
+				}
+			}
+		},
+		{
+			id = "skaven_packmaster_skin_1001_bundle",
+			type = "item",
+			settings = {
+				hide_price = false,
+				hide_new = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "display_name_skaven_pack_master_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "description_skaven_pack_master_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "spacing",
+			settings = {
+				size = {
+					260,
+					0
+				}
+			}
+		},
+		{
+			id = "skaven_gutter_runner_skin_1001_bundle",
+			type = "item",
+			settings = {
+				hide_price = false,
+				hide_new = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "display_name_skaven_gutter_runner_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "description_skaven_gutter_runner_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "spacing",
+			settings = {
+				size = {
+					260,
+					0
+				}
+			}
+		},
+		{
+			id = "skaven_globadier_skin_1001_bundle",
+			type = "item",
+			settings = {
+				hide_price = false,
+				hide_new = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "display_name_skaven_wind_globadier_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "body_text",
+			settings = {
+				text = "description_skaven_wind_globadier_skin_1001",
+				localize = true
+			}
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "spacing"
+		},
+		{
+			type = "divider_horizontal"
+		},
+		{
+			type = "spacing"
+		}
 	}
 }

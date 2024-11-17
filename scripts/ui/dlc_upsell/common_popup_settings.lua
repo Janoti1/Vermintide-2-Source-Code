@@ -1,13 +1,13 @@
 CommonPopupSettings = CommonPopupSettings or {}
 CommonPopupSettings.scorpion = {
-	body_text = "menu_weave_area_no_wom_body",
+	definitions_path = "scripts/ui/dlc_upsell/upsell_popup_definitions",
 	title_text = "menu_weave_area_no_wom_title",
+	body_text = "menu_weave_area_no_wom_body",
 	ok_button_text = "menu_close",
 	button_text = "menu_weave_area_no_wom_button",
 	popup_type = "upsell",
 	class_name = "UpsellPopup",
 	background_texture = "wom_upsell_popup_bg",
-	definitions = local_require("scripts/ui/dlc_upsell/upsell_popup_definitions"),
 	input_desc = {
 		actions = {
 			{
@@ -19,14 +19,14 @@ CommonPopupSettings.scorpion = {
 	}
 }
 CommonPopupSettings.lake = {
-	body_text = "upsell_popup_lake_body",
+	definitions_path = "scripts/ui/dlc_upsell/upsell_popup_definitions",
 	title_text = "upsell_popup_new_career_title",
+	body_text = "upsell_popup_lake_body",
 	ok_button_text = "menu_close",
 	button_text = "menu_weave_area_no_lake_button",
 	popup_type = "upsell",
 	class_name = "UpsellPopup",
 	background_texture = "lake_upsell_popup_bg",
-	definitions = local_require("scripts/ui/dlc_upsell/upsell_popup_definitions"),
 	input_desc = {
 		actions = {
 			{
@@ -38,14 +38,14 @@ CommonPopupSettings.lake = {
 	}
 }
 CommonPopupSettings.cog = {
-	body_text = "upsell_popup_cog_body",
+	definitions_path = "scripts/ui/dlc_upsell/upsell_popup_definitions",
 	title_text = "upsell_popup_new_career_title",
+	body_text = "upsell_popup_cog_body",
 	ok_button_text = "menu_close",
 	button_text = "upsell_popup_cog_button",
 	popup_type = "upsell",
 	class_name = "UpsellPopup",
 	background_texture = "cog_upsell_popup_bg",
-	definitions = local_require("scripts/ui/dlc_upsell/upsell_popup_definitions"),
 	input_desc = {
 		actions = {
 			{
@@ -57,14 +57,14 @@ CommonPopupSettings.cog = {
 	}
 }
 CommonPopupSettings.woods = {
-	body_text = "upsell_popup_woods_body",
+	definitions_path = "scripts/ui/dlc_upsell/upsell_popup_definitions",
 	title_text = "upsell_popup_new_career_title",
+	body_text = "upsell_popup_woods_body",
 	ok_button_text = "menu_close",
 	button_text = "upsell_popup_woods_button",
 	popup_type = "upsell",
 	class_name = "UpsellPopup",
 	background_texture = "woods_upsell_popup_bg",
-	definitions = local_require("scripts/ui/dlc_upsell/upsell_popup_definitions"),
 	input_desc = {
 		actions = {
 			{
@@ -76,14 +76,14 @@ CommonPopupSettings.woods = {
 	}
 }
 CommonPopupSettings.bless = {
-	body_text = "upsell_popup_bless_body",
+	definitions_path = "scripts/ui/dlc_upsell/upsell_popup_definitions",
 	title_text = "upsell_popup_new_career_title",
+	body_text = "upsell_popup_bless_body",
 	ok_button_text = "menu_close",
 	button_text = "upsell_popup_bless_button",
 	popup_type = "upsell",
 	class_name = "UpsellPopup",
 	background_texture = "priest_upsell_popup_bg",
-	definitions = local_require("scripts/ui/dlc_upsell/upsell_popup_definitions"),
 	input_desc = {
 		actions = {
 			{
@@ -95,14 +95,14 @@ CommonPopupSettings.bless = {
 	}
 }
 CommonPopupSettings.shovel = {
-	body_text = "upsell_popup_shovel_body",
+	definitions_path = "scripts/ui/dlc_upsell/upsell_popup_definitions",
 	title_text = "upsell_popup_new_career_title",
+	body_text = "upsell_popup_shovel_body",
 	ok_button_text = "menu_close",
 	button_text = "upsell_popup_shovel_button",
 	popup_type = "upsell",
 	class_name = "UpsellPopup",
 	background_texture = "shovel_upsell_popup_bg",
-	definitions = local_require("scripts/ui/dlc_upsell/upsell_popup_definitions"),
 	input_desc = {
 		actions = {
 			{
@@ -113,3 +113,14 @@ CommonPopupSettings.shovel = {
 		}
 	}
 }
+
+require("scripts/settings/handbook_settings")
+
+for popup_id, popup_settings in pairs(HandbookSettings.popups) do
+	CommonPopupSettings[popup_id] = {
+		definitions_path = "scripts/ui/dlc_upsell/handbook_popup_definitions",
+		class_name = "HandbookPopup",
+		popup_type = "handbook",
+		pages = popup_settings.pages
+	}
+end

@@ -499,6 +499,20 @@ local scenegraph_definition = {
 			10
 		}
 	},
+	player_insignia = {
+		vertical_alignment = "top",
+		parent = "content_bg",
+		horizontal_alignment = "center",
+		size = {
+			0,
+			0
+		},
+		position = {
+			-90,
+			190 + platform_offset * 0.5,
+			12
+		}
+	},
 	profile_selector = {
 		vertical_alignment = "bottom",
 		parent = "player_frame",
@@ -1189,6 +1203,7 @@ local widgets = {
 }
 local hero_widgets = {
 	player_frame = UIWidgets.create_portrait_frame("player_frame", "default", nil, 1, nil, "unit_frame_portrait_default"),
+	player_insignia = UIWidgets.create_small_insignia("player_insignia", 0),
 	player_name = UIWidgets.create_simple_text("", "player_frame", nil, nil, player_name_text_style)
 }
 local animation_definitions = {

@@ -42,7 +42,6 @@ PoisonWindGlobadierStateThrowing.on_enter = function (self, unit, input, dt, con
 	self._impact_data.hit_normal = Vector3Box()
 	self._wind_up_movement_speed = breed.wind_up_movement_speed
 
-	local zero = Vector3.zero()
 	local first_person_extension = self._first_person_extension
 
 	first_person_extension:unhide_weapons("catapulted")
@@ -63,9 +62,6 @@ end
 
 PoisonWindGlobadierStateThrowing.on_exit = function (self, unit, input, dt, context, t, next_state)
 	self._throw_ready = nil
-
-	self:_destroy_indicator_unit()
-
 	self._throw_time = nil
 	self._finish_time = nil
 	self._done_priming = false
@@ -79,14 +75,16 @@ end
 PoisonWindGlobadierStateThrowing.update = function (self, unit, input, dt, context, t)
 	local csm = self._csm
 	local movement_settings_table = PlayerUnitMovementSettings.get_movement_settings_table(unit)
-	local input_extension = self._input_extension
 	local status_extension = self._status_extension
 	local first_person_extension = self._first_person_extension
 	local locomotion_extension = self._locomotion_extension
-	local inventory_extension = self._inventory_extension
 
 	if not self._done_priming then
 		self:_update_priming(unit, t, dt)
+	end
+
+	if t > self._prime_time then
+		self._done_priming = true
 	end
 
 	if self._done_priming then
@@ -310,8 +308,6 @@ PoisonWindGlobadierStateThrowing._calculate_trajectory = function (self)
 end
 
 PoisonWindGlobadierStateThrowing._update_priming = function (self, unit, t, dt)
-	local update_priming = not self._done_priming
-
 	if t > self._prime_time then
 		self._done_priming = true
 
@@ -323,6 +319,8 @@ PoisonWindGlobadierStateThrowing._update_priming = function (self, unit, t, dt)
 		CharacterStateHelper.play_animation_event(unit, "globe_charge_hold")
 		CharacterStateHelper.play_animation_event_first_person(first_person_extension, "globe_charge_hold")
 	end
+
+	local update_priming = not self._done_priming
 
 	if update_priming then
 		local prime_time = self._prime_time
@@ -442,6 +440,11 @@ PoisonWindGlobadierStateThrowing._update_indicator_unit = function (self)
 		local impact_position = impact_data.position:unbox()
 
 		Unit.set_local_position(self._indicator_unit, 0, impact_position)
+
+		local player_pos = POSITION_LOOKUP[Managers.player:local_player().player_unit]
+		local desired_rot = Quaternion.multiply(Quaternion.axis_angle(Vector3.up(), math.pi * 0.5), Quaternion.look(player_pos - impact_position, Vector3.up()))
+
+		Unit.set_local_rotation(self._indicator_unit, 0, desired_rot)
 		self:check_enemies_in_range_vfx(impact_position)
 	end
 end
@@ -451,6 +454,10 @@ PoisonWindGlobadierStateThrowing._create_indicator_unit = function (self)
 	local unit_name = self._indicator_fx_unit_name
 
 	self._indicator_unit = World.spawn_unit(world, unit_name, Vector3.zero())
+
+	local radius = self._breed.globe_throw_aoe_radius
+
+	Unit.set_local_scale(self._indicator_unit, 0, Vector3(radius, radius, radius))
 end
 
 PoisonWindGlobadierStateThrowing._destroy_indicator_unit = function (self)
@@ -473,8 +480,10 @@ PoisonWindGlobadierStateThrowing._update_movement = function (self, unit, t, dt,
 	local current_movement_speed_scale = self.current_movement_speed_scale
 
 	if not self.is_bot then
-		local move_acceleration_up_dt = movement_settings_table.move_acceleration_up * dt
-		local move_acceleration_down_dt = movement_settings_table.move_acceleration_down * dt
+		local breed_move_acceleration_up = self._breed and self._breed.breed_move_acceleration_up
+		local breed_move_acceleration_down = self._breed and self._breed.breed_move_acceleration_down
+		local move_acceleration_up_dt = breed_move_acceleration_up * dt or movement_settings_table.move_acceleration_up * dt
+		local move_acceleration_down_dt = breed_move_acceleration_down * dt or movement_settings_table.move_acceleration_down * dt
 
 		if is_moving then
 			current_movement_speed_scale = math.min(1, current_movement_speed_scale + move_acceleration_up_dt)
@@ -505,16 +514,15 @@ PoisonWindGlobadierStateThrowing._update_movement = function (self, unit, t, dt,
 		self.last_input_direction:store(move_input_direction)
 	end
 
-	local move_anim_3p, move_anim_1p = CharacterStateHelper.get_move_animation(self._locomotion_extension, input_extension, self._status_extension)
+	local move_anim_3p = CharacterStateHelper.get_move_animation(self._locomotion_extension, input_extension, self._status_extension, self.move_anim_3p)
 
-	if move_anim_3p ~= self.move_anim_3p or move_anim_1p ~= self.move_anim_1p then
+	if move_anim_3p ~= self.move_anim_3p then
 		CharacterStateHelper.play_animation_event(unit, move_anim_3p)
 
 		self.move_anim_3p = move_anim_3p
-		self.move_anim_1p = move_anim_1p
 	end
 
-	if self._previous_state == "jumping" or self._previous_state == "falling" then
+	if (self._previous_state == "jumping" or self._previous_state == "falling") and not self._locomotion_extension:is_on_ground() then
 		CharacterStateHelper.move_in_air_pactsworn(self._first_person_extension, input_extension, self._locomotion_extension, final_move_speed, unit)
 	else
 		CharacterStateHelper.move_on_ground(first_person_extension, input_extension, self._locomotion_extension, move_input_direction, final_move_speed, unit)
@@ -523,9 +531,4 @@ PoisonWindGlobadierStateThrowing._update_movement = function (self, unit, t, dt,
 	CharacterStateHelper.look(input_extension, self._player.viewport_name, first_person_extension, self._status_extension, self._inventory_extension)
 
 	self.current_movement_speed_scale = current_movement_speed_scale
-
-	if t > self._prime_time then
-		self._done_priming = true
-		self._is_priming = false
-	end
 end

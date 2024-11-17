@@ -11,7 +11,7 @@ local function create_menu_layout(self)
 					info_slate = "start_menu_recommended_tag",
 					tag = "start_menu_adventure_tag",
 					callback = function ()
-						Managers.music:trigger_event("Stop_menu_screen_music")
+						Managers.music:trigger_event("Play_console_menu_start_game")
 
 						local hub_level = AdventureMechanism.get_starting_level()
 
@@ -25,7 +25,7 @@ local function create_menu_layout(self)
 					logo_texture = "chaos_wastes_logo",
 					text = "area_selection_morris_name",
 					callback = function ()
-						Managers.music:trigger_event("Stop_menu_screen_music")
+						Managers.music:trigger_event("Play_console_menu_start_game")
 
 						local hub_level = DeusMechanism.get_starting_level()
 
@@ -39,8 +39,6 @@ local function create_menu_layout(self)
 					logo_texture = "versus_logo",
 					text = "vs_ui_versus_tag",
 					conditional_func = function ()
-						Managers.music:trigger_event("Stop_menu_screen_music")
-
 						if not GameSettingsDevelopment.use_backend then
 							return true
 						end
@@ -52,6 +50,8 @@ local function create_menu_layout(self)
 						return versus_settings and versus_settings.active
 					end,
 					callback = function ()
+						Managers.music:trigger_event("Play_console_menu_start_game")
+
 						local hub_level = VersusMechanism.get_starting_level()
 
 						self:_start_game(hub_level)
@@ -60,20 +60,32 @@ local function create_menu_layout(self)
 			}
 		},
 		{
-			text = "start_menu_tutorial",
-			callback = callback(self, "_start_game", "prologue")
-		},
-		{
 			text = "start_menu_options",
-			callback = callback(self, "_activate_view", "options_view")
+			callback = function ()
+				self:_activate_view("options_view")
+			end
 		},
 		{
 			text = "start_menu_cinematics",
-			callback = callback(self, "_activate_view", "cinematics_view")
+			callback = function ()
+				Managers.music:trigger_event("Play_console_menu_select")
+				Managers.music:trigger_event("play_gui_start_menu_generic_whoosh")
+				self:_activate_view("cinematics_view")
+			end
+		},
+		{
+			text = "start_menu_tutorial",
+			callback = function ()
+				Managers.music:trigger_event("Play_console_menu_start_game")
+				self:_start_game("prologue")
+			end
 		},
 		{
 			text = "start_menu_credits",
-			callback = callback(self, "_activate_view", "credits_view")
+			callback = function ()
+				Managers.music:trigger_event("Play_console_menu_select")
+				self:_activate_view("credits_view")
+			end
 		},
 		{
 			text = "menu_quit",

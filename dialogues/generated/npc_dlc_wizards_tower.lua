@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_challenge",
 		response = "nfl_wizard_tower_challenge",
 		criterias = {
@@ -34,6 +35,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_cutscene_a",
 		name = "nfl_wizard_tower_cutscene_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -52,6 +54,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_cutscene_b",
 		name = "nfl_wizard_tower_cutscene_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -70,6 +73,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_cutscene_c",
 		name = "nfl_wizard_tower_cutscene_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -86,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_destroy_wards_a",
 		response = "nfl_wizard_tower_destroy_wards_a",
 		criterias = {
@@ -118,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_door",
 		response = "nfl_wizard_tower_door",
 		criterias = {
@@ -150,6 +156,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_enchantment",
 		response = "nfl_wizard_tower_enchantment",
 		criterias = {
@@ -182,6 +189,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_flame_source",
 		response = "nfl_wizard_tower_flame_source",
 		criterias = {
@@ -214,6 +222,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_jungle_two",
 		response = "nfl_wizard_tower_jungle_two",
 		criterias = {
@@ -246,6 +255,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_keep_climbing",
 		response = "nfl_wizard_tower_keep_climbing",
 		criterias = {
@@ -280,6 +290,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_ready_end_event",
 		name = "nfl_wizard_tower_ready_end_event",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -296,6 +307,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_scheme_a",
 		response = "nfl_wizard_tower_scheme_a",
 		criterias = {
@@ -330,6 +342,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_scheme_b",
 		name = "nfl_wizard_tower_scheme_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -348,6 +361,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_scheme_c",
 		name = "nfl_wizard_tower_scheme_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -364,6 +378,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_skull_found_first",
 		response = "nfl_wizard_tower_skull_found_first",
 		criterias = {
@@ -398,6 +413,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_tower_spellcasting",
 		name = "nfl_wizard_tower_spellcasting",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -414,6 +430,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_test_subjects",
 		response = "nfl_wizard_tower_test_subjects",
 		criterias = {
@@ -446,6 +463,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_thanks",
 		response = "nfl_wizard_tower_thanks",
 		criterias = {
@@ -478,6 +496,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_wards_done",
 		response = "nfl_wizard_tower_wards_done",
 		criterias = {
@@ -510,6 +529,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_destroy_wards_a",
 		response = "nik_wizard_tower_destroy_wards_a",
 		criterias = {
@@ -542,6 +562,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_door",
 		response = "nik_wizard_tower_door",
 		criterias = {
@@ -574,6 +595,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_enchantment",
 		response = "nik_wizard_tower_enchantment",
 		criterias = {
@@ -606,6 +628,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_flame_source",
 		response = "nik_wizard_tower_flame_source",
 		criterias = {
@@ -638,6 +661,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_hurry",
 		response = "nik_wizard_tower_hurry",
 		criterias = {
@@ -670,6 +694,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_intro_a",
 		response = "nik_wizard_tower_intro_a",
 		criterias = {
@@ -702,6 +727,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_jungle_two",
 		response = "nik_wizard_tower_jungle_two",
 		criterias = {
@@ -734,6 +760,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_keep_climbing",
 		response = "nik_wizard_tower_keep_climbing",
 		criterias = {
@@ -766,6 +793,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_test_subjects",
 		response = "nik_wizard_tower_test_subjects",
 		criterias = {
@@ -798,6 +826,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_wards_done",
 		response = "nik_wizard_tower_wards_done",
 		criterias = {
@@ -832,6 +861,7 @@ return function ()
 	define_rule({
 		response = "nsf_wizard_tower_block_well",
 		name = "nsf_wizard_tower_block_well",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -850,6 +880,7 @@ return function ()
 	define_rule({
 		response = "nsf_wizard_tower_challenge_reply",
 		name = "nsf_wizard_tower_challenge_reply",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -866,6 +897,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_defeat",
 		response = "nsf_wizard_tower_defeat",
 		criterias = {
@@ -898,6 +930,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_door",
 		response = "nsf_wizard_tower_door",
 		criterias = {
@@ -930,6 +963,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_enchantment",
 		response = "nsf_wizard_tower_enchantment",
 		criterias = {
@@ -962,6 +996,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_keep_climbing",
 		response = "nsf_wizard_tower_keep_climbing",
 		criterias = {
@@ -994,6 +1029,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_library_two_a",
 		response = "nsf_wizard_tower_library_two_a",
 		criterias = {
@@ -1028,6 +1064,7 @@ return function ()
 	define_rule({
 		response = "nsf_wizard_tower_library_two_long_a",
 		name = "nsf_wizard_tower_library_two_long_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1046,6 +1083,7 @@ return function ()
 	define_rule({
 		response = "nsf_wizard_tower_library_two_long_b",
 		name = "nsf_wizard_tower_library_two_long_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1064,6 +1102,7 @@ return function ()
 	define_rule({
 		response = "nsf_wizard_tower_library_two_long_c",
 		name = "nsf_wizard_tower_library_two_long_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1082,6 +1121,7 @@ return function ()
 	define_rule({
 		response = "nsf_wizard_tower_spellcasting",
 		name = "nsf_wizard_tower_spellcasting",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1098,6 +1138,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_test_subjects",
 		response = "nsf_wizard_tower_test_subjects",
 		criterias = {
@@ -1130,6 +1171,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_waste_disposal_a",
 		response = "nsf_wizard_tower_waste_disposal_a",
 		criterias = {
@@ -1162,6 +1204,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_tower_welcome_a",
 		response = "nsf_wizard_tower_welcome_a",
 		criterias = {

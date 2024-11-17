@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_intro_line_a",
 		response = "pwh_castle_intro_line_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_intro_line_b",
 		response = "pwh_castle_intro_line_b",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_intro_line_c",
 		response = "pwh_castle_intro_line_c",
 		criterias = {
@@ -137,6 +140,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_approaching_throne_room",
 		response = "pwh_castle_vo_approaching_throne_room",
 		criterias = {
@@ -181,6 +185,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_blockage",
 		response = "pwh_castle_vo_blockage",
 		criterias = {
@@ -225,6 +230,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_blood_pool",
 		response = "pwh_castle_vo_blood_pool",
 		criterias = {
@@ -269,6 +275,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_crypt_discovered",
 		response = "pwh_castle_vo_crypt_discovered",
 		criterias = {
@@ -313,6 +320,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_crypt_not_discovered",
 		response = "pwh_castle_vo_crypt_not_discovered",
 		criterias = {
@@ -357,6 +365,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_do_not_recognize",
 		response = "pwh_castle_vo_do_not_recognize",
 		criterias = {
@@ -401,6 +410,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_door_open",
 		response = "pwh_castle_vo_door_open",
 		criterias = {
@@ -445,6 +455,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_drop_down",
 		response = "pwh_castle_vo_drop_down",
 		criterias = {
@@ -489,6 +500,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_enter",
 		response = "pwh_castle_vo_enter",
 		criterias = {
@@ -533,6 +545,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_find_a_way_up",
 		response = "pwh_castle_vo_find_a_way_up",
 		criterias = {
@@ -577,6 +590,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_halls",
 		response = "pwh_castle_vo_halls",
 		criterias = {
@@ -621,6 +635,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_hello",
 		response = "pwh_castle_vo_hello",
 		criterias = {
@@ -665,6 +680,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_landed",
 		response = "pwh_castle_vo_landed",
 		criterias = {
@@ -709,6 +725,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_meet_sorcerer",
 		response = "pwh_castle_vo_meet_sorcerer",
 		criterias = {
@@ -753,6 +770,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_recognize",
 		response = "pwh_castle_vo_recognize",
 		criterias = {
@@ -797,6 +815,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_search_again",
 		response = "pwh_castle_vo_search_again",
 		criterias = {
@@ -841,6 +860,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_secret_door",
 		response = "pwh_castle_vo_secret_door",
 		criterias = {
@@ -885,6 +905,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_sorcerer_slain",
 		response = "pwh_castle_vo_sorcerer_slain",
 		criterias = {
@@ -929,6 +950,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_this_way",
 		response = "pwh_castle_vo_this_way",
 		criterias = {
@@ -973,6 +995,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_throne_room_approach",
 		response = "pwh_castle_vo_throne_room_approach",
 		criterias = {
@@ -1017,6 +1040,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_traces_one",
 		response = "pwh_castle_vo_traces_one",
 		criterias = {
@@ -1061,6 +1085,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_trap_switch",
 		response = "pwh_castle_vo_trap_switch",
 		criterias = {
@@ -1105,6 +1130,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_castle_vo_vista",
 		response = "pwh_castle_vo_vista",
 		criterias = {
@@ -1174,8 +1200,8 @@ return function ()
 				[2] = "pwh_castle_intro_line_a_02"
 			},
 			sound_events_duration = {
-				[1] = 4.6176252365112,
-				[2] = 4.940333366394
+				[1] = 4.6169791221619,
+				[2] = 4.9400000572205
 			}
 		},
 		pwh_castle_intro_line_b = {
@@ -1203,8 +1229,8 @@ return function ()
 				[2] = "pwh_castle_intro_line_b_02"
 			},
 			sound_events_duration = {
-				[1] = 5.5480208396912,
-				[2] = 2.8873333930969
+				[1] = 5.5479793548584,
+				[2] = 2.8869791030884
 			}
 		},
 		pwh_castle_intro_line_c = {
@@ -1232,8 +1258,8 @@ return function ()
 				[2] = "pwh_castle_intro_line_c_02"
 			},
 			sound_events_duration = {
-				[1] = 2.6261665821075,
-				[2] = 4.3703956604004
+				[1] = 2.6259791851044,
+				[2] = 4.3699793815613
 			}
 		},
 		pwh_castle_vo_approaching_throne_room = {
@@ -1269,10 +1295,10 @@ return function ()
 				"pwh_castle_vo_approaching_throne_room_04"
 			},
 			sound_events_duration = {
-				3.4591250419617,
-				5.114812374115,
-				4.5003747940064,
-				8.7716245651245
+				3.4589791297913,
+				5.1139793395996,
+				4.499979019165,
+				8.7709789276123
 			}
 		},
 		pwh_castle_vo_blockage = {
@@ -1308,10 +1334,10 @@ return function ()
 				"pwh_castle_vo_blockage_04"
 			},
 			sound_events_duration = {
-				3.5337083339691,
-				4.1385626792908,
-				4.2964792251587,
-				3.3200416564941
+				3.5329792499542,
+				4.1379790306091,
+				4.2959790229797,
+				3.3199791908264
 			}
 		},
 		pwh_castle_vo_blood_pool = {
@@ -1347,10 +1373,10 @@ return function ()
 				"pwh_castle_vo_blood_pool_04"
 			},
 			sound_events_duration = {
-				3.2637915611267,
-				3.0374791622162,
-				4.546416759491,
-				5.6460208892822
+				3.2629792690277,
+				3.0369791984558,
+				4.5459790229797,
+				5.6459794044495
 			}
 		},
 		pwh_castle_vo_crypt_discovered = {
@@ -1386,10 +1412,10 @@ return function ()
 				"pwh_castle_vo_crypt_discovered_04"
 			},
 			sound_events_duration = {
-				6.3546457290649,
-				6.9873957633972,
-				5.2310833930969,
-				7.5756039619446
+				6.3539791107178,
+				6.9869790077209,
+				5.2309789657593,
+				7.5749793052673
 			}
 		},
 		pwh_castle_vo_crypt_not_discovered = {
@@ -1425,10 +1451,10 @@ return function ()
 				"pwh_castle_vo_crypt_not_discovered_04"
 			},
 			sound_events_duration = {
-				5.8842082023621,
-				4.8336873054504,
-				6.4431877136231,
-				4.8914585113525
+				5.8839793205261,
+				4.8329792022705,
+				6.4429793357849,
+				4.8909792900085
 			}
 		},
 		pwh_castle_vo_do_not_recognize = {
@@ -1464,10 +1490,10 @@ return function ()
 				"pwh_castle_vo_do_not_recognize_04"
 			},
 			sound_events_duration = {
-				4.0485000610352,
-				3.1592500209808,
-				3.5143749713898,
-				4.333083152771
+				4.0479793548584,
+				3.158979177475,
+				3.5139791965485,
+				4.3329792022705
 			}
 		},
 		pwh_castle_vo_door_open = {
@@ -1503,10 +1529,10 @@ return function ()
 				"pwh_castle_vo_door_open_04"
 			},
 			sound_events_duration = {
-				6.872166633606,
-				3.3618125915527,
-				4.7387290000916,
-				7.2385625839233
+				6.8719792366028,
+				3.3609790802002,
+				4.7379789352417,
+				7.2379789352417
 			}
 		},
 		pwh_castle_vo_drop_down = {
@@ -1542,10 +1568,10 @@ return function ()
 				"pwh_castle_vo_drop_down_04"
 			},
 			sound_events_duration = {
-				3.9937500953674,
-				4.1428751945496,
-				3.5407500267029,
-				5.3618960380554
+				3.9929790496826,
+				4.1419792175293,
+				3.5399792194366,
+				5.3609790802002
 			}
 		},
 		pwh_castle_vo_enter = {
@@ -1581,10 +1607,10 @@ return function ()
 				"pwh_castle_vo_enter_04"
 			},
 			sound_events_duration = {
-				1.9042708873749,
-				2.6090834140778,
-				5.5507497787476,
-				2.7953751087189
+				1.904000043869,
+				2.6089792251587,
+				5.5499792098999,
+				2.794979095459
 			}
 		},
 		pwh_castle_vo_find_a_way_up = {
@@ -1620,10 +1646,10 @@ return function ()
 				"pwh_castle_vo_find_a_way_up_04"
 			},
 			sound_events_duration = {
-				4.0136456489563,
-				5.7680830955505,
-				2.6573333740234,
-				3.5980417728424
+				4.0129790306091,
+				5.76797914505,
+				2.6569790840149,
+				3.5979790687561
 			}
 		},
 		pwh_castle_vo_halls = {
@@ -1659,10 +1685,10 @@ return function ()
 				"pwh_castle_vo_halls_04"
 			},
 			sound_events_duration = {
-				2.3321042060852,
-				4.298291683197,
-				3.7771666049957,
-				3.8711457252502
+				2.3319792747498,
+				4.2979793548584,
+				3.7769792079926,
+				3.8709790706634
 			}
 		},
 		pwh_castle_vo_hello = {
@@ -1698,10 +1724,10 @@ return function ()
 				"pwh_castle_vo_hello_04"
 			},
 			sound_events_duration = {
-				1.7839167118073,
-				5.5233960151672,
-				3.2983958721161,
-				3.4167499542236
+				1.7829791307449,
+				5.522979259491,
+				3.2979791164398,
+				3.4159791469574
 			}
 		},
 		pwh_castle_vo_landed = {
@@ -1737,10 +1763,10 @@ return function ()
 				"pwh_castle_vo_landed_04"
 			},
 			sound_events_duration = {
-				4.9430418014526,
-				2.1178750991821,
-				4.9442501068115,
-				3.8943958282471
+				4.9429793357849,
+				2.1169791221619,
+				4.9439792633057,
+				3.8939790725708
 			}
 		},
 		pwh_castle_vo_meet_sorcerer = {
@@ -1776,10 +1802,10 @@ return function ()
 				"pwh_castle_vo_meet_sorcerer_04"
 			},
 			sound_events_duration = {
-				6.6816668510437,
-				3.700395822525,
-				3.2299582958221,
-				7.9926042556763
+				6.6809792518616,
+				3.6999790668488,
+				3.2289791107178,
+				7.9919791221619
 			}
 		},
 		pwh_castle_vo_recognize = {
@@ -1815,10 +1841,10 @@ return function ()
 				"pwh_castle_vo_recognize_04"
 			},
 			sound_events_duration = {
-				2.875958442688,
-				5.7313542366028,
-				2.3834373950958,
-				3.588770866394
+				2.8749792575836,
+				5.7309789657593,
+				2.3829791545868,
+				3.5879790782928
 			}
 		},
 		pwh_castle_vo_search_again = {
@@ -1854,10 +1880,10 @@ return function ()
 				"pwh_castle_vo_search_again_04"
 			},
 			sound_events_duration = {
-				3.5126667022705,
-				2.4732291698456,
-				4.0764164924622,
-				5.6101040840149
+				3.5119791030884,
+				2.4729790687561,
+				4.0759792327881,
+				5.6099791526794
 			}
 		},
 		pwh_castle_vo_secret_door = {
@@ -1893,10 +1919,10 @@ return function ()
 				"pwh_castle_vo_secret_door_04"
 			},
 			sound_events_duration = {
-				7.4866042137146,
-				5.6523542404175,
-				5.2357082366943,
-				4.886604309082
+				7.4859790802002,
+				5.651978969574,
+				5.2349791526794,
+				4.8859791755676
 			}
 		},
 		pwh_castle_vo_sorcerer_slain = {
@@ -1932,10 +1958,10 @@ return function ()
 				"pwh_castle_vo_sorcerer_slain_04"
 			},
 			sound_events_duration = {
-				4.781708240509,
-				7.594229221344,
-				6.6730208396912,
-				7.0863332748413
+				4.7809791564941,
+				7.5939793586731,
+				6.6729793548584,
+				7.0859789848328
 			}
 		},
 		pwh_castle_vo_this_way = {
@@ -1971,10 +1997,10 @@ return function ()
 				"pwh_castle_vo_this_way_04"
 			},
 			sound_events_duration = {
-				1.5403541326523,
-				2.202187538147,
-				4.5424790382385,
-				3.1726665496826
+				1.5399792194366,
+				2.2019791603088,
+				4.5419793128967,
+				3.1719791889191
 			}
 		},
 		pwh_castle_vo_throne_room_approach = {
@@ -2010,10 +2036,10 @@ return function ()
 				"pwh_castle_vo_throne_room_approach_04"
 			},
 			sound_events_duration = {
-				6.4202499389648,
-				3.6353750228882,
-				5.169979095459,
-				5.6616668701172
+				6.419979095459,
+				3.6349792480469,
+				5.1689791679382,
+				5.6609792709351
 			}
 		},
 		pwh_castle_vo_traces_one = {
@@ -2049,10 +2075,10 @@ return function ()
 				"pwh_castle_vo_traces_one_04"
 			},
 			sound_events_duration = {
-				4.6803541183472,
-				4.754478931427,
-				6.033625125885,
-				3.4337499141693
+				4.6799793243408,
+				4.7539792060852,
+				6.0329790115356,
+				3.4329791069031
 			}
 		},
 		pwh_castle_vo_trap_switch = {
@@ -2088,10 +2114,10 @@ return function ()
 				"pwh_castle_vo_trap_switch_04"
 			},
 			sound_events_duration = {
-				3.5476875305176,
-				4.5791249275208,
-				3.5594375133514,
-				2.8757708072662
+				3.5469791889191,
+				4.5789790153503,
+				3.5589792728424,
+				2.8749792575836
 			}
 		},
 		pwh_castle_vo_vista = {
@@ -2127,10 +2153,10 @@ return function ()
 				"pwh_castle_vo_vista_04"
 			},
 			sound_events_duration = {
-				6.3165416717529,
-				5.0963540077209,
-				6.5002918243408,
-				3.588666677475
+				6.3159790039063,
+				5.0959792137146,
+				6.499979019165,
+				3.5879790782928
 			}
 		}
 	})

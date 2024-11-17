@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "pdr_activate_ability_ranger",
 		name = "pdr_activate_ability_ranger",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -26,10 +27,17 @@ return function ()
 				"player_career",
 				OP.EQ,
 				"dr_ranger"
+			},
+			{
+				"faction_memory",
+				"ability_vo_disabled",
+				OP.NEQ,
+				1
 			}
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_casual_songbook",
 		response = "pdr_casual_songbook",
 		criterias = {
@@ -104,6 +112,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_curse",
 		response = "pdr_curse",
 		criterias = {
@@ -154,6 +163,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_curse_forced",
 		response = "pdr_curse_forced",
 		criterias = {
@@ -192,6 +202,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_ambush_horde_spawned",
 		response = "pdr_gameplay_ambush_horde_spawned",
 		criterias = {
@@ -236,6 +247,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_armoured_enemy_bright_wizard",
 		response = "pdr_gameplay_armoured_enemy_bright_wizard",
 		criterias = {
@@ -286,6 +298,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_armoured_enemy_empire_soldier",
 		response = "pdr_gameplay_armoured_enemy_empire_soldier",
 		criterias = {
@@ -336,6 +349,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_armoured_enemy_witch_hunter",
 		response = "pdr_gameplay_armoured_enemy_witch_hunter",
 		criterias = {
@@ -386,6 +400,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_armoured_enemy_wood_elf",
 		response = "pdr_gameplay_armoured_enemy_wood_elf",
 		criterias = {
@@ -436,6 +451,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bile_troll_before_puke",
 		response = "pdr_gameplay_bile_troll_before_puke",
 		criterias = {
@@ -480,6 +496,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bile_troll_incapacitaded",
 		response = "pdr_gameplay_bile_troll_incapacitaded",
 		criterias = {
@@ -526,6 +543,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_bright_wizard_being_helped_up",
 		name = "pdr_gameplay_bright_wizard_being_helped_up",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -554,6 +572,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bright_wizard_dead",
 		response = "pdr_gameplay_bright_wizard_dead",
 		criterias = {
@@ -598,6 +617,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bright_wizard_eaten",
 		response = "pdr_gameplay_bright_wizard_eaten",
 		criterias = {
@@ -648,6 +668,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bright_wizard_grabbed",
 		response = "pdr_gameplay_bright_wizard_grabbed",
 		criterias = {
@@ -698,6 +719,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bright_wizard_low_on_health",
 		response = "pdr_gameplay_bright_wizard_low_on_health",
 		criterias = {
@@ -736,6 +758,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_bright_wizard_on_a_frenzy",
 		response = "pdr_gameplay_bright_wizard_on_a_frenzy",
 		criterias = {
@@ -780,6 +803,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_casual_quotes",
 		response = "pdr_gameplay_casual_quotes",
 		criterias = {
@@ -842,6 +866,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_dead_body",
 		response = "pdr_gameplay_dead_body",
 		criterias = {
@@ -910,6 +935,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_dead_end",
 		response = "pdr_gameplay_dead_end",
 		criterias = {
@@ -962,6 +988,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_empire_soldier_being_helped_up",
 		name = "pdr_gameplay_empire_soldier_being_helped_up",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -990,6 +1017,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_empire_soldier_dead",
 		response = "pdr_gameplay_empire_soldier_dead",
 		criterias = {
@@ -1034,6 +1062,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_empire_soldier_eaten",
 		response = "pdr_gameplay_empire_soldier_eaten",
 		criterias = {
@@ -1084,6 +1113,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_empire_soldier_grabbed",
 		response = "pdr_gameplay_empire_soldier_grabbed",
 		criterias = {
@@ -1134,6 +1164,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_empire_soldier_low_on_health",
 		response = "pdr_gameplay_empire_soldier_low_on_health",
 		criterias = {
@@ -1172,6 +1203,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_empire_soldier_on_a_frenzy",
 		response = "pdr_gameplay_empire_soldier_on_a_frenzy",
 		criterias = {
@@ -1216,6 +1248,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_encouraging_words",
 		response = "pdr_gameplay_encouraging_words",
 		criterias = {
@@ -1260,6 +1293,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 0.4,
 		name = "pdr_gameplay_friendly_fire_bright_wizard",
 		response = "pdr_gameplay_friendly_fire_bright_wizard",
 		criterias = {
@@ -1310,6 +1344,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 0.4,
 		name = "pdr_gameplay_friendly_fire_empire_soldier",
 		response = "pdr_gameplay_friendly_fire_empire_soldier",
 		criterias = {
@@ -1360,6 +1395,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 0.4,
 		name = "pdr_gameplay_friendly_fire_witch_hunter",
 		response = "pdr_gameplay_friendly_fire_witch_hunter",
 		criterias = {
@@ -1410,6 +1446,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 0.4,
 		name = "pdr_gameplay_friendly_fire_wood_elf",
 		response = "pdr_gameplay_friendly_fire_wood_elf",
 		criterias = {
@@ -1460,6 +1497,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_globadier_guck",
 		response = "pdr_gameplay_globadier_guck",
 		criterias = {
@@ -1492,7 +1530,7 @@ return function ()
 				"pwg_projectile_thrown",
 				OP.TIMEDIFF,
 				OP.GT,
-				1
+				6
 			}
 		},
 		on_done = {
@@ -1504,6 +1542,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_healing_bright_wizard",
 		response = "pdr_gameplay_healing_bright_wizard",
 		criterias = {
@@ -1548,6 +1587,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_healing_draught",
 		response = "pdr_gameplay_healing_draught",
 		criterias = {
@@ -1610,6 +1650,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_healing_empire_soldier",
 		response = "pdr_gameplay_healing_empire_soldier",
 		criterias = {
@@ -1654,6 +1695,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_healing_witch_hunter",
 		response = "pdr_gameplay_healing_witch_hunter",
 		criterias = {
@@ -1698,6 +1740,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_healing_wood_elf",
 		response = "pdr_gameplay_healing_wood_elf",
 		criterias = {
@@ -1742,6 +1785,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_heard_bright_wizard_in_trouble",
 		response = "pdr_gameplay_heard_bright_wizard_in_trouble",
 		criterias = {
@@ -1798,6 +1842,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_heard_empire_soldier_in_trouble",
 		response = "pdr_gameplay_heard_empire_soldier_in_trouble",
 		criterias = {
@@ -1854,6 +1899,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_heard_witch_hunter_in_trouble",
 		response = "pdr_gameplay_heard_witch_hunter_in_trouble",
 		criterias = {
@@ -1910,6 +1956,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_heard_wood_elf_in_trouble",
 		response = "pdr_gameplay_heard_wood_elf_in_trouble",
 		criterias = {
@@ -1966,6 +2013,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_Skaven_warpfire_thrower",
 		response = "pdr_gameplay_hearing_a_Skaven_warpfire_thrower",
 		criterias = {
@@ -2023,6 +2071,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat",
 		response = "pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat",
 		criterias = {
@@ -2080,6 +2129,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_spawn",
 		response = "pdr_gameplay_hearing_a_chaos_spawn",
 		criterias = {
@@ -2137,6 +2187,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_spawn_combat",
 		response = "pdr_gameplay_hearing_a_chaos_spawn_combat",
 		criterias = {
@@ -2194,6 +2245,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_warrior",
 		response = "pdr_gameplay_hearing_a_chaos_warrior",
 		criterias = {
@@ -2251,6 +2303,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_warrior_combat",
 		response = "pdr_gameplay_hearing_a_chaos_warrior_combat",
 		criterias = {
@@ -2308,6 +2361,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_leech",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_leech",
 		criterias = {
@@ -2365,6 +2419,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_plague",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_plague",
 		criterias = {
@@ -2422,6 +2477,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_plague_combat",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_plague_combat",
 		criterias = {
@@ -2479,6 +2535,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_tentacle",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_tentacle",
 		criterias = {
@@ -2536,6 +2593,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_tentacle_combat",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_tentacle_combat",
 		criterias = {
@@ -2593,6 +2651,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_wind",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_wind",
 		criterias = {
@@ -2650,6 +2709,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_chaos_wizard_wind_combat",
 		response = "pdr_gameplay_hearing_a_chaos_wizard_wind_combat",
 		criterias = {
@@ -2707,6 +2767,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_globadier",
 		response = "pdr_gameplay_hearing_a_globadier",
 		criterias = {
@@ -2764,6 +2825,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_globadier_combat",
 		response = "pdr_gameplay_hearing_a_globadier_combat",
 		criterias = {
@@ -2821,6 +2883,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_gutter_runner",
 		response = "pdr_gameplay_hearing_a_gutter_runner",
 		criterias = {
@@ -2878,6 +2941,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_gutter_runner_combat",
 		response = "pdr_gameplay_hearing_a_gutter_runner_combat",
 		criterias = {
@@ -2935,6 +2999,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_minotaur",
 		response = "pdr_gameplay_hearing_a_minotaur",
 		criterias = {
@@ -2992,6 +3057,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_pm",
 		response = "pdr_gameplay_hearing_a_pm",
 		criterias = {
@@ -3049,6 +3115,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_pm_in_combat",
 		response = "pdr_gameplay_hearing_a_pm_in_combat",
 		criterias = {
@@ -3106,6 +3173,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_skaven_patrol_stormvermin",
 		response = "pdr_gameplay_hearing_a_skaven_patrol_stormvermin",
 		criterias = {
@@ -3163,6 +3231,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_skaven_rat_ogre",
 		response = "pdr_gameplay_hearing_a_skaven_rat_ogre",
 		criterias = {
@@ -3220,6 +3289,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_skaven_rat_ogre_combat",
 		response = "pdr_gameplay_hearing_a_skaven_rat_ogre_combat",
 		criterias = {
@@ -3277,6 +3347,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_skaven_ratling_gun",
 		response = "pdr_gameplay_hearing_a_skaven_ratling_gun",
 		criterias = {
@@ -3334,6 +3405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_skaven_ratling_gun_combat",
 		response = "pdr_gameplay_hearing_a_skaven_ratling_gun_combat",
 		criterias = {
@@ -3391,6 +3463,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_standard_bearer",
 		response = "pdr_gameplay_hearing_a_standard_bearer",
 		criterias = {
@@ -3442,6 +3515,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_standard_bearer_crater",
 		response = "pdr_gameplay_hearing_a_standard_bearer_crater",
 		criterias = {
@@ -3499,6 +3573,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_stormfiend",
 		response = "pdr_gameplay_hearing_a_stormfiend",
 		criterias = {
@@ -3556,6 +3631,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_stormfiend_combat",
 		response = "pdr_gameplay_hearing_a_stormfiend_combat",
 		criterias = {
@@ -3613,6 +3689,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_troll",
 		response = "pdr_gameplay_hearing_a_troll",
 		criterias = {
@@ -3677,6 +3754,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_a_troll_combat",
 		response = "pdr_gameplay_hearing_a_troll_combat",
 		criterias = {
@@ -3741,6 +3819,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hearing_marauder_berserker_combat",
 		response = "pdr_gameplay_hearing_marauder_berserker_combat",
 		criterias = {
@@ -3785,6 +3864,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_hears_incoming_horde",
 		response = "pdr_gameplay_hears_incoming_horde",
 		criterias = {
@@ -3835,6 +3915,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_helped_by_bright_wizard",
 		response = "pdr_gameplay_helped_by_bright_wizard",
 		criterias = {
@@ -3879,6 +3960,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_helped_by_empire_soldier",
 		response = "pdr_gameplay_helped_by_empire_soldier",
 		criterias = {
@@ -3923,6 +4005,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_helped_by_witch_hunter",
 		response = "pdr_gameplay_helped_by_witch_hunter",
 		criterias = {
@@ -3967,6 +4050,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_helped_by_wood_elf",
 		response = "pdr_gameplay_helped_by_wood_elf",
 		criterias = {
@@ -4011,8 +4095,9 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_hit_by_goo",
+		probability = 1,
 		name = "pdr_gameplay_hit_by_goo",
+		response = "pdr_gameplay_hit_by_goo",
 		criterias = {
 			{
 				"query_context",
@@ -4031,10 +4116,25 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_memory",
+				"time_since_hit_by_goo_self",
+				OP.TIMEDIFF,
+				OP.GT,
+				20
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"time_since_hit_by_goo_self",
+				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_incoming_attack",
 		response = "pdr_gameplay_incoming_attack",
 		criterias = {
@@ -4079,6 +4179,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_incoming_bestigor_attack",
 		response = "pdr_gameplay_incoming_bestigor_attack",
 		criterias = {
@@ -4123,6 +4224,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_incoming_globadier",
 		response = "pdr_gameplay_incoming_globadier",
 		criterias = {
@@ -4161,6 +4263,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_incoming_skaven_rat_ogre",
 		response = "pdr_gameplay_incoming_skaven_rat_ogre",
 		criterias = {
@@ -4205,6 +4308,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_chaos_warrior",
 		response = "pdr_gameplay_killing_a_chaos_warrior",
 		criterias = {
@@ -4279,6 +4383,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_chaos_warrior_champion",
 		response = "pdr_gameplay_killing_a_chaos_warrior_champion",
 		criterias = {
@@ -4353,6 +4458,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_chaos_wizard_leech",
 		response = "pdr_gameplay_killing_a_chaos_wizard_leech",
 		criterias = {
@@ -4427,6 +4533,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_chaos_wizard_plague",
 		response = "pdr_gameplay_killing_a_chaos_wizard_plague",
 		criterias = {
@@ -4501,6 +4608,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_chaos_wizard_tentacle",
 		response = "pdr_gameplay_killing_a_chaos_wizard_tentacle",
 		criterias = {
@@ -4575,6 +4683,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_chaos_wizard_wind",
 		response = "pdr_gameplay_killing_a_chaos_wizard_wind",
 		criterias = {
@@ -4649,6 +4758,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_minotaur",
 		response = "pdr_gameplay_killing_a_minotaur",
 		criterias = {
@@ -4723,6 +4833,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_skaven_warpfire_thrower",
 		response = "pdr_gameplay_killing_a_skaven_warpfire_thrower",
 		criterias = {
@@ -4797,6 +4908,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_a_stormfiend",
 		response = "pdr_gameplay_killing_a_stormfiend",
 		criterias = {
@@ -4871,6 +4983,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_globadier",
 		response = "pdr_gameplay_killing_globadier",
 		criterias = {
@@ -4945,6 +5058,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_gutterrunner",
 		response = "pdr_gameplay_killing_gutterrunner",
 		criterias = {
@@ -5019,6 +5133,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_lootrat",
 		response = "pdr_gameplay_killing_lootrat",
 		criterias = {
@@ -5093,6 +5208,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_packmaster",
 		response = "pdr_gameplay_killing_packmaster",
 		criterias = {
@@ -5167,6 +5283,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_killing_ratling",
 		response = "pdr_gameplay_killing_ratling",
 		criterias = {
@@ -5241,6 +5358,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_knocked_down",
 		response = "pdr_gameplay_knocked_down",
 		criterias = {
@@ -5297,6 +5415,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_low_on_health",
 		response = "pdr_gameplay_low_on_health",
 		criterias = {
@@ -5359,6 +5478,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_no_nearby_teammates",
 		response = "pdr_gameplay_no_nearby_teammates",
 		criterias = {
@@ -5403,6 +5523,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_out_of_ammo",
 		response = "pdr_gameplay_out_of_ammo",
 		criterias = {
@@ -5453,6 +5574,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_overcharge",
 		response = "pdr_gameplay_overcharge",
 		criterias = {
@@ -5491,6 +5613,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_parry_bright_wizard",
 		response = "pdr_gameplay_parry_bright_wizard",
 		criterias = {
@@ -5541,6 +5664,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_parry_empire_soldier",
 		response = "pdr_gameplay_parry_empire_soldier",
 		criterias = {
@@ -5591,6 +5715,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_parry_witch_hunter",
 		response = "pdr_gameplay_parry_witch_hunter",
 		criterias = {
@@ -5641,6 +5766,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_parry_wood_elf",
 		response = "pdr_gameplay_parry_wood_elf",
 		criterias = {
@@ -5691,6 +5817,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_pinging_ecws_a",
 		response = "pdr_gameplay_pinging_ecws_a",
 		criterias = {
@@ -5741,6 +5868,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_player_pounced",
 		response = "pdr_gameplay_player_pounced",
 		criterias = {
@@ -5785,6 +5913,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_Skaven_warpfire_thrower",
 		response = "pdr_gameplay_seeing_a_Skaven_warpfire_thrower",
 		criterias = {
@@ -5842,6 +5971,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_spawn",
 		response = "pdr_gameplay_seeing_a_chaos_spawn",
 		criterias = {
@@ -5899,6 +6029,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_warrior",
 		response = "pdr_gameplay_seeing_a_chaos_warrior",
 		criterias = {
@@ -5956,6 +6087,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_warrior_champion_combat",
 		response = "pdr_gameplay_seeing_a_chaos_warrior_champion_combat",
 		criterias = {
@@ -6013,6 +6145,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_wizard_leech",
 		response = "pdr_gameplay_seeing_a_chaos_wizard_leech",
 		criterias = {
@@ -6064,6 +6197,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_wizard_plague",
 		response = "pdr_gameplay_seeing_a_chaos_wizard_plague",
 		criterias = {
@@ -6121,6 +6255,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_wizard_tentacle",
 		response = "pdr_gameplay_seeing_a_chaos_wizard_tentacle",
 		criterias = {
@@ -6178,6 +6313,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_chaos_wizard_wind",
 		response = "pdr_gameplay_seeing_a_chaos_wizard_wind",
 		criterias = {
@@ -6235,6 +6371,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_globadier",
 		response = "pdr_gameplay_seeing_a_globadier",
 		criterias = {
@@ -6292,6 +6429,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_gutter_runner",
 		response = "pdr_gameplay_seeing_a_gutter_runner",
 		criterias = {
@@ -6349,6 +6487,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_pm",
 		response = "pdr_gameplay_seeing_a_pm",
 		criterias = {
@@ -6399,6 +6538,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_scr",
 		response = "pdr_gameplay_seeing_a_scr",
 		criterias = {
@@ -6449,6 +6589,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_shield_stormvermin",
 		response = "pdr_gameplay_seeing_a_shield_stormvermin",
 		criterias = {
@@ -6499,6 +6640,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_skaven_patrol_stormvermin",
 		response = "pdr_gameplay_seeing_a_skaven_patrol_stormvermin",
 		criterias = {
@@ -6549,6 +6691,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_skaven_rat_ogre",
 		response = "pdr_gameplay_seeing_a_skaven_rat_ogre",
 		criterias = {
@@ -6606,6 +6749,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_skaven_ratling_gun",
 		response = "pdr_gameplay_seeing_a_skaven_ratling_gun",
 		criterias = {
@@ -6663,6 +6807,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_skaven_slaver",
 		response = "pdr_gameplay_seeing_a_skaven_slaver",
 		criterias = {
@@ -6707,6 +6852,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_stormfiend",
 		response = "pdr_gameplay_seeing_a_stormfiend",
 		criterias = {
@@ -6764,6 +6910,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_stormvermin",
 		response = "pdr_gameplay_seeing_a_stormvermin",
 		criterias = {
@@ -6808,6 +6955,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_troll",
 		response = "pdr_gameplay_seeing_a_troll",
 		criterias = {
@@ -6872,6 +7020,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_ungor_archer",
 		response = "pdr_gameplay_seeing_a_ungor_archer",
 		criterias = {
@@ -6916,6 +7065,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_an_ecws_a",
 		response = "pdr_gameplay_seeing_an_ecws_a",
 		criterias = {
@@ -6973,6 +7123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_self_heal",
 		response = "pdr_gameplay_self_heal",
 		criterias = {
@@ -7017,6 +7168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_special_enemy_kill_melee",
 		response = "pdr_gameplay_special_enemy_kill_melee",
 		criterias = {
@@ -7068,6 +7220,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_special_enemy_kill_ranged",
 		response = "pdr_gameplay_special_enemy_kill_ranged",
 		criterias = {
@@ -7112,6 +7265,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_spots_ammo",
 		response = "pdr_gameplay_spots_ammo",
 		criterias = {
@@ -7186,6 +7340,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_spots_bomb",
 		response = "pdr_gameplay_spots_bomb",
 		criterias = {
@@ -7248,6 +7403,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_spots_health",
 		response = "pdr_gameplay_spots_health",
 		criterias = {
@@ -7310,6 +7466,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_spots_potion",
 		response = "pdr_gameplay_spots_potion",
 		criterias = {
@@ -7372,6 +7529,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_standard_bearer_buff_active",
 		response = "pdr_gameplay_standard_bearer_buff_active",
 		criterias = {
@@ -7410,6 +7568,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_standard_bearer_buff_deactivated",
 		response = "pdr_gameplay_standard_bearer_buff_deactivated",
 		criterias = {
@@ -7448,6 +7607,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_standard_bearer_has_planted_standard",
 		response = "pdr_gameplay_standard_bearer_has_planted_standard",
 		criterias = {
@@ -7486,6 +7646,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_standard_bearer_has_planted_standard_crater",
 		response = "pdr_gameplay_standard_bearer_has_planted_standard_crater",
 		criterias = {
@@ -7524,6 +7685,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_taking_heavy_damage",
 		response = "pdr_gameplay_taking_heavy_damage",
 		criterias = {
@@ -7574,6 +7736,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_tension_no_enemies",
 		response = "pdr_gameplay_tension_no_enemies",
 		criterias = {
@@ -7636,6 +7799,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_throwing_bomb",
 		response = "pdr_gameplay_throwing_bomb",
 		criterias = {
@@ -7680,6 +7844,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_tips_wizard_plague",
 		response = "pdr_gameplay_tips_wizard_plague",
 		criterias = {
@@ -7724,6 +7889,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_tips_wizard_wind",
 		response = "pdr_gameplay_tips_wizard_wind",
 		criterias = {
@@ -7768,6 +7934,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_using_potion",
 		response = "pdr_gameplay_using_potion",
 		criterias = {
@@ -7806,6 +7973,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_weapon_flair_defensive",
 		response = "pdr_gameplay_weapon_flair_defensive",
 		criterias = {
@@ -7844,6 +8012,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_weapon_flair_offensive",
 		response = "pdr_gameplay_weapon_flair_offensive",
 		criterias = {
@@ -7884,6 +8053,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_witch_hunter_being_helped_up",
 		name = "pdr_gameplay_witch_hunter_being_helped_up",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -7912,6 +8082,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_witch_hunter_dead",
 		response = "pdr_gameplay_witch_hunter_dead",
 		criterias = {
@@ -7956,6 +8127,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_witch_hunter_eaten",
 		response = "pdr_gameplay_witch_hunter_eaten",
 		criterias = {
@@ -8006,6 +8178,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_witch_hunter_grabbed",
 		response = "pdr_gameplay_witch_hunter_grabbed",
 		criterias = {
@@ -8056,6 +8229,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_witch_hunter_low_on_health",
 		response = "pdr_gameplay_witch_hunter_low_on_health",
 		criterias = {
@@ -8094,6 +8268,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_witch_hunter_on_a_frenzy",
 		response = "pdr_gameplay_witch_hunter_on_a_frenzy",
 		criterias = {
@@ -8140,6 +8315,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_wood_elf_being_helped_up",
 		name = "pdr_gameplay_wood_elf_being_helped_up",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -8168,6 +8344,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_wood_elf_dead",
 		response = "pdr_gameplay_wood_elf_dead",
 		criterias = {
@@ -8212,6 +8389,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_wood_elf_eaten",
 		response = "pdr_gameplay_wood_elf_eaten",
 		criterias = {
@@ -8262,6 +8440,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_wood_elf_grabbed",
 		response = "pdr_gameplay_wood_elf_grabbed",
 		criterias = {
@@ -8312,6 +8491,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_wood_elf_low_on_health",
 		response = "pdr_gameplay_wood_elf_low_on_health",
 		criterias = {
@@ -8350,6 +8530,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_wood_elf_on_a_frenzy",
 		response = "pdr_gameplay_wood_elf_on_a_frenzy",
 		criterias = {
@@ -8396,6 +8577,7 @@ return function ()
 	define_rule({
 		response = "pdr_last_hero_standing",
 		name = "pdr_last_hero_standing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -8418,6 +8600,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_achieved_all_but_one_goal",
 		response = "pdr_objective_achieved_all_but_one_goal",
 		criterias = {
@@ -8462,6 +8645,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_across",
 		response = "pdr_objective_correct_path_across",
 		criterias = {
@@ -8512,6 +8696,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_alley",
 		response = "pdr_objective_correct_path_alley",
 		criterias = {
@@ -8562,6 +8747,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_bridge",
 		response = "pdr_objective_correct_path_bridge",
 		criterias = {
@@ -8612,6 +8798,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_door",
 		response = "pdr_objective_correct_path_door",
 		criterias = {
@@ -8662,6 +8849,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_down",
 		response = "pdr_objective_correct_path_down",
 		criterias = {
@@ -8712,6 +8900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_ladder_down",
 		response = "pdr_objective_correct_path_ladder_down",
 		criterias = {
@@ -8762,6 +8951,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_ladder_up",
 		response = "pdr_objective_correct_path_ladder_up",
 		criterias = {
@@ -8812,6 +9002,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_stairs_down",
 		response = "pdr_objective_correct_path_stairs_down",
 		criterias = {
@@ -8862,6 +9053,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_stairs_up",
 		response = "pdr_objective_correct_path_stairs_up",
 		criterias = {
@@ -8918,6 +9110,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_street",
 		response = "pdr_objective_correct_path_street",
 		criterias = {
@@ -8968,6 +9161,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_this_way",
 		response = "pdr_objective_correct_path_this_way",
 		criterias = {
@@ -9018,6 +9212,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_correct_path_up",
 		response = "pdr_objective_correct_path_up",
 		criterias = {
@@ -9070,6 +9265,7 @@ return function ()
 	define_rule({
 		response = "pdr_objective_dropping_grimoire",
 		name = "pdr_objective_dropping_grimoire",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9098,6 +9294,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_goal_achieved_escape",
 		response = "pdr_objective_goal_achieved_escape",
 		criterias = {
@@ -9142,6 +9339,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_goal_achieved_more_left",
 		response = "pdr_objective_goal_achieved_more_left",
 		criterias = {
@@ -9186,6 +9384,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_interacting_with_objective",
 		response = "pdr_objective_interacting_with_objective",
 		criterias = {
@@ -9230,6 +9429,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_objective_nearing_objective_deadline",
 		response = "pdr_objective_nearing_objective_deadline",
 		criterias = {
@@ -9276,6 +9476,7 @@ return function ()
 	define_rule({
 		response = "pdr_objective_picking_up_grimoire",
 		name = "pdr_objective_picking_up_grimoire",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9306,6 +9507,7 @@ return function ()
 	define_rule({
 		response = "pdr_special_ability_ironbreaker",
 		name = "pdr_special_ability_ironbreaker",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9330,12 +9532,19 @@ return function ()
 				"player_career",
 				OP.EQ,
 				"dr_ironbreaker"
+			},
+			{
+				"faction_memory",
+				"ability_vo_disabled",
+				OP.NEQ,
+				1
 			}
 		}
 	})
 	define_rule({
 		response = "pdr_special_ability_ironbreaker_taunt",
 		name = "pdr_special_ability_ironbreaker_taunt",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9360,12 +9569,19 @@ return function ()
 				"player_career",
 				OP.EQ,
 				"dr_ironbreaker"
+			},
+			{
+				"faction_memory",
+				"ability_vo_disabled",
+				OP.NEQ,
+				1
 			}
 		}
 	})
 	define_rule({
 		response = "pdr_special_ability_slayer",
 		name = "pdr_special_ability_slayer",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9390,10 +9606,17 @@ return function ()
 				"player_career",
 				OP.EQ,
 				"dr_slayer"
+			},
+			{
+				"faction_memory",
+				"ability_vo_disabled",
+				OP.NEQ,
+				1
 			}
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_spotting_ferry_lady",
 		response = "pdr_spotting_ferry_lady",
 		criterias = {
@@ -9444,6 +9667,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_targeted_by_ratling",
 		response = "pdr_targeted_by_ratling",
 		criterias = {
@@ -15344,6 +15568,7 @@ return function ()
 			}
 		},
 		pdr_gameplay_knocked_down = {
+			only_allies = true,
 			randomize_indexes_n = 0,
 			face_animations_n = 8,
 			database = "dwarf_ranger_honduras",

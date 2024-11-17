@@ -504,27 +504,6 @@ VoteTemplates = {
 				input = "ingame_vote_no"
 			}
 		},
-		can_start_vote = function (data)
-			local is_server = Managers.player.is_server
-
-			if not is_server then
-				return true
-			end
-
-			local difficulty = data.difficulty
-
-			if difficulty then
-				local difficulty_settings = DifficultySettings[difficulty]
-				local human_players = Managers.player:human_players()
-				local players_below_difficulty = DifficultyManager.players_below_required_power_level(difficulty, human_players)
-
-				if #players_below_difficulty > 0 then
-					return false, Localize("required_power_level") .. ": " .. difficulty_settings.required_power_level
-				end
-			end
-
-			return true
-		end,
 		on_start = function (ingame_context, data)
 			Managers.matchmaking:cancel_matchmaking()
 		end,
@@ -1132,9 +1111,10 @@ VoteTemplates = {
 		end
 	},
 	game_settings_vote_switch_mechanism = {
-		client_start_vote_rpc = "rpc_server_request_start_vote_lookup",
-		ingame_vote = false,
 		mission_vote = true,
+		cancel_disabled = true,
+		ingame_vote = false,
+		client_start_vote_rpc = "rpc_server_request_start_vote_lookup",
 		gamepad_support = true,
 		text = "vote_switch_mechanism",
 		minimum_voter_percent = 1,

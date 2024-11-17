@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_bright_weave_conversation_one_01",
 		response = "pbw_bright_weave_conversation_one_01",
 		criterias = {
@@ -74,6 +75,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bright_weave_conversation_two_01",
 		response = "pbw_bright_weave_conversation_two_01",
 		criterias = {
@@ -111,6 +113,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wind_fire_intro_banter_a",
 		response = "pbw_wind_fire_intro_banter_a",
 		criterias = {
@@ -161,6 +164,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wind_fire_intro_banter_b",
 		response = "pbw_wind_fire_intro_banter_b",
 		criterias = {
@@ -205,6 +209,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wind_fire_intro_banter_a",
 		response = "pdr_wind_fire_intro_banter_a",
 		criterias = {
@@ -255,6 +260,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wind_fire_intro_banter_b",
 		response = "pdr_wind_fire_intro_banter_b",
 		criterias = {
@@ -299,6 +305,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wind_fire_intro_banter_a",
 		response = "pes_wind_fire_intro_banter_a",
 		criterias = {
@@ -349,6 +356,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wind_fire_intro_banter_b",
 		response = "pes_wind_fire_intro_banter_b",
 		criterias = {
@@ -393,6 +401,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bright_weave_conversation_three_01",
 		response = "pwe_bright_weave_conversation_three_01",
 		criterias = {
@@ -467,6 +476,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bright_weave_conversation_three_02",
 		response = "pwe_bright_weave_conversation_three_02",
 		criterias = {
@@ -504,6 +514,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bright_weave_conversation_two_01",
 		response = "pwe_bright_weave_conversation_two_01",
 		criterias = {
@@ -578,6 +589,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wind_fire_intro_banter_a",
 		response = "pwe_wind_fire_intro_banter_a",
 		criterias = {
@@ -628,6 +640,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wind_fire_intro_banter_b",
 		response = "pwe_wind_fire_intro_banter_b",
 		criterias = {
@@ -672,6 +685,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bright_weave_conversation_one_01",
 		response = "pwh_bright_weave_conversation_one_01",
 		criterias = {
@@ -709,6 +723,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bright_weave_conversation_three_01",
 		response = "pwh_bright_weave_conversation_three_01",
 		criterias = {
@@ -746,6 +761,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wind_fire_intro_banter_a",
 		response = "pwh_wind_fire_intro_banter_a",
 		criterias = {
@@ -796,6 +812,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wind_fire_intro_banter_b",
 		response = "pwh_wind_fire_intro_banter_b",
 		criterias = {

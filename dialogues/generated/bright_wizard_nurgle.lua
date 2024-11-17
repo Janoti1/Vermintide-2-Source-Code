@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_bury_objective",
 		response = "pbw_level_nurgle_bury_objective",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_coming_down",
 		response = "pbw_level_nurgle_coming_down",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_digsite",
 		response = "pbw_level_nurgle_digsite",
 		criterias = {
@@ -138,6 +141,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_drop_down",
 		response = "pbw_level_nurgle_drop_down",
 		criterias = {
@@ -188,6 +192,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_nurglification",
 		response = "pbw_level_nurgle_nurglification",
 		criterias = {
@@ -238,6 +243,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_nurglification_increase",
 		response = "pbw_level_nurgle_nurglification_increase",
 		criterias = {
@@ -288,6 +294,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_outcast_lair",
 		response = "pbw_level_nurgle_outcast_lair",
 		criterias = {
@@ -338,6 +345,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_river",
 		response = "pbw_level_nurgle_river",
 		criterias = {
@@ -388,6 +396,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_ruins",
 		response = "pbw_level_nurgle_ruins",
 		criterias = {
@@ -438,6 +447,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_skaven_collapse",
 		response = "pbw_level_nurgle_skaven_collapse",
 		criterias = {
@@ -488,6 +498,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_spotting_objective",
 		response = "pbw_level_nurgle_spotting_objective",
 		criterias = {
@@ -532,6 +543,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_nurgle_swift_river",
 		response = "pbw_level_nurgle_swift_river",
 		criterias = {
@@ -576,6 +588,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nurgle_intro_a",
 		response = "pbw_nurgle_intro_a",
 		criterias = {
@@ -620,6 +633,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nurgle_intro_b",
 		response = "pbw_nurgle_intro_b",
 		criterias = {

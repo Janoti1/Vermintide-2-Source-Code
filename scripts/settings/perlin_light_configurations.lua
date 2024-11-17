@@ -117,3 +117,16 @@ PerlinLightConfigurations.fire_small_calm = {
 		persistance = 1
 	}
 }
+PerlinLightConfigurations.light_blink_intense = {
+	octaves = 50,
+	frequency_multiplier = 1,
+	min_value = 0.1,
+	persistance = 1,
+	translation = {
+		jitter_multiplier_z = 0,
+		octaves = 5,
+		frequency_multiplier = 1,
+		jitter_multiplier_xy = 1,
+		persistance = 1
+	}
+}

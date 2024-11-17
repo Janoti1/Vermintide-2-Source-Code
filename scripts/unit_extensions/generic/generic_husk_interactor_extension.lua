@@ -27,11 +27,7 @@ GenericHuskInteractorExtension.game_object_unit_destroyed = function (self)
 
 		if Unit.alive(interactable_unit) and self.state == "doing_interaction" then
 			InteractionHelper.printf("[GenericHuskInteractorExtension] stopping due to game_object_unit_destroyed")
-
-			local t = Managers.time:time("game")
-
 			InteractionHelper:complete_interaction(self.unit, interactable_unit, InteractionResult.FAILURE)
-			self:stop_interaction(t)
 		end
 	end
 end
@@ -78,13 +74,14 @@ GenericHuskInteractorExtension.update = function (self, unit, input, dt, context
 
 			if interaction_result ~= InteractionResult.ONGOING then
 				InteractionHelper:complete_interaction(unit, interactable_unit, interaction_result)
-				self:stop_interaction(t)
 			end
 		end
 	end
 end
 
 GenericHuskInteractorExtension._stop_interaction = function (self, interactable_unit, t)
+	Managers.state.unit_spawner:remove_destroy_listener(interactable_unit, "interactable_unit_for_husk")
+
 	local world = self.world
 	local unit = self.unit
 	local interaction_context = self.interaction_context
@@ -95,6 +92,7 @@ GenericHuskInteractorExtension._stop_interaction = function (self, interactable_
 	local interaction_type = interaction_context.interaction_type
 	local interaction_template = InteractionDefinitions[interaction_type]
 	local interaction_config = interaction_template and interaction_template.config or nil
+	local local_only = interaction_context.local_only
 	local go_id, is_level_unit = Managers.state.network:game_object_or_level_id(interactable_unit)
 
 	if not is_level_unit and go_id == nil then
@@ -113,20 +111,12 @@ GenericHuskInteractorExtension._stop_interaction = function (self, interactable_
 	InteractionHelper.printf("[GenericHuskInteractorExtension] Stopping interaction %s with result %s", interaction_type, InteractionResult[interaction_result])
 	interaction_template.client.stop(world, unit, interactable_unit, interaction_data, interaction_config, t, interaction_result)
 
-	if self.is_server then
+	if self.is_server and not local_only then
 		interaction_template.server.stop(world, unit, interactable_unit, interaction_data, interaction_config, t, interaction_result)
 	end
 
 	interaction_context.previous_state = self.state
 	self.state = "waiting_to_interact"
-end
-
-GenericHuskInteractorExtension.stop_interaction = function (self, t)
-	local interaction_context = self.interaction_context
-	local interactable_unit = interaction_context.interactable_unit
-
-	self:_stop_interaction(interactable_unit, t)
-	Managers.state.unit_spawner:remove_destroy_listener(interactable_unit, "interactable_unit_for_husk")
 end
 
 GenericHuskInteractorExtension.is_interacting = function (self)
@@ -217,7 +207,8 @@ GenericHuskInteractorExtension.interaction_completed = function (self, interacti
 
 	self.interaction_context.result = interaction_result
 
+	local interactable_unit = self.interaction_context.interactable_unit
 	local t = Managers.time:time("game")
 
-	self:stop_interaction(t)
+	self:_stop_interaction(interactable_unit, t)
 end

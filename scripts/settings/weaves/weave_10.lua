@@ -15,11 +15,7 @@ return {
 			objective_start_flow_event = "weave_objective_kill_enemies_start",
 			spawning_seed = 452354,
 			objective_settings = {
-				objective_lists = {
-					{
-						kill_enemies = {}
-					}
-				}
+				objective_lists = "weave_10"
 			},
 			bonus_time_on_complete = WeaveSettings.bonus_time,
 			system_seeds = {

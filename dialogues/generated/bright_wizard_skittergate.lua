@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_BOOM_01",
 		response = "pbw_level_skittergate_BOOM_01",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_activate_gate_01",
 		response = "pbw_level_skittergate_activate_gate_01",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_activate_gate_01a",
 		response = "pbw_level_skittergate_activate_gate_01a",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_arrive_01",
 		response = "pbw_level_skittergate_arrive_01",
 		criterias = {
@@ -182,6 +186,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_back_home_01",
 		response = "pbw_level_skittergate_back_home_01",
 		criterias = {
@@ -226,6 +231,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_cave_entrance_01",
 		response = "pbw_level_skittergate_cave_entrance_01",
 		criterias = {
@@ -276,6 +282,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_contol_panel_01",
 		response = "pbw_level_skittergate_contol_panel_01",
 		criterias = {
@@ -320,6 +327,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_crater_01",
 		response = "pbw_level_skittergate_crater_01",
 		criterias = {
@@ -370,6 +378,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_dead_seer",
 		response = "pbw_level_skittergate_dead_seer",
 		criterias = {
@@ -414,6 +423,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_dead_seer_01",
 		response = "pbw_level_skittergate_dead_seer_01",
 		criterias = {
@@ -458,6 +468,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_docks_gate_01",
 		response = "pbw_level_skittergate_docks_gate_01",
 		criterias = {
@@ -502,6 +513,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_elevator_01",
 		response = "pbw_level_skittergate_elevator_01",
 		criterias = {
@@ -546,6 +558,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_enter_gate_01",
 		response = "pbw_level_skittergate_enter_gate_01",
 		criterias = {
@@ -595,6 +608,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_gate_activated_01",
 		response = "pbw_level_skittergate_gate_activated_01",
 		criterias = {
@@ -644,6 +658,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_gatekeeper_appear_01",
 		response = "pbw_level_skittergate_gatekeeper_appear_01",
 		criterias = {
@@ -688,6 +703,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_get_back_to_gate_01",
 		response = "pbw_level_skittergate_get_back_to_gate_01",
 		criterias = {
@@ -732,6 +748,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_get_down_to_the_cooling_01",
 		response = "pbw_level_skittergate_get_down_to_the_cooling_01",
 		criterias = {
@@ -776,6 +793,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_leave_01",
 		response = "pbw_level_skittergate_leave_01",
 		criterias = {
@@ -820,6 +838,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_rasknitt_death_rattler_invulnerable",
 		response = "pbw_level_skittergate_rasknitt_death_rattler_invulnerable",
 		criterias = {
@@ -866,6 +885,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_skittergate_rasknitt_dismounted_one",
 		name = "pbw_level_skittergate_rasknitt_dismounted_one",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -896,6 +916,7 @@ return function ()
 	define_rule({
 		response = "pbw_level_skittergate_rasknitt_gate_reply",
 		name = "pbw_level_skittergate_rasknitt_gate_reply",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_rasknitt_interrupt_and_focus",
 		response = "pbw_level_skittergate_rasknitt_interrupt_and_focus",
 		criterias = {
@@ -968,6 +990,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_rasknitt_stormfiend_dead",
 		response = "pbw_level_skittergate_rasknitt_stormfiend_dead",
 		criterias = {
@@ -1012,6 +1035,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_run_for_the_gate_01",
 		response = "pbw_level_skittergate_run_for_the_gate_01",
 		criterias = {
@@ -1061,6 +1085,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_sabotage_cooling_01",
 		response = "pbw_level_skittergate_sabotage_cooling_01",
 		criterias = {
@@ -1105,6 +1130,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_searching_gatekeeper_01",
 		response = "pbw_level_skittergate_searching_gatekeeper_01",
 		criterias = {
@@ -1149,6 +1175,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_ships_01",
 		response = "pbw_level_skittergate_ships_01",
 		criterias = {
@@ -1199,6 +1226,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_skittergate_found_01",
 		response = "pbw_level_skittergate_skittergate_found_01",
 		criterias = {
@@ -1243,6 +1271,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_spotting_docks_01",
 		response = "pbw_level_skittergate_spotting_docks_01",
 		criterias = {
@@ -1287,6 +1316,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_start_up_gate_01",
 		response = "pbw_level_skittergate_start_up_gate_01",
 		criterias = {
@@ -1331,6 +1361,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_through_the_gate_01",
 		response = "pbw_level_skittergate_through_the_gate_01",
 		criterias = {
@@ -1380,6 +1411,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_tunnel_collapses_01",
 		response = "pbw_level_skittergate_tunnel_collapses_01",
 		criterias = {
@@ -1424,6 +1456,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_vacated_area_01",
 		response = "pbw_level_skittergate_vacated_area_01",
 		criterias = {
@@ -1468,6 +1501,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_vista_01",
 		response = "pbw_level_skittergate_vista_01",
 		criterias = {
@@ -1512,6 +1546,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_skittergate_welcome_to_norsca_01",
 		response = "pbw_level_skittergate_welcome_to_norsca_01",
 		criterias = {
@@ -1562,6 +1597,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_skittergate_intro_a",
 		response = "pbw_skittergate_intro_a",
 		criterias = {
@@ -1606,6 +1642,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_skittergate_intro_b",
 		response = "pbw_skittergate_intro_b",
 		criterias = {
@@ -1644,6 +1681,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_skittergate_intro_c",
 		response = "pbw_skittergate_intro_c",
 		criterias = {

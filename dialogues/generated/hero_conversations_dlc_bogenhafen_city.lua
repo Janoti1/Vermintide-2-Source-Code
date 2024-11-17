@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_level_bogenhafen_city_story_eight_01",
 		response = "pbw_level_bogenhafen_city_story_eight_01",
 		criterias = {
@@ -37,6 +38,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_bogenhafen_city_story_five_01",
 		response = "pbw_level_bogenhafen_city_story_five_01",
 		criterias = {
@@ -74,6 +76,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_bogenhafen_city_story_four_01",
 		response = "pbw_level_bogenhafen_city_story_four_01",
 		criterias = {
@@ -154,6 +157,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_bogenhafen_city_story_four_02",
 		response = "pbw_level_bogenhafen_city_story_four_02",
 		criterias = {
@@ -191,6 +195,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_bogenhafen_city_story_three_01",
 		response = "pbw_level_bogenhafen_city_story_three_01",
 		criterias = {
@@ -228,6 +233,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_bogenhafen_city_story_two_01",
 		response = "pbw_level_bogenhafen_city_story_two_01",
 		criterias = {
@@ -265,6 +271,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_five_01",
 		response = "pdr_level_bogenhafen_city_story_five_01",
 		criterias = {
@@ -302,6 +309,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_four_01",
 		response = "pdr_level_bogenhafen_city_story_four_01",
 		criterias = {
@@ -339,6 +347,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_four_02",
 		response = "pdr_level_bogenhafen_city_story_four_02",
 		criterias = {
@@ -376,6 +385,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_seven_01",
 		response = "pdr_level_bogenhafen_city_story_seven_01",
 		criterias = {
@@ -456,6 +466,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_seven_02",
 		response = "pdr_level_bogenhafen_city_story_seven_02",
 		criterias = {
@@ -493,6 +504,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_six_01",
 		response = "pdr_level_bogenhafen_city_story_six_01",
 		criterias = {
@@ -530,6 +542,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_six_02",
 		response = "pdr_level_bogenhafen_city_story_six_02",
 		criterias = {
@@ -567,6 +580,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_twelve_01",
 		response = "pdr_level_bogenhafen_city_story_twelve_01",
 		criterias = {
@@ -653,6 +667,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_bogenhafen_city_story_twelve_02",
 		response = "pdr_level_bogenhafen_city_story_twelve_02",
 		criterias = {
@@ -690,6 +705,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_eight_01",
 		response = "pes_level_bogenhafen_city_story_eight_01",
 		criterias = {
@@ -776,6 +792,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_eleven_01",
 		response = "pes_level_bogenhafen_city_story_eleven_01",
 		criterias = {
@@ -856,6 +873,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_eleven_02",
 		response = "pes_level_bogenhafen_city_story_eleven_02",
 		criterias = {
@@ -893,6 +911,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_five_01",
 		response = "pes_level_bogenhafen_city_story_five_01",
 		criterias = {
@@ -979,6 +998,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_nine_01",
 		response = "pes_level_bogenhafen_city_story_nine_01",
 		criterias = {
@@ -1016,6 +1036,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_one_01",
 		response = "pes_level_bogenhafen_city_story_one_01",
 		criterias = {
@@ -1053,6 +1074,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_one_02",
 		response = "pes_level_bogenhafen_city_story_one_02",
 		criterias = {
@@ -1090,6 +1112,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_six_01",
 		response = "pes_level_bogenhafen_city_story_six_01",
 		criterias = {
@@ -1176,6 +1199,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_three_01",
 		response = "pes_level_bogenhafen_city_story_three_01",
 		criterias = {
@@ -1262,6 +1286,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_bogenhafen_city_story_three_02",
 		response = "pes_level_bogenhafen_city_story_three_02",
 		criterias = {
@@ -1299,6 +1324,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_one_01",
 		response = "pwe_level_bogenhafen_city_story_one_01",
 		criterias = {
@@ -1379,6 +1405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_one_02",
 		response = "pwe_level_bogenhafen_city_story_one_02",
 		criterias = {
@@ -1416,6 +1443,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_six_01",
 		response = "pwe_level_bogenhafen_city_story_six_01",
 		criterias = {
@@ -1453,6 +1481,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_ten_01",
 		response = "pwe_level_bogenhafen_city_story_ten_01",
 		criterias = {
@@ -1490,6 +1519,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_ten_02",
 		response = "pwe_level_bogenhafen_city_story_ten_02",
 		criterias = {
@@ -1527,6 +1557,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_three_01",
 		response = "pwe_level_bogenhafen_city_story_three_01",
 		criterias = {
@@ -1564,6 +1595,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_bogenhafen_city_story_twelve_01",
 		response = "pwe_level_bogenhafen_city_story_twelve_01",
 		criterias = {
@@ -1601,6 +1633,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_eight_01",
 		response = "pwh_level_bogenhafen_city_story_eight_01",
 		criterias = {
@@ -1638,6 +1671,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_eight_02",
 		response = "pwh_level_bogenhafen_city_story_eight_02",
 		criterias = {
@@ -1675,6 +1709,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_eleven_01",
 		response = "pwh_level_bogenhafen_city_story_eleven_01",
 		criterias = {
@@ -1712,6 +1747,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_nine_01",
 		response = "pwh_level_bogenhafen_city_story_nine_01",
 		criterias = {
@@ -1792,6 +1828,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_nine_02",
 		response = "pwh_level_bogenhafen_city_story_nine_02",
 		criterias = {
@@ -1829,6 +1866,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_seven_01",
 		response = "pwh_level_bogenhafen_city_story_seven_01",
 		criterias = {
@@ -1866,6 +1904,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_ten_01",
 		response = "pwh_level_bogenhafen_city_story_ten_01",
 		criterias = {
@@ -1946,6 +1985,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_ten_02",
 		response = "pwh_level_bogenhafen_city_story_ten_02",
 		criterias = {
@@ -1983,6 +2023,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_twelve_01",
 		response = "pwh_level_bogenhafen_city_story_twelve_01",
 		criterias = {
@@ -2020,6 +2061,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_two_01",
 		response = "pwh_level_bogenhafen_city_story_two_01",
 		criterias = {
@@ -2100,6 +2142,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_bogenhafen_city_story_two_02",
 		response = "pwh_level_bogenhafen_city_story_two_02",
 		criterias = {

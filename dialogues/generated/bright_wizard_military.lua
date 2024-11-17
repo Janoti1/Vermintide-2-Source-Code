@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_helmgart_military_a",
 		response = "pbw_helmgart_military_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_helmgart_military_b",
 		response = "pbw_helmgart_military_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_helmgart_military_c",
 		response = "pbw_helmgart_military_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_armoury",
 		response = "pbw_level_helmgart_military_armoury",
 		criterias = {
@@ -170,6 +174,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_arriving_temple",
 		response = "pbw_level_helmgart_military_arriving_temple",
 		criterias = {
@@ -214,6 +219,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_axebite_pass_vista",
 		response = "pbw_level_helmgart_military_axebite_pass_vista",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_courtyard_event",
 		response = "pbw_level_helmgart_military_courtyard_event",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_door_opens",
 		response = "pbw_level_helmgart_military_door_opens",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_empty_town",
 		response = "pbw_level_helmgart_military_empty_town",
 		criterias = {
@@ -402,6 +411,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_fire_cannon",
 		response = "pbw_level_helmgart_military_fire_cannon",
 		criterias = {
@@ -446,6 +456,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_fort_elevator",
 		response = "pbw_level_helmgart_military_fort_elevator",
 		criterias = {
@@ -490,6 +501,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_fort_entrance",
 		response = "pbw_level_helmgart_military_fort_entrance",
 		criterias = {
@@ -540,6 +552,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_fort_help",
 		response = "pbw_level_helmgart_military_fort_help",
 		criterias = {
@@ -590,6 +603,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_fort_massacre",
 		response = "pbw_level_helmgart_military_fort_massacre",
 		criterias = {
@@ -640,6 +654,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_halfway_through_horde",
 		response = "pbw_level_helmgart_military_halfway_through_horde",
 		criterias = {
@@ -684,6 +699,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_helmgart_vista",
 		response = "pbw_level_helmgart_military_helmgart_vista",
 		criterias = {
@@ -734,6 +750,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_locked_portcullis",
 		response = "pbw_level_helmgart_military_locked_portcullis",
 		criterias = {
@@ -778,6 +795,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_oops",
 		response = "pbw_level_helmgart_military_oops",
 		criterias = {
@@ -822,6 +840,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_pilgrim_path",
 		response = "pbw_level_helmgart_military_pilgrim_path",
 		criterias = {
@@ -872,6 +891,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_prepare",
 		response = "pbw_level_helmgart_military_prepare",
 		criterias = {
@@ -916,6 +936,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_ring_bell",
 		response = "pbw_level_helmgart_military_ring_bell",
 		criterias = {
@@ -960,6 +981,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_spooky_temple",
 		response = "pbw_level_helmgart_military_spooky_temple",
 		criterias = {
@@ -1004,6 +1026,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_spotting_portal",
 		response = "pbw_level_helmgart_military_spotting_portal",
 		criterias = {
@@ -1054,6 +1077,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_temple_ahead",
 		response = "pbw_level_helmgart_military_temple_ahead",
 		criterias = {
@@ -1098,6 +1122,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_they_are_coming",
 		response = "pbw_level_helmgart_military_they_are_coming",
 		criterias = {
@@ -1142,6 +1167,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_time_to_leave",
 		response = "pbw_level_helmgart_military_time_to_leave",
 		criterias = {
@@ -1186,6 +1212,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_helmgart_military_turn_cannon",
 		response = "pbw_level_helmgart_military_turn_cannon",
 		criterias = {

@@ -51,6 +51,7 @@ StartGameWindowBackgroundConsole._create_viewport_definition = function (self)
 				viewport_name = "character_preview_viewport",
 				shading_environment = "environment/ui_end_screen",
 				clear_screen_on_create = true,
+				mood_setting = "default",
 				level_name = "levels/ui_keep_menu/world",
 				enable_sub_gui = false,
 				fov = 50,
@@ -61,7 +62,6 @@ StartGameWindowBackgroundConsole._create_viewport_definition = function (self)
 					Application.ENABLE_VOLUMETRICS
 				},
 				object_sets = LevelResource.object_set_names("levels/ui_keep_menu/world"),
-				mood_setting = self:_get_with_mechanism(MOOD_PER_MECHANISM),
 				camera_position = {
 					0,
 					0,

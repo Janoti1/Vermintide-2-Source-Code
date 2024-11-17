@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_03_gather_unique_01_b",
 		response = "pbw_nm_village_03_gather_unique_01_b",
 		criterias = {
@@ -31,6 +32,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_03_gather_unique_01_d",
 		response = "pbw_nm_village_03_gather_unique_01_d",
 		criterias = {
@@ -62,6 +64,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_08_ravine_unique_03_a",
 		response = "pbw_nm_village_08_ravine_unique_03_a",
 		criterias = {
@@ -154,6 +157,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_08_ravine_unique_03_c",
 		response = "pbw_nm_village_08_ravine_unique_03_c",
 		criterias = {
@@ -185,6 +189,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_08_ravine_unique_04_b",
 		response = "pbw_nm_village_08_ravine_unique_04_b",
 		criterias = {
@@ -216,6 +221,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_08_ravine_unique_04_d",
 		response = "pbw_nm_village_08_ravine_unique_04_d",
 		criterias = {
@@ -247,6 +253,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_08_ravine_unique_07_a",
 		response = "pbw_nm_village_08_ravine_unique_07_a",
 		criterias = {
@@ -345,6 +352,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_03_a",
 		response = "pbw_nm_village_13_town_unique_03_a",
 		criterias = {
@@ -437,6 +445,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_03_c",
 		response = "pbw_nm_village_13_town_unique_03_c",
 		criterias = {
@@ -468,6 +477,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_03_e",
 		response = "pbw_nm_village_13_town_unique_03_e",
 		criterias = {
@@ -499,6 +509,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_03_g",
 		response = "pbw_nm_village_13_town_unique_03_g",
 		criterias = {
@@ -530,6 +541,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_07_a",
 		response = "pbw_nm_village_13_town_unique_07_a",
 		criterias = {
@@ -622,6 +634,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_08_b",
 		response = "pbw_nm_village_13_town_unique_08_b",
 		criterias = {
@@ -659,6 +672,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_13_town_unique_08_f",
 		response = "pbw_nm_village_13_town_unique_08_f",
 		criterias = {
@@ -696,6 +710,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_17_team_01_b",
 		response = "pbw_nm_village_17_team_01_b",
 		criterias = {
@@ -727,6 +742,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_village_17_team_02_b",
 		response = "pbw_nm_village_17_team_02_b",
 		criterias = {
@@ -758,6 +774,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_08_ravine_unique_01_g",
 		response = "pbw_village_08_ravine_unique_01_g",
 		criterias = {
@@ -789,6 +806,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_08_ravine_unique_09_a",
 		response = "pbw_village_08_ravine_unique_09_a",
 		criterias = {
@@ -881,6 +899,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_08_ravine_unique_09_c",
 		response = "pbw_village_08_ravine_unique_09_c",
 		criterias = {
@@ -912,6 +931,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_09_b",
 		response = "pbw_village_13_town_unique_09_b",
 		criterias = {
@@ -943,6 +963,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_09_d",
 		response = "pbw_village_13_town_unique_09_d",
 		criterias = {
@@ -974,6 +995,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_10_a",
 		response = "pbw_village_13_town_unique_10_a",
 		criterias = {
@@ -1066,6 +1088,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_10_c",
 		response = "pbw_village_13_town_unique_10_c",
 		criterias = {
@@ -1097,6 +1120,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_11_a",
 		response = "pbw_village_13_town_unique_11_a",
 		criterias = {
@@ -1189,6 +1213,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_11_c",
 		response = "pbw_village_13_town_unique_11_c",
 		criterias = {
@@ -1220,6 +1245,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_12_b",
 		response = "pbw_village_13_town_unique_12_b",
 		criterias = {
@@ -1251,6 +1277,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_13_town_unique_12_d",
 		response = "pbw_village_13_town_unique_12_d",
 		criterias = {
@@ -1282,6 +1309,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_17_team_03_b",
 		response = "pbw_village_17_team_03_b",
 		criterias = {
@@ -1313,6 +1341,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_01_b",
 		response = "pbw_village_21_elevator_ride_rant_01_b",
 		criterias = {
@@ -1344,6 +1373,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_01_f",
 		response = "pbw_village_21_elevator_ride_rant_01_f",
 		criterias = {
@@ -1389,6 +1419,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_02_b",
 		response = "pbw_village_21_elevator_ride_rant_02_b",
 		criterias = {
@@ -1420,6 +1451,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_02_f",
 		response = "pbw_village_21_elevator_ride_rant_02_f",
 		criterias = {
@@ -1465,6 +1497,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_03_b",
 		response = "pbw_village_21_elevator_ride_rant_03_b",
 		criterias = {
@@ -1496,6 +1529,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_03_f",
 		response = "pbw_village_21_elevator_ride_rant_03_f",
 		criterias = {
@@ -1527,6 +1561,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_04_a",
 		response = "pbw_village_21_elevator_ride_rant_04_a",
 		criterias = {
@@ -1606,6 +1641,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_04_c",
 		response = "pbw_village_21_elevator_ride_rant_04_c",
 		criterias = {
@@ -1643,6 +1679,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_21_elevator_ride_rant_04_e",
 		response = "pbw_village_21_elevator_ride_rant_04_e",
 		criterias = {
@@ -1680,6 +1717,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_22_elevator_ride_ends_a",
 		response = "pbw_village_22_elevator_ride_ends_a",
 		criterias = {
@@ -1747,6 +1785,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_27_factory_yard_unique_01_b",
 		response = "pbw_village_27_factory_yard_unique_01_b",
 		criterias = {
@@ -1778,6 +1817,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_27_factory_yard_unique_02_b",
 		response = "pbw_village_27_factory_yard_unique_02_b",
 		criterias = {
@@ -1809,6 +1849,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_27_factory_yard_unique_03_a",
 		response = "pbw_village_27_factory_yard_unique_03_a",
 		criterias = {
@@ -1883,6 +1924,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_27_factory_yard_unique_04_b",
 		response = "pbw_village_27_factory_yard_unique_04_b",
 		criterias = {
@@ -1914,6 +1956,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_village_27_factory_yard_unique_05_b",
 		response = "pbw_village_27_factory_yard_unique_05_b",
 		criterias = {
@@ -1947,6 +1990,7 @@ return function ()
 	define_rule({
 		response = "pbw_village_36_onboard_01_b",
 		name = "pbw_village_36_onboard_01_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1971,6 +2015,7 @@ return function ()
 	define_rule({
 		response = "pbw_village_36_onboard_02_a",
 		name = "pbw_village_36_onboard_02_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1989,6 +2034,7 @@ return function ()
 	define_rule({
 		response = "pbw_village_36_onboard_03_b",
 		name = "pbw_village_36_onboard_03_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2013,6 +2059,7 @@ return function ()
 	define_rule({
 		response = "pbw_village_36_onboard_04_b",
 		name = "pbw_village_36_onboard_04_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2035,6 +2082,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_03_gather_unique_02_e",
 		response = "pdr_village_03_gather_unique_02_e",
 		criterias = {
@@ -2066,6 +2114,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_03_b",
 		response = "pdr_village_08_ravine_unique_03_b",
 		criterias = {
@@ -2097,6 +2146,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_03_d",
 		response = "pdr_village_08_ravine_unique_03_d",
 		criterias = {
@@ -2128,6 +2178,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_04_g",
 		response = "pdr_village_08_ravine_unique_04_g",
 		criterias = {
@@ -2159,6 +2210,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_05_a",
 		response = "pdr_village_08_ravine_unique_05_a",
 		criterias = {
@@ -2258,6 +2310,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_05_c",
 		response = "pdr_village_08_ravine_unique_05_c",
 		criterias = {
@@ -2289,6 +2342,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_07_c",
 		response = "pdr_village_08_ravine_unique_07_c",
 		criterias = {
@@ -2320,6 +2374,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_08_ravine_unique_08_d",
 		response = "pdr_village_08_ravine_unique_08_d",
 		criterias = {
@@ -2351,6 +2406,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_02_a",
 		response = "pdr_village_13_town_unique_02_a",
 		criterias = {
@@ -2450,6 +2506,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_02_c",
 		response = "pdr_village_13_town_unique_02_c",
 		criterias = {
@@ -2481,6 +2538,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_02_e",
 		response = "pdr_village_13_town_unique_02_e",
 		criterias = {
@@ -2512,6 +2570,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_04_b",
 		response = "pdr_village_13_town_unique_04_b",
 		criterias = {
@@ -2543,6 +2602,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_04_d",
 		response = "pdr_village_13_town_unique_04_d",
 		criterias = {
@@ -2574,6 +2634,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_04_f",
 		response = "pdr_village_13_town_unique_04_f",
 		criterias = {
@@ -2605,6 +2666,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_06_b",
 		response = "pdr_village_13_town_unique_06_b",
 		criterias = {
@@ -2636,6 +2698,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_06_d",
 		response = "pdr_village_13_town_unique_06_d",
 		criterias = {
@@ -2667,6 +2730,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_06_f",
 		response = "pdr_village_13_town_unique_06_f",
 		criterias = {
@@ -2698,6 +2762,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_08_d",
 		response = "pdr_village_13_town_unique_08_d",
 		criterias = {
@@ -2729,6 +2794,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_12_a",
 		response = "pdr_village_13_town_unique_12_a",
 		criterias = {
@@ -2821,6 +2887,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_13_town_unique_12_c",
 		response = "pdr_village_13_town_unique_12_c",
 		criterias = {
@@ -2852,6 +2919,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_17_team_01_a",
 		response = "pdr_village_17_team_01_a",
 		criterias = {
@@ -2939,6 +3007,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_17_team_01_b",
 		response = "pdr_village_17_team_01_b",
 		criterias = {
@@ -2970,6 +3039,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_17_team_02_b",
 		response = "pdr_village_17_team_02_b",
 		criterias = {
@@ -3001,6 +3071,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_17_team_03_a",
 		response = "pdr_village_17_team_03_a",
 		criterias = {
@@ -3081,6 +3152,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_01_f",
 		response = "pdr_village_21_elevator_ride_rant_01_f",
 		criterias = {
@@ -3126,6 +3198,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_02_a",
 		response = "pdr_village_21_elevator_ride_rant_02_a",
 		criterias = {
@@ -3200,6 +3273,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_02_c",
 		response = "pdr_village_21_elevator_ride_rant_02_c",
 		criterias = {
@@ -3231,6 +3305,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_02_d",
 		response = "pdr_village_21_elevator_ride_rant_02_d",
 		criterias = {
@@ -3262,6 +3337,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_02_e",
 		response = "pdr_village_21_elevator_ride_rant_02_e",
 		criterias = {
@@ -3293,6 +3369,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_03_d",
 		response = "pdr_village_21_elevator_ride_rant_03_d",
 		criterias = {
@@ -3324,6 +3401,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_21_elevator_ride_rant_04_d",
 		response = "pdr_village_21_elevator_ride_rant_04_d",
 		criterias = {
@@ -3355,6 +3433,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_22_elevator_ride_ends_a",
 		response = "pdr_village_22_elevator_ride_ends_a",
 		criterias = {
@@ -3417,6 +3496,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_27_factory_yard_unique_01_a",
 		response = "pdr_village_27_factory_yard_unique_01_a",
 		criterias = {
@@ -3498,6 +3578,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_27_factory_yard_unique_01_b",
 		response = "pdr_village_27_factory_yard_unique_01_b",
 		criterias = {
@@ -3529,6 +3610,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_27_factory_yard_unique_02_b",
 		response = "pdr_village_27_factory_yard_unique_02_b",
 		criterias = {
@@ -3560,6 +3642,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_27_factory_yard_unique_03_b",
 		response = "pdr_village_27_factory_yard_unique_03_b",
 		criterias = {
@@ -3591,6 +3674,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_27_factory_yard_unique_04_b",
 		response = "pdr_village_27_factory_yard_unique_04_b",
 		criterias = {
@@ -3622,6 +3706,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_village_27_factory_yard_unique_05_a",
 		response = "pdr_village_27_factory_yard_unique_05_a",
 		criterias = {
@@ -3710,6 +3795,7 @@ return function ()
 	define_rule({
 		response = "pdr_village_36_onboard_01_b",
 		name = "pdr_village_36_onboard_01_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3734,6 +3820,7 @@ return function ()
 	define_rule({
 		response = "pdr_village_36_onboard_03_a",
 		name = "pdr_village_36_onboard_03_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3752,6 +3839,7 @@ return function ()
 	define_rule({
 		response = "pdr_village_36_onboard_04_b",
 		name = "pdr_village_36_onboard_04_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3774,6 +3862,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_03_gather_unique_02_e",
 		response = "pes_village_03_gather_unique_02_e",
 		criterias = {
@@ -3805,6 +3894,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_01_a",
 		response = "pes_village_08_ravine_unique_01_a",
 		criterias = {
@@ -3904,6 +3994,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_01_c",
 		response = "pes_village_08_ravine_unique_01_c",
 		criterias = {
@@ -3935,6 +4026,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_01_e",
 		response = "pes_village_08_ravine_unique_01_e",
 		criterias = {
@@ -3966,6 +4058,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_04_g",
 		response = "pes_village_08_ravine_unique_04_g",
 		criterias = {
@@ -3997,6 +4090,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_05_b",
 		response = "pes_village_08_ravine_unique_05_b",
 		criterias = {
@@ -4028,6 +4122,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_05_d",
 		response = "pes_village_08_ravine_unique_05_d",
 		criterias = {
@@ -4059,6 +4154,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_06_c",
 		response = "pes_village_08_ravine_unique_06_c",
 		criterias = {
@@ -4090,6 +4186,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_08_a",
 		response = "pes_village_08_ravine_unique_08_a",
 		criterias = {
@@ -4188,6 +4285,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_08_ravine_unique_08_c",
 		response = "pes_village_08_ravine_unique_08_c",
 		criterias = {
@@ -4219,6 +4317,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_01_a",
 		response = "pes_village_13_town_unique_01_a",
 		criterias = {
@@ -4311,6 +4410,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_01_c",
 		response = "pes_village_13_town_unique_01_c",
 		criterias = {
@@ -4342,6 +4442,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_01_d",
 		response = "pes_village_13_town_unique_01_d",
 		criterias = {
@@ -4373,6 +4474,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_01_f",
 		response = "pes_village_13_town_unique_01_f",
 		criterias = {
@@ -4404,6 +4506,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_04_a",
 		response = "pes_village_13_town_unique_04_a",
 		criterias = {
@@ -4496,6 +4599,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_04_c",
 		response = "pes_village_13_town_unique_04_c",
 		criterias = {
@@ -4527,6 +4631,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_04_e",
 		response = "pes_village_13_town_unique_04_e",
 		criterias = {
@@ -4558,6 +4663,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_05_a",
 		response = "pes_village_13_town_unique_05_a",
 		criterias = {
@@ -4657,6 +4763,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_05_c",
 		response = "pes_village_13_town_unique_05_c",
 		criterias = {
@@ -4688,6 +4795,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_05_e",
 		response = "pes_village_13_town_unique_05_e",
 		criterias = {
@@ -4719,6 +4827,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_07_c",
 		response = "pes_village_13_town_unique_07_c",
 		criterias = {
@@ -4750,6 +4859,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_08_c",
 		response = "pes_village_13_town_unique_08_c",
 		criterias = {
@@ -4781,6 +4891,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_10_b",
 		response = "pes_village_13_town_unique_10_b",
 		criterias = {
@@ -4812,6 +4923,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_13_town_unique_10_d",
 		response = "pes_village_13_town_unique_10_d",
 		criterias = {
@@ -4843,6 +4955,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_17_team_01_a",
 		response = "pes_village_17_team_01_a",
 		criterias = {
@@ -4924,6 +5037,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_17_team_02_b",
 		response = "pes_village_17_team_02_b",
 		criterias = {
@@ -4955,6 +5069,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_17_team_03_b",
 		response = "pes_village_17_team_03_b",
 		criterias = {
@@ -4986,6 +5101,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_01_a",
 		response = "pes_village_21_elevator_ride_rant_01_a",
 		criterias = {
@@ -5054,6 +5170,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_01_c",
 		response = "pes_village_21_elevator_ride_rant_01_c",
 		criterias = {
@@ -5085,6 +5202,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_01_d",
 		response = "pes_village_21_elevator_ride_rant_01_d",
 		criterias = {
@@ -5116,6 +5234,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_01_e",
 		response = "pes_village_21_elevator_ride_rant_01_e",
 		criterias = {
@@ -5147,6 +5266,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_03_b",
 		response = "pes_village_21_elevator_ride_rant_03_b",
 		criterias = {
@@ -5178,6 +5298,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_03_f",
 		response = "pes_village_21_elevator_ride_rant_03_f",
 		criterias = {
@@ -5209,6 +5330,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_04_b",
 		response = "pes_village_21_elevator_ride_rant_04_b",
 		criterias = {
@@ -5240,6 +5362,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_21_elevator_ride_rant_04_d",
 		response = "pes_village_21_elevator_ride_rant_04_d",
 		criterias = {
@@ -5271,6 +5394,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_22_elevator_ride_ends_a",
 		response = "pes_village_22_elevator_ride_ends_a",
 		criterias = {
@@ -5327,6 +5451,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_27_factory_yard_unique_01_a",
 		response = "pes_village_27_factory_yard_unique_01_a",
 		criterias = {
@@ -5408,6 +5533,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_27_factory_yard_unique_02_b",
 		response = "pes_village_27_factory_yard_unique_02_b",
 		criterias = {
@@ -5439,6 +5565,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_27_factory_yard_unique_03_b",
 		response = "pes_village_27_factory_yard_unique_03_b",
 		criterias = {
@@ -5470,6 +5597,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_27_factory_yard_unique_04_b",
 		response = "pes_village_27_factory_yard_unique_04_b",
 		criterias = {
@@ -5501,6 +5629,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_27_factory_yard_unique_05_a",
 		response = "pes_village_27_factory_yard_unique_05_a",
 		criterias = {
@@ -5581,6 +5710,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_27_factory_yard_unique_05_b",
 		response = "pes_village_27_factory_yard_unique_05_b",
 		criterias = {
@@ -5614,6 +5744,7 @@ return function ()
 	define_rule({
 		response = "pes_village_36_onboard_05_a",
 		name = "pes_village_36_onboard_05_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5630,6 +5761,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_03_gather_unique_02_a",
 		response = "pwe_village_03_gather_unique_02_a",
 		criterias = {
@@ -5648,7 +5780,7 @@ return function ()
 			{
 				"query_context",
 				"friends_close",
-				OP.GT,
+				OP.GTEQ,
 				2
 			},
 			{
@@ -5691,6 +5823,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_03_gather_unique_02_c",
 		response = "pwe_village_03_gather_unique_02_c",
 		criterias = {
@@ -5722,6 +5855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_02_a",
 		response = "pwe_village_08_ravine_unique_02_a",
 		criterias = {
@@ -5821,6 +5955,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_02_c",
 		response = "pwe_village_08_ravine_unique_02_c",
 		criterias = {
@@ -5852,6 +5987,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_02_e",
 		response = "pwe_village_08_ravine_unique_02_e",
 		criterias = {
@@ -5883,6 +6019,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_04_f",
 		response = "pwe_village_08_ravine_unique_04_f",
 		criterias = {
@@ -5914,6 +6051,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_06_a",
 		response = "pwe_village_08_ravine_unique_06_a",
 		criterias = {
@@ -6012,6 +6150,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_09_b",
 		response = "pwe_village_08_ravine_unique_09_b",
 		criterias = {
@@ -6043,6 +6182,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_08_ravine_unique_09_d",
 		response = "pwe_village_08_ravine_unique_09_d",
 		criterias = {
@@ -6074,6 +6214,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_02_b",
 		response = "pwe_village_13_town_unique_02_b",
 		criterias = {
@@ -6105,6 +6246,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_02_d",
 		response = "pwe_village_13_town_unique_02_d",
 		criterias = {
@@ -6136,6 +6278,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_02_f",
 		response = "pwe_village_13_town_unique_02_f",
 		criterias = {
@@ -6167,6 +6310,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_05_b",
 		response = "pwe_village_13_town_unique_05_b",
 		criterias = {
@@ -6198,6 +6342,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_05_d",
 		response = "pwe_village_13_town_unique_05_d",
 		criterias = {
@@ -6229,6 +6374,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_05_f",
 		response = "pwe_village_13_town_unique_05_f",
 		criterias = {
@@ -6260,6 +6406,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_07_c",
 		response = "pwe_village_13_town_unique_07_c",
 		criterias = {
@@ -6291,6 +6438,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_08_a",
 		response = "pwe_village_13_town_unique_08_a",
 		criterias = {
@@ -6389,6 +6537,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_08_e",
 		response = "pwe_village_13_town_unique_08_e",
 		criterias = {
@@ -6420,6 +6569,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_08_g",
 		response = "pwe_village_13_town_unique_08_g",
 		criterias = {
@@ -6451,6 +6601,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_11_b",
 		response = "pwe_village_13_town_unique_11_b",
 		criterias = {
@@ -6482,6 +6633,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_13_town_unique_11_d",
 		response = "pwe_village_13_town_unique_11_d",
 		criterias = {
@@ -6513,6 +6665,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_17_team_01_b",
 		response = "pwe_village_17_team_01_b",
 		criterias = {
@@ -6544,6 +6697,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_17_team_02_b",
 		response = "pwe_village_17_team_02_b",
 		criterias = {
@@ -6575,6 +6729,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_17_team_03_b",
 		response = "pwe_village_17_team_03_b",
 		criterias = {
@@ -6606,6 +6761,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_01_b",
 		response = "pwe_village_21_elevator_ride_rant_01_b",
 		criterias = {
@@ -6637,6 +6793,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_01_f",
 		response = "pwe_village_21_elevator_ride_rant_01_f",
 		criterias = {
@@ -6682,6 +6839,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_02_b",
 		response = "pwe_village_21_elevator_ride_rant_02_b",
 		criterias = {
@@ -6713,6 +6871,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_02_f",
 		response = "pwe_village_21_elevator_ride_rant_02_f",
 		criterias = {
@@ -6758,6 +6917,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_03_b",
 		response = "pwe_village_21_elevator_ride_rant_03_b",
 		criterias = {
@@ -6789,6 +6949,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_03_f",
 		response = "pwe_village_21_elevator_ride_rant_03_f",
 		criterias = {
@@ -6820,6 +6981,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_04_a",
 		response = "pwe_village_21_elevator_ride_rant_04_a",
 		criterias = {
@@ -6899,6 +7061,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_04_c",
 		response = "pwe_village_21_elevator_ride_rant_04_c",
 		criterias = {
@@ -6936,6 +7099,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_21_elevator_ride_rant_04_e",
 		response = "pwe_village_21_elevator_ride_rant_04_e",
 		criterias = {
@@ -6973,6 +7137,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_22_elevator_ride_ends_a",
 		response = "pwe_village_22_elevator_ride_ends_a",
 		criterias = {
@@ -7040,6 +7205,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_27_factory_yard_unique_01_b",
 		response = "pwe_village_27_factory_yard_unique_01_b",
 		criterias = {
@@ -7071,6 +7237,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_27_factory_yard_unique_02_b",
 		response = "pwe_village_27_factory_yard_unique_02_b",
 		criterias = {
@@ -7102,6 +7269,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_27_factory_yard_unique_03_b",
 		response = "pwe_village_27_factory_yard_unique_03_b",
 		criterias = {
@@ -7133,6 +7301,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_27_factory_yard_unique_04_a",
 		response = "pwe_village_27_factory_yard_unique_04_a",
 		criterias = {
@@ -7213,6 +7382,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_village_27_factory_yard_unique_05_b",
 		response = "pwe_village_27_factory_yard_unique_05_b",
 		criterias = {
@@ -7246,6 +7416,7 @@ return function ()
 	define_rule({
 		response = "pwe_village_36_onboard_02_b",
 		name = "pwe_village_36_onboard_02_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -7270,6 +7441,7 @@ return function ()
 	define_rule({
 		response = "pwe_village_36_onboard_04_a",
 		name = "pwe_village_36_onboard_04_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -7288,6 +7460,7 @@ return function ()
 	define_rule({
 		response = "pwe_village_36_onboard_05_b",
 		name = "pwe_village_36_onboard_05_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -7310,6 +7483,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_03_gather_unique_01_a",
 		response = "pwh_village_03_gather_unique_01_a",
 		criterias = {
@@ -7365,6 +7539,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_03_gather_unique_01_c",
 		response = "pwh_village_03_gather_unique_01_c",
 		criterias = {
@@ -7396,6 +7571,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_03_gather_unique_01_e",
 		response = "pwh_village_03_gather_unique_01_e",
 		criterias = {
@@ -7427,6 +7603,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_03_gather_unique_02_b",
 		response = "pwh_village_03_gather_unique_02_b",
 		criterias = {
@@ -7458,6 +7635,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_03_gather_unique_02_d",
 		response = "pwh_village_03_gather_unique_02_d",
 		criterias = {
@@ -7489,6 +7667,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_01_b",
 		response = "pwh_village_08_ravine_unique_01_b",
 		criterias = {
@@ -7520,6 +7699,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_01_d",
 		response = "pwh_village_08_ravine_unique_01_d",
 		criterias = {
@@ -7551,6 +7731,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_01_f",
 		response = "pwh_village_08_ravine_unique_01_f",
 		criterias = {
@@ -7582,6 +7763,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_02_b",
 		response = "pwh_village_08_ravine_unique_02_b",
 		criterias = {
@@ -7613,6 +7795,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_02_d",
 		response = "pwh_village_08_ravine_unique_02_d",
 		criterias = {
@@ -7644,6 +7827,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_02_f",
 		response = "pwh_village_08_ravine_unique_02_f",
 		criterias = {
@@ -7675,6 +7859,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_04_a",
 		response = "pwh_village_08_ravine_unique_04_a",
 		criterias = {
@@ -7767,6 +7952,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_04_c",
 		response = "pwh_village_08_ravine_unique_04_c",
 		criterias = {
@@ -7798,6 +7984,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_04_e",
 		response = "pwh_village_08_ravine_unique_04_e",
 		criterias = {
@@ -7829,6 +8016,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_06_b",
 		response = "pwh_village_08_ravine_unique_06_b",
 		criterias = {
@@ -7860,6 +8048,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_07_b",
 		response = "pwh_village_08_ravine_unique_07_b",
 		criterias = {
@@ -7891,6 +8080,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_08_b",
 		response = "pwh_village_08_ravine_unique_08_b",
 		criterias = {
@@ -7922,6 +8112,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_08_ravine_unique_08_d",
 		response = "pwh_village_08_ravine_unique_08_d",
 		criterias = {
@@ -7953,6 +8144,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_01_b",
 		response = "pwh_village_13_town_unique_01_b",
 		criterias = {
@@ -7984,6 +8176,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_01_e",
 		response = "pwh_village_13_town_unique_01_e",
 		criterias = {
@@ -8015,6 +8208,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_03_b",
 		response = "pwh_village_13_town_unique_03_b",
 		criterias = {
@@ -8046,6 +8240,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_03_d",
 		response = "pwh_village_13_town_unique_03_d",
 		criterias = {
@@ -8077,6 +8272,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_03_f",
 		response = "pwh_village_13_town_unique_03_f",
 		criterias = {
@@ -8108,6 +8304,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_06_a",
 		response = "pwh_village_13_town_unique_06_a",
 		criterias = {
@@ -8207,6 +8404,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_06_c",
 		response = "pwh_village_13_town_unique_06_c",
 		criterias = {
@@ -8238,6 +8436,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_06_e",
 		response = "pwh_village_13_town_unique_06_e",
 		criterias = {
@@ -8269,6 +8468,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_07_b",
 		response = "pwh_village_13_town_unique_07_b",
 		criterias = {
@@ -8300,6 +8500,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_07_d",
 		response = "pwh_village_13_town_unique_07_d",
 		criterias = {
@@ -8331,6 +8532,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_09_a",
 		response = "pwh_village_13_town_unique_09_a",
 		criterias = {
@@ -8423,6 +8625,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_13_town_unique_09_c",
 		response = "pwh_village_13_town_unique_09_c",
 		criterias = {
@@ -8454,6 +8657,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_17_team_01_b",
 		response = "pwh_village_17_team_01_b",
 		criterias = {
@@ -8485,6 +8689,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_17_team_02_a",
 		response = "pwh_village_17_team_02_a",
 		criterias = {
@@ -8572,6 +8777,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_17_team_03_b",
 		response = "pwh_village_17_team_03_b",
 		criterias = {
@@ -8603,6 +8809,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_01_b",
 		response = "pwh_village_21_elevator_ride_rant_01_b",
 		criterias = {
@@ -8634,6 +8841,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_01_f",
 		response = "pwh_village_21_elevator_ride_rant_01_f",
 		criterias = {
@@ -8679,6 +8887,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_02_b",
 		response = "pwh_village_21_elevator_ride_rant_02_b",
 		criterias = {
@@ -8710,6 +8919,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_02_f",
 		response = "pwh_village_21_elevator_ride_rant_02_f",
 		criterias = {
@@ -8755,6 +8965,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_03_a",
 		response = "pwh_village_21_elevator_ride_rant_03_a",
 		criterias = {
@@ -8822,6 +9033,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_03_c",
 		response = "pwh_village_21_elevator_ride_rant_03_c",
 		criterias = {
@@ -8853,6 +9065,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_21_elevator_ride_rant_03_e",
 		response = "pwh_village_21_elevator_ride_rant_03_e",
 		criterias = {
@@ -8884,6 +9097,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_22_elevator_ride_ends_a",
 		response = "pwh_village_22_elevator_ride_ends_a",
 		criterias = {
@@ -8939,6 +9153,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_27_factory_yard_unique_01_b",
 		response = "pwh_village_27_factory_yard_unique_01_b",
 		criterias = {
@@ -8970,6 +9185,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_27_factory_yard_unique_02_a",
 		response = "pwh_village_27_factory_yard_unique_02_a",
 		criterias = {
@@ -9051,6 +9267,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_27_factory_yard_unique_03_b",
 		response = "pwh_village_27_factory_yard_unique_03_b",
 		criterias = {
@@ -9082,6 +9299,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_village_27_factory_yard_unique_04_a",
 		response = "pwh_village_27_factory_yard_unique_04_a",
 		criterias = {
@@ -9164,6 +9382,7 @@ return function ()
 	define_rule({
 		response = "pwh_village_36_onboard_01_a",
 		name = "pwh_village_36_onboard_01_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9182,6 +9401,7 @@ return function ()
 	define_rule({
 		response = "pwh_village_36_onboard_02_b",
 		name = "pwh_village_36_onboard_02_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9206,6 +9426,7 @@ return function ()
 	define_rule({
 		response = "pwh_village_36_onboard_03_b",
 		name = "pwh_village_36_onboard_03_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -9230,6 +9451,7 @@ return function ()
 	define_rule({
 		response = "pwh_village_36_onboard_05_b",
 		name = "pwh_village_36_onboard_05_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

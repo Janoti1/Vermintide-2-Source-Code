@@ -167,12 +167,12 @@ GameModeManager.deactivate_mutator = function (self, mutator_name)
 	self._mutator_handler:deactivate_mutator(mutator_name)
 end
 
-GameModeManager.player_entered_game_session = function (self, peer_id, local_player_id, wanted_party_index)
-	self._game_mode:player_entered_game_session(peer_id, local_player_id, wanted_party_index)
+GameModeManager.player_entered_game_session = function (self, peer_id, local_player_id, requested_party_index)
+	self._game_mode:player_entered_game_session(peer_id, local_player_id, requested_party_index)
 end
 
-GameModeManager.remove_bot = function (self, peer_id, local_player_id, update_safe)
-	return self._game_mode:remove_bot(peer_id, local_player_id, update_safe)
+GameModeManager.remove_bot = function (self, party_id, peer_id, local_player_id, update_safe)
+	return self._game_mode:remove_bot(party_id, peer_id, local_player_id, update_safe)
 end
 
 GameModeManager.player_left_game_session = function (self, peer_id, local_player_id)
@@ -589,11 +589,17 @@ GameModeManager.rpc_to_client_spawn_player = function (self, channel_id, local_p
 end
 
 GameModeManager.round_started = function (self)
-	self:trigger_event("round_started")
+	local time_since_round_started = 0
+
+	self:trigger_event("round_started", time_since_round_started)
 end
 
-GameModeManager.gm_event_round_started = function (self)
+GameModeManager.gm_event_round_started = function (self, time_since_round_started)
 	self._round_started = true
+
+	local t = Managers.time:time("game")
+
+	self._round_start_time = t - time_since_round_started
 
 	local level = LevelHelper:current_level(self._world)
 	local round_started_string = self._game_mode_key .. "_round_started"
@@ -616,7 +622,9 @@ GameModeManager.gm_event_round_started = function (self)
 end
 
 GameModeManager.is_round_started = function (self)
-	return self._round_started
+	local time_since_round_started = self._round_start_time and Managers.time:time("game") - self._round_start_time or nil
+
+	return self._round_started, time_since_round_started
 end
 
 GameModeManager.disable_lose_condition = function (self)
@@ -920,7 +928,10 @@ GameModeManager.hot_join_sync = function (self, peer_id)
 	end
 
 	if self._round_started then
-		self._network_transmit:send_rpc("rpc_gm_event_round_started", peer_id)
+		local t = Managers.time:time("game")
+		local time_since_round_started = t - self._round_start_time
+
+		self._network_transmit:send_rpc("rpc_gm_event_round_started", peer_id, time_since_round_started)
 	end
 
 	self._game_mode:hot_join_sync(peer_id)
@@ -1266,4 +1277,10 @@ end
 
 GameModeManager.mutator_handler = function (self)
 	return self._mutator_handler
+end
+
+GameModeManager.level_start_objectives = function (self)
+	if self._game_mode.level_start_objectives then
+		return self._game_mode:level_start_objectives()
+	end
 end

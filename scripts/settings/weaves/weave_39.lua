@@ -15,17 +15,7 @@ return {
 			objective_start_flow_event = "weave_objective_sockets_start",
 			spawning_seed = 216384,
 			objective_settings = {
-				objective_lists = {
-					{
-						kill_enemies = {},
-						weave_explosive_barrel_socket_006 = {
-							is_scored = true
-						},
-						weave_limited_item_track_spawner_003 = {
-							template_name = "gargoyle_head_spawner"
-						}
-					}
-				}
+				objective_lists = "weave_39"
 			},
 			bonus_time_on_complete = WeaveSettings.bonus_time,
 			system_seeds = {

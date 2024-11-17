@@ -21,6 +21,20 @@ local scenegraph_definition = {
 			200
 		}
 	},
+	insignia = {
+		vertical_alignment = "bottom",
+		parent = "portrait_root",
+		horizontal_alignment = "left",
+		size = {
+			0,
+			0
+		},
+		position = {
+			-90,
+			0,
+			0
+		}
+	},
 	divider_1 = {
 		vertical_alignment = "bottom",
 		parent = "screen",
@@ -30,7 +44,7 @@ local scenegraph_definition = {
 			61
 		},
 		position = {
-			-180,
+			-180 - UISettings.INSIGNIA_OFFSET,
 			0,
 			201
 		}

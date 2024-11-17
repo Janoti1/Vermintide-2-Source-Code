@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "ebh_level_ground_zero_lord_banter",
 		name = "ebh_level_ground_zero_lord_banter",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -20,6 +21,7 @@ return function ()
 	define_rule({
 		response = "ebh_level_ground_zero_lord_insect_spell",
 		name = "ebh_level_ground_zero_lord_insect_spell",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -38,6 +40,7 @@ return function ()
 	define_rule({
 		response = "ebh_level_ground_zero_lord_intro",
 		name = "ebh_level_ground_zero_lord_intro",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -56,6 +59,7 @@ return function ()
 	define_rule({
 		response = "ebh_level_ground_zero_lord_retaliation_missile",
 		name = "ebh_level_ground_zero_lord_retaliation_missile",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -74,6 +78,7 @@ return function ()
 	define_rule({
 		response = "ebh_level_ground_zero_lord_spawn_enemies",
 		name = "ebh_level_ground_zero_lord_spawn_enemies",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -90,6 +95,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_ground_zero_intro_a",
 		response = "pdr_ground_zero_intro_a",
 		criterias = {
@@ -134,6 +140,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_ground_zero_intro_b",
 		response = "pdr_ground_zero_intro_b",
 		criterias = {
@@ -172,6 +179,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_ground_zero_intro_c",
 		response = "pdr_ground_zero_intro_c",
 		criterias = {
@@ -210,6 +218,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_boss_near",
 		response = "pdr_level_ground_zero_boss_near",
 		criterias = {
@@ -254,6 +263,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_boss_spotted",
 		response = "pdr_level_ground_zero_boss_spotted",
 		criterias = {
@@ -292,6 +302,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_boss_taunt_reply",
 		response = "pdr_level_ground_zero_boss_taunt_reply",
 		criterias = {
@@ -330,6 +341,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_canal_crossing",
 		response = "pdr_level_ground_zero_canal_crossing",
 		criterias = {
@@ -374,6 +386,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_canals",
 		response = "pdr_level_ground_zero_canals",
 		criterias = {
@@ -418,6 +431,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_complete",
 		response = "pdr_level_ground_zero_complete",
 		criterias = {
@@ -462,6 +476,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_corruption_everywhere",
 		response = "pdr_level_ground_zero_corruption_everywhere",
 		criterias = {
@@ -506,6 +521,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_crumbling",
 		response = "pdr_level_ground_zero_crumbling",
 		criterias = {
@@ -550,6 +566,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_landslide",
 		response = "pdr_level_ground_zero_landslide",
 		criterias = {
@@ -594,6 +611,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_looking_for_elevator",
 		response = "pdr_level_ground_zero_looking_for_elevator",
 		criterias = {
@@ -638,6 +656,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_precarious",
 		response = "pdr_level_ground_zero_precarious",
 		criterias = {
@@ -682,6 +701,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_smell",
 		response = "pdr_level_ground_zero_smell",
 		criterias = {
@@ -726,6 +746,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_the_hole",
 		response = "pdr_level_ground_zero_the_hole",
 		criterias = {
@@ -770,6 +791,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_the_hole_second_view",
 		response = "pdr_level_ground_zero_the_hole_second_view",
 		criterias = {
@@ -814,6 +836,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_ground_zero_welcoming_committee",
 		response = "pdr_level_ground_zero_welcoming_committee",
 		criterias = {

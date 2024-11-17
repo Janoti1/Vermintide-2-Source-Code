@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_chieftain_tips_special_attack_cleave",
 		response = "pes_gameplay_chieftain_tips_special_attack_cleave",
 		criterias = {
@@ -50,6 +51,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_chieftain_tips_special_lunge_attack_2",
 		response = "pes_gameplay_chieftain_tips_special_lunge_attack_2",
 		criterias = {
@@ -100,6 +102,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_skaven_warlord_banter_reply",
 		response = "pes_gameplay_skaven_warlord_banter_reply",
 		criterias = {
@@ -138,6 +141,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_skaven_warlord_kill",
 		response = "pes_gameplay_skaven_warlord_kill",
 		criterias = {
@@ -182,6 +186,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_skaven_warlord_summoning_reply",
 		response = "pes_gameplay_skaven_warlord_summoning_reply",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_barrier",
 		response = "pes_level_skaven_stronghold_barrier",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_city_afire",
 		response = "pes_level_skaven_stronghold_city_afire",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_dead_warlord",
 		response = "pes_level_skaven_stronghold_dead_warlord",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_downtown",
 		response = "pes_level_skaven_stronghold_downtown",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_exit",
 		response = "pes_level_skaven_stronghold_exit",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_foundry_entered",
 		response = "pes_level_skaven_stronghold_foundry_entered",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_light_brazier",
 		response = "pes_level_skaven_stronghold_light_brazier",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_long_way_down",
 		response = "pes_level_skaven_stronghold_long_way_down",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_mission_complete",
 		response = "pes_level_skaven_stronghold_mission_complete",
 		criterias = {
@@ -616,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_patrol_lanes",
 		response = "pes_level_skaven_stronghold_patrol_lanes",
 		criterias = {
@@ -660,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_taunt_warlord",
 		response = "pes_level_skaven_stronghold_taunt_warlord",
 		criterias = {
@@ -704,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_vista",
 		response = "pes_level_skaven_stronghold_vista",
 		criterias = {
@@ -748,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_warlord_nest",
 		response = "pes_level_skaven_stronghold_warlord_nest",
 		criterias = {
@@ -792,6 +810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_waterwheel_complete",
 		response = "pes_level_skaven_stronghold_waterwheel_complete",
 		criterias = {
@@ -836,6 +855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_skaven_stronghold_waterwheel_move",
 		response = "pes_level_skaven_stronghold_waterwheel_move",
 		criterias = {
@@ -880,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_skaven_stronghold_intro_a",
 		response = "pes_skaven_stronghold_intro_a",
 		criterias = {
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_skaven_stronghold_intro_b",
 		response = "pes_skaven_stronghold_intro_b",
 		criterias = {
@@ -962,6 +984,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_skaven_stronghold_intro_c",
 		response = "pes_skaven_stronghold_intro_c",
 		criterias = {

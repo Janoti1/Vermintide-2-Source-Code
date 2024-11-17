@@ -102,8 +102,8 @@ GameModeInnDeus.FAIL_LEVEL = function (self)
 	FAIL_LEVEL_VAR = true
 end
 
-GameModeInnDeus.player_entered_game_session = function (self, peer_id, local_player_id)
-	GameModeInnDeus.super.player_entered_game_session(self, peer_id, local_player_id)
+GameModeInnDeus.player_entered_game_session = function (self, peer_id, local_player_id, requested_party_index)
+	GameModeInnDeus.super.player_entered_game_session(self, peer_id, local_player_id, requested_party_index)
 
 	local status = Managers.party:get_player_status(peer_id, local_player_id)
 
@@ -284,7 +284,8 @@ GameModeInnDeus.local_player_game_starts = function (self, player, loading_conte
 
 		if IS_CONSOLE then
 			Managers.ui:handle_transition("initial_character_selection_force", {
-				menu_state_name = "character"
+				menu_state_name = "character",
+				on_exit_callback = callback(self, "_cb_start_menu_closed")
 			})
 		elseif GameSettingsDevelopment.skip_start_screen or Development.parameter("skip_start_screen") then
 			local first_hero_selection_made = SaveData.first_hero_selection_made
@@ -292,13 +293,17 @@ GameModeInnDeus.local_player_game_starts = function (self, player, loading_conte
 			local show_hero_selection = not backend_waiting_for_input and not first_hero_selection_made
 
 			Managers.ui:handle_transition("initial_start_menu_view_force", {
-				menu_state_name = show_hero_selection and "character" or "overview"
+				menu_state_name = show_hero_selection and "character" or "overview",
+				on_exit_callback = callback(self, "_cb_start_menu_closed")
 			})
 		else
 			Managers.ui:handle_transition("initial_character_selection_force", {
-				menu_state_name = "character"
+				menu_state_name = "character",
+				on_exit_callback = callback(self, "_cb_start_menu_closed")
 			})
 		end
+	else
+		Managers.state.event:trigger("tutorial_trigger", "keep_menu_left")
 	end
 
 	if self._is_initial_spawn then
@@ -310,4 +315,8 @@ GameModeInnDeus.local_player_game_starts = function (self, player, loading_conte
 			LevelHelper:flow_event(self._world, "level_start_local_player_spawned")
 		end
 	end
+end
+
+GameModeInnDeus._cb_start_menu_closed = function (self)
+	Managers.state.event:trigger("tutorial_trigger", "keep_menu_left")
 end

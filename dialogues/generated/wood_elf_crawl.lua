@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_cheers",
 		response = "pwe_crawl_cheers",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_end_event_find_good_beer",
 		response = "pwe_crawl_end_event_find_good_beer",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_end_event_keep_quiet",
 		response = "pwe_crawl_end_event_keep_quiet",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_end_event_keep_running",
 		response = "pwe_crawl_end_event_keep_running",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_end_event_tunnel",
 		response = "pwe_crawl_end_event_tunnel",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_end_event_way_open",
 		response = "pwe_crawl_end_event_way_open",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_end_event_waystone",
 		response = "pwe_crawl_end_event_waystone",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_get_into_third_pub",
 		response = "pwe_crawl_get_into_third_pub",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_get_out_soon",
 		response = "pwe_crawl_get_out_soon",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_have_a_drink",
 		response = "pwe_crawl_have_a_drink",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_head_for_first_pub",
 		response = "pwe_crawl_head_for_first_pub",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_head_for_second_pub",
 		response = "pwe_crawl_head_for_second_pub",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_head_for_third_pub",
 		response = "pwe_crawl_head_for_third_pub",
 		criterias = {
@@ -578,6 +591,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_heard_us",
 		response = "pwe_crawl_heard_us",
 		criterias = {
@@ -628,6 +642,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_loud_crash_end_reply",
 		response = "pwe_crawl_loud_crash_end_reply",
 		criterias = {
@@ -672,6 +687,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_loud_crash_interact",
 		response = "pwe_crawl_loud_crash_interact",
 		criterias = {
@@ -716,6 +732,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_loud_crash_reply",
 		response = "pwe_crawl_loud_crash_reply",
 		criterias = {
@@ -760,6 +777,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_mid_level_banter",
 		response = "pwe_crawl_mid_level_banter",
 		criterias = {
@@ -804,6 +822,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_old_path_blocked",
 		response = "pwe_crawl_old_path_blocked",
 		criterias = {
@@ -848,6 +867,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_pub_brazers",
 		response = "pwe_crawl_pub_brazers",
 		criterias = {
@@ -892,6 +912,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_pub_destroyed",
 		response = "pwe_crawl_pub_destroyed",
 		criterias = {
@@ -936,6 +957,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_pub_destroyed_reaction",
 		response = "pwe_crawl_pub_destroyed_reaction",
 		criterias = {
@@ -980,6 +1002,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_pub_district_sign",
 		response = "pwe_crawl_pub_district_sign",
 		criterias = {
@@ -1024,6 +1047,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_pub_door",
 		response = "pwe_crawl_pub_door",
 		criterias = {
@@ -1068,6 +1092,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_pub_horde_end",
 		response = "pwe_crawl_pub_horde_end",
 		criterias = {
@@ -1112,6 +1137,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_shortcut",
 		response = "pwe_crawl_shortcut",
 		criterias = {
@@ -1156,6 +1182,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_slaughter",
 		response = "pwe_crawl_slaughter",
 		criterias = {
@@ -1200,6 +1227,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_spot_first_pub",
 		response = "pwe_crawl_spot_first_pub",
 		criterias = {
@@ -1244,6 +1272,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_spot_first_pub_closer",
 		response = "pwe_crawl_spot_first_pub_closer",
 		criterias = {
@@ -1288,6 +1317,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_spot_second_pub",
 		response = "pwe_crawl_spot_second_pub",
 		criterias = {
@@ -1332,6 +1362,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_spot_third_pub",
 		response = "pwe_crawl_spot_third_pub",
 		criterias = {
@@ -1376,6 +1407,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_tunnel_passage",
 		response = "pwe_crawl_tunnel_passage",
 		criterias = {
@@ -1420,6 +1452,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_crawl_upstairs",
 		response = "pwe_crawl_upstairs",
 		criterias = {
@@ -1464,6 +1497,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_crawl_intro_a",
 		response = "pwe_level_crawl_intro_a",
 		criterias = {
@@ -1508,6 +1542,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_crawl_intro_b",
 		response = "pwe_level_crawl_intro_b",
 		criterias = {
@@ -1552,6 +1587,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_crawl_intro_c",
 		response = "pwe_level_crawl_intro_c",
 		criterias = {

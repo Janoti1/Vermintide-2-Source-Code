@@ -19,7 +19,7 @@ CareerSettings.bw_necromancer = {
 	description = "sienna_4_desc",
 	portrait_image = "unit_frame_portrait_sienna_necromancer",
 	portrait_thumbnail = "portrait_sienna_necromancer_thumbnail",
-	sort_order = 1,
+	sort_order = 4,
 	required_dlc = "shovel",
 	breed = PlayerBreeds.hero_bw_necromancer,
 	item_types = {},
@@ -134,6 +134,9 @@ CareerSettings.bw_necromancer = {
 		},
 		slot_frame = {
 			"frame"
+		},
+		slot_pose = {
+			"weapon_pose"
 		}
 	},
 	loadout_equipment_slots = {
@@ -141,7 +144,8 @@ CareerSettings.bw_necromancer = {
 		"ranged",
 		"necklace",
 		"ring",
-		"trinket"
+		"trinket",
+		"weapon_pose"
 	},
 	additional_item_slots = {
 		slot_potion = 1

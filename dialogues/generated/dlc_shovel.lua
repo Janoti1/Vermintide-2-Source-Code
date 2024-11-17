@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_eighteen_01",
 		response = "pbw_nm_shovel_conversation_eighteen_01",
 		criterias = {
@@ -31,6 +32,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_eighteen_02",
 		response = "pbw_nm_shovel_conversation_eighteen_02",
 		criterias = {
@@ -62,6 +64,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_eleven_01",
 		response = "pbw_nm_shovel_conversation_eleven_01",
 		criterias = {
@@ -93,6 +96,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_eleven_02",
 		response = "pbw_nm_shovel_conversation_eleven_02",
 		criterias = {
@@ -124,6 +128,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_fifteen_01",
 		response = "pbw_nm_shovel_conversation_fifteen_01",
 		criterias = {
@@ -155,6 +160,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_fifteen_02",
 		response = "pbw_nm_shovel_conversation_fifteen_02",
 		criterias = {
@@ -186,6 +192,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_four_01",
 		response = "pbw_nm_shovel_conversation_four_01",
 		criterias = {
@@ -254,6 +261,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_four_02",
 		response = "pbw_nm_shovel_conversation_four_02",
 		criterias = {
@@ -285,6 +293,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_four_03",
 		response = "pbw_nm_shovel_conversation_four_03",
 		criterias = {
@@ -316,6 +325,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_fourteen_01",
 		response = "pbw_nm_shovel_conversation_fourteen_01",
 		criterias = {
@@ -384,6 +394,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_fourteen_02",
 		response = "pbw_nm_shovel_conversation_fourteen_02",
 		criterias = {
@@ -415,6 +426,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_nine_01",
 		response = "pbw_nm_shovel_conversation_nine_01",
 		criterias = {
@@ -446,6 +458,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_nine_02",
 		response = "pbw_nm_shovel_conversation_nine_02",
 		criterias = {
@@ -477,6 +490,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_nineteen_01",
 		response = "pbw_nm_shovel_conversation_nineteen_01",
 		criterias = {
@@ -508,6 +522,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_nineteen_02",
 		response = "pbw_nm_shovel_conversation_nineteen_02",
 		criterias = {
@@ -539,6 +554,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_one_01",
 		response = "pbw_nm_shovel_conversation_one_01",
 		criterias = {
@@ -607,6 +623,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_one_02",
 		response = "pbw_nm_shovel_conversation_one_02",
 		criterias = {
@@ -638,6 +655,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_one_a_01",
 		response = "pbw_nm_shovel_conversation_one_a_01",
 		criterias = {
@@ -706,6 +724,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_one_a_02",
 		response = "pbw_nm_shovel_conversation_one_a_02",
 		criterias = {
@@ -737,6 +756,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_one_a_03",
 		response = "pbw_nm_shovel_conversation_one_a_03",
 		criterias = {
@@ -768,6 +788,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_seventeen_01",
 		response = "pbw_nm_shovel_conversation_seventeen_01",
 		criterias = {
@@ -799,6 +820,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_seventeen_02",
 		response = "pbw_nm_shovel_conversation_seventeen_02",
 		criterias = {
@@ -830,6 +852,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_sixteen_01",
 		response = "pbw_nm_shovel_conversation_sixteen_01",
 		criterias = {
@@ -861,6 +884,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_sixteen_02",
 		response = "pbw_nm_shovel_conversation_sixteen_02",
 		criterias = {
@@ -892,6 +916,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_ten_01",
 		response = "pbw_nm_shovel_conversation_ten_01",
 		criterias = {
@@ -923,6 +948,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_ten_02",
 		response = "pbw_nm_shovel_conversation_ten_02",
 		criterias = {
@@ -954,6 +980,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_ten_03",
 		response = "pbw_nm_shovel_conversation_ten_03",
 		criterias = {
@@ -985,6 +1012,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_thirteen_01",
 		response = "pbw_nm_shovel_conversation_thirteen_01",
 		criterias = {
@@ -1053,6 +1081,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_thirteen_02",
 		response = "pbw_nm_shovel_conversation_thirteen_02",
 		criterias = {
@@ -1084,6 +1113,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_three_01",
 		response = "pbw_nm_shovel_conversation_three_01",
 		criterias = {
@@ -1152,6 +1182,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_three_02",
 		response = "pbw_nm_shovel_conversation_three_02",
 		criterias = {
@@ -1183,6 +1214,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_three_03",
 		response = "pbw_nm_shovel_conversation_three_03",
 		criterias = {
@@ -1214,6 +1246,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twelve_01",
 		response = "pbw_nm_shovel_conversation_twelve_01",
 		criterias = {
@@ -1245,6 +1278,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twelve_02",
 		response = "pbw_nm_shovel_conversation_twelve_02",
 		criterias = {
@@ -1276,6 +1310,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twenty_01",
 		response = "pbw_nm_shovel_conversation_twenty_01",
 		criterias = {
@@ -1307,6 +1342,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twenty_02",
 		response = "pbw_nm_shovel_conversation_twenty_02",
 		criterias = {
@@ -1338,6 +1374,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentyfive_01",
 		response = "pbw_nm_shovel_conversation_twentyfive_01",
 		criterias = {
@@ -1406,6 +1443,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentyfive_02",
 		response = "pbw_nm_shovel_conversation_twentyfive_02",
 		criterias = {
@@ -1437,6 +1475,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentyfour_01",
 		response = "pbw_nm_shovel_conversation_twentyfour_01",
 		criterias = {
@@ -1468,6 +1507,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentyfour_02",
 		response = "pbw_nm_shovel_conversation_twentyfour_02",
 		criterias = {
@@ -1499,6 +1539,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentyone_01",
 		response = "pbw_nm_shovel_conversation_twentyone_01",
 		criterias = {
@@ -1530,6 +1571,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentyone_02",
 		response = "pbw_nm_shovel_conversation_twentyone_02",
 		criterias = {
@@ -1561,6 +1603,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentythree_01",
 		response = "pbw_nm_shovel_conversation_twentythree_01",
 		criterias = {
@@ -1629,6 +1672,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentythree_02",
 		response = "pbw_nm_shovel_conversation_twentythree_02",
 		criterias = {
@@ -1660,6 +1704,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentythree_03",
 		response = "pbw_nm_shovel_conversation_twentythree_03",
 		criterias = {
@@ -1691,6 +1736,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentytwo_01",
 		response = "pbw_nm_shovel_conversation_twentytwo_01",
 		criterias = {
@@ -1722,6 +1768,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_twentytwo_02",
 		response = "pbw_nm_shovel_conversation_twentytwo_02",
 		criterias = {
@@ -1753,6 +1800,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_two_01",
 		response = "pbw_nm_shovel_conversation_two_01",
 		criterias = {
@@ -1821,6 +1869,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_two_02",
 		response = "pbw_nm_shovel_conversation_two_02",
 		criterias = {
@@ -1852,6 +1901,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_two_03",
 		response = "pbw_nm_shovel_conversation_two_03",
 		criterias = {
@@ -1883,6 +1933,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_two_a_01",
 		response = "pbw_nm_shovel_conversation_two_a_01",
 		criterias = {
@@ -1951,6 +2002,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_two_a_02",
 		response = "pbw_nm_shovel_conversation_two_a_02",
 		criterias = {
@@ -1982,6 +2034,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_nm_shovel_conversation_two_a_03",
 		response = "pbw_nm_shovel_conversation_two_a_03",
 		criterias = {
@@ -2013,6 +2066,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_eight_01",
 		response = "pdr_shovel_conversation_eight_01",
 		criterias = {
@@ -2044,6 +2098,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_eleven_01",
 		response = "pdr_shovel_conversation_eleven_01",
 		criterias = {
@@ -2106,6 +2161,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_eleven_02",
 		response = "pdr_shovel_conversation_eleven_02",
 		criterias = {
@@ -2137,6 +2193,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_five_01",
 		response = "pdr_shovel_conversation_five_01",
 		criterias = {
@@ -2168,6 +2225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_nine_01",
 		response = "pdr_shovel_conversation_nine_01",
 		criterias = {
@@ -2230,6 +2288,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_nine_02",
 		response = "pdr_shovel_conversation_nine_02",
 		criterias = {
@@ -2261,6 +2320,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_seven_01",
 		response = "pdr_shovel_conversation_seven_01",
 		criterias = {
@@ -2292,6 +2352,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_six_01",
 		response = "pdr_shovel_conversation_six_01",
 		criterias = {
@@ -2323,6 +2384,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_ten_01",
 		response = "pdr_shovel_conversation_ten_01",
 		criterias = {
@@ -2385,6 +2447,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_ten_02",
 		response = "pdr_shovel_conversation_ten_02",
 		criterias = {
@@ -2416,6 +2479,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_ten_03",
 		response = "pdr_shovel_conversation_ten_03",
 		criterias = {
@@ -2447,6 +2511,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twelve_01",
 		response = "pdr_shovel_conversation_twelve_01",
 		criterias = {
@@ -2509,6 +2574,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twelve_02",
 		response = "pdr_shovel_conversation_twelve_02",
 		criterias = {
@@ -2540,6 +2606,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twelve_03",
 		response = "pdr_shovel_conversation_twelve_03",
 		criterias = {
@@ -2571,6 +2638,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twentynine_01",
 		response = "pdr_shovel_conversation_twentynine_01",
 		criterias = {
@@ -2645,6 +2713,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twentynine_02",
 		response = "pdr_shovel_conversation_twentynine_02",
 		criterias = {
@@ -2676,6 +2745,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twentyseven_01",
 		response = "pdr_shovel_conversation_twentyseven_01",
 		criterias = {
@@ -2750,6 +2820,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_shovel_conversation_twentysix_01",
 		response = "pdr_shovel_conversation_twentysix_01",
 		criterias = {
@@ -2781,6 +2852,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gk_shovel_conversation_twentyeight_01",
 		response = "pes_gk_shovel_conversation_twentyeight_01",
 		criterias = {
@@ -2812,6 +2884,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gk_shovel_conversation_twentyeight_02",
 		response = "pes_gk_shovel_conversation_twentyeight_02",
 		criterias = {
@@ -2843,6 +2916,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gk_shovel_conversation_twentynine_01",
 		response = "pes_gk_shovel_conversation_twentynine_01",
 		criterias = {
@@ -2874,6 +2948,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_eight_01",
 		response = "pes_shovel_conversation_eight_01",
 		criterias = {
@@ -2905,6 +2980,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_five_01",
 		response = "pes_shovel_conversation_five_01",
 		criterias = {
@@ -2985,6 +3061,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_seven_01",
 		response = "pes_shovel_conversation_seven_01",
 		criterias = {
@@ -3016,6 +3093,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_six_01",
 		response = "pes_shovel_conversation_six_01",
 		criterias = {
@@ -3047,6 +3125,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twenty_01",
 		response = "pes_shovel_conversation_twenty_01",
 		criterias = {
@@ -3109,6 +3188,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twenty_02",
 		response = "pes_shovel_conversation_twenty_02",
 		criterias = {
@@ -3140,6 +3220,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyfive_02",
 		response = "pes_shovel_conversation_twentyfive_02",
 		criterias = {
@@ -3171,6 +3252,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyfour_01",
 		response = "pes_shovel_conversation_twentyfour_01",
 		criterias = {
@@ -3233,6 +3315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyfour_02",
 		response = "pes_shovel_conversation_twentyfour_02",
 		criterias = {
@@ -3264,6 +3347,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyfour_03",
 		response = "pes_shovel_conversation_twentyfour_03",
 		criterias = {
@@ -3295,6 +3379,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyone_01",
 		response = "pes_shovel_conversation_twentyone_01",
 		criterias = {
@@ -3357,6 +3442,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyone_02",
 		response = "pes_shovel_conversation_twentyone_02",
 		criterias = {
@@ -3388,6 +3474,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyseven_01",
 		response = "pes_shovel_conversation_twentyseven_01",
 		criterias = {
@@ -3419,6 +3506,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentyseven_02",
 		response = "pes_shovel_conversation_twentyseven_02",
 		criterias = {
@@ -3450,6 +3538,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentysix_01",
 		response = "pes_shovel_conversation_twentysix_01",
 		criterias = {
@@ -3524,6 +3613,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentysix_02",
 		response = "pes_shovel_conversation_twentysix_02",
 		criterias = {
@@ -3555,6 +3645,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentythree_02",
 		response = "pes_shovel_conversation_twentythree_02",
 		criterias = {
@@ -3586,6 +3677,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentythree_03",
 		response = "pes_shovel_conversation_twentythree_03",
 		criterias = {
@@ -3617,6 +3709,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentytwo_01",
 		response = "pes_shovel_conversation_twentytwo_01",
 		criterias = {
@@ -3679,6 +3772,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_shovel_conversation_twentytwo_02",
 		response = "pes_shovel_conversation_twentytwo_02",
 		criterias = {
@@ -3710,6 +3804,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_eight_01",
 		response = "pwe_shovel_conversation_eight_01",
 		criterias = {
@@ -3741,6 +3836,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_five_01",
 		response = "pwe_shovel_conversation_five_01",
 		criterias = {
@@ -3772,6 +3868,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_four_01",
 		response = "pwe_shovel_conversation_four_01",
 		criterias = {
@@ -3803,6 +3900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_four_02",
 		response = "pwe_shovel_conversation_four_02",
 		criterias = {
@@ -3834,6 +3932,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_one_01",
 		response = "pwe_shovel_conversation_one_01",
 		criterias = {
@@ -3865,6 +3964,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_one_02",
 		response = "pwe_shovel_conversation_one_02",
 		criterias = {
@@ -3896,6 +3996,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_seven_01",
 		response = "pwe_shovel_conversation_seven_01",
 		criterias = {
@@ -3927,6 +4028,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_six_01",
 		response = "pwe_shovel_conversation_six_01",
 		criterias = {
@@ -3958,6 +4060,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_three_01",
 		response = "pwe_shovel_conversation_three_01",
 		criterias = {
@@ -3989,6 +4092,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_three_02",
 		response = "pwe_shovel_conversation_three_02",
 		criterias = {
@@ -4020,6 +4124,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_two_01",
 		response = "pwe_shovel_conversation_two_01",
 		criterias = {
@@ -4051,6 +4156,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_two_02",
 		response = "pwe_shovel_conversation_two_02",
 		criterias = {
@@ -4082,6 +4188,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_shovel_conversation_two_03",
 		response = "pwe_shovel_conversation_two_03",
 		criterias = {
@@ -4113,6 +4220,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_st_shovel_conversation_one_a_01",
 		response = "pwe_st_shovel_conversation_one_a_01",
 		criterias = {
@@ -4144,6 +4252,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_st_shovel_conversation_one_a_02",
 		response = "pwe_st_shovel_conversation_one_a_02",
 		criterias = {
@@ -4175,6 +4284,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_st_shovel_conversation_two_a_01",
 		response = "pwe_st_shovel_conversation_two_a_01",
 		criterias = {
@@ -4206,6 +4316,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_st_shovel_conversation_two_a_02",
 		response = "pwe_st_shovel_conversation_two_a_02",
 		criterias = {
@@ -4237,6 +4348,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_st_shovel_conversation_two_a_03",
 		response = "pwe_st_shovel_conversation_two_a_03",
 		criterias = {
@@ -4268,6 +4380,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_eight_01",
 		response = "pwh_shovel_conversation_eight_01",
 		criterias = {
@@ -4348,6 +4461,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_eighteen_01",
 		response = "pwh_shovel_conversation_eighteen_01",
 		criterias = {
@@ -4410,6 +4524,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_eighteen_02",
 		response = "pwh_shovel_conversation_eighteen_02",
 		criterias = {
@@ -4441,6 +4556,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_fifteen_01",
 		response = "pwh_shovel_conversation_fifteen_01",
 		criterias = {
@@ -4503,6 +4619,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_fifteen_02",
 		response = "pwh_shovel_conversation_fifteen_02",
 		criterias = {
@@ -4534,6 +4651,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_five_01",
 		response = "pwh_shovel_conversation_five_01",
 		criterias = {
@@ -4565,6 +4683,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_fourteen_01",
 		response = "pwh_shovel_conversation_fourteen_01",
 		criterias = {
@@ -4596,6 +4715,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_fourteen_02",
 		response = "pwh_shovel_conversation_fourteen_02",
 		criterias = {
@@ -4627,6 +4747,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_nineteen_01",
 		response = "pwh_shovel_conversation_nineteen_01",
 		criterias = {
@@ -4689,6 +4810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_nineteen_02",
 		response = "pwh_shovel_conversation_nineteen_02",
 		criterias = {
@@ -4720,6 +4842,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_nineteen_03",
 		response = "pwh_shovel_conversation_nineteen_03",
 		criterias = {
@@ -4751,6 +4874,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_seven_01",
 		response = "pwh_shovel_conversation_seven_01",
 		criterias = {
@@ -4831,6 +4955,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_seventeen_01",
 		response = "pwh_shovel_conversation_seventeen_01",
 		criterias = {
@@ -4893,6 +5018,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_seventeen_02",
 		response = "pwh_shovel_conversation_seventeen_02",
 		criterias = {
@@ -4924,6 +5050,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_six_01",
 		response = "pwh_shovel_conversation_six_01",
 		criterias = {
@@ -5004,6 +5131,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_six_02",
 		response = "pwh_shovel_conversation_six_02",
 		criterias = {
@@ -5035,6 +5163,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_sixteen_01",
 		response = "pwh_shovel_conversation_sixteen_01",
 		criterias = {
@@ -5097,6 +5226,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_sixteen_02",
 		response = "pwh_shovel_conversation_sixteen_02",
 		criterias = {
@@ -5128,6 +5258,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_thirteen_01",
 		response = "pwh_shovel_conversation_thirteen_01",
 		criterias = {
@@ -5159,6 +5290,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_twentynine_02",
 		response = "pwh_shovel_conversation_twentynine_02",
 		criterias = {
@@ -5190,6 +5322,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_twentyseven_01",
 		response = "pwh_shovel_conversation_twentyseven_01",
 		criterias = {
@@ -5221,6 +5354,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_twentyseven_02",
 		response = "pwh_shovel_conversation_twentyseven_02",
 		criterias = {
@@ -5252,6 +5386,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_twentysix_01",
 		response = "pwh_shovel_conversation_twentysix_01",
 		criterias = {
@@ -5283,6 +5418,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_shovel_conversation_twentysix_02",
 		response = "pwh_shovel_conversation_twentysix_02",
 		criterias = {
@@ -5314,6 +5450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wp_shovel_conversation_twentyeight_01",
 		response = "pwh_wp_shovel_conversation_twentyeight_01",
 		criterias = {
@@ -5388,6 +5525,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wp_shovel_conversation_twentyeight_02",
 		response = "pwh_wp_shovel_conversation_twentyeight_02",
 		criterias = {
@@ -5419,6 +5557,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wp_shovel_conversation_twentynine_01",
 		response = "pwh_wp_shovel_conversation_twentynine_01",
 		criterias = {

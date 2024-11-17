@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwe_ground_zero_intro_a",
 		response = "pwe_ground_zero_intro_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_ground_zero_intro_b",
 		response = "pwe_ground_zero_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_ground_zero_intro_c",
 		response = "pwe_ground_zero_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_boss_spotted",
 		response = "pwe_level_ground_zero_boss_spotted",
 		criterias = {
@@ -158,6 +162,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_boss_taunt_reply",
 		response = "pwe_level_ground_zero_boss_taunt_reply",
 		criterias = {
@@ -196,6 +201,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_canal_crossing",
 		response = "pwe_level_ground_zero_canal_crossing",
 		criterias = {
@@ -240,6 +246,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_canals",
 		response = "pwe_level_ground_zero_canals",
 		criterias = {
@@ -284,6 +291,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_cargo_elevator",
 		response = "pwe_level_ground_zero_cargo_elevator",
 		criterias = {
@@ -328,6 +336,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_complete",
 		response = "pwe_level_ground_zero_complete",
 		criterias = {
@@ -372,6 +381,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_looking_for_elevator",
 		response = "pwe_level_ground_zero_looking_for_elevator",
 		criterias = {
@@ -416,6 +426,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_ground_zero_welcoming_committee",
 		response = "pwe_level_ground_zero_welcoming_committee",
 		criterias = {

@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_bell_ringing",
 		response = "pwe_level_mine_bell_ringing",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_big_troll_cave",
 		response = "pwe_level_mine_big_troll_cave",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_bridge",
 		response = "pwe_level_mine_bridge",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_darkness",
 		response = "pwe_level_mine_darkness",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_find_explosives",
 		response = "pwe_level_mine_find_explosives",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_follow_tracks",
 		response = "pwe_level_mine_follow_tracks",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_found_cart_troll_cave",
 		response = "pwe_level_mine_found_cart_troll_cave",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_gloat",
 		response = "pwe_level_mine_gloat",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_impressive_cave",
 		response = "pwe_level_mine_impressive_cave",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_ladder",
 		response = "pwe_level_mine_ladder",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_lost_cart",
 		response = "pwe_level_mine_lost_cart",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_mine_cart",
 		response = "pwe_level_mine_mine_cart",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_mine_cart_drops_away",
 		response = "pwe_level_mine_mine_cart_drops_away",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_mine_cart_push_upwards",
 		response = "pwe_level_mine_mine_cart_push_upwards",
 		criterias = {
@@ -616,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_mine_cart_remind",
 		response = "pwe_level_mine_mine_cart_remind",
 		criterias = {
@@ -660,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_mine_cart_roll_down_back",
 		response = "pwe_level_mine_mine_cart_roll_down_back",
 		criterias = {
@@ -704,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_mine_cart_roll_down_forward",
 		response = "pwe_level_mine_mine_cart_roll_down_forward",
 		criterias = {
@@ -748,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_portal",
 		response = "pwe_level_mine_portal",
 		criterias = {
@@ -792,6 +810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_troll_doors",
 		response = "pwe_level_mine_troll_doors",
 		criterias = {
@@ -836,6 +855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_troll_food_storage",
 		response = "pwe_level_mine_troll_food_storage",
 		criterias = {
@@ -880,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_mine_warren",
 		response = "pwe_level_mine_warren",
 		criterias = {
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_mine_intro_a",
 		response = "pwe_mine_intro_a",
 		criterias = {
@@ -968,6 +990,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_mine_intro_b",
 		response = "pwe_mine_intro_b",
 		criterias = {
@@ -1006,6 +1029,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_mine_intro_c",
 		response = "pwe_mine_intro_c",
 		criterias = {

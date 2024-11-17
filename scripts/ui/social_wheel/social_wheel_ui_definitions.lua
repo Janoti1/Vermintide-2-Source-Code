@@ -121,6 +121,12 @@ local function create_social_widget(settings, widget_angle, category_settings, g
 	local divider_dir = Vector3(math.cos(divider_angle), math.sin(divider_angle), 0)
 	local wedge_size = 1 / num_wedges * 360 / 90 * category_settings.wedge_adjustment
 	local scale = 3
+	local localize = true
+
+	if settings.localize == false then
+		localize = false
+	end
+
 	local aspect_ratio = size[1] / size[2]
 
 	return {
@@ -268,7 +274,7 @@ local function create_social_widget(settings, widget_angle, category_settings, g
 			final_size_multiplier = 1,
 			icon_bg_id = "radial_chat_icon_bg",
 			icon_id = settings.icon or "radial_chat_icon_boss",
-			icon_glow_id = settings.icon and settings.icon .. "_glow" or "radial_chat_icon_boss_glow",
+			icon_glow_id = settings.icon and (settings.icon_glow or settings.icon .. "_glow") or "radial_chat_icon_boss_glow",
 			settings = settings,
 			category_settings = category_settings,
 			text_id = settings.text,
@@ -422,13 +428,13 @@ local function create_social_widget(settings, widget_angle, category_settings, g
 			},
 			text = {
 				word_wrap = false,
-				localize = true,
 				font_size = 32,
 				pixel_perfect = true,
 				horizontal_alignment = "center",
 				vertical_alignment = "center",
 				dynamic_font = true,
 				font_type = "hell_shark_header",
+				localize = localize,
 				selected_color = Colors.get_color_table_with_alpha("font_title", 255),
 				base_color = Colors.get_color_table_with_alpha("white", 128),
 				text_color = Colors.get_color_table_with_alpha("white", 255),
@@ -440,13 +446,13 @@ local function create_social_widget(settings, widget_angle, category_settings, g
 			},
 			text_shadow = {
 				word_wrap = false,
-				localize = true,
 				font_size = 32,
 				pixel_perfect = true,
 				horizontal_alignment = "center",
 				vertical_alignment = "center",
 				dynamic_font = true,
 				font_type = "hell_shark_header",
+				localize = localize,
 				selected_color = Colors.get_color_table_with_alpha("black", 255),
 				base_color = Colors.get_color_table_with_alpha("black", 128),
 				text_color = Colors.get_color_table_with_alpha("black", 255),

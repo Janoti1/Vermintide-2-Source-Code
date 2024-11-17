@@ -47,6 +47,26 @@ local scenegraph_position = {
 		1392,
 		200,
 		20
+	},
+	player_insignia_anchor_1 = {
+		-523,
+		80,
+		40
+	},
+	player_insignia_anchor_2 = {
+		-235,
+		80,
+		40
+	},
+	player_insignia_anchor_3 = {
+		55,
+		80,
+		40
+	},
+	player_insignia_anchor_4 = {
+		343,
+		80,
+		40
 	}
 }
 local scenegraph_size = {
@@ -73,7 +93,11 @@ local scenegraph_size = {
 	player_portrait_anchor_1 = player_portrait_anchor_size,
 	player_portrait_anchor_2 = player_portrait_anchor_size,
 	player_portrait_anchor_3 = player_portrait_anchor_size,
-	player_portrait_anchor_4 = player_portrait_anchor_size
+	player_portrait_anchor_4 = player_portrait_anchor_size,
+	player_insignia_anchor_1 = player_portrait_anchor_size,
+	player_insignia_anchor_2 = player_portrait_anchor_size,
+	player_insignia_anchor_3 = player_portrait_anchor_size,
+	player_insignia_anchor_4 = player_portrait_anchor_size
 }
 local scenegraph_definition = {
 	screen = {
@@ -136,6 +160,34 @@ local scenegraph_definition = {
 		horizontal_alignment = "center",
 		size = scenegraph_size.player_portrait_anchor_4,
 		position = scenegraph_position.player_portrait_anchor_4
+	},
+	player_insignia_anchor_1 = {
+		vertical_alignment = "center",
+		parent = "bottom_bar",
+		horizontal_alignment = "center",
+		size = scenegraph_size.player_insignia_anchor_1,
+		position = scenegraph_position.player_insignia_anchor_1
+	},
+	player_insignia_anchor_2 = {
+		vertical_alignment = "center",
+		parent = "bottom_bar",
+		horizontal_alignment = "center",
+		size = scenegraph_size.player_insignia_anchor_2,
+		position = scenegraph_position.player_insignia_anchor_2
+	},
+	player_insignia_anchor_3 = {
+		vertical_alignment = "center",
+		parent = "bottom_bar",
+		horizontal_alignment = "center",
+		size = scenegraph_size.player_insignia_anchor_3,
+		position = scenegraph_position.player_insignia_anchor_3
+	},
+	player_insignia_anchor_4 = {
+		vertical_alignment = "center",
+		parent = "bottom_bar",
+		horizontal_alignment = "center",
+		size = scenegraph_size.player_insignia_anchor_4,
+		position = scenegraph_position.player_insignia_anchor_4
 	}
 }
 local team_text_style = {
@@ -261,7 +313,7 @@ function create_player_name_career_text(scenegraph_id)
 end
 
 local bottom_widgets_definitions = {
-	bottom_background = UIWidgets.create_simple_rect("bottom_bar", Colors.get_color_table_with_alpha("black", 185)),
+	bottom_background = UIWidgets.create_simple_rect("bottom_bar", Colors.get_color_table_with_alpha("black", 100)),
 	bottom_background_detail = UIWidgets.create_parading_screen_divider("bottom_bar_detail", scenegraph_definition.bottom_bar_detail.size)
 }
 local top_widgets_definitions = {
@@ -325,12 +377,17 @@ local animation_definitions = {
 				local portrait_widgets = self._team_portrait_frame_widgets
 				local top_widgets = self._top_widgets
 				local player_name_widgets = self._player_name_widgets
+				local insignia_widgets = self._team_insignia_widgets
 
 				for _, widget in ipairs(bottom_widgets) do
 					widget.alpha_multiplier = 0
 				end
 
 				for _, widget in ipairs(portrait_widgets) do
+					widget.alpha_multiplier = 0
+				end
+
+				for _, widget in ipairs(insignia_widgets) do
 					widget.alpha_multiplier = 0
 				end
 
@@ -345,17 +402,20 @@ local animation_definitions = {
 			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
 				local anim_progress = math.easeOutCubic(progress)
 				local self = params.self
-				local self = params.self
 				local bottom_widgets = self._bottom_widgets
 				local portrait_widgets = self._team_portrait_frame_widgets
 				local top_widgets = self._top_widgets
-				local player_name_widgets = self._player_name_widgets
+				local insignia_widgets = self._team_insignia_widgets
 
 				for _, widget in ipairs(bottom_widgets) do
 					widget.alpha_multiplier = anim_progress
 				end
 
 				for _, widget in ipairs(portrait_widgets) do
+					widget.alpha_multiplier = anim_progress
+				end
+
+				for _, widget in ipairs(insignia_widgets) do
 					widget.alpha_multiplier = anim_progress
 				end
 
@@ -388,6 +448,7 @@ local animation_definitions = {
 				local self = params.self
 				local bottom_widgets = self._bottom_widgets
 				local portrait_widgets = self._team_portrait_frame_widgets
+				local insignia_widgets = self._team_insignia_widgets
 				local player_name_widgets = self._player_name_widgets
 
 				for _, widget in ipairs(bottom_widgets) do
@@ -398,6 +459,13 @@ local animation_definitions = {
 				end
 
 				for _, widget in ipairs(portrait_widgets) do
+					local y = -200 + 200 * anim_progress
+					local offset = widget.offset
+
+					offset[2] = y
+				end
+
+				for _, widget in ipairs(insignia_widgets) do
 					local y = -200 + 200 * anim_progress
 					local offset = widget.offset
 
@@ -507,12 +575,17 @@ local animation_definitions = {
 				local bottom_widgets = self._bottom_widgets
 				local portrait_widgets = self._team_portrait_frame_widgets
 				local player_name_widgets = self._player_name_widgets
+				local insignia_widgets = self._team_insignia_widgets
 
 				for _, widget in ipairs(bottom_widgets) do
 					widget.alpha_multiplier = 0
 				end
 
 				for _, widget in ipairs(portrait_widgets) do
+					widget.alpha_multiplier = 0
+				end
+
+				for _, widget in ipairs(insignia_widgets) do
 					widget.alpha_multiplier = 0
 				end
 
@@ -528,12 +601,17 @@ local animation_definitions = {
 				local portrait_widgets = self._team_portrait_frame_widgets
 				local top_widgets = self._top_widgets
 				local player_name_widgets = self._player_name_widgets
+				local insignia_widgets = self._team_insignia_widgets
 
 				for _, widget in ipairs(bottom_widgets) do
 					widget.alpha_multiplier = anim_progress
 				end
 
 				for _, widget in ipairs(portrait_widgets) do
+					widget.alpha_multiplier = anim_progress
+				end
+
+				for _, widget in ipairs(insignia_widgets) do
 					widget.alpha_multiplier = anim_progress
 				end
 
@@ -562,6 +640,7 @@ local animation_definitions = {
 				local bottom_widgets = self._bottom_widgets
 				local portrait_widgets = self._team_portrait_frame_widgets
 				local player_name_widgets = self._player_name_widgets
+				local insignia_widgets = self._team_insignia_widgets
 
 				for _, widget in ipairs(bottom_widgets) do
 					local y = -250 + 250 * anim_progress
@@ -571,6 +650,13 @@ local animation_definitions = {
 				end
 
 				for _, widget in ipairs(portrait_widgets) do
+					local y = -200 + 200 * anim_progress
+					local offset = widget.offset
+
+					offset[2] = y
+				end
+
+				for _, widget in ipairs(insignia_widgets) do
 					local y = -200 + 200 * anim_progress
 					local offset = widget.offset
 

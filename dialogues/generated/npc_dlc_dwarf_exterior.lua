@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_beacons_bridge_stuck_a",
 		name = "nde_dwarf_beacons_bridge_stuck_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -26,6 +27,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_begin_end_event_a",
 		name = "nde_dwarf_external_begin_end_event_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -50,6 +52,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_bomb_cart",
 		name = "nde_dwarf_external_bomb_cart",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -74,6 +77,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_bomb_cart_blocked",
 		name = "nde_dwarf_external_bomb_cart_blocked",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -98,6 +102,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_cart_door",
 		name = "nde_dwarf_external_cart_door",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -122,6 +127,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_elevator_briefing_b",
 		name = "nde_dwarf_external_elevator_briefing_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -146,6 +152,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_end_event_complete_01_a",
 		name = "nde_dwarf_external_end_event_complete_01_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -170,6 +177,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_end_event_complete_02_a",
 		name = "nde_dwarf_external_end_event_complete_02_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -194,6 +202,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_end_event_complete_03_a",
 		name = "nde_dwarf_external_end_event_complete_03_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -218,6 +227,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_event_almost",
 		name = "nde_dwarf_external_event_almost",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -242,6 +252,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_event_good_start",
 		name = "nde_dwarf_external_event_good_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -266,6 +277,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_event_reminder_a",
 		name = "nde_dwarf_external_event_reminder_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -290,6 +302,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_frozen_river",
 		name = "nde_dwarf_external_frozen_river",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -314,6 +327,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_get_out",
 		name = "nde_dwarf_external_get_out",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -338,6 +352,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_ghost_town_b",
 		name = "nde_dwarf_external_ghost_town_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -362,6 +377,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_mid_conversation_b",
 		name = "nde_dwarf_external_mid_conversation_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -386,6 +402,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_mid_conversation_no_bardin_b",
 		name = "nde_dwarf_external_mid_conversation_no_bardin_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -410,6 +427,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_migdahl_b",
 		name = "nde_dwarf_external_migdahl_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -432,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nde_dwarf_external_nearly_there_a",
 		response = "nde_dwarf_external_nearly_there_a",
 		criterias = {
@@ -472,6 +491,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_safety_b",
 		name = "nde_dwarf_external_safety_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -494,6 +514,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nde_dwarf_external_start_banter_a",
 		response = "nde_dwarf_external_start_banter_a",
 		criterias = {
@@ -528,6 +549,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_start_banter_b",
 		name = "nde_dwarf_external_start_banter_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -552,6 +574,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_start_banter_c",
 		name = "nde_dwarf_external_start_banter_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -576,6 +599,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_which_way_b",
 		name = "nde_dwarf_external_which_way_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -600,6 +624,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_wyr_migdahl_a",
 		name = "nde_dwarf_external_wyr_migdahl_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -618,6 +643,7 @@ return function ()
 	define_rule({
 		response = "nde_dwarf_external_wyr_migdahl_c",
 		name = "nde_dwarf_external_wyr_migdahl_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -642,6 +668,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_bomb_cart",
 		name = "nik_dwarf_external_bomb_cart",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -666,6 +693,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_bomb_cart_blocked",
 		name = "nik_dwarf_external_bomb_cart_blocked",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -690,6 +718,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_cart_door",
 		name = "nik_dwarf_external_cart_door",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -714,6 +743,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_elevator_briefing_d",
 		name = "nik_dwarf_external_elevator_briefing_d",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -738,6 +768,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_event_almost",
 		name = "nik_dwarf_external_event_almost",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -762,6 +793,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_event_good_start",
 		name = "nik_dwarf_external_event_good_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -786,6 +818,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_event_reminder_a",
 		name = "nik_dwarf_external_event_reminder_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -810,6 +843,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_frozen_river",
 		name = "nik_dwarf_external_frozen_river",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -834,6 +868,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_get_out",
 		name = "nik_dwarf_external_get_out",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -858,6 +893,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_ghost_town_b",
 		name = "nik_dwarf_external_ghost_town_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -882,6 +918,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_mid_conversation_no_bardin_a",
 		name = "nik_dwarf_external_mid_conversation_no_bardin_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -906,6 +943,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_mid_conversation_no_bardin_c",
 		name = "nik_dwarf_external_mid_conversation_no_bardin_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -928,6 +966,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_dwarf_external_start_banter_a",
 		response = "nik_dwarf_external_start_banter_a",
 		criterias = {
@@ -962,6 +1001,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_start_banter_b",
 		name = "nik_dwarf_external_start_banter_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -986,6 +1026,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_start_banter_c",
 		name = "nik_dwarf_external_start_banter_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1010,6 +1051,7 @@ return function ()
 	define_rule({
 		response = "nik_dwarf_external_which_way_b",
 		name = "nik_dwarf_external_which_way_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "pwe_overcharge_explode",
 		name = "pwe_overcharge_explode",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -24,6 +25,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_overcharge_warning",
 		response = "pwe_overcharge_warning",
 		criterias = {
@@ -64,6 +66,7 @@ return function ()
 	define_rule({
 		response = "pwe_st_activate_ability",
 		name = "pwe_st_activate_ability",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -88,6 +91,12 @@ return function ()
 				"player_career",
 				OP.EQ,
 				"we_thornsister"
+			},
+			{
+				"faction_memory",
+				"ability_vo_disabled",
+				OP.NEQ,
+				1
 			}
 		}
 	})

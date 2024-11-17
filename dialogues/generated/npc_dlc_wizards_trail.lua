@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_trail_join_hands_portal_a",
 		response = "nfl_wizard_trail_join_hands_portal_a",
 		criterias = {
@@ -34,6 +35,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_trail_join_hands_portal_b",
 		name = "nfl_wizard_trail_join_hands_portal_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -50,6 +52,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_trail_make_for_tower",
 		response = "nfl_wizard_trail_make_for_tower",
 		criterias = {
@@ -82,6 +85,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_trail_muffled_complaint",
 		response = "nfl_wizard_trail_muffled_complaint",
 		criterias = {
@@ -120,6 +124,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_trail_olesya_revealed_a",
 		response = "nfl_wizard_trail_olesya_revealed_a",
 		criterias = {
@@ -152,6 +157,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_trail_ritual_plan_a",
 		response = "nfl_wizard_trail_ritual_plan_a",
 		criterias = {
@@ -186,6 +192,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_trail_ritual_plan_b",
 		name = "nfl_wizard_trail_ritual_plan_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -204,6 +211,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_trail_ritual_plan_c",
 		name = "nfl_wizard_trail_ritual_plan_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -222,6 +230,7 @@ return function ()
 	define_rule({
 		response = "nfl_wizard_trail_ritual_plan_d",
 		name = "nfl_wizard_trail_ritual_plan_d",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -238,6 +247,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_broken_mechanism",
 		response = "nik_wizard_trail_broken_mechanism",
 		criterias = {
@@ -270,6 +280,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_caravan_a",
 		response = "nik_wizard_trail_caravan_a",
 		criterias = {
@@ -302,6 +313,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_crate_drop_a",
 		response = "nik_wizard_trail_crate_drop_a",
 		criterias = {
@@ -334,6 +346,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_dead_end",
 		response = "nik_wizard_trail_dead_end",
 		criterias = {
@@ -366,6 +379,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_find_cogs",
 		response = "nik_wizard_trail_find_cogs",
 		criterias = {
@@ -398,6 +412,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_fixed_mechanism",
 		response = "nik_wizard_trail_fixed_mechanism",
 		criterias = {
@@ -430,6 +445,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_frozen_skaven",
 		response = "nik_wizard_trail_frozen_skaven",
 		criterias = {
@@ -462,6 +478,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_idle",
 		response = "nik_wizard_trail_idle",
 		criterias = {
@@ -494,6 +511,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_ignorance",
 		response = "nik_wizard_trail_ignorance",
 		criterias = {
@@ -526,6 +544,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_intro_a",
 		response = "nik_wizard_trail_intro_a",
 		criterias = {
@@ -558,6 +577,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_light_beacons",
 		response = "nik_wizard_trail_light_beacons",
 		criterias = {
@@ -590,6 +610,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_lower_bridge_a",
 		response = "nik_wizard_trail_lower_bridge_a",
 		criterias = {
@@ -622,6 +643,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_new_torch",
 		response = "nik_wizard_trail_new_torch",
 		criterias = {
@@ -654,6 +676,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_sleigh_lost",
 		response = "nik_wizard_trail_sleigh_lost",
 		criterias = {
@@ -686,6 +709,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_trail_winch",
 		response = "nik_wizard_trail_winch",
 		criterias = {
@@ -718,6 +742,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nsf_wizard_trail_intruders_a",
 		response = "nsf_wizard_trail_intruders_a",
 		criterias = {

@@ -1389,23 +1389,6 @@ ItemMasterList.skin_bw_unchained_black_and_gold = {
 	}
 }
 ItemMasterList.skin_bw_unchained_bronze = {
-	description = "description_skin_bw_unchained_bronze",
-	temporary_template = "skin_bw_unchained_bronze",
-	display_name = "skin_bw_unchained_bronze",
-	name = "skin_bw_unchained_bronze",
-	inventory_icon = "icon_skin_unchained_bronze",
-	slot_type = "skin",
-	information_text = "information_text_character_skin",
-	hud_icon = "unit_frame_portrait_bright_wizard",
-	rarity = "rare",
-	skin_type = "unit",
-	item_preview_environment = "unchained_skins_01",
-	item_type = "skin",
-	can_wield = {
-		"bw_unchained"
-	}
-}
-ItemMasterList.skin_bw_unchained_bronze = {
 	description = "description_skin_bw_unchained_redemption",
 	temporary_template = "skin_bw_unchained_bronze",
 	display_name = "skin_bw_unchained_redemption",
@@ -12225,6 +12208,26 @@ ItemMasterList.deed_4040 = {
 	}
 }
 ItemMasterList.level_chest = {
+	description = "level_chest_greater_description",
+	rarity = "plentiful",
+	display_name = "display_name_loot_level_chest_greater",
+	rarity_key = "level_up",
+	inventory_icon = "icon_loot_chest_level_up_2",
+	slot_type = "loot_chest",
+	power_level_key = "category_24",
+	temporary_template = "",
+	content_key = "level_chest",
+	can_stack = true,
+	display_unit = "chest_1",
+	item_type = "loot_chest",
+	chest_sort_order = 0,
+	chest_tier = 1,
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"level_up"
+	}
+}
+ItemMasterList.level_chest_lesser = {
 	description = "level_chest_description_01",
 	rarity = "plentiful",
 	display_name = "display_name_loot_level_chest_01",
@@ -12233,14 +12236,16 @@ ItemMasterList.level_chest = {
 	slot_type = "loot_chest",
 	power_level_key = "category_24",
 	temporary_template = "",
-	content_key = "level_chest",
+	content_key = "level_chest_lesser",
 	can_stack = true,
 	display_unit = "chest_1",
 	item_type = "loot_chest",
-	chest_category = "level_up",
 	chest_sort_order = 0,
 	chest_tier = 1,
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"level_chest_lesser"
+	}
 }
 ItemMasterList.level_chest_02 = {
 	description = "level_chest_description_01",
@@ -12255,29 +12260,32 @@ ItemMasterList.level_chest_02 = {
 	can_stack = true,
 	display_unit = "chest_1",
 	item_type = "loot_chest",
-	chest_category = "level_up",
 	chest_sort_order = 0,
 	chest_tier = 1,
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"level_up"
+	}
 }
 ItemMasterList.bogenhafen_chest = {
-	item_type = "loot_chest",
-	content_key = "bogenhafen_chest",
+	description = "bogenhafen_chest_description",
+	rarity = "plentiful",
 	display_name = "display_name_bogenhafen_chest",
 	rarity_key = "level_up",
-	power_level_key = "category_24",
-	slot_type = "loot_chest",
-	rarity = "plentiful",
-	chest_category = "bogenhafen",
-	can_stack = true,
-	chest_tier = 1,
-	description = "bogenhafen_chest_description",
-	temporary_template = "",
-	chest_sort_order = 0,
 	inventory_icon = "icon_loot_chest_bgh",
+	slot_type = "loot_chest",
+	temporary_template = "",
+	chest_tier = 1,
+	content_key = "bogenhafen_chest",
+	can_stack = true,
 	display_unit = "chest_1",
+	item_type = "loot_chest",
+	chest_sort_order = 0,
 	info_text_box_text_id = "loot_opening_screen_non_specific_description",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"bogenhafen"
+	}
 }
 ItemMasterList.deed_chest = {
 	description = "deed_chest_description_02",
@@ -12292,580 +12300,648 @@ ItemMasterList.deed_chest = {
 	can_stack = true,
 	display_unit = "chest_1",
 	item_type = "loot_chest",
-	chest_category = "level_up",
 	chest_sort_order = 1,
 	chest_tier = 1,
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"level_up"
+	}
 }
 ItemMasterList.loot_chest_01_01 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_1",
+	power_level_key = "category_1",
 	display_name = "display_name_loot_chest_normal_01",
 	rarity_key = "tier_1",
-	power_level_key = "category_1",
+	inventory_icon = "icon_loot_chest_d1_t1",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "normal_deeds",
-	chest_category = "normal",
+	content_key = "standard_loot_chest_1",
 	can_stack = true,
 	chest_tier = 1,
 	description = "description_loot_chest_normal_01",
 	temporary_template = "",
 	chest_sort_order = 1,
-	inventory_icon = "icon_loot_chest_d1_t1",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"normal"
+	}
 }
 ItemMasterList.loot_chest_01_02 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_1",
+	power_level_key = "category_2",
 	display_name = "display_name_loot_chest_normal_02",
 	rarity_key = "tier_2",
-	power_level_key = "category_2",
+	inventory_icon = "icon_loot_chest_d1_t2",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "normal_deeds",
-	chest_category = "normal",
+	content_key = "standard_loot_chest_1",
 	can_stack = true,
 	chest_tier = 2,
 	description = "description_loot_chest_normal_02",
 	temporary_template = "",
 	chest_sort_order = 1,
-	inventory_icon = "icon_loot_chest_d1_t2",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"normal"
+	}
 }
 ItemMasterList.loot_chest_01_03 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_1",
+	power_level_key = "category_3",
 	display_name = "display_name_loot_chest_normal_03",
 	rarity_key = "tier_3",
-	power_level_key = "category_3",
+	inventory_icon = "icon_loot_chest_d1_t3",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "normal_deeds",
-	chest_category = "normal",
+	content_key = "standard_loot_chest_1",
 	can_stack = true,
 	chest_tier = 3,
 	description = "description_loot_chest_normal_03",
 	temporary_template = "",
 	chest_sort_order = 1,
-	inventory_icon = "icon_loot_chest_d1_t3",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"normal"
+	}
 }
 ItemMasterList.loot_chest_01_04 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_1",
+	power_level_key = "category_4",
 	display_name = "display_name_loot_chest_normal_04",
 	rarity_key = "tier_4",
-	power_level_key = "category_4",
+	inventory_icon = "icon_loot_chest_d1_t4",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "normal_deeds",
-	chest_category = "normal",
+	content_key = "standard_loot_chest_1",
 	can_stack = true,
 	chest_tier = 4,
 	description = "description_loot_chest_normal_04",
 	temporary_template = "",
 	chest_sort_order = 1,
-	inventory_icon = "icon_loot_chest_d1_t4",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"normal"
+	}
 }
 ItemMasterList.loot_chest_01_05 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_1",
+	power_level_key = "category_5",
 	display_name = "display_name_loot_chest_normal_05",
 	rarity_key = "tier_5",
-	power_level_key = "category_5",
+	inventory_icon = "icon_loot_chest_d1_t5",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "normal_deeds",
-	chest_category = "normal",
+	content_key = "standard_loot_chest_1",
 	can_stack = true,
 	chest_tier = 5,
 	description = "description_loot_chest_normal_05",
 	temporary_template = "",
 	chest_sort_order = 1,
-	inventory_icon = "icon_loot_chest_d1_t5",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"normal"
+	}
 }
 ItemMasterList.loot_chest_01_06 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_1",
+	power_level_key = "category_6",
 	display_name = "display_name_loot_chest_normal_06",
 	rarity_key = "tier_6",
-	power_level_key = "category_6",
+	inventory_icon = "icon_loot_chest_d1_t6",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "normal_deeds",
-	chest_category = "normal",
+	content_key = "standard_loot_chest_1",
 	can_stack = true,
 	chest_tier = 6,
 	description = "description_loot_chest_normal_06",
 	temporary_template = "",
 	chest_sort_order = 1,
-	inventory_icon = "icon_loot_chest_d1_t6",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"normal"
+	}
 }
 ItemMasterList.loot_chest_02_01 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_2",
+	power_level_key = "category_7",
 	display_name = "display_name_loot_chest_hard_01",
 	rarity_key = "tier_1",
-	power_level_key = "category_7",
+	inventory_icon = "icon_loot_chest_d2_t1",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "hard_deeds",
-	chest_category = "hard",
+	content_key = "standard_loot_chest_2",
 	can_stack = true,
 	chest_tier = 1,
 	description = "description_loot_chest_hard_01",
 	temporary_template = "",
 	chest_sort_order = 2,
-	inventory_icon = "icon_loot_chest_d2_t1",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hard"
+	}
 }
 ItemMasterList.loot_chest_02_02 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_2",
+	power_level_key = "category_8",
 	display_name = "display_name_loot_chest_hard_02",
 	rarity_key = "tier_2",
-	power_level_key = "category_8",
+	inventory_icon = "icon_loot_chest_d2_t2",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "hard_deeds",
-	chest_category = "hard",
+	content_key = "standard_loot_chest_2",
 	can_stack = true,
 	chest_tier = 2,
 	description = "description_loot_chest_hard_02",
 	temporary_template = "",
 	chest_sort_order = 2,
-	inventory_icon = "icon_loot_chest_d2_t2",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hard"
+	}
 }
 ItemMasterList.loot_chest_02_03 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_2",
+	power_level_key = "category_9",
 	display_name = "display_name_loot_chest_hard_03",
 	rarity_key = "tier_3",
-	power_level_key = "category_9",
+	inventory_icon = "icon_loot_chest_d2_t3",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "hard_deeds",
-	chest_category = "hard",
+	content_key = "standard_loot_chest_2",
 	can_stack = true,
 	chest_tier = 3,
 	description = "description_loot_chest_hard_03",
 	temporary_template = "",
 	chest_sort_order = 2,
-	inventory_icon = "icon_loot_chest_d2_t3",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hard"
+	}
 }
 ItemMasterList.loot_chest_02_04 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_2",
+	power_level_key = "category_10",
 	display_name = "display_name_loot_chest_hard_04",
 	rarity_key = "tier_4",
-	power_level_key = "category_10",
+	inventory_icon = "icon_loot_chest_d2_t4",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "hard_deeds",
-	chest_category = "hard",
+	content_key = "standard_loot_chest_2",
 	can_stack = true,
 	chest_tier = 4,
 	description = "description_loot_chest_hard_04",
 	temporary_template = "",
 	chest_sort_order = 2,
-	inventory_icon = "icon_loot_chest_d2_t4",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hard"
+	}
 }
 ItemMasterList.loot_chest_02_05 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_2",
+	power_level_key = "category_11",
 	display_name = "display_name_loot_chest_hard_05",
 	rarity_key = "tier_5",
-	power_level_key = "category_11",
+	inventory_icon = "icon_loot_chest_d2_t5",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "hard_deeds",
-	chest_category = "hard",
+	content_key = "standard_loot_chest_2",
 	can_stack = true,
 	chest_tier = 5,
 	description = "description_loot_chest_hard_05",
 	temporary_template = "",
 	chest_sort_order = 2,
-	inventory_icon = "icon_loot_chest_d2_t5",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hard"
+	}
 }
 ItemMasterList.loot_chest_02_06 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_2",
+	power_level_key = "category_12",
 	display_name = "display_name_loot_chest_hard_06",
 	rarity_key = "tier_6",
-	power_level_key = "category_12",
+	inventory_icon = "icon_loot_chest_d2_t6",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "hard_deeds",
-	chest_category = "hard",
+	content_key = "standard_loot_chest_2",
 	can_stack = true,
 	chest_tier = 6,
 	description = "description_loot_chest_hard_06",
 	temporary_template = "",
 	chest_sort_order = 2,
-	inventory_icon = "icon_loot_chest_d2_t6",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hard"
+	}
 }
 ItemMasterList.loot_chest_03_01 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_3",
+	power_level_key = "category_13",
 	display_name = "display_name_loot_chest_nightmare_01",
 	rarity_key = "tier_1",
-	power_level_key = "category_13",
+	inventory_icon = "icon_loot_chest_d3_t1",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "nightmare_deeds",
-	chest_category = "harder",
+	content_key = "standard_loot_chest_3",
 	can_stack = true,
 	chest_tier = 1,
 	description = "description_loot_chest_nightmare_01",
 	temporary_template = "",
 	chest_sort_order = 3,
-	inventory_icon = "icon_loot_chest_d3_t1",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"harder"
+	}
 }
 ItemMasterList.loot_chest_03_02 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_3",
+	power_level_key = "category_14",
 	display_name = "display_name_loot_chest_nightmare_02",
 	rarity_key = "tier_2",
-	power_level_key = "category_14",
+	inventory_icon = "icon_loot_chest_d3_t2",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "nightmare_deeds",
-	chest_category = "harder",
+	content_key = "standard_loot_chest_3",
 	can_stack = true,
 	chest_tier = 2,
 	description = "description_loot_chest_nightmare_02",
 	temporary_template = "",
 	chest_sort_order = 3,
-	inventory_icon = "icon_loot_chest_d3_t2",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"harder"
+	}
 }
 ItemMasterList.loot_chest_03_03 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_3",
+	power_level_key = "category_15",
 	display_name = "display_name_loot_chest_nightmare_03",
 	rarity_key = "tier_3",
-	power_level_key = "category_15",
+	inventory_icon = "icon_loot_chest_d3_t3",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "nightmare_deeds",
-	chest_category = "harder",
+	content_key = "standard_loot_chest_3",
 	can_stack = true,
 	chest_tier = 3,
 	description = "description_loot_chest_nightmare_03",
 	temporary_template = "",
 	chest_sort_order = 3,
-	inventory_icon = "icon_loot_chest_d3_t3",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"harder"
+	}
 }
 ItemMasterList.loot_chest_03_04 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_3",
+	power_level_key = "category_16",
 	display_name = "display_name_loot_chest_nightmare_04",
 	rarity_key = "tier_4",
-	power_level_key = "category_16",
+	inventory_icon = "icon_loot_chest_d3_t4",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "nightmare_deeds",
-	chest_category = "harder",
+	content_key = "standard_loot_chest_3",
 	can_stack = true,
 	chest_tier = 4,
 	description = "description_loot_chest_nightmare_04",
 	temporary_template = "",
 	chest_sort_order = 3,
-	inventory_icon = "icon_loot_chest_d3_t4",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"harder"
+	}
 }
 ItemMasterList.loot_chest_03_05 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_3",
+	power_level_key = "category_17",
 	display_name = "display_name_loot_chest_nightmare_05",
 	rarity_key = "tier_5_nightmare",
-	power_level_key = "category_17",
+	inventory_icon = "icon_loot_chest_d3_t5",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "nightmare_deeds",
-	chest_category = "harder",
+	content_key = "standard_loot_chest_3",
 	can_stack = true,
 	chest_tier = 5,
 	description = "description_loot_chest_nightmare_05",
 	temporary_template = "",
 	chest_sort_order = 3,
-	inventory_icon = "icon_loot_chest_d3_t5",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"harder"
+	}
 }
 ItemMasterList.loot_chest_03_06 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_3",
+	power_level_key = "category_18",
 	display_name = "display_name_loot_chest_nightmare_06",
 	rarity_key = "tier_6_nightmare",
-	power_level_key = "category_18",
+	inventory_icon = "icon_loot_chest_d3_t6",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "nightmare_deeds",
-	chest_category = "harder",
+	content_key = "standard_loot_chest_3",
 	can_stack = true,
 	chest_tier = 6,
 	description = "description_loot_chest_nightmare_06",
 	temporary_template = "",
 	chest_sort_order = 3,
-	inventory_icon = "icon_loot_chest_d3_t6",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"harder"
+	}
 }
 ItemMasterList.loot_chest_04_01 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_4",
+	power_level_key = "category_19",
 	display_name = "display_name_loot_chest_cataclysm_01",
 	rarity_key = "tier_1_cata",
-	power_level_key = "category_19",
+	inventory_icon = "icon_loot_chest_d4_t1",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "hardest",
+	content_key = "standard_loot_chest_4",
 	can_stack = true,
 	chest_tier = 1,
 	description = "description_loot_chest_cataclysm_01",
 	temporary_template = "",
 	chest_sort_order = 4,
-	inventory_icon = "icon_loot_chest_d4_t1",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hardest",
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_04_02 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_4",
+	power_level_key = "category_20",
 	display_name = "display_name_loot_chest_cataclysm_02",
 	rarity_key = "tier_2_cata",
-	power_level_key = "category_20",
+	inventory_icon = "icon_loot_chest_d4_t2",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "hardest",
+	content_key = "standard_loot_chest_4",
 	can_stack = true,
 	chest_tier = 2,
 	description = "description_loot_chest_cataclysm_02",
 	temporary_template = "",
 	chest_sort_order = 4,
-	inventory_icon = "icon_loot_chest_d4_t2",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hardest",
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_04_03 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_4",
+	power_level_key = "category_21",
 	display_name = "display_name_loot_chest_cataclysm_03",
 	rarity_key = "tier_3_cata",
-	power_level_key = "category_21",
+	inventory_icon = "icon_loot_chest_d4_t3",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "hardest",
+	content_key = "standard_loot_chest_4",
 	can_stack = true,
 	chest_tier = 3,
 	description = "description_loot_chest_cataclysm_03",
 	temporary_template = "",
 	chest_sort_order = 4,
-	inventory_icon = "icon_loot_chest_d4_t3",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hardest",
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_04_04 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_4",
+	power_level_key = "category_22",
 	display_name = "display_name_loot_chest_cataclysm_04",
 	rarity_key = "tier_4_cata",
-	power_level_key = "category_22",
+	inventory_icon = "icon_loot_chest_d4_t4",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "hardest",
+	content_key = "standard_loot_chest_4",
 	can_stack = true,
 	chest_tier = 4,
 	description = "description_loot_chest_cataclysm_04",
 	temporary_template = "",
 	chest_sort_order = 4,
-	inventory_icon = "icon_loot_chest_d4_t4",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hardest",
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_04_05 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_4",
+	power_level_key = "category_23",
 	display_name = "display_name_loot_chest_cataclysm_05",
 	rarity_key = "tier_5_cata",
-	power_level_key = "category_23",
+	inventory_icon = "icon_loot_chest_d4_t5",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "hardest",
+	content_key = "standard_loot_chest_4",
 	can_stack = true,
 	chest_tier = 5,
 	description = "description_loot_chest_cataclysm_05",
 	temporary_template = "",
 	chest_sort_order = 4,
-	inventory_icon = "icon_loot_chest_d4_t5",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hardest",
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_04_06 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_4",
+	power_level_key = "category_24",
 	display_name = "display_name_loot_chest_cataclysm_06",
 	rarity_key = "tier_6_cata",
-	power_level_key = "category_24",
+	inventory_icon = "icon_loot_chest_d4_t6",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "hardest",
+	content_key = "standard_loot_chest_4",
 	can_stack = true,
 	chest_tier = 6,
 	description = "description_loot_chest_cataclysm_06",
 	temporary_template = "",
 	chest_sort_order = 4,
-	inventory_icon = "icon_loot_chest_d4_t6",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"hardest",
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_05_01 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_5",
+	power_level_key = "category_19",
 	display_name = "display_name_loot_chest_extended_difficulty_01_01",
 	rarity_key = "tier_1_cata",
-	power_level_key = "category_19",
+	inventory_icon = "icon_loot_chest_d4_t1",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "cataclysm",
+	content_key = "standard_loot_chest_5",
 	can_stack = true,
 	chest_tier = 1,
 	description = "description_loot_chest_extended_difficulty_01_01",
 	temporary_template = "",
 	chest_sort_order = 5,
-	inventory_icon = "icon_loot_chest_d4_t1",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_05_02 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_5",
+	power_level_key = "category_20",
 	display_name = "display_name_loot_chest_extended_difficulty_01_02",
 	rarity_key = "tier_2_cata",
-	power_level_key = "category_20",
+	inventory_icon = "icon_loot_chest_d4_t2",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "cataclysm",
+	content_key = "standard_loot_chest_5",
 	can_stack = true,
 	chest_tier = 2,
 	description = "description_loot_chest_extended_difficulty_01_02",
 	temporary_template = "",
 	chest_sort_order = 5,
-	inventory_icon = "icon_loot_chest_d4_t2",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_05_03 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_5",
+	power_level_key = "category_21",
 	display_name = "display_name_loot_chest_extended_difficulty_01_03",
 	rarity_key = "tier_3_cata",
-	power_level_key = "category_21",
+	inventory_icon = "icon_loot_chest_d4_t3",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "cataclysm",
+	content_key = "standard_loot_chest_5",
 	can_stack = true,
 	chest_tier = 3,
 	description = "description_loot_chest_extended_difficulty_01_03",
 	temporary_template = "",
 	chest_sort_order = 5,
-	inventory_icon = "icon_loot_chest_d4_t3",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_05_04 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_5",
+	power_level_key = "category_22",
 	display_name = "display_name_loot_chest_extended_difficulty_01_04",
 	rarity_key = "tier_4_cata",
-	power_level_key = "category_22",
+	inventory_icon = "icon_loot_chest_d4_t4",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "cataclysm",
+	content_key = "standard_loot_chest_5",
 	can_stack = true,
 	chest_tier = 4,
 	description = "description_loot_chest_extended_difficulty_01_04",
 	temporary_template = "",
 	chest_sort_order = 5,
-	inventory_icon = "icon_loot_chest_d4_t4",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_05_05 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_5",
+	power_level_key = "category_23",
 	display_name = "display_name_loot_chest_extended_difficulty_01_05",
 	rarity_key = "tier_5_cata",
-	power_level_key = "category_23",
+	inventory_icon = "icon_loot_chest_d4_t5",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "cataclysm",
+	content_key = "standard_loot_chest_5",
 	can_stack = true,
 	chest_tier = 5,
 	description = "description_loot_chest_extended_difficulty_01_05",
 	temporary_template = "",
 	chest_sort_order = 5,
-	inventory_icon = "icon_loot_chest_d4_t5",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"cataclysm"
+	}
 }
 ItemMasterList.loot_chest_05_06 = {
 	item_type = "loot_chest",
-	content_key = "standard_loot_chest_5",
+	power_level_key = "category_24",
 	display_name = "display_name_loot_chest_extended_difficulty_01_06",
 	rarity_key = "tier_6_cata",
-	power_level_key = "category_24",
+	inventory_icon = "icon_loot_chest_d4_t6",
 	slot_type = "loot_chest",
 	rarity = "plentiful",
 	deed_key = "cataclysm_deeds",
-	chest_category = "cataclysm",
+	content_key = "standard_loot_chest_5",
 	can_stack = true,
 	chest_tier = 6,
 	description = "description_loot_chest_extended_difficulty_01_06",
 	temporary_template = "",
 	chest_sort_order = 5,
-	inventory_icon = "icon_loot_chest_d4_t6",
 	display_unit = "chest_1",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	chest_categories = {
+		"cataclysm"
+	}
 }
 ItemMasterList.wh_1h_axe_skin = {
 	base_skin_item = true,

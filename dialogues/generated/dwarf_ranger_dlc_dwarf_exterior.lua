@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_beacons_bridge_stuck_b",
 		response = "pdr_dwarf_beacons_bridge_stuck_b",
 		criterias = {
@@ -50,6 +51,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_begin_end_event_b",
 		response = "pdr_dwarf_external_begin_end_event_b",
 		criterias = {
@@ -99,6 +101,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_cliff",
 		response = "pdr_dwarf_external_cliff",
 		criterias = {
@@ -149,6 +152,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_elevator_briefing_a",
 		response = "pdr_dwarf_external_elevator_briefing_a",
 		criterias = {
@@ -193,6 +197,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_elevator_briefing_c",
 		response = "pdr_dwarf_external_elevator_briefing_c",
 		criterias = {
@@ -242,6 +247,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_end_event_complete_01_b",
 		response = "pdr_dwarf_external_end_event_complete_01_b",
 		criterias = {
@@ -291,6 +297,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_end_event_complete_02_b",
 		response = "pdr_dwarf_external_end_event_complete_02_b",
 		criterias = {
@@ -340,6 +347,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_end_event_complete_03_b",
 		response = "pdr_dwarf_external_end_event_complete_03_b",
 		criterias = {
@@ -389,6 +397,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_end_event_fuse_lit",
 		response = "pdr_dwarf_external_end_event_fuse_lit",
 		criterias = {
@@ -433,6 +442,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_event_reminder_b",
 		response = "pdr_dwarf_external_event_reminder_b",
 		criterias = {
@@ -482,6 +492,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_ghost_town_a",
 		response = "pdr_dwarf_external_ghost_town_a",
 		criterias = {
@@ -538,6 +549,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_mid_conversation_a",
 		response = "pdr_dwarf_external_mid_conversation_a",
 		criterias = {
@@ -612,6 +624,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_mid_conversation_c",
 		response = "pdr_dwarf_external_mid_conversation_c",
 		criterias = {
@@ -662,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_mid_event_done",
 		response = "pdr_dwarf_external_mid_event_done",
 		criterias = {
@@ -706,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_mid_event_seen",
 		response = "pdr_dwarf_external_mid_event_seen",
 		criterias = {
@@ -750,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_migdahl_a",
 		response = "pdr_dwarf_external_migdahl_a",
 		criterias = {
@@ -800,6 +816,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_migdahl_c",
 		response = "pdr_dwarf_external_migdahl_c",
 		criterias = {
@@ -850,6 +867,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_natural_beauty",
 		response = "pdr_dwarf_external_natural_beauty",
 		criterias = {
@@ -905,6 +923,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_nearly_there_b",
 		response = "pdr_dwarf_external_nearly_there_b",
 		criterias = {
@@ -955,6 +974,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_occupied_mine",
 		response = "pdr_dwarf_external_occupied_mine",
 		criterias = {
@@ -1005,6 +1025,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_safety_a",
 		response = "pdr_dwarf_external_safety_a",
 		criterias = {
@@ -1073,6 +1094,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_safety_c",
 		response = "pdr_dwarf_external_safety_c",
 		criterias = {
@@ -1123,6 +1145,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_skaven_works",
 		response = "pdr_dwarf_external_skaven_works",
 		criterias = {
@@ -1173,6 +1196,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_start_banter_a",
 		response = "pdr_dwarf_external_start_banter_a",
 		criterias = {
@@ -1213,6 +1237,7 @@ return function ()
 	define_rule({
 		response = "pdr_dwarf_external_start_banter_b",
 		name = "pdr_dwarf_external_start_banter_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1243,6 +1268,7 @@ return function ()
 	define_rule({
 		response = "pdr_dwarf_external_start_banter_c",
 		name = "pdr_dwarf_external_start_banter_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1271,6 +1297,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_which_way_a",
 		response = "pdr_dwarf_external_which_way_a",
 		criterias = {
@@ -1321,6 +1348,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_which_way_c",
 		response = "pdr_dwarf_external_which_way_c",
 		criterias = {
@@ -1371,6 +1399,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_wyr_migdahl_a_dummy",
 		response = "pdr_dwarf_external_wyr_migdahl_a_dummy",
 		criterias = {
@@ -1445,6 +1474,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_dwarf_external_wyr_migdahl_b",
 		response = "pdr_dwarf_external_wyr_migdahl_b",
 		criterias = {

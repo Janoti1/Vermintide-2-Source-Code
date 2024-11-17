@@ -1189,31 +1189,6 @@ local debug_widget_definitions = {
 					text_id = "debug_num_players_text"
 				},
 				{
-					style_id = "debug_wh_text",
-					pass_type = "text",
-					text_id = "debug_wh_text"
-				},
-				{
-					style_id = "debug_we_text",
-					pass_type = "text",
-					text_id = "debug_we_text"
-				},
-				{
-					style_id = "debug_dr_text",
-					pass_type = "text",
-					text_id = "debug_dr_text"
-				},
-				{
-					style_id = "debug_bw_text",
-					pass_type = "text",
-					text_id = "debug_bw_text"
-				},
-				{
-					style_id = "debug_es_text",
-					pass_type = "text",
-					text_id = "debug_es_text"
-				},
-				{
 					style_id = "debug_rp_text",
 					pass_type = "text",
 					text_id = "debug_rp_text"
@@ -1236,25 +1211,20 @@ local debug_widget_definitions = {
 			}
 		},
 		content = {
-			debug_es_text = "",
-			debug_num_players_text = "",
-			debug_bw_text = "",
-			debug_match_text = "",
-			debug_wh_text = "",
-			debug_lobby_id_text = "",
 			debug_server_text = "",
-			debug_host_text = "",
-			debug_valid_text = "",
-			debug_level_key_text = "",
-			debug_we_text = "",
-			debug_selected_level_key_text = "",
-			debug_rp_text = "",
-			debug_text = "Lobbies",
+			debug_num_players_text = "",
 			debug_broken_text = "",
+			debug_match_text = "",
+			debug_valid_text = "",
+			debug_lobby_id_text = "",
+			debug_rp_text = "",
 			debug_difficulty_text = "",
+			debug_host_text = "",
+			debug_level_key_text = "",
 			debug_matchmaking_text = "",
 			debug_hash_text = "",
-			debug_dr_text = ""
+			debug_text = "Lobbies",
+			debug_selected_level_key_text = ""
 		},
 		style = {
 			debug_text = {
@@ -1341,51 +1311,6 @@ local debug_widget_definitions = {
 			debug_num_players_text = {
 				vertical_alignment = "top",
 				scenegraph_id = "debug_num_players_text",
-				horizontal_alignment = "left",
-				word_wrap = true,
-				font_size = 14,
-				font_type = "hell_shark",
-				text_color = Colors.get_table("white", 255)
-			},
-			debug_wh_text = {
-				vertical_alignment = "top",
-				scenegraph_id = "debug_wh_text",
-				horizontal_alignment = "left",
-				word_wrap = true,
-				font_size = 14,
-				font_type = "hell_shark",
-				text_color = Colors.get_table("white", 255)
-			},
-			debug_we_text = {
-				vertical_alignment = "top",
-				scenegraph_id = "debug_we_text",
-				horizontal_alignment = "left",
-				word_wrap = true,
-				font_size = 14,
-				font_type = "hell_shark",
-				text_color = Colors.get_table("white", 255)
-			},
-			debug_dr_text = {
-				vertical_alignment = "top",
-				scenegraph_id = "debug_dr_text",
-				horizontal_alignment = "left",
-				word_wrap = true,
-				font_size = 14,
-				font_type = "hell_shark",
-				text_color = Colors.get_table("white", 255)
-			},
-			debug_bw_text = {
-				vertical_alignment = "top",
-				scenegraph_id = "debug_bw_text",
-				horizontal_alignment = "left",
-				word_wrap = true,
-				font_size = 14,
-				font_type = "hell_shark",
-				text_color = Colors.get_table("white", 255)
-			},
-			debug_es_text = {
-				vertical_alignment = "top",
-				scenegraph_id = "debug_es_text",
 				horizontal_alignment = "left",
 				word_wrap = true,
 				font_size = 14,

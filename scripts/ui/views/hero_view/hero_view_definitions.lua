@@ -158,6 +158,24 @@ local settings_by_screen = {
 		contains_new_content = function ()
 			return false
 		end
+	},
+	{
+		name = "handbook",
+		state_name = "HeroViewStateHandbook",
+		draw_background_world = false,
+		camera_position = {
+			0,
+			0,
+			0
+		},
+		camera_rotation = {
+			0,
+			0,
+			0
+		},
+		contains_new_content = function ()
+			return false
+		end
 	}
 }
 local title_text_style = {

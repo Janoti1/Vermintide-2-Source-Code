@@ -284,7 +284,7 @@ local scenegraph_definition = {
 	}
 }
 local title_text_style = {
-	word_wrap = true,
+	word_wrap = false,
 	upper_case = false,
 	localize = false,
 	use_shadow = true,

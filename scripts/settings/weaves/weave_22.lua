@@ -15,41 +15,7 @@ return {
 			objective_start_flow_event = "weave_objective_kill_enemies_start",
 			spawning_seed = 3654632,
 			objective_settings = {
-				objective_lists = {
-					{
-						kill_enemies = {},
-						weave_target_spawner_006 = {
-							is_scored = true
-						},
-						weave_target_spawner_040 = {
-							is_scored = true
-						},
-						weave_target_spawner_010 = {
-							is_scored = true
-						},
-						weave_target_spawner_041 = {
-							is_scored = true
-						},
-						weave_target_spawner_011 = {
-							is_scored = true
-						},
-						weave_target_spawner_045 = {
-							is_scored = true
-						},
-						weave_target_spawner_020 = {
-							is_scored = true
-						},
-						weave_target_spawner_024 = {
-							is_scored = true
-						},
-						weave_target_spawner_030 = {
-							is_scored = true
-						},
-						weave_target_spawner_032 = {
-							is_scored = true
-						}
-					}
-				}
+				objective_lists = "weave_22"
 			},
 			bonus_time_on_complete = WeaveSettings.bonus_time,
 			system_seeds = {

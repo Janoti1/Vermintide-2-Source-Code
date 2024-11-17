@@ -22,7 +22,6 @@ LocomotionTemplates.AILocomotionExtensionC.update = function (data, t, dt)
 		killing_blow[DamageDataIndex.DIRECTION] = Vector3.down()
 		killing_blow[DamageDataIndex.DAMAGE_SOURCE_NAME] = "suicide"
 		killing_blow[DamageDataIndex.HIT_RAGDOLL_ACTOR_NAME] = "n/a"
-		killing_blow[DamageDataIndex.SOURCE_ATTACKER_UNIT] = nil
 		killing_blow[DamageDataIndex.HIT_REACT_TYPE] = "light"
 		killing_blow[DamageDataIndex.CRITICAL_HIT] = false
 		killing_blow[DamageDataIndex.FIRST_HIT] = true
@@ -38,6 +37,7 @@ LocomotionTemplates.AILocomotionExtensionC.update = function (data, t, dt)
 
 			killing_blow[DamageDataIndex.ATTACKER] = unit
 			killing_blow[DamageDataIndex.POSITION] = Unit.world_position(unit, 0)
+			killing_blow[DamageDataIndex.SOURCE_ATTACKER_UNIT] = unit
 
 			local buff_extenstion = ScriptUnit_has_extension(unit, "buff_system")
 

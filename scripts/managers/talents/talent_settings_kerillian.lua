@@ -379,19 +379,18 @@ TalentBuffTemplates.wood_elf = {
 		deactivation_effect = "fx/screenspace_shade_skill_02",
 		buffs = {
 			{
-				icon = "passive_bonus_kerillian_shade",
+				can_restealth_on_remove = true,
 				name = "kerillian_shade_activated_ability",
 				proc_weight = 5,
 				buff_func = "shade_activated_ability_on_hit",
 				event = "on_hit",
 				refresh_durations = true,
 				apply_buff_func = "apply_shade_activated_ability",
-				can_restealth_combo = true,
 				remove_buff_func = "on_shade_activated_ability_remove",
 				continuous_effect = "fx/screenspace_shade_skill_01",
 				max_stacks = 1,
-				can_restealth_on_remove = true,
-				stealth_identifier = "skill_shade",
+				icon = "passive_bonus_kerillian_shade",
+				can_restealth_combo = true,
 				perks = {
 					"shade_melee_boost"
 				}
@@ -402,18 +401,17 @@ TalentBuffTemplates.wood_elf = {
 		deactivation_effect = "fx/screenspace_shade_skill_02",
 		buffs = {
 			{
-				stealth_identifier = "skill_shade_restealth",
+				icon = "passive_bonus_kerillian_shade",
 				name = "kerillian_shade_activated_ability_restealth",
 				proc_weight = 5,
 				buff_func = "shade_activated_ability_on_hit",
 				event = "on_hit",
 				refresh_durations = true,
 				apply_buff_func = "apply_shade_activated_ability",
-				can_restealth_on_remove = false,
 				remove_buff_func = "on_shade_activated_ability_remove",
 				continuous_effect = "fx/screenspace_shade_skill_01",
 				max_stacks = 1,
-				icon = "passive_bonus_kerillian_shade",
+				can_restealth_on_remove = false,
 				can_restealth_combo = true,
 				duration = buff_tweak_data.kerillian_shade_activated_ability.duration,
 				perks = {
@@ -598,14 +596,13 @@ TalentBuffTemplates.wood_elf = {
 		deactivation_effect = "fx/screenspace_shade_skill_02",
 		buffs = {
 			{
-				stealth_identifier = "skill_shade_short",
+				remove_buff_func = "on_shade_activated_ability_remove",
 				name = "kerillian_shade_activated_ability_short",
 				proc_weight = 5,
 				buff_func = "shade_short_stealth_on_hit",
 				event = "on_hit",
 				refresh_durations = true,
 				apply_buff_func = "apply_shade_activated_ability",
-				remove_buff_func = "on_shade_activated_ability_remove",
 				continuous_effect = "fx/screenspace_shade_skill_01",
 				max_stacks = 1,
 				icon = "kerillian_shade_passive_stealth_on_backstab_kill",
@@ -678,7 +675,6 @@ TalentBuffTemplates.wood_elf = {
 				refresh_durations = true,
 				apply_buff_func = "apply_shade_activated_ability",
 				remove_buff_func = "on_shade_activated_ability_remove",
-				stealth_identifier = "skill_shade_short",
 				continuous_effect = "fx/screenspace_shade_skill_01",
 				max_stacks = 1,
 				icon = "kerillian_shade_activated_ability_quick_cooldown",
@@ -729,13 +725,12 @@ TalentBuffTemplates.wood_elf = {
 				event = "on_hit",
 				refresh_durations = true,
 				apply_buff_func = "apply_shade_activated_ability",
-				can_restealth_combo = true,
 				icon = "passive_bonus_kerillian_shade",
 				duration = 5,
 				continuous_effect = "fx/screenspace_shade_skill_01",
 				max_stacks = 1,
 				can_restealth_on_remove = true,
-				stealth_identifier = "skill_shade"
+				can_restealth_combo = true
 			}
 		}
 	},
@@ -860,8 +855,19 @@ TalentBuffTemplates.wood_elf = {
 	kerillian_maidenguard_activated_ability = {
 		buffs = {
 			{
+				max_stacks = 1,
+				remove_buff_func = "end_maidenguard_activated_ability",
 				apply_buff_func = "start_maidenguard_activated_ability",
-				remove_buff_func = "end_maidenguard_activated_ability"
+				refresh_durations = true
+			}
+		}
+	},
+	kerillian_maidenguard_activated_ability_invis_duration = {
+		buffs = {
+			{
+				icon = "kerillian_maidenguard_activated_ability_invis_duration",
+				remove_buff_func = "end_maidenguard_ability_stealth",
+				apply_buff_func = "start_maidenguard_ability_stealth"
 			}
 		}
 	},
@@ -1139,17 +1145,6 @@ TalentBuffTemplates.wood_elf = {
 		buffs = {
 			{
 				stat_buff = "block_cost"
-			}
-		}
-	},
-	kerillian_maidenguard_activated_ability_invis_duration = {
-		buffs = {
-			{
-				refresh_durations = true,
-				name = "kerillian_maidenguard_activated_ability",
-				icon = "kerillian_maidenguard_activated_ability_invis_duration",
-				max_stacks = 1,
-				remove_buff_func = "end_maidenguard_activated_ability"
 			}
 		}
 	},
@@ -1499,14 +1494,20 @@ TalentTrees.wood_elf = {
 }
 Talents.wood_elf = {
 	{
-		description = "regrowth_desc_3",
+		description = "regrowth_desc_4",
 		name = "kerillian_shade_regrowth_2",
 		buffer = "both",
 		num_ranks = 1,
 		icon = "kerillian_shade_regrowth",
 		description_values = {
 			{
-				value = BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus / 4)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus * 2)
 			}
 		},
 		buffs = {
@@ -2106,14 +2107,20 @@ Talents.wood_elf = {
 		}
 	},
 	{
-		description = "regrowth_desc_3",
+		description = "regrowth_desc_4",
 		name = "kerillian_waywatcher_regrowth_2",
 		buffer = "both",
 		num_ranks = 1,
 		icon = "kerillian_waywatcher_regrowth",
 		description_values = {
 			{
-				value = BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus / 4)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus)
+			},
+			{
+				value = tostring(BuffUtils.get_buff_template("regrowth", "adventure").buffs[1].bonus * 2)
 			}
 		},
 		buffs = {

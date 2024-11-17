@@ -1,3 +1,14 @@
+local wield_with_cancel = table.clone(ActionTemplates.wield)
+local wield_default = wield_with_cancel.default
+local anims = type(wield_default.pre_action_anim_event) == "table" and table.clone(wield_default.pre_action_anim_event) or {
+	wield_default.pre_action_anim_event
+}
+
+table.insert(anims, 1, "questing_knight_ability_cancel_01")
+table.insert(anims, 2, "ability_finished")
+
+wield_default.pre_action_anim_event = anims
+
 local weapon_template = {}
 
 weapon_template.actions = {
@@ -55,6 +66,12 @@ weapon_template.actions = {
 					start_time = 0.35,
 					action = "action_career_release",
 					input = "action_career_not_hold"
+				},
+				{
+					sub_action = "default",
+					start_time = 0,
+					action = "action_wield",
+					input = "action_wield"
 				}
 			}
 		},
@@ -91,6 +108,12 @@ weapon_template.actions = {
 					start_time = 0.5,
 					action = "action_career_release",
 					input = "action_career_not_hold"
+				},
+				{
+					sub_action = "default",
+					start_time = 0,
+					action = "action_wield",
+					input = "action_wield"
 				}
 			}
 		},
@@ -127,6 +150,12 @@ weapon_template.actions = {
 					start_time = 0.35,
 					action = "action_career_release",
 					input = "action_career_not_hold"
+				},
+				{
+					sub_action = "default",
+					start_time = 0,
+					action = "action_wield",
+					input = "action_wield"
 				}
 			}
 		}
@@ -332,6 +361,12 @@ weapon_template.actions = {
 					start_time = 0.75,
 					action = "action_career_release",
 					input = "action_career_not_hold"
+				},
+				{
+					sub_action = "default",
+					start_time = 0,
+					action = "action_wield",
+					input = "action_wield"
 				},
 				{
 					sub_action = "smiter_combo_2",
@@ -559,14 +594,15 @@ weapon_template.actions = {
 			first_person_hit_anim = "shake_hit",
 			anim_time_scale = 1,
 			no_damage_impact_sound_event = "slashing_hit_armour",
-			additional_critical_strike_chance = 1,
+			unlimited_cleave = true,
 			ignore_armour_hit = true,
 			damage_profile = "questing_knight_career_sword_tank",
 			hit_effect = "melee_hit_sword_2h",
+			additional_critical_strike_chance = 1,
 			damage_window_end = 0.25,
 			impact_sound_event = "slashing_hit",
-			slide_armour_hit = true,
 			anim_end_event = "ability_finished",
+			slide_armour_hit = true,
 			on_hit_hud_sound_event = "Play_career_bretonnian_knight_ability_swing_hit",
 			dedicated_target_range = 2.5,
 			uninterruptible = true,
@@ -693,7 +729,7 @@ weapon_template.actions = {
 		}
 	},
 	action_inspect = ActionTemplates.action_inspect,
-	action_wield = ActionTemplates.wield
+	action_wield = wield_with_cancel
 }
 weapon_template.attack_meta_data = {
 	ignore_allies_for_obstruction = true,

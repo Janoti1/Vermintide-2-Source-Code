@@ -34,52 +34,6 @@ local terror_event_blueprints = {
 			enable = true
 		}
 	},
-	bell_pvp_capzone_event_reinforcements_start = {
-		{
-			"set_master_event_running",
-			name = "bell_pvp_capzone_event_reinforcements_start"
-		},
-		{
-			"set_freeze_condition",
-			max_active_enemies = 100
-		},
-		{
-			"event_horde",
-			limit_spawners = 4,
-			spawner_id = "bell_pvp_capzone_start",
-			composition_type = "event_medium"
-		},
-		{
-			"play_stinger",
-			stinger_name = "enemy_horde_stinger"
-		},
-		{
-			"delay",
-			duration = 10
-		},
-		{
-			"flow_event",
-			flow_event_name = "bell_pvp_capzone_event_reinforcements_start_done"
-		}
-	},
-	bell_pvp_capzone_reinforcements = {
-		{
-			"set_master_event_running",
-			name = "bell_pvp_capzone_reinforcements"
-		},
-		{
-			"set_freeze_condition",
-			max_active_enemies = 100
-		},
-		{
-			"delay",
-			duration = 30
-		},
-		{
-			"flow_event",
-			flow_event_name = "bell_pvp_capzone_reinforcements_done"
-		}
-	},
 	bell_pvp_payload_event_reinforcements_start = {
 		{
 			"set_master_event_running",
@@ -174,6 +128,10 @@ local terror_event_blueprints = {
 			enable = false
 		},
 		{
+			"control_hordes",
+			enable = false
+		},
+		{
 			"continue_when",
 			condition = function (t)
 				return count_event_breed("skaven_slave") < 6
@@ -221,18 +179,18 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "canyon_escape_event",
-			composition_type = "event_large"
+			composition_type = "event_medium"
 		},
 		{
 			"delay",
 			duration = 5
 		},
 		{
-			"control_specials",
-			enable = true
+			"control_pacing",
+			enable = false
 		},
 		{
-			"control_pacing",
+			"control_hordes",
 			enable = false
 		}
 	},

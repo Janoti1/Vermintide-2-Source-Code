@@ -71,7 +71,7 @@ local base_effect = {
 			local mood = status_template.mood
 
 			if mood then
-				MOOD_BLACKBOARD[mood] = true
+				Managers.state.camera:set_mood(mood, reason, true)
 			end
 
 			local hud_sound = status_template.hud_sound
@@ -153,7 +153,7 @@ local base_effect = {
 			local mood = status_template.mood
 
 			if mood then
-				MOOD_BLACKBOARD[mood] = nil
+				Managers.state.camera:set_mood(mood, reason, false)
 			end
 
 			local remove_hud_sound = status_template.remove_hud_sound

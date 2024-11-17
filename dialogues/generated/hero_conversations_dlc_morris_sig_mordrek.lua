@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_level_conversations_mordrek_ten_01",
 		response = "pbw_morris_level_conversations_mordrek_ten_01",
 		criterias = {
@@ -80,6 +81,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mordrek_breach",
 		response = "pbw_morris_mordrek_breach",
 		criterias = {
@@ -124,6 +126,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mordrek_end",
 		response = "pbw_morris_mordrek_end",
 		criterias = {
@@ -168,6 +171,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mordrek_pits",
 		response = "pbw_morris_mordrek_pits",
 		criterias = {
@@ -212,6 +216,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mordrek_siege_camp",
 		response = "pbw_morris_mordrek_siege_camp",
 		criterias = {
@@ -256,6 +261,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mordrek_ward",
 		response = "pbw_morris_mordrek_ward",
 		criterias = {
@@ -300,6 +306,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_level_conversations_mordrek_eleven_01",
 		response = "pdr_morris_level_conversations_mordrek_eleven_01",
 		criterias = {
@@ -337,6 +344,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_level_conversations_mordrek_eleven_02",
 		response = "pdr_morris_level_conversations_mordrek_eleven_02",
 		criterias = {
@@ -374,6 +382,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mordrek_breach",
 		response = "pdr_morris_mordrek_breach",
 		criterias = {
@@ -418,6 +427,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mordrek_end",
 		response = "pdr_morris_mordrek_end",
 		criterias = {
@@ -462,6 +472,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mordrek_pits",
 		response = "pdr_morris_mordrek_pits",
 		criterias = {
@@ -506,6 +517,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mordrek_siege_camp",
 		response = "pdr_morris_mordrek_siege_camp",
 		criterias = {
@@ -550,6 +562,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mordrek_ward",
 		response = "pdr_morris_mordrek_ward",
 		criterias = {
@@ -594,6 +607,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_level_conversations_mordrek_ten_01",
 		response = "pes_morris_level_conversations_mordrek_ten_01",
 		criterias = {
@@ -631,6 +645,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_level_conversations_mordrek_ten_02",
 		response = "pes_morris_level_conversations_mordrek_ten_02",
 		criterias = {
@@ -668,6 +683,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mordrek_breach",
 		response = "pes_morris_mordrek_breach",
 		criterias = {
@@ -712,6 +728,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mordrek_end",
 		response = "pes_morris_mordrek_end",
 		criterias = {
@@ -756,6 +773,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mordrek_pits",
 		response = "pes_morris_mordrek_pits",
 		criterias = {
@@ -800,6 +818,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mordrek_siege_camp",
 		response = "pes_morris_mordrek_siege_camp",
 		criterias = {
@@ -844,6 +863,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mordrek_ward",
 		response = "pes_morris_mordrek_ward",
 		criterias = {
@@ -888,6 +908,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_level_conversations_mordrek_eleven_01",
 		response = "pwe_morris_level_conversations_mordrek_eleven_01",
 		criterias = {
@@ -962,6 +983,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_level_conversations_mordrek_eleven_02",
 		response = "pwe_morris_level_conversations_mordrek_eleven_02",
 		criterias = {
@@ -999,6 +1021,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mordrek_breach",
 		response = "pwe_morris_mordrek_breach",
 		criterias = {
@@ -1043,6 +1066,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mordrek_end",
 		response = "pwe_morris_mordrek_end",
 		criterias = {
@@ -1087,6 +1111,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mordrek_pits",
 		response = "pwe_morris_mordrek_pits",
 		criterias = {
@@ -1131,6 +1156,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mordrek_siege_camp",
 		response = "pwe_morris_mordrek_siege_camp",
 		criterias = {
@@ -1175,6 +1201,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mordrek_ward",
 		response = "pwe_morris_mordrek_ward",
 		criterias = {
@@ -1219,6 +1246,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_level_conversations_mordrek_ten_01",
 		response = "pwh_morris_level_conversations_mordrek_ten_01",
 		criterias = {
@@ -1256,6 +1284,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_level_conversations_mordrek_ten_02",
 		response = "pwh_morris_level_conversations_mordrek_ten_02",
 		criterias = {
@@ -1293,6 +1322,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mordrek_breach",
 		response = "pwh_morris_mordrek_breach",
 		criterias = {
@@ -1337,6 +1367,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mordrek_end",
 		response = "pwh_morris_mordrek_end",
 		criterias = {
@@ -1381,6 +1412,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mordrek_pits",
 		response = "pwh_morris_mordrek_pits",
 		criterias = {
@@ -1425,6 +1457,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mordrek_siege_camp",
 		response = "pwh_morris_mordrek_siege_camp",
 		criterias = {
@@ -1469,6 +1502,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mordrek_ward",
 		response = "pwh_morris_mordrek_ward",
 		criterias = {

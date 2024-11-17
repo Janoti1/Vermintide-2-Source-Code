@@ -28,22 +28,6 @@ HitEffectsSkavenGreySeerMounted = {
 			"Play_clan_rat_die_vce"
 		}
 	},
-	heavy_slashing_buffed = {
-		inherits = "default",
-		do_dismember = true,
-		flow_event = "lua_on_damage_taken",
-		extra_conditions = {
-			damage_type = "heavy_slashing_buffed"
-		},
-		animations = {
-			"ragdoll"
-		},
-		push = {
-			distal_force = 30,
-			vertical_force = 35,
-			lateral_force = 40
-		}
-	},
 	shot_default = {
 		hit_effect_name = "fx/hit_armored",
 		husk_hit_effect_name = "fx/hit_armored",

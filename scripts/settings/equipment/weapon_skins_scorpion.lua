@@ -564,26 +564,28 @@ local skins = {
 		name = "wh_crossbow_skin_06_magic_01",
 		data = {
 			description = "wh_crossbow_skin_06_magic_01_description",
+			ammo_unit = "units/weapons/player/wpn_crossbow_quiver/wpn_crossbow_bolt",
+			display_name = "wh_crossbow_skin_06_magic_01_name",
 			rarity = "magic",
-			hud_icon = "weapon_generic_icon_crossbow",
-			display_unit = "units/weapons/weapon_display/display_1h_crossbow",
 			inventory_icon = "icon_empire_crossbow_tier2_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_empire_crossbow_t2/wpn_empire_crossbow_tier2_magic_01",
-			display_name = "wh_crossbow_skin_06_magic_01_name",
-			template = "crossbow_template_1"
+			template = "crossbow_template_1",
+			hud_icon = "weapon_generic_icon_crossbow",
+			display_unit = "units/weapons/weapon_display/display_1h_crossbow"
 		}
 	},
 	{
 		name = "dw_crossbow_skin_03_magic_01",
 		data = {
 			description = "dw_crossbow_skin_03_magic_01_description",
+			ammo_unit = "units/weapons/player/wpn_crossbow_quiver/wpn_crossbow_bolt",
+			display_name = "dw_crossbow_skin_03_magic_01_name",
 			rarity = "magic",
-			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_1h_crossbow",
 			inventory_icon = "icon_dw_xbow_02_t1_magic_01",
 			left_hand_unit = "units/weapons/player/wpn_dw_xbow_02_t1/wpn_dw_xbow_02_t1_magic_01",
-			display_name = "dw_crossbow_skin_03_magic_01_name",
-			template = "crossbow_template_1"
+			template = "crossbow_template_1",
+			hud_icon = "weapon_generic_icon_staff_3",
+			display_unit = "units/weapons/weapon_display/display_1h_crossbow"
 		}
 	},
 	{
@@ -687,7 +689,7 @@ local skins = {
 			display_unit = "units/weapons/weapon_display/display_1h_weapon",
 			inventory_icon = "icon_brw_sword_03_t2_magic_01",
 			display_name = "bw_1h_flaming_sword_skin_06_magic_01_name",
-			right_hand_unit = "units/weapons/player/wpn_brw_sword_03_t2/wpn_brw_sword_03_t2_magic_01",
+			right_hand_unit = "units/weapons/player/wpn_brw_sword_03_t2/wpn_brw_flaming_sword_03_t2_magic_01",
 			template = "flaming_sword_template_1"
 		}
 	},
@@ -697,7 +699,7 @@ local skins = {
 			description = "bw_1h_mace_skin_02_magic_01_description",
 			rarity = "magic",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_1h_weapon",
+			display_unit = "units/weapons/weapon_display/display_1h_hammer_wizard",
 			inventory_icon = "icon_brw_mace_02_magic_01",
 			display_name = "bw_1h_mace_skin_02_magic_01_name",
 			right_hand_unit = "units/weapons/player/wpn_brw_mace_02/wpn_brw_mace_02_magic_01",
@@ -738,7 +740,7 @@ local skins = {
 			description = "bw_dagger_skin_02_magic_01_description",
 			rarity = "magic",
 			hud_icon = "weapon_generic_icon_daggers",
-			display_unit = "units/weapons/weapon_display/display_1h_weapon",
+			display_unit = "units/weapons/weapon_display/display_1h_dagger_wizard",
 			inventory_icon = "icon_brw_dagger_02_magic_01",
 			display_name = "bw_dagger_skin_02_magic_01_name",
 			right_hand_unit = "units/weapons/player/wpn_brw_dagger_02/wpn_brw_dagger_02_magic_01",
@@ -851,7 +853,7 @@ local skins = {
 			description = "es_2h_heavy_spear_skin_02_magic_01_description",
 			rarity = "magic",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_2h_weapon",
+			display_unit = "units/weapons/weapon_display/display_2h_heavy_spears",
 			inventory_icon = "icon_emp_boar_spear_02_magic_01",
 			display_name = "es_2h_heavy_spear_skin_02_magic_01_name",
 			right_hand_unit = "units/weapons/player/wpn_emp_boar_spear_02/wpn_emp_boar_spear_02_magic_01",

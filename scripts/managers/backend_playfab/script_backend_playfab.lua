@@ -45,7 +45,8 @@ ScriptBackendPlayFab.update_signin = function (self)
 				InfoRequestParameters = {
 					GetUserReadOnlyData = true,
 					GetTitleData = true,
-					GetUserData = true
+					GetUserData = true,
+					GetUserAccountInfo = true
 				}
 			}
 			local login_request_cb = callback(self, "login_request_cb")
@@ -173,12 +174,14 @@ ScriptBackendPlayFab._set_up_initial_account = function (self)
 end
 
 ScriptBackendPlayFab.initial_setup_request_cb = function (self, result)
-	local characters_data = result.FunctionResult.characters_data
+	local read_only_data = result.FunctionResult.read_only_data
 
-	if characters_data then
-		self._signin_result.InfoResultPayload.UserReadOnlyData.characters_data = {
-			Value = characters_data
-		}
+	if read_only_data then
+		for key, data in pairs(read_only_data) do
+			self._signin_result.InfoResultPayload.UserReadOnlyData[key] = {
+				Value = data
+			}
+		end
 	end
 
 	self:_set_up_initial_inventory()

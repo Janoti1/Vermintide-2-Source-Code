@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "nik_chaos_wastes_hub_cowbell_conversation_eight_a",
 		response = "nik_chaos_wastes_hub_cowbell_conversation_eight_a",
 		criterias = {
@@ -32,6 +33,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_chaos_wastes_hub_cowbell_conversation_seven_a",
 		response = "nik_chaos_wastes_hub_cowbell_conversation_seven_a",
 		criterias = {
@@ -64,6 +66,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_chaos_wastes_hub_cowbell_conversation_six_a",
 		response = "nik_chaos_wastes_hub_cowbell_conversation_six_a",
 		criterias = {
@@ -96,6 +99,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_hub_cowbell_conversation_five_a",
 		response = "nik_hub_cowbell_conversation_five_a",
 		criterias = {
@@ -134,6 +138,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_hub_cowbell_conversation_four_a",
 		response = "nik_hub_cowbell_conversation_four_a",
 		criterias = {
@@ -172,6 +177,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_hub_cowbell_conversation_one_a",
 		response = "nik_hub_cowbell_conversation_one_a",
 		criterias = {
@@ -210,6 +216,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_hub_cowbell_conversation_three_a",
 		response = "nik_hub_cowbell_conversation_three_a",
 		criterias = {
@@ -248,6 +255,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_hub_cowbell_conversation_two_a",
 		response = "nik_hub_cowbell_conversation_two_a",
 		criterias = {
@@ -286,6 +294,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_morris_hub_cowbell_idle",
 		response = "nik_morris_hub_cowbell_idle",
 		criterias = {
@@ -318,6 +327,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_chaos_wastes_hub_cowbell_conversation_eight_b",
 		response = "pbw_chaos_wastes_hub_cowbell_conversation_eight_b",
 		criterias = {
@@ -361,6 +371,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_chaos_wastes_hub_cowbell_conversation_seven_b",
 		response = "pbw_chaos_wastes_hub_cowbell_conversation_seven_b",
 		criterias = {
@@ -404,6 +415,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_chaos_wastes_hub_cowbell_conversation_six_b",
 		response = "pbw_chaos_wastes_hub_cowbell_conversation_six_b",
 		criterias = {
@@ -449,6 +461,7 @@ return function ()
 	define_rule({
 		response = "pbw_hub_cowbell_conversation_two_b",
 		name = "pbw_hub_cowbell_conversation_two_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -471,6 +484,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_chaos_wastes_hub_cowbell_conversation_eight_b",
 		response = "pdr_chaos_wastes_hub_cowbell_conversation_eight_b",
 		criterias = {
@@ -514,6 +528,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_chaos_wastes_hub_cowbell_conversation_seven_b",
 		response = "pdr_chaos_wastes_hub_cowbell_conversation_seven_b",
 		criterias = {
@@ -557,6 +572,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_chaos_wastes_hub_cowbell_conversation_six_b",
 		response = "pdr_chaos_wastes_hub_cowbell_conversation_six_b",
 		criterias = {
@@ -602,6 +618,7 @@ return function ()
 	define_rule({
 		response = "pdr_hub_cowbell_conversation_three_b",
 		name = "pdr_hub_cowbell_conversation_three_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -624,6 +641,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_chaos_wastes_hub_cowbell_conversation_eight_b",
 		response = "pes_chaos_wastes_hub_cowbell_conversation_eight_b",
 		criterias = {
@@ -667,6 +685,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_chaos_wastes_hub_cowbell_conversation_seven_b",
 		response = "pes_chaos_wastes_hub_cowbell_conversation_seven_b",
 		criterias = {
@@ -710,6 +729,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_chaos_wastes_hub_cowbell_conversation_six_b",
 		response = "pes_chaos_wastes_hub_cowbell_conversation_six_b",
 		criterias = {
@@ -755,6 +775,7 @@ return function ()
 	define_rule({
 		response = "pes_hub_cowbell_conversation_five_b",
 		name = "pes_hub_cowbell_conversation_five_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -777,6 +798,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_chaos_wastes_hub_cowbell_conversation_eight_b",
 		response = "pwe_chaos_wastes_hub_cowbell_conversation_eight_b",
 		criterias = {
@@ -820,6 +842,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_chaos_wastes_hub_cowbell_conversation_seven_b",
 		response = "pwe_chaos_wastes_hub_cowbell_conversation_seven_b",
 		criterias = {
@@ -863,6 +886,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_chaos_wastes_hub_cowbell_conversation_six_b",
 		response = "pwe_chaos_wastes_hub_cowbell_conversation_six_b",
 		criterias = {
@@ -908,6 +932,7 @@ return function ()
 	define_rule({
 		response = "pwe_hub_cowbell_conversation_four_b",
 		name = "pwe_hub_cowbell_conversation_four_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -930,6 +955,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_chaos_wastes_hub_cowbell_conversation_eight_b",
 		response = "pwh_chaos_wastes_hub_cowbell_conversation_eight_b",
 		criterias = {
@@ -973,6 +999,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_chaos_wastes_hub_cowbell_conversation_seven_b",
 		response = "pwh_chaos_wastes_hub_cowbell_conversation_seven_b",
 		criterias = {
@@ -1016,6 +1043,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_chaos_wastes_hub_cowbell_conversation_six_b",
 		response = "pwh_chaos_wastes_hub_cowbell_conversation_six_b",
 		criterias = {
@@ -1061,6 +1089,7 @@ return function ()
 	define_rule({
 		response = "pwh_hub_cowbell_conversation_one_b",
 		name = "pwh_hub_cowbell_conversation_one_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

@@ -19,7 +19,7 @@ CareerSettings.wh_priest = {
 	min_head_lookat_z = -0.5,
 	portrait_image = "unit_frame_portrait_victor_priest",
 	portrait_thumbnail = "portrait_victor_priest_thumbnail",
-	sort_order = 1,
+	sort_order = 4,
 	required_dlc = "bless",
 	breed = PlayerBreeds.hero_wh_priest,
 	item_types = {},
@@ -104,6 +104,9 @@ CareerSettings.wh_priest = {
 		},
 		slot_frame = {
 			"frame"
+		},
+		slot_pose = {
+			"weapon_pose"
 		}
 	},
 	loadout_equipment_slots = {
@@ -111,7 +114,8 @@ CareerSettings.wh_priest = {
 		"melee",
 		"necklace",
 		"ring",
-		"trinket"
+		"trinket",
+		"weapon_pose"
 	}
 }
 OverchargeData = OverchargeData or {}

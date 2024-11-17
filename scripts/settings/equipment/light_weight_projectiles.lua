@@ -20,13 +20,13 @@ LightWeightProjectiles.ratling_gunner = {
 	}
 }
 LightWeightProjectiles.ratling_gunner_vs = {
-	projectile_speed = 80,
+	projectile_speed = 100,
 	light_weight_projectile_effect = "ratling_gun_bullet_vs",
 	damage_profile = "ratling_gunner_vs",
-	projectile_max_range = 50,
+	projectile_max_range = 75,
 	hit_effect = "ratling_gunner",
 	impact_push_speed = 1.3,
-	spread = math.degrees_to_radians(1.2),
+	spread = math.degrees_to_radians(1),
 	attack_power_level = {
 		13,
 		26,

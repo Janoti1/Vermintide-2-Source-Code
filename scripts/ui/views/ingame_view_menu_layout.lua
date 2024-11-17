@@ -574,7 +574,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -617,7 +617,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -660,7 +660,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -708,7 +708,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -736,7 +736,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -764,7 +764,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -788,7 +788,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			},
@@ -811,7 +811,7 @@ else
 				},
 				{
 					fade = false,
-					transition = "quit_game_hero_view",
+					transition = "quit_game_hero_view_legacy",
 					display_name = "quit_menu_button_name"
 				}
 			}

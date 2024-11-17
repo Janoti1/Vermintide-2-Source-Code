@@ -77,6 +77,16 @@ local weave_horde_compositions = {
 					10
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_slave",
+					6
+				}
+			}
 		}
 	},
 	weave_horde_skaven_medium = {
@@ -155,6 +165,16 @@ local weave_horde_compositions = {
 					6,
 					"skaven_clan_rat",
 					16
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_slave",
+					10
 				}
 			}
 		}
@@ -241,6 +261,18 @@ local weave_horde_compositions = {
 					16
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_slave",
+					12,
+					"skaven_clan_rat",
+					2
+				}
+			}
 		}
 	},
 	weave_horde_chaos_small = {
@@ -319,6 +351,16 @@ local weave_horde_compositions = {
 					4,
 					"chaos_marauder",
 					8
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_fanatic",
+					5
 				}
 			}
 		}
@@ -401,6 +443,16 @@ local weave_horde_compositions = {
 					9
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_fanatic",
+					8
+				}
+			}
 		}
 	},
 	weave_horde_chaos_large = {
@@ -480,6 +532,16 @@ local weave_horde_compositions = {
 					"chaos_fanatic",
 					10,
 					"chaos_marauder",
+					12
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_fanatic",
 					12
 				}
 			}
@@ -569,6 +631,18 @@ local weave_horde_compositions = {
 					3
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"beastmen_ungor",
+					2,
+					"skaven_slave",
+					3
+				}
+			}
 		}
 	},
 	weave_horde_beastmen_small = {
@@ -646,6 +720,16 @@ local weave_horde_compositions = {
 					"beastmen_ungor",
 					6,
 					"beastmen_gor",
+					3
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"beastmen_ungor",
 					3
 				}
 			}
@@ -729,6 +813,16 @@ local weave_horde_compositions = {
 					7
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"beastmen_ungor",
+					6
+				}
+			}
 		}
 	},
 	weave_horde_beastmen_large = {
@@ -808,6 +902,16 @@ local weave_horde_compositions = {
 					"beastmen_ungor",
 					8,
 					"beastmen_gor",
+					10
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"beastmen_ungor",
 					10
 				}
 			}
@@ -897,6 +1001,18 @@ local weave_horde_compositions = {
 					4
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					2,
+					"skaven_storm_vermin_with_shield",
+					1
+				}
+			}
 		}
 	},
 	weave_spice_elite_skaven = {
@@ -979,6 +1095,16 @@ local weave_horde_compositions = {
 					4
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					2
+				}
+			}
 		}
 	},
 	weave_spice_elite_chaos = {
@@ -1059,6 +1185,16 @@ local weave_horde_compositions = {
 					2
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_warrior",
+					1
+				}
+			}
 		}
 	},
 	weave_spice_elite_beastmen = {
@@ -1135,6 +1271,16 @@ local weave_horde_compositions = {
 					5
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"beastmen_bestigor",
+					1
+				}
+			}
 		}
 	},
 	weave_spice_berzerker_skaven = {
@@ -1207,6 +1353,16 @@ local weave_horde_compositions = {
 					5
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_plague_monk",
+					2
+				}
+			}
 		}
 	},
 	weave_spice_berzerker_chaos = {
@@ -1277,6 +1433,16 @@ local weave_horde_compositions = {
 				breeds = {
 					"chaos_berzerker",
 					5
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_berzerker",
+					2
 				}
 			}
 		}
@@ -1357,6 +1523,16 @@ local weave_horde_compositions = {
 					8,
 					"skaven_storm_vermin_with_shield",
 					6
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					4
 				}
 			}
 		}
@@ -1441,6 +1617,16 @@ local weave_horde_compositions = {
 					10
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_slave",
+					8
+				}
+			}
 		}
 	},
 	weave_trickle_chaos_small = {
@@ -1519,6 +1705,16 @@ local weave_horde_compositions = {
 					15,
 					"chaos_marauder",
 					7
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_fanatic",
+					5
 				}
 			}
 		}
@@ -1601,6 +1797,16 @@ local weave_horde_compositions = {
 					9
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_fanatic",
+					8
+				}
+			}
 		}
 	},
 	weave_trickle_beastmen_small = {
@@ -1679,6 +1885,16 @@ local weave_horde_compositions = {
 					14,
 					"beastmen_gor",
 					7
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"beastmen_ungor",
+					5
 				}
 			}
 		}
@@ -1763,6 +1979,16 @@ local weave_horde_compositions = {
 					4
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					2
+				}
+			}
 		}
 	},
 	weave_trickle_chaos_berzerkers = {
@@ -1845,6 +2071,16 @@ local weave_horde_compositions = {
 					2,
 					"chaos_berzerker",
 					6
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 1,
+				breeds = {
+					"chaos_berzerker",
+					2
 				}
 			}
 		}
@@ -1933,6 +2169,18 @@ local weave_horde_compositions = {
 					13
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_gor",
+					10,
+					"beastmen_ungor",
+					11
+				}
+			}
 		}
 	},
 	weave_event_large_beastmen = {
@@ -2019,6 +2267,18 @@ local weave_horde_compositions = {
 					17
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_gor",
+					12,
+					"beastmen_ungor",
+					13
+				}
+			}
 		}
 	},
 	weave_event_small_beastmen = {
@@ -2091,6 +2351,16 @@ local weave_horde_compositions = {
 					15
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_gor",
+					7
+				}
+			}
 		}
 	},
 	weave_event_small = {
@@ -2161,6 +2431,16 @@ local weave_horde_compositions = {
 				breeds = {
 					"skaven_slave",
 					25
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"skaven_slave",
+					16
 				}
 			}
 		}
@@ -2241,6 +2521,16 @@ local weave_horde_compositions = {
 					11
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"skaven_slave",
+					34
+				}
+			}
 		}
 	},
 	weave_event_large = {
@@ -2319,6 +2609,16 @@ local weave_horde_compositions = {
 					16
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"skaven_slave",
+					46
+				}
+			}
 		}
 	},
 	weave_event_small_chaos = {
@@ -2389,6 +2689,16 @@ local weave_horde_compositions = {
 				breeds = {
 					"chaos_marauder",
 					15
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_marauder",
+					7
 				}
 			}
 		}
@@ -2477,6 +2787,18 @@ local weave_horde_compositions = {
 					11
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_marauder",
+					11,
+					"chaos_fanatic",
+					13
+				}
+			}
 		}
 	},
 	weave_event_large_chaos = {
@@ -2563,6 +2885,18 @@ local weave_horde_compositions = {
 					18
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_marauder",
+					14,
+					"chaos_fanatic",
+					18
+				}
+			}
 		}
 	},
 	weave_event_extra_spice_large = {
@@ -2643,6 +2977,16 @@ local weave_horde_compositions = {
 					27,
 					"skaven_storm_vermin_commander",
 					5
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 10,
+				breeds = {
+					"skaven_clan_rat",
+					20
 				}
 			}
 		}
@@ -2727,6 +3071,18 @@ local weave_horde_compositions = {
 					1,
 					"chaos_spawn",
 					2
+				}
+			}
+		},
+		{
+			{
+				name = "bosses",
+				weight = 3,
+				breeds = {
+					"skaven_rat_ogre",
+					1,
+					"chaos_spawn",
+					1
 				}
 			}
 		}
@@ -2815,6 +3171,18 @@ local weave_horde_compositions = {
 					2
 				}
 			}
+		},
+		{
+			{
+				name = "bosses",
+				weight = 3,
+				breeds = {
+					"skaven_rat_ogre",
+					1,
+					"chaos_spawn",
+					1
+				}
+			}
 		}
 	},
 	weave_boss_event_2 = {
@@ -2899,6 +3267,18 @@ local weave_horde_compositions = {
 					1,
 					"beastmen_minotaur",
 					2
+				}
+			}
+		},
+		{
+			{
+				name = "bosses",
+				weight = 3,
+				breeds = {
+					"skaven_rat_ogre",
+					1,
+					"beastmen_minotaur",
+					1
 				}
 			}
 		}
@@ -3106,6 +3486,35 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"skaven_slave",
+					{
+						9,
+						11
+					}
+				}
+			},
+			{
+				name = "mixed",
+				weight = 3,
+				breeds = {
+					"skaven_slave",
+					{
+						5,
+						6
+					},
+					"skaven_clan_rat",
+					{
+						2,
+						3
+					}
+				}
+			}
 		}
 	},
 	weave_storm_vermin_shields_small = {
@@ -3196,6 +3605,19 @@ local weave_horde_compositions = {
 					{
 						9,
 						10
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					{
+						2,
+						3
 					}
 				}
 			}
@@ -3292,6 +3714,19 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "mines_plague_monks",
+				weight = 1,
+				breeds = {
+					"skaven_plague_monk",
+					{
+						3,
+						4
+					}
+				}
+			}
 		}
 	},
 	weave_chaos_berzerkers_small = {
@@ -3385,6 +3820,19 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_berzerker",
+					{
+						2,
+						3
+					}
+				}
+			}
 		}
 	},
 	weave_bestigors = {
@@ -3475,6 +3923,16 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_bestigor",
+					2
+				}
+			}
 		}
 	},
 	weave_ungor_archers = {
@@ -3554,6 +4012,19 @@ local weave_horde_compositions = {
 				breeds = {
 					"beastmen_ungor_archer",
 					12
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_ungor_archer",
+					{
+						6,
+						7
+					}
 				}
 			}
 		}
@@ -3638,6 +4109,16 @@ local weave_horde_compositions = {
 						3,
 						4
 					}
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"beastmen_bestigor",
+					2
 				}
 			}
 		}
@@ -3730,6 +4211,19 @@ local weave_horde_compositions = {
 					{
 						8,
 						9
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "raiders",
+				weight = 3,
+				breeds = {
+					"chaos_raider",
+					{
+						2,
+						3
 					}
 				}
 			}
@@ -3826,6 +4320,19 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "mines_plague_monks",
+				weight = 1,
+				breeds = {
+					"skaven_plague_monk",
+					{
+						4,
+						5
+					}
+				}
+			}
 		}
 	},
 	weave_storm_vermin_medium = {
@@ -3916,6 +4423,19 @@ local weave_horde_compositions = {
 					{
 						11,
 						12
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					{
+						3,
+						4
 					}
 				}
 			}
@@ -4012,6 +4532,19 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_with_shield",
+					{
+						4,
+						5
+					}
+				}
+			}
 		}
 	},
 	weave_chaos_shields = {
@@ -4102,6 +4635,19 @@ local weave_horde_compositions = {
 					{
 						8,
 						9
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_marauder_with_shield",
+					{
+						4,
+						5
 					}
 				}
 			}
@@ -4198,6 +4744,19 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "somevermin",
+				weight = 3,
+				breeds = {
+					"skaven_storm_vermin_commander",
+					{
+						2,
+						3
+					}
+				}
+			}
 		}
 	},
 	weave_chaos_warriors = {
@@ -4285,6 +4844,16 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_warrior",
+					2
+				}
+			}
 		}
 	},
 	weave_chaos_warriors_small = {
@@ -4367,6 +4936,16 @@ local weave_horde_compositions = {
 						4,
 						5
 					}
+				}
+			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_warrior",
+					2
 				}
 			}
 		}
@@ -4532,6 +5111,29 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "mixed",
+				weight = 3,
+				breeds = {
+					"skaven_slave",
+					{
+						18,
+						20
+					},
+					"skaven_clan_rat",
+					{
+						2,
+						4
+					},
+					"skaven_clan_rat_with_shield",
+					{
+						6,
+						7
+					}
+				}
+			}
 		}
 	},
 	weave_chaos_berzerkers_medium = {
@@ -4625,6 +5227,19 @@ local weave_horde_compositions = {
 					}
 				}
 			}
+		},
+		{
+			{
+				name = "plain",
+				weight = 7,
+				breeds = {
+					"chaos_berzerker",
+					{
+						3,
+						4
+					}
+				}
+			}
 		}
 	},
 	weave_explosive_horde_medium = {
@@ -4695,6 +5310,16 @@ local weave_horde_compositions = {
 				breeds = {
 					"skaven_explosive_loot_rat",
 					13
+				}
+			}
+		},
+		{
+			{
+				name = "explo",
+				weight = 3,
+				breeds = {
+					"skaven_explosive_loot_rat",
+					8
 				}
 			}
 		}
@@ -4787,6 +5412,19 @@ local weave_horde_compositions = {
 					{
 						10,
 						11
+					}
+				}
+			}
+		},
+		{
+			{
+				name = "raiders",
+				weight = 3,
+				breeds = {
+					"chaos_raider",
+					{
+						3,
+						4
 					}
 				}
 			}

@@ -99,3 +99,69 @@ Currencies.shillings_large = {
 	icon = "icon_shillings_06",
 	can_wield = CanWieldAllItemTemplates
 }
+Currencies.versus_currency_01 = {
+	description = "versus_currency_small",
+	rarity = "common",
+	display_name = "versus_currency_small",
+	inventory_icon = "icon_versus_coin_01",
+	slot_type = "versus_currency_name",
+	information_text = "versus_currency_small",
+	item_type = "versus_currency_name",
+	icon = "icon_versus_coin_01",
+	can_wield = CanWieldAllItemTemplates
+}
+Currencies.versus_currency_02 = {
+	description = "versus_currency_medium",
+	rarity = "common",
+	display_name = "versus_currency_medium",
+	inventory_icon = "icon_versus_coin_02",
+	slot_type = "versus_currency_name",
+	information_text = "versus_currency_medium",
+	item_type = "versus_currency_name",
+	icon = "icon_versus_coin_02",
+	can_wield = CanWieldAllItemTemplates
+}
+Currencies.versus_currency_03 = {
+	description = "versus_currency_big",
+	rarity = "common",
+	display_name = "versus_currency_big",
+	inventory_icon = "icon_versus_coin_03",
+	slot_type = "versus_currency_name",
+	information_text = "versus_currency_big",
+	item_type = "versus_currency_name",
+	icon = "icon_versus_coin_03",
+	can_wield = CanWieldAllItemTemplates
+}
+Currencies.versus_currency_small = {
+	description = "versus_currency_small",
+	rarity = "common",
+	display_name = "versus_currency_small",
+	inventory_icon = "icon_versus_coin_01",
+	slot_type = "versus_currency_name",
+	information_text = "versus_currency_small",
+	item_type = "versus_currency_name",
+	icon = "icon_versus_coin_01",
+	can_wield = CanWieldAllItemTemplates
+}
+Currencies.versus_currency_medium = {
+	description = "versus_currency_medium",
+	rarity = "common",
+	display_name = "versus_currency_medium",
+	inventory_icon = "icon_versus_coin_02",
+	slot_type = "versus_currency_name",
+	information_text = "versus_currency_medium",
+	item_type = "versus_currency_name",
+	icon = "icon_versus_coin_02",
+	can_wield = CanWieldAllItemTemplates
+}
+Currencies.versus_currency_large = {
+	description = "versus_currency_big",
+	rarity = "common",
+	display_name = "versus_currency_name",
+	inventory_icon = "icon_versus_coin_03",
+	slot_type = "versus_currency_name",
+	information_text = "versus_currency_big",
+	item_type = "versus_currency_name",
+	icon = "icon_versus_coin_03",
+	can_wield = CanWieldAllItemTemplates
+}

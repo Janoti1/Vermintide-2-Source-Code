@@ -1,10 +1,10 @@
-local spinup_time = 1.5
+local spinup_time = 1
 local windup_decay = 0.2
 local initial_rps = 15
 local max_rps = 20
 local time_at_max_rps = 3
 local max_ammo = 120
-local reload_time = 5
+local reload_time = 4
 local SPINUP_ANIMATION_TIME = 2.1666666666666665
 local SPINUP_ANIMATION_SCALE = SPINUP_ANIMATION_TIME / spinup_time
 local WINDUP_SPEED = 1 / spinup_time
@@ -51,8 +51,9 @@ weapon_template.actions = {
 			charge_sound_stop_event = "Stop_player_engineer_engine_loop",
 			charge_sound_name = "Play_player_engineer_engine_charge",
 			kind = "minigun_spin",
-			disallow_ghost_mode = true,
+			reload_when_out_of_ammo = true,
 			windup_max = 1,
+			disallow_ghost_mode = true,
 			initial_windup = 0,
 			windup_start_on_zero = true,
 			charge_sound_husk_name = "Play_player_engineer_engine_charge_husk",
@@ -64,11 +65,11 @@ weapon_template.actions = {
 			enter_function = function (owner_unit, input_extension, remaining_time, weapon_extension)
 				input_extension:clear_input_buffer()
 				input_extension:reset_release_input()
-				Managers.state.entity:system("weapon_system"):change_synced_weapon_state(owner_unit, "winding")
+				weapon_extension:change_synced_state("winding")
 			end,
 			finish_function = function (owner_unit, reason, weapon_extension)
 				if reason ~= "new_interupting_action" then
-					Managers.state.entity:system("weapon_system"):change_synced_weapon_state(owner_unit, nil)
+					weapon_extension:change_synced_state(nil)
 				end
 			end,
 			total_time = spinup_time * SPINUP_ANIMATION_SCALE,
@@ -102,12 +103,13 @@ weapon_template.actions = {
 			looping_anim = true,
 			rps_loss_per_second = 1.5,
 			kind = "minigun",
-			dont_shoot_near_wall = true,
+			weapon_action_hand = "left",
+			spread_template_override = "vs_ratling_gunner_gun_shooting",
+			disallow_ghost_mode = true,
 			hit_effect = "bullet_impact",
 			critical_hit_effect = "bullet_critical_impact",
-			weapon_action_hand = "left",
+			dont_shoot_near_wall = true,
 			ammo_usage = 1,
-			disallow_ghost_mode = true,
 			near_wall_anim = "",
 			hold_input = "action_one_hold",
 			power_level = 100,
@@ -116,10 +118,10 @@ weapon_template.actions = {
 			enter_function = function (owner_unit, input_extension, remaining_time, weapon_extension)
 				input_extension:reset_release_input()
 				input_extension:clear_input_buffer()
-				Managers.state.entity:system("weapon_system"):change_synced_weapon_state(owner_unit, "firing")
+				weapon_extension:change_synced_state("firing")
 			end,
 			finish_function = function (owner_unit, reason, weapon_extension)
-				Managers.state.entity:system("weapon_system"):change_synced_weapon_state(owner_unit, nil)
+				weapon_extension:change_synced_state(nil)
 			end,
 			initial_rounds_per_second = initial_rps,
 			max_rps = max_rps,
@@ -129,7 +131,8 @@ weapon_template.actions = {
 				{
 					start_time = 0,
 					external_multiplier = 0.4,
-					buff_name = "planted_fast_decrease_movement"
+					buff_name = "planted_fast_decrease_movement",
+					end_time = math.huge
 				}
 			},
 			allowed_chain_actions = {
@@ -151,18 +154,19 @@ weapon_template.actions = {
 			anim_end_event = "cooldown_ready",
 			weapon_action_hand = "either",
 			kind = "dummy",
+			crosshair_style = "dot",
 			anim_event = "wind_up_start",
 			condition_func = reload_condition_func,
 			chain_condition_func = reload_condition_func,
 			enter_function = function (owner_unit, input_extension, remaining_time, weapon_unit_extension)
-				Managers.state.entity:system("weapon_system"):change_synced_weapon_state(owner_unit, "reloading")
+				weapon_unit_extension:change_synced_state("reloading")
 
 				local wwise_world = Managers.world:wwise_world(weapon_unit_extension.world)
 
 				WwiseWorld.trigger_event(wwise_world, "Play_player_ratling_gunner_weapon_reload")
 			end,
 			finish_function = function (owner_unit, reason, weapon_unit_extension)
-				Managers.state.entity:system("weapon_system"):change_synced_weapon_state(owner_unit, nil)
+				weapon_unit_extension:change_synced_state(nil)
 
 				local wwise_world = Managers.world:wwise_world(weapon_unit_extension.world)
 
@@ -176,19 +180,20 @@ weapon_template.actions = {
 				end
 			end,
 			total_time = reload_time,
+			buff_data = {
+				{
+					start_time = 0,
+					external_multiplier = 0.6,
+					buff_name = "planted_fast_decrease_movement",
+					end_time = math.huge
+				}
+			},
 			allowed_chain_actions = {
 				{
 					sub_action = "default",
 					start_time = 0,
 					action = "action_two",
 					input = "action_two"
-				}
-			},
-			buff_data = {
-				{
-					start_time = 0,
-					external_multiplier = 0.6,
-					buff_name = "planted_fast_decrease_movement"
 				}
 			}
 		}
@@ -222,6 +227,8 @@ weapon_template.outer_block_angle = 360
 weapon_template.block_fatigue_point_multiplier = 0.5
 weapon_template.outer_block_fatigue_point_multiplier = 2
 weapon_template.sound_event_block_within_arc = "weapon_foley_blunt_1h_block_wood"
+weapon_template.crosshair_style = "default"
+weapon_template.default_spread_template = "vs_ratling_gunner_gun"
 weapon_template.buffs = {
 	change_dodge_distance = {
 		external_optional_multiplier = 1.2
@@ -384,7 +391,7 @@ weapon_template.synced_states = {
 
 			if is_local_player then
 				WwiseWorld.trigger_event(wwise_world, "Play_player_ratling_gunner_shooting_loop", use_occlusion, wwise_source_id)
-				WwiseWorld.trigger_event(wwise_world, "Play_player_enemy_vce_ratling_gunner_shoot_start", use_occlusion, wwise_source_id)
+				Managers.state.vce:trigger_vce(owner_unit, wwise_world, "Play_player_enemy_vce_ratling_gunner_shoot_start", use_occlusion, wwise_source_id)
 			else
 				WwiseWorld.trigger_event(wwise_world, "Play_ratling_gunner_shooting_loop", use_occlusion, wwise_source_id)
 			end
@@ -441,6 +448,14 @@ weapon_template.synced_states = {
 			if is_local_player then
 				state_data.time_in_reload = 0
 			end
+
+			local owner_player = Managers.player:owner(owner_unit)
+
+			if owner_player.remote or owner_player.bot_player then
+				local wwise_world = Managers.world:wwise_world(world)
+
+				WwiseWorld.trigger_event(wwise_world, "Play_player_ratling_gunner_weapon_reload_husk", weapon_unit)
+			end
 		end,
 		update = function (self, owner_unit, weapon_unit, state_data, is_local_player, world, dt)
 			if not is_local_player then
@@ -462,18 +477,22 @@ weapon_template.synced_states = {
 					weapon_extension:set_custom_data("reload_progress", 0)
 				end
 
-				if not is_local_player then
+				local owner_player = Managers.player:owner(owner_unit)
+
+				if owner_player.remote or owner_player.bot_player then
 					Unit.animation_event(owner_unit, "no_anim_upperbody")
 					Unit.animation_event(owner_unit, "to_combat")
 					Unit.animation_event(owner_unit, "idle")
+
+					local wwise_world = Managers.world:wwise_world(world)
+
+					WwiseWorld.trigger_event(wwise_world, "Stop_player_ratling_gunner_weapon_reload_husk", weapon_unit)
 				end
 			end
 		end
 	}
 }
 weapon_template.left_hand_attachment_node_linking = AttachmentNodeLinking.vs_ratling_gunner_gun.left
-weapon_template.unit_extension_template = "weapon_unit_ammo"
-weapon_template.crosshair_style = "dot"
 weapon_template.ammo_data = {
 	ammo_immediately_available = true,
 	play_reload_anim_on_wield_reload = true,

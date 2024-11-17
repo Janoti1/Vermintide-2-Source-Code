@@ -7,6 +7,7 @@ CareerSettings.es_questingknight = {
 	preview_idle_animation = "career_idle_04",
 	preview_animation = "career_select_04",
 	icon = "icons_placeholder",
+	versus_preview_animation = "versus_career_select_04",
 	base_skin = "skin_es_questingknight_blue_and_white",
 	picking_image = "medium_unit_frame_portrait_kruber_questingknight",
 	preview_wield_slot = "melee",
@@ -18,7 +19,7 @@ CareerSettings.es_questingknight = {
 	description = "markus_3_desc",
 	portrait_image = "unit_frame_portrait_kruber_questingknight",
 	portrait_thumbnail = "portrait_kruber_questingknight_thumbnail",
-	sort_order = 1,
+	sort_order = 4,
 	required_dlc = "lake",
 	breed = PlayerBreeds.hero_es_questingknight,
 	item_types = {},
@@ -107,6 +108,9 @@ CareerSettings.es_questingknight = {
 		},
 		slot_frame = {
 			"frame"
+		},
+		slot_pose = {
+			"weapon_pose"
 		}
 	},
 	loadout_equipment_slots = {
@@ -114,7 +118,8 @@ CareerSettings.es_questingknight = {
 		"ranged",
 		"necklace",
 		"ring",
-		"trinket"
+		"trinket",
+		"weapon_pose"
 	}
 }
 CareerNameAchievementMapping.es_questingknight = "questingknight"

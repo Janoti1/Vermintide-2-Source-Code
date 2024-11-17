@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pes_village_01_opening_cinematic_a",
 		response = "pes_village_01_opening_cinematic_a",
 		criterias = {
@@ -33,6 +34,7 @@ return function ()
 	define_rule({
 		response = "pes_village_01_opening_cinematic_b",
 		name = "pes_village_01_opening_cinematic_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -61,6 +63,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_01_opening_cinematic_d",
 		response = "pes_village_01_opening_cinematic_d",
 		criterias = {
@@ -92,6 +95,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_02_beach_a",
 		response = "pes_village_02_beach_a",
 		criterias = {
@@ -129,6 +133,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_02_beach_b",
 		response = "pes_village_02_beach_b",
 		criterias = {
@@ -160,6 +165,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_03_gather_a",
 		response = "pes_village_03_gather_a",
 		criterias = {
@@ -235,6 +241,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_03_gather_b",
 		response = "pes_village_03_gather_b",
 		criterias = {
@@ -266,6 +273,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_03_gather_c",
 		response = "pes_village_03_gather_c",
 		criterias = {
@@ -297,6 +305,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_03_gather_d",
 		response = "pes_village_03_gather_d",
 		criterias = {
@@ -328,6 +337,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_04_skaven_a",
 		response = "pes_village_04_skaven_a",
 		criterias = {
@@ -372,6 +382,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_05_hut_a",
 		response = "pes_village_05_hut_a",
 		criterias = {
@@ -422,6 +433,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_06_lighthouse_a",
 		response = "pes_village_06_lighthouse_a",
 		criterias = {
@@ -468,6 +480,7 @@ return function ()
 	define_rule({
 		response = "pes_village_06_lighthouse_b",
 		name = "pes_village_06_lighthouse_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -490,6 +503,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_07_skaven_shipwreck_a",
 		response = "pes_village_07_skaven_shipwreck_a",
 		criterias = {
@@ -540,6 +554,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_09_chaos_ships_a",
 		response = "pes_village_09_chaos_ships_a",
 		criterias = {
@@ -590,6 +605,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_10_bridge_a",
 		response = "pes_village_10_bridge_a",
 		criterias = {
@@ -640,6 +656,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_11_harbour_shipwrecks_a",
 		response = "pes_village_11_harbour_shipwrecks_a",
 		criterias = {
@@ -690,6 +707,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_12_harbour_whale_carcass_a",
 		response = "pes_village_12_harbour_whale_carcass_a",
 		criterias = {
@@ -742,6 +760,7 @@ return function ()
 	define_rule({
 		response = "pes_village_12_harbour_whale_carcass_b",
 		name = "pes_village_12_harbour_whale_carcass_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -764,6 +783,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_14_guidance_lighthouse_a",
 		response = "pes_village_14_guidance_lighthouse_a",
 		criterias = {
@@ -810,6 +830,7 @@ return function ()
 	define_rule({
 		response = "pes_village_14_guidance_lighthouse_b",
 		name = "pes_village_14_guidance_lighthouse_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -832,6 +853,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_15_tainted_light_a",
 		response = "pes_village_15_tainted_light_a",
 		criterias = {
@@ -882,6 +904,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_16_intact_ship_a",
 		response = "pes_village_16_intact_ship_a",
 		criterias = {
@@ -934,6 +957,7 @@ return function ()
 	define_rule({
 		response = "pes_village_16_intact_ship_b",
 		name = "pes_village_16_intact_ship_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -956,6 +980,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_18_elevator_sighted_a",
 		response = "pes_village_18_elevator_sighted_a",
 		criterias = {
@@ -1000,6 +1025,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_19_elevator_gears_a",
 		response = "pes_village_19_elevator_gears_a",
 		criterias = {
@@ -1044,6 +1070,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_20_elevator_oil_a",
 		response = "pes_village_20_elevator_oil_a",
 		criterias = {
@@ -1088,6 +1115,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_20a_elevator_arrived_a",
 		response = "pes_village_20a_elevator_arrived_a",
 		criterias = {
@@ -1132,6 +1160,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_23_nurgle_gateway_a",
 		response = "pes_village_23_nurgle_gateway_a",
 		criterias = {
@@ -1178,6 +1207,7 @@ return function ()
 	define_rule({
 		response = "pes_village_24_oil_tutorial_a",
 		name = "pes_village_24_oil_tutorial_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1200,6 +1230,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_25_oil_tutorial_complete_a",
 		response = "pes_village_25_oil_tutorial_complete_a",
 		criterias = {
@@ -1244,6 +1275,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_26_twisted_tree_a",
 		response = "pes_village_26_twisted_tree_a",
 		criterias = {
@@ -1296,6 +1328,7 @@ return function ()
 	define_rule({
 		response = "pes_village_26_twisted_tree_b",
 		name = "pes_village_26_twisted_tree_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1318,6 +1351,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_28_lighthouse_hero_moment_a",
 		response = "pes_village_28_lighthouse_hero_moment_a",
 		criterias = {
@@ -1362,6 +1396,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_29_corruption_source_a",
 		response = "pes_village_29_corruption_source_a",
 		criterias = {
@@ -1408,6 +1443,7 @@ return function ()
 	define_rule({
 		response = "pes_village_29_corruption_source_b",
 		name = "pes_village_29_corruption_source_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1432,6 +1468,7 @@ return function ()
 	define_rule({
 		response = "pes_village_29_corruption_source_c",
 		name = "pes_village_29_corruption_source_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1454,6 +1491,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_30_burning_town_a",
 		response = "pes_village_30_burning_town_a",
 		criterias = {
@@ -1506,6 +1544,7 @@ return function ()
 	define_rule({
 		response = "pes_village_30_burning_town_b",
 		name = "pes_village_30_burning_town_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1528,6 +1567,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_31_fill_cart_a",
 		response = "pes_village_31_fill_cart_a",
 		criterias = {
@@ -1578,6 +1618,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_32_that_did_it_a",
 		response = "pes_village_32_that_did_it_a",
 		criterias = {
@@ -1628,6 +1669,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_32a_wagon_full_a",
 		response = "pes_village_32a_wagon_full_a",
 		criterias = {
@@ -1672,6 +1714,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_33_fuse_a",
 		response = "pes_village_33_fuse_a",
 		criterias = {
@@ -1716,6 +1759,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_34_lighthouse_collapse_a",
 		response = "pes_village_34_lighthouse_collapse_a",
 		criterias = {
@@ -1762,6 +1806,7 @@ return function ()
 	define_rule({
 		response = "pes_village_34_lighthouse_collapse_b",
 		name = "pes_village_34_lighthouse_collapse_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1786,6 +1831,7 @@ return function ()
 	define_rule({
 		response = "pes_village_34_lighthouse_collapse_c",
 		name = "pes_village_34_lighthouse_collapse_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1808,6 +1854,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_35_missing_comrade_a",
 		response = "pes_village_35_missing_comrade_a",
 		criterias = {
@@ -1873,6 +1920,7 @@ return function ()
 	define_rule({
 		response = "pes_village_35_missing_comrade_b",
 		name = "pes_village_35_missing_comrade_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1891,6 +1939,7 @@ return function ()
 	define_rule({
 		response = "pes_village_35_missing_comrade_c",
 		name = "pes_village_35_missing_comrade_c",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1915,6 +1964,7 @@ return function ()
 	define_rule({
 		response = "pes_village_bonus_buboes_a",
 		name = "pes_village_bonus_buboes_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1949,6 +1999,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_buboes_b",
 		response = "pes_village_bonus_buboes_b",
 		criterias = {
@@ -1987,6 +2038,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_explosive_cart_tutorial_a",
 		response = "pes_village_bonus_explosive_cart_tutorial_a",
 		criterias = {
@@ -2033,6 +2085,7 @@ return function ()
 	define_rule({
 		response = "pes_village_bonus_explosive_cart_tutorial_b",
 		name = "pes_village_bonus_explosive_cart_tutorial_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2057,6 +2110,7 @@ return function ()
 	define_rule({
 		response = "pes_village_bonus_fish_barrel_a",
 		name = "pes_village_bonus_fish_barrel_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2091,6 +2145,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_fish_barrel_b",
 		response = "pes_village_bonus_fish_barrel_b",
 		criterias = {
@@ -2135,6 +2190,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_harbour_evil_glow_a",
 		response = "pes_village_bonus_harbour_evil_glow_a",
 		criterias = {
@@ -2185,6 +2241,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_harbour_sewers_a",
 		response = "pes_village_bonus_harbour_sewers_a",
 		criterias = {
@@ -2235,6 +2292,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_oil_dispenser_a",
 		response = "pes_village_bonus_oil_dispenser_a",
 		criterias = {
@@ -2287,6 +2345,7 @@ return function ()
 	define_rule({
 		response = "pes_village_bonus_shallyan_idols_b",
 		name = "pes_village_bonus_shallyan_idols_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2321,6 +2380,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_tavern_a",
 		response = "pes_village_bonus_tavern_a",
 		criterias = {
@@ -2371,6 +2431,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_village_bonus_whale_guts_a",
 		response = "pes_village_bonus_whale_guts_a",
 		criterias = {
@@ -2423,6 +2484,7 @@ return function ()
 	define_rule({
 		response = "pes_village_bonus_whale_guts_b",
 		name = "pes_village_bonus_whale_guts_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4030,9 +4092,9 @@ return function ()
 				"pes_generic_path_blocked_04"
 			},
 			sound_events_duration = {
-				1.1100208759308,
-				1.8353749513626,
-				1.0193333625793
+				1.1100000143051,
+				1.8349791765213,
+				1.0189791917801
 			}
 		},
 		pes_village_bonus_explosive_cart_tutorial_b = {

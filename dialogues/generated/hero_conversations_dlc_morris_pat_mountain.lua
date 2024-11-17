@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mountain_bones",
 		response = "pbw_morris_mountain_bones",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mountain_monolith",
 		response = "pbw_morris_mountain_monolith",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mountain_ritual_location",
 		response = "pbw_morris_mountain_ritual_location",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mountain_stacked_stones",
 		response = "pbw_morris_mountain_stacked_stones",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_mountain_throne",
 		response = "pbw_morris_mountain_throne",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mountain_bones",
 		response = "pdr_morris_mountain_bones",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mountain_monolith",
 		response = "pdr_morris_mountain_monolith",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mountain_ritual_location",
 		response = "pdr_morris_mountain_ritual_location",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mountain_stacked_stones",
 		response = "pdr_morris_mountain_stacked_stones",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_mountain_throne",
 		response = "pdr_morris_mountain_throne",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mountain_bones",
 		response = "pes_morris_mountain_bones",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mountain_monolith",
 		response = "pes_morris_mountain_monolith",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mountain_ritual_location",
 		response = "pes_morris_mountain_ritual_location",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mountain_stacked_stones",
 		response = "pes_morris_mountain_stacked_stones",
 		criterias = {
@@ -616,6 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_mountain_throne",
 		response = "pes_morris_mountain_throne",
 		criterias = {
@@ -660,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mountain_bones",
 		response = "pwe_morris_mountain_bones",
 		criterias = {
@@ -704,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mountain_monolith",
 		response = "pwe_morris_mountain_monolith",
 		criterias = {
@@ -748,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mountain_ritual_location",
 		response = "pwe_morris_mountain_ritual_location",
 		criterias = {
@@ -792,6 +810,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mountain_stacked_stones",
 		response = "pwe_morris_mountain_stacked_stones",
 		criterias = {
@@ -836,6 +855,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_mountain_throne",
 		response = "pwe_morris_mountain_throne",
 		criterias = {
@@ -880,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mountain_bones",
 		response = "pwh_morris_mountain_bones",
 		criterias = {
@@ -924,6 +945,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mountain_monolith",
 		response = "pwh_morris_mountain_monolith",
 		criterias = {
@@ -968,6 +990,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mountain_ritual_location",
 		response = "pwh_morris_mountain_ritual_location",
 		criterias = {
@@ -1012,6 +1035,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mountain_stacked_stones",
 		response = "pwh_morris_mountain_stacked_stones",
 		criterias = {
@@ -1056,6 +1080,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_mountain_throne",
 		response = "pwh_morris_mountain_throne",
 		criterias = {

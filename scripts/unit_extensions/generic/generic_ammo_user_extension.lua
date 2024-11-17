@@ -14,7 +14,7 @@ GenericAmmoUserExtension.init = function (self, extension_init_context, unit, ex
 	self._override_reload_time = nil
 	self._override_reload_anim = nil
 	self._single_clip = ammo_data.single_clip
-	self._infinite_ammo = ammo_data.infinite_ammo or script_data.infinite_ammo
+	self._infinite_ammo = ammo_data.infinite_ammo
 
 	if ammo_data.infinite_ammo then
 		ammo_percent = 1
@@ -236,9 +236,14 @@ GenericAmmoUserExtension._check_ammo = function (self)
 			local owner_unit = self.owner_unit
 			local player_manager = Managers.player
 			local owner_player = player_manager:owner(self.owner_unit)
+			local buff_extension = self.owner_buff_extension
 
 			if not owner_player or not owner_player.bot_player then
 				Unit.flow_event(unit, "used_last_ammo_clip")
+
+				if buff_extension then
+					buff_extension:trigger_procs("on_ammo_clip_used")
+				end
 			end
 
 			if self._available_ammo == 0 then
@@ -438,6 +443,10 @@ GenericAmmoUserExtension.use_ammo = function (self, ammo_used, given, check_ammo
 		ammo_used = 0
 	end
 
+	if script_data.infinite_ammo then
+		ammo_used = 0
+	end
+
 	self._shots_fired = self._shots_fired + ammo_used
 
 	if buff_extension then
@@ -540,7 +549,7 @@ GenericAmmoUserExtension.can_reload = function (self)
 		return false
 	end
 
-	if self._infinite_ammo then
+	if self._infinite_ammo or script_data.infinite_ammo then
 		return true
 	end
 
@@ -592,7 +601,7 @@ GenericAmmoUserExtension.ammo_type = function (self)
 end
 
 GenericAmmoUserExtension.infinite_ammo = function (self)
-	return self._infinite_ammo
+	return self._infinite_ammo or script_data.infinite_ammo
 end
 
 GenericAmmoUserExtension.ammo_kind = function (self)

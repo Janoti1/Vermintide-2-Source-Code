@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pdr_enchantment_dummy_trigger",
 		response = "pdr_enchantment_dummy_trigger",
 		criterias = {
@@ -52,6 +53,7 @@ return function ()
 	define_rule({
 		response = "pdr_keep_climbing_dummy_trigger",
 		name = "pdr_keep_climbing_dummy_trigger",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -76,6 +78,7 @@ return function ()
 	define_rule({
 		response = "pdr_test_subjects_dummy_trigger",
 		name = "pdr_test_subjects_dummy_trigger",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -98,6 +101,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_tower_npc_intro_dummy_trigger",
 		response = "pdr_tower_npc_intro_dummy_trigger",
 		criterias = {
@@ -136,6 +140,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_another_locked_door",
 		response = "pdr_wizard_tower_another_locked_door",
 		criterias = {
@@ -185,6 +190,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_bones",
 		response = "pdr_wizard_tower_bones",
 		criterias = {
@@ -235,6 +241,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_brew",
 		response = "pdr_wizard_tower_brew",
 		criterias = {
@@ -292,6 +299,7 @@ return function ()
 	define_rule({
 		response = "pdr_wizard_tower_destroy_wards_b",
 		name = "pdr_wizard_tower_destroy_wards_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -314,6 +322,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_familiar",
 		response = "pdr_wizard_tower_familiar",
 		criterias = {
@@ -364,6 +373,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_gravity_a",
 		response = "pdr_wizard_tower_gravity_a",
 		criterias = {
@@ -408,6 +418,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_illusion_room",
 		response = "pdr_wizard_tower_illusion_room",
 		criterias = {
@@ -458,6 +469,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_intro_a",
 		response = "pdr_wizard_tower_intro_a",
 		criterias = {
@@ -496,6 +508,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_intro_b",
 		response = "pdr_wizard_tower_intro_b",
 		criterias = {
@@ -540,6 +553,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_intro_c",
 		response = "pdr_wizard_tower_intro_c",
 		criterias = {
@@ -584,6 +598,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_jungle",
 		response = "pdr_wizard_tower_jungle",
 		criterias = {
@@ -628,6 +643,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_leap_of_faith",
 		response = "pdr_wizard_tower_leap_of_faith",
 		criterias = {
@@ -678,6 +694,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_library",
 		response = "pdr_wizard_tower_library",
 		criterias = {
@@ -728,6 +745,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_observatory",
 		response = "pdr_wizard_tower_observatory",
 		criterias = {
@@ -778,6 +796,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_pig",
 		response = "pdr_wizard_tower_pig",
 		criterias = {
@@ -828,6 +847,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_portal",
 		response = "pdr_wizard_tower_portal",
 		criterias = {
@@ -888,6 +908,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_potion_maker",
 		response = "pdr_wizard_tower_potion_maker",
 		criterias = {
@@ -938,6 +959,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_ropes",
 		response = "pdr_wizard_tower_ropes",
 		criterias = {
@@ -988,6 +1010,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_skull_found_subsequent",
 		response = "pdr_wizard_tower_skull_found_subsequent",
 		criterias = {
@@ -1062,6 +1085,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_where_is_she_a",
 		response = "pdr_wizard_tower_where_is_she_a",
 		criterias = {
@@ -1100,6 +1124,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_where_is_she_b",
 		response = "pdr_wizard_tower_where_is_she_b",
 		criterias = {

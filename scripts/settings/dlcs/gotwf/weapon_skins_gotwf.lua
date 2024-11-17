@@ -42,7 +42,7 @@ local skins = {
 			display_name = "bw_deus_01_skin_02_runed_05_name",
 			inventory_icon = "icon_wpn_brw_magmastaff_t2_runed_02",
 			left_hand_unit = "units/weapons/player/wpn_fireball/wpn_fireball",
-			template = "bw_deus_01_template",
+			template = "bw_deus_01_template_1",
 			hud_icon = "weapon_generic_icon_staff_3",
 			display_unit = "units/weapons/weapon_display/display_staff",
 			right_hand_unit_override = {
@@ -56,12 +56,13 @@ local skins = {
 		data = {
 			description = "es_dual_wield_hammer_sword_skin_02_runed_05_description",
 			rarity = "unique",
+			display_name = "es_dual_wield_hammer_sword_skin_02_runed_05_name",
 			right_hand_unit = "units/weapons/player/wpn_emp_mace_05_t2/wpn_emp_mace_05_t2_runed_01",
-			template = "dual_wield_hammer_sword_template",
 			inventory_icon = "icon_es_dual_wield_hammer_sword_02_runed_02",
 			left_hand_unit = "units/weapons/player/wpn_emp_sword_06_t2/wpn_emp_sword_06_t2_runed_01",
-			display_name = "es_dual_wield_hammer_sword_skin_02_runed_05_name",
+			template = "dual_wield_hammer_sword_template",
 			hud_icon = "weapon_generic_icon_falken",
+			display_unit = "units/weapons/weapon_display/display_dual_weapons",
 			material_settings = WeaponMaterialSettingsTemplates.life_green
 		}
 	},

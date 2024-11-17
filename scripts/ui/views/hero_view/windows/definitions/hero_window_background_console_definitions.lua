@@ -748,6 +748,36 @@ local camera_position_by_character = {
 		x = 0.6,
 		y = -1.3
 	},
+	vs_chaos_troll = {
+		z = 1.4,
+		x = 0.8,
+		y = -0.2
+	},
+	vs_gutter_runner = {
+		z = 0.2,
+		x = 0.6,
+		y = -0.9
+	},
+	vs_packmaster = {
+		z = 0.1,
+		x = 0.6,
+		y = -0.8
+	},
+	vs_ratling_gunner = {
+		z = 0.1,
+		x = 0.6,
+		y = -0.8
+	},
+	vs_warpfire_thrower = {
+		z = 0.1,
+		x = 0.6,
+		y = -0.8
+	},
+	vs_poison_wind_globadier = {
+		z = 0.2,
+		x = 0.6,
+		y = -0.8
+	},
 	default = {
 		z = 0.4,
 		x = 0,

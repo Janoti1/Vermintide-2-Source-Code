@@ -109,3 +109,52 @@ settings.ui_texture_settings = {
 		"dlc_store_banner_wom"
 	}
 }
+settings.currency_ui_settings = {
+	SM = {
+		name = "menu_store_panel_currency_tooltip_title",
+		icon_small = "store_icon_currency_ingame",
+		frame = "button_frame_01_gold",
+		icon_big = "store_icon_currency_ingame_big",
+		tooltip_input = "menu_store_panel_currency_tooltip_obtain_desc",
+		currency_type = "SM",
+		tooltip_description = "menu_store_panel_currency_tooltip_desc",
+		tooltip_title = "menu_store_panel_currency_tooltip_title",
+		background_ui_settings = {
+			texture = "menu_frame_bg_07",
+			size = {
+				512,
+				256
+			}
+		}
+	},
+	VS = {
+		name = "menu_store_panel_versus_currency_tooltip_title",
+		icon_small = "store_icon_currency_versus_coin",
+		frame = "button_frame_01_gold",
+		icon_big = "store_icon_currency_versus_coin_big",
+		tooltip_input = "menu_store_panel_versus_currency_tooltip_obtain_desc",
+		currency_type = "VS",
+		tooltip_description = "menu_store_panel_versus_currency_tooltip_desc",
+		tooltip_title = "menu_store_versus_panel_currency_tooltip_title",
+		background_ui_settings = {
+			texture = "menu_frame_bg_07",
+			size = {
+				512,
+				256
+			}
+		}
+	}
+}
+settings.allowed_store_item_types = {
+	weapon_pose = true,
+	weapon_skin = true,
+	hat = true,
+	chips = true,
+	frame = true,
+	skin = true,
+	weapon_pose_bundle = true
+}
+settings.currency_types = {
+	[1] = "SM",
+	[2] = "VS"
+}

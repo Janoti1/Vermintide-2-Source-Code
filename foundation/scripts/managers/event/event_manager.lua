@@ -1,8 +1,9 @@
 EventManager = class(EventManager)
 
-EventManager.init = function (self)
+EventManager.init = function (self, passthrough)
 	self._events = {}
 	self._referenced_events = {}
+	self._passthrough = passthrough
 end
 
 EventManager.register = function (self, object, ...)
@@ -42,6 +43,10 @@ EventManager.trigger = function (self, event_name, ...)
 
 	if false then
 		-- Nothing
+	end
+
+	if self._passthrough then
+		self._passthrough:trigger(event_name, ...)
 	end
 end
 
@@ -98,5 +103,9 @@ EventManager.trigger_referenced = function (self, reference, event_name, ...)
 		for object, callback_name in pairs(registered_objects) do
 			object[callback_name](object, reference, ...)
 		end
+	end
+
+	if self._passthrough then
+		self._passthrough:trigger_referenced(reference, event_name, ...)
 	end
 end

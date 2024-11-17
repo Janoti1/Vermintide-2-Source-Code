@@ -16,7 +16,7 @@ local GAME_TYPE_LOOKUP_STRINGS = {
 	deus = "area_selection_morris_name",
 	adventure = "area_selection_campaign",
 	weave = "menu_weave_area_no_wom_title",
-	versus = "vs_ui_versus_tag",
+	versus = "area_selection_carousel_name",
 	any = "lobby_browser_mission"
 }
 

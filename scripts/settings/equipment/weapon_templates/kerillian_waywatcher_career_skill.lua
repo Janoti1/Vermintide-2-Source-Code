@@ -1,6 +1,17 @@
 local NUM_PROJECTILES = 3
 local ALERT_SOUND_RANGE_FIRE = 4
 local ALERT_SOUND_RANGE_HIT = 2
+local wield_with_cancel = table.clone(ActionTemplates.wield)
+local wield_default = wield_with_cancel.default
+local anims = type(wield_default.pre_action_anim_event) == "table" and table.clone(wield_default.pre_action_anim_event) or {
+	wield_default.pre_action_anim_event
+}
+
+table.insert(anims, 1, "waywatcher_trueflight_ability_cancel")
+table.insert(anims, 2, "ability_finished")
+
+wield_default.pre_action_anim_event = anims
+
 local weapon_template = {}
 
 weapon_template.actions = {
@@ -52,6 +63,12 @@ weapon_template.actions = {
 					start_time = 0.25,
 					action = "action_career_release",
 					input = "action_career_not_hold"
+				},
+				{
+					sub_action = "default",
+					start_time = 0,
+					action = "action_wield",
+					input = "action_wield"
 				},
 				{
 					sub_action = "hold",
@@ -108,6 +125,12 @@ weapon_template.actions = {
 					start_time = 0,
 					action = "action_career_release",
 					input = "action_career_not_hold"
+				},
+				{
+					sub_action = "default",
+					start_time = 0,
+					action = "action_wield",
+					input = "action_wield"
 				}
 			}
 		}
@@ -188,7 +211,7 @@ weapon_template.actions = {
 		}
 	},
 	action_inspect = ActionTemplates.action_inspect,
-	action_wield = ActionTemplates.wield
+	action_wield = wield_with_cancel
 }
 weapon_template.ammo_data = {
 	ammo_immediately_available = true,

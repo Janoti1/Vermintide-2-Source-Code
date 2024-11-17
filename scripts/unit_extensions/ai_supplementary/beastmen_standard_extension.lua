@@ -128,12 +128,7 @@ BeastmenStandardExtension.on_death = function (self, killer_unit)
 			if astar_data.astar then
 				local astar = astar_data.astar
 
-				if not GwNavAStar.processing_finished(astar) then
-					GwNavAStar.cancel(astar)
-					GwNavAStar.destroy(astar)
-				else
-					GwNavAStar.destroy(astar)
-				end
+				GwNavAStar.destroy(astar)
 			end
 		end
 
@@ -286,12 +281,7 @@ BeastmenStandardExtension._update_self_destruction = function (self, unit, dt, t
 							local player_astar = astar_data.astar
 
 							if player_astar then
-								if not GwNavAStar.processing_finished(player_astar) then
-									GwNavAStar.cancel(player_astar)
-									GwNavAStar.destroy(player_astar)
-								else
-									GwNavAStar.destroy(player_astar)
-								end
+								GwNavAStar.destroy(player_astar)
 							end
 
 							astar_data.astar = nil
@@ -329,12 +319,7 @@ BeastmenStandardExtension._update_self_destruction = function (self, unit, dt, t
 			if data and data.astar then
 				local astar = data.astar
 
-				if not GwNavAStar.processing_finished(astar) then
-					GwNavAStar.cancel(astar)
-					GwNavAStar.destroy(astar)
-				else
-					GwNavAStar.destroy(astar)
-				end
+				GwNavAStar.destroy(astar)
 			end
 		end
 	end

@@ -263,11 +263,11 @@ settings.vote_template_filenames = {
 }
 settings.mechanism_settings = {
 	deus = {
-		default_inventory = true,
 		disable_difficulty_check = true,
 		display_name = "area_selection_morris_name",
 		start_game_play_sound_event = "hud_morris_start_menu_play",
 		server_port = 27017,
+		default_inventory = true,
 		should_display_weapon_disclaimer = true,
 		start_game_open_sound_event = "hud_morris_start_menu_open",
 		use_alt_horde_spawning = true,
@@ -282,6 +282,7 @@ settings.mechanism_settings = {
 		check_matchmaking_hero_availability = true,
 		playfab_mirror = "PlayFabMirrorAdventure",
 		use_gamepad_layout = true,
+		default_difficulty = "hard",
 		rcon_port = 27015,
 		states = {
 			"inn_deus",

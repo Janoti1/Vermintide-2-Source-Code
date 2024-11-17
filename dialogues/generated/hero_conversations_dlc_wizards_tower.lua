@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_conversation_five_a_01",
 		response = "nfl_wizard_tower_conversation_five_a_01",
 		criterias = {
@@ -50,6 +51,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_conversation_four_a_01",
 		response = "nfl_wizard_tower_conversation_four_a_01",
 		criterias = {
@@ -100,6 +102,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_conversation_six_a_01",
 		response = "nfl_wizard_tower_conversation_six_a_01",
 		criterias = {
@@ -150,6 +153,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nfl_wizard_tower_conversation_three_a_01",
 		response = "nfl_wizard_tower_conversation_three_a_01",
 		criterias = {
@@ -200,6 +204,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_conversation_one_a_01",
 		response = "nik_wizard_tower_conversation_one_a_01",
 		criterias = {
@@ -250,6 +255,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "nik_wizard_tower_conversation_two_a_01",
 		response = "nik_wizard_tower_conversation_two_a_01",
 		criterias = {
@@ -300,6 +306,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wizard_tower_conversation_eight_a_01",
 		response = "pbw_wizard_tower_conversation_eight_a_01",
 		criterias = {
@@ -392,6 +399,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wizard_tower_conversation_eight_e_01",
 		response = "pbw_wizard_tower_conversation_eight_e_01",
 		criterias = {
@@ -431,6 +439,7 @@ return function ()
 	define_rule({
 		response = "pbw_wizard_tower_conversation_four_b_01",
 		name = "pbw_wizard_tower_conversation_four_b_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -455,6 +464,7 @@ return function ()
 	define_rule({
 		response = "pbw_wizard_tower_conversation_four_d_01",
 		name = "pbw_wizard_tower_conversation_four_d_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -477,6 +487,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wizard_tower_conversation_seven_c_01",
 		response = "pbw_wizard_tower_conversation_seven_c_01",
 		criterias = {
@@ -514,6 +525,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wizard_tower_conversation_ten_c_01",
 		response = "pbw_wizard_tower_conversation_ten_c_01",
 		criterias = {
@@ -553,6 +565,7 @@ return function ()
 	define_rule({
 		response = "pbw_wizard_tower_conversation_two_c_01",
 		name = "pbw_wizard_tower_conversation_two_c_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -575,6 +588,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_tower_npc_conversations_dummy_trigger",
 		response = "pdr_tower_npc_conversations_dummy_trigger",
 		criterias = {
@@ -655,6 +669,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wizard_tower_conversation_eight_c_01",
 		response = "pdr_wizard_tower_conversation_eight_c_01",
 		criterias = {
@@ -694,6 +709,7 @@ return function ()
 	define_rule({
 		response = "pdr_wizard_tower_conversation_five_b_01",
 		name = "pdr_wizard_tower_conversation_five_b_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -718,6 +734,7 @@ return function ()
 	define_rule({
 		response = "pdr_wizard_tower_conversation_five_d_01",
 		name = "pdr_wizard_tower_conversation_five_d_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -740,6 +757,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wizard_tower_conversation_nine_b_01",
 		response = "pes_wizard_tower_conversation_nine_b_01",
 		criterias = {
@@ -779,6 +797,7 @@ return function ()
 	define_rule({
 		response = "pes_wizard_tower_conversation_one_b_01",
 		name = "pes_wizard_tower_conversation_one_b_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -803,6 +822,7 @@ return function ()
 	define_rule({
 		response = "pes_wizard_tower_conversation_one_d_01",
 		name = "pes_wizard_tower_conversation_one_d_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -827,6 +847,7 @@ return function ()
 	define_rule({
 		response = "pes_wizard_tower_conversation_six_b_01",
 		name = "pes_wizard_tower_conversation_six_b_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -851,6 +872,7 @@ return function ()
 	define_rule({
 		response = "pes_wizard_tower_conversation_six_d_01",
 		name = "pes_wizard_tower_conversation_six_d_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -873,6 +895,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wizard_tower_conversation_ten_a_01",
 		response = "pes_wizard_tower_conversation_ten_a_01",
 		criterias = {
@@ -967,6 +990,7 @@ return function ()
 	define_rule({
 		response = "pes_wizard_tower_conversation_three_c_01",
 		name = "pes_wizard_tower_conversation_three_c_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -989,6 +1013,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_tower_npc_conversations_dummy_trigger",
 		response = "pwe_tower_npc_conversations_dummy_trigger",
 		criterias = {
@@ -1071,6 +1096,7 @@ return function ()
 	define_rule({
 		response = "pwe_wizard_tower_conversation_five_c_01",
 		name = "pwe_wizard_tower_conversation_five_c_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1093,6 +1119,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wizard_tower_conversation_nine_a_01",
 		response = "pwe_wizard_tower_conversation_nine_a_01",
 		criterias = {
@@ -1179,6 +1206,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wizard_tower_conversation_nine_c_01",
 		response = "pwe_wizard_tower_conversation_nine_c_01",
 		criterias = {
@@ -1218,6 +1246,7 @@ return function ()
 	define_rule({
 		response = "pwe_wizard_tower_conversation_one_c_01",
 		name = "pwe_wizard_tower_conversation_one_c_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1240,6 +1269,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wizard_tower_conversation_seven_b_01",
 		response = "pwe_wizard_tower_conversation_seven_b_01",
 		criterias = {
@@ -1279,6 +1309,7 @@ return function ()
 	define_rule({
 		response = "pwe_wizard_tower_conversation_six_c_01",
 		name = "pwe_wizard_tower_conversation_six_c_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1303,6 +1334,7 @@ return function ()
 	define_rule({
 		response = "pwe_wizard_tower_conversation_three_d_01",
 		name = "pwe_wizard_tower_conversation_three_d_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1325,6 +1357,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_tower_npc_conversations_dummy_trigger",
 		response = "pwh_tower_npc_conversations_dummy_trigger",
 		criterias = {
@@ -1405,6 +1438,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wizard_tower_conversation_eight_b_01",
 		response = "pwh_wizard_tower_conversation_eight_b_01",
 		criterias = {
@@ -1442,6 +1476,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wizard_tower_conversation_eight_d_01",
 		response = "pwh_wizard_tower_conversation_eight_d_01",
 		criterias = {
@@ -1481,6 +1516,7 @@ return function ()
 	define_rule({
 		response = "pwh_wizard_tower_conversation_four_c_01",
 		name = "pwh_wizard_tower_conversation_four_c_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1503,6 +1539,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wizard_tower_conversation_seven_a_01",
 		response = "pwh_wizard_tower_conversation_seven_a_01",
 		criterias = {
@@ -1595,6 +1632,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wizard_tower_conversation_seven_d_01",
 		response = "pwh_wizard_tower_conversation_seven_d_01",
 		criterias = {
@@ -1632,6 +1670,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wizard_tower_conversation_ten_b_01",
 		response = "pwh_wizard_tower_conversation_ten_b_01",
 		criterias = {
@@ -1669,6 +1708,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wizard_tower_conversation_ten_d_01",
 		response = "pwh_wizard_tower_conversation_ten_d_01",
 		criterias = {
@@ -1708,6 +1748,7 @@ return function ()
 	define_rule({
 		response = "pwh_wizard_tower_conversation_three_b_01",
 		name = "pwh_wizard_tower_conversation_three_b_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1732,6 +1773,7 @@ return function ()
 	define_rule({
 		response = "pwh_wizard_tower_conversation_two_b_01",
 		name = "pwh_wizard_tower_conversation_two_b_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1756,6 +1798,7 @@ return function ()
 	define_rule({
 		response = "pwh_wizard_tower_conversation_two_d_01",
 		name = "pwh_wizard_tower_conversation_two_d_01",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

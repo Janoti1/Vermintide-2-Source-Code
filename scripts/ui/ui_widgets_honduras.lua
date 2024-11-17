@@ -2383,6 +2383,8 @@ UIWidgets.create_loadout_grid_console = function (scenegraph_id, size, rows, spa
 					content_id = customize_hotspot_name,
 					style_id = customize_hotspot_name,
 					content_check_function = function (content)
+						local mechanism_name = Managers.mechanism:current_mechanism_name()
+						local default_slot_type_allowed = InventorySettings.customize_default_slot_types_allowed[mechanism_name] or InventorySettings.customize_default_slot_types_allowed.default
 						local item_id = "item" .. name_suffix
 						local parent_content = content.parent
 						local item = parent_content[item_id]
@@ -2394,9 +2396,10 @@ UIWidgets.create_loadout_grid_console = function (scenegraph_id, size, rows, spa
 						end
 
 						local item_data = item.data
+						local slot_type = item_data.slot_type
 						local rarity = item.rarity or item_data.rarity or "default"
 
-						if rarity == "default" or rarity == "promo" then
+						if (rarity == "default" or rarity == "promo") and not default_slot_type_allowed[slot_type] then
 							parent_content[item_id .. "_disabled"] = true
 
 							return false
@@ -7528,7 +7531,7 @@ UIWidgets.create_quest_bar = function (scenegraph_id, size)
 	}
 end
 
-UIWidgets.create_summary_experience_bar = function (scenegraph_id, size, masked)
+UIWidgets.create_summary_experience_bar = function (scenegraph_id, size, masked, bar_end_width)
 	return {
 		element = {
 			passes = {
@@ -7576,7 +7579,7 @@ UIWidgets.create_summary_experience_bar = function (scenegraph_id, size, masked)
 			experience_bar_end = {
 				color = Colors.get_color_table_with_alpha("white", 255),
 				size = {
-					132,
+					bar_end_width or 132,
 					size[2]
 				},
 				masked = masked,
@@ -8115,7 +8118,7 @@ UIWidgets.create_default_button = function (scenegraph_id, size, frame_name, bac
 			},
 			title_text = {
 				upper_case = true,
-				word_wrap = true,
+				word_wrap = false,
 				horizontal_alignment = "center",
 				vertical_alignment = "center",
 				dynamic_font_size = true,
@@ -8137,7 +8140,7 @@ UIWidgets.create_default_button = function (scenegraph_id, size, frame_name, bac
 			},
 			title_text_disabled = {
 				upper_case = true,
-				word_wrap = true,
+				word_wrap = false,
 				horizontal_alignment = "center",
 				vertical_alignment = "center",
 				dynamic_font_size = true,
@@ -8158,7 +8161,7 @@ UIWidgets.create_default_button = function (scenegraph_id, size, frame_name, bac
 			},
 			title_text_shadow = {
 				upper_case = true,
-				word_wrap = true,
+				word_wrap = false,
 				horizontal_alignment = "center",
 				vertical_alignment = "center",
 				dynamic_font_size = true,
@@ -15732,7 +15735,7 @@ UIWidgets.create_start_game_console_setting_button = function (scenegraph_id, ti
 		text_id = input_text_name,
 		style_id = input_text_shadow_name
 	}
-	content[input_text_name] = Localize("not_assigned")
+	content[input_text_name] = input_text or Localize("not_assigned")
 
 	local input_text_style = {
 		vertical_alignment = "center",
@@ -16477,7 +16480,7 @@ UIWidgets.create_icon_and_name_button = function (scenegraph_id, icon, text)
 				vertical_alignment = "center",
 				horizontal_alignment = "left",
 				texture_size = {
-					300,
+					400,
 					72
 				},
 				color = {
@@ -16496,7 +16499,7 @@ UIWidgets.create_icon_and_name_button = function (scenegraph_id, icon, text)
 				vertical_alignment = "center",
 				horizontal_alignment = "left",
 				texture_size = {
-					300,
+					400,
 					76
 				},
 				color = Colors.get_color_table_with_alpha("font_title", 0),
@@ -16515,7 +16518,7 @@ UIWidgets.create_icon_and_name_button = function (scenegraph_id, icon, text)
 				vertical_alignment = "bottom",
 				font_type = "hell_shark",
 				size = {
-					300,
+					400,
 					50
 				},
 				text_color = Colors.get_color_table_with_alpha("font_button_normal", 255),
@@ -16534,7 +16537,7 @@ UIWidgets.create_icon_and_name_button = function (scenegraph_id, icon, text)
 				vertical_alignment = "bottom",
 				font_type = "hell_shark",
 				size = {
-					300,
+					400,
 					50
 				},
 				text_color = Colors.get_color_table_with_alpha("white", 0),
@@ -16553,7 +16556,7 @@ UIWidgets.create_icon_and_name_button = function (scenegraph_id, icon, text)
 				vertical_alignment = "bottom",
 				font_type = "hell_shark",
 				size = {
-					300,
+					400,
 					50
 				},
 				text_color = {
@@ -16577,7 +16580,7 @@ UIWidgets.create_icon_and_name_button = function (scenegraph_id, icon, text)
 				vertical_alignment = "bottom",
 				font_type = "hell_shark",
 				size = {
-					300,
+					400,
 					50
 				},
 				text_color = Colors.get_color_table_with_alpha("black", 255),
@@ -23822,4 +23825,214 @@ UIWidgets.create_overcharge_bar_widget = function (scenegraph_id, overcharge_bar
 	}
 
 	return widget
+end
+
+UIWidgets.create_tag = function (scenegraph_id, text, optional_fixed_size)
+	local text_style = {
+		word_wrap = false,
+		font_size = 22,
+		localize = false,
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		use_shadow = false,
+		font_type = "hell_shark",
+		text_color = Colors.get_color_table_with_alpha("font_default", 255),
+		offset = {
+			0,
+			0,
+			2
+		}
+	}
+	local shadow_text_style = table.clone(text_style)
+
+	shadow_text_style.text_color = {
+		255,
+		0,
+		0,
+		0
+	}
+	shadow_text_style.offset = {
+		2,
+		-2,
+		1
+	}
+
+	local ingame_ui = Managers.ui:ingame_ui()
+	local ui_renderer = ingame_ui.ui_renderer
+	local font, scaled_font_size = UIFontByResolution(text_style)
+	local width, height, min = UIRenderer.text_size(ui_renderer, text, font[1], scaled_font_size)
+	local widget_def = {}
+	local element = {
+		passes = {}
+	}
+	local passes = element.passes
+	local content = {}
+	local style = {}
+
+	passes[#passes + 1] = {
+		style_id = "background",
+		pass_type = "rect",
+		content_check_function = function (content, style)
+			return true
+		end
+	}
+	passes[#passes + 1] = {
+		texture_id = "fade",
+		style_id = "fade",
+		pass_type = "texture"
+	}
+	passes[#passes + 1] = {
+		texture_id = "vignette",
+		style_id = "vignette",
+		pass_type = "texture"
+	}
+	passes[#passes + 1] = {
+		texture_id = "frame",
+		style_id = "frame",
+		pass_type = "texture"
+	}
+	passes[#passes + 1] = {
+		style_id = "text",
+		pass_type = "text",
+		text_id = "text"
+	}
+	passes[#passes + 1] = {
+		style_id = "text_shadow",
+		pass_type = "text",
+		text_id = "text",
+		content_check_function = function (content, style)
+			return style.use_shadow
+		end
+	}
+	content.text = text
+	content.size = {
+		optional_fixed_size[1] or width + scaled_font_size * 0.5,
+		optional_fixed_size[2] or height + scaled_font_size * 0.5
+	}
+	content.fade = "button_state_default"
+	content.vignette = "button_bg_fade"
+	content.frame = "menu_frame_glass_01"
+	style.background = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		color = {
+			255,
+			30,
+			30,
+			30
+		},
+		texture_size = {
+			optional_fixed_size[1] or width + scaled_font_size * 0.5,
+			optional_fixed_size[2] or height + scaled_font_size * 0.5
+		},
+		offset = {
+			0,
+			scaled_font_size * 0.05,
+			0
+		}
+	}
+	style.vignette = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		color = {
+			100,
+			255,
+			255,
+			255
+		},
+		texture_size = {
+			optional_fixed_size[1] or width + scaled_font_size * 0.5,
+			optional_fixed_size[2] or height + scaled_font_size * 0.5
+		},
+		offset = {
+			0,
+			scaled_font_size * 0.05,
+			1
+		}
+	}
+	style.fade = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		texture_size = {
+			optional_fixed_size[1] or width + scaled_font_size * 0.5,
+			optional_fixed_size[2] or height + scaled_font_size * 0.5
+		},
+		offset = {
+			0,
+			scaled_font_size * 0.05,
+			2
+		}
+	}
+	style.frame = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		texture_size = {
+			optional_fixed_size[1] or width + scaled_font_size * 0.5,
+			optional_fixed_size[2] or height + scaled_font_size * 0.5
+		},
+		offset = {
+			0,
+			scaled_font_size * 0.05,
+			3
+		}
+	}
+	style.text = text_style
+	style.text_shadow = shadow_text_style
+	widget_def.element = element
+	widget_def.content = content
+	widget_def.style = style
+	widget_def.scenegraph_id = scenegraph_id
+	widget_def.offset = {
+		0,
+		0,
+		0
+	}
+
+	return widget_def
+end
+
+UIWidgets.create_loading_spinner = function (scenegraph_id)
+	return {
+		scenegraph_id = scenegraph_id,
+		element = {
+			passes = {
+				{
+					style_id = "loading_icon",
+					texture_id = "loading_icon",
+					pass_type = "rotated_texture",
+					content_change_function = function (content, style, _, dt)
+						local progress = (content.loading_progress + dt) % 1
+
+						style.angle = 2^math.smoothstep(progress, 0, 1) * math.tau
+						content.loading_progress = progress
+					end
+				}
+			}
+		},
+		content = {
+			loading_icon = "loot_loading",
+			loading_progress = 0
+		},
+		style = {
+			loading_icon = {
+				vertical_alignment = "center",
+				angle = 0,
+				horizontal_alignment = "center",
+				texture_size = {
+					150,
+					150
+				},
+				pivot = {
+					75,
+					75
+				},
+				color = {
+					255,
+					255,
+					255,
+					255
+				}
+			}
+		}
+	}
 end

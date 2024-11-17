@@ -53,6 +53,7 @@ StartGameWindowLobbyBrowserConsole.on_enter = function (self, params, offset)
 	local lobby_finder = LobbyFinder:new(network_options, MatchmakingSettings.MAX_NUM_LOBBIES, IS_WINDOWS and true)
 
 	self._lobby_finder = lobby_finder
+	self._max_num_members = MatchmakingSettings.MAX_NUMBER_OF_PLAYERS
 
 	local ignore_dlc_check = false
 
@@ -213,7 +214,7 @@ StartGameWindowLobbyBrowserConsole._valid_lobby = function (self, lobby_data)
 		local quick_play = lobby_data.quick_play
 		local mechanism = lobby_data.mechanism
 
-		if not is_matchmaking or not mission_id or not difficulty or num_players == MatchmakingSettings.MAX_NUMBER_OF_PLAYERS then
+		if not is_matchmaking or not mission_id or not difficulty or num_players == self._max_num_members then
 			return false
 		end
 
@@ -263,12 +264,16 @@ StartGameWindowLobbyBrowserConsole._valid_lobby = function (self, lobby_data)
 		end
 
 		if mechanism ~= "weave" then
-			local profile_name = player:profile_display_name()
-			local career_name = player:career_name()
-			local has_required_power_level = Managers.matchmaking:has_required_power_level(lobby_data, profile_name, career_name)
+			local private_game = MatchmakingManager.is_lobby_private(lobby_data)
 
-			if not has_required_power_level then
-				return false
+			if not private_game then
+				local profile_name = player:profile_display_name()
+				local career_name = player:career_name()
+				local has_required_power_level = Managers.matchmaking:has_required_power_level(lobby_data, profile_name, career_name)
+
+				if not has_required_power_level then
+					return false
+				end
 			end
 		end
 	elseif is_server then
@@ -570,6 +575,8 @@ StartGameWindowLobbyBrowserConsole.is_lobby_joinable = function (self, lobby_dat
 	local mission_id = lobby_data.selected_mission_id or lobby_data.mission_id
 	local difficulty = lobby_data.difficulty
 	local num_players = tonumber(lobby_data.num_players)
+	local mechanism = lobby_data.mechanism
+	local matchmaking_settings = Managers.matchmaking.get_matchmaking_settings_for_mechanism(mechanism)
 
 	if Managers.matchmaking:is_game_matchmaking() then
 		return false, "cannot_join_while_matchmaking"
@@ -579,7 +586,7 @@ StartGameWindowLobbyBrowserConsole.is_lobby_joinable = function (self, lobby_dat
 		return false, "dlc1_2_difficulty_unavailable"
 	end
 
-	if num_players == MatchmakingSettings.MAX_NUMBER_OF_PLAYERS then
+	if num_players == matchmaking_settings.MAX_NUMBER_OF_PLAYERS then
 		return false, "lobby_is_full"
 	end
 
@@ -590,12 +597,16 @@ StartGameWindowLobbyBrowserConsole.is_lobby_joinable = function (self, lobby_dat
 		return false, "lobby_browser_own_server_error"
 	end
 
-	if lobby_data.is_private == "true" or lobby_data.matchmaking == "false" then
+	if MatchmakingManager.is_lobby_private(lobby_data) or lobby_data.matchmaking == "false" then
 		return false, "not_searching_for_players"
 	end
 
 	if not lobby_data.valid then
 		return false, "lobby_id_mismatch"
+	end
+
+	if Managers.matchmaking:is_matchmaking_paused() then
+		return false, "matchmaking_paused"
 	end
 
 	local statistics_db = self._statistics_db
@@ -604,7 +615,6 @@ StartGameWindowLobbyBrowserConsole.is_lobby_joinable = function (self, lobby_dat
 	local career_name = self._career_name
 	local required_dlcs = {}
 	local quick_game = lobby_data.quick_game == "true"
-	local mechanism = lobby_data.mechanism
 	local mechanism_settings = MechanismSettings[mechanism]
 	local difficulty_lock_reason
 
@@ -641,6 +651,10 @@ StartGameWindowLobbyBrowserConsole.is_lobby_joinable = function (self, lobby_dat
 				required_dlcs[difficulty_settings.dlc_requirement] = true
 			end
 		end
+	elseif mechanism == "versus" then
+		if not quick_game and Managers.mechanism:current_mechanism_name() ~= "versus" then
+			return false, "vs_player_hosted_lobby_wrong_mechanism_error"
+		end
 	else
 		local level_key = mission_id
 		local level_unlocked = level_key == "any" or LevelUnlockUtils.level_unlocked(statistics_db, player_stats_id, level_key)
@@ -667,10 +681,14 @@ StartGameWindowLobbyBrowserConsole.is_lobby_joinable = function (self, lobby_dat
 		end
 
 		if mechanism ~= "deus" then
-			local has_required_power_level = Managers.matchmaking:has_required_power_level(lobby_data, profile_name, career_name)
+			local private_game = MatchmakingManager.is_lobby_private(lobby_data)
 
-			if not has_required_power_level then
-				return false, "difficulty_blocked_by_me"
+			if not private_game then
+				local has_required_power_level = Managers.matchmaking:has_required_power_level(lobby_data, profile_name, career_name)
+
+				if not has_required_power_level then
+					return false, "difficulty_blocked_by_me"
+				end
 			end
 		end
 

@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_afternoon_rain",
 		response = "pbw_wv_afternoon_rain",
 		criterias = {
@@ -74,6 +75,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_dawn_rain",
 		response = "pbw_wv_dawn_rain",
 		criterias = {
@@ -148,6 +150,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_dawn_snow",
 		response = "pbw_wv_dawn_snow",
 		criterias = {
@@ -222,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_dusk_rain",
 		response = "pbw_wv_dusk_rain",
 		criterias = {
@@ -296,6 +300,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_dusk_snow",
 		response = "pbw_wv_dusk_snow",
 		criterias = {
@@ -370,6 +375,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_dusk_storm",
 		response = "pbw_wv_dusk_storm",
 		criterias = {
@@ -444,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_midday_sunny",
 		response = "pbw_wv_midday_sunny",
 		criterias = {
@@ -518,6 +525,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_midnight_clear",
 		response = "pbw_wv_midnight_clear",
 		criterias = {
@@ -592,6 +600,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_midnight_fog",
 		response = "pbw_wv_midnight_fog",
 		criterias = {
@@ -666,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_wv_midnight_storm",
 		response = "pbw_wv_midnight_storm",
 		criterias = {
@@ -740,6 +750,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_afternoon_rain",
 		response = "pdr_wv_afternoon_rain",
 		criterias = {
@@ -814,6 +825,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_dawn_rain",
 		response = "pdr_wv_dawn_rain",
 		criterias = {
@@ -888,6 +900,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_dawn_snow",
 		response = "pdr_wv_dawn_snow",
 		criterias = {
@@ -962,6 +975,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_dusk_rain",
 		response = "pdr_wv_dusk_rain",
 		criterias = {
@@ -1036,6 +1050,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_dusk_snow",
 		response = "pdr_wv_dusk_snow",
 		criterias = {
@@ -1110,6 +1125,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_dusk_storm",
 		response = "pdr_wv_dusk_storm",
 		criterias = {
@@ -1184,6 +1200,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_midday_sunny",
 		response = "pdr_wv_midday_sunny",
 		criterias = {
@@ -1258,6 +1275,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_midnight_clear",
 		response = "pdr_wv_midnight_clear",
 		criterias = {
@@ -1332,6 +1350,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_midnight_fog",
 		response = "pdr_wv_midnight_fog",
 		criterias = {
@@ -1406,6 +1425,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_wv_midnight_storm",
 		response = "pdr_wv_midnight_storm",
 		criterias = {
@@ -1480,6 +1500,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_afternoon_rain",
 		response = "pes_wv_afternoon_rain",
 		criterias = {
@@ -1554,6 +1575,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_dawn_rain",
 		response = "pes_wv_dawn_rain",
 		criterias = {
@@ -1628,6 +1650,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_dawn_snow",
 		response = "pes_wv_dawn_snow",
 		criterias = {
@@ -1702,6 +1725,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_dusk_rain",
 		response = "pes_wv_dusk_rain",
 		criterias = {
@@ -1776,6 +1800,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_dusk_snow",
 		response = "pes_wv_dusk_snow",
 		criterias = {
@@ -1850,6 +1875,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_dusk_storm",
 		response = "pes_wv_dusk_storm",
 		criterias = {
@@ -1924,6 +1950,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_midday_sunny",
 		response = "pes_wv_midday_sunny",
 		criterias = {
@@ -1998,6 +2025,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_midnight_clear",
 		response = "pes_wv_midnight_clear",
 		criterias = {
@@ -2072,6 +2100,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_midnight_fog",
 		response = "pes_wv_midnight_fog",
 		criterias = {
@@ -2146,6 +2175,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_wv_midnight_storm",
 		response = "pes_wv_midnight_storm",
 		criterias = {
@@ -2220,6 +2250,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_afternoon_rain",
 		response = "pwe_wv_afternoon_rain",
 		criterias = {
@@ -2294,6 +2325,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_dawn_rain",
 		response = "pwe_wv_dawn_rain",
 		criterias = {
@@ -2368,6 +2400,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_dawn_snow",
 		response = "pwe_wv_dawn_snow",
 		criterias = {
@@ -2442,6 +2475,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_dusk_rain",
 		response = "pwe_wv_dusk_rain",
 		criterias = {
@@ -2516,6 +2550,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_dusk_snow",
 		response = "pwe_wv_dusk_snow",
 		criterias = {
@@ -2590,6 +2625,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_dusk_storm",
 		response = "pwe_wv_dusk_storm",
 		criterias = {
@@ -2664,6 +2700,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_midday_sunny",
 		response = "pwe_wv_midday_sunny",
 		criterias = {
@@ -2738,6 +2775,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_midnight_clear",
 		response = "pwe_wv_midnight_clear",
 		criterias = {
@@ -2812,6 +2850,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_midnight_fog",
 		response = "pwe_wv_midnight_fog",
 		criterias = {
@@ -2886,6 +2925,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_wv_midnight_storm",
 		response = "pwe_wv_midnight_storm",
 		criterias = {
@@ -2960,6 +3000,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_afternoon_rain",
 		response = "pwh_wv_afternoon_rain",
 		criterias = {
@@ -3034,6 +3075,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_dawn_rain",
 		response = "pwh_wv_dawn_rain",
 		criterias = {
@@ -3108,6 +3150,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_dawn_snow",
 		response = "pwh_wv_dawn_snow",
 		criterias = {
@@ -3182,6 +3225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_dusk_rain",
 		response = "pwh_wv_dusk_rain",
 		criterias = {
@@ -3256,6 +3300,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_dusk_snow",
 		response = "pwh_wv_dusk_snow",
 		criterias = {
@@ -3330,6 +3375,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_dusk_storm",
 		response = "pwh_wv_dusk_storm",
 		criterias = {
@@ -3404,6 +3450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_midday_sunny",
 		response = "pwh_wv_midday_sunny",
 		criterias = {
@@ -3478,6 +3525,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_midnight_clear",
 		response = "pwh_wv_midnight_clear",
 		criterias = {
@@ -3552,6 +3600,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_midnight_fog",
 		response = "pwh_wv_midnight_fog",
 		criterias = {
@@ -3626,6 +3675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_wv_midnight_storm",
 		response = "pwh_wv_midnight_storm",
 		criterias = {

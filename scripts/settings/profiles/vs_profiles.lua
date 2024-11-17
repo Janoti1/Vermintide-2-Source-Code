@@ -249,6 +249,7 @@ local VSProfiles = {
 		ui_portrait_small = "unit_frame_portrait_enemy_chaos_troll",
 		unit_template_name = "player_unit_dark_pact",
 		dialogue_faction = "enemy",
+		supports_motion_sickness_modes = true,
 		default_wielded_slot = "slot_melee",
 		mover_profile = "filter_player_mover_pactsworn",
 		role = "boss",

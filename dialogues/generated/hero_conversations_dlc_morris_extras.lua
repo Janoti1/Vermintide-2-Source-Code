@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_bardin_song_sienna_13",
 		name = "pbw_morris_bardin_song_sienna_13",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -26,6 +27,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_bardin_song_sienna_14",
 		name = "pbw_morris_bardin_song_sienna_14",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -50,6 +52,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_bardin_song_sienna_15",
 		name = "pbw_morris_bardin_song_sienna_15",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -74,6 +77,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_bardin_song_sienna_16",
 		name = "pbw_morris_bardin_song_sienna_16",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -96,6 +100,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_eighteen_01",
 		response = "pbw_morris_extra_eighteen_01",
 		criterias = {
@@ -133,6 +138,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_fifteen_01",
 		response = "pbw_morris_extra_fifteen_01",
 		criterias = {
@@ -213,6 +219,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_fifteen_02",
 		response = "pbw_morris_extra_fifteen_02",
 		criterias = {
@@ -250,6 +257,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_fifteen_03",
 		response = "pbw_morris_extra_fifteen_03",
 		criterias = {
@@ -287,6 +295,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_fourteen_01",
 		response = "pbw_morris_extra_fourteen_01",
 		criterias = {
@@ -318,6 +327,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_fourteen_02",
 		response = "pbw_morris_extra_fourteen_02",
 		criterias = {
@@ -349,6 +359,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_thirteen_01",
 		response = "pbw_morris_extra_thirteen_01",
 		criterias = {
@@ -380,6 +391,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_thirteen_02",
 		response = "pbw_morris_extra_thirteen_02",
 		criterias = {
@@ -411,6 +423,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_twelve_01",
 		response = "pbw_morris_extra_twelve_01",
 		criterias = {
@@ -485,6 +498,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_twelve_02",
 		response = "pbw_morris_extra_twelve_02",
 		criterias = {
@@ -516,6 +530,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_twelve_03",
 		response = "pbw_morris_extra_twelve_03",
 		criterias = {
@@ -547,6 +562,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_two_01",
 		response = "pbw_morris_extra_two_01",
 		criterias = {
@@ -621,6 +637,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_two_02",
 		response = "pbw_morris_extra_two_02",
 		criterias = {
@@ -652,6 +669,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_extra_two_03",
 		response = "pbw_morris_extra_two_03",
 		criterias = {
@@ -683,6 +701,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song",
 		response = "pdr_morris_bardin_song",
 		criterias = {
@@ -770,6 +789,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song_09",
 		response = "pdr_morris_bardin_song_09",
 		criterias = {
@@ -863,6 +883,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song_10",
 		response = "pdr_morris_bardin_song_10",
 		criterias = {
@@ -956,6 +977,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song_13",
 		response = "pdr_morris_bardin_song_13",
 		criterias = {
@@ -1043,6 +1065,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song_14",
 		response = "pdr_morris_bardin_song_14",
 		criterias = {
@@ -1130,6 +1153,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song_15",
 		response = "pdr_morris_bardin_song_15",
 		criterias = {
@@ -1217,6 +1241,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_bardin_song_16",
 		response = "pdr_morris_bardin_song_16",
 		criterias = {
@@ -1304,6 +1329,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_eight_01",
 		response = "pdr_morris_extra_eight_01",
 		criterias = {
@@ -1378,6 +1404,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_eight_02",
 		response = "pdr_morris_extra_eight_02",
 		criterias = {
@@ -1415,6 +1442,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_eight_03",
 		response = "pdr_morris_extra_eight_03",
 		criterias = {
@@ -1452,6 +1480,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_eight_04",
 		response = "pdr_morris_extra_eight_04",
 		criterias = {
@@ -1489,6 +1518,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_fifteen_01",
 		response = "pdr_morris_extra_fifteen_01",
 		criterias = {
@@ -1526,6 +1556,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_four_01",
 		response = "pdr_morris_extra_four_01",
 		criterias = {
@@ -1606,6 +1637,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_four_02",
 		response = "pdr_morris_extra_four_02",
 		criterias = {
@@ -1637,6 +1669,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_four_03",
 		response = "pdr_morris_extra_four_03",
 		criterias = {
@@ -1668,6 +1701,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_fourteen_01",
 		response = "pdr_morris_extra_fourteen_01",
 		criterias = {
@@ -1742,6 +1776,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_fourteen_02",
 		response = "pdr_morris_extra_fourteen_02",
 		criterias = {
@@ -1773,6 +1808,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_nine_01",
 		response = "pdr_morris_extra_nine_01",
 		criterias = {
@@ -1810,6 +1846,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_extra_nine_02",
 		response = "pdr_morris_extra_nine_02",
 		criterias = {
@@ -1849,6 +1886,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_bardin_song_09",
 		name = "pes_morris_bardin_song_09",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1873,6 +1911,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_bardin_song_10",
 		name = "pes_morris_bardin_song_10",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1897,6 +1936,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_bardin_song_kruber_13",
 		name = "pes_morris_bardin_song_kruber_13",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1921,6 +1961,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_bardin_song_kruber_14",
 		name = "pes_morris_bardin_song_kruber_14",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1945,6 +1986,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_bardin_song_kruber_15",
 		name = "pes_morris_bardin_song_kruber_15",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1969,6 +2011,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_bardin_song_kruber_16",
 		name = "pes_morris_bardin_song_kruber_16",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1991,6 +2034,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_eighteen_01",
 		response = "pes_morris_extra_eighteen_01",
 		criterias = {
@@ -2071,6 +2115,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_eighteen_02",
 		response = "pes_morris_extra_eighteen_02",
 		criterias = {
@@ -2108,6 +2153,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_four_01",
 		response = "pes_morris_extra_four_01",
 		criterias = {
@@ -2139,6 +2185,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_four_02",
 		response = "pes_morris_extra_four_02",
 		criterias = {
@@ -2170,6 +2217,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_one_01",
 		response = "pes_morris_extra_one_01",
 		criterias = {
@@ -2207,6 +2255,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_seven_01",
 		response = "pes_morris_extra_seven_01",
 		criterias = {
@@ -2281,6 +2330,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_seven_02",
 		response = "pes_morris_extra_seven_02",
 		criterias = {
@@ -2318,6 +2368,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_seventeen_01",
 		response = "pes_morris_extra_seventeen_01",
 		criterias = {
@@ -2355,6 +2406,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_seventeen_02",
 		response = "pes_morris_extra_seventeen_02",
 		criterias = {
@@ -2392,6 +2444,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_six_01",
 		response = "pes_morris_extra_six_01",
 		criterias = {
@@ -2466,6 +2519,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_six_02",
 		response = "pes_morris_extra_six_02",
 		criterias = {
@@ -2503,6 +2557,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_six_03",
 		response = "pes_morris_extra_six_03",
 		criterias = {
@@ -2540,6 +2595,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_sixteen_01",
 		response = "pes_morris_extra_sixteen_01",
 		criterias = {
@@ -2620,6 +2676,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_sixteen_02",
 		response = "pes_morris_extra_sixteen_02",
 		criterias = {
@@ -2657,6 +2714,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_sixteen_03",
 		response = "pes_morris_extra_sixteen_03",
 		criterias = {
@@ -2694,6 +2752,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_thirteen_01",
 		response = "pes_morris_extra_thirteen_01",
 		criterias = {
@@ -2768,6 +2827,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_thirteen_02",
 		response = "pes_morris_extra_thirteen_02",
 		criterias = {
@@ -2799,6 +2859,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_thirteen_03",
 		response = "pes_morris_extra_thirteen_03",
 		criterias = {
@@ -2830,6 +2891,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_three_01",
 		response = "pes_morris_extra_three_01",
 		criterias = {
@@ -2904,6 +2966,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_three_02",
 		response = "pes_morris_extra_three_02",
 		criterias = {
@@ -2935,6 +2998,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_extra_three_03",
 		response = "pes_morris_extra_three_03",
 		criterias = {
@@ -2968,6 +3032,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_bardin_song_kerillian_13",
 		name = "pwe_morris_bardin_song_kerillian_13",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2992,6 +3057,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_bardin_song_kerillian_14",
 		name = "pwe_morris_bardin_song_kerillian_14",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3016,6 +3082,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_bardin_song_kerillian_15",
 		name = "pwe_morris_bardin_song_kerillian_15",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3038,6 +3105,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_bardin_song_kerillian_16",
 		response = "pwe_morris_bardin_song_kerillian_16",
 		criterias = {
@@ -3075,6 +3143,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eight_01",
 		response = "pwe_morris_extra_eight_01",
 		criterias = {
@@ -3112,6 +3181,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eight_02",
 		response = "pwe_morris_extra_eight_02",
 		criterias = {
@@ -3149,6 +3219,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eight_03",
 		response = "pwe_morris_extra_eight_03",
 		criterias = {
@@ -3186,6 +3257,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eight_04",
 		response = "pwe_morris_extra_eight_04",
 		criterias = {
@@ -3223,6 +3295,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eighteen_01",
 		response = "pwe_morris_extra_eighteen_01",
 		criterias = {
@@ -3260,6 +3333,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eleven_01",
 		response = "pwe_morris_extra_eleven_01",
 		criterias = {
@@ -3291,6 +3365,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_eleven_02",
 		response = "pwe_morris_extra_eleven_02",
 		criterias = {
@@ -3322,6 +3397,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_fifteen_01",
 		response = "pwe_morris_extra_fifteen_01",
 		criterias = {
@@ -3359,6 +3435,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_five_01",
 		response = "pwe_morris_extra_five_01",
 		criterias = {
@@ -3396,6 +3473,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_five_02",
 		response = "pwe_morris_extra_five_02",
 		criterias = {
@@ -3433,6 +3511,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_four_01",
 		response = "pwe_morris_extra_four_01",
 		criterias = {
@@ -3464,6 +3543,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_four_02",
 		response = "pwe_morris_extra_four_02",
 		criterias = {
@@ -3495,6 +3575,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_four_03",
 		response = "pwe_morris_extra_four_03",
 		criterias = {
@@ -3526,6 +3607,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_nine_01",
 		response = "pwe_morris_extra_nine_01",
 		criterias = {
@@ -3600,6 +3682,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_nine_02",
 		response = "pwe_morris_extra_nine_02",
 		criterias = {
@@ -3637,6 +3720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_six_01",
 		response = "pwe_morris_extra_six_01",
 		criterias = {
@@ -3674,6 +3758,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_six_02",
 		response = "pwe_morris_extra_six_02",
 		criterias = {
@@ -3711,6 +3796,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_ten_01",
 		response = "pwe_morris_extra_ten_01",
 		criterias = {
@@ -3742,6 +3828,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_ten_02",
 		response = "pwe_morris_extra_ten_02",
 		criterias = {
@@ -3773,6 +3860,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_ten_03",
 		response = "pwe_morris_extra_ten_03",
 		criterias = {
@@ -3804,6 +3892,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_ten_04",
 		response = "pwe_morris_extra_ten_04",
 		criterias = {
@@ -3835,6 +3924,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_twelve_01",
 		response = "pwe_morris_extra_twelve_01",
 		criterias = {
@@ -3866,6 +3956,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_twelve_02",
 		response = "pwe_morris_extra_twelve_02",
 		criterias = {
@@ -3897,6 +3988,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_extra_twelve_03",
 		response = "pwe_morris_extra_twelve_03",
 		criterias = {
@@ -3930,6 +4022,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_bardin_song_victor_13",
 		name = "pwh_morris_bardin_song_victor_13",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3954,6 +4047,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_bardin_song_victor_14",
 		name = "pwh_morris_bardin_song_victor_14",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3978,6 +4072,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_bardin_song_victor_15",
 		name = "pwh_morris_bardin_song_victor_15",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4002,6 +4097,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_bardin_song_victor_16",
 		name = "pwh_morris_bardin_song_victor_16",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4024,6 +4120,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_eleven_01",
 		response = "pwh_morris_extra_eleven_01",
 		criterias = {
@@ -4098,6 +4195,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_eleven_02",
 		response = "pwh_morris_extra_eleven_02",
 		criterias = {
@@ -4129,6 +4227,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_eleven_03",
 		response = "pwh_morris_extra_eleven_03",
 		criterias = {
@@ -4160,6 +4259,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_five_01",
 		response = "pwh_morris_extra_five_01",
 		criterias = {
@@ -4234,6 +4334,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_five_02",
 		response = "pwh_morris_extra_five_02",
 		criterias = {
@@ -4271,6 +4372,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_one_01",
 		response = "pwh_morris_extra_one_01",
 		criterias = {
@@ -4345,6 +4447,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_one_02",
 		response = "pwh_morris_extra_one_02",
 		criterias = {
@@ -4382,6 +4485,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_seven_01",
 		response = "pwh_morris_extra_seven_01",
 		criterias = {
@@ -4419,6 +4523,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_seven_02",
 		response = "pwh_morris_extra_seven_02",
 		criterias = {
@@ -4456,6 +4561,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_seventeen_01",
 		response = "pwh_morris_extra_seventeen_01",
 		criterias = {
@@ -4530,6 +4636,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_seventeen_02",
 		response = "pwh_morris_extra_seventeen_02",
 		criterias = {
@@ -4567,6 +4674,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_sixteen_01",
 		response = "pwh_morris_extra_sixteen_01",
 		criterias = {
@@ -4604,6 +4712,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_sixteen_02",
 		response = "pwh_morris_extra_sixteen_02",
 		criterias = {
@@ -4641,6 +4750,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_ten_01",
 		response = "pwh_morris_extra_ten_01",
 		criterias = {
@@ -4715,6 +4825,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_ten_02",
 		response = "pwh_morris_extra_ten_02",
 		criterias = {
@@ -4746,6 +4857,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_ten_03",
 		response = "pwh_morris_extra_ten_03",
 		criterias = {
@@ -4777,6 +4889,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_ten_04",
 		response = "pwh_morris_extra_ten_04",
 		criterias = {
@@ -4808,6 +4921,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_ten_05",
 		response = "pwh_morris_extra_ten_05",
 		criterias = {
@@ -4839,6 +4953,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_three_01",
 		response = "pwh_morris_extra_three_01",
 		criterias = {
@@ -4870,6 +4985,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_three_02",
 		response = "pwh_morris_extra_three_02",
 		criterias = {
@@ -4901,6 +5017,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_three_03",
 		response = "pwh_morris_extra_three_03",
 		criterias = {
@@ -4932,6 +5049,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_two_01",
 		response = "pwh_morris_extra_two_01",
 		criterias = {
@@ -4963,6 +5081,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_two_02",
 		response = "pwh_morris_extra_two_02",
 		criterias = {
@@ -4994,6 +5113,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_extra_two_03",
 		response = "pwh_morris_extra_two_03",
 		criterias = {
@@ -6207,7 +6327,7 @@ return function ()
 				[1] = "pes_crater_conversation_ten_01"
 			},
 			sound_events_duration = {
-				[1] = 2.0626459121704
+				[1] = 2.0619790554047
 			}
 		},
 		pes_morris_extra_seventeen_02 = {
@@ -6229,7 +6349,7 @@ return function ()
 				[1] = "pes_crater_conversation_ten_02"
 			},
 			sound_events_duration = {
-				[1] = 3.1555936336517
+				[1] = 3.1550936698914
 			}
 		},
 		pes_morris_extra_six_01 = {
@@ -7417,7 +7537,7 @@ return function ()
 				[1] = "pwh_crater_conversation_ten_01"
 			},
 			sound_events_duration = {
-				[1] = 5.8783750534058
+				[1] = 5.8779792785644
 			}
 		},
 		pwh_morris_extra_seventeen_02 = {
@@ -7439,7 +7559,7 @@ return function ()
 				[1] = "pwh_crater_conversation_ten_02"
 			},
 			sound_events_duration = {
-				[1] = 3.8666875362396
+				[1] = 3.8659791946411
 			}
 		},
 		pwh_morris_extra_sixteen_01 = {

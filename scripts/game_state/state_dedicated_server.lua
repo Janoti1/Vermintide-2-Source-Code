@@ -129,7 +129,7 @@ end
 StateDedicatedServer.update = function (self, dt, t)
 	Network.update_receive(dt, self._network_event_delegate.event_table)
 	self._machine:update(dt, t)
-	self:_update_network(dt)
+	self:_update_network(dt, t)
 
 	if script_data.debug_enabled then
 		VisualAssertLog.update(dt)
@@ -231,10 +231,7 @@ StateDedicatedServer.setup_chat_manager = function (self, game_server)
 	}
 
 	Managers.chat:setup_network_context(network_context)
-
-	if Managers.mechanism:game_mechanism().setup_chats then
-		Managers.mechanism:game_mechanism():setup_chats()
-	end
+	Managers.mechanism:mechanism_try_call("register_chats")
 
 	local function member_func()
 		return game_server:members():get_members()
@@ -259,9 +256,9 @@ StateDedicatedServer.setup_global_managers = function (self, game_server)
 	Managers.party:network_context_created(game_server, peer_id, peer_id)
 end
 
-StateDedicatedServer._update_network = function (self, dt)
+StateDedicatedServer._update_network = function (self, dt, t)
 	if self._network_server then
-		self._network_server:update(dt)
+		self._network_server:update(dt, t)
 	end
 end
 
@@ -289,10 +286,7 @@ StateDedicatedServer._destroy_network = function (self)
 	self.parent.loading_context = {}
 
 	Managers.chat:unregister_channel(1)
-
-	if Managers.mechanism:game_mechanism().unregister_chats then
-		Managers.mechanism:game_mechanism():unregister_chats()
-	end
+	Managers.mechanism:mechanism_try_call("unregister_chats")
 
 	if self._network_transmit then
 		self._network_transmit:destroy()

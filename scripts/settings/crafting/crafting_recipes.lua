@@ -239,53 +239,6 @@ local crafting_recipes = {
 		end
 	},
 	{
-		result_function = "craft_random_jewellery_result_func",
-		name = "craft_random_jewellery",
-		display_name = "crafting_recipe_craft_jewellery",
-		lore_text = "crafting_recipe_random_jewellery_lore_text",
-		validation_function = "craft_validation_func",
-		result_function_playfab = "craftingRandomJewellery",
-		hero_specific_filter = true,
-		item_filter = "can_craft_with",
-		description_text = "description_crafting_recipe_craft_jewellery_random",
-		display_icon_console = "console_crafting_recipe_icon_craft",
-		ingredients = {
-			{
-				amount = 1,
-				name = "crafting_material_jewellery"
-			},
-			{
-				amount = 10,
-				name = "crafting_material_scrap"
-			}
-		},
-		item_sort_func = function (item_1, item_2)
-			local item_data_1 = item_1.data
-			local item_data_2 = item_2.data
-			local item_type_1 = Localize(item_data_1.item_type)
-			local item_type_2 = Localize(item_data_2.item_type)
-			local item_1_backend_id = item_1.backend_id
-			local item_2_backend_id = item_2.backend_id
-			local item_1_favorited = ItemHelper.is_favorite_backend_id(item_1_backend_id, item_1)
-			local item_2_favorited = ItemHelper.is_favorite_backend_id(item_2_backend_id, item_2)
-
-			if item_1_favorited == item_2_favorited then
-				if item_type_1 == item_type_2 then
-					local _, item_name_1 = UIUtils.get_ui_information_from_item(item_1)
-					local _, item_name_2 = UIUtils.get_ui_information_from_item(item_2)
-
-					return Localize(item_name_1) < Localize(item_name_2)
-				else
-					return item_type_1 < item_type_2
-				end
-			elseif item_1_favorited then
-				return true
-			else
-				return false
-			end
-		end
-	},
-	{
 		result_function = "craft_weapon_result_func",
 		name = "craft_weapon",
 		display_name = "crafting_recipe_craft_weapon",
@@ -310,53 +263,6 @@ local crafting_recipes = {
 					item_value = "slot_type",
 					category_table = "weapon_slot_types"
 				}
-			}
-		},
-		item_sort_func = function (item_1, item_2)
-			local item_data_1 = item_1.data
-			local item_data_2 = item_2.data
-			local item_type_1 = Localize(item_data_1.item_type)
-			local item_type_2 = Localize(item_data_2.item_type)
-			local item_1_backend_id = item_1.backend_id
-			local item_2_backend_id = item_2.backend_id
-			local item_1_favorited = ItemHelper.is_favorite_backend_id(item_1_backend_id, item_1)
-			local item_2_favorited = ItemHelper.is_favorite_backend_id(item_2_backend_id, item_2)
-
-			if item_1_favorited == item_2_favorited then
-				if item_type_1 == item_type_2 then
-					local _, item_name_1 = UIUtils.get_ui_information_from_item(item_1)
-					local _, item_name_2 = UIUtils.get_ui_information_from_item(item_2)
-
-					return Localize(item_name_1) < Localize(item_name_2)
-				else
-					return item_type_1 < item_type_2
-				end
-			elseif item_1_favorited then
-				return true
-			else
-				return false
-			end
-		end
-	},
-	{
-		result_function = "craft_random_weapon_result_func",
-		name = "craft_random_weapon",
-		display_name = "crafting_recipe_craft_weapon_random",
-		lore_text = "crafting_recipe_random_weapon_lore_text",
-		validation_function = "craft_validation_func",
-		result_function_playfab = "craftingRandomWeapon",
-		hero_specific_filter = true,
-		item_filter = "can_craft_with",
-		description_text = "description_crafting_recipe_craft_weapon_random",
-		display_icon_console = "console_crafting_recipe_icon_craft",
-		ingredients = {
-			{
-				amount = 1,
-				name = "crafting_material_weapon"
-			},
-			{
-				amount = 10,
-				name = "crafting_material_scrap"
 			}
 		},
 		item_sort_func = function (item_1, item_2)
@@ -741,13 +647,17 @@ local crafting_recipes = {
 		validation_function = "craft_validation_func",
 		result_function_playfab = "craftingUpgradeRarity",
 		hero_specific_filter = true,
-		item_filter = "can_upgrade and not is_equipped and not is_equipped_by_any_loadout",
+		item_filter = "can_upgrade",
 		description_text = "description_crafting_upgrade_item_rarity_common",
 		display_icon_console = "console_crafting_recipe_icon_upgrade",
 		ingredients = {
 			{
-				amount = 20,
+				amount = 10,
 				name = "crafting_material_scrap"
+			},
+			{
+				amount = 2,
+				name = "crafting_material_dust_1"
 			},
 			{
 				catergory = {
@@ -807,13 +717,17 @@ local crafting_recipes = {
 		validation_function = "craft_validation_func",
 		result_function_playfab = "craftingUpgradeRarity",
 		hero_specific_filter = true,
-		item_filter = "can_upgrade and not is_equipped and not is_equipped_by_any_loadout",
+		item_filter = "can_upgrade",
 		description_text = "description_crafting_upgrade_item_rarity_common",
 		display_icon_console = "console_crafting_recipe_icon_upgrade",
 		ingredients = {
 			{
-				amount = 30,
+				amount = 15,
 				name = "crafting_material_scrap"
+			},
+			{
+				amount = 2,
+				name = "crafting_material_dust_2"
 			},
 			{
 				catergory = {
@@ -873,13 +787,17 @@ local crafting_recipes = {
 		validation_function = "craft_validation_func",
 		result_function_playfab = "craftingUpgradeRarity",
 		hero_specific_filter = true,
-		item_filter = "can_upgrade and not is_equipped and not is_equipped_by_any_loadout",
+		item_filter = "can_upgrade",
 		description_text = "description_crafting_upgrade_item_rarity_common",
 		display_icon_console = "console_crafting_recipe_icon_upgrade",
 		ingredients = {
 			{
-				amount = 50,
+				amount = 20,
 				name = "crafting_material_scrap"
+			},
+			{
+				amount = 2,
+				name = "crafting_material_dust_3"
 			},
 			{
 				catergory = {
@@ -939,7 +857,7 @@ local crafting_recipes = {
 		validation_function = "craft_validation_func",
 		result_function_playfab = "craftingUpgradeRarity",
 		hero_specific_filter = true,
-		item_filter = "can_upgrade and not is_equipped and not is_equipped_by_any_loadout",
+		item_filter = "can_upgrade",
 		description_text = "description_crafting_upgrade_item_rarity_common",
 		display_icon_console = "console_crafting_recipe_icon_upgrade",
 		ingredients = {
@@ -1020,7 +938,7 @@ local crafting_recipes = {
 				name = "crafting_material_dust_2"
 			},
 			{
-				amount = 10,
+				amount = 20,
 				name = "crafting_material_dust_1"
 			}
 		},
@@ -1054,7 +972,7 @@ local crafting_recipes = {
 				name = "crafting_material_dust_3"
 			},
 			{
-				amount = 10,
+				amount = 20,
 				name = "crafting_material_dust_2"
 			}
 		},

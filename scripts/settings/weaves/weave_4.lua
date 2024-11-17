@@ -14,11 +14,7 @@ return {
 			base_level_id = "dlc_scorpion_canyon",
 			spawning_seed = 312093,
 			objective_settings = {
-				objective_lists = {
-					{
-						kill_enemies = {}
-					}
-				}
+				objective_lists = "weave_4"
 			},
 			bonus_time_on_complete = WeaveSettings.bonus_time,
 			system_seeds = {

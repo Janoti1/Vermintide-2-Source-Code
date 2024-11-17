@@ -11,7 +11,16 @@ DefaultPlayerData = {
 	bot_spawn_priority_version = 2,
 	new_sign_in_rewards_data_version = 2,
 	favorite_item_data_version = 1,
-	mission_selection = {},
+	mission_selection = {
+		adventure = {
+			difficulty_key = "normal"
+		},
+		custom = {
+			area_name = "helmgart",
+			difficulty_key = "normal",
+			level_id = "military"
+		}
+	},
 	favorite_item_ids = {},
 	favorite_item_ids_by_career = {},
 	new_item_ids = {},

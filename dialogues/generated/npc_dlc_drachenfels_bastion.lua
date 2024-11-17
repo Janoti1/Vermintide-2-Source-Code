@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "ncv1_bastion_vo_first_villager",
 		name = "ncv1_bastion_vo_first_villager",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -26,6 +27,7 @@ return function ()
 	define_rule({
 		response = "ncv2_bastion_vo_last_villager",
 		name = "ncv2_bastion_vo_last_villager",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -50,6 +52,7 @@ return function ()
 	define_rule({
 		response = "ncv_bastion_vo_freed_villager",
 		name = "ncv_bastion_vo_freed_villager",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -74,6 +77,7 @@ return function ()
 	define_rule({
 		response = "nngl_bastion_vo_sorcerer_greeting",
 		name = "nngl_bastion_vo_sorcerer_greeting",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -92,6 +96,7 @@ return function ()
 	define_rule({
 		response = "nngl_bastion_vo_sorcerer_taunt",
 		name = "nngl_bastion_vo_sorcerer_taunt",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -108,6 +113,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_vo_finale_sorcerer",
 		response = "pbw_bastion_vo_finale_sorcerer",
 		criterias = {
@@ -152,6 +158,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_vo_finale_sorcerer",
 		response = "pdr_bastion_vo_finale_sorcerer",
 		criterias = {
@@ -196,6 +203,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_vo_finale_sorcerer",
 		response = "pes_bastion_vo_finale_sorcerer",
 		criterias = {
@@ -240,6 +248,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_vo_finale_sorcerer",
 		response = "pwe_bastion_vo_finale_sorcerer",
 		criterias = {
@@ -284,6 +293,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_vo_finale_sorcerer",
 		response = "pwh_bastion_vo_finale_sorcerer",
 		criterias = {
@@ -601,10 +611,10 @@ return function ()
 				"pbw_bastion_vo_finale_sorcerer_04"
 			},
 			sound_events_duration = {
-				3.5067915916443,
-				3.1565208435059,
-				5.5768542289734,
-				1.6677500009537
+				3.5060000419617,
+				3.1559791564941,
+				5.5759792327881,
+				1.6670000553131
 			}
 		},
 		pdr_bastion_vo_finale_sorcerer = {
@@ -640,10 +650,10 @@ return function ()
 				"pdr_bastion_vo_finale_sorcerer_04"
 			},
 			sound_events_duration = {
-				3.349791765213,
-				1.6511249542236,
-				3.7300417423248,
-				4.4124374389648
+				3.3489792346954,
+				1.6509791612625,
+				3.7299792766571,
+				4.4119791984558
 			}
 		},
 		pes_bastion_vo_finale_sorcerer = {
@@ -679,10 +689,10 @@ return function ()
 				"pes_bastion_vo_finale_sorcerer_04"
 			},
 			sound_events_duration = {
-				3.1581041812897,
-				2.5231249332428,
-				3.2865624427795,
-				2.9674582481384
+				3.1579792499542,
+				2.522979259491,
+				3.2859792709351,
+				2.966979265213
 			}
 		},
 		pwe_bastion_vo_finale_sorcerer = {
@@ -718,10 +728,10 @@ return function ()
 				"pwe_bastion_vo_finale_sorcerer_04"
 			},
 			sound_events_duration = {
-				2.3492290973663,
-				1.6887916326523,
-				2.44495844841,
-				2.252833366394
+				2.3489792346954,
+				1.6879999637604,
+				2.444000005722,
+				2.2520000934601
 			}
 		},
 		pwh_bastion_vo_finale_sorcerer = {
@@ -757,10 +767,10 @@ return function ()
 				"pwh_bastion_vo_finale_sorcerer_04"
 			},
 			sound_events_duration = {
-				3.745854139328,
-				3.2355415821075,
-				5.3781666755676,
-				4.3389582633972
+				3.7449791431427,
+				3.2349791526794,
+				5.3779792785644,
+				4.3379793167114
 			}
 		}
 	})

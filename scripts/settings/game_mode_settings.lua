@@ -1,4 +1,5 @@
 require("scripts/settings/difficulty_settings")
+require("scripts/settings/objective_unit_templates")
 require("foundation/scripts/util/error")
 
 GameModeSettings = GameModeSettings or {}
@@ -34,6 +35,7 @@ GameModeSettings.adventure.difficulties = DefaultDifficulties
 GameModeSettings.adventure.end_mission_rewards = true
 GameModeSettings.adventure.hud_component_list_path = "scripts/ui/hud_ui/component_list_definitions/hud_component_list_adventure"
 GameModeSettings.adventure.use_keep_decorations = true
+GameModeSettings.adventure.has_art_scraps = true
 GameModeSettings.adventure.ping_mode = {
 	world_markers = false,
 	outlines = {
@@ -41,6 +43,7 @@ GameModeSettings.adventure.ping_mode = {
 		unit = true
 	}
 }
+GameModeSettings.adventure.max_num_rewards_displayed = 8
 GameModeSettings.survival = table.clone(GameModeSettings.base)
 GameModeSettings.survival.key = "survival"
 GameModeSettings.survival.class_name = "GameModeSurvival"
@@ -146,6 +149,12 @@ GameModeSettings.weave.ping_mode = {
 GameModeSettings.weave.bots_disabled = true
 GameModeSettings.weave.end_mission_rewards = true
 GameModeSettings.weave.disable_difficulty_spawning_items = true
+GameModeSettings.weave.max_num_rewards_displayed = 8
+GameModeSettings.weave.static_objective_item_spawners = {
+	kill_enemies = {
+		unit_template = ObjectiveUnitTemplates.weave_kill_enemies
+	}
+}
 GameModeSettings.weave.hud_ui_settings = {
 	killfeed_offset = true
 }

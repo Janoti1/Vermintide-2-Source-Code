@@ -10,7 +10,8 @@ ActivatedAbilitySettings.es_4 = {
 		weapon_name = "markus_questingknight_career_skill_weapon",
 		mechanism_overrides = {
 			versus = {
-				cooldown = 40
+				cooldown = 40,
+				weapon_name = "markus_questingknight_career_skill_weapon_vs"
 			}
 		}
 	}
@@ -24,6 +25,9 @@ PassiveAbilitySettings.es_4 = {
 		"markus_questing_knight_ability_cooldown_on_damage_taken",
 		"markus_questing_knight_perk_movement_speed",
 		"markus_questing_knight_perk_first_target_damage",
+		"markus_questing_knight_perk_power_block"
+	},
+	husk_buffs = {
 		"markus_questing_knight_perk_power_block"
 	},
 	perks = {

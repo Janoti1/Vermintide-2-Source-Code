@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_arena_altar",
 		name = "nfl_morris_arena_altar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -20,6 +21,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_arena_scroll",
 		name = "nfl_morris_arena_scroll",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -44,6 +46,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_barrel_challenge",
 		name = "nfl_morris_barrel_challenge",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -68,6 +71,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_cursed_chest_complete",
 		name = "nfl_morris_cursed_chest_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -86,6 +90,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_abundance_of_life",
 		name = "nfl_morris_intro_curse_abundance_of_life",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -104,6 +109,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_blood_storm",
 		name = "nfl_morris_intro_curse_blood_storm",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -122,6 +128,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_bolt_of_change",
 		name = "nfl_morris_intro_curse_bolt_of_change",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -140,6 +147,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_champions",
 		name = "nfl_morris_intro_curse_champions",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -158,6 +166,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_change_of_tzeentch",
 		name = "nfl_morris_intro_curse_change_of_tzeentch",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -176,6 +185,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_corrupted_flesh",
 		name = "nfl_morris_intro_curse_corrupted_flesh",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -194,6 +204,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_egg_of_tzeentch",
 		name = "nfl_morris_intro_curse_egg_of_tzeentch",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -212,6 +223,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_empathy",
 		name = "nfl_morris_intro_curse_empathy",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -230,6 +242,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_greed_pinata",
 		name = "nfl_morris_intro_curse_greed_pinata",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -248,6 +261,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_miasma",
 		name = "nfl_morris_intro_curse_miasma",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -266,6 +280,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_skulking_sorcerer",
 		name = "nfl_morris_intro_curse_skulking_sorcerer",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -284,6 +299,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_curse_skulls_of_fury",
 		name = "nfl_morris_intro_curse_skulls_of_fury",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -302,6 +318,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_intro_no_curse",
 		name = "nfl_morris_intro_no_curse",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -320,6 +337,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_ritual_challenge",
 		name = "nfl_morris_ritual_challenge",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -344,6 +362,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_ship_challenge",
 		name = "nfl_morris_ship_challenge",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -368,6 +387,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_survival_challenge",
 		name = "nfl_morris_survival_challenge",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -392,6 +412,7 @@ return function ()
 	define_rule({
 		response = "nfl_morris_winch_challenge",
 		name = "nfl_morris_winch_challenge",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -416,6 +437,7 @@ return function ()
 	define_rule({
 		response = "ngp_morris_arena_complete",
 		name = "ngp_morris_arena_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -440,6 +462,7 @@ return function ()
 	define_rule({
 		response = "ngp_morris_arena_intro",
 		name = "ngp_morris_arena_intro",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -464,6 +487,7 @@ return function ()
 	define_rule({
 		response = "ngp_morris_final_arena_complete",
 		name = "ngp_morris_final_arena_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -488,6 +512,7 @@ return function ()
 	define_rule({
 		response = "ngp_morris_final_arena_intro",
 		name = "ngp_morris_final_arena_intro",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -512,6 +537,7 @@ return function ()
 	define_rule({
 		response = "pbw_arena_citadel_continue",
 		name = "pbw_arena_citadel_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -536,6 +562,7 @@ return function ()
 	define_rule({
 		response = "pbw_arena_citadel_final",
 		name = "pbw_arena_citadel_final",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -560,6 +587,7 @@ return function ()
 	define_rule({
 		response = "pbw_arena_citadel_start",
 		name = "pbw_arena_citadel_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -590,6 +618,7 @@ return function ()
 	define_rule({
 		response = "pbw_arena_ice_continue",
 		name = "pbw_arena_ice_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -614,6 +643,7 @@ return function ()
 	define_rule({
 		response = "pbw_bay_ship_challenge_cross",
 		name = "pbw_bay_ship_challenge_cross",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -638,6 +668,7 @@ return function ()
 	define_rule({
 		response = "pbw_bay_ship_challenge_response",
 		name = "pbw_bay_ship_challenge_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -668,6 +699,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_blessing_grimnir_killed",
 		name = "pbw_gameplay_blessing_grimnir_killed",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -692,6 +724,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_blessing_grimnir_spotted",
 		name = "pbw_gameplay_blessing_grimnir_spotted",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -714,6 +747,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_collecting_a_faith_coin",
 		response = "pbw_gameplay_collecting_a_faith_coin",
 		criterias = {
@@ -764,6 +798,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_damage_taken",
 		response = "pbw_gameplay_curse_damage_taken",
 		criterias = {
@@ -807,6 +842,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_killed_marked_enemy",
 		response = "pbw_gameplay_curse_killed_marked_enemy",
 		criterias = {
@@ -847,6 +883,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_curse_move_on",
 		name = "pbw_gameplay_curse_move_on",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -869,6 +906,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_negative_effect_happened",
 		response = "pbw_gameplay_curse_negative_effect_happened",
 		criterias = {
@@ -909,6 +947,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_curse_objective_achieved",
 		name = "pbw_gameplay_curse_objective_achieved",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -931,6 +970,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_positive_effect_happened",
 		response = "pbw_gameplay_curse_positive_effect_happened",
 		criterias = {
@@ -969,6 +1009,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_see_danger",
 		response = "pbw_gameplay_curse_see_danger",
 		criterias = {
@@ -1013,6 +1054,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_see_danger_event",
 		response = "pbw_gameplay_curse_see_danger_event",
 		criterias = {
@@ -1051,6 +1093,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_see_objective",
 		response = "pbw_gameplay_curse_see_objective",
 		criterias = {
@@ -1095,6 +1138,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_see_objective_event",
 		response = "pbw_gameplay_curse_see_objective_event",
 		criterias = {
@@ -1135,6 +1179,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_curse_very_negative_effect_happened",
 		name = "pbw_gameplay_curse_very_negative_effect_happened",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1157,6 +1202,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_curse_very_positive_effect_happened",
 		response = "pbw_gameplay_curse_very_positive_effect_happened",
 		criterias = {
@@ -1195,6 +1241,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_cursed_chest",
 		response = "pbw_gameplay_cursed_chest",
 		criterias = {
@@ -1253,6 +1300,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_cursed_chest_activated",
 		name = "pbw_gameplay_cursed_chest_activated",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1275,6 +1323,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_cursed_chest_ping",
 		response = "pbw_gameplay_cursed_chest_ping",
 		criterias = {
@@ -1333,6 +1382,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_isha_blessing",
 		name = "pbw_gameplay_isha_blessing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1357,6 +1407,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_orb_of_morgrim",
 		name = "pbw_gameplay_orb_of_morgrim",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1381,6 +1432,7 @@ return function ()
 	define_rule({
 		response = "pbw_gameplay_rally_flag",
 		name = "pbw_gameplay_rally_flag",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1403,6 +1455,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_seeing_a_faith_coin",
 		response = "pbw_gameplay_seeing_a_faith_coin",
 		criterias = {
@@ -1465,6 +1518,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_using_a_weapon_shrine",
 		response = "pbw_gameplay_using_a_weapon_shrine",
 		criterias = {
@@ -1505,6 +1559,7 @@ return function ()
 	define_rule({
 		response = "pbw_gorge_event_start",
 		name = "pbw_gorge_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1535,6 +1590,7 @@ return function ()
 	define_rule({
 		response = "pbw_mines_event_start",
 		name = "pbw_mines_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1559,6 +1615,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_arena_survive_a",
 		name = "pbw_morris_arena_survive_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1589,6 +1646,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_arena_survive_b",
 		name = "pbw_morris_arena_survive_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1619,6 +1677,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_citadel_altar",
 		name = "pbw_morris_citadel_altar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1641,6 +1700,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_morris_curse_tzeentch_egg",
 		response = "pbw_morris_curse_tzeentch_egg",
 		criterias = {
@@ -1687,6 +1747,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_foreboding",
 		name = "pbw_morris_foreboding",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1711,6 +1772,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_ritual_start",
 		name = "pbw_morris_ritual_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1741,6 +1803,7 @@ return function ()
 	define_rule({
 		response = "pbw_morris_run_complete",
 		name = "pbw_morris_run_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1763,6 +1826,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_skulking_sorcerer_spotted",
 		response = "pbw_skulking_sorcerer_spotted",
 		criterias = {
@@ -1815,6 +1879,7 @@ return function ()
 	define_rule({
 		response = "pdr_arena_citadel_continue",
 		name = "pdr_arena_citadel_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1839,6 +1904,7 @@ return function ()
 	define_rule({
 		response = "pdr_arena_citadel_final",
 		name = "pdr_arena_citadel_final",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1863,6 +1929,7 @@ return function ()
 	define_rule({
 		response = "pdr_arena_citadel_start",
 		name = "pdr_arena_citadel_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1893,6 +1960,7 @@ return function ()
 	define_rule({
 		response = "pdr_arena_ice_continue",
 		name = "pdr_arena_ice_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1917,6 +1985,7 @@ return function ()
 	define_rule({
 		response = "pdr_bay_ship_challenge_cross",
 		name = "pdr_bay_ship_challenge_cross",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1941,6 +2010,7 @@ return function ()
 	define_rule({
 		response = "pdr_bay_ship_challenge_response",
 		name = "pdr_bay_ship_challenge_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1971,6 +2041,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_blessing_grimnir_killed",
 		name = "pdr_gameplay_blessing_grimnir_killed",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1995,6 +2066,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_blessing_grimnir_spotted",
 		name = "pdr_gameplay_blessing_grimnir_spotted",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2017,6 +2089,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_collecting_a_faith_coin",
 		response = "pdr_gameplay_collecting_a_faith_coin",
 		criterias = {
@@ -2067,6 +2140,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_damage_taken",
 		response = "pdr_gameplay_curse_damage_taken",
 		criterias = {
@@ -2110,6 +2184,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_killed_marked_enemy",
 		response = "pdr_gameplay_curse_killed_marked_enemy",
 		criterias = {
@@ -2150,6 +2225,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_curse_move_on",
 		name = "pdr_gameplay_curse_move_on",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2172,6 +2248,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_negative_effect_happened",
 		response = "pdr_gameplay_curse_negative_effect_happened",
 		criterias = {
@@ -2212,6 +2289,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_curse_objective_achieved",
 		name = "pdr_gameplay_curse_objective_achieved",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2234,6 +2312,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_positive_effect_happened",
 		response = "pdr_gameplay_curse_positive_effect_happened",
 		criterias = {
@@ -2272,6 +2351,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_see_danger",
 		response = "pdr_gameplay_curse_see_danger",
 		criterias = {
@@ -2316,6 +2396,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_see_danger_event",
 		response = "pdr_gameplay_curse_see_danger_event",
 		criterias = {
@@ -2354,6 +2435,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_see_objective",
 		response = "pdr_gameplay_curse_see_objective",
 		criterias = {
@@ -2398,6 +2480,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_see_objective_event",
 		response = "pdr_gameplay_curse_see_objective_event",
 		criterias = {
@@ -2438,6 +2521,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_curse_very_negative_effect_happened",
 		name = "pdr_gameplay_curse_very_negative_effect_happened",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2460,6 +2544,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_curse_very_positive_effect_happened",
 		response = "pdr_gameplay_curse_very_positive_effect_happened",
 		criterias = {
@@ -2498,6 +2583,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_cursed_chest",
 		response = "pdr_gameplay_cursed_chest",
 		criterias = {
@@ -2556,6 +2642,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_cursed_chest_activated",
 		name = "pdr_gameplay_cursed_chest_activated",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2578,6 +2665,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_cursed_chest_ping",
 		response = "pdr_gameplay_cursed_chest_ping",
 		criterias = {
@@ -2636,6 +2724,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_isha_blessing",
 		name = "pdr_gameplay_isha_blessing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2660,6 +2749,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_orb_of_morgrim",
 		name = "pdr_gameplay_orb_of_morgrim",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2684,6 +2774,7 @@ return function ()
 	define_rule({
 		response = "pdr_gameplay_rally_flag",
 		name = "pdr_gameplay_rally_flag",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2706,6 +2797,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_seeing_a_faith_coin",
 		response = "pdr_gameplay_seeing_a_faith_coin",
 		criterias = {
@@ -2768,6 +2860,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_gameplay_using_a_weapon_shrine",
 		response = "pdr_gameplay_using_a_weapon_shrine",
 		criterias = {
@@ -2808,6 +2901,7 @@ return function ()
 	define_rule({
 		response = "pdr_gorge_event_start",
 		name = "pdr_gorge_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2838,6 +2932,7 @@ return function ()
 	define_rule({
 		response = "pdr_mines_event_start",
 		name = "pdr_mines_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2862,6 +2957,7 @@ return function ()
 	define_rule({
 		response = "pdr_morris_arena_survive_a",
 		name = "pdr_morris_arena_survive_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2892,6 +2988,7 @@ return function ()
 	define_rule({
 		response = "pdr_morris_arena_survive_b",
 		name = "pdr_morris_arena_survive_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2922,6 +3019,7 @@ return function ()
 	define_rule({
 		response = "pdr_morris_citadel_altar",
 		name = "pdr_morris_citadel_altar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -2944,6 +3042,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_morris_curse_tzeentch_egg",
 		response = "pdr_morris_curse_tzeentch_egg",
 		criterias = {
@@ -2990,6 +3089,7 @@ return function ()
 	define_rule({
 		response = "pdr_morris_foreboding",
 		name = "pdr_morris_foreboding",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3014,6 +3114,7 @@ return function ()
 	define_rule({
 		response = "pdr_morris_ritual_start",
 		name = "pdr_morris_ritual_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3044,6 +3145,7 @@ return function ()
 	define_rule({
 		response = "pdr_morris_run_complete",
 		name = "pdr_morris_run_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3066,6 +3168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_skulking_sorcerer_spotted",
 		response = "pdr_skulking_sorcerer_spotted",
 		criterias = {
@@ -3118,6 +3221,7 @@ return function ()
 	define_rule({
 		response = "pes_arena_citadel_continue",
 		name = "pes_arena_citadel_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3142,6 +3246,7 @@ return function ()
 	define_rule({
 		response = "pes_arena_citadel_final",
 		name = "pes_arena_citadel_final",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3166,6 +3271,7 @@ return function ()
 	define_rule({
 		response = "pes_arena_citadel_start",
 		name = "pes_arena_citadel_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3196,6 +3302,7 @@ return function ()
 	define_rule({
 		response = "pes_arena_ice_continue",
 		name = "pes_arena_ice_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3220,6 +3327,7 @@ return function ()
 	define_rule({
 		response = "pes_bay_ship_challenge_cross",
 		name = "pes_bay_ship_challenge_cross",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3244,6 +3352,7 @@ return function ()
 	define_rule({
 		response = "pes_bay_ship_challenge_response",
 		name = "pes_bay_ship_challenge_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3274,6 +3383,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_blessing_grimnir_killed",
 		name = "pes_gameplay_blessing_grimnir_killed",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3298,6 +3408,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_blessing_grimnir_spotted",
 		name = "pes_gameplay_blessing_grimnir_spotted",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3320,6 +3431,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_collecting_a_faith_coin",
 		response = "pes_gameplay_collecting_a_faith_coin",
 		criterias = {
@@ -3370,6 +3482,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_damage_taken",
 		response = "pes_gameplay_curse_damage_taken",
 		criterias = {
@@ -3413,6 +3526,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_killed_marked_enemy",
 		response = "pes_gameplay_curse_killed_marked_enemy",
 		criterias = {
@@ -3453,6 +3567,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_curse_move_on",
 		name = "pes_gameplay_curse_move_on",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3475,6 +3590,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_negative_effect_happened",
 		response = "pes_gameplay_curse_negative_effect_happened",
 		criterias = {
@@ -3515,6 +3631,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_curse_objective_achieved",
 		name = "pes_gameplay_curse_objective_achieved",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3537,6 +3654,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_positive_effect_happened",
 		response = "pes_gameplay_curse_positive_effect_happened",
 		criterias = {
@@ -3575,6 +3693,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_see_danger",
 		response = "pes_gameplay_curse_see_danger",
 		criterias = {
@@ -3619,6 +3738,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_see_danger_event",
 		response = "pes_gameplay_curse_see_danger_event",
 		criterias = {
@@ -3657,6 +3777,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_see_objective",
 		response = "pes_gameplay_curse_see_objective",
 		criterias = {
@@ -3701,6 +3822,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_see_objective_event",
 		response = "pes_gameplay_curse_see_objective_event",
 		criterias = {
@@ -3741,6 +3863,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_curse_very_negative_effect_happened",
 		name = "pes_gameplay_curse_very_negative_effect_happened",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3763,6 +3886,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_curse_very_positive_effect_happened",
 		response = "pes_gameplay_curse_very_positive_effect_happened",
 		criterias = {
@@ -3801,6 +3925,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_cursed_chest",
 		response = "pes_gameplay_cursed_chest",
 		criterias = {
@@ -3859,6 +3984,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_cursed_chest_activated",
 		name = "pes_gameplay_cursed_chest_activated",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3881,6 +4007,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_cursed_chest_ping",
 		response = "pes_gameplay_cursed_chest_ping",
 		criterias = {
@@ -3939,6 +4066,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_isha_blessing",
 		name = "pes_gameplay_isha_blessing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3963,6 +4091,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_orb_of_morgrim",
 		name = "pes_gameplay_orb_of_morgrim",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3987,6 +4116,7 @@ return function ()
 	define_rule({
 		response = "pes_gameplay_rally_flag",
 		name = "pes_gameplay_rally_flag",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4009,6 +4139,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_seeing_a_faith_coin",
 		response = "pes_gameplay_seeing_a_faith_coin",
 		criterias = {
@@ -4071,6 +4202,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_gameplay_using_a_weapon_shrine",
 		response = "pes_gameplay_using_a_weapon_shrine",
 		criterias = {
@@ -4111,6 +4243,7 @@ return function ()
 	define_rule({
 		response = "pes_gorge_event_start",
 		name = "pes_gorge_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4141,6 +4274,7 @@ return function ()
 	define_rule({
 		response = "pes_mines_event_start",
 		name = "pes_mines_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4165,6 +4299,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_arena_survive_a",
 		name = "pes_morris_arena_survive_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4195,6 +4330,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_arena_survive_b",
 		name = "pes_morris_arena_survive_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4225,6 +4361,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_citadel_altar",
 		name = "pes_morris_citadel_altar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4247,6 +4384,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_morris_curse_tzeentch_egg",
 		response = "pes_morris_curse_tzeentch_egg",
 		criterias = {
@@ -4293,6 +4431,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_foreboding",
 		name = "pes_morris_foreboding",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4317,6 +4456,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_ritual_start",
 		name = "pes_morris_ritual_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4347,6 +4487,7 @@ return function ()
 	define_rule({
 		response = "pes_morris_run_complete",
 		name = "pes_morris_run_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4369,6 +4510,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_skulking_sorcerer_spotted",
 		response = "pes_skulking_sorcerer_spotted",
 		criterias = {
@@ -4421,6 +4563,7 @@ return function ()
 	define_rule({
 		response = "pwe_arena_citadel_continue",
 		name = "pwe_arena_citadel_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4445,6 +4588,7 @@ return function ()
 	define_rule({
 		response = "pwe_arena_citadel_final",
 		name = "pwe_arena_citadel_final",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4469,6 +4613,7 @@ return function ()
 	define_rule({
 		response = "pwe_arena_citadel_start",
 		name = "pwe_arena_citadel_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4499,6 +4644,7 @@ return function ()
 	define_rule({
 		response = "pwe_arena_ice_continue",
 		name = "pwe_arena_ice_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4523,6 +4669,7 @@ return function ()
 	define_rule({
 		response = "pwe_bay_ship_challenge_cross",
 		name = "pwe_bay_ship_challenge_cross",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4547,6 +4694,7 @@ return function ()
 	define_rule({
 		response = "pwe_bay_ship_challenge_response",
 		name = "pwe_bay_ship_challenge_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4577,6 +4725,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_blessing_grimnir_killed",
 		name = "pwe_gameplay_blessing_grimnir_killed",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4601,6 +4750,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_blessing_grimnir_spotted",
 		name = "pwe_gameplay_blessing_grimnir_spotted",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4623,6 +4773,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_collecting_a_faith_coin",
 		response = "pwe_gameplay_collecting_a_faith_coin",
 		criterias = {
@@ -4673,6 +4824,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_damage_taken",
 		response = "pwe_gameplay_curse_damage_taken",
 		criterias = {
@@ -4716,6 +4868,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_killed_marked_enemy",
 		response = "pwe_gameplay_curse_killed_marked_enemy",
 		criterias = {
@@ -4756,6 +4909,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_curse_move_on",
 		name = "pwe_gameplay_curse_move_on",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4778,6 +4932,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_negative_effect_happened",
 		response = "pwe_gameplay_curse_negative_effect_happened",
 		criterias = {
@@ -4818,6 +4973,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_curse_objective_achieved",
 		name = "pwe_gameplay_curse_objective_achieved",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -4840,6 +4996,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_positive_effect_happened",
 		response = "pwe_gameplay_curse_positive_effect_happened",
 		criterias = {
@@ -4878,6 +5035,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_see_danger",
 		response = "pwe_gameplay_curse_see_danger",
 		criterias = {
@@ -4922,6 +5080,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_see_danger_event",
 		response = "pwe_gameplay_curse_see_danger_event",
 		criterias = {
@@ -4960,6 +5119,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_see_objective",
 		response = "pwe_gameplay_curse_see_objective",
 		criterias = {
@@ -5004,6 +5164,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_see_objective_event",
 		response = "pwe_gameplay_curse_see_objective_event",
 		criterias = {
@@ -5044,6 +5205,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_curse_very_negative_effect_happened",
 		name = "pwe_gameplay_curse_very_negative_effect_happened",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5066,6 +5228,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_curse_very_positive_effect_happened",
 		response = "pwe_gameplay_curse_very_positive_effect_happened",
 		criterias = {
@@ -5104,6 +5267,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_cursed_chest",
 		response = "pwe_gameplay_cursed_chest",
 		criterias = {
@@ -5162,6 +5326,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_cursed_chest_activated",
 		name = "pwe_gameplay_cursed_chest_activated",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5184,6 +5349,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_cursed_chest_ping",
 		response = "pwe_gameplay_cursed_chest_ping",
 		criterias = {
@@ -5242,6 +5408,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_isha_blessing",
 		name = "pwe_gameplay_isha_blessing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5266,6 +5433,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_orb_of_morgrim",
 		name = "pwe_gameplay_orb_of_morgrim",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5290,6 +5458,7 @@ return function ()
 	define_rule({
 		response = "pwe_gameplay_rally_flag",
 		name = "pwe_gameplay_rally_flag",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5312,6 +5481,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_seeing_a_faith_coin",
 		response = "pwe_gameplay_seeing_a_faith_coin",
 		criterias = {
@@ -5374,6 +5544,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_using_a_weapon_shrine",
 		response = "pwe_gameplay_using_a_weapon_shrine",
 		criterias = {
@@ -5414,6 +5585,7 @@ return function ()
 	define_rule({
 		response = "pwe_gorge_event_start",
 		name = "pwe_gorge_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5444,6 +5616,7 @@ return function ()
 	define_rule({
 		response = "pwe_mines_event_start",
 		name = "pwe_mines_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5468,6 +5641,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_arena_survive_a",
 		name = "pwe_morris_arena_survive_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5498,6 +5672,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_arena_survive_b",
 		name = "pwe_morris_arena_survive_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5528,6 +5703,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_citadel_altar",
 		name = "pwe_morris_citadel_altar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5550,6 +5726,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_morris_curse_tzeentch_egg",
 		response = "pwe_morris_curse_tzeentch_egg",
 		criterias = {
@@ -5596,6 +5773,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_foreboding",
 		name = "pwe_morris_foreboding",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5620,6 +5798,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_ritual_start",
 		name = "pwe_morris_ritual_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5650,6 +5829,7 @@ return function ()
 	define_rule({
 		response = "pwe_morris_run_complete",
 		name = "pwe_morris_run_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5672,6 +5852,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_skulking_sorcerer_spotted",
 		response = "pwe_skulking_sorcerer_spotted",
 		criterias = {
@@ -5724,6 +5905,7 @@ return function ()
 	define_rule({
 		response = "pwh_arena_citadel_continue",
 		name = "pwh_arena_citadel_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5748,6 +5930,7 @@ return function ()
 	define_rule({
 		response = "pwh_arena_citadel_final",
 		name = "pwh_arena_citadel_final",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5772,6 +5955,7 @@ return function ()
 	define_rule({
 		response = "pwh_arena_citadel_start",
 		name = "pwh_arena_citadel_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5802,6 +5986,7 @@ return function ()
 	define_rule({
 		response = "pwh_arena_ice_continue",
 		name = "pwh_arena_ice_continue",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5826,6 +6011,7 @@ return function ()
 	define_rule({
 		response = "pwh_bay_ship_challenge_cross",
 		name = "pwh_bay_ship_challenge_cross",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5850,6 +6036,7 @@ return function ()
 	define_rule({
 		response = "pwh_bay_ship_challenge_response",
 		name = "pwh_bay_ship_challenge_response",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5880,6 +6067,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_blessing_grimnir_killed",
 		name = "pwh_gameplay_blessing_grimnir_killed",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5904,6 +6092,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_blessing_grimnir_spotted",
 		name = "pwh_gameplay_blessing_grimnir_spotted",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5926,6 +6115,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_collecting_a_faith_coin",
 		response = "pwh_gameplay_collecting_a_faith_coin",
 		criterias = {
@@ -5976,6 +6166,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_damage_taken",
 		response = "pwh_gameplay_curse_damage_taken",
 		criterias = {
@@ -6019,6 +6210,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_killed_marked_enemy",
 		response = "pwh_gameplay_curse_killed_marked_enemy",
 		criterias = {
@@ -6059,6 +6251,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_curse_move_on",
 		name = "pwh_gameplay_curse_move_on",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6081,6 +6274,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_negative_effect_happened",
 		response = "pwh_gameplay_curse_negative_effect_happened",
 		criterias = {
@@ -6121,6 +6315,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_curse_objective_achieved",
 		name = "pwh_gameplay_curse_objective_achieved",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6143,6 +6338,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_positive_effect_happened",
 		response = "pwh_gameplay_curse_positive_effect_happened",
 		criterias = {
@@ -6181,6 +6377,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_see_danger",
 		response = "pwh_gameplay_curse_see_danger",
 		criterias = {
@@ -6225,6 +6422,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_see_danger_event",
 		response = "pwh_gameplay_curse_see_danger_event",
 		criterias = {
@@ -6263,6 +6461,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_see_objective",
 		response = "pwh_gameplay_curse_see_objective",
 		criterias = {
@@ -6307,6 +6506,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_see_objective_event",
 		response = "pwh_gameplay_curse_see_objective_event",
 		criterias = {
@@ -6347,6 +6547,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_curse_very_negative_effect_happened",
 		name = "pwh_gameplay_curse_very_negative_effect_happened",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6369,6 +6570,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_curse_very_positive_effect_happened",
 		response = "pwh_gameplay_curse_very_positive_effect_happened",
 		criterias = {
@@ -6407,6 +6609,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_cursed_chest",
 		response = "pwh_gameplay_cursed_chest",
 		criterias = {
@@ -6465,6 +6668,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_cursed_chest_activated",
 		name = "pwh_gameplay_cursed_chest_activated",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6487,6 +6691,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_cursed_chest_ping",
 		response = "pwh_gameplay_cursed_chest_ping",
 		criterias = {
@@ -6545,6 +6750,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_isha_blessing",
 		name = "pwh_gameplay_isha_blessing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6569,6 +6775,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_orb_of_morgrim",
 		name = "pwh_gameplay_orb_of_morgrim",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6593,6 +6800,7 @@ return function ()
 	define_rule({
 		response = "pwh_gameplay_rally_flag",
 		name = "pwh_gameplay_rally_flag",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6615,6 +6823,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_seeing_a_faith_coin",
 		response = "pwh_gameplay_seeing_a_faith_coin",
 		criterias = {
@@ -6677,6 +6886,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_using_a_weapon_shrine",
 		response = "pwh_gameplay_using_a_weapon_shrine",
 		criterias = {
@@ -6717,6 +6927,7 @@ return function ()
 	define_rule({
 		response = "pwh_gorge_event_start",
 		name = "pwh_gorge_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6747,6 +6958,7 @@ return function ()
 	define_rule({
 		response = "pwh_mines_event_start",
 		name = "pwh_mines_event_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6771,6 +6983,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_arena_survive_a",
 		name = "pwh_morris_arena_survive_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6801,6 +7014,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_arena_survive_b",
 		name = "pwh_morris_arena_survive_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6831,6 +7045,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_citadel_altar",
 		name = "pwh_morris_citadel_altar",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6853,6 +7068,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_morris_curse_tzeentch_egg",
 		response = "pwh_morris_curse_tzeentch_egg",
 		criterias = {
@@ -6899,6 +7115,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_foreboding",
 		name = "pwh_morris_foreboding",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6923,6 +7140,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_ritual_start",
 		name = "pwh_morris_ritual_start",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6953,6 +7171,7 @@ return function ()
 	define_rule({
 		response = "pwh_morris_run_complete",
 		name = "pwh_morris_run_complete",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -6975,6 +7194,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_skulking_sorcerer_spotted",
 		response = "pwh_skulking_sorcerer_spotted",
 		criterias = {

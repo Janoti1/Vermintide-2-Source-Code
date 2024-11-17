@@ -4,6 +4,7 @@ EntitySystemBag.init = function (self)
 	self.systems = {}
 	self.num_systems = 0
 	self.systems_update = {}
+	self.systems_unsafe_entity_update = {}
 	self.systems_pre_update = {}
 	self.systems_post_update = {}
 	self.systems_physics_async_update = {}
@@ -21,6 +22,7 @@ EntitySystemBag.destroy = function (self)
 
 	self.systems = nil
 	self.systems_update = nil
+	self.systems_unsafe_entity_update = nil
 	self.systems_pre_update = nil
 	self.systems_post_update = nil
 	self.systems_physics_async_update = nil
@@ -31,6 +33,10 @@ EntitySystemBag.add_system = function (self, system, block_pre_update, block_pos
 
 	if system.update then
 		self.systems_update[#self.systems_update + 1] = system
+	end
+
+	if system.unsafe_entity_update then
+		self.systems_unsafe_entity_update[#self.systems_unsafe_entity_update + 1] = system
 	end
 
 	if system.pre_update and not block_pre_update then
@@ -48,9 +54,10 @@ end
 
 local list_name_by_function = {
 	pre_update = "systems_pre_update",
-	update = "systems_update",
+	post_update = "systems_post_update",
 	physics_async_update = "systems_physics_async_update",
-	post_update = "systems_post_update"
+	update = "systems_update",
+	unsafe_entity_update = "systems_unsafe_entity_update"
 }
 
 EntitySystemBag.update = function (self, entity_system_update_context, update_function)

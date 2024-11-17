@@ -27,21 +27,17 @@ settings.buff_templates = {
 			{
 				remove_buff_func = "end_vs_gutter_runner_smoke_bomb_invisibility",
 				name = "vs_gutter_runner_smoke_bomb_invisible",
+				apply_buff_func = "start_vs_gutter_runner_smoke_bomb_invisibility",
+				duration = 4,
 				refresh_durations = true,
+				priority_buff = true,
 				continuous_effect = "fx/screenspace_ranger_skill_01",
 				max_stacks = 1,
 				icon = "bardin_ranger_activated_ability",
-				priority_buff = true,
-				duration = 4
+				perks = {
+					buff_perks.invulnerable
+				}
 			}
-		}
-	},
-	vs_stagger_immune = {
-		buffs = {
-			multiplier = -1,
-			name = "vs_stagger_immune",
-			stat_buff = "impact_vulnerability",
-			duration = 10
 		}
 	},
 	vs_ratling_gunner_slow = {
@@ -145,7 +141,7 @@ settings.buff_templates = {
 				apply_buff_func = "apply_vs_warpfirethrower_long_distance_damage",
 				update_start_delay = 0.1,
 				time_between_dot_damages = 0.35,
-				max_stacks = 1,
+				timed_status_effect_time = 2,
 				update_func = "update_vs_warpfirethrower_long_distance_damage",
 				perks = {
 					buff_perks.burning_warpfire
@@ -158,7 +154,7 @@ settings.buff_templates = {
 			{
 				slowdown_buff_name = "warpfire_thrower_fire_slowdown",
 				name = "vs_warpfire_thrower_base",
-				update_func = "update_warpfirethrower_in_face_versus",
+				update_func = "update_warpfirethrower_in_face",
 				dormant = true,
 				damage_type = "warpfire_ground",
 				remove_buff_func = "remove_warpfirethrower_in_face",
@@ -166,8 +162,8 @@ settings.buff_templates = {
 				fatigue_type = "warpfire_ground",
 				duration = 0.15,
 				time_between_dot_damages = 0.15,
+				timed_status_effect_time = 2,
 				debuff = true,
-				max_stacks = 1,
 				icon = "troll_vomit_debuff",
 				push_speed = 9,
 				perks = {
@@ -193,6 +189,82 @@ settings.buff_templates = {
 				stat_buff = "impact_vulnerability",
 				max_stacks = 1,
 				duration = 3
+			}
+		}
+	},
+	vs_damage_taken = {
+		buffs = {
+			{
+				multiplier = -1,
+				name = "vs_damage_taken",
+				stat_buff = "damage_taken",
+				duration = 10
+			}
+		}
+	},
+	vs_stagger_immune = {
+		buffs = {
+			{
+				multiplier = -1,
+				name = "vs_stagger_immune",
+				stat_buff = "impact_vulnerability",
+				duration = 10
+			}
+		}
+	},
+	vs_boss_health_degeneration = {
+		buffs = {
+			{
+				multiplier = 0.1,
+				name = "vs_boss_health_degeneration",
+				stat_buff = "healing_received"
+			}
+		}
+	},
+	vs_boss_mood = {
+		buffs = {
+			{
+				update_func = "update_vs_boss_mood",
+				name = "vs_boss_mood",
+				mood = "playable_boss"
+			}
+		}
+	},
+	vs_ability_buff_chaos_troll_regen = {
+		buffs = {
+			{
+				multiplier = -1,
+				name = "vs_stagger_immune",
+				stat_buff = "impact_vulnerability",
+				duration = 5
+			},
+			{
+				multiplier = -0.5,
+				name = "vs_damage_taken",
+				stat_buff = "damage_taken",
+				duration = 5
+			},
+			{
+				duration = 5,
+				name = "vs_chaos_troll_regen",
+				particle_vfx = "fx/chr_chaos_troll_healing",
+				remove_buff_func = "remove_vs_chaos_troll_regen",
+				apply_buff_func = "apply_vs_chaos_troll_regen",
+				screen_space_effect = "fx/screenspace_chaos_troll_healing",
+				tick_rate = 0.05,
+				heal_percentage = 0.5,
+				update_func = "update_vs_chaos_troll_regen"
+			}
+		}
+	},
+	vs_warpfire_thrower_no_charge_explotion = {
+		buffs = {
+			{
+				name = "vs_warpfire_thrower_no_charge_explotion",
+				icon = "sienna_scholar_overcharge_no_slow",
+				perks = {
+					buff_perks.no_overcharge_explosion
+				}
 			}
 		}
 	},
@@ -396,10 +468,90 @@ local function is_grail_knight_blocking(unit, attacker_unit, buff, params, world
 	local max_block_angle = math.cos(math.pi * 0.6666666666666666)
 	local is_power_blocking = max_block_angle < unit_facing_attacker_dot
 
-	return is_power_blocking, unit_facing_attacker_dot
+	return is_power_blocking
 end
 
 settings.buff_function_templates = {
+	apply_vs_chaos_troll_regen = function (unit, buff, params, world)
+		local buff_template = buff.template
+		local health_extension = ScriptUnit.extension(unit, "health_system")
+		local max_health = health_extension:get_max_health()
+		local current_health = health_extension:current_permanent_health()
+		local missing_health = max_health - current_health
+		local health_to_heal = missing_health * buff_template.heal_percentage
+		local health_to_heal_per_sec = health_to_heal / buff.duration
+
+		params.health_to_heal = health_to_heal
+		params.tick_rate = buff_template.tick_rate
+		params.health_to_heal_per_tick = buff_template.tick_rate and health_to_heal_per_sec * buff_template.tick_rate
+		params.missing_health = missing_health
+		params.next_tick = params.t + buff_template.tick_rate
+
+		local particle_vfx = buff_template.particle_vfx
+
+		if not DEDICATED_SERVER then
+			local player = Managers.player:unit_owner(unit)
+
+			if player and player.remote then
+				local skin_unit = CosmeticsUtils.get_third_person_mesh_unit(unit)
+				local node = 0
+
+				params.particle_id = ScriptWorld.create_particles_linked(world, particle_vfx, skin_unit, node, "destroy")
+
+				World.set_particles_life_time(world, params.particle_id, buff.duration)
+			elseif player and player.local_player and not player.bot_player then
+				local screen_space_effect = buff_template.screen_space_effect
+				local first_person_extension = ScriptUnit.has_extension(unit, "first_person_system")
+
+				params.screen_space_id = first_person_extension:create_screen_particles(screen_space_effect)
+
+				World.set_particles_life_time(world, params.screen_space_id, buff.duration)
+			end
+		end
+	end,
+	update_vs_chaos_troll_regen = function (unit, buff, params, world)
+		if params.t > params.next_tick then
+			params.next_tick = params.t + params.tick_rate
+
+			local is_server = Managers.state.network.is_server
+
+			if is_server then
+				DamageUtils.heal_network(unit, unit, params.health_to_heal_per_tick, "health_regen")
+			end
+		end
+	end,
+	remove_vs_chaos_troll_regen = function (unit, buff, params, world)
+		return
+	end,
+	update_vs_boss_mood = function (unit, buff, params, world)
+		if is_local(unit) then
+			local buff_template = buff.template
+			local player = Managers.player:unit_owner(unit)
+			local camera_system = Managers.state.entity:system("camera_system")
+			local camera_unit = camera_system and player and camera_system.camera_units and camera_system.camera_units[player]
+			local camera_state
+
+			if camera_unit then
+				local camera_state_ext = ScriptUnit.extension(camera_unit, "camera_state_machine_system")
+
+				camera_state = camera_state_ext.state_machine.state_current and camera_state_ext.state_machine.state_current.name
+			end
+
+			if camera_state and camera_state ~= params.previous_camera_state then
+				Managers.state.camera:set_mood(buff_template.mood, buff, camera_state == "follow")
+			end
+
+			params.previous_camera_state = camera_state
+		end
+	end,
+	start_vs_gutter_runner_smoke_bomb_invisibility = function (unit, buff, params, world)
+		if is_local(unit) then
+			local status_extension = ScriptUnit.extension(unit, "status_system")
+
+			status_extension:set_invisible(true, nil, buff)
+			Managers.state.camera:set_mood("gutter_runner_f", buff, true)
+		end
+	end,
 	end_vs_gutter_runner_smoke_bomb_invisibility = function (unit, buff, params, world)
 		if is_local(unit) then
 			local first_person_extension = ScriptUnit.extension(unit, "first_person_system")
@@ -413,7 +565,7 @@ settings.buff_function_templates = {
 
 			local status_extension = ScriptUnit.extension(unit, "status_system")
 
-			status_extension:set_invisible(false, nil, "gutter_runner_f")
+			status_extension:set_invisible(false, nil, buff)
 
 			if Managers.state.network:game() then
 				local status_extension = ScriptUnit.extension(unit, "status_system")
@@ -427,7 +579,7 @@ settings.buff_function_templates = {
 				network_transmit:send_rpc_server("rpc_status_change_bool", NetworkLookup.statuses.dodging, false, unit_id, 0)
 			end
 
-			MOOD_BLACKBOARD.gutter_runner_f = false
+			Managers.state.camera:set_mood("gutter_runner_f", buff, false)
 		end
 	end,
 	apply_vs_warpfirethrower_long_distance_damage = function (unit, buff, params, world)
@@ -460,13 +612,13 @@ settings.buff_function_templates = {
 			local attacker_unit = params.attacker_unit
 			local target_buff_extension = ScriptUnit.has_extension(unit, "buff_system")
 			local target_power_block_perk = target_buff_extension:has_buff_perk("power_block")
-			local is_power_blocking, dot = false
+			local is_power_blocking = false
 
 			if target_power_block_perk then
-				is_power_blocking, dot = is_grail_knight_blocking(unit, attacker_unit, buff, params, world)
+				is_power_blocking = is_grail_knight_blocking(unit, attacker_unit, buff, params, world)
 			end
 
-			if (not is_power_blocking or not DamageUtils.check_ranged_block(attacker_unit, unit, dot, "blocked_berzerker")) and HEALTH_ALIVE[unit] then
+			if (not is_power_blocking or not DamageUtils.check_ranged_block(attacker_unit, unit, "blocked_berzerker")) and HEALTH_ALIVE[unit] then
 				local armor_type = buff.armor_type
 				local damage_type = buff_template.damage_type
 				local damage = buff.damage[armor_type]
@@ -494,7 +646,6 @@ settings.buff_function_templates = {
 		end
 	end,
 	apply_warpfirethrower_in_face_versus = function (unit, buff, params, world)
-		local difficulty_name = Managers.state.difficulty:get_difficulty()
 		local buff_template = buff.template
 		local first_person_extension = ScriptUnit.has_extension(unit, "first_person_system")
 
@@ -519,76 +670,31 @@ settings.buff_function_templates = {
 
 		buff.armor_type = breed.armor_category or 1
 
-		local pushed_direction
-		local distance = 0
-
-		if ALIVE[attacker_unit] then
-			local source_breed = Unit.get_data(attacker_unit, "breed")
-
-			buff.damage_source = source_breed and source_breed.name or "dot_debuff"
-
-			local victim_position = POSITION_LOOKUP[unit]
-			local attacker_position = POSITION_LOOKUP[attacker_unit]
-			local to_victim = victim_position - attacker_position
-
-			pushed_direction = Vector3.normalize(to_victim)
-			distance = Vector3.length(to_victim)
-		else
-			pushed_direction = Vector3.backward()
-		end
-
-		local target_buff_extension = ScriptUnit.has_extension(unit, "buff_system")
-		local target_power_block_perk = target_buff_extension:has_buff_perk("power_block")
-
-		if breed.is_hero and first_person_extension and not target_power_block_perk then
+		if breed.is_hero and first_person_extension then
 			local buff_extension = ScriptUnit.has_extension(unit, "buff_system")
 			local status_extension = ScriptUnit.has_extension(unit, "status_system")
 			local no_ranged_knockback = buff_extension and buff_extension:has_buff_perk("no_ranged_knockback")
-			local is_valid_push_target = not no_ranged_knockback and not status_extension:is_disabled()
+			local is_valid_push_target = not no_ranged_knockback and not status_extension:is_disabled() and not status_extension:has_noclip()
 
 			if is_valid_push_target then
 				local locomotion_extension = ScriptUnit.extension(unit, "locomotion_system")
 				local push_speed = buff_template.push_speed
+				local pushed_direction
+
+				if ALIVE[attacker_unit] then
+					local victim_position = POSITION_LOOKUP[unit]
+					local attacker_position = POSITION_LOOKUP[attacker_unit]
+					local to_victim = victim_position - attacker_position
+
+					pushed_direction = Vector3.normalize(to_victim)
+				else
+					pushed_direction = Vector3.backward()
+				end
+
 				local pushed_velocity = pushed_direction * push_speed
 
 				locomotion_extension:add_external_velocity(pushed_velocity)
 			end
 		end
-	end,
-	update_warpfirethrower_in_face_versus = function (unit, buff, params, world)
-		local t = params.t
-		local buff_template = buff.template
-
-		if Managers.state.network.is_server then
-			local attacker_unit_is_alive = ALIVE[params.attacker_unit]
-			local attacker_unit = attacker_unit_is_alive and params.attacker_unit or unit
-			local target_buff_extension = ScriptUnit.has_extension(unit, "buff_system")
-			local target_power_block_perk = target_buff_extension:has_buff_perk("power_block")
-			local is_power_blocking, dot = false
-
-			if target_power_block_perk then
-				is_power_blocking, dot = is_grail_knight_blocking(unit, attacker_unit, buff, params, world)
-			end
-
-			if (not is_power_blocking or not DamageUtils.check_ranged_block(attacker_unit, unit, dot, "blocked_berzerker")) and HEALTH_ALIVE[unit] then
-				local armor_type = buff.armor_type
-				local damage_type = buff_template.damage_type
-				local damage = buff.damage[armor_type]
-				local damage_source = buff.damage_source
-
-				DamageUtils.add_damage_network(unit, attacker_unit, damage, "torso", damage_type, nil, Vector3(1, 0, 0), damage_source, nil, attacker_unit)
-			end
-
-			local is_friendly_target = not DamageUtils.is_enemy(attacker_unit, unit)
-			local target_dead = HEALTH_ALIVE[unit]
-
-			if attacker_unit_is_alive and is_friendly_target and target_dead then
-				QuestSettings.check_num_enemies_killed_by_warpfire(unit, attacker_unit)
-			end
-		end
-
-		local warpfire_next_t = t + buff_template.time_between_dot_damages
-
-		return warpfire_next_t
 	end
 }

@@ -14,11 +14,7 @@ return {
 			base_level_id = "dlc_scorpion_field",
 			spawning_seed = 312093,
 			objective_settings = {
-				objective_lists = {
-					{
-						kill_enemies = {}
-					}
-				}
+				objective_lists = "weave_2"
 			},
 			bonus_time_on_complete = WeaveSettings.bonus_time,
 			system_seeds = {

@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pwe_elven_ruins_intro_a",
 		response = "pwe_elven_ruins_intro_a",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_elven_ruins_intro_b",
 		response = "pwe_elven_ruins_intro_b",
 		criterias = {
@@ -82,6 +84,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_elven_ruins_intro_c",
 		response = "pwe_elven_ruins_intro_c",
 		criterias = {
@@ -120,6 +123,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_big_tree",
 		response = "pwe_level_elven_ruins_big_tree",
 		criterias = {
@@ -164,6 +168,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_broken_waystone",
 		response = "pwe_level_elven_ruins_broken_waystone",
 		criterias = {
@@ -214,6 +219,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_clearing",
 		response = "pwe_level_elven_ruins_clearing",
 		criterias = {
@@ -258,6 +264,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_cliff_edge",
 		response = "pwe_level_elven_ruins_cliff_edge",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_entering_ruins",
 		response = "pwe_level_elven_ruins_entering_ruins",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_exit",
 		response = "pwe_level_elven_ruins_exit",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_first_aligned_pleasant_feeling",
 		response = "pwe_level_elven_ruins_first_aligned_pleasant_feeling",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_great_glade",
 		response = "pwe_level_elven_ruins_great_glade",
 		criterias = {
@@ -490,6 +501,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_maze_approach",
 		response = "pwe_level_elven_ruins_maze_approach",
 		criterias = {
@@ -540,6 +552,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_maze_interior",
 		response = "pwe_level_elven_ruins_maze_interior",
 		criterias = {
@@ -590,6 +603,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_noisy_puzzle",
 		response = "pwe_level_elven_ruins_noisy_puzzle",
 		criterias = {
@@ -634,6 +648,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_ravine_approach",
 		response = "pwe_level_elven_ruins_ravine_approach",
 		criterias = {
@@ -684,6 +699,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_second_aligned",
 		response = "pwe_level_elven_ruins_second_aligned",
 		criterias = {
@@ -728,6 +744,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_seeing_puzzle",
 		response = "pwe_level_elven_ruins_seeing_puzzle",
 		criterias = {
@@ -772,6 +789,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_seeing_puzzle_crystals",
 		response = "pwe_level_elven_ruins_seeing_puzzle_crystals",
 		criterias = {
@@ -816,6 +834,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_shattered_temple",
 		response = "pwe_level_elven_ruins_shattered_temple",
 		criterias = {
@@ -860,6 +879,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_skaven_banners",
 		response = "pwe_level_elven_ruins_skaven_banners",
 		criterias = {
@@ -910,6 +930,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_task_complete",
 		response = "pwe_level_elven_ruins_task_complete",
 		criterias = {
@@ -960,6 +981,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_elven_ruins_untouched",
 		response = "pwe_level_elven_ruins_untouched",
 		criterias = {

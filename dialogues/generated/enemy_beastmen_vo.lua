@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "ebb_a_gameplay_running_towards_players",
 		response = "ebb_a_gameplay_running_towards_players",
 		criterias = {
@@ -38,6 +39,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebb_gameplay_bardin_present",
 		response = "ebb_gameplay_bardin_present",
 		criterias = {
@@ -76,6 +78,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebb_gameplay_kerillian_present",
 		response = "ebb_gameplay_kerillian_present",
 		criterias = {
@@ -114,6 +117,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebb_gameplay_kruber_present",
 		response = "ebb_gameplay_kruber_present",
 		criterias = {
@@ -152,6 +156,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebb_gameplay_no_damage_taunt",
 		response = "ebb_gameplay_no_damage_taunt",
 		criterias = {
@@ -184,6 +189,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebb_gameplay_saltzpyre_present",
 		response = "ebb_gameplay_saltzpyre_present",
 		criterias = {
@@ -222,6 +228,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebb_gameplay_sienna_present",
 		response = "ebb_gameplay_sienna_present",
 		criterias = {
@@ -260,6 +267,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebg_alerted",
 		response = "ebg_alerted",
 		criterias = {
@@ -292,6 +300,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebg_gameplay_dogpile_shouts",
 		response = "ebg_gameplay_dogpile_shouts",
 		criterias = {
@@ -324,6 +333,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebg_gameplay_flanking_players",
 		response = "ebg_gameplay_flanking_players",
 		criterias = {
@@ -356,6 +366,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebg_gameplay_running_towards_players",
 		response = "ebg_gameplay_running_towards_players",
 		criterias = {
@@ -394,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebu_gameplay_dogpile_shouts",
 		response = "ebu_gameplay_dogpile_shouts",
 		criterias = {
@@ -426,6 +438,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebu_gameplay_flanking_players",
 		response = "ebu_gameplay_flanking_players",
 		criterias = {
@@ -460,6 +473,7 @@ return function ()
 	define_rule({
 		response = "ebu_gameplay_ranged_fire_in_group",
 		name = "ebu_gameplay_ranged_fire_in_group",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -476,6 +490,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebu_gameplay_running_in_horde",
 		response = "ebu_gameplay_running_in_horde",
 		criterias = {
@@ -520,6 +535,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebu_gameplay_running_towards_players",
 		response = "ebu_gameplay_running_towards_players",
 		criterias = {
@@ -558,6 +574,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "ebu_gameplay_taunt",
 		response = "ebu_gameplay_taunt",
 		criterias = {

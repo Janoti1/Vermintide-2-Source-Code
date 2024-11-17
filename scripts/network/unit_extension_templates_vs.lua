@@ -3,15 +3,19 @@ local unit_templates_vs = {
 		base_template = "player_unit_base",
 		go_type = "player_unit",
 		self_owned_extensions = {
+			"PlayerUnitOverchargeExtension",
 			"DarkPactStatusExtension",
 			"DialogueActorExtension",
 			"GenericDialogueContextExtension",
 			"PlayerProximityExtension",
 			"SurroundingObserverExtension",
 			"PlayerUnitGhostModeExtension",
-			"DarkPactPlayerOutlineExtension"
+			"DarkPactPlayerOutlineExtension",
+			"ProjectileLinkerExtension",
+			"VersusHordeAbilityExtension"
 		},
 		self_owned_extensions_server = {
+			"PlayerUnitOverchargeExtension",
 			"DarkPactStatusExtension",
 			"DialogueActorExtension",
 			"HealthTriggerExtension",
@@ -19,18 +23,24 @@ local unit_templates_vs = {
 			"PlayerProximityExtension",
 			"SurroundingObserverExtension",
 			"PlayerUnitGhostModeExtension",
-			"DarkPactPlayerOutlineExtension"
+			"DarkPactPlayerOutlineExtension",
+			"ProjectileLinkerExtension",
+			"VersusHordeAbilityExtension"
 		},
 		husk_extensions = {
+			"PlayerHuskOverchargeExtension",
 			"DarkPactStatusExtension",
 			"DialogueActorExtension",
 			"GenericDialogueContextExtension",
 			"PlayerProximityExtension",
 			"SurroundingObserverExtension",
 			"PlayerHuskGhostModeExtension",
-			"DarkPactPlayerHuskOutlineExtension"
+			"DarkPactPlayerHuskOutlineExtension",
+			"ProjectileLinkerExtension",
+			"VersusHordeAbilityHuskExtension"
 		},
 		husk_extensions_server = {
+			"PlayerHuskOverchargeExtension",
 			"DarkPactStatusExtension",
 			"DialogueActorExtension",
 			"HealthTriggerExtension",
@@ -38,18 +48,15 @@ local unit_templates_vs = {
 			"PlayerProximityExtension",
 			"SurroundingObserverExtension",
 			"PlayerHuskGhostModeExtension",
-			"DarkPactPlayerHuskOutlineExtension"
+			"DarkPactPlayerHuskOutlineExtension",
+			"ProjectileLinkerExtension",
+			"VersusHordeAbilityExtension"
 		}
 	},
 	versus_dark_pact_climbing_interaction_unit = {
 		go_type = "versus_dark_pact_climbing_interaction_unit",
 		self_owned_extensions = {
-			"GenericUnitInteractableExtension",
-			"GenericOutlineExtension",
-			"DarkPactClimbingExtension"
-		},
-		husk_extensions = {
-			"GenericUnitInteractableExtension",
+			"LocalInteractableExtension",
 			"GenericOutlineExtension",
 			"DarkPactClimbingExtension"
 		}

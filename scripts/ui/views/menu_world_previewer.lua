@@ -35,6 +35,36 @@ local camera_position_by_character = {
 		x = 0,
 		y = 1
 	},
+	vs_chaos_troll = {
+		z = 0.4,
+		x = 0,
+		y = 1
+	},
+	vs_gutter_runner = {
+		z = 0,
+		x = 0,
+		y = 0
+	},
+	vs_packmaster = {
+		z = 0,
+		x = 0,
+		y = 0
+	},
+	vs_ratling_gunner = {
+		z = 0,
+		x = 0,
+		y = 0
+	},
+	vs_warpfire_thrower = {
+		z = 0,
+		x = 0,
+		y = 0
+	},
+	vs_poison_wind_globadier = {
+		z = 0,
+		x = 0,
+		y = 0
+	},
 	default = {
 		z = 0.4,
 		x = 0,
@@ -551,6 +581,8 @@ MenuWorldPreviewer._load_hero_unit = function (self, profile_name, career_index,
 	local skin_item = BackendUtils.get_loadout_item(career_name, "slot_skin")
 	local item_data = skin_item and skin_item.data
 	local skin_name = optional_skin or item_data and item_data.name or career.base_skin
+
+	GlobalShaderFlags.set_global_shader_flag("NECROMANCER_CAREER_REMAP", career_name == "bw_necromancer")
 
 	if state_character then
 		skin_name = career.base_skin

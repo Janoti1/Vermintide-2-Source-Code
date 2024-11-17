@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_eight_01",
 		response = "pbw_level_catacombs_story_eight_01",
 		criterias = {
@@ -37,6 +38,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_eleven_01",
 		response = "pbw_level_catacombs_story_eleven_01",
 		criterias = {
@@ -123,6 +125,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_eleven_02",
 		response = "pbw_level_catacombs_story_eleven_02",
 		criterias = {
@@ -160,6 +163,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_five_01",
 		response = "pbw_level_catacombs_story_five_01",
 		criterias = {
@@ -197,6 +201,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_five_02",
 		response = "pbw_level_catacombs_story_five_02",
 		criterias = {
@@ -234,6 +239,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_one_01",
 		response = "pbw_level_catacombs_story_one_01",
 		criterias = {
@@ -271,6 +277,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_one_02",
 		response = "pbw_level_catacombs_story_one_02",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_seven_01",
 		response = "pbw_level_catacombs_story_seven_01",
 		criterias = {
@@ -394,6 +402,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_seven_02",
 		response = "pbw_level_catacombs_story_seven_02",
 		criterias = {
@@ -431,6 +440,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_ten_01",
 		response = "pbw_level_catacombs_story_ten_01",
 		criterias = {
@@ -517,6 +527,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_ten_02",
 		response = "pbw_level_catacombs_story_ten_02",
 		criterias = {
@@ -554,6 +565,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_level_catacombs_story_ten_03",
 		response = "pbw_level_catacombs_story_ten_03",
 		criterias = {
@@ -591,6 +603,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_eight_01",
 		response = "pdr_level_catacombs_story_eight_01",
 		criterias = {
@@ -677,6 +690,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_eight_02",
 		response = "pdr_level_catacombs_story_eight_02",
 		criterias = {
@@ -714,6 +728,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_eight_03",
 		response = "pdr_level_catacombs_story_eight_03",
 		criterias = {
@@ -751,6 +766,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_six_01",
 		response = "pdr_level_catacombs_story_six_01",
 		criterias = {
@@ -788,6 +804,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_six_02",
 		response = "pdr_level_catacombs_story_six_02",
 		criterias = {
@@ -825,6 +842,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_ten_01",
 		response = "pdr_level_catacombs_story_ten_01",
 		criterias = {
@@ -862,6 +880,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_level_catacombs_story_three_01",
 		response = "pdr_level_catacombs_story_three_01",
 		criterias = {
@@ -936,6 +955,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_eight_01",
 		response = "pes_level_catacombs_story_eight_01",
 		criterias = {
@@ -973,6 +993,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_eleven_01",
 		response = "pes_level_catacombs_story_eleven_01",
 		criterias = {
@@ -1010,6 +1031,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_four_01",
 		response = "pes_level_catacombs_story_four_01",
 		criterias = {
@@ -1047,6 +1069,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_four_02",
 		response = "pes_level_catacombs_story_four_02",
 		criterias = {
@@ -1084,6 +1107,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_nine_01",
 		response = "pes_level_catacombs_story_nine_01",
 		criterias = {
@@ -1164,6 +1188,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_nine_02",
 		response = "pes_level_catacombs_story_nine_02",
 		criterias = {
@@ -1201,6 +1226,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_nine_03",
 		response = "pes_level_catacombs_story_nine_03",
 		criterias = {
@@ -1238,6 +1264,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_one_01",
 		response = "pes_level_catacombs_story_one_01",
 		criterias = {
@@ -1306,6 +1333,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_one_02",
 		response = "pes_level_catacombs_story_one_02",
 		criterias = {
@@ -1343,6 +1371,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_six_01",
 		response = "pes_level_catacombs_story_six_01",
 		criterias = {
@@ -1423,6 +1452,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_six_02",
 		response = "pes_level_catacombs_story_six_02",
 		criterias = {
@@ -1460,6 +1490,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_catacombs_story_three_01",
 		response = "pes_level_catacombs_story_three_01",
 		criterias = {
@@ -1497,6 +1528,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_four_01",
 		response = "pwe_level_catacombs_story_four_01",
 		criterias = {
@@ -1565,6 +1597,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_four_02",
 		response = "pwe_level_catacombs_story_four_02",
 		criterias = {
@@ -1602,6 +1635,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_four_03",
 		response = "pwe_level_catacombs_story_four_03",
 		criterias = {
@@ -1639,6 +1673,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_seven_01",
 		response = "pwe_level_catacombs_story_seven_01",
 		criterias = {
@@ -1676,6 +1711,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_ten_01",
 		response = "pwe_level_catacombs_story_ten_01",
 		criterias = {
@@ -1713,6 +1749,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_two_01",
 		response = "pwe_level_catacombs_story_two_01",
 		criterias = {
@@ -1750,6 +1787,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_level_catacombs_story_two_02",
 		response = "pwe_level_catacombs_story_two_02",
 		criterias = {
@@ -1787,6 +1825,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_eleven_01",
 		response = "pwh_level_catacombs_story_eleven_01",
 		criterias = {
@@ -1824,6 +1863,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_eleven_02",
 		response = "pwh_level_catacombs_story_eleven_02",
 		criterias = {
@@ -1861,6 +1901,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_five_01",
 		response = "pwh_level_catacombs_story_five_01",
 		criterias = {
@@ -1941,6 +1982,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_five_02",
 		response = "pwh_level_catacombs_story_five_02",
 		criterias = {
@@ -1978,6 +2020,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_nine_01",
 		response = "pwh_level_catacombs_story_nine_01",
 		criterias = {
@@ -2015,6 +2058,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_nine_02",
 		response = "pwh_level_catacombs_story_nine_02",
 		criterias = {
@@ -2052,6 +2096,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_seven_01",
 		response = "pwh_level_catacombs_story_seven_01",
 		criterias = {
@@ -2089,6 +2134,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_seven_02",
 		response = "pwh_level_catacombs_story_seven_02",
 		criterias = {
@@ -2126,6 +2172,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_three_01",
 		response = "pwh_level_catacombs_story_three_01",
 		criterias = {
@@ -2163,6 +2210,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_two_01",
 		response = "pwh_level_catacombs_story_two_01",
 		criterias = {
@@ -2231,6 +2279,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_two_02",
 		response = "pwh_level_catacombs_story_two_02",
 		criterias = {
@@ -2268,6 +2317,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_level_catacombs_story_two_03",
 		response = "pwh_level_catacombs_story_two_03",
 		criterias = {

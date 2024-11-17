@@ -1,4 +1,5 @@
 require("scripts/unit_extensions/generic/generic_unit_interactable_extension")
+require("scripts/unit_extensions/generic/local_interactable_extension")
 
 InteractableSystem = class(InteractableSystem, ExtensionSystemBase)
 
@@ -6,7 +7,8 @@ local RPCS = {
 	"rpc_generic_interaction_request"
 }
 local extensions = {
-	"GenericUnitInteractableExtension"
+	"GenericUnitInteractableExtension",
+	"LocalInteractableExtension"
 }
 
 InteractableSystem.init = function (self, entity_system_creation_context, system_name)
@@ -51,7 +53,7 @@ InteractableSystem.on_remove_extension = function (self, unit, extension_name)
 	InteractableSystem.super.on_remove_extension(self, unit, extension_name)
 end
 
-InteractableSystem._can_interact = function (self, interactor_unit, interactable_unit, interaction_type)
+InteractableSystem._can_interact_server_check = function (self, interactor_unit, interactable_unit, interaction_type)
 	if Unit.alive(interactor_unit) and Unit.alive(interactable_unit) then
 		local interactable_extension = ScriptUnit.extension(interactable_unit, "interactable_system")
 		local can_interact = not interactable_extension:is_being_interacted_with() and InteractionDefinitions[interaction_type].server.can_interact(interactor_unit, interactable_unit)
@@ -76,7 +78,7 @@ InteractableSystem._handle_standard_interact_request = function (self, interacti
 		interactable_unit = self.unit_storage:unit(interactable_id)
 	end
 
-	if self:_can_interact(interactor_unit, interactable_unit, interaction_type) then
+	if self:_can_interact_server_check(interactor_unit, interactable_unit, interaction_type) then
 		local interactor_extension = ScriptUnit.extension(interactor_unit, "interactor_system")
 
 		interactor_extension:interaction_approved(interaction_type, interactable_unit)

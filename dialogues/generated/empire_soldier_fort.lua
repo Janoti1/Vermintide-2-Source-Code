@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_cannonballs",
 		response = "pes_level_fort_cannonballs",
 		criterias = {
@@ -44,6 +45,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_carriage",
 		response = "pes_level_fort_carriage",
 		criterias = {
@@ -88,6 +90,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_final_fire",
 		response = "pes_level_fort_fire_cannon_final_fire",
 		criterias = {
@@ -132,6 +135,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_final_hit",
 		response = "pes_level_fort_fire_cannon_final_hit",
 		criterias = {
@@ -176,6 +180,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_first",
 		response = "pes_level_fort_fire_cannon_first",
 		criterias = {
@@ -220,6 +225,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_first_hit",
 		response = "pes_level_fort_fire_cannon_first_hit",
 		criterias = {
@@ -264,6 +270,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_fuse_is_lit",
 		response = "pes_level_fort_fire_cannon_fuse_is_lit",
 		criterias = {
@@ -308,6 +315,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_second",
 		response = "pes_level_fort_fire_cannon_second",
 		criterias = {
@@ -352,6 +360,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_fire_cannon_second_hit",
 		response = "pes_level_fort_fire_cannon_second_hit",
 		criterias = {
@@ -396,6 +405,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_gate_fallen",
 		response = "pes_level_fort_gate_fallen",
 		criterias = {
@@ -440,6 +450,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_getting_closer",
 		response = "pes_level_fort_getting_closer",
 		criterias = {
@@ -484,6 +495,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_plague_claw_shelling",
 		response = "pes_level_fort_plague_claw_shelling",
 		criterias = {
@@ -528,6 +540,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_plague_claw_shelling_move",
 		response = "pes_level_fort_plague_claw_shelling_move",
 		criterias = {
@@ -572,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_river",
 		response = "pes_level_fort_river",
 		criterias = {
@@ -616,11 +630,7 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pes_level_fort_road",
-		name = "pes_level_fort_road",
-		criterias = {}
-	})
-	define_rule({
+		probability = 1,
 		name = "pes_level_fort_skaven_everywhere",
 		response = "pes_level_fort_skaven_everywhere",
 		criterias = {
@@ -665,6 +675,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_skaven_run",
 		response = "pes_level_fort_skaven_run",
 		criterias = {
@@ -709,6 +720,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_under_attack",
 		response = "pes_level_fort_under_attack",
 		criterias = {
@@ -753,6 +765,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_level_fort_use_cannons",
 		response = "pes_level_fort_use_cannons",
 		criterias = {
@@ -1202,18 +1215,6 @@ return function ()
 				[1] = 2.7193541526794,
 				[2] = 2.2867708206177
 			}
-		},
-		pes_level_fort_road = {
-			sound_events_n = 0,
-			face_animations_n = 0,
-			database = "empire_soldier_fort",
-			category = "default",
-			dialogue_animations_n = 0,
-			dialogue_animations = {},
-			face_animations = {},
-			localization_strings = {},
-			sound_events = {},
-			sound_events_duration = {}
 		},
 		pes_level_fort_skaven_everywhere = {
 			randomize_indexes_n = 0,

@@ -26,7 +26,11 @@ UIWidget.init = function (widget_definition, ui_renderer)
 
 	local widget = {
 		scenegraph_id = widget_definition.scenegraph_id,
-		offset = offset or false,
+		offset = offset or {
+			0,
+			0,
+			0
+		},
 		element = {
 			passes = passes,
 			pass_data = pass_data

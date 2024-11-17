@@ -121,6 +121,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -128,7 +131,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	dr_slayer = {
@@ -200,6 +204,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -207,7 +214,8 @@ CareerSettings = {
 			"melee",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	dr_ranger = {
@@ -278,6 +286,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -285,7 +296,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	es_huntsman = {
@@ -355,6 +367,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -362,7 +377,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	es_knight = {
@@ -432,6 +448,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -439,7 +458,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	es_mercenary = {
@@ -509,6 +529,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -516,7 +539,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	we_shade = {
@@ -586,6 +610,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -593,7 +620,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	we_maidenguard = {
@@ -663,6 +691,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -670,7 +701,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	we_waywatcher = {
@@ -721,16 +753,17 @@ CareerSettings = {
 			local weapon = ItemMasterList[weapon_name]
 
 			if weapon and weapon.slot_to_use then
-				local item = BackendUtils.get_loadout_item("we_waywatcher", weapon.slot_to_use, is_bot)
+				local career_name = "we_waywatcher"
+				local item = BackendUtils.get_loadout_item(career_name, weapon.slot_to_use, is_bot)
 				local item_data = item and rawget(ItemMasterList, item.key)
 				local item_template_name = item_data and item_data.template
 
 				if not item_template_name or not weapon.valid_templates_to_replace[item_template_name] then
 					local default_item_name = weapon.default_item_to_replace
 					local default_item_data = ItemMasterList[default_item_name]
-					local weapon_template = Weapons[weapon.template]
+					local weapon_template = WeaponUtils.get_weapon_template(weapon.template)
 					local default_items = BackendUtils.get_item_units(default_item_data)
-					local weapon_packages = WeaponUtils.get_weapon_packages(weapon_template, default_items, is_first_person)
+					local weapon_packages = WeaponUtils.get_weapon_packages(weapon_template, default_items, is_first_person, career_name)
 
 					for j = 1, #weapon_packages do
 						local package_name = weapon_packages[j]
@@ -764,6 +797,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -771,7 +807,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	wh_zealot = {
@@ -844,6 +881,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -851,7 +891,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	wh_bountyhunter = {
@@ -921,6 +962,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -928,7 +972,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	wh_captain = {
@@ -998,6 +1043,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -1005,7 +1053,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	bw_scholar = {
@@ -1075,6 +1124,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -1082,7 +1134,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	bw_adept = {
@@ -1152,6 +1205,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -1159,7 +1215,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	bw_unchained = {
@@ -1229,6 +1286,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -1236,7 +1296,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	},
 	empire_soldier_tutorial = {
@@ -1256,7 +1317,7 @@ CareerSettings = {
 		category_image = "category_icon_kruber_knight",
 		portrait_thumbnail = "portrait_kruber_knight_thumbnail",
 		sort_order = 1,
-		breed = PlayerBreeds.hero_es_mercenary,
+		breed = PlayerBreeds.hero_es_knight,
 		item_types = {},
 		activated_ability = ActivatedAbilitySettings.es_2,
 		passive_ability = PassiveAbilitySettings.es_2,
@@ -1303,6 +1364,9 @@ CareerSettings = {
 			},
 			slot_frame = {
 				"frame"
+			},
+			slot_pose = {
+				"weapon_pose"
 			}
 		},
 		loadout_equipment_slots = {
@@ -1310,7 +1374,8 @@ CareerSettings = {
 			"ranged",
 			"necklace",
 			"ring",
-			"trinket"
+			"trinket",
+			"weapon_pose"
 		}
 	}
 }

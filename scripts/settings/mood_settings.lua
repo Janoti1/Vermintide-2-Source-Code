@@ -1,13 +1,9 @@
 MoodPriority = {
 	"menu",
 	"knocked_down",
-	"bleeding_out",
 	"heal_medikit",
 	"heal_trait",
 	"skill_shade",
-	"skill_shade_restealth",
-	"skill_shade_short",
-	"shade_dash",
 	"killer_in_the_shadows",
 	"hidden_escape",
 	"twitch_invis",
@@ -19,6 +15,7 @@ MoodPriority = {
 	"skill_huntsman_stealth",
 	"skill_huntsman_surge",
 	"wounded",
+	"bleeding_out",
 	"drunk_01",
 	"hangover_01",
 	"staggered"
@@ -89,27 +86,6 @@ MoodSettings = {
 		particle_effects_on_exit = {}
 	},
 	skill_shade = {
-		environment_setting = "skill_shade",
-		blend_in_time = 0.5,
-		blend_out_time = 0.25,
-		particle_effects_on_enter = {},
-		particle_effects_on_exit = {}
-	},
-	skill_shade_restealth = {
-		environment_setting = "skill_shade",
-		blend_in_time = 0.5,
-		blend_out_time = 0.25,
-		particle_effects_on_enter = {},
-		particle_effects_on_exit = {}
-	},
-	skill_shade_short = {
-		environment_setting = "skill_shade",
-		blend_in_time = 0.5,
-		blend_out_time = 0.25,
-		particle_effects_on_enter = {},
-		particle_effects_on_exit = {}
-	},
-	shade_dash = {
 		environment_setting = "skill_shade",
 		blend_in_time = 0.5,
 		blend_out_time = 0.25,
@@ -222,10 +198,26 @@ MoodSettings = {
 }
 MoodSettings.ghost_mode = {
 	environment_setting = "ghost_mode",
-	blend_in_time = 0.5,
+	blend_in_time = 0.2,
 	blend_out_time = 0.1,
-	particle_effects_on_enter = {},
+	particle_effects_on_enter = {
+		"fx/screenspace_ghostmode"
+	},
 	particle_effects_on_exit = {}
 }
 
 table.insert(MoodPriority, 2, "ghost_mode")
+
+MoodSettings.playable_boss = {
+	environment_setting = "playable_boss",
+	blend_in_time = 0.5,
+	blend_out_time = 0.25,
+	particle_effects_on_enter = {
+		"fx/screenspace_playable_boss_01"
+	},
+	particle_effects_on_exit = {
+		"fx/screenspace_playable_boss_01"
+	}
+}
+
+table.insert(MoodPriority, 3, "playable_boss")

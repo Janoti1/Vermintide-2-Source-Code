@@ -26,15 +26,16 @@ local event_colors = {
 	personal = Colors.get_table("dodger_blue")
 }
 local item_icons = {
-	potion_speed_boost_01 = "killfeed_icon_04",
+	healthkit_first_aid_kit_01 = "reinforcement_heal",
 	grenade_fire_02 = "killfeed_icon_09",
 	potion_healing_draught_01 = "killfeed_icon_06",
 	grenade_frag_02 = "killfeed_icon_05",
 	grenade_fire_01 = "killfeed_icon_09",
 	grenade_frag_01 = "killfeed_icon_05",
+	grenade_engineer = "killfeed_icon_05",
 	potion_cooldown_reduction_01 = "killfeed_icon_13",
 	potion_damage_boost_01 = "killfeed_icon_10",
-	healthkit_first_aid_kit_01 = "reinforcement_heal"
+	potion_speed_boost_01 = "killfeed_icon_04"
 }
 
 ItemReceivedFeedbackUI = class(ItemReceivedFeedbackUI)

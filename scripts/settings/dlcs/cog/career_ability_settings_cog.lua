@@ -14,6 +14,15 @@ ActivatedAbilitySettings.dr_4 = {
 		weapon_names_by_index = {
 			"bardin_engineer_career_skill_weapon",
 			"bardin_engineer_career_skill_weapon_heavy"
+		},
+		mechanism_overrides = {
+			versus = {
+				weapon_name = "bardin_engineer_career_skill_weapon_vs",
+				weapon_names_by_index = {
+					"bardin_engineer_career_skill_weapon_vs",
+					"bardin_engineer_career_skill_weapon_heavy_vs"
+				}
+			}
 		}
 	}
 }

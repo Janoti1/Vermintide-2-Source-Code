@@ -170,7 +170,12 @@ ActivatedAbilitySettings = {
 			display_name = "career_active_name_wh_2",
 			cooldown = 70,
 			icon = "victor_bountyhunter_activated_ability",
-			action_name = "action_career_wh_2"
+			action_name = "action_career_wh_2",
+			mechanism_overrides = {
+				versus = {
+					weapon_name = "victor_bountyhunter_career_skill_weapon_vs"
+				}
+			}
 		}
 	},
 	wh_3 = {
@@ -189,7 +194,12 @@ ActivatedAbilitySettings = {
 			display_name = "career_active_name_bw_1",
 			cooldown = 50,
 			icon = "sienna_scholar_activated_ability",
-			action_name = "action_career_bw_1"
+			action_name = "action_career_bw_1",
+			mechanism_overrides = {
+				versus = {
+					cooldown = 80
+				}
+			}
 		}
 	},
 	bw_2 = {

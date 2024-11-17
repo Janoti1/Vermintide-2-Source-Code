@@ -18,7 +18,7 @@ CareerSettings.we_thornsister = {
 	description = "kerillian_4_desc",
 	portrait_image = "unit_frame_portrait_kerillian_thornsister",
 	portrait_thumbnail = "portrait_kerillian_thornsister_thumbnail",
-	sort_order = 1,
+	sort_order = 4,
 	required_dlc = "woods",
 	breed = PlayerBreeds.hero_we_thornsister,
 	item_types = {},
@@ -107,6 +107,9 @@ CareerSettings.we_thornsister = {
 		},
 		slot_frame = {
 			"frame"
+		},
+		slot_pose = {
+			"weapon_pose"
 		}
 	},
 	loadout_equipment_slots = {
@@ -114,7 +117,8 @@ CareerSettings.we_thornsister = {
 		"ranged",
 		"necklace",
 		"ring",
-		"trinket"
+		"trinket",
+		"weapon_pose"
 	}
 }
 OverchargeData = OverchargeData or {}

@@ -30,6 +30,12 @@ local function add_items(items, skip_autosave)
 
 			backend_mirror:add_item(item.ItemInstanceId, item, skip_autosave)
 		end
+
+		local chest_inventory = result.FunctionResult.chest_inventory
+
+		if chest_inventory then
+			backend_mirror:set_read_only_data("chest_inventory", chest_inventory, true)
+		end
 	end
 
 	local request_queue = backend_mirror:request_queue()
@@ -103,6 +109,12 @@ local settings = {
 		description = "Takes you in the game as fast as possible, skipping delays and picking etc",
 		is_boolean = true,
 		setting_name = "dev_quick_start",
+		category = "Allround useful stuff!"
+	},
+	{
+		description = "Displays information about registered puzzles in the world",
+		is_boolean = true,
+		setting_name = "debug_puzzles",
 		category = "Allround useful stuff!"
 	},
 	{
@@ -678,6 +690,14 @@ local settings = {
 		description = "Make the player unkillable.",
 		is_boolean = true,
 		setting_name = "player_invincible",
+		category = "Player mechanics recommended",
+		propagate_to_server = true,
+		never_save = true
+	},
+	{
+		description = "Make the player unkillable.",
+		is_boolean = true,
+		setting_name = "player_unkillable",
 		category = "Player mechanics recommended"
 	},
 	{
@@ -691,25 +711,27 @@ local settings = {
 		setting_name = "player_invisibility",
 		category = "Player mechanics recommended",
 		is_boolean = true,
-		func = function ()
+		func = function (options, option_id)
+			local wants_invis = options[option_id]
 			local player_manager = Managers.player
 			local local_player = player_manager:local_player()
 			local player_unit = local_player and local_player.player_unit
 
 			if Unit.alive(player_unit) then
 				local status_extension = ScriptUnit.extension(player_unit, "status_system")
-				local invisibility = not status_extension:is_invisible()
 
-				status_extension:set_invisible(invisibility, nil, "debug_invis")
+				if status_extension:is_invisible() ~= wants_invis then
+					status_extension:set_invisible(wants_invis, nil, "debug_invis")
 
-				local debug_text = invisibility and "Local player is now invisible" or "Local player is now visible"
+					local debug_text = wants_invis and "Local player is now invisible" or "Local player is now visible"
 
-				Debug.sticky_text(debug_text)
+					Debug.sticky_text(debug_text)
+				end
 			end
 		end
 	},
 	{
-		description = "Features that make player mechanics nicer to work with.\n * Enables increasing/decreasing the player run speed via ALT+MouseScroll.\n * Allows you to press 'B' to take debug damage.\n * Kill yourself on 'CTRL' + 'V'\n * Revive yourself on 'CTRL' + 'B'\n * (requests go here...)",
+		description = "Features that make player mechanics nicer to work with.\n * Enables increasing/decreasing the player run speed via ALT+MouseScroll.\n * Allows you to press 'B' to take debug damage.\n * Kill yourself on 'CTRL' + 'V'\n * Revive yourself on 'CTRL' + 'B'\n * Playable pactsworn can stagger them self on 'ALT' + 'X'\n * (requests go here...)",
 		is_boolean = true,
 		setting_name = "player_mechanics_goodness_debug",
 		category = "Player mechanics recommended"
@@ -926,6 +948,12 @@ local settings = {
 		category = "Player mechanics"
 	},
 	{
+		description = "Show fatigue information about human players",
+		is_boolean = true,
+		setting_name = "debug_fatigue",
+		category = "Player mechanics"
+	},
+	{
 		description = "For enabling melee weapon debugging.",
 		is_boolean = true,
 		setting_name = "debug_weapons",
@@ -978,6 +1006,12 @@ local settings = {
 		is_boolean = true,
 		setting_name = "disable_nice_movement",
 		category = "Player mechanics"
+	},
+	{
+		description = "Adds informative text on screen about ladder climbing",
+		is_boolean = true,
+		setting_name = "debug_ladder_climbing",
+		category = "Player mechaniscs"
 	},
 	{
 		description = "Disables the aim lead/rig motion",
@@ -1080,6 +1114,12 @@ local settings = {
 		description = "Show animation events triggered via actions.",
 		is_boolean = true,
 		setting_name = "debug_action_anim_events",
+		category = "Player mechanics"
+	},
+	{
+		description = "Show animation variables as they are written to the local player unit",
+		is_boolean = true,
+		setting_name = "debug_player_anim_variables",
 		category = "Player mechanics"
 	},
 	{
@@ -1407,6 +1447,7 @@ local settings = {
 		description = "Skips to a set in VS. Will mess up UI paramaters",
 		setting_name = "vs_skip_to_set",
 		category = "Versus",
+		close_when_selected = true,
 		item_source = {},
 		load_items_source_func = function (options)
 			table.clear(options)
@@ -1416,7 +1457,7 @@ local settings = {
 			end
 
 			local mechanism = Managers.mechanism:game_mechanism()
-			local num_sets = mechanism:get_level_settings().num_sets
+			local num_sets = mechanism:get_objective_settings().num_sets
 			local current_set = mechanism:get_current_set()
 
 			for set = 1, num_sets do
@@ -1433,6 +1474,27 @@ local settings = {
 			end
 
 			Managers.mechanism:game_mechanism():debug_skip_to_set(key)
+		end
+	},
+	{
+		description = "Ends a vs match. UI might get messed",
+		close_when_selected = true,
+		setting_name = "vs_end_match",
+		category = "Versus",
+		propagate_to_server = true,
+		func = function (options, index)
+			if Managers.level_transition_handler:in_hub_level() or Managers.mechanism:current_mechanism_name() ~= "versus" then
+				return
+			end
+
+			local game_mode_manager = Managers.state.game_mode
+
+			game_mode_manager:round_started()
+
+			script_data.disable_gamemode_end = nil
+			script_data.disable_gamemode_end_hero_check = nil
+
+			Managers.mechanism:game_mechanism():win_conditions():debug_end_match()
 		end
 	},
 	{
@@ -1465,7 +1527,7 @@ local settings = {
 			local value = options[index]
 			local win_conditions = Managers.mechanism:game_mechanism():win_conditions()
 
-			win_conditions:add_score(value)
+			win_conditions:debug_add_score(value)
 		end
 	},
 	{
@@ -1477,6 +1539,85 @@ local settings = {
 			local player_unit = player.player_unit
 
 			StatusUtils.set_grabbed_by_pack_master_network("pack_master_dropping", player_unit, true, nil)
+		end
+	},
+	{
+		setting_name = "Add Versus Experience",
+		description = "Adds Versus Experience to your account.",
+		category = "Versus",
+		item_source = {},
+		load_items_source_func = function (options)
+			table.clear(options)
+
+			options[1] = 100
+			options[2] = 500
+			options[3] = 2000
+			options[4] = 5000
+			options[5] = 10000
+			options[6] = 100000
+		end,
+		func = function (options, index)
+			local backend_manager = Managers.backend
+			local experience = options[index] or 1
+			local player = Managers.player:local_player(1)
+
+			local function cb(result)
+				local function_result = result.FunctionResult
+				local new_vs_profile_data = result.FunctionResult.data.player_profile_data
+				local backend_mirror = Managers.backend:get_backend_mirror()
+
+				backend_mirror:set_read_only_data("vs_profile_data", cjson.encode(new_vs_profile_data), true)
+			end
+
+			local request = {
+				FunctionName = "devAddVersusExperience",
+				FunctionParameter = {
+					experience = experience
+				}
+			}
+			local backend_mirror = backend_manager._backend_mirror
+			local request_queue = backend_mirror:request_queue()
+
+			request_queue:enqueue(request, cb, false)
+		end
+	},
+	{
+		setting_name = "Add Versus Currency",
+		description = "Adds Versus Versus Currency.",
+		category = "Versus",
+		item_source = {},
+		load_items_source_func = function (options)
+			table.clear(options)
+
+			options[1] = 1
+			options[2] = 5
+			options[3] = 10
+			options[4] = 50
+			options[5] = 100
+		end,
+		func = function (options, index)
+			local backend_manager = Managers.backend
+			local amount = options[index] or 1
+			local peddler_interface = backend_manager:get_interface("peddler")
+			local current_chips = peddler_interface:get_chips("VS")
+			local player = Managers.player:local_player(1)
+
+			local function cb(result)
+				local function_result = result.FunctionResult
+
+				peddler_interface:set_chips("VS", function_result.new_vs_currency)
+			end
+
+			local request = {
+				FunctionName = "devGrantVersusCurrency",
+				FunctionParameter = {
+					amount = amount
+				}
+			}
+			local backend_mirror = backend_manager._backend_mirror
+			local request_queue = backend_mirror:request_queue()
+
+			request_queue:enqueue(request, cb, false)
 		end
 	},
 	{
@@ -2380,15 +2521,17 @@ local settings = {
 	},
 	{
 		description = "Find it annoying that the game ends every time you die? Well enable this setting then!",
-		is_boolean = true,
 		setting_name = "disable_gamemode_end",
-		category = "Gamemode/level"
+		category = "Gamemode/level",
+		propagate_to_server = true,
+		is_boolean = true
 	},
 	{
 		description = "Find it annoying that the game ends every time you die? Well enable this setting then!",
-		is_boolean = true,
 		setting_name = "disable_gamemode_end_hero_check",
-		category = "Gamemode/level"
+		category = "Gamemode/level",
+		propagate_to_server = true,
+		is_boolean = true
 	},
 	{
 		description = "Game will not end even though if all players die",
@@ -2607,6 +2750,32 @@ local settings = {
 		is_boolean = true,
 		setting_name = "sound_debug",
 		category = "Visual/audio"
+	},
+	{
+		description = "Triggers breakpoint when selected cue is triggered from Lua. (Requires attached debugger). Listen will fill the list with sounds that are played this session.",
+		setting_name = "sound_cue_breakpoint",
+		category = "Visual/audio",
+		item_source = {
+			"Listen",
+			"[clear value]"
+		},
+		load_items_source_func = function (options)
+			table.clear(options)
+
+			options[1] = "Listen"
+			options[2] = "[clear value]"
+
+			local events = rawget(_G, "_sound_cue_breakpoint_set")
+
+			if events then
+				local i = #options
+
+				for event_name in pairs(events) do
+					i = i + 1
+					options[i] = event_name
+				end
+			end
+		end
 	},
 	{
 		description = "Shows Wwise Timestamp.",
@@ -6032,6 +6201,31 @@ local settings = {
 		end
 	},
 	{
+		description = "Displays loaded dialogue files and filter a single one. No other files will be loaded on level load. (Requires restart)",
+		setting_name = "filter_single_dialogue_file",
+		category = "Dialogue",
+		item_source = {},
+		load_items_source_func = function (options)
+			table.clear(options)
+
+			local dialogue_system = Managers.state.entity:system("dialogue_system")
+
+			if dialogue_system then
+				local loaded_files = Managers.state.entity:system("dialogue_system"):tagquery_loader().debug_loaded_files
+
+				if loaded_files then
+					for file_name in pairs(loaded_files) do
+						options[#options + 1] = string.match(file_name, "^.+/(.+)$")
+					end
+
+					table.sort(options)
+				end
+			end
+
+			table.insert(options, 1, "[clear value]")
+		end
+	},
+	{
 		setting_name = "debug_dialogue_files",
 		description = "Used to debug dialog files, facial expressions and missing vo/subtitles. To skip use: DebugVo.jump_to(('line_number/line_id')",
 		category = "Dialogue",
@@ -6052,6 +6246,8 @@ local settings = {
 					table.sort(options)
 				end
 			end
+
+			table.insert(options, 1, "[clear value]")
 		end,
 		func = function (options, index)
 			local dialogue_system = Managers.state.entity:system("dialogue_system")
@@ -6094,6 +6290,12 @@ local settings = {
 		is_boolean = true,
 		setting_name = "input_debug_filters",
 		category = "Input"
+	},
+	{
+		description = "Set to false to disable cursor clipping.",
+		is_boolean = true,
+		setting_name = "clip_cursor",
+		category = "UI"
 	},
 	{
 		description = "Enables additional assertions to help catch errors in UI code. Only has an effect when DEBUG is enabled.",
@@ -6193,11 +6395,10 @@ local settings = {
 		category = "UI"
 	},
 	{
-		description = "Cycles through available localizations",
-		category = "UI",
-		setting_name = "enable_localization_cycling",
-		callback = "enable_locale_cycling",
-		is_boolean = true
+		description = "Disables rainbow colorization of unlocalized strings to prevent eyesore.",
+		is_boolean = true,
+		setting_name = "disable_colorize_unlocalized_strings",
+		category = "UI"
 	},
 	{
 		description = "Turns off positive reinforcement UI",
@@ -6358,7 +6559,7 @@ local settings = {
 		func = function (options, index)
 			local val = options[index]
 
-			if val == "off" then
+			if val == "[clear value]" then
 				script_data.package_loading_latency = nil
 			else
 				script_data.package_loading_latency = type(val) == "table" and val or {
@@ -7118,9 +7319,80 @@ local settings = {
 		description = "Win",
 		close_when_selected = true,
 		setting_name = "Complete current level",
+		propagate_to_server = true,
 		category = "Progression",
 		func = function ()
 			Managers.state.game_mode:complete_level()
+		end
+	},
+	{
+		description = "End the current round (versus)",
+		close_when_selected = true,
+		setting_name = "End Round",
+		propagate_to_server = true,
+		category = "Versus",
+		func = function ()
+			Managers.state.game_mode:complete_level()
+
+			script_data.disable_gamemode_end = nil
+			script_data.disable_gamemode_end_hero_check = nil
+		end
+	},
+	{
+		description = "Automatically complete rounds",
+		never_save = true,
+		setting_name = "auto_complete_rounds",
+		category = "Versus",
+		propagate_to_server = true,
+		is_boolean = true,
+		close_when_selected = true
+	},
+	{
+		description = "Displays information about early win",
+		is_boolean = true,
+		setting_name = "debug_early_win",
+		category = "Versus"
+	},
+	{
+		description = "Force start the connected dedicated server",
+		close_when_selected = true,
+		setting_name = "Force Start Dedicated Server",
+		category = "Versus",
+		func = function ()
+			local mechanism_state = Managers.mechanism:get_state()
+
+			if mechanism_state ~= "inn" then
+				Debug.sticky_text("Tried force starting a dedicated server but was not in the keep.")
+
+				return
+			end
+
+			local dedicated_server_peer_id = Managers.mechanism:dedicated_server_peer_id()
+
+			if not PEER_ID_TO_CHANNEL[dedicated_server_peer_id] then
+				Debug.sticky_text("Tried force starting a dedicated server but is not connected to one.")
+
+				return
+			end
+
+			Managers.mechanism:game_mechanism():force_start_dedicated_server()
+		end
+	},
+	{
+		description = "Skip the startup timer and start the round immediately",
+		close_when_selected = true,
+		setting_name = "Start Round",
+		category = "Versus",
+		func = function ()
+			if Managers.level_transition_handler:in_hub_level() then
+				return false, "Failed to start round - Match not started"
+			end
+
+			local game_mode_manager = Managers.state.game_mode
+
+			game_mode_manager:round_started()
+
+			return true, "Round started!"
 		end
 	},
 	{
@@ -7713,7 +7985,7 @@ local settings = {
 		end
 	},
 	{
-		description = "Lists all items with functionality to add them to inventory.",
+		description = "Lists all items with functionality to add them to inventory. (hold left shift to add x10)",
 		setting_name = "Add Chest Items",
 		category = "Items",
 		item_source = {},
@@ -7733,10 +8005,16 @@ local settings = {
 		func = function (options, index)
 			local item_interface = Managers.backend:get_interface("items")
 			local item = options[index]
+			local amount = 1
+
+			if Keyboard.button(Keyboard.button_index("left shift")) > 0 then
+				amount = 10
+			end
 
 			add_items({
 				{
-					ItemName = item
+					ItemName = item,
+					Amount = amount
 				}
 			})
 		end
@@ -7856,6 +8134,12 @@ local settings = {
 
 			request_queue:enqueue(request, cb, false)
 		end
+	},
+	{
+		description = "Unlocks all the weapon poses in the social_wheel",
+		is_boolean = true,
+		setting_name = "unlock_all_weapon_poses",
+		category = "Items"
 	},
 	{
 		description = "Lists all mutators with functionality to activate them. Requires restart of level",
@@ -8097,6 +8381,12 @@ local settings = {
 		end
 	},
 	{
+		description = "All challenges with progression will only require you to increase the progress by 1",
+		is_boolean = true,
+		setting_name = "simplify_challenge_progression",
+		category = "Progression"
+	},
+	{
 		description = "Sets all Okris challenges to be claimable in the UI",
 		is_boolean = true,
 		setting_name = "set_all_challenges_claimable",
@@ -8115,6 +8405,24 @@ local settings = {
 		category = "Versus"
 	},
 	{
+		description = "Finishes a match after the first round",
+		is_boolean = true,
+		setting_name = "versus_quick_match_end",
+		category = "Versus"
+	},
+	{
+		description = "Generates fake stats to test the versus end screen",
+		is_boolean = true,
+		setting_name = "versus_generate_fake_stats",
+		category = "Versus"
+	},
+	{
+		description = "Generates fake players in the ceremony screen",
+		is_boolean = true,
+		setting_name = "versus_generate_fake_ceremony_players",
+		category = "Versus"
+	},
+	{
 		description = "Activates all objectives for the current weave",
 		setting_name = "activate_all_weave_objectives",
 		category = "Gamemode/level",
@@ -8129,10 +8437,10 @@ local settings = {
 
 					if name:match(".*weave_capture_point_spawner") or name:match(".*weave_interaction_spawner") or name:match(".*weave_prop_skaven_doom_wheel_01_spawner") or name:match(".*weave_limited_item_track_spawner") then
 						local objective_id = Unit.get_data(unit, "weave_objective_id")
-						local i = #NetworkLookup.weave_objective_names + 1
+						local i = #NetworkLookup.objective_names + 1
 
-						NetworkLookup.weave_objective_names[i] = objective_id
-						NetworkLookup.weave_objective_names[objective_id] = i
+						NetworkLookup.objective_names[i] = objective_id
+						NetworkLookup.objective_names[objective_id] = i
 						objectives[objective_id] = {}
 
 						print(name)
@@ -8140,17 +8448,23 @@ local settings = {
 				end
 			end
 
-			local i = #NetworkLookup.weave_objective_names + 1
+			local i = #NetworkLookup.objective_names + 1
 
-			NetworkLookup.weave_objective_names[i] = "kill_enemies"
-			NetworkLookup.weave_objective_names.kill_enemies = i
+			NetworkLookup.objective_names[i] = "kill_enemies"
+			NetworkLookup.objective_names.kill_enemies = i
 			objectives.kill_enemies = {}
+			script_data.temp_objective_list_counter = (script_data.temp_objective_list_counter or 0) + 1
 
-			local weave_objective_system = Managers.state.entity:system("weave_objective_system")
+			local objective_list_name = "temp_objective_list_" .. script_data.temp_objective_list_counter
 
-			weave_objective_system:activate_objectives({
+			ObjectiveLists[objective_list_name] = {
 				objectives
-			})
+			}
+
+			local objective_system = Managers.state.entity:system("objective_system")
+
+			objective_system:server_register_objectives(objective_list_name)
+			objective_system:server_activate_first_objective()
 		end
 	},
 	{
@@ -8176,6 +8490,14 @@ local settings = {
 		is_boolean = true,
 		setting_name = "disable_weave_talents",
 		category = "Player mechanics"
+	},
+	{
+		description = "sets the weave timer to 1 sec",
+		setting_name = "deplete_weave_timer",
+		category = "Player mechanics",
+		func = function ()
+			Managers.weave:_set_time_left(1)
+		end
 	},
 	{
 		description = "Adds 10 Weave Essence to your account",
@@ -8358,6 +8680,26 @@ local settings = {
 			local world = Managers.world:world("level_world")
 
 			LevelHelper:flow_event(world, "first_time_started_game")
+			LevelHelper:flow_event(world, "first_time_started_deus_game")
+			LevelHelper:flow_event(world, "first_time_started_versus_game")
+		end
+	},
+	{
+		description = "Clears the seen_handbook_pages table, allowing all popups to trigger again.",
+		setting_name = "Clear seen_handbook_pages",
+		category = "Onboarding",
+		func = function ()
+			local seen_handbook_pages = SaveData.seen_handbook_pages
+
+			if seen_handbook_pages then
+				table.clear(seen_handbook_pages)
+			end
+
+			local seen_handbook_popups = SaveData.seen_handbook_popups
+
+			if seen_handbook_popups then
+				table.clear(seen_handbook_popups)
+			end
 		end
 	},
 	{
@@ -8452,7 +8794,7 @@ local settings = {
 			end
 		end,
 		func = function (options, index)
-			local journey_and_difficulty = string.split(options[index], "/")
+			local journey_and_difficulty = string.split_deprecated(options[index], "/")
 			local journey_name = journey_and_difficulty[1]
 			local difficulty_name = journey_and_difficulty[2]
 			local difficulty_id = table.index_of(DefaultDifficulties, difficulty_name)
@@ -8477,7 +8819,7 @@ local settings = {
 			end
 		end,
 		func = function (options, index)
-			local hero_journey_and_difficulty = string.split(options[index], "/")
+			local hero_journey_and_difficulty = string.split_deprecated(options[index], "/")
 			local hero = hero_journey_and_difficulty[1]
 			local journey_name = hero_journey_and_difficulty[2]
 			local difficulty_name = hero_journey_and_difficulty[3]
@@ -8527,7 +8869,7 @@ local settings = {
 			local local_player = Managers.player:local_player()
 			local local_player_id = local_player:local_player_id()
 			local option = options[index]
-			local rarity_and_power_up_name = string.split(option, "/")
+			local rarity_and_power_up_name = string.split_deprecated(option, "/")
 			local rarity = rarity_and_power_up_name[1]
 			local power_up_name = rarity_and_power_up_name[2]
 			local existing_power_ups = deus_run_controller:get_player_power_ups(local_player.peer_id, local_player_id)
@@ -8967,6 +9309,12 @@ local settings = {
 		category = "Versus"
 	},
 	{
+		description = "Debug versus chaos troll puke sweep",
+		is_boolean = true,
+		setting_name = "versus_debug_chaos_troll_sweep",
+		category = "AI"
+	},
+	{
 		description = "starts the round",
 		setting_name = "end_player_hosted_round",
 		category = "Versus",
@@ -9390,9 +9738,6 @@ for _, settings_value in pairs(settings) do
 end
 
 local callbacks = {
-	enable_locale_cycling = function (option)
-		error("Broken (for now). Use the ImguiLocalization window instead.")
-	end,
 	visualize_sound_occlusion = function (option)
 		World.visualize_sound_occlusion()
 	end,

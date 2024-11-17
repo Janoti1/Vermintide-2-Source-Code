@@ -2,6 +2,7 @@ return function ()
 	define_rule({
 		response = "nfl_shadow_curse_loading_screen",
 		name = "nfl_shadow_curse_loading_screen",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",

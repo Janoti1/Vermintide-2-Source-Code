@@ -1,5 +1,6 @@
 return function ()
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_eleven_01",
 		response = "pbw_bastion_conversation_eleven_01",
 		criterias = {
@@ -80,6 +81,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_eleven_02",
 		response = "pbw_bastion_conversation_eleven_02",
 		criterias = {
@@ -117,6 +119,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_seven_01",
 		response = "pbw_bastion_conversation_seven_01",
 		criterias = {
@@ -197,6 +200,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_seven_02",
 		response = "pbw_bastion_conversation_seven_02",
 		criterias = {
@@ -234,6 +238,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_three_01",
 		response = "pbw_bastion_conversation_three_01",
 		criterias = {
@@ -314,6 +319,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_three_02",
 		response = "pbw_bastion_conversation_three_02",
 		criterias = {
@@ -351,6 +357,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_three_03",
 		response = "pbw_bastion_conversation_three_03",
 		criterias = {
@@ -388,6 +395,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_twelve_01",
 		response = "pbw_bastion_conversation_twelve_01",
 		criterias = {
@@ -425,6 +433,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_twelve_02",
 		response = "pbw_bastion_conversation_twelve_02",
 		criterias = {
@@ -462,6 +471,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pbw_bastion_conversation_two_01",
 		response = "pbw_bastion_conversation_two_01",
 		criterias = {
@@ -499,6 +509,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_conversation_five_01",
 		response = "pdr_bastion_conversation_five_01",
 		criterias = {
@@ -536,6 +547,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_conversation_five_02",
 		response = "pdr_bastion_conversation_five_02",
 		criterias = {
@@ -573,6 +585,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_conversation_four_01",
 		response = "pdr_bastion_conversation_four_01",
 		criterias = {
@@ -610,6 +623,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_conversation_one_01",
 		response = "pdr_bastion_conversation_one_01",
 		criterias = {
@@ -696,6 +710,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_conversation_three_01",
 		response = "pdr_bastion_conversation_three_01",
 		criterias = {
@@ -733,6 +748,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pdr_bastion_conversation_three_02",
 		response = "pdr_bastion_conversation_three_02",
 		criterias = {
@@ -770,6 +786,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_eight_01",
 		response = "pes_bastion_conversation_eight_01",
 		criterias = {
@@ -807,6 +824,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_nine_01",
 		response = "pes_bastion_conversation_nine_01",
 		criterias = {
@@ -887,6 +905,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_nine_02",
 		response = "pes_bastion_conversation_nine_02",
 		criterias = {
@@ -924,6 +943,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_nine_03",
 		response = "pes_bastion_conversation_nine_03",
 		criterias = {
@@ -961,6 +981,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_one_01",
 		response = "pes_bastion_conversation_one_01",
 		criterias = {
@@ -998,6 +1019,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_one_02",
 		response = "pes_bastion_conversation_one_02",
 		criterias = {
@@ -1035,6 +1057,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_six_01",
 		response = "pes_bastion_conversation_six_01",
 		criterias = {
@@ -1072,6 +1095,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_six_02",
 		response = "pes_bastion_conversation_six_02",
 		criterias = {
@@ -1109,6 +1133,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_twelve_01",
 		response = "pes_bastion_conversation_twelve_01",
 		criterias = {
@@ -1189,6 +1214,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pes_bastion_conversation_twelve_02",
 		response = "pes_bastion_conversation_twelve_02",
 		criterias = {
@@ -1226,6 +1252,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_eight_01",
 		response = "pwe_bastion_conversation_eight_01",
 		criterias = {
@@ -1306,6 +1333,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_eleven_01",
 		response = "pwe_bastion_conversation_eleven_01",
 		criterias = {
@@ -1343,6 +1371,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_four_01",
 		response = "pwe_bastion_conversation_four_01",
 		criterias = {
@@ -1423,6 +1452,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_seven_01",
 		response = "pwe_bastion_conversation_seven_01",
 		criterias = {
@@ -1460,6 +1490,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_six_01",
 		response = "pwe_bastion_conversation_six_01",
 		criterias = {
@@ -1540,6 +1571,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_six_02",
 		response = "pwe_bastion_conversation_six_02",
 		criterias = {
@@ -1577,6 +1609,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwe_bastion_conversation_six_03",
 		response = "pwe_bastion_conversation_six_03",
 		criterias = {
@@ -1614,6 +1647,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_five_01",
 		response = "pwh_bastion_conversation_five_01",
 		criterias = {
@@ -1694,6 +1728,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_five_02",
 		response = "pwh_bastion_conversation_five_02",
 		criterias = {
@@ -1731,6 +1766,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_nine_01",
 		response = "pwh_bastion_conversation_nine_01",
 		criterias = {
@@ -1768,6 +1804,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_nine_02",
 		response = "pwh_bastion_conversation_nine_02",
 		criterias = {
@@ -1805,6 +1842,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_one_01",
 		response = "pwh_bastion_conversation_one_01",
 		criterias = {
@@ -1842,6 +1880,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_two_01",
 		response = "pwh_bastion_conversation_two_01",
 		criterias = {
@@ -1922,6 +1961,7 @@ return function ()
 		}
 	})
 	define_rule({
+		probability = 1,
 		name = "pwh_bastion_conversation_two_02",
 		response = "pwh_bastion_conversation_two_02",
 		criterias = {
@@ -1978,7 +2018,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_eleven_01"
 			},
 			sound_events_duration = {
-				[1] = 3.0650625228882
+				[1] = 3.0649790763855
 			}
 		},
 		pbw_bastion_conversation_eleven_02 = {
@@ -2000,7 +2040,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_eleven_02"
 			},
 			sound_events_duration = {
-				[1] = 5.1531043052673
+				[1] = 5.1529793739319
 			}
 		},
 		pbw_bastion_conversation_seven_01 = {
@@ -2022,7 +2062,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_seven_01"
 			},
 			sound_events_duration = {
-				[1] = 4.5815415382385
+				[1] = 4.580979347229
 			}
 		},
 		pbw_bastion_conversation_seven_02 = {
@@ -2044,7 +2084,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_seven_02"
 			},
 			sound_events_duration = {
-				[1] = 2.0300624370575
+				[1] = 2.0299792289734
 			}
 		},
 		pbw_bastion_conversation_three_01 = {
@@ -2066,7 +2106,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_three_01"
 			},
 			sound_events_duration = {
-				[1] = 7.3986873626709
+				[1] = 7.397979259491
 			}
 		},
 		pbw_bastion_conversation_three_02 = {
@@ -2088,7 +2128,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_three_02"
 			},
 			sound_events_duration = {
-				[1] = 3.1234166622162
+				[1] = 3.1229791641235
 			}
 		},
 		pbw_bastion_conversation_three_03 = {
@@ -2110,7 +2150,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_three_03"
 			},
 			sound_events_duration = {
-				[1] = 1.1537916660309
+				[1] = 1.1529791355133
 			}
 		},
 		pbw_bastion_conversation_twelve_01 = {
@@ -2132,7 +2172,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_twelve_01"
 			},
 			sound_events_duration = {
-				[1] = 3.8248751163483
+				[1] = 3.823979139328
 			}
 		},
 		pbw_bastion_conversation_twelve_02 = {
@@ -2154,7 +2194,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_twelve_02"
 			},
 			sound_events_duration = {
-				[1] = 1.0716041326523
+				[1] = 1.0709791183472
 			}
 		},
 		pbw_bastion_conversation_two_01 = {
@@ -2176,7 +2216,7 @@ return function ()
 				[1] = "pbw_bastion_conversation_two_01"
 			},
 			sound_events_duration = {
-				[1] = 3.6881666183472
+				[1] = 3.687979221344
 			}
 		},
 		pdr_bastion_conversation_five_01 = {
@@ -2198,7 +2238,7 @@ return function ()
 				[1] = "pdr_bastion_conversation_five_01"
 			},
 			sound_events_duration = {
-				[1] = 4.0545206069946
+				[1] = 4.0539793968201
 			}
 		},
 		pdr_bastion_conversation_five_02 = {
@@ -2220,7 +2260,7 @@ return function ()
 				[1] = "pdr_bastion_conversation_five_02"
 			},
 			sound_events_duration = {
-				[1] = 2.8572707176209
+				[1] = 2.8569791316986
 			}
 		},
 		pdr_bastion_conversation_four_01 = {
@@ -2242,7 +2282,7 @@ return function ()
 				[1] = "pdr_bastion_conversation_four_01"
 			},
 			sound_events_duration = {
-				[1] = 8.7995414733887
+				[1] = 8.798978805542
 			}
 		},
 		pdr_bastion_conversation_one_01 = {
@@ -2264,7 +2304,7 @@ return function ()
 				[1] = "pdr_bastion_conversation_one_01"
 			},
 			sound_events_duration = {
-				[1] = 5.5963125228882
+				[1] = 5.5959792137146
 			}
 		},
 		pdr_bastion_conversation_three_01 = {
@@ -2286,7 +2326,7 @@ return function ()
 				[1] = "pdr_bastion_conversation_three_01"
 			},
 			sound_events_duration = {
-				[1] = 6.0012707710266
+				[1] = 6.0009789466858
 			}
 		},
 		pdr_bastion_conversation_three_02 = {
@@ -2308,7 +2348,7 @@ return function ()
 				[1] = "pdr_bastion_conversation_three_02"
 			},
 			sound_events_duration = {
-				[1] = 5.1040415763855
+				[1] = 5.1039791107178
 			}
 		},
 		pes_bastion_conversation_eight_01 = {
@@ -2330,7 +2370,7 @@ return function ()
 				[1] = "pes_bastion_conversation_eight_01"
 			},
 			sound_events_duration = {
-				[1] = 6.0786666870117
+				[1] = 6.0779790878296
 			}
 		},
 		pes_bastion_conversation_nine_01 = {
@@ -2352,7 +2392,7 @@ return function ()
 				[1] = "pes_bastion_conversation_nine_01"
 			},
 			sound_events_duration = {
-				[1] = 4.1769374608994
+				[1] = 4.1764687299728
 			}
 		},
 		pes_bastion_conversation_nine_02 = {
@@ -2374,7 +2414,7 @@ return function ()
 				[1] = "pes_bastion_conversation_nine_02"
 			},
 			sound_events_duration = {
-				[1] = 5.6898331642151
+				[1] = 5.6889791488647
 			}
 		},
 		pes_bastion_conversation_nine_03 = {
@@ -2396,7 +2436,7 @@ return function ()
 				[1] = "pes_bastion_conversation_nine_03"
 			},
 			sound_events_duration = {
-				[1] = 4.8927497863769
+				[1] = 4.8919792175293
 			}
 		},
 		pes_bastion_conversation_one_01 = {
@@ -2418,7 +2458,7 @@ return function ()
 				[1] = "pes_bastion_conversation_one_01"
 			},
 			sound_events_duration = {
-				[1] = 4.2191247940064
+				[1] = 4.2189793586731
 			}
 		},
 		pes_bastion_conversation_one_02 = {
@@ -2440,7 +2480,7 @@ return function ()
 				[1] = "pes_bastion_conversation_one_02"
 			},
 			sound_events_duration = {
-				[1] = 2.509604215622
+				[1] = 2.5089790821075
 			}
 		},
 		pes_bastion_conversation_six_01 = {
@@ -2462,7 +2502,7 @@ return function ()
 				[1] = "pes_bastion_conversation_six_01"
 			},
 			sound_events_duration = {
-				[1] = 2.3133125305176
+				[1] = 2.312979221344
 			}
 		},
 		pes_bastion_conversation_six_02 = {
@@ -2484,7 +2524,7 @@ return function ()
 				[1] = "pes_bastion_conversation_six_02"
 			},
 			sound_events_duration = {
-				[1] = 7.4566459655762
+				[1] = 7.455979347229
 			}
 		},
 		pes_bastion_conversation_twelve_01 = {
@@ -2506,7 +2546,7 @@ return function ()
 				[1] = "pes_bastion_conversation_twelve_01"
 			},
 			sound_events_duration = {
-				[1] = 3.6375207901001
+				[1] = 3.6369791030884
 			}
 		},
 		pes_bastion_conversation_twelve_02 = {
@@ -2528,7 +2568,7 @@ return function ()
 				[1] = "pes_bastion_conversation_twelve_02"
 			},
 			sound_events_duration = {
-				[1] = 1.1217291355133
+				[1] = 1.1210000514984
 			}
 		},
 		pwe_bastion_conversation_eight_01 = {
@@ -2550,7 +2590,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_eight_01"
 			},
 			sound_events_duration = {
-				[1] = 5.0277290344238
+				[1] = 5.026978969574
 			}
 		},
 		pwe_bastion_conversation_eleven_01 = {
@@ -2572,7 +2612,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_eleven_01"
 			},
 			sound_events_duration = {
-				[1] = 7.3292708396912
+				[1] = 7.3289790153503
 			}
 		},
 		pwe_bastion_conversation_four_01 = {
@@ -2594,7 +2634,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_four_01"
 			},
 			sound_events_duration = {
-				[1] = 6.2572708129883
+				[1] = 6.2569789886475
 			}
 		},
 		pwe_bastion_conversation_seven_01 = {
@@ -2616,7 +2656,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_seven_01"
 			},
 			sound_events_duration = {
-				[1] = 3.7721874713898
+				[1] = 3.7719790935516
 			}
 		},
 		pwe_bastion_conversation_six_01 = {
@@ -2638,7 +2678,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_six_01"
 			},
 			sound_events_duration = {
-				[1] = 5.9367918968201
+				[1] = 5.9359793663025
 			}
 		},
 		pwe_bastion_conversation_six_02 = {
@@ -2660,7 +2700,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_six_02"
 			},
 			sound_events_duration = {
-				[1] = 2.0307500362396
+				[1] = 2.0299792289734
 			}
 		},
 		pwe_bastion_conversation_six_03 = {
@@ -2682,7 +2722,7 @@ return function ()
 				[1] = "pwe_bastion_conversation_six_03"
 			},
 			sound_events_duration = {
-				[1] = 4.2004165649414
+				[1] = 4.1999793052673
 			}
 		},
 		pwh_bastion_conversation_five_01 = {
@@ -2704,7 +2744,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_five_01"
 			},
 			sound_events_duration = {
-				[1] = 9.3207082748413
+				[1] = 9.3199787139893
 			}
 		},
 		pwh_bastion_conversation_five_02 = {
@@ -2726,7 +2766,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_five_02"
 			},
 			sound_events_duration = {
-				[1] = 1.880083322525
+				[1] = 1.8799999952316
 			}
 		},
 		pwh_bastion_conversation_nine_01 = {
@@ -2748,7 +2788,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_nine_01"
 			},
 			sound_events_duration = {
-				[1] = 2.9337708950043
+				[1] = 2.9329791069031
 			}
 		},
 		pwh_bastion_conversation_nine_02 = {
@@ -2770,7 +2810,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_nine_02"
 			},
 			sound_events_duration = {
-				[1] = 1.0115208625793
+				[1] = 1.0109791755676
 			}
 		},
 		pwh_bastion_conversation_one_01 = {
@@ -2792,7 +2832,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_one_01"
 			},
 			sound_events_duration = {
-				[1] = 5.3866667747498
+				[1] = 5.3859791755676
 			}
 		},
 		pwh_bastion_conversation_two_01 = {
@@ -2814,7 +2854,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_two_01"
 			},
 			sound_events_duration = {
-				[1] = 7.6855001449585
+				[1] = 7.6849789619446
 			}
 		},
 		pwh_bastion_conversation_two_02 = {
@@ -2836,7 +2876,7 @@ return function ()
 				[1] = "pwh_bastion_conversation_two_02"
 			},
 			sound_events_duration = {
-				[1] = 3.9144375324249
+				[1] = 3.9139790534973
 			}
 		}
 	})

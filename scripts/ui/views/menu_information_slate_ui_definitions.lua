@@ -463,177 +463,282 @@ function create_gamepad_input(scenegraph_id, color)
 	return definition
 end
 
-local function create_switch_panel(scenegraph_id)
-	local indent = 20
-	local spacing = 5
-	local dot_icon_width = 44
-	local switch_icon_width = 30
-	local base_width = indent + dot_icon_width + switch_icon_width + spacing * 2
-	local definition = {
-		element = {
-			passes = {
-				{
-					style_id = "switch_icon",
-					pass_type = "hotspot",
-					content_id = "hotspot"
-				},
-				{
-					pass_type = "rect",
-					style_id = "background"
-				},
-				{
-					pass_type = "rect",
-					style_id = "top_banner"
-				},
-				{
-					style_id = "switch_icon",
-					texture_id = "switch_icon",
-					pass_type = "texture",
-					content_change_function = function (content, style)
-						if content.hotspot.is_hover then
-							style.color = style.selected_color
-						else
-							style.color = style.unselected_color
-						end
-					end
-				},
-				{
-					pass_type = "texture",
-					style_id = "dot_icon",
-					texture_id = "dot_icon"
-				},
-				{
-					style_id = "header",
-					pass_type = "text",
-					text_id = "header"
-				}
-			}
+local function create_switch_panel(information_data)
+	local num_information_slates = #information_data
+	local widget_def = {}
+	local element = {
+		passes = {}
+	}
+	local passes = element.passes
+	local content = {}
+	local style = {}
+
+	passes[#passes + 1] = {
+		style_id = "right_arrow",
+		pass_type = "texture_uv",
+		content_id = "right_arrow",
+		content_check_function = function (content, style)
+			local gamepad_active = Managers.input:is_device_active("gamepad")
+
+			return not gamepad_active
+		end,
+		content_change_function = function (content, style)
+			local hotspot = content.parent.right_arrow_hotspot
+			local intensity_multiplier = hotspot.is_hover and 1 or 0.6
+
+			style.color[2] = 255 * intensity_multiplier
+			style.color[3] = 255 * intensity_multiplier
+			style.color[4] = 255 * intensity_multiplier
+		end
+	}
+	passes[#passes + 1] = {
+		style_id = "right_arrow",
+		pass_type = "hotspot",
+		content_id = "right_arrow_hotspot"
+	}
+	passes[#passes + 1] = {
+		style_id = "right_shoulder",
+		texture_id = "right_shoulder",
+		pass_type = "texture",
+		content_check_function = function (content, style)
+			local gamepad_active = Managers.input:is_device_active("gamepad")
+
+			return gamepad_active
+		end,
+		content_change_function = function (content, style)
+			if IS_PS4 or IS_XB1 then
+				return
+			end
+
+			local use_ps4_input_icons = UISettings.use_ps4_input_icons
+			local input_device = Managers.input and Managers.input:get_most_recent_device()
+
+			if input_device then
+				local device_type = input_device.type()
+				local is_ps_pad = device_type == "sce_pad"
+
+				use_ps4_input_icons = is_ps_pad or use_ps4_input_icons
+			end
+
+			content.right_shoulder = use_ps4_input_icons and "ps4_button_icon_r1" or "xbone_button_icon_rb"
+		end
+	}
+	style.right_arrow = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		area_size = {
+			30,
+			30
 		},
-		content = {
-			header = "PLACEHOLDER",
-			switch_icon = "athanor_icon_loading",
-			dot_icon = "dot",
-			base_width = base_width,
-			hotspot = {}
+		texture_size = {
+			12,
+			16
 		},
-		style = {
-			background = {
-				vertical_alignment = "top",
-				horizontal_alignment = "right",
-				texture_size = {
-					base_width,
-					scenegraph_definition[scenegraph_id].size[2]
-				},
-				color = {
-					90,
-					0,
-					0,
-					0
-				},
-				offset = {
-					0,
-					0,
-					0
-				}
+		color = {
+			255,
+			255,
+			255,
+			255
+		}
+	}
+	style.right_shoulder = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		texture_size = {
+			36,
+			26
+		},
+		color = {
+			255,
+			255,
+			255,
+			255
+		}
+	}
+	content.right_arrow_hotspot = {}
+	content.right_arrow = {
+		texture_id = "info_slate_arrow",
+		uvs = {
+			{
+				1,
+				0
 			},
-			top_banner = {
-				vertical_alignment = "top",
-				horizontal_alignment = "right",
-				texture_size = {
-					base_width,
-					3
-				},
-				color = {
-					255,
-					255,
-					255,
-					255
-				},
-				offset = {
-					0,
-					0,
-					1
-				}
-			},
-			switch_icon = {
-				vertical_alignment = "center",
-				horizontal_alignment = "left",
-				texture_size = {
-					switch_icon_width,
-					switch_icon_width
-				},
-				selected_color = {
-					255,
-					255,
-					255,
-					255
-				},
-				unselected_color = {
-					128,
-					255,
-					255,
-					255
-				},
-				color = {
-					128,
-					255,
-					255,
-					255
-				},
-				offset = {
-					indent,
-					0,
-					2
-				}
-			},
-			dot_icon = {
-				vertical_alignment = "center",
-				horizontal_alignment = "left",
-				texture_size = {
-					dot_icon_width,
-					dot_icon_width
-				},
-				color = {
-					255,
-					255,
-					255,
-					255
-				},
-				offset = {
-					indent + switch_icon_width + spacing,
-					0,
-					2
-				}
-			},
-			header = {
-				vertical_alignment = "center",
-				upper_case = true,
-				localize = false,
-				horizontal_alignment = "left",
-				font_size = 30,
-				font_type = "hell_shark_header",
-				text_color = {
-					255,
-					192,
-					192,
-					192
-				},
-				offset = {
-					base_width,
-					-3,
-					0
-				}
+			{
+				0,
+				1
 			}
+		}
+	}
+	content.right_shoulder = IS_PS4 and "ps4_button_icon_r1" or "xbone_button_icon_rb"
+	content.current_index = nil
+
+	local slate_size = {
+		16,
+		16
+	}
+	local spacing = 8
+	local horizontal_offset = -28
+
+	for i = num_information_slates, 1, -1 do
+		local slate_data = information_data[i]
+		local slate_name = "slate_" .. i
+
+		passes[#passes + 1] = {
+			pass_type = "rect",
+			content_id = slate_name,
+			style_id = slate_name,
+			content_change_function = function (content, style)
+				local alert_color = style.alert_color
+				local hotspot = content.parent[slate_name .. "_hotspot"]
+				local is_selected = hotspot.is_hover or content.index == content.parent.current_index
+				local intensity_multiplier = hotspot.is_hover and 1 or 0.8
+
+				style.color[1] = 255
+				style.color[2] = (is_selected and alert_color[2] or 255) * intensity_multiplier
+				style.color[3] = (is_selected and alert_color[3] or 255) * intensity_multiplier
+				style.color[4] = (is_selected and alert_color[4] or 255) * intensity_multiplier
+			end
+		}
+		passes[#passes + 1] = {
+			pass_type = "hotspot",
+			content_id = slate_name .. "_hotspot",
+			style_id = slate_name
+		}
+		content[slate_name .. "_hotspot"] = {}
+		content[slate_name] = {
+			index = i
+		}
+		style[slate_name] = {
+			vertical_alignment = "center",
+			horizontal_alignment = "center",
+			alert_color = slate_data.alert_color,
+			texture_size = slate_size,
+			area_size = {
+				slate_size[1] * 1.5,
+				slate_size[2] * 1.5
+			},
+			color = {
+				255,
+				255,
+				255,
+				255
+			},
+			offset = {
+				horizontal_offset,
+				0,
+				0
+			}
+		}
+		horizontal_offset = horizontal_offset - slate_size[1] - spacing
+	end
+
+	horizontal_offset = horizontal_offset - 4
+	passes[#passes + 1] = {
+		style_id = "left_arrow",
+		texture_id = "left_arrow",
+		pass_type = "texture",
+		content_check_function = function (content, style)
+			local gamepad_active = Managers.input:is_device_active("gamepad")
+
+			return not gamepad_active
+		end,
+		content_change_function = function (content, style)
+			local hotspot = content.left_arrow_hotspot
+			local intensity_multiplier = hotspot.is_hover and 1 or 0.6
+
+			style.color[2] = 255 * intensity_multiplier
+			style.color[3] = 255 * intensity_multiplier
+			style.color[4] = 255 * intensity_multiplier
+		end
+	}
+	passes[#passes + 1] = {
+		style_id = "left_shoulder",
+		texture_id = "left_shoulder",
+		pass_type = "texture",
+		content_check_function = function (content, style)
+			local gamepad_active = Managers.input:is_device_active("gamepad")
+
+			return gamepad_active
+		end,
+		content_change_function = function (content, style)
+			if IS_PS4 or IS_XB1 then
+				return
+			end
+
+			local use_ps4_input_icons = UISettings.use_ps4_input_icons
+			local input_device = Managers.input and Managers.input:get_most_recent_device()
+
+			if input_device then
+				local device_type = input_device.type()
+				local is_ps_pad = device_type == "sce_pad"
+
+				use_ps4_input_icons = is_ps_pad or use_ps4_input_icons
+			end
+
+			content.left_shoulder = use_ps4_input_icons and "ps4_button_icon_l1" or "xbone_button_icon_lb"
+		end
+	}
+	passes[#passes + 1] = {
+		style_id = "left_arrow",
+		pass_type = "hotspot",
+		content_id = "left_arrow_hotspot"
+	}
+	style.left_arrow = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		area_size = {
+			30,
+			30
+		},
+		texture_size = {
+			12,
+			16
+		},
+		color = {
+			255,
+			255,
+			255,
+			255
 		},
 		offset = {
-			0,
+			horizontal_offset,
 			0,
 			0
+		}
+	}
+	style.left_shoulder = {
+		vertical_alignment = "center",
+		horizontal_alignment = "center",
+		texture_size = {
+			36,
+			26
 		},
-		scenegraph_id = scenegraph_id
+		color = {
+			255,
+			255,
+			255,
+			255
+		},
+		offset = {
+			horizontal_offset,
+			0,
+			0
+		}
+	}
+	content.left_arrow_hotspot = {}
+	content.left_arrow = "info_slate_arrow"
+	content.left_shoulder = IS_PS4 and "ps4_button_icon_l1" or "xbone_button_icon_lb"
+	widget_def.element = element
+	widget_def.content = content
+	widget_def.style = style
+	widget_def.scenegraph_id = "switch_panel"
+	widget_def.offset = {
+		-5,
+		0,
+		0
 	}
 
-	return definition
+	return widget_def
 end
 
 local disable_with_gamepad = true
@@ -719,8 +824,7 @@ local widgets = {
 		255,
 		255,
 		255
-	}),
-	switch_panel = create_switch_panel("switch_panel")
+	})
 }
 local animation_definitions = {
 	animate_switch_panel_in = {
@@ -735,6 +839,12 @@ local animation_definitions = {
 				local anim_progress = math.easeOutCubic(progress)
 
 				ui_scenegraph.switch_panel.position[1] = 200 - 250 * anim_progress
+
+				local switch_panel_widget = widgets.switch_panel
+
+				if switch_panel_widget then
+					switch_panel_widget.content.alpha_value = anim_progress * anim_progress
+				end
 			end,
 			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
 				return
@@ -752,7 +862,13 @@ local animation_definitions = {
 			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
 				local anim_progress = math.easeOutCubic(progress)
 
-				ui_scenegraph.panel.position[1] = 250 * anim_progress
+				ui_scenegraph.switch_panel.position[1] = 250 * anim_progress
+
+				local switch_panel_widget = widgets.switch_panel
+
+				if switch_panel_widget then
+					switch_panel_widget.content.alpha_value = 1 - anim_progress * anim_progress
+				end
 			end,
 			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
 				return
@@ -797,6 +913,12 @@ local animation_definitions = {
 
 				params.render_settings.alpha_multiplier = 1 - anim_progress * anim_progress
 				ui_scenegraph.panel.position[1] = 250 * anim_progress
+
+				local switch_panel_widget = widgets.switch_panel
+
+				if switch_panel_widget then
+					switch_panel_widget.content.alpha_value = params.render_settings.alpha_multiplier
+				end
 			end,
 			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
 				ui_scenegraph.panel_mask.size[2] = 0
@@ -897,5 +1019,6 @@ return {
 	body_parsing_data = body_parsing_data,
 	animation_definitions = animation_definitions,
 	scenegraph_definition = scenegraph_definition,
-	panel_scroll_area = panel_scroll_area
+	panel_scroll_area = panel_scroll_area,
+	create_switch_panel_func = create_switch_panel
 }
