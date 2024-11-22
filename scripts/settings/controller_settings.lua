@@ -7734,6 +7734,67 @@ DarkPactSelectionUIKeymaps.win32 = InputUtils.keymaps_key_approved("win32") and 
 		"keyboard",
 		"left alt",
 		"held"
+	},
+	confirm = {
+		"keyboard",
+		"space",
+		"pressed"
+	},
+	move_left_alt_raw = {
+		"keyboard",
+		"a",
+		"pressed"
+	},
+	move_right_alt_raw = {
+		"keyboard",
+		"d",
+		"pressed"
+	},
+	move_left_raw = {
+		"keyboard",
+		"left",
+		"pressed"
+	},
+	move_right_raw = {
+		"keyboard",
+		"right",
+		"pressed"
+	},
+	analog_input = {}
+}
+DarkPactSelectionUIFilters = {}
+DarkPactSelectionUIFilters.win32 = InputUtils.keymaps_key_approved("win32") and {
+	move_left = {
+		filter_type = "move_filter",
+		threshold = 0.7,
+		input_mappings = {
+			"move_left_raw",
+			"move_left_alt_raw"
+		},
+		axis_mappings = {
+			"analog_input"
+		},
+		axis = {
+			-1,
+			0,
+			0
+		}
+	},
+	move_right = {
+		filter_type = "move_filter",
+		threshold = 0.7,
+		input_mappings = {
+			"move_right_raw",
+			"move_right_alt_raw"
+		},
+		axis_mappings = {
+			"analog_input"
+		},
+		axis = {
+			1,
+			0,
+			0
+		}
 	}
 }
 DarkPactSelectionUIKeymaps.xb1 = InputUtils.keymaps_key_approved("xb1") and {
@@ -7742,12 +7803,12 @@ DarkPactSelectionUIKeymaps.xb1 = InputUtils.keymaps_key_approved("xb1") and {
 		"a",
 		"released"
 	},
-	move_left = {
+	move_left_raw = {
 		"gamepad",
 		"d_left",
 		"pressed"
 	},
-	move_right = {
+	move_right_raw = {
 		"gamepad",
 		"d_right",
 		"pressed"
@@ -7778,18 +7839,50 @@ DarkPactSelectionUIKeymaps.xb1 = InputUtils.keymaps_key_approved("xb1") and {
 		"pressed"
 	}
 }
+DarkPactSelectionUIFilters.xb1 = InputUtils.keymaps_key_approved("xb1") and {
+	move_left = {
+		filter_type = "move_filter",
+		threshold = 0.7,
+		input_mappings = {
+			"move_left_raw"
+		},
+		axis_mappings = {
+			"analog_input"
+		},
+		axis = {
+			-1,
+			0,
+			0
+		}
+	},
+	move_right = {
+		filter_type = "move_filter",
+		threshold = 0.7,
+		input_mappings = {
+			"move_right_raw"
+		},
+		axis_mappings = {
+			"analog_input"
+		},
+		axis = {
+			1,
+			0,
+			0
+		}
+	}
+}
 DarkPactSelectionUIKeymaps.ps4 = InputUtils.keymaps_key_approved("ps4") and {
 	confirm = {
 		"gamepad",
 		"cross",
 		"released"
 	},
-	move_left = {
+	move_left_raw = {
 		"gamepad",
 		"left",
 		"pressed"
 	},
-	move_right = {
+	move_right_raw = {
 		"gamepad",
 		"right",
 		"pressed"
@@ -7818,6 +7911,38 @@ DarkPactSelectionUIKeymaps.ps4 = InputUtils.keymaps_key_approved("ps4") and {
 		"gamepad",
 		"l1",
 		"pressed"
+	}
+}
+DarkPactSelectionUIFilters_ps4 = {
+	move_left = {
+		filter_type = "move_filter",
+		threshold = 0.7,
+		input_mappings = {
+			"move_left_raw"
+		},
+		axis_mappings = {
+			"analog_input"
+		},
+		axis = {
+			-1,
+			0,
+			0
+		}
+	},
+	move_right = {
+		filter_type = "move_filter",
+		threshold = 0.7,
+		input_mappings = {
+			"move_right_raw"
+		},
+		axis_mappings = {
+			"analog_input"
+		},
+		axis = {
+			1,
+			0,
+			0
+		}
 	}
 }
 DarkPactSelectionUIKeymaps.ps_pad = InputUtils.keymaps_key_approved("ps_pad") and {
@@ -7826,12 +7951,12 @@ DarkPactSelectionUIKeymaps.ps_pad = InputUtils.keymaps_key_approved("ps_pad") an
 		"cross",
 		"released"
 	},
-	move_left = {
+	move_left_raw = {
 		"ps_pad",
 		"left",
 		"pressed"
 	},
-	move_right = {
+	move_right_raw = {
 		"ps_pad",
 		"right",
 		"pressed"
@@ -7862,6 +7987,8 @@ DarkPactSelectionUIKeymaps.ps_pad = InputUtils.keymaps_key_approved("ps_pad") an
 		"pressed"
 	}
 }
+DarkPactSelectionUIFilters.ps4 = InputUtils.keymaps_key_approved("ps4") and table.clone(DarkPactSelectionUIFilters_ps4)
+DarkPactSelectionUIFilters.ps_pad = InputUtils.keymaps_key_approved("ps_pad") and table.clone(DarkPactSelectionUIFilters_ps4)
 GamepadSettings = {
 	menu_cooldown = 0.25,
 	menu_analog_deadzone = 0.5,

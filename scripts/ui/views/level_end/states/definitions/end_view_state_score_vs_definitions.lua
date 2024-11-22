@@ -126,10 +126,13 @@ local scenegraph_definition = {
 	tab = {
 		vertical_alignment = "top",
 		parent = "panel",
-		horizontal_alignment = "center",
-		size = tab_size,
+		horizontal_alignment = "right",
+		size = {
+			0,
+			tab_size[2]
+		},
 		position = {
-			455,
+			-300,
 			-110 + tab_size[2] * 0.5,
 			14
 		}
@@ -227,20 +230,6 @@ local scenegraph_definition = {
 		position = {
 			0,
 			50,
-			0
-		}
-	},
-	test = {
-		vertical_alignment = "center",
-		parent = "screen",
-		horizontal_alignment = "center",
-		size = {
-			512,
-			200
-		},
-		position = {
-			0,
-			0,
 			0
 		}
 	}
@@ -669,11 +658,12 @@ local animation_definitions = {
 	}
 }
 
-local function create_tab(scenegraph_id, size, text)
+local function create_tab(scenegraph_id, text)
 	return {
 		element = {
 			passes = {
 				{
+					style_id = "hotspot",
 					pass_type = "hotspot",
 					content_id = "hotspot"
 				},
@@ -705,6 +695,14 @@ local function create_tab(scenegraph_id, size, text)
 			hotspot = {}
 		},
 		style = {
+			hotspot = {
+				vertical_alignment = "center",
+				horizontal_alignment = "center",
+				area_size = {
+					0,
+					tab_size[2]
+				}
+			},
 			text = {
 				font_size = 24,
 				upper_case = true,

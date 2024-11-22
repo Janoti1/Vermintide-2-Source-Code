@@ -739,7 +739,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 0.4,
+		probability = 0.3,
 		name = "vmg_vs_new_spawn_horde_a",
 		response = "vmg_vs_new_spawn_horde_a",
 		criterias = {
@@ -971,7 +971,7 @@ return function ()
 			face_animations_n = 6,
 			database = "vs_mission_giver_pactsworn",
 			sound_events_n = 6,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 6,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1021,7 +1021,7 @@ return function ()
 			face_animations_n = 3,
 			database = "vs_mission_giver_pactsworn",
 			sound_events_n = 3,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 3,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1663,7 +1663,7 @@ return function ()
 			face_animations_n = 6,
 			database = "vs_mission_giver_pactsworn",
 			sound_events_n = 6,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 6,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1713,7 +1713,7 @@ return function ()
 			face_animations_n = 3,
 			database = "vs_mission_giver_pactsworn",
 			sound_events_n = 3,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 3,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1748,7 +1748,7 @@ return function ()
 			face_animations_n = 8,
 			database = "vs_mission_giver_pactsworn",
 			sound_events_n = 8,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 8,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1808,7 +1808,7 @@ return function ()
 			face_animations_n = 3,
 			database = "vs_mission_giver_pactsworn",
 			sound_events_n = 3,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 3,
 			dialogue_animations = {
 				"dialogue_talk",

@@ -144,7 +144,7 @@ return function ()
 				"user_context",
 				"intensity",
 				OP.GT,
-				30
+				60
 			},
 			{
 				"faction_memory",
@@ -772,7 +772,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -866,7 +866,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.1,
 		name = "pdr_gameplay_dead_body",
 		response = "pdr_gameplay_dead_body",
 		criterias = {
@@ -1217,7 +1217,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -2146,10 +2146,10 @@ return function ()
 				"chaos_spawn"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -2162,6 +2162,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -2204,10 +2210,10 @@ return function ()
 				"chaos_spawn"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -2220,6 +2226,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -3016,10 +3028,10 @@ return function ()
 				"beastmen_minotaur"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3032,6 +3044,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3248,10 +3266,10 @@ return function ()
 				"skaven_rat_ogre"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3264,6 +3282,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3306,10 +3330,10 @@ return function ()
 				"skaven_rat_ogre"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -3322,6 +3346,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -3590,10 +3620,10 @@ return function ()
 				"skaven_stormfiend"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3606,6 +3636,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3648,10 +3684,10 @@ return function ()
 				"skaven_stormfiend"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -3664,6 +3700,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -3713,10 +3755,10 @@ return function ()
 				"vs_chaos_troll"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3729,6 +3771,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3778,10 +3826,10 @@ return function ()
 				"vs_chaos_troll"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -3794,6 +3842,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -7168,7 +7222,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.5,
 		name = "pdr_gameplay_special_enemy_kill_melee",
 		response = "pdr_gameplay_special_enemy_kill_melee",
 		criterias = {
@@ -7220,7 +7274,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.7,
 		name = "pdr_gameplay_special_enemy_kill_ranged",
 		response = "pdr_gameplay_special_enemy_kill_ranged",
 		criterias = {
@@ -8282,7 +8336,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -8544,7 +8598,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -11043,17 +11097,12 @@ return function ()
 		},
 		pdr_gameplay_dead_body = {
 			randomize_indexes_n = 0,
-			face_animations_n = 10,
+			face_animations_n = 5,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 10,
+			sound_events_n = 5,
 			category = "casual_talk",
-			dialogue_animations_n = 10,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -11065,19 +11114,9 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
-				"pdr_gameplay_dead_body_01",
-				"pdr_gameplay_dead_body_02",
-				"pdr_gameplay_dead_body_03",
-				"pdr_gameplay_dead_body_04",
-				"pdr_gameplay_dead_body_05",
 				"pdr_gameplay_dead_body_06",
 				"pdr_gameplay_dead_body_07",
 				"pdr_gameplay_dead_body_08",
@@ -11086,11 +11125,6 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"pdr_gameplay_dead_body_01",
-				"pdr_gameplay_dead_body_02",
-				"pdr_gameplay_dead_body_03",
-				"pdr_gameplay_dead_body_04",
-				"pdr_gameplay_dead_body_05",
 				"pdr_gameplay_dead_body_06",
 				"pdr_gameplay_dead_body_07",
 				"pdr_gameplay_dead_body_08",
@@ -11098,11 +11132,6 @@ return function ()
 				"pdr_gameplay_dead_body_10"
 			},
 			sound_events_duration = {
-				2.0429792404175,
-				4.6735835075378,
-				4.8799166679382,
-				3.9110832214356,
-				5.2396664619446,
 				3.6888959407806,
 				2.3681874275208,
 				1.7851458787918,

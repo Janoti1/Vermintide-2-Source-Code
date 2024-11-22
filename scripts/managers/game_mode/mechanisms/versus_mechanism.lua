@@ -320,17 +320,37 @@ end
 VersusMechanism.set_is_hosting_versus_custom_game = function (self, is_hosting)
 	self._is_hosting_custom_game = is_hosting
 
+	local mechanism_manager = Managers.mechanism
+	local game_mode_manager = Managers.state.game_mode
+	local game_mode = game_mode_manager and game_mode_manager:game_mode()
+	local game_mode_state
+
 	if is_hosting then
 		Managers.party:server_init_friend_parties(true)
+
+		game_mode_state = "custom_game_lobby"
 	else
 		Managers.party:server_clear_friend_parties()
 		self._slot_reservation_handler:shrink()
+
+		game_mode_state = "party_lobby"
 	end
 
-	if Managers.mechanism:is_server() then
+	if mechanism_manager:is_server() then
 		LobbySetup.update_network_options_max_members()
-		Managers.mechanism:update_lobby_max_members()
+		mechanism_manager:update_lobby_max_members()
+
+		if game_mode then
+			game_mode:change_game_mode_state(game_mode_state)
+		end
 	end
+end
+
+VersusMechanism.can_join_custom_lobby = function (self)
+	local game_mode_manager = Managers.state.game_mode
+	local game_mode_key = game_mode_manager and game_mode_manager:game_mode_key()
+
+	return game_mode_key == "inn_vs"
 end
 
 VersusMechanism.is_hosting_versus_custom_game = function (self)

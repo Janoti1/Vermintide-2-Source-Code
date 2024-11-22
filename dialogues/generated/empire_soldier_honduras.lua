@@ -186,7 +186,7 @@ return function ()
 				"user_context",
 				"intensity",
 				OP.GT,
-				30
+				60
 			},
 			{
 				"faction_memory",
@@ -820,7 +820,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -1118,7 +1118,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.1,
 		name = "pes_gameplay_dead_body",
 		response = "pes_gameplay_dead_body",
 		criterias = {
@@ -1469,7 +1469,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -2374,10 +2374,10 @@ return function ()
 				"chaos_spawn"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -2390,6 +2390,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -2432,10 +2438,10 @@ return function ()
 				"chaos_spawn"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -2448,6 +2454,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -3186,10 +3198,10 @@ return function ()
 				"beastmen_minotaur"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3202,6 +3214,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3424,10 +3442,10 @@ return function ()
 				"skaven_rat_ogre"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3440,6 +3458,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3482,10 +3506,10 @@ return function ()
 				"skaven_rat_ogre"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -3498,6 +3522,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -3766,10 +3796,10 @@ return function ()
 				"skaven_stormfiend"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3782,6 +3812,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3824,10 +3860,10 @@ return function ()
 				"skaven_stormfiend"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -3840,6 +3876,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -3889,10 +3931,10 @@ return function ()
 				"vs_chaos_troll"
 			},
 			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
+				"query_context",
+				"distance",
+				OP.GT,
+				10
 			},
 			{
 				"query_context",
@@ -3905,6 +3947,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.EQ,
+				0
 			},
 			{
 				"faction_memory",
@@ -3954,10 +4002,10 @@ return function ()
 				"vs_chaos_troll"
 			},
 			{
-				"user_context",
-				"enemies_close",
+				"query_context",
+				"distance",
 				OP.GT,
-				0
+				10
 			},
 			{
 				"query_context",
@@ -3970,6 +4018,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"enemies_close",
+				OP.GT,
+				0
 			},
 			{
 				"faction_memory",
@@ -6082,7 +6136,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6140,7 +6194,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6198,7 +6252,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6256,7 +6310,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6314,7 +6368,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6372,7 +6426,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6430,7 +6484,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6488,7 +6542,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6552,7 +6606,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6668,7 +6722,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6719,7 +6773,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6770,7 +6824,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6827,7 +6881,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -6891,7 +6945,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -7006,7 +7060,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -7122,7 +7176,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GTEQ,
-				20
+				4
 			},
 			{
 				"query_context",
@@ -7308,7 +7362,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.5,
 		name = "pes_gameplay_special_enemy_kill_melee",
 		response = "pes_gameplay_special_enemy_kill_melee",
 		criterias = {
@@ -7353,7 +7407,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.7,
 		name = "pes_gameplay_special_enemy_kill_ranged",
 		response = "pes_gameplay_special_enemy_kill_ranged",
 		criterias = {
@@ -8325,7 +8379,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -8587,7 +8641,7 @@ return function ()
 				"query_context",
 				"number_of_kills",
 				OP.EQ,
-				7
+				9
 			},
 			{
 				"query_context",
@@ -17302,14 +17356,12 @@ return function ()
 		},
 		pes_gameplay_spots_health = {
 			randomize_indexes_n = 0,
-			face_animations_n = 12,
+			face_animations_n = 10,
 			database = "empire_soldier_honduras",
-			sound_events_n = 12,
+			sound_events_n = 10,
 			category = "seen_items",
-			dialogue_animations_n = 12,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
-				"dialogue_shout",
-				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -17331,14 +17383,10 @@ return function ()
 				"face_happy",
 				"face_happy",
 				"face_happy",
-				"face_happy",
-				"face_happy",
 				"face_happy"
 			},
 			localization_strings = {
 				"pes_gameplay_spots_health_01",
-				"pes_gameplay_spots_health_07",
-				"pes_gameplay_spots_health_08",
 				"pes_gameplay_spots_health_09",
 				"pes_gameplay_spots_health_10",
 				"pes_gameplay_spots_health_11",
@@ -17352,8 +17400,6 @@ return function ()
 			randomize_indexes = {},
 			sound_events = {
 				"pes_gameplay_spots_health_01",
-				"pes_gameplay_spots_health_07",
-				"pes_gameplay_spots_health_08",
 				"pes_gameplay_spots_health_09",
 				"pes_gameplay_spots_health_10",
 				"pes_gameplay_spots_health_11",
@@ -17366,8 +17412,6 @@ return function ()
 			},
 			sound_events_duration = {
 				1.276270866394,
-				1.0624582767487,
-				1.145708322525,
 				0.982541680336,
 				1.4442917108536,
 				1.8630833625793,

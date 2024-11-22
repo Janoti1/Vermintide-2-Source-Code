@@ -221,7 +221,7 @@ settings.start_game_layout_console_generic_inputs = {
 		ignore_generic_actions = true,
 		actions = {
 			{
-				input_action = "d_vertical",
+				input_action = "left_stick",
 				priority = 1,
 				description_text = "input_description_navigate",
 				ignore_keybinding = true
@@ -237,8 +237,13 @@ settings.start_game_layout_console_generic_inputs = {
 				description_text = "input_description_play"
 			},
 			{
-				input_action = "back",
+				input_action = "cancel_matchmaking",
 				priority = 4,
+				description_text = "input_description_cancel"
+			},
+			{
+				input_action = "back",
+				priority = 5,
 				description_text = "input_description_close"
 			}
 		}
@@ -341,6 +346,7 @@ settings.start_game_window_layout_console = {
 			close_on_exit = true,
 			background_flow_event = "skaven_cosmetics_view",
 			windows = {
+				versus_additional_custom_settings = 4,
 				versus_panel = 1,
 				versus_background = 2,
 				versus_custom_game = 3

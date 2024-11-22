@@ -511,7 +511,7 @@ HeroView.post_update_on_enter = function (self)
 	end
 end
 
-HeroView.post_update_on_exit = function (self)
+HeroView.post_update_on_exit = function (self, transition_params, view_in_use)
 	if self._machine then
 		self._machine:destroy()
 
@@ -520,7 +520,7 @@ HeroView.post_update_on_exit = function (self)
 
 	Managers.backend:commit()
 
-	if not self._force_ingame_menu then
+	if not view_in_use then
 		self:destroy_hdr_gui()
 	end
 end

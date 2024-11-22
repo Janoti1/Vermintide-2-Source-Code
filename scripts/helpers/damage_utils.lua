@@ -2792,6 +2792,13 @@ DamageUtils.camera_shake_by_distance = function (shake_name, start_time, player_
 		return
 	end
 
+	local game_mode_manager = Managers.state.game_mode
+	local game_end_reason = game_mode_manager and game_mode_manager:get_end_reason()
+
+	if game_end_reason then
+		return
+	end
+
 	local scale = 1
 
 	if source_unit then

@@ -221,8 +221,6 @@ GenericUnitInteractorExtension.update = function (self, unit, input, dt, context
 											end
 										end
 									end
-								else
-									hit_non_interaction_unit = true
 								end
 							else
 								hit_non_interaction_unit = true

@@ -54,6 +54,20 @@ local scenegraph_definition = {
 			0
 		}
 	},
+	console_cursor = {
+		vertical_alignment = "center",
+		parent = "root",
+		horizontal_alignment = "center",
+		position = {
+			0,
+			0,
+			-10
+		},
+		size = {
+			1920,
+			1080
+		}
+	},
 	settings_container = {
 		vertical_alignment = "top",
 		parent = "menu_root",
@@ -103,21 +117,35 @@ local scenegraph_definition = {
 		},
 		position = {
 			60,
-			50,
+			25,
 			1
 		}
 	},
-	leave_game_button = {
+	locked_reason = {
 		vertical_alignment = "top",
 		parent = "button_controls",
 		horizontal_alignment = "left",
 		size = {
 			490,
+			140
+		},
+		position = {
+			0,
+			20,
+			1
+		}
+	},
+	leave_game_button = {
+		vertical_alignment = "bottom",
+		parent = "team_1_panel",
+		horizontal_alignment = "center",
+		size = {
+			390,
 			70
 		},
 		position = {
 			0,
-			-50,
+			-625,
 			1
 		}
 	},
@@ -225,7 +253,12 @@ local function create_team_widget(scenegraph_id, team_definition, team_color)
 			player_count = "n/a",
 			team_name = Localize(team_definition.display_name),
 			team_icon_bg = team_definition.background_texture,
-			team_icon = team_definition.team_icon
+			team_icon = team_definition.team_icon,
+			styles_with_team_color = {
+				"team_name",
+				"team_icon",
+				"team_icon_bg"
+			}
 		},
 		style = {
 			team_name = {
@@ -255,8 +288,8 @@ local function create_team_widget(scenegraph_id, team_definition, team_color)
 					0
 				},
 				offset = {
-					94,
-					-4,
+					91,
+					-1,
 					0
 				}
 			},
@@ -335,6 +368,27 @@ settings_container_widget = {
 	}
 }
 
+local locked_reason_style = {
+	font_size = 24,
+	upper_case = true,
+	localize = true,
+	use_shadow = true,
+	word_wrap = true,
+	horizontal_alignment = "center",
+	vertical_alignment = "center",
+	font_type = "hell_shark_header",
+	text_color = {
+		255,
+		255,
+		62,
+		62
+	},
+	offset = {
+		0,
+		0,
+		2
+	}
+}
 local disable_with_gamepad = true
 local widget_definitions = {
 	mission_setting = UIWidgets.create_start_game_console_setting_button("game_option_1", Localize("start_game_window_mission"), nil, nil, nil, scenegraph_definition.game_option_1.size),
@@ -344,7 +398,8 @@ local widget_definitions = {
 	leave_game_button = UIWidgets.create_default_button("leave_game_button", scenegraph_definition.leave_game_button.size, nil, nil, Localize("exit"), MENU_BUTTON_FONT_SIZE, nil, nil, nil, disable_with_gamepad)
 }
 local host_widget_definitions = {
-	force_start_button = UIWidgets.create_icon_and_name_button("force_start_button", "options_button_icon_quickplay", Localize("vs_ui_force_start_button"))
+	force_start_button = UIWidgets.create_icon_and_name_button("force_start_button", "options_button_icon_quickplay", Localize("input_description_play")),
+	locked_reason = UIWidgets.create_simple_text("tutorial_no_text", "locked_reason", nil, nil, locked_reason_style)
 }
 
 local function is_empty(content)
@@ -625,19 +680,19 @@ local function create_player_panel_widget(team_index, player_index)
 			}
 		},
 		content = {
+			show_profile_button = false,
 			disabled_texture = "tab_menu_icon_03",
-			chat_tooltip_text_unmute = "input_description_unmute_chat",
 			show_chat_button = false,
-			show_kick_button = false,
 			player_level = "*Level 0",
 			profile_button_texture = "tab_menu_icon_05",
 			host_texture = "host_icon",
 			profile_tooltip_text = "input_description_show_profile",
-			voice_tooltip_text_unmute = "input_description_unmute_voice",
-			show_profile_button = false,
-			player_name = "*Missing Name",
+			show_kick_button = false,
+			chat_tooltip_text_unmute = "input_description_unmute_chat",
 			kick_tooltip_text = "input_description_vote_kick_player",
 			show_ping = false,
+			voice_tooltip_text_unmute = "input_description_unmute_voice",
+			player_name = "*Missing Name",
 			voice_tooltip_text_mute = "input_description_mute_voice",
 			chat_button_texture = "tab_menu_icon_02",
 			voice_button_texture = "tab_menu_icon_01",
@@ -646,7 +701,9 @@ local function create_player_panel_widget(team_index, player_index)
 			chat_tooltip_text_mute = "input_description_mute_chat",
 			is_local_player = false,
 			kick_button_texture = "tab_menu_icon_04",
-			button_hotspot = {},
+			button_hotspot = {
+				allow_multi_hover = true
+			},
 			frame = frame_settings.texture,
 			shadow_frame = shadow_frame_settings.texture,
 			hover_frame = hover_frame_settings.texture,
@@ -657,6 +714,9 @@ local function create_player_panel_widget(team_index, player_index)
 			kick_button_hotspot = {},
 			voice_button_hotspot = {},
 			profile_button_hotspot = {},
+			styles_with_team_color = {
+				"player_name"
+			},
 			insignia_main = {
 				texture_id = "insignias_main_small",
 				uvs = {
@@ -1295,6 +1355,7 @@ local animation_definitions = {
 
 				ui_scenegraph.team_1.position[1] = scenegraph_def.team_1.position[1] - s
 				ui_scenegraph.team_2.position[1] = scenegraph_def.team_2.position[1] + s
+				ui_scenegraph.leave_game_button.position[1] = scenegraph_def.leave_game_button.position[1] + s
 			end,
 			on_complete = function (ui_scenegraph, scenegraph_def, widgets, params)
 				return
@@ -1302,58 +1363,13 @@ local animation_definitions = {
 		}
 	}
 }
-local generic_input_actions = {
-	default = {
-		{
-			input_action = "back",
-			priority = 3,
-			description_text = "input_description_back"
-		}
-	},
-	switch_team = {
-		actions = {
-			{
-				input_action = "switch_team",
-				priority = 2,
-				description_text = "Request Team Change",
-				ignore_localization = true
-			}
-		}
-	},
-	force_start = {
-		actions = {
-			{
-				input_action = "force_start",
-				priority = 1,
-				description_text = "Force Start Game",
-				ignore_localization = true
-			}
-		}
-	},
-	force_start_switch_team = {
-		actions = {
-			{
-				input_action = "force_start",
-				priority = 1,
-				description_text = "Force Start Game",
-				ignore_localization = true
-			},
-			{
-				input_action = "switch_team",
-				priority = 2,
-				description_text = "Switch Team",
-				ignore_localization = true
-			}
-		}
-	}
-}
 
 return {
 	create_player_panel_widget = create_player_panel_widget,
 	loading_spinner_definition = UIWidgets.create_loading_spinner("menu_root"),
+	console_cursor_definition = UIWidgets.create_console_cursor("console_cursor"),
 	animation_definitions = animation_definitions,
 	scenegraph_definition = scenegraph_definition,
 	widget_definitions = widget_definitions,
-	host_widget_definitions = host_widget_definitions,
-	generic_input_actions = generic_input_actions
+	host_widget_definitions = host_widget_definitions
 }

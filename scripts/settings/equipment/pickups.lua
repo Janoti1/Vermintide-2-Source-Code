@@ -847,6 +847,15 @@ LootRatPickups = {
 		first_aid_kit = 3,
 		damage_boost_potion = 1,
 		cooldown_reduction_potion = 1
+	},
+	versus = {
+		first_aid_kit = 3,
+		damage_boost_potion = 1,
+		frag_grenade_t2 = 1,
+		fire_grenade_t2 = 1,
+		speed_boost_potion = 1,
+		cooldown_reduction_potion = 1,
+		healing_draught = 2
 	}
 }
 BardinScavengerCustomPotions = {}

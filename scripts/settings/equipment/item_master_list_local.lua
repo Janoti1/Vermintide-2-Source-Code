@@ -152,8 +152,8 @@ ItemMasterList.grenade_engineer = {
 	left_hand_unit = "units/weapons/player/wpn_emp_grenade_01_t1/wpn_emp_grenade_lighter_01_t1",
 	slot_type = "grenade",
 	rarity = "plentiful",
-	gamepad_hud_icon = "hud_icon_bomb_01",
-	hud_icon = "hud_inventory_icon_bomb",
+	gamepad_hud_icon = "hud_icon_bomb_engineer",
+	hud_icon = "hud_inventory_icon_bomb_engineer",
 	item_type = "grenade",
 	can_wield = CanWieldAllItemTemplates
 }

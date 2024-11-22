@@ -87,7 +87,7 @@ return function ()
 			},
 			{
 				"query_context",
-				"player_profile",
+				"source_name",
 				OP.EQ,
 				"chaos_exalted_sorcerer_drachenfels"
 			}

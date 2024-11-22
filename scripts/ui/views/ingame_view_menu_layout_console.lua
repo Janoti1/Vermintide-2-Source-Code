@@ -78,8 +78,10 @@ local disable_for_mechanism_versus_disabled = {
 	}
 }
 local HANDBOOK_OPTION = {
+	force_ingame_menu = true,
 	display_name = "tutorial_menu_header",
-	fade = true,
+	force_open = true,
+	fade = false,
 	transition_state = "handbook",
 	transition = "hero_view",
 	disable_for_mechanism = default_disable_for_mechanism
@@ -102,6 +104,7 @@ if IS_PS4 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -139,6 +142,7 @@ if IS_PS4 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -176,6 +180,7 @@ if IS_PS4 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -232,6 +237,7 @@ if IS_PS4 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -413,6 +419,7 @@ elseif IS_XB1 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -450,6 +457,7 @@ elseif IS_XB1 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -487,6 +495,7 @@ elseif IS_XB1 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -543,6 +552,7 @@ elseif IS_XB1 then
 					transition = "character_selection",
 					disable_for_mechanism = default_disable_for_mechanism
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -688,6 +698,7 @@ elseif IS_XB1 then
 					transition = "exit_menu",
 					display_name = "return_to_game_button_name"
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -744,6 +755,7 @@ else
 					disable_for_mechanism = disable_for_mechanism_versus_disabled,
 					can_add_function = can_add_ingame_menu
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -795,6 +807,7 @@ else
 					disable_for_mechanism = disable_for_mechanism_versus_disabled,
 					can_add_function = can_add_ingame_menu
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",
@@ -851,6 +864,7 @@ else
 					disable_for_mechanism = disable_for_mechanism_versus_disabled,
 					can_add_function = can_add_ingame_menu
 				},
+				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",

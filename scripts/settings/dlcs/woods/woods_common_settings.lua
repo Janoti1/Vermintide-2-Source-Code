@@ -95,12 +95,12 @@ settings.unlock_settings = {
 	woods = {
 		id = "1629000",
 		class = "UnlockDlc",
-		requires_restart = true
+		requires_restart = false
 	},
 	woods_upgrade = {
 		id = "1629010",
 		class = "UnlockDlc",
-		requires_restart = true
+		requires_restart = false
 	}
 }
 settings.unlock_settings_xb1 = {

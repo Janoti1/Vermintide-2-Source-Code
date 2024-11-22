@@ -297,6 +297,12 @@ weapon_template.synced_states = {
 				end
 			end
 
+			if is_local_player and not Managers.player:owner(owner_unit).bot_player and not state_data.rumble_effect_id then
+				state_data.rumble_effect_id = Managers.state.controller_features:add_effect("persistent_rumble", {
+					rumble_effect = "reload_start"
+				})
+			end
+
 			state_data.flamethrower_effect_name = flamethrower_effect_name
 			state_data.flamethrower_effect = flamethrower_effect
 			state_data.muzzle_node = muzzle_node
@@ -312,6 +318,12 @@ weapon_template.synced_states = {
 			update_warpfire_vfx(owner_unit, weapon_unit, state_data, world)
 		end,
 		leave = function (self, owner_unit, weapon_unit, state_data, is_local_player, world, next_state, is_destroy)
+			if is_local_player and state_data.rumble_effect_id then
+				Managers.state.controller_features:stop_effect(state_data.rumble_effect_id)
+
+				state_data.rumble_effect_id = nil
+			end
+
 			if not is_destroy and state_data.flamethrower_effect then
 				World.stop_spawning_particles(world, state_data.flamethrower_effect)
 			end
@@ -338,6 +350,12 @@ weapon_template.synced_states = {
 	},
 	cooling_down = {
 		enter = function (self, owner_unit, weapon_unit, state_data, is_local_player, world)
+			if is_local_player and state_data.rumble_effect_id then
+				Managers.state.controller_features:stop_effect(state_data.rumble_effect_id)
+
+				state_data.rumble_effect_id = nil
+			end
+
 			local fire_action = weapon_template.actions.action_one.fire
 			local node_id = 0
 

@@ -37,6 +37,7 @@ IngameViewLayoutLogic.setup_button_layout = function (self, layout_data)
 			local requires_player_unit = data.requires_player_unit
 			local fade = data.fade
 			local force_open = data.force_open
+			local force_ingame_menu = data.force_ingame_menu
 
 			active_button_data[#active_button_data + 1] = {
 				display_name = display_name,
@@ -49,7 +50,8 @@ IngameViewLayoutLogic.setup_button_layout = function (self, layout_data)
 				disable_for_mechanism = disable_for_mechanism,
 				requires_player_unit = requires_player_unit,
 				fade = fade,
-				force_open = force_open
+				force_open = force_open,
+				force_ingame_menu = force_ingame_menu
 			}
 		end
 	end
@@ -153,10 +155,12 @@ IngameViewLayoutLogic.execute_layout_option = function (self, index)
 			local transition_sub_state = data.transition_sub_state
 			local fade = data.fade
 			local force_open = data.force_open
+			local force_ingame_menu = data.force_ingame_menu
 			local transition_params = {
 				menu_state_name = transition_state,
 				menu_sub_state_name = transition_sub_state,
-				force_open = force_open
+				force_open = force_open,
+				force_ingame_menu = force_ingame_menu
 			}
 
 			if fade then

@@ -246,6 +246,18 @@ CinematicsViewSettings = {
 				subtitle_template_settings = shovel_intro_video_subtitle_settings
 			}
 		},
+		{
+			description = "carousel_intro_subtitle_01",
+			release_date = "2024/11/13",
+			time = "01:05",
+			header = "area_selection_carousel_name",
+			thumbnail = "versus_thumbnail",
+			video_data = {
+				sound_stop = "Stop_all_cinematics",
+				sound_start = "Play_vermintide_2_versus_release_trailer",
+				resource = "video/vermintide_2_versus_trailer"
+			}
+		},
 		category_name = "all"
 	},
 	{

@@ -2663,7 +2663,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-215,
 					-60,
-					0
+					1
 				}
 			},
 			talent_1_frame = {
@@ -2676,7 +2676,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-215,
 					-60,
-					1
+					2
 				}
 			},
 			talent_2 = {
@@ -2695,7 +2695,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-175,
 					-60,
-					0
+					1
 				}
 			},
 			talent_2_frame = {
@@ -2708,7 +2708,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-175,
 					-60,
-					1
+					2
 				}
 			},
 			talent_3 = {
@@ -2727,7 +2727,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-135,
 					-60,
-					0
+					1
 				}
 			},
 			talent_3_frame = {
@@ -2740,7 +2740,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-135,
 					-60,
-					1
+					2
 				}
 			},
 			talent_4 = {
@@ -2759,7 +2759,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-95,
 					-60,
-					0
+					1
 				}
 			},
 			talent_4_frame = {
@@ -2772,7 +2772,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-95,
 					-60,
-					1
+					2
 				}
 			},
 			talent_5 = {
@@ -2791,7 +2791,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-55,
 					-60,
-					0
+					1
 				}
 			},
 			talent_5_frame = {
@@ -2804,7 +2804,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-55,
 					-60,
-					1
+					2
 				}
 			},
 			talent_6 = {
@@ -2823,7 +2823,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-15 + 0 * -40,
 					-60,
-					0
+					1
 				}
 			},
 			talent_6_frame = {
@@ -2836,7 +2836,7 @@ UIWidgets.create_player_panel = function (scenegraph_id, talent_tooltip_scenegra
 				offset = {
 					-15 + 0 * -40,
 					-60,
-					1
+					2
 				}
 			},
 			health_bar = {
@@ -6722,8 +6722,8 @@ UIWidgets.create_ceremony_award = function (scenegraph_id, award_data, offset)
 	content.mvp = Localize("vs_award_mvp_name")
 	content.header = header
 	content.sub_header = sub_header
-	content.player_name = (is_you and "{#color(255,255,255)}(You) {#reset()}" or "") .. string.format("{#color(%d,%d,%d)}%s{#reset()}", team_color[2], team_color[3], team_color[4], UIRenderer.crop_text(player_name, is_you and 10 or 17))
-	content.player_name_shadow = (is_you and "(You) " or "") .. string.format("%s", UIRenderer.crop_text(player_name, is_you and 10 or 17))
+	content.player_name = (is_you and "{#color(255,255,255)}(" .. Localize("versus_hero_selection_view_you") .. ") {#reset()}" or "") .. string.format("{#color(%d,%d,%d)}%s{#reset()}", team_color[2], team_color[3], team_color[4], UIRenderer.crop_text(player_name, is_you and 10 or 17))
+	content.player_name_shadow = (is_you and "(" .. Localize("versus_hero_selection_view_you") .. ") " or "") .. string.format("%s", UIRenderer.crop_text(player_name, is_you and 10 or 17))
 	content.shine = "diagonal_shine"
 	content.sparkle = "sparkle_effect"
 	widget_def.element = element
@@ -7450,8 +7450,8 @@ UIWidgets.create_screen_ceremony_award = function (scenegraph_id, award_data, of
 	content.mvp = Localize("vs_award_mvp_name")
 	content.header = header
 	content.sub_header = sub_header
-	content.player_name = (is_you and "{#color(128,128,128)}(You) {#reset()}" or "") .. string.format("{#color(%d,%d,%d)}%s{#reset()}", team_color[2], team_color[3], team_color[4], UIRenderer.crop_text(player_name, is_you and 10 or 17))
-	content.player_name_shadow = (is_you and "(You) " or "") .. string.format("%s", UIRenderer.crop_text(player_name, is_you and 10 or 17))
+	content.player_name = (is_you and "{#color(128,128,128)}(" .. Localize("versus_hero_selection_view_you") .. ") {#reset()}" or "") .. string.format("{#color(%d,%d,%d)}%s{#reset()}", team_color[2], team_color[3], team_color[4], UIRenderer.crop_text(player_name, is_you and 10 or 17))
+	content.player_name_shadow = (is_you and "(" .. Localize("versus_hero_selection_view_you") .. ") " or "") .. string.format("%s", UIRenderer.crop_text(player_name, is_you and 10 or 17))
 	content.shine = "diagonal_shine"
 	content.award_shine_mask = "diagonal_shine_write_mask"
 	content.award_shine = award_mask_material

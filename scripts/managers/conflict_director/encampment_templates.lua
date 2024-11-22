@@ -328,40 +328,5 @@ EncampmentTemplates = {
 			}
 		},
 		name = "chaos_fanatic_6x1"
-	},
-	{
-		unit_compositions = {
-			{
-				medium = "human_soldier",
-				light = "human_pleb"
-			}
-		},
-		{
-			y = 2,
-			category = "light",
-			x = 0,
-			size = {
-				6,
-				1
-			},
-			dir = {
-				0,
-				1
-			}
-		},
-		{
-			y = -1,
-			category = "medium",
-			x = 0,
-			size = {
-				6,
-				1
-			},
-			dir = {
-				0,
-				1
-			}
-		},
-		name = "soldiers_and_plebs"
 	}
 }

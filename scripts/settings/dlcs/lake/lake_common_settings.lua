@@ -48,12 +48,12 @@ settings.unlock_settings = {
 	lake = {
 		id = "1343500",
 		class = "UnlockDlc",
-		requires_restart = true
+		requires_restart = false
 	},
 	lake_upgrade = {
 		id = "1345990",
 		class = "UnlockDlc",
-		requires_restart = true
+		requires_restart = false
 	}
 }
 settings.unlock_settings_xb1 = {

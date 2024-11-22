@@ -547,7 +547,7 @@ return function ()
 			face_animations_n = 3,
 			database = "vs_mission_giver_heroes",
 			sound_events_n = 3,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 3,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -582,7 +582,7 @@ return function ()
 			face_animations_n = 6,
 			database = "vs_mission_giver_heroes",
 			sound_events_n = 6,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 6,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -718,7 +718,7 @@ return function ()
 			face_animations_n = 5,
 			database = "vs_mission_giver_heroes",
 			sound_events_n = 5,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 5,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -763,7 +763,7 @@ return function ()
 			face_animations_n = 3,
 			database = "vs_mission_giver_heroes",
 			sound_events_n = 3,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 3,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1009,7 +1009,7 @@ return function ()
 			face_animations_n = 5,
 			database = "vs_mission_giver_heroes",
 			sound_events_n = 5,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 5,
 			dialogue_animations = {
 				"dialogue_talk",
@@ -1054,7 +1054,7 @@ return function ()
 			face_animations_n = 3,
 			database = "vs_mission_giver_heroes",
 			sound_events_n = 3,
-			category = "npc_talk",
+			category = "cut_scene_interrupt_three",
 			dialogue_animations_n = 3,
 			dialogue_animations = {
 				"dialogue_talk",

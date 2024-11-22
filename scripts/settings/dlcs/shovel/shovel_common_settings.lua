@@ -109,12 +109,12 @@ settings.unlock_settings = {
 	shovel = {
 		id = "2585630",
 		class = "UnlockDlc",
-		requires_restart = true
+		requires_restart = false
 	},
 	shovel_upgrade = {
 		id = "2585640",
 		class = "UnlockDlc",
-		requires_restart = true
+		requires_restart = false
 	}
 }
 settings.unlock_settings_xb1 = {

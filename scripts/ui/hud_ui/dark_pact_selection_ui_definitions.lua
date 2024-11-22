@@ -31,7 +31,7 @@ local scenegraph_definition = {
 		horizontal_alignment = "center",
 		position = {
 			0,
-			130,
+			205,
 			0
 		},
 		size = {
@@ -77,12 +77,12 @@ for i = 1, #ordered_ps_names do
 end
 
 local function create_selection_widget(scenegraph_id, size)
-	local frame_style = "versus_hero_selection_hero_portrait_frame"
+	local frame_style = "pactsworn_frame_01"
 	local frame_settings = UIFrameSettings[frame_style]
 	local frame_width = frame_settings.texture_sizes.horizontal[2]
 	local size = size and size or {
-		110,
-		130
+		148,
+		148
 	}
 
 	return {
@@ -114,7 +114,7 @@ local function create_selection_widget(scenegraph_id, size)
 			}
 		},
 		content = {
-			hovered_frame = "versus_hero_selection_frame",
+			hovered_frame = "pactsworn_frame_highlight",
 			selected = false,
 			profile_texture = "icons_placeholder",
 			frame = frame_settings.texture,
@@ -194,9 +194,9 @@ local function create_selection_widget(scenegraph_id, size)
 				},
 				color = {
 					255,
-					0,
-					245,
-					0
+					255,
+					255,
+					255
 				},
 				offset = {
 					-14,
@@ -248,8 +248,8 @@ local selection_frame_definition = {
 	style = {
 		hotspot = {
 			area_size = {
-				110,
-				130
+				148,
+				148
 			},
 			offset = {
 				0,
@@ -271,8 +271,8 @@ local selection_frame_definition = {
 		},
 		profile_texture = {
 			texture_size = {
-				110,
-				130
+				148,
+				148
 			},
 			offset = {
 				0,
@@ -293,16 +293,32 @@ local color_available = {
 local info_text_style = {
 	font_size = 20,
 	localize = false,
+	use_shadow = true,
 	horizontal_alignment = "center",
 	vertical_alignment = "center",
 	font_type = "hell_shark",
 	text_color = Colors.get_color_table_with_alpha("light_gray", 255),
-	rect_color = Colors.get_color_table_with_alpha("black", 180),
+	rect_color = Colors.get_color_table_with_alpha("black", 0),
 	line_colors = {},
 	offset = {
 		0,
 		0,
 		50
+	}
+}
+local info_text_style_shadow = {
+	font_size = 20,
+	localize = false,
+	horizontal_alignment = "center",
+	vertical_alignment = "center",
+	font_type = "hell_shark",
+	text_color = Colors.get_color_table_with_alpha("black", 255),
+	rect_color = Colors.get_color_table_with_alpha("black", 0),
+	line_colors = {},
+	offset = {
+		1,
+		1,
+		49
 	}
 }
 local widget_definitions = {
@@ -375,20 +391,20 @@ local widget_definitions = {
 					2800,
 					344
 				},
-				color = Colors.get_color_table_with_alpha("white", 255)
+				color = Colors.get_color_table_with_alpha("white", 60)
 			},
 			top_detail = {
 				horizontal_alignment = "center",
 				offset = {
 					0,
-					340,
+					150,
 					0
 				},
 				texture_size = {
 					522,
 					65
 				},
-				color = Colors.get_color_table_with_alpha("black", 255)
+				color = Colors.get_color_table_with_alpha("black", 0)
 			},
 			bottom_detail = {
 				horizontal_alignment = "center",
@@ -415,32 +431,38 @@ local widget_definitions = {
 				font_size = 20,
 				font_type = "hell_shark",
 				horizontal_alignment = "center",
-				text_color = Colors.get_color_table_with_alpha("local_player_picking", 255),
+				text_color = Colors.get_color_table_with_alpha("font_button_normal", 255),
 				offset = {
 					0,
-					324,
+					160,
 					0
 				}
 			},
 			pick_text = {
-				use_shadow = true,
 				upper_case = true,
 				localize = false,
 				font_size = 36,
-				font_type = "hell_shark_header",
 				horizontal_alignment = "center",
-				text_color = Colors.get_color_table_with_alpha("white", 255),
+				use_shadow = true,
+				font_type = "hell_shark_header",
+				text_color = Colors.get_color_table_with_alpha("light_gray", 255),
 				offset = {
 					0,
-					280,
+					120,
 					0
-				}
+				},
+				shadow_offset = {
+					1,
+					1,
+					0
+				},
+				shadow_color = Colors.get_color_table_with_alpha("black", 255)
 			},
 			textured_backdrop = {
 				horizontal_alignment = "center",
 				offset = {
 					0,
-					270,
+					105,
 					-3
 				},
 				texture_size = {
@@ -451,7 +473,8 @@ local widget_definitions = {
 			}
 		}
 	},
-	info_text = UIWidgets.create_simple_rect_text("info_text", "", nil, nil, nil, info_text_style)
+	info_text = UIWidgets.create_simple_rect_text("info_text", "", nil, nil, nil, info_text_style),
+	info_text_shadow = UIWidgets.create_simple_rect_text("info_text", "", nil, nil, nil, info_text_style_shadow)
 }
 local animation_definitions = {
 	on_enter = {
@@ -462,7 +485,7 @@ local animation_definitions = {
 			update = function (ui_scenegraph, scenegraph_def, widgets_by_name, progress, params)
 				local t = progress
 
-				widgets_by_name.chrome.style.bottom_glow.color[1] = 255 * t
+				widgets_by_name.chrome.style.bottom_glow.color[1] = 150 * t
 				widgets_by_name.chrome.style.textured_backdrop.color[1] = 255 * t
 				widgets_by_name.overlay.style.rect.color[1] = 30 * t
 			end,
@@ -477,10 +500,10 @@ local animation_definitions = {
 				local widget = widgets_by_name.chrome
 				local alpha, dy, by = 0 * t, 480 * t, 285 * t
 
-				widget.style.top_detail.color[1] = alpha
-				widget.style.top_detail.offset[2] = dy
-				widget.style.bottom_detail.color[1] = alpha
-				widget.style.bottom_detail.offset[2] = by
+				widget.style.top_detail.color[1] = 0
+				widget.style.top_detail.offset[2] = 0
+				widget.style.bottom_detail.color[1] = 0
+				widget.style.bottom_detail.offset[2] = 0
 			end,
 			on_complete = NOP
 		},
@@ -555,13 +578,29 @@ local animation_definitions = {
 				local widget = widgets_by_name.info_text
 
 				widget.style.text.text_color[1] = 0
-				widget.style.text.rect_color[1] = 0
 			end,
 			update = function (ui_scenegraph, scenegraph_def, widgets_by_name, progress, params)
 				local widget = widgets_by_name.info_text
 
 				widget.style.text.text_color[1] = 255 * math.easeOutCubic(progress)
-				widget.style.text.rect_color[1] = 125 * math.easeOutCubic(progress)
+			end,
+			on_complete = function (ui_scenegraph, scenegraph_def, widgets_by_name, params)
+				return
+			end
+		},
+		{
+			name = "fade_in_info_text_shadow",
+			delay = 0.5,
+			duration = 0.2,
+			init = function (ui_scenegraph, scenegraph_def, widgets_by_name, params)
+				local widget = widgets_by_name.info_text_shadow
+
+				widget.style.text.text_color[1] = 0
+			end,
+			update = function (ui_scenegraph, scenegraph_def, widgets_by_name, progress, params)
+				local widget = widgets_by_name.info_text_shadow
+
+				widget.style.text.text_color[1] = 255 * math.easeOutCubic(progress)
 			end,
 			on_complete = function (ui_scenegraph, scenegraph_def, widgets_by_name, params)
 				return
@@ -571,14 +610,14 @@ local animation_definitions = {
 	on_exit = {
 		{
 			name = "fade_out_glow",
-			duration = 0.6,
+			duration = 0.2,
 			init = function (ui_scenegraph, scenegraph_def, widgets_by_name, params)
 				params:_release_input()
 			end,
 			update = function (ui_scenegraph, scenegraph_def, widgets_by_name, progress, params)
 				local t = 1 - progress
 
-				widgets_by_name.chrome.style.bottom_glow.color[1] = 255 * t
+				widgets_by_name.chrome.style.bottom_glow.color[1] = 150 * t
 				widgets_by_name.chrome.style.textured_backdrop.color[1] = 255 * t
 				widgets_by_name.overlay.style.rect.color[1] = 30 * t
 			end,
@@ -593,8 +632,8 @@ local animation_definitions = {
 				local widget = widgets_by_name.chrome
 				local alpha = 0 * t
 
-				widget.style.top_detail.color[1] = alpha
-				widget.style.bottom_detail.color[1] = alpha
+				widget.style.top_detail.color[1] = 0
+				widget.style.bottom_detail.color[1] = 0
 				widget.style.category_text.text_color[1] = alpha
 				widget.style.pick_text.text_color[1] = alpha
 			end,
@@ -632,7 +671,17 @@ local animation_definitions = {
 				local widget = widgets_by_name.info_text
 
 				widget.style.text.text_color[1] = 255 * (1 - math.easeOutCubic(progress))
-				widget.style.text.rect_color[1] = 150 * (1 - math.easeOutCubic(progress))
+			end,
+			on_complete = NOP
+		},
+		{
+			name = "fade_out_info_text_shadow",
+			duration = 0.5,
+			init = NOP,
+			update = function (ui_scenegraph, scenegraph_def, widgets_by_name, progress, params)
+				local widget = widgets_by_name.info_text_shadow
+
+				widget.style.text.text_color[1] = 255 * (1 - math.easeOutCubic(progress))
 			end,
 			on_complete = NOP
 		}

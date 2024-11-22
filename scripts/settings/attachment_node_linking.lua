@@ -7902,36 +7902,6 @@ AttachmentNodeLinking = {
 			source = "j_packmaster_sling"
 		}
 	},
-	ai_human_soldier_1h_weapon = {
-		right = {
-			wielded = {
-				{
-					target = 0,
-					source = "j_rightweaponattach"
-				}
-			},
-			unwielded = {
-				{
-					target = 0,
-					source = "a_sword_right"
-				}
-			}
-		},
-		left = {
-			wielded = {
-				{
-					target = 0,
-					source = "j_leftweaponattach"
-				}
-			},
-			unwielded = {
-				{
-					target = 0,
-					source = "a_sword_left"
-				}
-			}
-		}
-	},
 	skeleton_weapon = {
 		wielded = {
 			{

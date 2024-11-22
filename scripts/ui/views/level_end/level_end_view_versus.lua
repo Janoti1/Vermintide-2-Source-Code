@@ -125,6 +125,7 @@ LevelEndViewVersus._calculate_awards = function (self)
 
 	self._sorted_awards = sorted_awards
 
+	self:_save_award_stats()
 	table.dump(self._sorted_awards, "AWARDS", 3)
 
 	local scores = {}
@@ -140,6 +141,38 @@ LevelEndViewVersus._calculate_awards = function (self)
 
 	table.sort(scores, sort_func)
 	table.dump(scores, "SCORES", 2)
+end
+
+LevelEndViewVersus._save_award_stats = function (self)
+	local stats_interface = Managers.backend:get_interface("statistics")
+	local stats = stats_interface:get_stats()
+	local statistics_db = StatisticsDatabase:new()
+	local local_player_id = 1
+	local unique_id = PlayerUtils.unique_player_id(Network.peer_id(), local_player_id)
+
+	statistics_db:register(unique_id, "player", stats)
+
+	local awards
+
+	for _, award_data in ipairs(self._sorted_awards) do
+		if award_data.stats_id == unique_id then
+			awards = award_data.awards
+
+			break
+		end
+	end
+
+	if awards then
+		for _, award in ipairs(awards) do
+			local settings = award.award_settings
+			local stat_key = settings.stat_key
+
+			statistics_db:increment_stat(unique_id, stat_key)
+		end
+	end
+
+	stats_interface:save_explicit(unique_id, statistics_db)
+	Managers.backend:commit()
 end
 
 LevelEndViewVersus._calculate_mvp = function (self, awards, player_session_scores)
@@ -217,22 +250,24 @@ LevelEndViewVersus._calculate_mvp = function (self, awards, player_session_score
 
 	if mvp_stats_id then
 		table.insert(awards[mvp_stats_id], 1, {
-			sound = "Play_vs_hud_eom_parading_mvp",
 			award_mask_material = "mvp_award_mask",
+			sound = "Play_vs_hud_eom_parading_mvp",
 			header = "mvp",
 			value = 10,
-			award_material = "mvp_award"
+			award_material = "mvp_award",
+			award_settings = EndScreenAwardSettingsLookup.vs_award_mvp
 		})
 	else
 		mvp_stats_id = Network.peer_id() .. ":1"
 		awards[mvp_stats_id] = awards[mvp_stats_id] or {}
 
 		table.insert(awards[mvp_stats_id], 1, {
-			sound = "Play_vs_hud_eom_parading_mvp",
 			award_mask_material = "mvp_award_mask",
+			sound = "Play_vs_hud_eom_parading_mvp",
 			header = "mvp",
 			value = 10,
-			award_material = "mvp_award"
+			award_material = "mvp_award",
+			award_settings = EndScreenAwardSettingsLookup.vs_award_mvp
 		})
 	end
 
@@ -558,6 +593,10 @@ LevelEndViewVersus._handle_input = function (self, dt, t)
 
 		if UIUtils.is_button_pressed(continue_button) or gamepad_active and input_service:get("refresh") or not gamepad_active and input_service:get("confirm_press") then
 			self._parading_done = true
+
+			self:play_sound("play_gui_start_menu_button_click")
+		elseif UIUtils.is_button_hover_enter(continue_button) then
+			self:play_sound("Play_hud_hover")
 		end
 	end
 
