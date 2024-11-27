@@ -438,6 +438,18 @@ DLCSettings = DLCSettings or {
 			common = "scripts/settings/dlcs/premium_career_bundle/premium_career_bundle_common_settings"
 		}
 	},
+	legacy_bundle = {
+		package_name = "resource_packages/dlcs/legacy_bundle",
+		additional_settings = {
+			common = "scripts/settings/dlcs/legacy_bundle/legacy_bundle_common_settings"
+		}
+	},
+	ultimate_bundle = {
+		package_name = "resource_packages/dlcs/ultimate_bundle",
+		additional_settings = {
+			common = "scripts/settings/dlcs/ultimate_bundle/ultimate_bundle_common_settings"
+		}
+	},
 	carousel = {
 		package_name = "resource_packages/dlcs/carousel",
 		localization = "localization/carousel",
@@ -467,6 +479,14 @@ DLCSettings = DLCSettings or {
 		additional_settings = {
 			common = "scripts/settings/dlcs/cosmetics_2024_q2/cosmetics_2024_q2_common_settings",
 			equipment = "scripts/settings/dlcs/cosmetics_2024_q2/cosmetics_2024_q2_equipment_settings"
+		}
+	},
+	cosmetics_2024_q3 = {
+		localization = "localization/cosmetics_2024_q3",
+		package_name = "resource_packages/dlcs/cosmetics_2024_q3",
+		additional_settings = {
+			common = "scripts/settings/dlcs/cosmetics_2024_q3/cosmetics_2024_q3_common_settings",
+			equipment = "scripts/settings/dlcs/cosmetics_2024_q3/cosmetics_2024_q3_equipment_settings"
 		}
 	},
 	handbook = {

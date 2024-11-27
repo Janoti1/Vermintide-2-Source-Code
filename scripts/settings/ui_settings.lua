@@ -1534,6 +1534,14 @@ UISettings.dlc_order_data = {
 		display_name = "store_shovel_upgrade_title"
 	},
 	{
+		dlc = "legacy_bundle",
+		display_name = "legacy_bundle_display_name"
+	},
+	{
+		dlc = "ultimate_bundle",
+		display_name = "ultimate_bundle_display_name"
+	},
+	{
 		dlc = "premium_career_bundle",
 		display_name = "display_name_premium_career_bundle"
 	},

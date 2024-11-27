@@ -12244,7 +12244,7 @@ ItemMasterList.level_chest_lesser = {
 	chest_tier = 1,
 	can_wield = CanWieldAllItemTemplates,
 	chest_categories = {
-		"level_chest_lesser"
+		"level_up"
 	}
 }
 ItemMasterList.level_chest_02 = {

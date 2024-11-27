@@ -1349,6 +1349,7 @@ ItemMasterList.frame_scorpion_complete_all_helmgart_level_achievements_cataclysm
 	inventory_icon = "icon_portrait_frame_scorpion_complete_all_helmgart_level_achievements_cataclysm",
 	slot_type = "frame",
 	information_text = "information_text_frame",
+	store_icon_override_key = "frame_scorpion_achieve_cata",
 	rarity = "promo",
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates

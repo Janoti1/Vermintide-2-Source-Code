@@ -100,7 +100,7 @@ Currencies.shillings_large = {
 	can_wield = CanWieldAllItemTemplates
 }
 Currencies.versus_currency_01 = {
-	description = "versus_currency_small",
+	description = "menu_store_panel_versus_currency_tooltip_desc",
 	rarity = "common",
 	display_name = "versus_currency_small",
 	inventory_icon = "icon_versus_coin_01",
@@ -111,7 +111,7 @@ Currencies.versus_currency_01 = {
 	can_wield = CanWieldAllItemTemplates
 }
 Currencies.versus_currency_02 = {
-	description = "versus_currency_medium",
+	description = "menu_store_panel_versus_currency_tooltip_desc",
 	rarity = "common",
 	display_name = "versus_currency_medium",
 	inventory_icon = "icon_versus_coin_02",
@@ -122,7 +122,7 @@ Currencies.versus_currency_02 = {
 	can_wield = CanWieldAllItemTemplates
 }
 Currencies.versus_currency_03 = {
-	description = "versus_currency_big",
+	description = "menu_store_panel_versus_currency_tooltip_desc",
 	rarity = "common",
 	display_name = "versus_currency_big",
 	inventory_icon = "icon_versus_coin_03",
@@ -133,7 +133,7 @@ Currencies.versus_currency_03 = {
 	can_wield = CanWieldAllItemTemplates
 }
 Currencies.versus_currency_small = {
-	description = "versus_currency_small",
+	description = "menu_store_panel_versus_currency_tooltip_desc",
 	rarity = "common",
 	display_name = "versus_currency_small",
 	inventory_icon = "icon_versus_coin_01",
@@ -144,7 +144,7 @@ Currencies.versus_currency_small = {
 	can_wield = CanWieldAllItemTemplates
 }
 Currencies.versus_currency_medium = {
-	description = "versus_currency_medium",
+	description = "menu_store_panel_versus_currency_tooltip_desc",
 	rarity = "common",
 	display_name = "versus_currency_medium",
 	inventory_icon = "icon_versus_coin_02",
@@ -155,7 +155,7 @@ Currencies.versus_currency_medium = {
 	can_wield = CanWieldAllItemTemplates
 }
 Currencies.versus_currency_large = {
-	description = "versus_currency_big",
+	description = "menu_store_panel_versus_currency_tooltip_desc",
 	rarity = "common",
 	display_name = "versus_currency_name",
 	inventory_icon = "icon_versus_coin_03",
