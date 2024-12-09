@@ -791,6 +791,51 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
+		name = "pdr_generic_seeing_ruin_a",
+		response = "pdr_generic_seeing_ruin_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_item"
+			},
+			{
+				"query_context",
+				"item_tag",
+				OP.EQ,
+				"generic_seeing_ruin"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_memory",
+				"generic_seeing_ruin",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"generic_seeing_ruin",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
 		name = "pdr_generic_success",
 		response = "pdr_generic_success",
 		criterias = {
@@ -1590,6 +1635,75 @@ return function ()
 				0.79197919368744,
 				1.2729791402817,
 				1.4389791488648
+			}
+		},
+		pdr_generic_seeing_ruin_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 10,
+			database = "dwarf_ranger_generic_vo",
+			sound_events_n = 10,
+			category = "level_talk",
+			dialogue_animations_n = 10,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm",
+				"face_calm"
+			},
+			localization_strings = {
+				"pdr_generic_seeing_ruin_a_01",
+				"pdr_generic_seeing_ruin_a_02",
+				"pdr_generic_seeing_ruin_a_03",
+				"pdr_generic_seeing_ruin_a_04",
+				"pdr_generic_seeing_ruin_a_05",
+				"pdr_generic_seeing_ruin_a_06",
+				"pdr_generic_seeing_ruin_a_07",
+				"pdr_generic_seeing_ruin_a_08",
+				"pdr_generic_seeing_ruin_a_09",
+				"pdr_generic_seeing_ruin_a_10"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_generic_seeing_ruin_a_01",
+				"pdr_generic_seeing_ruin_a_02",
+				"pdr_generic_seeing_ruin_a_03",
+				"pdr_generic_seeing_ruin_a_04",
+				"pdr_generic_seeing_ruin_a_05",
+				"pdr_generic_seeing_ruin_a_06",
+				"pdr_generic_seeing_ruin_a_07",
+				"pdr_generic_seeing_ruin_a_08",
+				"pdr_generic_seeing_ruin_a_09",
+				"pdr_generic_seeing_ruin_a_10"
+			},
+			sound_events_duration = {
+				3.6871666908264,
+				2.8227708339691,
+				5.3936877250671,
+				3.7582292556763,
+				3.4251458644867,
+				4.7914581298828,
+				4.5136251449585,
+				4.8509168624878,
+				4.8017292022705,
+				5.0081872940064
 			}
 		},
 		pdr_generic_success = {

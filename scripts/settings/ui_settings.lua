@@ -287,7 +287,7 @@ UISettings = UISettings or {
 	},
 	use_ps4_input_icons = IS_PS4 or Application.user_setting("gamepad_use_ps4_style_input_icons"),
 	breed_textures = {
-		hero_we_shade = "small_unit_frame_portrait_kerillian_shade",
+		pet_skeleton_dual_wield = "unit_frame_portrait_pet_skeleton",
 		chaos_tentacle = "unit_frame_portrait_enemy_chaos_sorcerer",
 		skaven_warpfire_thrower = "unit_frame_portrait_enemy_warpfire",
 		chaos_zombie = "unit_frame_portrait_enemy_plague_zombie",
@@ -295,11 +295,11 @@ UISettings = UISettings or {
 		vs_ratling_gunner = "unit_frame_portrait_enemy_ratling_gunner",
 		hero_bw_scholar = "small_unit_frame_portrait_sienna_scholar",
 		chaos_plague_sorcerer = "unit_frame_portrait_enemy_chaos_sorcerer",
-		chaos_berzerker = "unit_frame_portrait_enemy_savage",
+		vs_warpfire_thrower = "unit_frame_portrait_enemy_warpfire",
 		hero_es_questingknight = "small_unit_frame_portrait_kruber_questingknight",
-		chaos_fanatic = "unit_frame_portrait_enemy_fanatic",
+		vs_rat_ogre = "unit_frame_portrait_enemy_rat_ogre",
 		beastmen_standard_bearer = "unit_frame_portrait_enemy_standard_bearer",
-		chaos_vortex = "unit_frame_portrait_enemy_sorcerer_vortex",
+		skaven_storm_vermin_champion = "unit_frame_portrait_enemy_stormvermin",
 		hero_wh_bountyhunter = "small_unit_frame_portrait_victor_bountyhunter",
 		pet_skeleton = "unit_frame_portrait_pet_skeleton",
 		skaven_stormfiend_demo = "unit_frame_portrait_enemy_stormfiend",
@@ -307,19 +307,20 @@ UISettings = UISettings or {
 		skaven_plague_monk = "unit_frame_portrait_enemy_plague_monk",
 		hero_bw_necromancer = "small_unit_frame_portrait_sienna_necromancer",
 		hero_we_maidenguard = "small_unit_frame_portrait_kerillian_maidenguard",
+		chaos_berzerker = "unit_frame_portrait_enemy_savage",
 		hero_bw_unchained = "small_unit_frame_portrait_sienna_unchained",
 		skaven_ratling_gunner = "unit_frame_portrait_enemy_ratling_gunner",
 		hero_dr_slayer = "small_unit_frame_portrait_bardin_slayer",
-		hero_es_huntsman = "small_unit_frame_portrait_kruber_huntsman",
 		chaos_troll = "unit_frame_portrait_enemy_chaos_troll",
 		chaos_spawn = "unit_frame_portrait_enemy_chaos_spawn",
-		hero_es_knight = "small_unit_frame_portrait_kruber_knight",
+		hero_es_huntsman = "small_unit_frame_portrait_kruber_huntsman",
 		chaos_exalted_sorcerer_drachenfels = "unit_frame_portrait_enemy_sorcerer_drachenfels",
 		chaos_vortex_sorcerer = "unit_frame_portrait_enemy_sorcerer_vortex",
 		skaven_storm_vermin = "unit_frame_portrait_enemy_stormvermin",
-		vs_warpfire_thrower = "unit_frame_portrait_enemy_warpfire",
+		hero_es_knight = "small_unit_frame_portrait_kruber_knight",
 		chaos_marauder = "unit_frame_portrait_enemy_chaos_marauder",
-		skaven_storm_vermin_champion = "unit_frame_portrait_enemy_stormvermin",
+		chaos_fanatic = "unit_frame_portrait_enemy_fanatic",
+		chaos_vortex = "unit_frame_portrait_enemy_sorcerer_vortex",
 		pet_skeleton_armored = "unit_frame_portrait_pet_skeleton",
 		skaven_clan_rat_with_shield = "unit_frame_portrait_enemy_clanrat",
 		chaos_exalted_champion_norsca = "unit_frame_portrait_enemy_chaos_warrior",
@@ -345,7 +346,7 @@ UISettings = UISettings or {
 		chaos_exalted_sorcerer = "unit_frame_portrait_enemy_sorcerer_boss",
 		chaos_tentacle_sorcerer = "unit_frame_portrait_enemy_chaos_sorcerer",
 		skaven_rat_ogre = "unit_frame_portrait_enemy_rat_ogre",
-		pet_skeleton_dual_wield = "unit_frame_portrait_pet_skeleton",
+		hero_we_shade = "small_unit_frame_portrait_kerillian_shade",
 		chaos_corruptor_sorcerer = "unit_frame_portrait_enemy_sorcerer_corruptor",
 		skaven_stormfiend_boss = "unit_frame_portrait_enemy_stormfiend",
 		beastmen_gor = "unit_frame_portrait_enemy_standard_bearer",
@@ -1086,6 +1087,11 @@ UISettings.hero_hat_camera_position_by_character = {
 		x = 0,
 		y = -2.1
 	},
+	vs_rat_ogre = {
+		z = 0.6,
+		x = 1.2,
+		y = 0.5
+	},
 	vs_chaos_troll = {
 		z = 1.4,
 		x = 0.8,
@@ -1152,6 +1158,11 @@ UISettings.hero_skin_camera_position_by_character = {
 		z = 0.25,
 		x = 0,
 		y = -1.2
+	},
+	vs_rat_ogre = {
+		z = 0.6,
+		x = 1.2,
+		y = 0.5
 	},
 	vs_chaos_troll = {
 		z = 1.4,
@@ -1572,6 +1583,26 @@ UISettings.dlc_order_data = {
 	{
 		dlc = "five_career_bundle_0007",
 		display_name = "display_name_five_career_bundle_0007"
+	},
+	{
+		dlc = "slayer_skin_0001",
+		display_name = "display_name_skin_dr_slayer_1003"
+	},
+	{
+		dlc = "sister_of_the_thorn_skin_0001",
+		display_name = "display_name_skin_ww_thornsister_1001"
+	},
+	{
+		dlc = "mercenary_skin_0001",
+		display_name = "display_name_skin_es_mercenary_1003"
+	},
+	{
+		dlc = "pyromancer_skin_0001",
+		display_name = "display_name_skin_bw_scholar_1003"
+	},
+	{
+		dlc = "bountyhunter_skin_0001",
+		display_name = "display_name_skin_wh_bountyhunter_1003"
 	}
 }
 

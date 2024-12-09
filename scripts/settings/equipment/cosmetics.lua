@@ -2936,10 +2936,34 @@ Cosmetics.frame_wizards_tower_01 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_mondstille_01 = {
-	icon = "unit_frame_02"
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_mondstille_01",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_mondstille_01/store_item_icon_frame_mondstille_01",
+			type = "texture"
+		}
+	}
 }
 Cosmetics.frame_mondstille_02 = {
-	icon = "unit_frame_02"
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_mondstille_02",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_mondstille_02/store_item_icon_frame_mondstille_02",
+			type = "texture"
+		}
+	}
 }
 Cosmetics.frame_mondstille_03 = {
 	icon = "unit_frame_02"
@@ -2966,7 +2990,19 @@ Cosmetics.frame_scorpion_complete_all_helmgart_levels_cataclysm = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_scorpion_complete_all_helmgart_level_achievements_cataclysm = {
-	icon = "unit_frame_02"
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_scorpion_achieve_cata",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_scorpion_achieve_cata/store_item_icon_frame_scorpion_achieve_cata",
+			type = "texture"
+		}
+	}
 }
 Cosmetics.frame_scorpion_complete_bogenhafen_cataclysm = {
 	icon = "unit_frame_02"
@@ -3133,6 +3169,12 @@ Cosmetics.frame_versus_02 = {
 		}
 	}
 }
+Cosmetics.frame_rat_ogre_01 = {
+	icon = "unit_frame_02"
+}
+Cosmetics.frame_rat_ogre_02 = {
+	icon = "unit_frame_02"
+}
 Cosmetics.frame_skulls_2023 = {
 	icon = "unit_frame_02"
 }
@@ -3152,6 +3194,9 @@ Cosmetics.frame_karak_04 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_karak_05 = {
+	icon = "unit_frame_02"
+}
+Cosmetics.frame_termite_01 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_necromancer_01 = {
@@ -3205,6 +3250,21 @@ Cosmetics.frame_geheimnisnacht_2024 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_gotwf_01 = {
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_gotwf_01",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_gotwf_01/store_item_icon_frame_gotwf_01",
+			type = "texture"
+		}
+	}
+}
+Cosmetics.frame_gotwf_2024 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.pose_template = {

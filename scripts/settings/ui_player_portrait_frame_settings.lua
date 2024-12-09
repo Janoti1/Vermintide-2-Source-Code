@@ -549,6 +549,27 @@ UIPlayerPortraitFrameSettings = {
 			}
 		}
 	},
+	frame_termite_01 = {
+		{
+			texture = "portrait_frame_termite_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			},
+			size = {
+				128,
+				140
+			},
+			offset = {
+				0,
+				-61,
+				0
+			}
+		}
+	},
 	frame_necromancer_01 = {
 		{
 			texture = "portrait_frame_necromancer_01_child",
@@ -3180,6 +3201,30 @@ UIPlayerPortraitFrameSettings = {
 				0,
 				-61,
 				0
+			}
+		}
+	},
+	frame_rat_ogre_01 = {
+		{
+			texture = "portrait_frame_rat_ogre_01",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
+	},
+	frame_rat_ogre_02 = {
+		{
+			texture = "portrait_frame_rat_ogre_02",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
 			}
 		}
 	}

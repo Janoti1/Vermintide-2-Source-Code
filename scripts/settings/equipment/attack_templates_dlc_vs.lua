@@ -6,3 +6,6 @@ AttackTemplates.shot_shotgun_vs = {
 	ranged_stagger = true,
 	stagger_value = 2
 }
+AttackTemplates.rat_ogre_leap_vs = {
+	stagger_value = 2
+}

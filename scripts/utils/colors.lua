@@ -1238,6 +1238,12 @@ Colors.color_definitions = {
 		123,
 		44
 	},
+	vs_rat_ogre = {
+		255,
+		204,
+		128,
+		128
+	},
 	vs_undecided = {
 		255,
 		255,

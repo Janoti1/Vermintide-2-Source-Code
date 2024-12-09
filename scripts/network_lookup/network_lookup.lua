@@ -474,6 +474,9 @@ NetworkLookup.husks = {
 	"units/weapons/player/pup_whale_oil_barrel/pup_whale_oil_barrel_01",
 	"units/weapons/player/pup_whale_oil_barrel/wpn_whale_oil_barrel_01",
 	"units/weapons/player/pup_whale_oil_barrel/wpn_whale_oil_barrel_01_3p",
+	"units/weapons/player/pup_waystone_piece_01/pup_waystone_piece_01",
+	"units/weapons/player/pup_waystone_piece_01/wpn_waystone_piece_01",
+	"units/weapons/player/pup_waystone_piece_01/wpn_waystone_piece_01_3p",
 	"units/weapons/player/pup_wizards_barrel_01/pup_wizards_barrel_01",
 	"units/weapons/player/pup_wizards_barrel_01/wpn_wizards_barrel_01",
 	"units/weapons/player/pup_wizards_barrel_01/wpn_wizards_barrel_01_3p",
@@ -1593,7 +1596,8 @@ NetworkLookup.sound_events = {
 	"Play_boon_aoe_zone_explode_cooldown",
 	"Play_boon_aoe_zone_explode_crit",
 	"Play_boon_aoe_zone_explode_healing",
-	"Play_boon_aoe_zone_explode_power"
+	"Play_boon_aoe_zone_explode_power",
+	"Play_vs_rat_ogre_jump_3p"
 }
 
 do
@@ -1830,6 +1834,7 @@ NetworkLookup.dialogue_event_data_names = {
 	"training_dummy",
 	"training_dummy_armored",
 	"whale_oil_barrel",
+	"waystone_piece",
 	"stance_type",
 	"offensive",
 	"defensive",
@@ -2060,6 +2065,8 @@ NetworkLookup.game_ping_reply = {
 	"lobby_ok",
 	"lobby_id_mismatch",
 	"game_mode_ended",
+	"friend_joining_disabled",
+	"friend_joining_friends_only",
 	"not_searching_for_players",
 	"lobby_has_active_deed",
 	"obsolete_request",

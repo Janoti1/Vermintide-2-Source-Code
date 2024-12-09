@@ -4292,7 +4292,7 @@ UIWidgets.create_store_panel_currency_widget = function (scenegraph_id, frame_te
 			},
 			currency_text = {
 				word_wrap = false,
-				upper_case = true,
+				upper_case = false,
 				localize = false,
 				use_shadow = true,
 				font_size = 32,

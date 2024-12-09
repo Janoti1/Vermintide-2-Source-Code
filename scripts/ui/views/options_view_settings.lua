@@ -2047,6 +2047,24 @@ local network_settings_definition = {
 		}
 	},
 	{
+		setting_name = "friend_join_mode",
+		widget_type = "stepper",
+		options = {
+			{
+				value = "lobby_friends",
+				text = Localize("menu_settings_friend_join_setting_lobby_friends")
+			},
+			{
+				value = "host_friends_only",
+				text = Localize("menu_settings_friend_join_setting_host_friends_only")
+			},
+			{
+				value = "disabled",
+				text = Localize("menu_settings_friend_join_setting_disabled")
+			}
+		}
+	},
+	{
 		size_y = 30,
 		widget_type = "empty"
 	},

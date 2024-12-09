@@ -31,6 +31,9 @@ local object_sets_per_layout = {
 	cosmetics_selection = {
 		keep_current_object_set = true
 	},
+	cosmetics_selection_dark_pact = {
+		keep_current_object_set = true
+	},
 	pose_selection = {
 		pose_cosmetics = true
 	},
@@ -69,6 +72,9 @@ local level_events_per_layout = {
 	cosmetics_selection = {
 		"cosmetics_view"
 	},
+	cosmetics_selection_dark_pact = {
+		"cosmetics_view"
+	},
 	pose_selection = {
 		"cosmetics_view"
 	},
@@ -89,8 +95,9 @@ local character_visibility_per_layout = {
 	cosmetics_selection = true,
 	equipment_selection = true,
 	forge = false,
-	cosmetics = true,
+	cosmetics_selection_dark_pact = true,
 	system = false,
+	cosmetics = true,
 	pose_selection = true,
 	equipment = true,
 	character_selection = true,

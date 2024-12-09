@@ -276,6 +276,43 @@ local VSProfiles = {
 		base_camera_states = base_camera_states
 	},
 	{
+		career_voice_parameter = "dwarf_career_voice_effect",
+		player_check_for_jumps = true,
+		display_name = "vs_rat_ogre",
+		ui_portrait = "unit_frame_portrait_vs_rat_ogre",
+		aim_template = "enemy_character",
+		ingame_short_display_name = "vs_rat_ogre",
+		character_name = "vs_rat_ogre",
+		character_vo = "vs_rat_ogre",
+		unit_name = "dwarf_ranger",
+		ui_portrait_small = "unit_frame_portrait_enemy_rat_ogre",
+		unit_template_name = "player_unit_dark_pact",
+		dialogue_faction = "enemy",
+		default_wielded_slot = "slot_melee",
+		mover_profile = "filter_player_mover_pactsworn",
+		role = "boss",
+		ingame_display_name = "vs_rat_ogre",
+		affiliation = "dark_pact",
+		enemy_role = "boss",
+		career_voice_parameter_values = {
+			0,
+			100,
+			50
+		},
+		room_profile = RoomProfiles.dwarf_ranger,
+		first_person_heights = {
+			grabbed_by_tentacle = 1.7,
+			knocked_down = 0.7,
+			crouch = 1.5,
+			stand = 2.2
+		},
+		careers = {
+			CareerSettings.vs_rat_ogre
+		},
+		base_character_states = base_character_states,
+		base_camera_states = base_camera_states
+	},
+	{
 		role = "spectator",
 		display_name = "spectator",
 		affiliation = "spectators",

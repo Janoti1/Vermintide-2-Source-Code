@@ -35,6 +35,11 @@ local camera_position_by_character = {
 		x = 0,
 		y = 1
 	},
+	vs_rat_ogre = {
+		z = 0.6,
+		x = 1.2,
+		y = 0.5
+	},
 	vs_chaos_troll = {
 		z = 0.4,
 		x = 0,

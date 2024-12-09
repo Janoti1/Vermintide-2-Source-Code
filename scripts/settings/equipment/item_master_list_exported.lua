@@ -1783,7 +1783,9 @@ ItemMasterList.frame_mondstille_01 = {
 	inventory_icon = "icon_portrait_frame_mondstille_01",
 	slot_type = "frame",
 	information_text = "information_text_frame",
+	event_item = true,
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }
@@ -1795,7 +1797,9 @@ ItemMasterList.frame_mondstille_02 = {
 	inventory_icon = "icon_portrait_frame_mondstille_02",
 	slot_type = "frame",
 	information_text = "information_text_frame",
+	event_item = true,
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }

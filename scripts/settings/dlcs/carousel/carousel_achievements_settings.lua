@@ -108,6 +108,17 @@ settings.achievement_categories = {
 					"vs_chaos_troll_damage_03",
 					"vs_bile_troll_vomit"
 				}
+			},
+			{
+				sorting = 8,
+				name = "vs_rat_ogre",
+				entries = {
+					"vs_rat_ogre_damage_01",
+					"vs_rat_ogre_damage_02",
+					"vs_rat_ogre_damage_03",
+					"vs_rat_ogre_hit_heroes_heavy",
+					"vs_rat_ogre_hit_leap"
+				}
 			}
 		}
 	}

@@ -9,6 +9,8 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2024-12-09  |  6.1.0  | [Map update and Rat Orge teaser](https://forums.fatsharkgames.com/t/the-forsaken-temple-is-out-now-patch-6-1-0/102955)
+2024-11-30  |  6.0.7  | [Hotfix](https://forums.fatsharkgames.com/t/versus-spotlight-sienna-poison-wind-globadier-hotfix-6-0-7/102040)
 2024-11-27  |  6.0.6  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-0-6-26th-of-november/101962)
 2024-11-22  |  6.0.5  | [Versus Fixes and small additions](https://forums.fatsharkgames.com/t/versus-spotlight-kruber-ratling-gunner-hotfix-6-0-4-hotfix-6-0-5/101695)
 2024-11-17  |  6.0.3  | [Versus Release and Hotfixes](https://forums.fatsharkgames.com/t/versus-is-out-now-free-new-pvp-game-mode-patch-6-0-0-hotfix-6-0-3/101222)

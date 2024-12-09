@@ -1123,6 +1123,12 @@ local settings = {
 		category = "Player mechanics"
 	},
 	{
+		description = "Show movement settings as they are written to the local player unit",
+		is_boolean = true,
+		setting_name = "debug_movement_settings",
+		category = "Player mechanics"
+	},
+	{
 		description = "Show animation events called for selected unit.",
 		is_boolean = true,
 		setting_name = "debug_selected_unit_anim_events",
@@ -1529,6 +1535,12 @@ local settings = {
 
 			win_conditions:debug_add_score(value)
 		end
+	},
+	{
+		description = "Draws sphere cast on ratogers ability",
+		is_boolean = true,
+		setting_name = "debug_vs_ratogre_ability",
+		category = "Versus"
 	},
 	{
 		description = "Unhoists local player",
@@ -7565,6 +7577,7 @@ local settings = {
 				local hero_attributes = backend_manager:get_interface("hero_attributes")
 
 				hero_attributes:set(display_name, "experience", function_result.data[display_name .. "_experience"])
+				hero_attributes:set(display_name, "experience_pool", function_result.data[display_name .. "_experience_pool"])
 			end
 
 			local request = {

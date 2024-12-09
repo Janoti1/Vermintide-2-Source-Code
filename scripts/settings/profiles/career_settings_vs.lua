@@ -41,6 +41,7 @@ CareerActionNames.vs_packmaster = {}
 CareerActionNames.vs_ratling_gunner = {}
 CareerActionNames.vs_warpfire_thrower = {}
 CareerActionNames.vs_chaos_troll = {}
+CareerActionNames.vs_rat_ogre = {}
 CareerSettings.vs_undecided = {
 	profile_name = "vs_undecided",
 	name = "vs_undecided",
@@ -644,6 +645,106 @@ CareerSettings.vs_chaos_troll = {
 		"ChaosTrollStateWalking",
 		"ChaosTrollStateJumping",
 		"ChaosTrollStateFalling"
+	}
+}
+CareerSettings.vs_rat_ogre = {
+	profile_name = "vs_rat_ogre",
+	display_name = "vs_rat_ogre",
+	package_name = "resource_packages/careers/dr_slayer",
+	store_tag_icon = "store_tag_icon_vs_pactsworn",
+	excluded_from_weave_loadouts = true,
+	name = "vs_rat_ogre",
+	preview_idle_animation = "career_idle_01",
+	preview_animation = "career_idle_01",
+	icon = "icons_placeholder",
+	base_skin = "skaven_rat_ogre_skin_0000",
+	picking_image = "medium_unit_frame_portrait_ratogre",
+	picking_image_square = "pactsworn_portrait_diamond_rat_ogre",
+	preview_wield_slot = "melee",
+	playfab_name = "vs_rat_ogre",
+	category_image = "icons_placeholder",
+	sound_character = "dwarf_slayer",
+	base_weapon = "vs_rat_ogre_hands",
+	talent_tree_index = 1,
+	description = "vs_pactsworn_special_rat_ogre_desc",
+	portrait_image = "unit_frame_portrait_vs_rat_ogre",
+	sort_order = 1,
+	breed = PlayerBreeds.vs_rat_ogre,
+	item_types = {},
+	activated_ability = ActivatedAbilitySettings.vs_rat_ogre,
+	passive_ability = PassiveAbilitySettings.vs_rat_ogre,
+	attributes = {
+		base_critical_strike_chance = 0.05,
+		max_hp = 600
+	},
+	video = {
+		material_name = "dr_slayer",
+		resource = "video/career_videos/bardin/dr_slayer"
+	},
+	preview_items = {
+		{
+			item_name = "vs_rat_ogre_hands"
+		}
+	},
+	is_unlocked_function = local_is_unlocked_function,
+	is_dlc_unlocked = local_is_dlc_unlocked,
+	override_available_for_mechanism = local_override_available_for_mechanism,
+	career_info_settings = {
+		{
+			description = "vs_htp_rat_ogre_melee_description_line1",
+			input_action = "action_one",
+			icon = "rat_ogre_01",
+			gamepad_input = "action_one",
+			title = "vs_htp_rat_ogre_melee"
+		},
+		{
+			description = "vs_htp_rat_ogre_leap_description_line1",
+			name = "ogre_jump",
+			icon = "rat_ogre_02",
+			input_action = "action_two",
+			gamepad_input = "action_two",
+			title = "vs_htp_rat_ogre_leap"
+		}
+	},
+	loadout_equipment_slots = {
+		"melee",
+		"melee",
+		"necklace",
+		"ring",
+		"trinket",
+		"weapon_pose"
+	},
+	item_slot_types_by_slot_name = {
+		slot_melee = {
+			"melee"
+		},
+		slot_necklace = {
+			"necklace"
+		},
+		slot_ring = {
+			"ring"
+		},
+		slot_trinket_1 = {
+			"trinket"
+		},
+		slot_hat = {
+			"hat"
+		},
+		slot_skin = {
+			"skin"
+		},
+		slot_frame = {
+			"frame"
+		},
+		slot_pose = {
+			"weapon_pose"
+		}
+	},
+	additional_character_states_list = {
+		"RatOgreStateStanding",
+		"RatOgreStateWalking",
+		"RatOgreStateJumping",
+		"RatOgreStateFalling"
 	}
 }
 CareerSettings.spectator = {
