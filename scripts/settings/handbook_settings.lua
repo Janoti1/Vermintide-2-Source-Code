@@ -1173,8 +1173,8 @@ HandbookSettings.pages = {
 	},
 	tutorial_rat_ogre_01 = {
 		{
-			texture = "tutorial_rat_ogre_01",
-			type = "image"
+			path = "tutorial_rat_ogre_01",
+			type = "video"
 		},
 		{
 			text = "tutorial_rat_ogre_text_01",
@@ -1188,8 +1188,8 @@ HandbookSettings.pages = {
 	},
 	tutorial_rat_ogre_02 = {
 		{
-			texture = "tutorial_rat_ogre_01",
-			type = "image"
+			path = "tutorial_rat_ogre_02",
+			type = "video"
 		},
 		{
 			text = "tutorial_rat_ogre_text_02",
@@ -1202,7 +1202,7 @@ HandbookSettings.pages = {
 	},
 	tutorial_rat_ogre_03 = {
 		{
-			texture = "tutorial_rat_ogre_01",
+			texture = "tutorial_rat_ogre_03",
 			type = "image"
 		},
 		{

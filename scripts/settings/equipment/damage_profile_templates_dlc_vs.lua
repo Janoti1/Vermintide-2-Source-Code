@@ -270,16 +270,16 @@ local damage_templates = {
 		targets = {
 			{
 				boost_curve_type = "linesman_curve",
-				boost_curve_coefficient = 2,
+				boost_curve_coefficient = 1,
 				attack_template = "slashing_linesman",
 				power_distribution = {
-					attack = 0.6,
-					impact = 0.6
+					attack = 0.8,
+					impact = 0.8
 				}
 			},
 			{
 				boost_curve_type = "linesman_curve",
-				boost_curve_coefficient = 2,
+				boost_curve_coefficient = 1,
 				attack_template = "light_slashing_linesman",
 				power_distribution = {
 					attack = 0.4,
@@ -289,11 +289,21 @@ local damage_templates = {
 		},
 		default_target = {
 			boost_curve_type = "linesman_curve",
-			boost_curve_coefficient = 2,
+			boost_curve_coefficient = 1,
 			attack_template = "light_slashing_linesman",
 			power_distribution = {
 				attack = 0.1,
 				impact = 0.1
+			}
+		}
+	},
+	playable_boss_melee_dummy_slam_vs = {
+		charge_value = "heavy_attack",
+		default_target = {
+			attack_template = "light_slashing_linesman",
+			power_distribution = {
+				attack = 0,
+				impact = 0
 			}
 		}
 	},
@@ -303,27 +313,27 @@ local damage_templates = {
 		armor_modifier = {
 			attack = {
 				1,
-				0.25,
-				1.5,
 				1,
-				0.75,
-				0
+				1,
+				1,
+				1,
+				1
 			},
 			impact = {
 				1,
-				0.5,
 				1,
 				1,
-				0.75,
-				0
+				1,
+				1,
+				1
 			}
 		},
 		default_target = {
-			attack_template = "drakegun",
-			damage_type = "drakegun",
+			attack_template = "rat_ogre_leap_vs",
+			damage_type = "kinetic",
 			power_distribution = {
-				attack = 0.25,
-				impact = 0.5
+				attack = 3,
+				impact = 3
 			}
 		}
 	},
@@ -2619,6 +2629,7 @@ damage_templates.bile_troll_shove = table.clone(damage_templates.playable_boss_m
 damage_templates.bile_troll_smiter = table.clone(damage_templates.playable_boss_melee_scrambler_heavy_vs)
 damage_templates.rat_ogre_light_1 = table.clone(damage_templates.playable_boss_melee_frenzy_light_vs)
 damage_templates.rat_ogre_light_2 = table.clone(damage_templates.playable_boss_melee_scrambler_light_vs)
-damage_templates.rat_ogre_slam = table.clone(damage_templates.playable_boss_melee_frenzy_slam_vs)
+damage_templates.rat_ogre_slam_left = table.clone(damage_templates.playable_boss_melee_frenzy_slam_vs)
+damage_templates.rat_ogre_slam_right = table.clone(damage_templates.playable_boss_melee_frenzy_slam_vs)
 
 return damage_templates

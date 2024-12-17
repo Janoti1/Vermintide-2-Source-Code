@@ -574,7 +574,7 @@ CareerSettings.vs_chaos_troll = {
 	passive_ability = PassiveAbilitySettings.vs_chaos_troll,
 	attributes = {
 		base_critical_strike_chance = 0.05,
-		max_hp = 600
+		max_hp = 800
 	},
 	video = {
 		material_name = "dr_slayer",
@@ -675,7 +675,7 @@ CareerSettings.vs_rat_ogre = {
 	passive_ability = PassiveAbilitySettings.vs_rat_ogre,
 	attributes = {
 		base_critical_strike_chance = 0.05,
-		max_hp = 600
+		max_hp = 800
 	},
 	video = {
 		material_name = "dr_slayer",

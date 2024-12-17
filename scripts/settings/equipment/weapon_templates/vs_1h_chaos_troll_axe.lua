@@ -7,16 +7,6 @@ local planted_decrease_movement_settings = {
 			start_time = 0,
 			external_multiplier = 0.2,
 			buff_name = "planted_charging_decrease_movement"
-		},
-		{
-			start_time = 0,
-			external_value = 2,
-			buff_name = "set_rotation_limit"
-		},
-		{
-			start_time = 0,
-			external_multiplier = 0.75,
-			buff_name = "planted_decrease_rotation_speed"
 		}
 	},
 	light_attack_1 = {
@@ -40,43 +30,7 @@ local planted_decrease_movement_settings = {
 		},
 		{
 			start_time = 1,
-			external_multiplier = 0.4,
-			end_time = 1.2,
-			buff_name = "planted_fast_decrease_movement"
-		},
-		{
-			start_time = 1.2,
 			buff_name = "planted_return_to_normal_walk_movement"
-		},
-		{
-			start_time = 0.6,
-			external_value = 1,
-			end_time = 1.3,
-			buff_name = "set_rotation_limit"
-		},
-		{
-			start_time = 0,
-			external_multiplier = 0.75,
-			end_time = 0.35,
-			buff_name = "planted_decrease_rotation_speed"
-		},
-		{
-			start_time = 0.35,
-			external_multiplier = 0.5,
-			end_time = 0.7,
-			buff_name = "planted_decrease_rotation_speed"
-		},
-		{
-			start_time = 0.7,
-			external_multiplier = 0.75,
-			end_time = 1,
-			buff_name = "planted_decrease_rotation_speed"
-		},
-		{
-			start_time = 1,
-			external_multiplier = 0.75,
-			end_time = 1.2,
-			buff_name = "planted_decrease_rotation_speed"
 		}
 	},
 	light_attack_2 = {
@@ -100,43 +54,7 @@ local planted_decrease_movement_settings = {
 		},
 		{
 			start_time = 1,
-			external_multiplier = 0.4,
-			end_time = 1.2,
-			buff_name = "planted_fast_decrease_movement"
-		},
-		{
-			start_time = 1.2,
 			buff_name = "planted_return_to_normal_walk_movement"
-		},
-		{
-			start_time = 0.6,
-			external_value = 1,
-			end_time = 1.3,
-			buff_name = "set_rotation_limit"
-		},
-		{
-			start_time = 0,
-			external_multiplier = 0.75,
-			end_time = 0.35,
-			buff_name = "planted_decrease_rotation_speed"
-		},
-		{
-			start_time = 0.35,
-			external_multiplier = 0.5,
-			end_time = 0.7,
-			buff_name = "planted_decrease_rotation_speed"
-		},
-		{
-			start_time = 0.7,
-			external_multiplier = 0.75,
-			end_time = 1,
-			buff_name = "planted_decrease_rotation_speed"
-		},
-		{
-			start_time = 1,
-			external_multiplier = 0.75,
-			end_time = 1.2,
-			buff_name = "planted_decrease_rotation_speed"
 		}
 	},
 	heavy_attack = {
@@ -449,26 +367,27 @@ weapon_template.actions = {
 		attack_shove = {
 			damage_window_start = 0.8,
 			push_radius = 2,
-			disallow_ghost_mode = true,
+			weapon_action_hand = "right",
 			outer_push_angle = 180,
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
-			weapon_action_hand = "right",
+			disallow_ghost_mode = true,
+			range_mod = 1.65,
 			width_mod = 15,
 			damage_profile = "bile_troll_shove",
 			dedicated_target_range = 2,
 			push_angle = 100,
-			range_mod = 1.65,
+			anim_end_event = "attack_finished",
 			hit_effect = "vs_chaos_troll_axe_light",
 			damage_window_end = 1,
 			impact_sound_event = "axe_boss_1h_hit",
 			no_damage_impact_sound_event = "blunt_hit_armour",
-			anim_end_event = "attack_finished",
 			use_precision_sweep = false,
 			damage_profile_outer = "light_push",
+			aim_assist_ramp_multiplier = 0.4,
 			aim_assist_max_ramp_multiplier = 0.8,
 			aim_assist_ramp_decay_delay = 0,
-			aim_assist_ramp_multiplier = 0.4,
+			uninterruptible = true,
 			anim_event = "attack_shove",
 			damage_profile_inner = "medium_push",
 			total_time = 2.4,

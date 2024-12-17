@@ -1366,6 +1366,10 @@ HeroWindowGotwfOverview._handle_input = function (self, dt, t)
 end
 
 HeroWindowGotwfOverview._get_reward_item_from_bundle = function (self, reward)
+	if not reward then
+		return
+	end
+
 	local reward_item = reward[1]
 
 	if reward_item.reward_type == "bundle" then

@@ -186,9 +186,29 @@ settings.buff_templates = {
 			{
 				multiplier = -1,
 				name = "vs_boss_stagger_immune",
+				stat_buff = "impact_vulnerability"
+			}
+		}
+	},
+	vs_rat_ogre_start_leap_stagger_immune = {
+		buffs = {
+			{
+				multiplier = -1,
+				name = "vs_rat_ogre_start_leap_stagger_immune",
 				stat_buff = "impact_vulnerability",
 				max_stacks = 1,
-				duration = 3
+				duration = 5
+			}
+		}
+	},
+	vs_rat_ogre_finish_leap_stagger_immune = {
+		buffs = {
+			{
+				multiplier = -1,
+				name = "vs_rat_ogre_finish_leap_stagger_immune",
+				stat_buff = "impact_vulnerability",
+				max_stacks = 1,
+				duration = 8
 			}
 		}
 	},
@@ -227,6 +247,22 @@ settings.buff_templates = {
 				update_func = "update_vs_boss_mood",
 				name = "vs_boss_mood",
 				mood = "playable_boss"
+			}
+		}
+	},
+	rat_ogre_planted_decrease_movement = {
+		buffs = {
+			{
+				remove_buff_name = "planted_return_to_normal_movement",
+				name = "decrease_speed",
+				lerp_time = 0.5,
+				multiplier = 1,
+				update_func = "update_action_lerp_movement_buff",
+				remove_buff_func = "remove_action_lerp_movement_buff",
+				apply_buff_func = "apply_action_lerp_movement_buff",
+				path_to_movement_setting_to_modify = {
+					"move_speed"
+				}
 			}
 		}
 	},

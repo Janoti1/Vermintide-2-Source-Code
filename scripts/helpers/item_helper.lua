@@ -637,9 +637,11 @@ ItemHelper.has_unseen_shop_items = function ()
 end
 
 local fake_item_types = {
-	frame = true,
+	weapon_pose = true,
 	weapon_skin = true,
 	hat = true,
+	chips = true,
+	frame = true,
 	skin = true
 }
 

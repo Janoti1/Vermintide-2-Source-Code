@@ -7,16 +7,6 @@ local planted_decrease_movement_settings = {
 			start_time = 0,
 			external_multiplier = 0.2,
 			buff_name = "planted_decrease_movement"
-		},
-		{
-			start_time = 0,
-			external_value = 1.5,
-			buff_name = "set_rotation_limit"
-		},
-		{
-			start_time = 0,
-			external_multiplier = 0.75,
-			buff_name = "planted_decrease_rotation_speed"
 		}
 	},
 	light_attack = {
@@ -46,6 +36,12 @@ local planted_decrease_movement_settings = {
 		},
 		{
 			start_time = 0.6,
+			external_multiplier = 0.001,
+			end_time = 1,
+			buff_name = "planted_decrease_movement"
+		},
+		{
+			start_time = 1,
 			buff_name = "planted_return_to_normal_walk_movement"
 		},
 		{
@@ -66,21 +62,14 @@ local planted_decrease_movement_settings = {
 			end_time = 1,
 			buff_name = "planted_decrease_rotation_speed"
 		}
-	},
-	leap_charge = {
-		{
-			start_time = 0,
-			external_multiplier = 1,
-			buff_name = "planted_decrease_movement"
-		}
 	}
 }
 local knockback_tables = {
 	frenzy = {
 		catapult_players = false,
 		catapult = false,
-		player_knockback_speed = 12,
-		player_knockback_speed_blocked = 12
+		player_knockback_speed = 9,
+		player_knockback_speed_blocked = 9
 	},
 	slam = {
 		catapult_players = false,
@@ -232,7 +221,7 @@ weapon_template.actions = {
 			allowed_chain_actions = {
 				{
 					sub_action = "default_2",
-					start_time = 1.1,
+					start_time = 0.8,
 					action = "action_one",
 					end_time = 1.8,
 					input = "action_one"
@@ -247,7 +236,7 @@ weapon_template.actions = {
 		},
 		attack_swing_left = {
 			damage_window_start = 0.8,
-			disallow_ghost_mode = true,
+			anim_end_event = "attack_finished",
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
 			range_mod = 1.2,
@@ -260,7 +249,7 @@ weapon_template.actions = {
 			damage_window_end = 0.87,
 			impact_sound_event = "blunt_hit",
 			charge_value = "action_push",
-			anim_end_event = "attack_finished",
+			disallow_ghost_mode = true,
 			damage_profile = "rat_ogre_light_2",
 			dedicated_target_range = 2,
 			uninterruptible = true,
@@ -279,7 +268,7 @@ weapon_template.actions = {
 			allowed_chain_actions = {
 				{
 					sub_action = "default",
-					start_time = 1.8,
+					start_time = 1.4,
 					action = "action_one",
 					input = "action_one"
 				},
@@ -295,7 +284,7 @@ weapon_template.actions = {
 		attack_slam = {
 			damage_window_start = 0.1,
 			range_mod = 0.85,
-			anim_end_event = "attack_finished",
+			disallow_ghost_mode = true,
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
 			width_mod = 100,
@@ -305,12 +294,12 @@ weapon_template.actions = {
 			no_damage_impact_sound_event = "blunt_hit_armour",
 			damage_window_end = 0.225,
 			impact_sound_event = "blunt_hit",
-			disallow_ghost_mode = true,
+			anim_end_event = "attack_finished",
 			additional_critical_strike_chance = 0.1,
 			use_precision_sweep = false,
-			damage_profile_right = "rat_ogre_slam",
+			damage_profile_right = "rat_ogre_slam_right",
 			dedicated_target_range = 2,
-			damage_profile_left = "rat_ogre_slam",
+			damage_profile_left = "rat_ogre_slam_left",
 			uninterruptible = true,
 			anim_event = "attack_slam",
 			height_mod = 5,
@@ -332,9 +321,10 @@ weapon_template.actions = {
 			allowed_chain_actions = {
 				{
 					sub_action = "default",
-					start_time = 0.75,
+					start_time = 1.25,
 					action = "action_one",
 					release_required = "action_one_hold",
+					end_time = 1.33,
 					input = "action_one"
 				}
 			},

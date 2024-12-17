@@ -77,7 +77,8 @@ local horde_ability_settings = {
 			vs_ratling_gunner_gun = 0.15,
 			vs_chaos_troll_axe = 0.4,
 			vomit_face = 1.4,
-			vs_packmaster = 1.2
+			vs_packmaster = 1.2,
+			vs_rat_ogre_hands = 0.4
 		}
 	}
 }
