@@ -16,6 +16,8 @@ PassiveAbilityRatOgre.init = function (self, extension_init_context, unit, exten
 	self._network_transmit = Managers.state.network.network_transmit
 
 	self:register_rpcs(self._network_event_delegate)
+
+	self._anim_value = 0
 end
 
 PassiveAbilityRatOgre.register_rpcs = function (self, network_event_delegate)
@@ -128,6 +130,12 @@ PassiveAbilityRatOgre.stop = function (self)
 		end
 
 		Unit.animation_event(unit, "attack_jump_land")
+	else
+		if not self._is_remote_player then
+			self._first_person_extension:play_animation_event("cancel_priming")
+		end
+
+		Unit.animation_event(unit, "cancel_priming")
 	end
 end
 

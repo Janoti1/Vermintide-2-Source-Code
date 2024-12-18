@@ -186,7 +186,9 @@ settings.buff_templates = {
 			{
 				multiplier = -1,
 				name = "vs_boss_stagger_immune",
-				stat_buff = "impact_vulnerability"
+				stat_buff = "impact_vulnerability",
+				max_stacks = 1,
+				duration = 3
 			}
 		}
 	},

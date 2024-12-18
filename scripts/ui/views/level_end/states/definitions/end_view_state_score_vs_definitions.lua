@@ -3,7 +3,10 @@ local tab_layouts = {
 	{
 		class_name = "EndViewStateScoreVSTabReport",
 		name = "end_view_state_score_vs_tab_report",
-		display_name = "end_view_state_score_vs_tab_report_display_name"
+		display_name = "end_view_state_score_vs_tab_report_display_name",
+		condition_func = function ()
+			return not script_data["eac-untrusted"]
+		end
 	},
 	{
 		class_name = "EndViewStateScoreVSTabDetails",

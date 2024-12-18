@@ -835,6 +835,10 @@ HeroWindowGotwfOverview._claim_daily_reward = function (self, reward_offset)
 end
 
 HeroWindowGotwfOverview._claim_reward_result_cb = function (self, reward_index, login_rewards)
+	if not self._ui_animator then
+		return
+	end
+
 	if login_rewards.event_type ~= "calendar" then
 		self._awaiting_result = false
 

@@ -48,40 +48,42 @@ EnemyCharacterStateLeaping.on_enter = function (self, unit, input, dt, context, 
 	self._played_landing_event = nil
 end
 
-EnemyCharacterStateLeaping.on_exit = function (self, unit, input, dt, context, t, next_state)
+EnemyCharacterStateLeaping.on_exit = function (self, unit, input, dt, context, t, next_state, is_destroy)
 	local input_extension = self._input_extension
 	local locomotion_extension = self._locomotion_extension
 
 	locomotion_extension:set_mover_filter_property("enemy_leap_state", false)
 
-	local player_position = Vector3.copy(POSITION_LOOKUP[unit])
-	local end_position = self._leap_data.projected_hit_pos:unbox()
+	if not is_destroy then
+		local player_position = Vector3.copy(POSITION_LOOKUP[unit])
+		local end_position = self._leap_data.projected_hit_pos:unbox()
 
-	if player_position.z < end_position.z then
-		player_position.z = end_position.z + 0.1
+		if player_position and end_position and player_position.z < end_position.z then
+			player_position.z = end_position.z + 0.1
 
-		locomotion_extension:teleport_to(player_position)
-	end
+			locomotion_extension:teleport_to(player_position)
+		end
 
-	locomotion_extension:set_forced_velocity(Vector3.zero())
-	locomotion_extension:set_wanted_velocity(Vector3.zero())
+		locomotion_extension:set_forced_velocity(Vector3.zero())
+		locomotion_extension:set_wanted_velocity(Vector3.zero())
 
-	if next_state == "staggered" and self._leap_data.leap_events.finished then
-		local final_position = POSITION_LOOKUP[unit]
+		if next_state == "staggered" and self._leap_data.leap_events.finished then
+			local final_position = POSITION_LOOKUP[unit]
 
-		self._leap_data.leap_events.finished(self, unit, false, final_position)
-	end
+			self._leap_data.leap_events.finished(self, unit, false, final_position)
+		end
 
-	if next_state == "walking" or next_state == "standing" then
-		ScriptUnit.extension(unit, "whereabouts_system"):set_landed()
-	elseif next_state and next_state ~= "falling" then
-		ScriptUnit.extension(unit, "whereabouts_system"):set_no_landing()
-	end
+		if next_state == "walking" or next_state == "standing" then
+			ScriptUnit.extension(unit, "whereabouts_system"):set_landed()
+		elseif next_state and next_state ~= "falling" then
+			ScriptUnit.extension(unit, "whereabouts_system"):set_no_landing()
+		end
 
-	if next_state and next_state ~= "falling" and next_state ~= "staggered" and Managers.state.network:game() then
-		CharacterStateHelper.play_animation_event(unit, "land_still")
-		CharacterStateHelper.play_animation_event(unit, "to_onground")
-		locomotion_extension:force_on_ground(true)
+		if next_state and next_state ~= "falling" and next_state ~= "staggered" and Managers.state.network:game() then
+			CharacterStateHelper.play_animation_event(unit, "land_still")
+			CharacterStateHelper.play_animation_event(unit, "to_onground")
+			locomotion_extension:force_on_ground(true)
+		end
 	end
 end
 

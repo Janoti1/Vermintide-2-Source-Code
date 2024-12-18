@@ -300,7 +300,8 @@ end
 
 LevelEndViewVersus._setup_pages_untrusted = function (self)
 	return {
-		EndViewStateScoreVS = 1
+		EndViewStateScoreVS = 2,
+		EndViewStateParadingVS = 1
 	}
 end
 

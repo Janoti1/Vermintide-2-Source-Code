@@ -35,6 +35,7 @@ CareerAbilityRatOgreJump.init = function (self, extension_init_context, unit, ex
 	self._indicator_unit = nil
 	self._is_priming = false
 	self._last_valid_landing_position = nil
+	self.stored_valid_pos = false
 	self._buff_data = {}
 end
 
@@ -212,19 +213,33 @@ CareerAbilityRatOgreJump.update = function (self, unit, input, dt, context, t)
 
 		local result, new_landing_position, leap_distance = self:_calculate_leap_position()
 
-		if result and new_landing_position and leap_distance > self._jump_data.min_jump_dist then
-			if self._last_valid_landing_position then
-				self._last_valid_landing_position:store(new_landing_position)
-				self:_handel_hit_indicator(new_landing_position)
-			else
+		if result and new_landing_position then
+			local current_position = POSITION_LOOKUP[unit]
+			local min_jump_dist = self._jump_data.min_jump_dist
+			local initial_priming = not self._last_valid_landing_position
+
+			if not self.stored_valid_pos and min_jump_dist <= leap_distance then
+				self.stored_valid_pos = true
+			end
+
+			local initial_min_dist_not_fulfilled = self._last_valid_landing_position and not self.stored_valid_pos
+			local requirement_fullfilled = self._last_valid_landing_position and min_jump_dist <= leap_distance
+
+			if initial_priming then
 				self._last_valid_landing_position = Vector3Box(new_landing_position)
 
+				self:_handel_hit_indicator(new_landing_position)
+			elseif requirement_fullfilled then
+				self._last_valid_landing_position:store(new_landing_position)
+				self:_handel_hit_indicator(new_landing_position)
+			elseif not self.stored_valid_pos and initial_min_dist_not_fulfilled then
+				self._last_valid_landing_position:store(new_landing_position)
 				self:_handel_hit_indicator(new_landing_position)
 			end
 		end
 
 		if not self._last_valid_landing_position then
-			self:_stop_priming()
+			self._career_extension:stop_ability("aborted")
 
 			return
 		end
@@ -321,8 +336,6 @@ CareerAbilityRatOgreJump._calculate_leap_position = function (self)
 
 	if result then
 		leap_distance = Vector3.length(new_landing_position - player_position)
-	else
-		new_landing_position = nil
 	end
 
 	return result, new_landing_position, leap_distance
@@ -342,6 +355,8 @@ CareerAbilityRatOgreJump._stop_priming = function (self)
 	self._last_valid_landing_position = nil
 
 	self:_remove_ability_buffs()
+
+	self.stored_valid_pos = false
 end
 
 CareerAbilityRatOgreJump._do_common_stuff = function (self)
