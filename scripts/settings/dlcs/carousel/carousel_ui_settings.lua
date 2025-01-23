@@ -140,6 +140,7 @@ settings.start_game_windows = {
 	"scripts/ui/dlc_versus/views/start_game_view/windows/start_game_window_versus_player_hosted_lobby",
 	"scripts/ui/dlc_versus/views/start_game_view/windows/start_game_window_versus_mission_selection",
 	"scripts/ui/dlc_versus/views/start_game_view/windows/start_game_window_host_versus_additional_settings",
+	"scripts/ui/dlc_versus/views/start_game_view/windows/start_game_window_versus_custom_game_settings",
 	"scripts/ui/dlc_versus/views/start_game_view/windows/start_game_window_versus_lobby_browser"
 }
 settings.start_game_layout_console_generic_inputs = {
@@ -226,30 +227,194 @@ settings.start_game_layout_console_generic_inputs = {
 		ignore_generic_actions = true,
 		actions = {
 			{
-				input_action = "left_stick",
+				input_action = "d_pad",
 				priority = 1,
 				description_text = "input_description_navigate",
 				ignore_keybinding = true
 			},
 			{
-				input_action = "confirm",
+				input_action = "left_stick",
 				priority = 2,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "confirm",
+				priority = 4,
 				description_text = "input_description_select"
 			},
 			{
+				input_action = "right_stick_press",
+				priority = 5,
+				description_text = "input_description_edit_custom_settings"
+			},
+			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 6,
 				description_text = "input_description_play"
 			},
 			{
 				input_action = "cancel_matchmaking",
-				priority = 4,
+				priority = 7,
 				description_text = "input_description_cancel"
 			},
 			{
 				input_action = "back",
-				priority = 5,
+				priority = 8,
 				description_text = "input_description_close"
+			}
+		}
+	},
+	versus_player_hosted_lobby_player_panel_focused = {
+		ignore_generic_actions = true,
+		actions = {
+			{
+				input_action = "d_horizontal",
+				priority = 1,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "left_stick",
+				priority = 2,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "confirm",
+				priority = 3,
+				description_text = "input_description_select"
+			},
+			{
+				input_action = "back",
+				priority = 4,
+				description_text = "input_description_back"
+			},
+			{
+				input_action = "toggle_menu",
+				priority = 5,
+				description_text = "input_description_show_profile"
+			},
+			{
+				input_action = "refresh",
+				priority = 6,
+				description_text = "vs_player_hosted_lobby_kick"
+			},
+			{
+				input_action = "special_1",
+				priority = 7,
+				description_text = "input_description_mute_chat"
+			}
+		}
+	},
+	versus_player_hosted_lobby_change_team = {
+		ignore_generic_actions = true,
+		actions = {
+			{
+				input_action = "d_pad",
+				priority = 1,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "left_stick",
+				priority = 2,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "confirm",
+				priority = 4,
+				description_text = "input_description_change_team"
+			},
+			{
+				input_action = "right_stick_press",
+				priority = 5,
+				description_text = "input_description_edit_custom_settings"
+			},
+			{
+				input_action = "refresh",
+				priority = 6,
+				description_text = "input_description_play"
+			},
+			{
+				input_action = "cancel_matchmaking",
+				priority = 7,
+				description_text = "input_description_cancel"
+			},
+			{
+				input_action = "back",
+				priority = 8,
+				description_text = "input_description_close"
+			}
+		}
+	},
+	versus_player_hosted_lobby_select_mission = {
+		ignore_generic_actions = true,
+		actions = {
+			{
+				input_action = "d_horizontal",
+				priority = 1,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "left_stick",
+				priority = 2,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "confirm",
+				priority = 4,
+				description_text = "input_description_select_mission_list"
+			},
+			{
+				input_action = "right_stick_press",
+				priority = 5,
+				description_text = "input_description_edit_custom_settings"
+			},
+			{
+				input_action = "refresh",
+				priority = 6,
+				description_text = "input_description_play"
+			},
+			{
+				input_action = "cancel_matchmaking",
+				priority = 7,
+				description_text = "input_description_cancel"
+			},
+			{
+				input_action = "back",
+				priority = 8,
+				description_text = "input_description_close"
+			}
+		}
+	},
+	versus_player_hosted_lobby_custom_settings = {
+		ignore_generic_actions = true,
+		actions = {
+			{
+				input_action = "d_vertical",
+				priority = 1,
+				description_text = "input_description_navigate",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "d_horizontal",
+				priority = 2,
+				description_text = "input_description_change",
+				ignore_keybinding = true
+			},
+			{
+				input_action = "special_1",
+				priority = 3,
+				description_text = "input_description_reset"
+			},
+			{
+				input_action = "back",
+				priority = 4,
+				description_text = "input_description_back"
 			}
 		}
 	}
@@ -311,6 +476,11 @@ settings.start_game_window_layout_console = {
 			name = "versus_mission_selection",
 			class_name = "StartGameWindowVersusMissionSelection"
 		},
+		versus_custom_game_settings = {
+			ignore_alignment = true,
+			name = "versus_custom_game_settings",
+			class_name = "StartGameWindowVersusCustomGameSettings"
+		},
 		versus_lobby_browser = {
 			ignore_alignment = true,
 			name = "versus_lobby_browser",
@@ -320,7 +490,7 @@ settings.start_game_window_layout_console = {
 	window_layouts = {
 		{
 			sound_event_enter = "Play_vs_hud_play_menu_category",
-			display_name = "start_game_window_adventure_title",
+			display_name = "menu_store_panel_title_versus",
 			game_mode_option = true,
 			name = "versus_quickplay",
 			disable_function_name = "_versus_quickplay_disable_function",
@@ -341,7 +511,7 @@ settings.start_game_window_layout_console = {
 		},
 		{
 			sound_event_enter = "Play_vs_hud_play_menu_category",
-			display_name = "start_game_window_other_options_always_host",
+			display_name = "start_game_window_specific_title",
 			game_mode_option = true,
 			name = "versus_custom_game",
 			disable_function_name = "_versus_custom_disable_function",
@@ -371,7 +541,8 @@ settings.start_game_window_layout_console = {
 			windows = {
 				versus_player_hosted_lobby = 3,
 				versus_panel = 1,
-				versus_background = 2
+				versus_background = 2,
+				versus_custom_game_settings = 4
 			},
 			can_add_function = function (overview)
 				return overview:is_in_mechanism("versus")
@@ -582,4 +753,128 @@ settings.stats_icons_lookup = {
 	vs_game_won = "icons_placeholder",
 	vs_hero_monster_kill = "icons_placeholder",
 	eliminations_as_breed = "killfeed_icon_12"
+}
+settings.custom_game_settigns_values_suffix = {
+	percentage = "%",
+	multiplier = "x",
+	distance = " m",
+	time_seconds = " sec",
+	time_minutes = " min"
+}
+settings.custom_game_ui_settings = {
+	early_win_enabled = {
+		widget_type = "stepper",
+		localization_options = {
+			[true] = "menu_settings_on",
+			[false] = "menu_settings_off"
+		}
+	},
+	hero_bots_enabled = {
+		widget_type = "stepper",
+		localization_options = {
+			[true] = "menu_settings_on",
+			[false] = "menu_settings_off"
+		}
+	},
+	starting_as_heroes = {
+		widget_type = "stepper",
+		localization_options = {
+			[1] = "versus_team_name_hammers",
+			[2] = "versus_team_name_skulls"
+		}
+	},
+	wounds_amount = {
+		widget_type = "stepper",
+		localization_options = {
+			unlimited = "menu_settings_unlimited"
+		}
+	},
+	knockdown_hp = {
+		widget_type = "slider"
+	},
+	round_time_limit = {
+		setting_type = "time_minutes",
+		widget_type = "slider",
+		localization_options = {
+			[false] = "menu_settings_off"
+		}
+	},
+	horde_ability_recharge_rate_percent = {
+		setting_type = "percentage",
+		widget_type = "slider"
+	},
+	friendly_fire = {
+		widget_type = "stepper",
+		localization_options = {
+			harder = "difficulty_harder",
+			hardest = "difficulty_hardest",
+			[false] = "menu_settings_off"
+		}
+	},
+	pactsworn_respawn_timer = {
+		setting_type = "time_seconds",
+		widget_type = "slider",
+		localization_options = {
+			default = "menu_settings_reset_to_default"
+		}
+	},
+	catch_up_with_heroes = {
+		setting_type = "distance",
+		widget_type = "slider"
+	},
+	hero_damage_taken = {
+		setting_type = "multiplier",
+		widget_type = "slider"
+	},
+	hero_rescues_enabled = {
+		widget_type = "stepper",
+		localization_options = {
+			[true] = "menu_settings_on",
+			[false] = "menu_settings_off"
+		}
+	},
+	special_spawn_range_distance = {
+		setting_type = "distance",
+		widget_type = "slider"
+	},
+	boss_spawn_range_distance = {
+		setting_type = "distance",
+		widget_type = "slider"
+	},
+	pactsworn_stagger_immunity = {
+		widget_type = "stepper",
+		localization_options = {
+			[true] = "menu_settings_on",
+			[false] = "menu_settings_off"
+		}
+	},
+	vs_ratling_gunner_spawn_chance_multiplier = {
+		widget_type = "slider"
+	},
+	vs_packmaster_spawn_chance_multiplier = {
+		widget_type = "slider"
+	},
+	vs_gutter_runner_spawn_chance_multiplier = {
+		widget_type = "slider"
+	},
+	vs_poison_wind_globadier_spawn_chance_multiplier = {
+		widget_type = "slider"
+	},
+	vs_warpfire_thrower_spawn_chance_multiplier = {
+		widget_type = "slider"
+	},
+	vs_chaos_troll_spawn_chance_multiplier = {
+		widget_type = "slider",
+		localization_options = {
+			default = "menu_settings_forced",
+			[false] = "menu_settings_off"
+		}
+	},
+	vs_rat_ogre_spawn_chance_multiplier = {
+		widget_type = "slider",
+		localization_options = {
+			default = "menu_settings_forced",
+			[false] = "menu_settings_off"
+		}
+	}
 }

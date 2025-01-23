@@ -1071,7 +1071,7 @@ Paintings.hor_dg726_bretcourtscncmyk = {
 	frame = "painted",
 	description = "painting_DG726_BretCourtScnCMYK_description",
 	artist = "painting_DG726_BretCourtScnCMYK_artist",
-	orientation = "horizontal",
+	orientation = "vertical",
 	frames = {
 		gold = true,
 		paint = true,
@@ -2045,7 +2045,7 @@ Paintings.hor_high_elves_page_030 = {
 	icon = "icon_painting_1",
 	frame = "wood",
 	description = "painting_high_elves_page_030_description",
-	artist = "painting_high_elves_page_030_artist",
+	artist = "painting_wood_elves_page_006_artist",
 	orientation = "horizontal",
 	frames = {
 		gold = true,
@@ -2089,7 +2089,7 @@ Paintings.ver_wood_elves_page_025 = {
 	icon = "icon_painting_2",
 	frame = "wood",
 	description = "painting_wood_elves_page_025_description",
-	artist = "painting_wood_elves_page_025_artist",
+	artist = "painting_elvenruins02_artist",
 	orientation = "vertical",
 	frames = {
 		gold = true,
@@ -2252,12 +2252,10 @@ local painting_order = {
 	"ver_empire_page_041",
 	"ver_empire_page_039",
 	"ver_wood_elves_page_048",
-	"hor_dark_elves_page_06",
-	"hor_high_elves_page_030",
 	"ver_elvenruins02",
-	"ver_high_elves_page_099",
-	"ver_wood_elves_page_025",
-	"hor_wood_elves_page_006"
+	"hor_wood_elves_page_006",
+	"hor_high_elves_page_030",
+	"ver_wood_elves_page_025"
 }
 
 PaintingOrder = PaintingOrder or {}

@@ -150,7 +150,9 @@ ObjectiveUnitTemplates.versus_volume_objective = {
 				time_per_section = objective_data.time_per_section,
 				score_for_completion = objective_data.score_for_completion,
 				time_for_completion = objective_data.time_for_completion,
-				on_last_leaf_complete_sound_event = objective_data.on_last_leaf_complete_sound_event
+				on_last_leaf_complete_sound_event = objective_data.on_last_leaf_complete_sound_event,
+				on_leaf_complete_sound_event = objective_data.on_leaf_complete_sound_event,
+				on_section_progress_sound_event = objective_data.on_section_progress_sound_event
 			}
 		}
 
@@ -174,7 +176,9 @@ ObjectiveUnitTemplates.versus_capture_point_objective = {
 				time_for_completion = objective_data.time_for_completion,
 				capture_rate_multiplier = objective_data.capture_rate_multiplier,
 				capture_time = objective_data.capture_time,
-				on_last_leaf_complete_sound_event = objective_data.on_last_leaf_complete_sound_event
+				on_last_leaf_complete_sound_event = objective_data.on_last_leaf_complete_sound_event,
+				on_leaf_complete_sound_event = objective_data.on_leaf_complete_sound_event,
+				on_section_progress_sound_event = objective_data.on_section_progress_sound_event
 			}
 		}
 
@@ -196,7 +200,9 @@ ObjectiveUnitTemplates.versus_mission_objective = {
 				time_per_section = objective_data.time_per_section,
 				score_for_completion = objective_data.score_for_completion,
 				time_for_completion = objective_data.time_for_completion,
-				on_last_leaf_complete_sound_event = objective_data.on_last_leaf_complete_sound_event
+				on_last_leaf_complete_sound_event = objective_data.on_last_leaf_complete_sound_event,
+				on_leaf_complete_sound_event = objective_data.on_leaf_complete_sound_event,
+				on_section_progress_sound_event = objective_data.on_section_progress_sound_event
 			}
 		}
 

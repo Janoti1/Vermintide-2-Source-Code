@@ -511,6 +511,57 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
+		name = "pbw_gameplay_pinging_loot_rat_a",
+		response = "pbw_gameplay_pinging_loot_rat_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_enemy"
+			},
+			{
+				"query_context",
+				"is_ping",
+				OP.EQ,
+				1
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"skaven_loot_rat"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMEDIFF,
+				OP.GT,
+				7
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
 		name = "pbw_gameplay_pinging_monster_a",
 		response = "pbw_gameplay_pinging_monster_a",
 		criterias = {
@@ -1878,6 +1929,57 @@ return function ()
 			{
 				"faction_memory",
 				"time_since_ping_alert",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pdr_gameplay_pinging_loot_rat_a",
+		response = "pdr_gameplay_pinging_loot_rat_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_enemy"
+			},
+			{
+				"query_context",
+				"is_ping",
+				OP.EQ,
+				1
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"skaven_loot_rat"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMEDIFF,
+				OP.GT,
+				7
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
 				OP.TIMESET
 			}
 		}
@@ -3269,6 +3371,57 @@ return function ()
 			{
 				"faction_memory",
 				"time_since_ping_alert",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pes_gameplay_pinging_loot_rat_a",
+		response = "pes_gameplay_pinging_loot_rat_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_enemy"
+			},
+			{
+				"query_context",
+				"is_ping",
+				OP.EQ,
+				1
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"skaven_loot_rat"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMEDIFF,
+				OP.GT,
+				7
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
 				OP.TIMESET
 			}
 		}
@@ -4699,6 +4852,57 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
+		name = "pwe_gameplay_pinging_loot_rat_a",
+		response = "pwe_gameplay_pinging_loot_rat_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_enemy"
+			},
+			{
+				"query_context",
+				"is_ping",
+				OP.EQ,
+				1
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"skaven_loot_rat"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMEDIFF,
+				OP.GT,
+				7
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
 		name = "pwe_gameplay_pinging_monster_a",
 		response = "pwe_gameplay_pinging_monster_a",
 		criterias = {
@@ -6072,6 +6276,57 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
+		name = "pwh_gameplay_pinging_loot_rat_a",
+		response = "pwh_gameplay_pinging_loot_rat_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"seen_enemy"
+			},
+			{
+				"query_context",
+				"is_ping",
+				OP.EQ,
+				1
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"skaven_loot_rat"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMEDIFF,
+				OP.GT,
+				7
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_ping_enemy",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_pinging_monster_a",
 		response = "pwh_gameplay_pinging_monster_a",
 		criterias = {
@@ -7328,6 +7583,45 @@ return function ()
 				1.86172914505
 			}
 		},
+		pbw_gameplay_pinging_loot_rat_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "ping_dialogues_honduras",
+			sound_events_n = 4,
+			category = "enemy_alerts",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_concerned",
+				"face_concerned",
+				"face_concerned",
+				"face_concerned"
+			},
+			localization_strings = {
+				"pbw_gameplay_pinging_loot_rat_a_01",
+				"pbw_gameplay_pinging_loot_rat_a_02",
+				"pbw_gameplay_pinging_loot_rat_a_03",
+				"pbw_gameplay_pinging_loot_rat_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pbw_gameplay_pinging_loot_rat_a_01",
+				"pbw_gameplay_pinging_loot_rat_a_02",
+				"pbw_gameplay_pinging_loot_rat_a_03",
+				"pbw_gameplay_pinging_loot_rat_a_04"
+			},
+			sound_events_duration = {
+				0.66624999046326,
+				0.67229169607162,
+				0.79862499237061,
+				1.0237499475479
+			}
+		},
 		pbw_gameplay_pinging_monster_a = {
 			randomize_indexes_n = 0,
 			face_animations_n = 4,
@@ -7428,12 +7722,16 @@ return function ()
 		},
 		pbw_gameplay_seeing_a_globadier_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -7447,9 +7745,17 @@ return function ()
 				"face_contempt",
 				"face_contempt",
 				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_contempt"
 			},
 			localization_strings = {
+				"pbw_gameplay_pinging_globadier_a_01",
+				"pbw_gameplay_pinging_globadier_a_02",
+				"pbw_gameplay_pinging_globadier_a_03",
+				"pbw_gameplay_pinging_globadier_a_04",
 				"pbw_gameplay_seeing_a_globadier_01",
 				"pbw_gameplay_seeing_a_globadier_02",
 				"pbw_gameplay_seeing_a_globadier_03",
@@ -7459,6 +7765,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pbw_gameplay_pinging_globadier_a_01",
+				"pbw_gameplay_pinging_globadier_a_02",
+				"pbw_gameplay_pinging_globadier_a_03",
+				"pbw_gameplay_pinging_globadier_a_04",
 				"pbw_gameplay_seeing_a_globadier_01",
 				"pbw_gameplay_seeing_a_globadier_02",
 				"pbw_gameplay_seeing_a_globadier_03",
@@ -7467,6 +7777,10 @@ return function ()
 				"pbw_gameplay_seeing_a_globadier_08"
 			},
 			sound_events_duration = {
+				0.80904167890549,
+				0.896604180336,
+				0.62812501192093,
+				0.96083331108093,
 				0.90679168701172,
 				1.2430416345596,
 				1.0505625009537,
@@ -7477,12 +7791,16 @@ return function ()
 		},
 		pbw_gameplay_seeing_a_gutter_runner_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_talk",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -7491,6 +7809,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_neutral",
 				"face_surprise",
 				"face_contempt",
@@ -7499,6 +7821,10 @@ return function ()
 				"face_contempt"
 			},
 			localization_strings = {
+				"pbw_gameplay_pinging_gutter_runner_a_01",
+				"pbw_gameplay_pinging_gutter_runner_a_02",
+				"pbw_gameplay_pinging_gutter_runner_a_03",
+				"pbw_gameplay_pinging_gutter_runner_a_04",
 				"pbw_gameplay_seeing_a_gutter_runner_01",
 				"pbw_gameplay_seeing_a_gutter_runner_02",
 				"pbw_gameplay_seeing_a_gutter_runner_03",
@@ -7508,6 +7834,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pbw_gameplay_pinging_gutter_runner_a_01",
+				"pbw_gameplay_pinging_gutter_runner_a_02",
+				"pbw_gameplay_pinging_gutter_runner_a_03",
+				"pbw_gameplay_pinging_gutter_runner_a_04",
 				"pbw_gameplay_seeing_a_gutter_runner_01",
 				"pbw_gameplay_seeing_a_gutter_runner_02",
 				"pbw_gameplay_seeing_a_gutter_runner_03",
@@ -7516,6 +7846,10 @@ return function ()
 				"pbw_gameplay_seeing_a_gutter_runner_06"
 			},
 			sound_events_duration = {
+				1.2073750495911,
+				0.85049998760223,
+				0.84729164838791,
+				1.0844999551773,
 				0.87484374642372,
 				0.99937498569489,
 				1.2948124408722,
@@ -7575,12 +7909,16 @@ return function ()
 		},
 		pbw_gameplay_seeing_a_skaven_ratling_gun_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 11,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 7,
+			sound_events_n = 11,
 			category = "enemy_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -7590,6 +7928,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -7599,6 +7941,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pbw_gameplay_pinging_ratling_gunner_a_01",
+				"pbw_gameplay_pinging_ratling_gunner_a_02",
+				"pbw_gameplay_pinging_ratling_gunner_a_03",
+				"pbw_gameplay_pinging_ratling_gunner_a_04",
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -7609,6 +7955,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pbw_gameplay_pinging_ratling_gunner_a_01",
+				"pbw_gameplay_pinging_ratling_gunner_a_02",
+				"pbw_gameplay_pinging_ratling_gunner_a_03",
+				"pbw_gameplay_pinging_ratling_gunner_a_04",
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -7618,6 +7968,10 @@ return function ()
 				"pbw_gameplay_seeing_a_skaven_ratling_gun_07"
 			},
 			sound_events_duration = {
+				0.80885416269302,
+				0.73266667127609,
+				0.68031251430511,
+				0.69262498617172,
 				1.7094583511352,
 				1.7010208368301,
 				3.2105000019074,
@@ -7629,12 +7983,16 @@ return function ()
 		},
 		pbw_gameplay_seeing_a_skaven_slaver_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -7645,6 +8003,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -7655,6 +8017,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pbw_gameplay_pinging_packmaster_a_01",
+				"pbw_gameplay_pinging_packmaster_a_02",
+				"pbw_gameplay_pinging_packmaster_a_03",
+				"pbw_gameplay_pinging_packmaster_a_04",
 				"pbw_gameplay_seeing_a_skaven_slaver_01",
 				"pbw_gameplay_seeing_a_skaven_slaver_02",
 				"pbw_gameplay_seeing_a_skaven_slaver_07",
@@ -7666,6 +8032,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pbw_gameplay_pinging_packmaster_a_01",
+				"pbw_gameplay_pinging_packmaster_a_02",
+				"pbw_gameplay_pinging_packmaster_a_03",
+				"pbw_gameplay_pinging_packmaster_a_04",
 				"pbw_gameplay_seeing_a_skaven_slaver_01",
 				"pbw_gameplay_seeing_a_skaven_slaver_02",
 				"pbw_gameplay_seeing_a_skaven_slaver_07",
@@ -7676,6 +8046,10 @@ return function ()
 				"pbw_gameplay_seeing_a_skaven_slaver_08"
 			},
 			sound_events_duration = {
+				0.76156252622604,
+				0.58629167079926,
+				0.70352083444595,
+				0.64902085065842,
 				1.0244166851044,
 				1.6000000238419,
 				1.6985207796097,
@@ -7688,12 +8062,16 @@ return function ()
 		},
 		pbw_gameplay_seeing_a_skaven_warpfire_thrower_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -7704,6 +8082,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_angry",
 				"face_angry",
 				"face_angry",
@@ -7714,6 +8096,10 @@ return function ()
 				"face_angry"
 			},
 			localization_strings = {
+				"pbw_gameplay_pinging_warpfire_thrower_a_01",
+				"pbw_gameplay_pinging_warpfire_thrower_a_02",
+				"pbw_gameplay_pinging_warpfire_thrower_a_03",
+				"pbw_gameplay_pinging_warpfire_thrower_a_04",
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -7725,6 +8111,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pbw_gameplay_pinging_warpfire_thrower_a_01",
+				"pbw_gameplay_pinging_warpfire_thrower_a_02",
+				"pbw_gameplay_pinging_warpfire_thrower_a_03",
+				"pbw_gameplay_pinging_warpfire_thrower_a_04",
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -7735,6 +8125,10 @@ return function ()
 				"pbw_gameplay_hearing_a_Skaven_warpfire_thrower_combat_08"
 			},
 			sound_events_duration = {
+				0.78572916984558,
+				0.71637499332428,
+				1.0476249456406,
+				0.86616665124893,
 				1.4961667060852,
 				2.1861457824707,
 				1.1348541975021,
@@ -8731,6 +9125,45 @@ return function ()
 				1.6496458053589
 			}
 		},
+		pdr_gameplay_pinging_loot_rat_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "ping_dialogues_honduras",
+			sound_events_n = 4,
+			category = "enemy_alerts",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_concerned",
+				"face_concerned",
+				"face_concerned",
+				"face_concerned"
+			},
+			localization_strings = {
+				"pdr_gameplay_pinging_loot_rat_a_01",
+				"pdr_gameplay_pinging_loot_rat_a_02",
+				"pdr_gameplay_pinging_loot_rat_a_03",
+				"pdr_gameplay_pinging_loot_rat_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_pinging_loot_rat_a_01",
+				"pdr_gameplay_pinging_loot_rat_a_02",
+				"pdr_gameplay_pinging_loot_rat_a_03",
+				"pdr_gameplay_pinging_loot_rat_a_04"
+			},
+			sound_events_duration = {
+				0.75579166412354,
+				0.68124997615814,
+				0.79233330488205,
+				0.73297917842865
+			}
+		},
 		pdr_gameplay_pinging_monster_a = {
 			randomize_indexes_n = 0,
 			face_animations_n = 4,
@@ -8821,12 +9254,16 @@ return function ()
 		},
 		pdr_gameplay_seeing_a_globadier_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -8840,9 +9277,17 @@ return function ()
 				"face_contempt",
 				"face_contempt",
 				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_contempt"
 			},
 			localization_strings = {
+				"pdr_gameplay_pinging_globadier_a_01",
+				"pdr_gameplay_pinging_globadier_a_02",
+				"pdr_gameplay_pinging_globadier_a_03",
+				"pdr_gameplay_pinging_globadier_a_04",
 				"pdr_gameplay_seeing_a_globadier_01",
 				"pdr_gameplay_seeing_a_globadier_03",
 				"pdr_gameplay_seeing_a_globadier_04",
@@ -8852,6 +9297,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_pinging_globadier_a_01",
+				"pdr_gameplay_pinging_globadier_a_02",
+				"pdr_gameplay_pinging_globadier_a_03",
+				"pdr_gameplay_pinging_globadier_a_04",
 				"pdr_gameplay_seeing_a_globadier_01",
 				"pdr_gameplay_seeing_a_globadier_03",
 				"pdr_gameplay_seeing_a_globadier_04",
@@ -8860,6 +9309,10 @@ return function ()
 				"pdr_gameplay_seeing_a_globadier_06"
 			},
 			sound_events_duration = {
+				0.68095833063126,
+				0.77543747425079,
+				0.81083333492279,
+				0.83066666126251,
 				0.78350001573563,
 				1.7310416698456,
 				2.2000000476837,
@@ -8870,12 +9323,16 @@ return function ()
 		},
 		pdr_gameplay_seeing_a_gutter_runner_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_talk",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -8884,6 +9341,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_neutral",
 				"face_surprise",
 				"face_contempt",
@@ -8892,6 +9353,10 @@ return function ()
 				"face_contempt"
 			},
 			localization_strings = {
+				"pdr_gameplay_pinging_gutter_runner_a_01",
+				"pdr_gameplay_pinging_gutter_runner_a_02",
+				"pdr_gameplay_pinging_gutter_runner_a_03",
+				"pdr_gameplay_pinging_gutter_runner_a_04",
 				"pdr_gameplay_seeing_a_gutter_runner_01",
 				"pdr_gameplay_seeing_a_gutter_runner_02",
 				"pdr_gameplay_seeing_a_gutter_runner_03",
@@ -8901,6 +9366,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_pinging_gutter_runner_a_01",
+				"pdr_gameplay_pinging_gutter_runner_a_02",
+				"pdr_gameplay_pinging_gutter_runner_a_03",
+				"pdr_gameplay_pinging_gutter_runner_a_04",
 				"pdr_gameplay_seeing_a_gutter_runner_01",
 				"pdr_gameplay_seeing_a_gutter_runner_02",
 				"pdr_gameplay_seeing_a_gutter_runner_03",
@@ -8909,6 +9378,10 @@ return function ()
 				"pdr_gameplay_seeing_a_gutter_runner_06"
 			},
 			sound_events_duration = {
+				1.0008125305176,
+				0.941166639328,
+				1.125937461853,
+				1.010125041008,
 				1.9182292222977,
 				0.96768748760223,
 				1.4616249799728,
@@ -8968,12 +9441,16 @@ return function ()
 		},
 		pdr_gameplay_seeing_a_skaven_ratling_gun_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 11,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 7,
+			sound_events_n = 11,
 			category = "enemy_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -8983,6 +9460,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -8992,6 +9473,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pdr_gameplay_pinging_ratling_gunner_a_01",
+				"pdr_gameplay_pinging_ratling_gunner_a_02",
+				"pdr_gameplay_pinging_ratling_gunner_a_03",
+				"pdr_gameplay_pinging_ratling_gunner_a_04",
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -9002,6 +9487,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_pinging_ratling_gunner_a_01",
+				"pdr_gameplay_pinging_ratling_gunner_a_02",
+				"pdr_gameplay_pinging_ratling_gunner_a_03",
+				"pdr_gameplay_pinging_ratling_gunner_a_04",
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -9011,6 +9500,10 @@ return function ()
 				"pdr_gameplay_seeing_a_skaven_ratling_gun_07"
 			},
 			sound_events_duration = {
+				0.69608330726624,
+				0.56552082300186,
+				0.7324166893959,
+				0.69729167222977,
 				1.4744583368301,
 				3.0902707576752,
 				2.2358958721161,
@@ -9022,12 +9515,16 @@ return function ()
 		},
 		pdr_gameplay_seeing_a_skaven_slaver_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -9038,6 +9535,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -9048,6 +9549,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pdr_gameplay_pinging_packmaster_a_01",
+				"pdr_gameplay_pinging_packmaster_a_02",
+				"pdr_gameplay_pinging_packmaster_a_03",
+				"pdr_gameplay_pinging_packmaster_a_04",
 				"pdr_gameplay_seeing_a_skaven_slaver_01",
 				"pdr_gameplay_seeing_a_skaven_slaver_02",
 				"pdr_gameplay_seeing_a_skaven_slaver_07",
@@ -9059,6 +9564,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_pinging_packmaster_a_01",
+				"pdr_gameplay_pinging_packmaster_a_02",
+				"pdr_gameplay_pinging_packmaster_a_03",
+				"pdr_gameplay_pinging_packmaster_a_04",
 				"pdr_gameplay_seeing_a_skaven_slaver_01",
 				"pdr_gameplay_seeing_a_skaven_slaver_02",
 				"pdr_gameplay_seeing_a_skaven_slaver_07",
@@ -9069,6 +9578,10 @@ return function ()
 				"pdr_gameplay_seeing_a_skaven_slaver_08"
 			},
 			sound_events_duration = {
+				0.72643750905991,
+				0.66185414791107,
+				0.74083334207535,
+				0.72775000333786,
 				1.9516249895096,
 				1.3174583911896,
 				2.9727499485016,
@@ -9081,12 +9594,16 @@ return function ()
 		},
 		pdr_gameplay_seeing_a_skaven_warpfire_thrower_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 9,
+			face_animations_n = 13,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 9,
+			sound_events_n = 13,
 			category = "enemy_alerts",
-			dialogue_animations_n = 9,
+			dialogue_animations_n = 13,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -9098,6 +9615,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_angry",
 				"face_angry",
 				"face_angry",
@@ -9109,6 +9630,10 @@ return function ()
 				"face_angry"
 			},
 			localization_strings = {
+				"pdr_gameplay_pinging_warpfire_thrower_a_01",
+				"pdr_gameplay_pinging_warpfire_thrower_a_02",
+				"pdr_gameplay_pinging_warpfire_thrower_a_03",
+				"pdr_gameplay_pinging_warpfire_thrower_a_04",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -9121,6 +9646,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pdr_gameplay_pinging_warpfire_thrower_a_01",
+				"pdr_gameplay_pinging_warpfire_thrower_a_02",
+				"pdr_gameplay_pinging_warpfire_thrower_a_03",
+				"pdr_gameplay_pinging_warpfire_thrower_a_04",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pdr_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -9132,6 +9661,10 @@ return function ()
 				"pdr_gameplay_seeing_a_Skaven_warpfire_thrower_07"
 			},
 			sound_events_duration = {
+				1.0410208702087,
+				0.97562497854233,
+				0.93900001049042,
+				1.0146666765213,
 				2.3980207443237,
 				1.3486042022705,
 				2.4221041202545,
@@ -9916,6 +10449,45 @@ return function ()
 				1.9732916355133
 			}
 		},
+		pes_gameplay_pinging_loot_rat_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "ping_dialogues_honduras",
+			sound_events_n = 4,
+			category = "enemy_alerts",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_concerned",
+				"face_concerned",
+				"face_concerned",
+				"face_concerned"
+			},
+			localization_strings = {
+				"pes_gameplay_pinging_loot_rat_a_01",
+				"pes_gameplay_pinging_loot_rat_a_02",
+				"pes_gameplay_pinging_loot_rat_a_03",
+				"pes_gameplay_pinging_loot_rat_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pes_gameplay_pinging_loot_rat_a_01",
+				"pes_gameplay_pinging_loot_rat_a_02",
+				"pes_gameplay_pinging_loot_rat_a_03",
+				"pes_gameplay_pinging_loot_rat_a_04"
+			},
+			sound_events_duration = {
+				1.3399167060852,
+				0.62722915410995,
+				1.1761457920075,
+				0.6875833272934
+			}
+		},
 		pes_gameplay_pinging_monster_a = {
 			randomize_indexes_n = 0,
 			face_animations_n = 4,
@@ -10026,12 +10598,16 @@ return function ()
 		},
 		pes_gameplay_seeing_a_globadier_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 11,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 7,
+			sound_events_n = 11,
 			category = "enemy_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -10047,9 +10623,17 @@ return function ()
 				"face_contempt",
 				"face_contempt",
 				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_contempt"
 			},
 			localization_strings = {
+				"pes_gameplay_pinging_globadier_a_01",
+				"pes_gameplay_pinging_globadier_a_02",
+				"pes_gameplay_pinging_globadier_a_03",
+				"pes_gameplay_pinging_globadier_a_04",
 				"pes_gameplay_seeing_a_globadier_01",
 				"pes_gameplay_seeing_a_globadier_04",
 				"pes_gameplay_seeing_a_globadier_07",
@@ -10060,6 +10644,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pes_gameplay_pinging_globadier_a_01",
+				"pes_gameplay_pinging_globadier_a_02",
+				"pes_gameplay_pinging_globadier_a_03",
+				"pes_gameplay_pinging_globadier_a_04",
 				"pes_gameplay_seeing_a_globadier_01",
 				"pes_gameplay_seeing_a_globadier_04",
 				"pes_gameplay_seeing_a_globadier_07",
@@ -10069,6 +10657,10 @@ return function ()
 				"pes_gameplay_seeing_a_globadier_11"
 			},
 			sound_events_duration = {
+				0.61354166269302,
+				0.67333334684372,
+				0.59843748807907,
+				0.95195835828781,
 				1.0624375343323,
 				0.86418747901917,
 				1.6050624847412,
@@ -10080,12 +10672,16 @@ return function ()
 		},
 		pes_gameplay_seeing_a_gutter_runner_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_talk",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -10094,6 +10690,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_neutral",
 				"face_surprise",
 				"face_contempt",
@@ -10102,6 +10702,10 @@ return function ()
 				"face_contempt"
 			},
 			localization_strings = {
+				"pes_gameplay_pinging_gutter_runner_a_01",
+				"pes_gameplay_pinging_gutter_runner_a_02",
+				"pes_gameplay_pinging_gutter_runner_a_03",
+				"pes_gameplay_pinging_gutter_runner_a_04",
 				"pes_gameplay_seeing_a_gutter_runner_01",
 				"pes_gameplay_seeing_a_gutter_runner_02",
 				"pes_gameplay_seeing_a_gutter_runner_03",
@@ -10111,6 +10715,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pes_gameplay_pinging_gutter_runner_a_01",
+				"pes_gameplay_pinging_gutter_runner_a_02",
+				"pes_gameplay_pinging_gutter_runner_a_03",
+				"pes_gameplay_pinging_gutter_runner_a_04",
 				"pes_gameplay_seeing_a_gutter_runner_01",
 				"pes_gameplay_seeing_a_gutter_runner_02",
 				"pes_gameplay_seeing_a_gutter_runner_03",
@@ -10119,6 +10727,10 @@ return function ()
 				"pes_gameplay_seeing_a_gutter_runner_06"
 			},
 			sound_events_duration = {
+				1.1914999485016,
+				1.1517292261124,
+				1.1171457767487,
+				0.73293751478195,
 				1.5134791135788,
 				1.676677107811,
 				1.0027500391007,
@@ -10178,12 +10790,16 @@ return function ()
 		},
 		pes_gameplay_seeing_a_skaven_ratling_gun_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 11,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 7,
+			sound_events_n = 11,
 			category = "enemy_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -10193,6 +10809,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -10202,6 +10822,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pes_gameplay_pinging_ratling_gunner_a_01",
+				"pes_gameplay_pinging_ratling_gunner_a_02",
+				"pes_gameplay_pinging_ratling_gunner_a_03",
+				"pes_gameplay_pinging_ratling_gunner_a_04",
 				"pes_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pes_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pes_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -10212,6 +10836,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pes_gameplay_pinging_ratling_gunner_a_01",
+				"pes_gameplay_pinging_ratling_gunner_a_02",
+				"pes_gameplay_pinging_ratling_gunner_a_03",
+				"pes_gameplay_pinging_ratling_gunner_a_04",
 				"pes_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pes_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pes_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -10221,6 +10849,10 @@ return function ()
 				"pes_gameplay_seeing_a_skaven_ratling_gun_07"
 			},
 			sound_events_duration = {
+				0.60868752002716,
+				0.88745832443237,
+				0.63314580917358,
+				0.7550208568573,
 				1.0576041936874,
 				1.2963750362396,
 				1.5645208358765,
@@ -10232,12 +10864,16 @@ return function ()
 		},
 		pes_gameplay_seeing_a_skaven_slaver_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -10248,6 +10884,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -10258,6 +10898,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pes_gameplay_pinging_packmaster_a_01",
+				"pes_gameplay_pinging_packmaster_a_02",
+				"pes_gameplay_pinging_packmaster_a_03",
+				"pes_gameplay_pinging_packmaster_a_04",
 				"pes_gameplay_seeing_a_skaven_slaver_01",
 				"pes_gameplay_seeing_a_skaven_slaver_02",
 				"pes_gameplay_seeing_a_skaven_slaver_07",
@@ -10269,6 +10913,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pes_gameplay_pinging_packmaster_a_01",
+				"pes_gameplay_pinging_packmaster_a_02",
+				"pes_gameplay_pinging_packmaster_a_03",
+				"pes_gameplay_pinging_packmaster_a_04",
 				"pes_gameplay_seeing_a_skaven_slaver_01",
 				"pes_gameplay_seeing_a_skaven_slaver_02",
 				"pes_gameplay_seeing_a_skaven_slaver_07",
@@ -10279,6 +10927,10 @@ return function ()
 				"pes_gameplay_seeing_a_skaven_slaver_08"
 			},
 			sound_events_duration = {
+				0.9679166674614,
+				0.6503958106041,
+				0.90604168176651,
+				0.87139582633972,
 				0.88443750143051,
 				0.94454169273376,
 				1.0481250286102,
@@ -10291,12 +10943,16 @@ return function ()
 		},
 		pes_gameplay_seeing_a_skaven_warpfire_thrower_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 9,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 5,
+			sound_events_n = 9,
 			category = "enemy_alerts",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 9,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -10304,6 +10960,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_fear",
 				"face_fear",
 				"face_fear",
@@ -10311,6 +10971,10 @@ return function ()
 				"face_fear"
 			},
 			localization_strings = {
+				"pes_gameplay_pinging_warpfire_thrower_a_01",
+				"pes_gameplay_pinging_warpfire_thrower_a_02",
+				"pes_gameplay_pinging_warpfire_thrower_a_03",
+				"pes_gameplay_pinging_warpfire_thrower_a_04",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -10319,6 +10983,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pes_gameplay_pinging_warpfire_thrower_a_01",
+				"pes_gameplay_pinging_warpfire_thrower_a_02",
+				"pes_gameplay_pinging_warpfire_thrower_a_03",
+				"pes_gameplay_pinging_warpfire_thrower_a_04",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pes_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -10326,6 +10994,10 @@ return function ()
 				"pes_gameplay_seeing_a_Skaven_warpfire_thrower_04"
 			},
 			sound_events_duration = {
+				0.82479166984558,
+				0.78345835208893,
+				0.90304166078568,
+				0.87460416555405,
 				0.92299997806549,
 				1.010645866394,
 				1.2624167203903,
@@ -11195,6 +11867,45 @@ return function ()
 				2.9985415935516
 			}
 		},
+		pwe_gameplay_pinging_loot_rat_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "ping_dialogues_honduras",
+			sound_events_n = 4,
+			category = "enemy_alerts",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_concerned",
+				"face_concerned",
+				"face_concerned",
+				"face_concerned"
+			},
+			localization_strings = {
+				"pwe_gameplay_pinging_loot_rat_a_01",
+				"pwe_gameplay_pinging_loot_rat_a_02",
+				"pwe_gameplay_pinging_loot_rat_a_03",
+				"pwe_gameplay_pinging_loot_rat_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwe_gameplay_pinging_loot_rat_a_01",
+				"pwe_gameplay_pinging_loot_rat_a_02",
+				"pwe_gameplay_pinging_loot_rat_a_03",
+				"pwe_gameplay_pinging_loot_rat_a_04"
+			},
+			sound_events_duration = {
+				1.0503541231155,
+				0.94450002908707,
+				0.89347916841507,
+				1.065645813942
+			}
+		},
 		pwe_gameplay_pinging_monster_a = {
 			randomize_indexes_n = 0,
 			face_animations_n = 4,
@@ -11295,12 +12006,16 @@ return function ()
 		},
 		pwe_gameplay_seeing_a_globadier_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 9,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 5,
+			sound_events_n = 9,
 			category = "enemy_alerts",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 9,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11312,9 +12027,17 @@ return function ()
 				"face_contempt",
 				"face_contempt",
 				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_contempt"
 			},
 			localization_strings = {
+				"pwe_gameplay_pinging_globadier_a_01",
+				"pwe_gameplay_pinging_globadier_a_02",
+				"pwe_gameplay_pinging_globadier_a_03",
+				"pwe_gameplay_pinging_globadier_a_04",
 				"pwe_gameplay_seeing_a_globadier_01",
 				"pwe_gameplay_seeing_a_globadier_03",
 				"pwe_gameplay_seeing_a_globadier_02",
@@ -11323,6 +12046,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwe_gameplay_pinging_globadier_a_01",
+				"pwe_gameplay_pinging_globadier_a_02",
+				"pwe_gameplay_pinging_globadier_a_03",
+				"pwe_gameplay_pinging_globadier_a_04",
 				"pwe_gameplay_seeing_a_globadier_01",
 				"pwe_gameplay_seeing_a_globadier_03",
 				"pwe_gameplay_seeing_a_globadier_02",
@@ -11330,6 +12057,10 @@ return function ()
 				"pwe_gameplay_seeing_a_globadier_06"
 			},
 			sound_events_duration = {
+				0.89802080392838,
+				0.82033336162567,
+				1.0553749799728,
+				0.9835000038147,
 				0.99164581298828,
 				3.1963334083557,
 				1.3089582920075,
@@ -11339,12 +12070,16 @@ return function ()
 		},
 		pwe_gameplay_seeing_a_gutter_runner_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_talk",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11353,6 +12088,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_neutral",
 				"face_surprise",
 				"face_contempt",
@@ -11361,6 +12100,10 @@ return function ()
 				"face_contempt"
 			},
 			localization_strings = {
+				"pwe_gameplay_pinging_gutter_runner_a_01",
+				"pwe_gameplay_pinging_gutter_runner_a_02",
+				"pwe_gameplay_pinging_gutter_runner_a_03",
+				"pwe_gameplay_pinging_gutter_runner_a_04",
 				"pwe_gameplay_seeing_a_gutter_runner_01",
 				"pwe_gameplay_seeing_a_gutter_runner_02",
 				"pwe_gameplay_seeing_a_gutter_runner_03",
@@ -11370,6 +12113,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwe_gameplay_pinging_gutter_runner_a_01",
+				"pwe_gameplay_pinging_gutter_runner_a_02",
+				"pwe_gameplay_pinging_gutter_runner_a_03",
+				"pwe_gameplay_pinging_gutter_runner_a_04",
 				"pwe_gameplay_seeing_a_gutter_runner_01",
 				"pwe_gameplay_seeing_a_gutter_runner_02",
 				"pwe_gameplay_seeing_a_gutter_runner_03",
@@ -11378,6 +12125,10 @@ return function ()
 				"pwe_gameplay_seeing_a_gutter_runner_06"
 			},
 			sound_events_duration = {
+				1.0170625448227,
+				1.0512291193008,
+				1.1477500200272,
+				1.143770813942,
 				1.0780832767487,
 				1.5039374828339,
 				1.9376250505447,
@@ -11437,12 +12188,16 @@ return function ()
 		},
 		pwe_gameplay_seeing_a_skaven_ratling_gun_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 11,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 7,
+			sound_events_n = 11,
 			category = "enemy_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11452,6 +12207,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -11461,6 +12220,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pwe_gameplay_pinging_ratling_gunner_a_01",
+				"pwe_gameplay_pinging_ratling_gunner_a_02",
+				"pwe_gameplay_pinging_ratling_gunner_a_03",
+				"pwe_gameplay_pinging_ratling_gunner_a_04",
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -11471,6 +12234,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwe_gameplay_pinging_ratling_gunner_a_01",
+				"pwe_gameplay_pinging_ratling_gunner_a_02",
+				"pwe_gameplay_pinging_ratling_gunner_a_03",
+				"pwe_gameplay_pinging_ratling_gunner_a_04",
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -11480,6 +12247,10 @@ return function ()
 				"pwe_gameplay_seeing_a_skaven_ratling_gun_07"
 			},
 			sound_events_duration = {
+				0.84720832109451,
+				0.90493750572205,
+				0.83558332920074,
+				1.0365208387375,
 				1.4262083768845,
 				1.2635624408722,
 				1.4607291221619,
@@ -11491,12 +12262,16 @@ return function ()
 		},
 		pwe_gameplay_seeing_a_skaven_slaver_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11507,6 +12282,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -11517,6 +12296,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pwe_gameplay_pinging_packmaster_a_01",
+				"pwe_gameplay_pinging_packmaster_a_02",
+				"pwe_gameplay_pinging_packmaster_a_03",
+				"pwe_gameplay_pinging_packmaster_a_04",
 				"pwe_gameplay_seeing_a_skaven_slaver_01",
 				"pwe_gameplay_seeing_a_skaven_slaver_02",
 				"pwe_gameplay_seeing_a_skaven_slaver_07",
@@ -11528,6 +12311,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwe_gameplay_pinging_packmaster_a_01",
+				"pwe_gameplay_pinging_packmaster_a_02",
+				"pwe_gameplay_pinging_packmaster_a_03",
+				"pwe_gameplay_pinging_packmaster_a_04",
 				"pwe_gameplay_seeing_a_skaven_slaver_01",
 				"pwe_gameplay_seeing_a_skaven_slaver_02",
 				"pwe_gameplay_seeing_a_skaven_slaver_07",
@@ -11538,6 +12325,10 @@ return function ()
 				"pwe_gameplay_seeing_a_skaven_slaver_08"
 			},
 			sound_events_duration = {
+				0.99383336305618,
+				0.82791668176651,
+				0.94518750905991,
+				1.2019582986832,
 				1.1537916660309,
 				1.2984166145325,
 				3.5764167308807,
@@ -11550,12 +12341,16 @@ return function ()
 		},
 		pwe_gameplay_seeing_a_skaven_warpfire_thrower_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 9,
+			face_animations_n = 13,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 9,
+			sound_events_n = 13,
 			category = "enemy_alerts",
-			dialogue_animations_n = 9,
+			dialogue_animations_n = 13,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -11567,6 +12362,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_angry",
 				"face_angry",
 				"face_angry",
@@ -11578,6 +12377,10 @@ return function ()
 				"face_angry"
 			},
 			localization_strings = {
+				"pwe_gameplay_pinging_warpfire_thrower_a_01",
+				"pwe_gameplay_pinging_warpfire_thrower_a_02",
+				"pwe_gameplay_pinging_warpfire_thrower_a_03",
+				"pwe_gameplay_pinging_warpfire_thrower_a_04",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -11590,6 +12393,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwe_gameplay_pinging_warpfire_thrower_a_01",
+				"pwe_gameplay_pinging_warpfire_thrower_a_02",
+				"pwe_gameplay_pinging_warpfire_thrower_a_03",
+				"pwe_gameplay_pinging_warpfire_thrower_a_04",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pwe_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -11601,6 +12408,10 @@ return function ()
 				"pwe_gameplay_seeing_a_Skaven_warpfire_thrower_04"
 			},
 			sound_events_duration = {
+				0.96172916889191,
+				0.96622914075851,
+				1.0129166841507,
+				1.3670624494553,
 				1.2997291088104,
 				1.1890208721161,
 				1.1809791326523,
@@ -12505,6 +13316,45 @@ return function ()
 				2.2484166622162
 			}
 		},
+		pwh_gameplay_pinging_loot_rat_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "ping_dialogues_honduras",
+			sound_events_n = 4,
+			category = "enemy_alerts",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_concerned",
+				"face_concerned",
+				"face_concerned",
+				"face_concerned"
+			},
+			localization_strings = {
+				"pwh_gameplay_pinging_loot_rat_a_01",
+				"pwh_gameplay_pinging_loot_rat_a_02",
+				"pwh_gameplay_pinging_loot_rat_a_03",
+				"pwh_gameplay_pinging_loot_rat_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwh_gameplay_pinging_loot_rat_a_01",
+				"pwh_gameplay_pinging_loot_rat_a_02",
+				"pwh_gameplay_pinging_loot_rat_a_03",
+				"pwh_gameplay_pinging_loot_rat_a_04"
+			},
+			sound_events_duration = {
+				1.0877499580383,
+				0.93989580869675,
+				1.2885208129883,
+				1.0908541679382
+			}
+		},
 		pwh_gameplay_pinging_monster_a = {
 			randomize_indexes_n = 0,
 			face_animations_n = 4,
@@ -12610,12 +13460,16 @@ return function ()
 		},
 		pwh_gameplay_seeing_a_globadier_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12629,9 +13483,17 @@ return function ()
 				"face_contempt",
 				"face_contempt",
 				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_contempt"
 			},
 			localization_strings = {
+				"pwh_gameplay_pinging_globadier_a_01",
+				"pwh_gameplay_pinging_globadier_a_02",
+				"pwh_gameplay_pinging_globadier_a_03",
+				"pwh_gameplay_pinging_globadier_a_04",
 				"pwh_gameplay_seeing_a_globadier_01",
 				"pwh_gameplay_seeing_a_globadier_03",
 				"pwh_gameplay_seeing_a_globadier_04",
@@ -12641,6 +13503,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwh_gameplay_pinging_globadier_a_01",
+				"pwh_gameplay_pinging_globadier_a_02",
+				"pwh_gameplay_pinging_globadier_a_03",
+				"pwh_gameplay_pinging_globadier_a_04",
 				"pwh_gameplay_seeing_a_globadier_01",
 				"pwh_gameplay_seeing_a_globadier_03",
 				"pwh_gameplay_seeing_a_globadier_04",
@@ -12649,6 +13515,10 @@ return function ()
 				"pwh_gameplay_seeing_a_globadier_06"
 			},
 			sound_events_duration = {
+				0.77029168605804,
+				0.64745831489563,
+				0.89047914743423,
+				0.6768541932106,
 				1.1562291383743,
 				1.9745833873749,
 				1.7494583129883,
@@ -12659,12 +13529,16 @@ return function ()
 		},
 		pwh_gameplay_seeing_a_gutter_runner_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 6,
+			face_animations_n = 10,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 6,
+			sound_events_n = 10,
 			category = "enemy_alerts",
-			dialogue_animations_n = 6,
+			dialogue_animations_n = 10,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_talk",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12673,6 +13547,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_neutral",
 				"face_surprise",
 				"face_contempt",
@@ -12681,6 +13559,10 @@ return function ()
 				"face_contempt"
 			},
 			localization_strings = {
+				"pwh_gameplay_pinging_gutter_runner_a_01",
+				"pwh_gameplay_pinging_gutter_runner_a_02",
+				"pwh_gameplay_pinging_gutter_runner_a_03",
+				"pwh_gameplay_pinging_gutter_runner_a_04",
 				"pwh_gameplay_seeing_a_gutter_runner_01",
 				"pwh_gameplay_seeing_a_gutter_runner_02",
 				"pwh_gameplay_seeing_a_gutter_runner_03",
@@ -12690,6 +13572,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwh_gameplay_pinging_gutter_runner_a_01",
+				"pwh_gameplay_pinging_gutter_runner_a_02",
+				"pwh_gameplay_pinging_gutter_runner_a_03",
+				"pwh_gameplay_pinging_gutter_runner_a_04",
 				"pwh_gameplay_seeing_a_gutter_runner_01",
 				"pwh_gameplay_seeing_a_gutter_runner_02",
 				"pwh_gameplay_seeing_a_gutter_runner_03",
@@ -12698,6 +13584,10 @@ return function ()
 				"pwh_gameplay_seeing_a_gutter_runner_06"
 			},
 			sound_events_duration = {
+				1.2028125524521,
+				1.4979374408722,
+				1.4890832901001,
+				1.4176249504089,
 				1.1499999761581,
 				1.5371249914169,
 				2.4105625152588,
@@ -12757,12 +13647,16 @@ return function ()
 		},
 		pwh_gameplay_seeing_a_skaven_ratling_gun_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 11,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 7,
+			sound_events_n = 11,
 			category = "enemy_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12772,6 +13666,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -12781,6 +13679,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pwh_gameplay_pinging_ratling_gunner_a_01",
+				"pwh_gameplay_pinging_ratling_gunner_a_02",
+				"pwh_gameplay_pinging_ratling_gunner_a_03",
+				"pwh_gameplay_pinging_ratling_gunner_a_04",
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -12791,6 +13693,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwh_gameplay_pinging_ratling_gunner_a_01",
+				"pwh_gameplay_pinging_ratling_gunner_a_02",
+				"pwh_gameplay_pinging_ratling_gunner_a_03",
+				"pwh_gameplay_pinging_ratling_gunner_a_04",
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_01",
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_02",
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_03",
@@ -12800,6 +13706,10 @@ return function ()
 				"pwh_gameplay_seeing_a_skaven_ratling_gun_07"
 			},
 			sound_events_duration = {
+				0.78454166650772,
+				0.91083335876465,
+				0.60804164409637,
+				1.0225207805634,
 				1.6915208101273,
 				2.1699583530426,
 				1.7403957843781,
@@ -12811,12 +13721,16 @@ return function ()
 		},
 		pwh_gameplay_seeing_a_skaven_slaver_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12827,6 +13741,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_concerned",
 				"face_concerned",
 				"face_concerned",
@@ -12837,6 +13755,10 @@ return function ()
 				"face_concerned"
 			},
 			localization_strings = {
+				"pwh_gameplay_pinging_packmaster_a_01",
+				"pwh_gameplay_pinging_packmaster_a_02",
+				"pwh_gameplay_pinging_packmaster_a_03",
+				"pwh_gameplay_pinging_packmaster_a_04",
 				"pwh_gameplay_seeing_a_skaven_slaver_01",
 				"pwh_gameplay_seeing_a_skaven_slaver_02",
 				"pwh_gameplay_seeing_a_skaven_slaver_07",
@@ -12848,6 +13770,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwh_gameplay_pinging_packmaster_a_01",
+				"pwh_gameplay_pinging_packmaster_a_02",
+				"pwh_gameplay_pinging_packmaster_a_03",
+				"pwh_gameplay_pinging_packmaster_a_04",
 				"pwh_gameplay_seeing_a_skaven_slaver_01",
 				"pwh_gameplay_seeing_a_skaven_slaver_02",
 				"pwh_gameplay_seeing_a_skaven_slaver_07",
@@ -12858,6 +13784,10 @@ return function ()
 				"pwh_gameplay_seeing_a_skaven_slaver_08"
 			},
 			sound_events_duration = {
+				0.85227084159851,
+				1.2059999704361,
+				0.67712497711182,
+				1.095999956131,
 				0.73816668987274,
 				1.3902916908264,
 				1.963708281517,
@@ -12870,12 +13800,16 @@ return function ()
 		},
 		pwh_gameplay_seeing_a_skaven_warpfire_thrower_ping = {
 			randomize_indexes_n = 0,
-			face_animations_n = 8,
+			face_animations_n = 12,
 			database = "ping_dialogues_honduras",
-			sound_events_n = 8,
+			sound_events_n = 12,
 			category = "enemy_alerts",
-			dialogue_animations_n = 8,
+			dialogue_animations_n = 12,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12886,6 +13820,10 @@ return function ()
 				"dialogue_shout"
 			},
 			face_animations = {
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
+				"face_contempt",
 				"face_angry",
 				"face_angry",
 				"face_angry",
@@ -12896,6 +13834,10 @@ return function ()
 				"face_angry"
 			},
 			localization_strings = {
+				"pwh_gameplay_pinging_warpfire_thrower_a_01",
+				"pwh_gameplay_pinging_warpfire_thrower_a_02",
+				"pwh_gameplay_pinging_warpfire_thrower_a_03",
+				"pwh_gameplay_pinging_warpfire_thrower_a_04",
 				"pwh_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pwh_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pwh_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -12907,6 +13849,10 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"pwh_gameplay_pinging_warpfire_thrower_a_01",
+				"pwh_gameplay_pinging_warpfire_thrower_a_02",
+				"pwh_gameplay_pinging_warpfire_thrower_a_03",
+				"pwh_gameplay_pinging_warpfire_thrower_a_04",
 				"pwh_gameplay_hearing_a_Skaven_warpfire_thrower_combat_01",
 				"pwh_gameplay_hearing_a_Skaven_warpfire_thrower_combat_02",
 				"pwh_gameplay_hearing_a_Skaven_warpfire_thrower_combat_03",
@@ -12917,6 +13863,10 @@ return function ()
 				"pwh_gameplay_seeing_a_Skaven_warpfire_thrower_09"
 			},
 			sound_events_duration = {
+				0.94018751382828,
+				0.81722915172577,
+				0.97912502288818,
+				0.8046041727066,
 				1.6568332910538,
 				1.1054791212082,
 				1.3664166927338,

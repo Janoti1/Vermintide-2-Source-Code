@@ -13,6 +13,7 @@ Development._hardcoded_dev_params = {
 	use_telemetry = true,
 	packaged_build = true,
 	dont_show_unseen_rewards = false,
+	text_watermark = "BETA",
 	telemetry_log_interval = "600",
 	qr_watermark = false,
 	disable_intro_trailer = false,

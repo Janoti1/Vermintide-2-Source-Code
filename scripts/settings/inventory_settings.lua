@@ -230,6 +230,7 @@ InventorySettings.bot_loadout_allowed_game_modes = {
 	inn_deus = true,
 	map_deus = true,
 	adventure = true,
+	weave = true,
 	inn = true,
 	deus = true
 }
@@ -417,6 +418,25 @@ InventorySettings.item_types = {
 	"ww_shortbow",
 	"ww_sword_and_dagger",
 	"ww_trueflight"
+}
+InventorySettings.slots_per_affiliation = {
+	heroes = {
+		"slot_ranged",
+		"slot_melee",
+		"slot_hat",
+		"slot_skin",
+		"slot_necklace",
+		"slot_trinket_1",
+		"slot_ring",
+		"slot_frame",
+		"slot_pose"
+	},
+	dark_pact = {
+		"slot_melee",
+		"slot_skin",
+		"slot_frame"
+	},
+	spectators = {}
 }
 
 DLCUtils.require_list("inventory_settings")

@@ -3199,6 +3199,9 @@ Cosmetics.frame_karak_05 = {
 Cosmetics.frame_termite_01 = {
 	icon = "unit_frame_02"
 }
+Cosmetics.frame_termite_02 = {
+	icon = "unit_frame_02"
+}
 Cosmetics.frame_necromancer_01 = {
 	icon = "unit_frame_02"
 }

@@ -10781,12 +10781,13 @@ return function ()
 		},
 		pes_gameplay_bright_wizard_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 5,
 			database = "empire_soldier_honduras",
-			sound_events_n = 4,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -10796,26 +10797,30 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
 				"pes_gameplay_bright_wizard_on_a_frenzy_02",
 				"pes_gameplay_bright_wizard_on_a_frenzy_05",
 				"pes_gameplay_bright_wizard_on_a_frenzy_06",
-				"pes_gameplay_bright_wizard_on_a_frenzy_07"
+				"pes_gameplay_bright_wizard_on_a_frenzy_07",
+				"pes_gameplay_bright_wizard_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
 				"pes_gameplay_bright_wizard_on_a_frenzy_02",
 				"pes_gameplay_bright_wizard_on_a_frenzy_05",
 				"pes_gameplay_bright_wizard_on_a_frenzy_06",
-				"pes_gameplay_bright_wizard_on_a_frenzy_07"
+				"pes_gameplay_bright_wizard_on_a_frenzy_07",
+				"pes_gameplay_bright_wizard_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				1.0153958797455,
 				3.6179790496826,
 				3.5642499923706,
-				2.5870833396912
+				2.5870833396912,
+				2.4517290592194
 			}
 		},
 		pes_gameplay_casual_quotes = {
@@ -11543,12 +11548,13 @@ return function ()
 		},
 		pes_gameplay_dwarf_ranger_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 5,
 			database = "empire_soldier_honduras",
-			sound_events_n = 4,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -11558,26 +11564,30 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
 				"pes_gameplay_dwarf_ranger_on_a_frenzy_05",
 				"pes_gameplay_dwarf_ranger_on_a_frenzy_06",
 				"pes_gameplay_dwarf_ranger_on_a_frenzy_07",
-				"pes_gameplay_dwarf_ranger_on_a_frenzy_08"
+				"pes_gameplay_dwarf_ranger_on_a_frenzy_08",
+				"pes_gameplay_dwarf_ranger_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
 				"pes_gameplay_dwarf_ranger_on_a_frenzy_05",
 				"pes_gameplay_dwarf_ranger_on_a_frenzy_06",
 				"pes_gameplay_dwarf_ranger_on_a_frenzy_07",
-				"pes_gameplay_dwarf_ranger_on_a_frenzy_08"
+				"pes_gameplay_dwarf_ranger_on_a_frenzy_08",
+				"pes_gameplay_dwarf_ranger_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				2.79161465168,
 				3.3894791603088,
 				2.8754167556763,
-				3.1515624523163
+				3.1515624523163,
+				2.6058332920074
 			}
 		},
 		pes_gameplay_encouraging_words = {
@@ -11917,10 +11927,10 @@ return function ()
 			},
 			sound_events_duration = {
 				1.4577499628067,
-				2.1049375534058,
-				2.218291759491,
+				1.8517761230469,
+				1.9544948339462,
 				2.6545832157135,
-				4.4468955993652
+				3.7738521099091
 			}
 		},
 		pes_gameplay_healing_draught = {
@@ -12031,8 +12041,8 @@ return function ()
 			sound_events_duration = {
 				1.6958333253861,
 				1.7903333902359,
-				2.2813541889191,
-				2.7509999275208,
+				1.8142931461334,
+				2.226823091507,
 				3.4129374027252
 			}
 		},
@@ -18415,12 +18425,13 @@ return function ()
 		},
 		pes_gameplay_witch_hunter_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "empire_soldier_honduras",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "player_feedback",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -18432,6 +18443,7 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -18439,7 +18451,8 @@ return function ()
 				"pes_gameplay_witch_hunter_on_a_frenzy_06",
 				"pes_gameplay_witch_hunter_on_a_frenzy_07",
 				"pes_gameplay_witch_hunter_on_a_frenzy_08",
-				"pes_gameplay_witch_hunter_on_a_frenzy_09"
+				"pes_gameplay_witch_hunter_on_a_frenzy_09",
+				"pes_gameplay_witch_hunter_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -18447,14 +18460,16 @@ return function ()
 				"pes_gameplay_witch_hunter_on_a_frenzy_06",
 				"pes_gameplay_witch_hunter_on_a_frenzy_07",
 				"pes_gameplay_witch_hunter_on_a_frenzy_08",
-				"pes_gameplay_witch_hunter_on_a_frenzy_09"
+				"pes_gameplay_witch_hunter_on_a_frenzy_09",
+				"pes_gameplay_witch_hunter_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				2.2110208272934,
 				2.4538540840149,
 				2.6810103654861,
 				2.2617604732513,
-				3.3023645877838
+				3.3023645877838,
+				1.4792083501816
 			}
 		},
 		pes_gameplay_wood_elf_being_helped_up = {
@@ -18699,12 +18714,13 @@ return function ()
 		},
 		pes_gameplay_wood_elf_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "empire_soldier_honduras",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "player_feedback",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -18716,6 +18732,7 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -18723,7 +18740,8 @@ return function ()
 				"pes_gameplay_wood_elf_on_a_frenzy_05",
 				"pes_gameplay_wood_elf_on_a_frenzy_06",
 				"pes_gameplay_wood_elf_on_a_frenzy_07",
-				"pes_gameplay_wood_elf_on_a_frenzy_08"
+				"pes_gameplay_wood_elf_on_a_frenzy_08",
+				"pes_gameplay_wood_elf_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -18731,14 +18749,16 @@ return function ()
 				"pes_gameplay_wood_elf_on_a_frenzy_05",
 				"pes_gameplay_wood_elf_on_a_frenzy_06",
 				"pes_gameplay_wood_elf_on_a_frenzy_07",
-				"pes_gameplay_wood_elf_on_a_frenzy_08"
+				"pes_gameplay_wood_elf_on_a_frenzy_08",
+				"pes_gameplay_wood_elf_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				5.4735207557678,
 				3.0215208530426,
 				5.4224166870117,
 				4.357937335968,
-				6.0621457099915
+				6.0621457099915,
+				4.6948957443237
 			}
 		},
 		pes_last_hero_standing = {
@@ -19314,12 +19334,13 @@ return function ()
 		},
 		pes_objective_dropping_grimoire = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "empire_soldier_honduras",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "player_feedback",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -19331,6 +19352,7 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -19338,7 +19360,8 @@ return function ()
 				"pes_objective_dropping_grimoire_02",
 				"pes_objective_dropping_grimoire_03",
 				"pes_objective_dropping_grimoire_04",
-				"pes_objective_dropping_grimoire_05"
+				"pes_objective_dropping_grimoire_09",
+				"pes_objective_dropping_grimoire_12"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -19346,14 +19369,16 @@ return function ()
 				"pes_objective_dropping_grimoire_02",
 				"pes_objective_dropping_grimoire_03",
 				"pes_objective_dropping_grimoire_04",
-				"pes_objective_dropping_grimoire_05"
+				"pes_objective_dropping_grimoire_09",
+				"pes_objective_dropping_grimoire_12"
 			},
 			sound_events_duration = {
 				1.4560208320618,
 				1.8488957881927,
 				1.1779583692551,
 				2.7553958892822,
-				3.4849998950958
+				1.7984999418259,
+				1.9144582748413
 			}
 		},
 		pes_objective_goal_achieved_escape = {
@@ -19544,12 +19569,14 @@ return function ()
 		},
 		pes_objective_picking_up_grimoire = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 6,
 			database = "empire_soldier_honduras",
-			sound_events_n = 4,
+			sound_events_n = 6,
 			category = "player_feedback",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -19559,26 +19586,34 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
-				"pes_objective_picking_up_grimoire_01",
 				"pes_objective_picking_up_grimoire_02",
 				"pes_objective_picking_up_grimoire_03",
-				"pes_objective_picking_up_grimoire_04"
+				"pes_objective_picking_up_grimoire_04",
+				"pes_objective_picking_up_grimoire_05",
+				"pes_objective_picking_up_grimoire_07",
+				"pes_objective_picking_up_grimoire_10"
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"pes_objective_picking_up_grimoire_01",
 				"pes_objective_picking_up_grimoire_02",
 				"pes_objective_picking_up_grimoire_03",
-				"pes_objective_picking_up_grimoire_04"
+				"pes_objective_picking_up_grimoire_04",
+				"pes_objective_picking_up_grimoire_05",
+				"pes_objective_picking_up_grimoire_07",
+				"pes_objective_picking_up_grimoire_10"
 			},
 			sound_events_duration = {
-				2.2848749160767,
 				3.7018749713898,
 				4.6731877326965,
-				3.7216665744781
+				3.7216665744781,
+				6.0241665840149,
+				4.5164585113525,
+				2.5887498855591
 			}
 		},
 		pes_targeted_by_ratling = {

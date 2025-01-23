@@ -146,9 +146,15 @@ if not StoreLayoutConfig then
 			}
 		},
 		versus = {
-			weapon_skins = "item_details",
-			pactsworn = "item_details",
 			frames = "item_details",
+			pactsworn = "item_details",
+			weapon_skins_versus = {
+				sienna_versus = "item_list",
+				bardin_versus = "item_list",
+				kruber_versus = "item_list",
+				victor_versus = "item_list",
+				kerillian_versus = "item_list"
+			},
 			poses = {
 				kruber_poses = "pose_items",
 				sienna_poses = "pose_items",
@@ -312,6 +318,15 @@ if not StoreLayoutConfig then
 			category_button_texture = "store_category_icon_poses",
 			exclusive_filter = true
 		}
+		StoreLayoutConfig.pages.weapon_skins_versus = {
+			sound_event_enter = "Play_hud_store_category_button",
+			layout = "category",
+			display_name = "menu_store_category_title_weapon_illusions",
+			type = "item",
+			item_filter = "item_type == weapon_skin and selection == versus",
+			sort_order = 3,
+			category_button_texture = "store_category_icon_weapons"
+		}
 		StoreLayoutConfig.pages.poses = {
 			sound_event_enter = "Play_hud_store_category_button",
 			layout = "category",
@@ -364,6 +379,51 @@ if not StoreLayoutConfig then
 			layout = "category",
 			item_filter = "item_type == weapon_pose_bundle and selection == versus and can_wield_bright_wizard",
 			type = "collection_item",
+			display_name = "inventory_name_bright_wizard",
+			sort_order = 5,
+			category_button_texture = "store_category_icon_sienna_scholar"
+		}
+		StoreLayoutConfig.pages.kerillian_versus = {
+			sound_event_enter = "Play_hud_store_kerillian",
+			layout = "item_list",
+			item_filter = "item_type == weapon_skin and selection == versus and can_wield_wood_elf",
+			type = "item",
+			display_name = "inventory_name_wood_elf",
+			sort_order = 3,
+			category_button_texture = "store_category_icon_kerillian_waystalker"
+		}
+		StoreLayoutConfig.pages.kruber_versus = {
+			sound_event_enter = "Play_hud_store_kruber",
+			layout = "item_list",
+			item_filter = "item_type == weapon_skin and selection == versus and can_wield_empire_soldier",
+			type = "item",
+			display_name = "inventory_name_empire_soldier",
+			sort_order = 1,
+			category_button_texture = "store_category_icon_kruber_mercenary"
+		}
+		StoreLayoutConfig.pages.bardin_versus = {
+			sound_event_enter = "Play_hud_store_bardin",
+			layout = "item_list",
+			item_filter = "item_type == weapon_skin and selection == versus and can_wield_dwarf_ranger",
+			type = "item",
+			display_name = "inventory_name_dwarf_ranger",
+			sort_order = 2,
+			category_button_texture = "store_category_icon_bardin_ranger"
+		}
+		StoreLayoutConfig.pages.victor_versus = {
+			sound_event_enter = "Play_hud_store_saltzpyre",
+			layout = "item_list",
+			item_filter = "item_type == weapon_skin and selection == versus and can_wield_witch_hunter",
+			type = "item",
+			display_name = "inventory_name_witch_hunter",
+			sort_order = 4,
+			category_button_texture = "store_category_icon_victor_captain"
+		}
+		StoreLayoutConfig.pages.sienna_versus = {
+			sound_event_enter = "Play_hud_store_sienna",
+			layout = "item_list",
+			item_filter = "item_type == weapon_skin and selection == versus and can_wield_bright_wizard",
+			type = "item",
 			display_name = "inventory_name_bright_wizard",
 			sort_order = 5,
 			category_button_texture = "store_category_icon_sienna_scholar"

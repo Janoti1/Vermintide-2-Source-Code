@@ -1,4 +1,5 @@
 GameModeSettings.versus = table.clone(GameModeSettings.base)
+GameModeSettings.versus.custom_game_settings_templates = require("scripts/settings/versus_custom_settings_templates")
 GameModeSettings.versus.key = "versus"
 GameModeSettings.versus.class_name = "GameModeVersus"
 GameModeSettings.versus.display_name = "dlc1_2_map_game_mode_versus"
@@ -57,8 +58,8 @@ GameModeSettings.versus.player_wounds = {
 GameModeSettings.versus.objectives = {
 	capture_point = {
 		capture_rate_multiplier = 1,
-		score_per_section = 0,
 		num_sections = 1,
+		score_per_section = 0,
 		time_per_section = 0,
 		time_for_completion = 0,
 		score_for_completion = 0,
@@ -67,27 +68,39 @@ GameModeSettings.versus.objectives = {
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_objective_completed_heroes",
 			dark_pact = "versus_objective_completed_pactsworn"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	survive_event = {
 		time_per_section = 0,
-		time_for_completion = 100,
 		num_sections = 4,
 		score_for_completion = 0,
 		survive_time = 100,
 		score_per_section = 0,
+		time_for_completion = 100,
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_objective_completed_heroes",
 			dark_pact = "versus_objective_completed_pactsworn"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	interact = {
-		scale = 1,
 		time_for_completion = 0,
 		score_for_completion = 0,
+		scale = 1,
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_hud_checkpoint_reached_heroes",
 			dark_pact = "versus_hud_checkpoint_reached_dark_pact"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	socket = {
@@ -99,51 +112,75 @@ GameModeSettings.versus.objectives = {
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_objective_completed_heroes",
 			dark_pact = "versus_objective_completed_pactsworn"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
+		},
+		on_section_progress_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	payload = {
 		time_per_section = 0,
-		time_for_completion = 0,
 		num_sections = 10,
 		score_for_completion = 0,
 		scale = 1,
 		score_per_section = 0,
+		time_for_completion = 0,
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_objective_completed_heroes",
 			dark_pact = "versus_objective_completed_pactsworn"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	volume = {
 		time_for_each_player_inside = 0,
-		scale = 1,
 		time_for_completion = 0,
 		score_for_completion = 0,
 		volume_type = "all_alive",
 		score_for_each_player_inside = 0,
+		scale = 1,
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_hud_checkpoint_reached_heroes",
 			dark_pact = "versus_hud_checkpoint_reached_dark_pact"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	target = {
 		time_per_section = 0,
-		time_for_completion = 0,
 		num_sections = 1,
 		score_for_completion = 0,
 		scale = 1,
 		score_per_section = 0,
+		time_for_completion = 0,
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_hud_checkpoint_reached_heroes",
 			dark_pact = "versus_hud_checkpoint_reached_dark_pact"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	},
 	mission = {
-		scale = 1,
 		time_for_completion = 0,
 		score_for_completion = 0,
+		scale = 1,
 		on_last_leaf_complete_sound_event = {
 			heroes = "versus_hud_checkpoint_reached_heroes",
 			dark_pact = "versus_hud_checkpoint_reached_dark_pact"
+		},
+		on_leaf_complete_sound_event = {
+			heroes = "versus_hud_sub_objective_completed_heroes",
+			dark_pact = "versus_hud_sub_objective_completed_pactsworn"
 		}
 	}
 }

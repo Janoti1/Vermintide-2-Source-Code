@@ -1708,7 +1708,7 @@ return function ()
 			face_animations_n = 2,
 			database = "wood_elf_dlc_termite_1",
 			sound_events_n = 2,
-			category = "level_talk",
+			category = "level_talk_must_play",
 			dialogue_animations_n = 2,
 			dialogue_animations = {
 				[1] = "dialogue_talk",

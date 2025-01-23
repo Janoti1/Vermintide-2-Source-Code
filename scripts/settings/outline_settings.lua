@@ -58,6 +58,7 @@ OutlineSettings.ranges = {
 	objective_light = 20,
 	interactable = 15,
 	revive = 50,
+	objective_large = 100,
 	doors = 12.5,
 	objective = 35,
 	player_husk = 40,

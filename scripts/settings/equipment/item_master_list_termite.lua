@@ -10,3 +10,15 @@ ItemMasterList.frame_termite_01 = {
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }
+ItemMasterList.frame_termite_02 = {
+	description = "frame_termite_02_description",
+	temporary_template = "frame_termite_02",
+	display_name = "frame_termite_02_name",
+	hud_icon = "unit_frame_02",
+	inventory_icon = "portrait_fram_termite_02",
+	slot_type = "frame",
+	information_text = "information_text_frame",
+	rarity = "promo",
+	item_type = "frame",
+	can_wield = CanWieldAllItemTemplates
+}

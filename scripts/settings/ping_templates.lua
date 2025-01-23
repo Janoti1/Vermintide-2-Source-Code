@@ -1,36 +1,38 @@
-PingTypes = {
-	PING_ONLY = 15,
-	CONTEXT = 4,
-	MOVEMENT_WAIT = 13,
-	ENEMY_PATROL = 10,
-	ENEMY_BOSS = 8,
-	ENEMY_POSITION = 24,
-	ENEMY_GENERIC = 9,
-	PLAYER_PICK_UP = 18,
-	CHAT_ONLY = 3,
-	VO_ONLY = 21,
-	UNIT_DOWNED = 22,
-	LOCAL_ONLY = 23,
-	ENEMY_AMBUSH = 6,
-	CANCEL = 2,
-	ACKNOWLEDGE = 1,
-	PLAYER_HELP = 17,
-	MOVEMENTY_COME_HERE = 14,
-	PLAYER_THANK_YOU = 20,
-	DENY = 5,
-	MOVEMENT_GROUP_UP = 12,
-	PLAYER_PICK_UP_ACKNOWLEDGE = 19,
-	MOVEMENT_GENERIC = 11,
-	PLAYER_COVER_ME = 16,
-	ENEMY_ATTACK = 7
-}
-IgnoreCooldownPingTypes = {
-	[PingTypes.CONTEXT] = true,
-	[PingTypes.PLAYER_PICK_UP] = false,
-	[PingTypes.ENEMY_POSITION] = true
-}
+PingTypes = table.mirror_array_inplace({
+	"ACKNOWLEDGE",
+	"CANCEL",
+	"CHAT_ONLY",
+	"CONTEXT",
+	"DENY",
+	"ENEMY_AMBUSH",
+	"ENEMY_ATTACK",
+	"ENEMY_BOSS",
+	"ENEMY_GENERIC",
+	"ENEMY_PATROL",
+	"MOVEMENT_GENERIC",
+	"MOVEMENT_GROUP_UP",
+	"MOVEMENT_WAIT",
+	"MOVEMENTY_COME_HERE",
+	"PING_ONLY",
+	"PLAYER_COVER_ME",
+	"PLAYER_HELP",
+	"PLAYER_PICK_UP",
+	"PLAYER_PICK_UP_ACKNOWLEDGE",
+	"PLAYER_THANK_YOU",
+	"VO_ONLY",
+	"UNIT_DOWNED",
+	"LOCAL_ONLY",
+	"ENEMY_POSITION"
+})
 IgnoreFreeEvents = {
-	[PingTypes.CONTEXT] = true
+	[PingTypes.CONTEXT] = true,
+	[PingTypes.CANCEL] = true,
+	[PingTypes.MOVEMENT_GENERIC] = true,
+	[PingTypes.ENEMY_GENERIC] = true,
+	[PingTypes.UNIT_DOWNED] = true
+}
+IgnoreFreeCombatEvents = {
+	[PingTypes.CANCEL] = true
 }
 IgnoreChatPings = {
 	[PingTypes.CANCEL] = true,

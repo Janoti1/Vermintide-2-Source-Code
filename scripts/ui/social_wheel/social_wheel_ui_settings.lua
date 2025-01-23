@@ -190,32 +190,6 @@ end
 
 SocialWheelPriority = {
 	{
-		"response",
-		function (active_context, player, social_wheel_unit)
-			if not active_context.position then
-				return false
-			end
-
-			local ping_system = Managers.state.entity:system("ping_system")
-			local ping_type = ping_system:is_ping_response(nil, player:unique_id(), active_context.position:unbox())
-
-			return ping_type == PingTypes.ACKNOWLEDGE
-		end
-	},
-	{
-		"cancel",
-		function (active_context, player, social_wheel_unit)
-			if not active_context.position then
-				return false
-			end
-
-			local ping_system = Managers.state.entity:system("ping_system")
-			local ping_type = ping_system:is_ping_response(nil, player:unique_id(), active_context.position:unbox())
-
-			return ping_type == PingTypes.CANCEL
-		end
-	},
-	{
 		"item",
 		function (active_context, player, social_wheel_unit)
 			if not social_wheel_unit then
@@ -365,7 +339,8 @@ local general_emotes = {
 			pose_index = 6
 		},
 		ping_type = PingTypes.LOCAL_ONLY
-	}
+	},
+	emotes = true
 }
 local unarmed_emotes = {
 	{
@@ -433,7 +408,8 @@ local unarmed_emotes = {
 			hide_weapons = true
 		},
 		ping_type = PingTypes.LOCAL_ONLY
-	}
+	},
+	emotes = true
 }
 
 local function clone_wheel_settings(settings, unique_name_postfix)
@@ -666,51 +642,6 @@ SocialWheelSettings = {
 		},
 		wedge_adjustment = 1,
 		ping = false
-	},
-	cancel = {
-		angle = 1.7 * math.pi,
-		size = {
-			500,
-			250
-		},
-		{
-			text = "social_wheel_general_cancel",
-			event_text = "social_wheel_general_cancel",
-			name = "cancel_social_wheel_general_cancel",
-			icon = "radial_chat_icon_no",
-			vo_event_name = "vw_cancel",
-			data = {},
-			ping_type = PingTypes.CANCEL
-		},
-		wedge_adjustment = 0.85,
-		individual_bg = true
-	},
-	response = {
-		angle = 1.7 * math.pi,
-		size = {
-			500,
-			250
-		},
-		{
-			text = "social_wheel_general_no",
-			event_text = "social_wheel_general_no",
-			name = "response_social_wheel_general_no",
-			icon = "radial_chat_icon_no",
-			vo_event_name = "vw_cancel",
-			data = {},
-			ping_type = PingTypes.DENY
-		},
-		{
-			text = "social_wheel_general_yes",
-			event_text = "social_wheel_general_yes",
-			name = "response_social_wheel_general_yes",
-			icon = "radial_chat_icon_yes",
-			vo_event_name = "vw_affirmative",
-			data = {},
-			ping_type = PingTypes.ACKNOWLEDGE
-		},
-		wedge_adjustment = 0.85,
-		individual_bg = true
 	},
 	versus_heroes_gamepad = {
 		angle = 2 * math.pi,

@@ -672,9 +672,10 @@ local hero_level_style = {
 }
 local bot_header_text_style = {
 	word_wrap = false,
-	font_size = 65,
-	localize = false,
+	upper_case = true,
+	localize = true,
 	use_shadow = true,
+	font_size = 65,
 	horizontal_alignment = "left",
 	vertical_alignment = "top",
 	font_type = "hell_shark_header",
@@ -885,7 +886,7 @@ local info_widgets = {
 	bot_priority_button = UIWidgets.create_default_button("bot_priority_button", scenegraph_definition.bot_priority_button.size, nil, nil, Localize("input_description_prio_bot"), nil, nil, nil, nil, disable_with_gamepad)
 }
 local bot_selection_widgets = {
-	bot_header_text = UIWidgets.create_simple_text(string.upper(Localize("input_description_prio_bot")), "locked_info_text", nil, nil, bot_header_text_style),
+	bot_header_text = UIWidgets.create_simple_text("input_description_prio_bot", "locked_info_text", nil, nil, bot_header_text_style),
 	bot_info_text = create_info_text(Localize("assign_career_tooltip"), "locked_info_text"),
 	back_button = UIWidgets.create_default_button("back_button", scenegraph_definition.back_button.size, nil, nil, Localize("back_menu_button_name"), nil, nil, nil, nil, disable_with_gamepad)
 }

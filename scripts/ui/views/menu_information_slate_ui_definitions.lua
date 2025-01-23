@@ -125,26 +125,26 @@ local scenegraph_definition = {
 		}
 	},
 	header = {
-		vertical_alignment = "top",
-		parent = "panel",
+		vertical_alignment = "bottom",
+		parent = "top_panel",
 		horizontal_alignment = "left",
 		position = {
 			20,
-			-55,
+			85,
 			1
 		},
 		size = {
-			0,
-			0
+			440,
+			300
 		}
 	},
 	sub_header = {
-		vertical_alignment = "top",
+		vertical_alignment = "bottom",
 		parent = "header",
 		horizontal_alignment = "left",
 		position = {
 			0,
-			-50,
+			-15,
 			0
 		},
 		size = {
@@ -239,11 +239,12 @@ local alert_name_text_style = {
 	}
 }
 local header_text_style = {
-	vertical_alignment = "top",
+	font_size = 56,
 	upper_case = true,
 	localize = false,
 	horizontal_alignment = "left",
-	font_size = 56,
+	vertical_alignment = "bottom",
+	dynamic_font_size = true,
 	font_type = "hell_shark_header",
 	text_color = {
 		255,
@@ -960,6 +961,28 @@ local animation_definitions = {
 				local anim_progress = math.easeOutCubic(progress)
 
 				params.render_settings.scrollbar_alpha = anim_progress
+			end,
+			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				return
+			end
+		}
+	},
+	expand_instantly = {
+		{
+			name = "expand",
+			start_progress = 0,
+			end_progress = 0,
+			init = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				ui_scenegraph.panel_mask.size[2] = 0
+				widgets.more_information.content.visible = false
+				widgets.less_information.content.visible = true
+				widgets.triangle_right.content.visible = false
+				widgets.triangle_down.content.visible = true
+				params.render_settings.scrollbar_alpha = 1
+			end,
+			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
+				ui_scenegraph.panel_mask.size[2] = 590
+				widgets.panel.style.rect.texture_size[2] = scenegraph_definition.panel.size[2]
 			end,
 			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
 				return

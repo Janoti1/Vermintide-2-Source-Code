@@ -270,9 +270,23 @@ local scenegraph_definition = {
 			1
 		}
 	},
+	quickplay_sub_title = {
+		vertical_alignment = "top",
+		parent = "quickplay_background",
+		horizontal_alignment = "center",
+		size = {
+			window_text_width,
+			50
+		},
+		position = {
+			0,
+			-70,
+			1
+		}
+	},
 	quickplay_divider = {
 		vertical_alignment = "top",
-		parent = "quickplay_title",
+		parent = "quickplay_sub_title",
 		horizontal_alignment = "center",
 		size = {
 			264,
@@ -280,7 +294,7 @@ local scenegraph_definition = {
 		},
 		position = {
 			0,
-			-36,
+			-44,
 			1
 		}
 	},
@@ -340,17 +354,31 @@ local scenegraph_definition = {
 			1
 		}
 	},
-	play_button = {
+	play_button_console = {
 		vertical_alignment = "bottom",
 		parent = "window",
 		horizontal_alignment = "center",
 		size = {
 			game_option_size[1],
-			72
+			game_option_size[2]
 		},
 		position = {
 			0,
-			150,
+			-42,
+			1
+		}
+	},
+	play_button = {
+		vertical_alignment = "center",
+		parent = "play_button_console",
+		horizontal_alignment = "center",
+		size = {
+			0,
+			0
+		},
+		position = {
+			-165,
+			0,
 			1
 		}
 	}
@@ -366,6 +394,22 @@ local quickplay_title_style = {
 	dynamic_font_size = true,
 	font_type = "hell_shark_header",
 	text_color = Colors.get_color_table_with_alpha("font_title", 255),
+	offset = {
+		0,
+		0,
+		2
+	}
+}
+local quickplay_sub_title_style = {
+	font_size = 34,
+	upper_case = false,
+	localize = false,
+	use_shadow = true,
+	word_wrap = true,
+	horizontal_alignment = "center",
+	vertical_alignment = "center",
+	font_type = "hell_shark_header",
+	text_color = Colors.get_color_table_with_alpha("white", 255),
 	offset = {
 		0,
 		0,
@@ -407,10 +451,11 @@ local eac_untrusted_disclaimer_text_style = {
 local disable_with_gamepad = true
 local widget_definitions = {
 	quickplay_description_background = UIWidgets.create_rect_with_outer_frame("quickplay_background", scenegraph_definition.quickplay_background.size, "frame_outer_fade_02", nil, UISettings.console_start_game_menu_rect_color),
-	quickplay_title = UIWidgets.create_simple_text(Localize("vs_quick_play_title"), "quickplay_title", nil, nil, quickplay_title_style),
+	quickplay_title = UIWidgets.create_simple_text(Localize("menu_store_panel_title_versus"), "quickplay_title", nil, nil, quickplay_title_style),
+	quickplay_sub_title = UIWidgets.create_simple_text(Localize("versus_start_game_window_dedicated_server"), "quickplay_sub_title", nil, nil, quickplay_sub_title_style),
 	quickplay_description = UIWidgets.create_simple_text(Localize("vs_quick_play_description"), "quickplay_description", nil, nil, quickplay_description_style),
 	quickplay_divider = UIWidgets.create_simple_texture("divider_01_top", "quickplay_divider"),
-	play_button = UIWidgets.create_start_game_deus_play_button("play_button", scenegraph_definition.play_button.size, Localize("start_game_window_play"), 34),
+	play_button = UIWidgets.create_icon_and_name_button("play_button", "options_button_icon_quickplay", Localize("versus_start_game_button_queue_up")),
 	eac_untrusted_disclaimer = UIWidgets.create_simple_text("*Versus quickplay disabled in modded realm", "play_button", nil, nil, eac_untrusted_disclaimer_text_style)
 }
 local selector_input_definitions = {

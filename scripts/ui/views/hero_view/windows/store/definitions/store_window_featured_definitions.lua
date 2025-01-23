@@ -661,18 +661,22 @@ local function create_slideshow_definition(scenegraph_id, size)
 			}
 		},
 		title_text = {
-			font_size = 36,
+			word_wrap = true,
 			upper_case = false,
 			localize = false,
 			dynamic_font_size_word_wrap = true,
-			word_wrap = true,
+			font_size = 36,
+			font_type = "hell_shark_header",
 			horizontal_alignment = "left",
 			vertical_alignment = "center",
 			dynamic_font_size = true,
-			font_type = "hell_shark_header",
 			size = {
 				size[1] * 0.33 - 30,
 				110
+			},
+			area_size = {
+				size[1] * 0.33 + 25,
+				100
 			},
 			text_color = Colors.get_color_table_with_alpha("font_title", 255),
 			offset = {
@@ -682,18 +686,22 @@ local function create_slideshow_definition(scenegraph_id, size)
 			}
 		},
 		title_text_shadow = {
-			font_size = 36,
+			word_wrap = true,
 			upper_case = false,
 			localize = false,
 			dynamic_font_size_word_wrap = true,
-			word_wrap = true,
+			font_size = 36,
+			font_type = "hell_shark_header",
 			horizontal_alignment = "left",
 			vertical_alignment = "center",
 			dynamic_font_size = true,
-			font_type = "hell_shark_header",
 			size = {
 				size[1] * 0.33 - 30,
 				110
+			},
+			area_size = {
+				size[1] * 0.33 + 25,
+				100
 			},
 			text_color = Colors.get_color_table_with_alpha("black", 255),
 			offset = {
@@ -711,7 +719,7 @@ local function create_slideshow_definition(scenegraph_id, size)
 			vertical_alignment = "top",
 			font_type = "hell_shark",
 			size = {
-				size[1] * 0.33 - 30,
+				size[1] * 0.33,
 				size[2] - 120
 			},
 			text_color = Colors.get_color_table_with_alpha("font_default", 255),
@@ -730,7 +738,7 @@ local function create_slideshow_definition(scenegraph_id, size)
 			vertical_alignment = "top",
 			font_type = "hell_shark",
 			size = {
-				size[1] * 0.33 - 30,
+				size[1] * 0.33,
 				size[2] - 120
 			},
 			text_color = Colors.get_color_table_with_alpha("black", 255),
@@ -762,7 +770,7 @@ local function create_slideshow_definition(scenegraph_id, size)
 			horizontal_alignment = "left",
 			masked = masked,
 			texture_size = {
-				size[1] * 0.33,
+				size[1] * 0.33 + 30,
 				size[2]
 			},
 			color = {

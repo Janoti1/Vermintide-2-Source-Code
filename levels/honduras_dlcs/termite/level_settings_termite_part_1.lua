@@ -1,5 +1,5 @@
 LevelSettings.dlc_termite_1 = {
-	act_unlock_order = 0,
+	act_unlock_order = 1,
 	ambient_sound_event = "silent_default_world_sound",
 	environment_state = "exterior",
 	player_aux_bus_name = "environment_reverb_outside",

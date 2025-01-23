@@ -211,7 +211,7 @@ HandbookSettings.popups = {
 			"difficulty_unlocked_champion"
 		},
 		triggers = {
-			"keep_menu_left"
+			"start_game_menu_opened"
 		},
 		conditions = {
 			"harder_unlocked"
@@ -222,7 +222,7 @@ HandbookSettings.popups = {
 			"difficulty_unlocked_legend"
 		},
 		triggers = {
-			"keep_menu_left"
+			"start_game_menu_opened"
 		},
 		conditions = {
 			"hardest_unlocked"
@@ -233,7 +233,7 @@ HandbookSettings.popups = {
 			"difficulty_unlocked_cataclysm"
 		},
 		triggers = {
-			"keep_menu_left"
+			"start_game_menu_opened"
 		},
 		conditions = {
 			"cataclysm_unlocked"

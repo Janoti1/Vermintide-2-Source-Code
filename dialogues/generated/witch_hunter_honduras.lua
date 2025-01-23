@@ -10667,12 +10667,13 @@ return function ()
 		},
 		pwh_gameplay_bright_wizard_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 5,
 			database = "witch_hunter_honduras",
-			sound_events_n = 4,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -10682,26 +10683,30 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
 				"pwh_gameplay_bright_wizard_on_a_frenzy_05",
 				"pwh_gameplay_bright_wizard_on_a_frenzy_06",
 				"pwh_gameplay_bright_wizard_on_a_frenzy_07",
-				"pwh_gameplay_bright_wizard_on_a_frenzy_08"
+				"pwh_gameplay_bright_wizard_on_a_frenzy_08",
+				"pwh_gameplay_bright_wizard_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
 				"pwh_gameplay_bright_wizard_on_a_frenzy_05",
 				"pwh_gameplay_bright_wizard_on_a_frenzy_06",
 				"pwh_gameplay_bright_wizard_on_a_frenzy_07",
-				"pwh_gameplay_bright_wizard_on_a_frenzy_08"
+				"pwh_gameplay_bright_wizard_on_a_frenzy_08",
+				"pwh_gameplay_bright_wizard_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				2.2633125782013,
 				3.2954790592194,
 				2.7722916603088,
-				2.717437505722
+				2.717437505722,
+				4.9177083969116
 			}
 		},
 		pwh_gameplay_casual_quotes = {
@@ -11464,12 +11469,13 @@ return function ()
 		},
 		pwh_gameplay_dwarf_ranger_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "witch_hunter_honduras",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "player_feedback",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -11481,6 +11487,7 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -11488,7 +11495,8 @@ return function ()
 				"pwh_gameplay_dwarf_ranger_on_a_frenzy_06",
 				"pwh_gameplay_dwarf_ranger_on_a_frenzy_07",
 				"pwh_gameplay_dwarf_ranger_on_a_frenzy_08",
-				"pwh_gameplay_dwarf_ranger_on_a_frenzy_09"
+				"pwh_gameplay_dwarf_ranger_on_a_frenzy_09",
+				"pwh_gameplay_dwarf_ranger_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -11496,14 +11504,16 @@ return function ()
 				"pwh_gameplay_dwarf_ranger_on_a_frenzy_06",
 				"pwh_gameplay_dwarf_ranger_on_a_frenzy_07",
 				"pwh_gameplay_dwarf_ranger_on_a_frenzy_08",
-				"pwh_gameplay_dwarf_ranger_on_a_frenzy_09"
+				"pwh_gameplay_dwarf_ranger_on_a_frenzy_09",
+				"pwh_gameplay_dwarf_ranger_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				3.3016042709351,
 				3.5702917575836,
 				3.9806876182556,
 				4.1420831680298,
-				3.7837707996368
+				3.7837707996368,
+				3.869062423706
 			}
 		},
 		pwh_gameplay_empire_soldier_being_helped_up = {
@@ -11773,12 +11783,13 @@ return function ()
 		},
 		pwh_gameplay_empire_soldier_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 5,
 			database = "witch_hunter_honduras",
-			sound_events_n = 4,
+			sound_events_n = 5,
 			category = "player_feedback",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -11788,26 +11799,30 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
 				"pwh_gameplay_empire_soldier_on_a_frenzy_01",
 				"pwh_gameplay_empire_soldier_on_a_frenzy_02",
 				"pwh_gameplay_empire_soldier_on_a_frenzy_03",
-				"pwh_gameplay_empire_soldier_on_a_frenzy_04"
+				"pwh_gameplay_empire_soldier_on_a_frenzy_04",
+				"pwh_gameplay_empire_soldier_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
 				"pwh_gameplay_empire_soldier_on_a_frenzy_01",
 				"pwh_gameplay_empire_soldier_on_a_frenzy_02",
 				"pwh_gameplay_empire_soldier_on_a_frenzy_03",
-				"pwh_gameplay_empire_soldier_on_a_frenzy_04"
+				"pwh_gameplay_empire_soldier_on_a_frenzy_04",
+				"pwh_gameplay_empire_soldier_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				1.3685208559036,
 				1.6015416383743,
 				2.5509583950043,
-				2.3036041259766
+				2.3036041259766,
+				5.4798126220703
 			}
 		},
 		pwh_gameplay_encouraging_words = {
@@ -12296,7 +12311,7 @@ return function ()
 			sound_events_duration = {
 				1.8657499551773,
 				3.3627290725708,
-				2.2356667518616,
+				1.9833542108536,
 				2.2901666164398,
 				5.3768539428711
 			}
@@ -12380,7 +12395,7 @@ return function ()
 			sound_events_duration = {
 				2.6238749027252,
 				3.9895832538605,
-				2.070770740509,
+				1.9462447166443,
 				3.1902916431427
 			}
 		},
@@ -18853,12 +18868,13 @@ return function ()
 		},
 		pwh_gameplay_wood_elf_on_a_frenzy = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "witch_hunter_honduras",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "player_feedback",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -18870,6 +18886,7 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -18877,7 +18894,8 @@ return function ()
 				"pwh_gameplay_wood_elf_on_a_frenzy_06",
 				"pwh_gameplay_wood_elf_on_a_frenzy_07",
 				"pwh_gameplay_wood_elf_on_a_frenzy_08",
-				"pwh_gameplay_wood_elf_on_a_frenzy_09"
+				"pwh_gameplay_wood_elf_on_a_frenzy_09",
+				"pwh_gameplay_wood_elf_on_a_frenzy_new_a_01"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -18885,24 +18903,28 @@ return function ()
 				"pwh_gameplay_wood_elf_on_a_frenzy_06",
 				"pwh_gameplay_wood_elf_on_a_frenzy_07",
 				"pwh_gameplay_wood_elf_on_a_frenzy_08",
-				"pwh_gameplay_wood_elf_on_a_frenzy_09"
+				"pwh_gameplay_wood_elf_on_a_frenzy_09",
+				"pwh_gameplay_wood_elf_on_a_frenzy_new_a_01"
 			},
 			sound_events_duration = {
 				4.8623542785644,
 				4.4180002212524,
 				4.0006251335144,
 				6.8399167060852,
-				4.2823748588562
+				4.2823748588562,
+				2.847895860672
 			}
 		},
 		pwh_last_hero_standing = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 7,
 			database = "witch_hunter_honduras",
-			sound_events_n = 5,
+			sound_events_n = 7,
 			category = "player_alerts",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 7,
 			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -18914,12 +18936,16 @@ return function ()
 				"face_pain",
 				"face_pain",
 				"face_pain",
+				"face_pain",
+				"face_pain",
 				"face_pain"
 			},
 			localization_strings = {
 				"pwh_gameplay_last_hero_standing_02",
 				"pwh_gameplay_last_hero_standing_03",
 				"pwh_gameplay_last_hero_standing_04",
+				"pwh_gameplay_last_hero_standing_05",
+				"pwh_gameplay_last_hero_standing_06",
 				"pwh_gameplay_last_hero_standing_07",
 				"pwh_gameplay_last_hero_standing_08"
 			},
@@ -18928,6 +18954,8 @@ return function ()
 				"pwh_gameplay_last_hero_standing_02",
 				"pwh_gameplay_last_hero_standing_03",
 				"pwh_gameplay_last_hero_standing_04",
+				"pwh_gameplay_last_hero_standing_05",
+				"pwh_gameplay_last_hero_standing_06",
 				"pwh_gameplay_last_hero_standing_07",
 				"pwh_gameplay_last_hero_standing_08"
 			},
@@ -18935,6 +18963,8 @@ return function ()
 				3.4211874008179,
 				2.9197082519531,
 				5.7066459655762,
+				3.1273124217987,
+				6.4788126945496,
 				4.8555417060852,
 				4.9133334159851
 			}
