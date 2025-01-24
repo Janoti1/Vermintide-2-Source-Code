@@ -1,3 +1,32 @@
+GameModeCustomSettingsHandlerUtility = GameModeCustomSettingsHandlerUtility or {}
+
+GameModeCustomSettingsHandlerUtility.parse_packed_custom_settings = function (packed_custom_settings, game_mode_name)
+	local settings = FrameTable.alloc_table()
+	local custom_settings_table = string.split(packed_custom_settings, ";")
+	local settings_template = GameModeSettings[game_mode_name].custom_game_settings_templates
+
+	for i = 1, #custom_settings_table, 2 do
+		local idx = tonumber(custom_settings_table[i])
+		local lookup_value = tonumber(custom_settings_table[i + 1])
+
+		if not idx or not lookup_value then
+			break
+		end
+
+		local template = settings_template[idx]
+		local name = template.setting_name
+		local value = template.values[lookup_value]
+
+		settings[#settings + 1] = {
+			name = name,
+			value = value,
+			template = template
+		}
+	end
+
+	return settings
+end
+
 GameModeCustomSettingsHandler = class(GameModeCustomSettingsHandler)
 
 local RPCS = {
@@ -54,33 +83,6 @@ GameModeCustomSettingsHandler.get_packed_custom_settings = function (self)
 	end
 
 	return has_custom_settings and changed_packaged_settings or "n/a"
-end
-
-GameModeCustomSettingsHandler.parse_packed_custom_settings = function (self, packed_custom_settings)
-	local settings = FrameTable.alloc_table()
-	local custom_settings_table = string.split(packed_custom_settings, ";")
-	local settings_template = self._settings_template
-
-	for i = 1, #custom_settings_table, 2 do
-		local idx = tonumber(custom_settings_table[i])
-		local lookup_value = tonumber(custom_settings_table[i + 1])
-
-		if not idx or not lookup_value then
-			break
-		end
-
-		local template = settings_template[idx]
-		local name = template.setting_name
-		local value = template.values[lookup_value]
-
-		settings[#settings + 1] = {
-			name = name,
-			value = value,
-			template = template
-		}
-	end
-
-	return settings
 end
 
 GameModeCustomSettingsHandler.unpack_settings = function (self, packed_settings, settings_template)

@@ -42,6 +42,7 @@ PingSystem.init = function (self, context, system_name)
 	self._wwise_world = Managers.world:wwise_world(self._world)
 	self._pinged_units = {}
 	self._world_markers = {}
+	self._ping_sound_cooldown = {}
 
 	local settings = Managers.state.game_mode:settings()
 	local ping_mode = settings.ping_mode
@@ -185,14 +186,6 @@ PingSystem.hot_join_sync = function (self, sender)
 end
 
 PingSystem._handle_ping = function (self, ping_type, social_wheel_event_id, sender_player, pinger_unit, pinged_unit, position, flash)
-	local already_pinged_unit = false
-
-	if self._pinged_units[pinger_unit] then
-		already_pinged_unit = pinged_unit == self._pinged_units[pinger_unit].pinged_unit
-
-		self:_remove_ping(pinger_unit)
-	end
-
 	if pinged_unit and not Unit.alive(pinged_unit) then
 		return
 	end
@@ -213,6 +206,10 @@ PingSystem._handle_ping = function (self, ping_type, social_wheel_event_id, send
 
 	if not party then
 		return
+	end
+
+	if self._pinged_units[pinger_unit] then
+		self:_remove_ping(pinger_unit, true)
 	end
 
 	local t = Managers.time:time("game")
@@ -272,7 +269,15 @@ PingSystem._handle_ping = function (self, ping_type, social_wheel_event_id, send
 		self:_add_world_marker(pinger_unit, pinged_unit, position, ping_type, social_wheel_event_id)
 	end
 
-	if not already_pinged_unit then
+	local skip_sound = false
+
+	if t < (self._ping_sound_cooldown[pinger_unit] or 0) then
+		skip_sound = true
+	else
+		self._ping_sound_cooldown[pinger_unit] = t + 0.5
+	end
+
+	if not skip_sound then
 		local social_wheel_event_name = NetworkLookup.social_wheel_events[social_wheel_event_id]
 		local social_wheel_settings = SocialWheelSettingsLookup[social_wheel_event_name]
 		local ping_sound_effect = social_wheel_settings and social_wheel_settings.ping_sound_effect
@@ -528,8 +533,6 @@ PingSystem._add_world_marker = function (self, pinger_unit, pinged_unit, positio
 	end
 
 	if not ping_icon then
-		print("[PingSystem] Missing world marker icon")
-
 		return
 	end
 
@@ -577,7 +580,7 @@ PingSystem.remove_ping_from_unit = function (self, target_unit)
 	end
 end
 
-PingSystem._remove_ping = function (self, pinger_unit)
+PingSystem._remove_ping = function (self, pinger_unit, skip_sync)
 	if not pinger_unit then
 		return
 	end
@@ -593,7 +596,7 @@ PingSystem._remove_ping = function (self, pinger_unit)
 		return
 	end
 
-	if self.is_server then
+	if self.is_server and not skip_sync then
 		local party = Managers.party:get_party(data.party_id)
 		local pinger_unit_id = data.pinger_unit_id
 
@@ -628,9 +631,15 @@ PingSystem._remove_ping = function (self, pinger_unit)
 		for i = 1, #child_pings do
 			local child_pinger_unit = child_pings[i]
 
-			self:_remove_ping(child_pinger_unit)
+			self:_remove_ping(child_pinger_unit, skip_sync)
 		end
 	end
+end
+
+PingSystem.get_pinged_unit = function (self, owner_unit)
+	local ping_data = self._pinged_units[owner_unit]
+
+	return ping_data and Unit.alive(ping_data.pinged_unit) and ping_data.pinged_unit
 end
 
 PingSystem._is_outline_enabled = function (self, unit)

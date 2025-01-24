@@ -126,7 +126,9 @@ PlayerUtils.player_name = function (peer_id, lobby)
 	local name
 
 	if IS_CONSOLE then
-		name = lobby:user_name(peer_id)
+		if lobby:has_user_name(peer_id) then
+			name = lobby:user_name(peer_id)
+		end
 	elseif Steam then
 		name = Steam.user_name(peer_id)
 	end

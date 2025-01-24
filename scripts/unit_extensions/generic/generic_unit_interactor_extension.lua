@@ -78,6 +78,7 @@ local IGNORED_DAMAGE_TYPES = {
 	life_tap = true,
 	aoe_poison_dot = true,
 	plague_ground = true,
+	level = true,
 	temporary_health_degen = true,
 	health_degen = true,
 	poison = true,

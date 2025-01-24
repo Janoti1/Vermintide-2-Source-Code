@@ -535,12 +535,15 @@ NetworkServer._update_lobby_data = function (self, dt, t)
 		for i = 1, #members do
 			local peer_id = members[i]
 			local party_id = slot_handler:party_id_by_peer(peer_id)
-			local profile_index = self.profile_synchronizer:get_persistent_profile_index_reservation(peer_id)
 
-			table.insert(reserved_profiles[party_id], {
-				peer_id = peer_id,
-				profile_index = profile_index
-			})
+			if party_id then
+				local profile_index = self.profile_synchronizer:get_persistent_profile_index_reservation(peer_id)
+
+				table.insert(reserved_profiles[party_id], {
+					peer_id = peer_id,
+					profile_index = profile_index
+				})
+			end
 		end
 	else
 		for party_id = 1, #reserved_profiles do

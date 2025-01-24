@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2025-01-24  |  6.3.1  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-1-24th-of-january/104690)
 2025-01-23  |  6.3.0  | [New Map: Devious Delvings](https://forums.fatsharkgames.com/t/free-new-map-devious-delvings-is-out-now/104605)
 2024-12-18  |  6.2.1  | [Hotfix](https://forums.fatsharkgames.com/t/versus-update-new-playable-monster-rat-ogre-patch-6-2-0-hotfix-6-2-1/103434)
 2024-12-17  |  6.2.0  | [Rat Ogre for Versus](https://forums.fatsharkgames.com/t/versus-update-new-playable-monster-rat-ogre-patch-6-2-0/103434)

@@ -169,11 +169,15 @@ BaseObjectiveExtension.on_section_completed = function (self)
 	local sound_event = self._on_section_progress_sound_event
 
 	if sound_event then
-		local side_name = self:_local_side():name()
-		local progress_event = sound_event[side_name]
+		local side = self:_local_side()
 
-		if progress_event then
-			self:play_local_sound(progress_event)
+		if side then
+			local side_name = side:name()
+			local progress_event = sound_event[side_name]
+
+			if progress_event then
+				self:play_local_sound(progress_event)
+			end
 		end
 	end
 end

@@ -1954,8 +1954,7 @@ LobbyBrowserConsoleUI._fill_versus_details = function (self, lobby_data, active_
 		self._scrollbar_ui = nil
 
 		if has_custom_game_settings then
-			local custom_game_settings_handler = Managers.mechanism:game_mechanism():get_custom_game_settings_handler()
-			local custom_game_settings_table = custom_game_settings_handler:parse_packed_custom_settings(custom_game_settings)
+			local custom_game_settings_table = GameModeCustomSettingsHandlerUtility.parse_packed_custom_settings(custom_game_settings, "versus")
 			local offset_y = 0
 
 			for i = 1, #custom_game_settings_table do

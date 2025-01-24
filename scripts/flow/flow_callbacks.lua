@@ -2323,7 +2323,7 @@ function flow_callback_damage_player_bot_ai(params)
 		fassert(ScriptUnit.has_extension(unit, "health_system"), "Tried to kill unit %s from flow but the unit has no health extension", unit)
 
 		local hit_zone_name = "full"
-		local damage_type = "forced"
+		local damage_type = "level"
 		local hit_position = Unit.world_position(unit, 0)
 		local damage_direction = Vector3.up()
 		local max_damage = NetworkConstants.damage.max
