@@ -1,5 +1,5 @@
-MaterialEffectMappings = MaterialEffectMappings or {}
-MaterialEffectMappings.throwing_axe = MaterialEffectMappings.throwing_axe or {
+require("scripts/settings/material_effect_mappings_utility")
+MaterialEffectMappingsUtility.add("throwing_axe", {
 	decal = {
 		material_drawer_mapping = {
 			fruit = "units/projection_decals/hit_fruit_slash_1",
@@ -288,4 +288,4 @@ MaterialEffectMappings.throwing_axe = MaterialEffectMappings.throwing_axe or {
 	world_interaction = {
 		water = {}
 	}
-}
+})

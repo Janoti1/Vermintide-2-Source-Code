@@ -130,6 +130,11 @@ end
 HeroWindowCosmeticsLoadoutPoseInventoryConsole._show_equipped_weapon_pose = function (self)
 	local backend_items = Managers.backend:get_interface("items")
 	local current_weapon_pose_id = backend_items:get_loadout_item_id(self._career_name, "slot_pose")
+
+	if not current_weapon_pose_id then
+		return
+	end
+
 	local current_weapon_pose_item = backend_items:get_item_from_id(current_weapon_pose_id)
 	local current_weapon_pose_item_data = current_weapon_pose_item.data
 	local current_weapon_pose_parent = current_weapon_pose_item_data.parent
@@ -322,10 +327,11 @@ end
 HeroWindowCosmeticsLoadoutPoseInventoryConsole._update_remove_button_state = function (self, dt, t)
 	local backend_items = Managers.backend:get_interface("items")
 	local backend_id = BackendUtils.get_loadout_item_id(self._career_name, "slot_pose")
-	local item = backend_items:get_item_from_id(backend_id)
+	local item = backend_id and backend_items:get_item_from_id(backend_id)
+	local item_key = item and item.key
 	local widget = self._widgets_by_name.button_remove
 
-	UIUtils.enable_button(widget, item.key ~= "default_weapon_pose_01")
+	UIUtils.enable_button(widget, not item_key or item_key ~= "default_weapon_pose_01")
 end
 
 HeroWindowCosmeticsLoadoutPoseInventoryConsole._apply_illusion = function (self)
@@ -685,7 +691,9 @@ HeroWindowCosmeticsLoadoutPoseInventoryConsole._equip_default = function (self)
 	local backend_items = Managers.backend:get_interface("items")
 	local selected_item = backend_items:get_item_from_key("default_weapon_pose_01")
 
-	self._parent:_set_loadout_item(selected_item)
+	if selected_item then
+		self._parent:_set_loadout_item(selected_item)
+	end
 end
 
 HeroWindowCosmeticsLoadoutPoseInventoryConsole._set_loadout_item = function (self, item)

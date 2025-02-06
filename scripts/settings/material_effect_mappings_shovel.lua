@@ -1,5 +1,5 @@
-MaterialEffectMappings = MaterialEffectMappings or {}
-MaterialEffectMappings.career_necro_skeleton_walk = MaterialEffectMappings.career_necro_skeleton_walk or {
+require("scripts/settings/material_effect_mappings_utility")
+MaterialEffectMappingsUtility.add("career_necro_skeleton_walk", {
 	sound = {
 		cloth = {
 			event = "career_necro_skeleton_footstep",
@@ -184,8 +184,8 @@ MaterialEffectMappings.career_necro_skeleton_walk = MaterialEffectMappings.caree
 	world_interaction = {
 		water = {}
 	}
-}
-MaterialEffectMappings.career_necro_skeleton_run = MaterialEffectMappings.career_necro_skeleton_run or {
+})
+MaterialEffectMappingsUtility.add("career_necro_skeleton_run", {
 	sound = {
 		cloth = {
 			event = "career_necro_skeleton_footstep",
@@ -370,8 +370,8 @@ MaterialEffectMappings.career_necro_skeleton_run = MaterialEffectMappings.career
 	world_interaction = {
 		water = {}
 	}
-}
-MaterialEffectMappings.career_necro_skeleton_land = MaterialEffectMappings.career_necro_skeleton_land or {
+})
+MaterialEffectMappingsUtility.add("career_necro_skeleton_land", {
 	sound = {
 		cloth = {
 			event = "career_necro_skeleton_footstep",
@@ -556,4 +556,4 @@ MaterialEffectMappings.career_necro_skeleton_land = MaterialEffectMappings.caree
 	world_interaction = {
 		water = {}
 	}
-}
+})

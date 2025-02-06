@@ -698,7 +698,6 @@ elseif IS_XB1 then
 					transition = "exit_menu",
 					display_name = "return_to_game_button_name"
 				},
-				HANDBOOK_OPTION,
 				{
 					fade = true,
 					transition = "options_menu",

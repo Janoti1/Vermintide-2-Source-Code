@@ -1256,7 +1256,7 @@ TalentBuffTemplates.empire_soldier = {
 			{
 				event = "on_block",
 				buff_to_add = "markus_knight_free_pushes_on_block_buff",
-				buff_func = "add_buff"
+				buff_func = "add_buff_local"
 			}
 		}
 	},

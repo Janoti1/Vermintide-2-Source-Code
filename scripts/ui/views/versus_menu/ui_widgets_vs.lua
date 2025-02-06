@@ -3662,15 +3662,18 @@ UIWidgets.create_objective_score_widget = function (scenegraph_id, size, offset)
 				}
 			},
 			pre_round_timer = {
-				word_wrap = true,
+				font_size = 50,
 				upper_case = false,
 				localize = false,
 				use_shadow = true,
-				font_size = 50,
+				word_wrap = false,
 				horizontal_alignment = "center",
 				vertical_alignment = "center",
-				dynamic_font_size = false,
 				font_type = "hell_shark_header",
+				size = {
+					54,
+					50
+				},
 				text_color = Colors.get_color_table_with_alpha("white_smoke", 255),
 				shadow_offset = {
 					1,
@@ -3678,8 +3681,8 @@ UIWidgets.create_objective_score_widget = function (scenegraph_id, size, offset)
 					4
 				},
 				offset = {
-					0,
-					-2,
+					size[1] * 0.5 - 27,
+					size[2] * 0.25 + 4 - 2,
 					5
 				}
 			}
@@ -7821,8 +7824,8 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 	local setting_name = "menu_settings_" .. data.setting_name
 	local tooltip_text = "tooltip_" .. data.setting_name
 	local reset_button_size = {
-		26,
-		26
+		24,
+		24
 	}
 	local stepper_arrow_size = {
 		32,
@@ -8041,7 +8044,11 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 					style_id = "reset_setting_button",
 					texture_id = "reset_setting_button",
 					content_check_function = function (content, style)
-						return content.is_server and not content.is_gamepad_active
+						local values = content.data.values
+						local ui_data = content.ui_data
+						local setting_has_changed = content.value ~= content.default_value
+
+						return setting_has_changed and content.is_server and not content.is_gamepad_active
 					end
 				},
 				{
@@ -8049,7 +8056,11 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 					texture_id = "reset_setting_button_hovered",
 					pass_type = "texture",
 					content_check_function = function (content, style)
-						return content.is_server and not content.is_gamepad_active and content.focused
+						local values = content.data.values
+						local ui_data = content.ui_data
+						local setting_has_changed = content.value ~= content.default_value
+
+						return setting_has_changed and content.is_server and not content.is_gamepad_active and content.focused
 					end,
 					content_change_function = function (content, style, _, dt)
 						local hotspot = content.reset_setting_button_hotspot
@@ -8063,8 +8074,13 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 					content_id = "reset_setting_button_hotspot",
 					content_check_function = function (content, style)
 						local parent = content.parent
+						local values = parent.data.values
+						local ui_data = parent.ui_data
+						local setting_idx = parent.setting_idx
+						local default_idx = parent.default_idx
+						local setting_has_changed = parent.value ~= parent.default_value
 
-						return parent.is_server and not parent.is_gamepad_active
+						return setting_has_changed and parent.is_server and not parent.is_gamepad_active
 					end,
 					content_change_function = function (content, style, _, dt)
 						local parent = content.parent
@@ -8171,7 +8187,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				masked = true,
 				texture_size = stepper_arrow_size,
 				offset = {
-					368,
+					398,
 					0,
 					3
 				},
@@ -8181,7 +8197,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				masked = true,
 				texture_size = stepper_arrow_size,
 				offset = {
-					368,
+					398,
 					0,
 					5
 				},
@@ -8190,7 +8206,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 			left_arrow_hotspot = {
 				size = stepper_arrow_size,
 				offset = {
-					368,
+					398,
 					0,
 					3
 				}
@@ -8202,7 +8218,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 					30
 				},
 				offset = {
-					400,
+					430,
 					0,
 					4
 				},
@@ -8213,7 +8229,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				upper_case = false,
 				localize = false,
 				font_type = "hell_shark_masked",
-				font_size = 24,
+				font_size = 22,
 				vertical_alignment = "center",
 				horizontal_alignment = "center",
 				use_shadow = true,
@@ -8230,7 +8246,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				default_color = Colors.get_color_table_with_alpha("font_default", 180),
 				text_color = Colors.get_color_table_with_alpha("white", 255),
 				offset = {
-					400,
+					430,
 					0,
 					5
 				}
@@ -8239,7 +8255,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				masked = true,
 				texture_size = stepper_arrow_size,
 				offset = {
-					528,
+					560,
 					0,
 					3
 				},
@@ -8249,7 +8265,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				masked = true,
 				texture_size = stepper_arrow_size,
 				offset = {
-					528,
+					560,
 					0,
 					4
 				},
@@ -8258,7 +8274,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 			right_arrow_hotspot = {
 				size = stepper_arrow_size,
 				offset = {
-					528,
+					560,
 					0,
 					3
 				}
@@ -8266,7 +8282,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 			divider = {
 				masked = true,
 				size = {
-					560,
+					620,
 					2
 				},
 				offset = {
@@ -8278,7 +8294,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 			},
 			setting_highlight_hotspot = {
 				size = {
-					580,
+					640,
 					34
 				},
 				offset = {
@@ -8290,7 +8306,7 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 			setting_highlight = {
 				masked = true,
 				texture_size = {
-					580,
+					640,
 					34
 				},
 				offset = {
@@ -8304,8 +8320,8 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				masked = true,
 				texture_size = reset_button_size,
 				offset = {
-					338,
-					2,
+					594,
+					4,
 					3
 				},
 				color = Colors.get_color_table_with_alpha("white", 255)
@@ -8314,8 +8330,8 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 				masked = true,
 				texture_size = reset_button_size,
 				offset = {
-					338,
-					2,
+					594,
+					4,
 					4
 				},
 				color = Colors.get_color_table_with_alpha("white", 255)
@@ -8323,8 +8339,8 @@ UIWidgets.create_settings_stepper_widget = function (scenegraph_id, data, ui_dat
 			reset_setting_button_hotspot = {
 				size = reset_button_size,
 				offset = {
-					338,
-					2,
+					594,
+					4,
 					1
 				}
 			},
@@ -8369,14 +8385,18 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 	local setting_name = "menu_settings_" .. data.setting_name
 	local tooltip_text = "tooltip_" .. data.setting_name
 	local reset_button_size = {
-		26,
-		26
+		24,
+		24
+	}
+	local setting_value_size = {
+		100,
+		30
 	}
 	local slider_size = {
-		280,
+		200,
 		8
 	}
-	local min_offset = 580 - slider_size[1] - 30 + 8
+	local min_offset = 640 - slider_size[1] - 138 + 8
 	local max_offset = min_offset + slider_size[1]
 	local background_frame_settings = UIFrameSettings.button_frame_02
 	local slider_button_size = {
@@ -8464,6 +8484,8 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 								local text = localization_options[new_value]
 
 								value_text = Localize(text)
+							elseif type(content.value) == "number" and ui_data and ui_data.setting_type == "multiplier" then
+								value_text = string.format("%.2f", content.value)
 							else
 								value_text = string.format("%s", content.value)
 							end
@@ -8527,7 +8549,11 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 					style_id = "reset_setting_button",
 					texture_id = "reset_setting_button",
 					content_check_function = function (content, style)
-						return content.is_server and not content.is_gamepad_active
+						local values = content.data.values
+						local ui_data = content.ui_data
+						local setting_has_changed = content.value ~= content.default_value
+
+						return setting_has_changed and content.is_server and not content.is_gamepad_active
 					end
 				},
 				{
@@ -8535,7 +8561,11 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 					texture_id = "reset_setting_button_hovered",
 					pass_type = "texture",
 					content_check_function = function (content, style)
-						return content.is_server and not content.is_gamepad_active and content.focused
+						local values = content.data.values
+						local ui_data = content.ui_data
+						local setting_has_changed = content.value ~= content.default_value
+
+						return setting_has_changed and content.is_server and not content.is_gamepad_active and content.focused
 					end,
 					content_change_function = function (content, style, _, dt)
 						local hotspot = content.reset_setting_button_hotspot
@@ -8549,8 +8579,13 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 					content_id = "reset_setting_button_hotspot",
 					content_check_function = function (content, style)
 						local parent = content.parent
+						local values = parent.data.values
+						local ui_data = parent.ui_data
+						local setting_idx = parent.setting_idx
+						local default_idx = parent.default_idx
+						local setting_has_changed = parent.value ~= parent.default_value
 
-						return parent.is_server and not parent.is_gamepad_active
+						return setting_has_changed and parent.is_server and not parent.is_gamepad_active
 					end,
 					content_change_function = function (content, style, _, dt)
 						local parent = content.parent
@@ -8639,9 +8674,12 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 						local internal_value = ui_content.current_slider_value
 						local min = 1
 						local max = ui_content.num_settings
-						local setting_idx = math.clamp(math.round(max * internal_value), min, max)
 
-						ui_content.setting_idx = setting_idx
+						if not ui_content.is_gamepad_active then
+							local setting_idx = math.clamp(math.round(max * internal_value), min, max)
+
+							ui_content.setting_idx = setting_idx
+						end
 
 						local slider_box_style = ui_style.slider_background
 						local slider_box_size = slider_box_style.size
@@ -8700,38 +8738,39 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 		},
 		style = {
 			setting_name = {
+				masked = true,
 				upper_case = false,
 				localize = true,
-				vertical_alignment = "center",
+				font_type = "hell_shark_masked",
 				font_size = 20,
+				vertical_alignment = "center",
 				horizontal_alignment = "left",
 				use_shadow = true,
-				masked = true,
-				font_type = "hell_shark_masked",
+				dynamic_font_size = true,
 				size = {
-					380,
+					300,
 					30
 				},
 				area_size = {
-					380,
+					300,
 					30
 				},
 				text_color = Colors.get_color_table_with_alpha("font_button_normal", 255),
 				offset = {
 					0,
-					34,
+					2,
 					3
 				}
 			},
 			setting_value_bg = {
 				masked = true,
 				size = {
-					128,
-					30
+					setting_value_size[1] - 32,
+					setting_value_size[2]
 				},
 				offset = {
-					400,
-					34,
+					640 - setting_value_size[1] - 20,
+					2,
 					4
 				},
 				color = Colors.get_color_table_with_alpha("black", 120)
@@ -8741,32 +8780,32 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 				upper_case = false,
 				localize = false,
 				font_type = "hell_shark_masked",
-				font_size = 24,
+				font_size = 22,
 				vertical_alignment = "center",
 				horizontal_alignment = "center",
 				use_shadow = true,
 				dynamic_font_size = true,
 				size = {
-					128,
-					30
+					setting_value_size[1] - 32,
+					setting_value_size[2]
 				},
 				area_size = {
-					128,
-					30
+					setting_value_size[1] - 36,
+					setting_value_size[2]
 				},
 				modified_color = Colors.get_color_table_with_alpha("pale_golden_rod", 255),
 				default_color = Colors.get_color_table_with_alpha("font_default", 180),
 				text_color = Colors.get_color_table_with_alpha("white", 255),
 				offset = {
-					400,
-					34,
+					640 - setting_value_size[1] - 20,
+					2,
 					5
 				}
 			},
 			divider = {
 				masked = true,
 				size = {
-					560,
+					620,
 					2
 				},
 				offset = {
@@ -8778,8 +8817,8 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 			},
 			setting_highlight_hotspot = {
 				size = {
-					580,
-					68
+					640,
+					34
 				},
 				offset = {
 					0,
@@ -8790,8 +8829,8 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 			setting_highlight = {
 				masked = true,
 				texture_size = {
-					580,
-					68
+					640,
+					34
 				},
 				offset = {
 					0,
@@ -8804,8 +8843,8 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 				masked = true,
 				texture_size = reset_button_size,
 				offset = {
-					338,
-					36,
+					594,
+					4,
 					3
 				},
 				color = Colors.get_color_table_with_alpha("white", 255)
@@ -8814,8 +8853,8 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 				masked = true,
 				texture_size = reset_button_size,
 				offset = {
-					338,
-					36,
+					594,
+					4,
 					4
 				},
 				color = Colors.get_color_table_with_alpha("white", 255)
@@ -8823,8 +8862,8 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 			reset_setting_button_hotspot = {
 				size = reset_button_size,
 				offset = {
-					338,
-					36,
+					594,
+					4,
 					1
 				}
 			},
@@ -8847,7 +8886,7 @@ UIWidgets.create_settings_slider_widget = function (scenegraph_id, data, ui_data
 				text_color = Colors.get_color_table_with_alpha("white", 255),
 				offset = {
 					0,
-					34,
+					4,
 					1
 				}
 			},

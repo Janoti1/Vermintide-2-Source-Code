@@ -464,6 +464,12 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_memory",
+				"slotted_first_event_piece",
+				OP.EQ,
+				1
 			}
 		}
 	})
@@ -921,6 +927,45 @@ return function ()
 				"enemies_close",
 				OP.LT,
 				7
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pes_temple_slotted_waystone_DUMMY",
+		response = "pes_temple_slotted_waystone_DUMMY",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"temple_slotted_first_event_piece"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_memory",
+				"slotted_first_event_piece",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"slotted_first_event_piece",
+				OP.ADD,
+				1
 			}
 		}
 	})
@@ -1782,6 +1827,28 @@ return function ()
 				4.892541885376,
 				3.1551876068115,
 				2.4968957901001
+			}
+		},
+		pes_temple_slotted_waystone_DUMMY = {
+			sound_events_n = 1,
+			face_animations_n = 1,
+			database = "empire_soldier_dlc_termite_1",
+			category = "level_talk",
+			dialogue_animations_n = 1,
+			dialogue_animations = {
+				[1] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "dummy"
+			},
+			sound_events = {
+				[1] = "dummy"
+			},
+			sound_events_duration = {
+				[1] = 0.20000000298023
 			}
 		},
 		pes_temple_start_banter_a = {

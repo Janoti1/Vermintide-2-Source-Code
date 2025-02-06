@@ -225,7 +225,6 @@ local category_settings = {
 		icon = UISettings.slot_icons.portrait_frame
 	},
 	{
-		wield = true,
 		name = "poses",
 		item_filter = "gather_weapon_pose_blueprints",
 		hero_specific_filter = true,

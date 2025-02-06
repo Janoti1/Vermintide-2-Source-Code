@@ -1,5 +1,5 @@
-MaterialEffectMappings = MaterialEffectMappings or {}
-MaterialEffectMappings.invulnerable = MaterialEffectMappings.invulnerable or {
+require("scripts/settings/material_effect_mappings_utility")
+MaterialEffectMappingsUtility.add("invulnerable", {
 	sound = {
 		cloth = {
 			event = "enemy_grudge_deflect",
@@ -217,4 +217,4 @@ MaterialEffectMappings.invulnerable = MaterialEffectMappings.invulnerable or {
 	world_interaction = {
 		water = {}
 	}
-}
+})

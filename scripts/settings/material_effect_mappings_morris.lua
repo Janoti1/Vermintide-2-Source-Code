@@ -1,5 +1,5 @@
-MaterialEffectMappings = MaterialEffectMappings or {}
-MaterialEffectMappings.we_deus_01_arrow_impact = MaterialEffectMappings.we_deus_01_arrow_impact or {
+require("scripts/settings/material_effect_mappings_utility")
+MaterialEffectMappingsUtility.add("we_deus_01_arrow_impact", {
 	decal = {
 		material_drawer_mapping = {
 			fruit = "units/projection_decals/hit_fruit_pierce_1",
@@ -269,8 +269,8 @@ MaterialEffectMappings.we_deus_01_arrow_impact = MaterialEffectMappings.we_deus_
 	world_interaction = {
 		water = {}
 	}
-}
-MaterialEffectMappings.we_deus_02_arrow_impact = MaterialEffectMappings.we_deus_02_arrow_impact or {
+})
+MaterialEffectMappingsUtility.add("we_deus_02_arrow_impact", {
 	decal = {
 		material_drawer_mapping = {
 			fruit = "units/projection_decals/hit_fruit_pierce_1",
@@ -540,8 +540,8 @@ MaterialEffectMappings.we_deus_02_arrow_impact = MaterialEffectMappings.we_deus_
 	world_interaction = {
 		water = {}
 	}
-}
-MaterialEffectMappings.magma_impact = MaterialEffectMappings.magma_impact or {
+})
+MaterialEffectMappingsUtility.add("magma_impact", {
 	sound = {
 		cloth = {
 			event = "fireball_bw_deus_hit",
@@ -759,8 +759,8 @@ MaterialEffectMappings.magma_impact = MaterialEffectMappings.magma_impact or {
 	world_interaction = {
 		water = {}
 	}
-}
-MaterialEffectMappings.melee_hit_deus_relic_01 = MaterialEffectMappings.melee_hit_deus_relic_01 or {
+})
+MaterialEffectMappingsUtility.add("melee_hit_deus_relic_01", {
 	decal = {
 		material_drawer_mapping = {
 			fruit = "units/projection_decals/hit_fruit_pierce_1",
@@ -1026,4 +1026,4 @@ MaterialEffectMappings.melee_hit_deus_relic_01 = MaterialEffectMappings.melee_hi
 		metal_solid = "fx/hit_metal_solid_blunt",
 		metal_hollow = "fx/hit_metal_hollow_blunt"
 	}
-}
+})
