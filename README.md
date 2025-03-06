@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2025-03-03  |  6.3.4  | [EAC Update](https://forums.fatsharkgames.com/t/pc-hotfix-6-3-4-easy-anti-cheat-update-hotfix-6-3-5/105496)
 2025-02-06  |  6.3.2  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-2-6th-of-february/105088)
 2025-01-24  |  6.3.1  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-1-24th-of-january/104690)
 2025-01-23  |  6.3.0  | [New Map: Devious Delvings](https://forums.fatsharkgames.com/t/free-new-map-devious-delvings-is-out-now/104605)

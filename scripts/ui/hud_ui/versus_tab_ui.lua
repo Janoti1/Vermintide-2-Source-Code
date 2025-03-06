@@ -620,7 +620,7 @@ VersusTabUI._update_party_slots_data = function (self, party_id, team_slots, tea
 				if profile_updated then
 					local is_player_controlled = player:is_player_controlled()
 					local player_portrait_frame = CosmeticUtils.get_cosmetic_slot(player, "slot_frame")
-					local player_portrait_frame_name = player_portrait_frame.item_name or "default"
+					local player_portrait_frame_name = player_portrait_frame and player_portrait_frame.item_name or "default"
 					local level_text = player and (is_player_controlled and ExperienceSettings.get_player_level(player) or UISettings.bots_level_display_text)
 					local portrait_texture = self:_get_hero_portrait(profile_index, career_index)
 					local player_frame_scenegraph_id = "team_" .. team .. "_player_frame_" .. j

@@ -120,6 +120,10 @@ end
 PassiveAbilityRatOgre.stop_leap = function (self)
 	local unit_id = Managers.state.unit_storage:go_id(self._unit)
 
+	if not unit_id then
+		return
+	end
+
 	if not self._is_server and not self._is_remote_player then
 		self._network_transmit:send_rpc_server("rpc_stop_leap", unit_id)
 		self:stop()

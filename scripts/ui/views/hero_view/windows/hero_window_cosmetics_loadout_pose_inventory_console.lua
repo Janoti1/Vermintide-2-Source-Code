@@ -360,8 +360,8 @@ HeroWindowCosmeticsLoadoutPoseInventoryConsole._apply_illusion = function (self)
 
 			local current_weapon_pose_id = backend_items:get_loadout_item_id(self._career_name, "slot_pose")
 			local current_weapon_pose_item = backend_items:get_item_from_id(current_weapon_pose_id)
-			local current_weapon_pose_data = current_weapon_pose_item.data
-			local current_weapon_pose_parent = current_weapon_pose_data.parent
+			local current_weapon_pose_data = current_weapon_pose_item and current_weapon_pose_item.data
+			local current_weapon_pose_parent = current_weapon_pose_data and current_weapon_pose_data.parent
 
 			if blueprint_item_key == current_weapon_pose_parent then
 				local local_player = Managers.player:local_player()
