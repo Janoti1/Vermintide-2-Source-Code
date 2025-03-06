@@ -68,11 +68,12 @@ local function dbprintf(...)
 	end
 end
 
+local CATEGORY = "player"
+
 StatisticsDatabase = class(StatisticsDatabase)
 
 StatisticsDatabase.init = function (self)
 	self.statistics = {}
-	self.categories = {}
 	self.local_statistics = {}
 end
 
@@ -103,41 +104,49 @@ StatisticsDatabase.unregister_network_event_delegate = function (self)
 	self.network_event_delegate = nil
 end
 
-local function init_backend_stat(stat, backend_stats)
-	local name = stat.name
-	local database_name = stat.database_name
+StatisticsDatabase._init_backend_stat = function (self, definition, backend_stats)
+	local initiated_stat
+	local name = definition.name
 
 	if name then
+		local database_name = definition.database_name
+
 		if database_name then
 			local backend_raw_value = backend_stats[database_name]
 
 			if backend_raw_value then
-				stat.persistent_value = convert_from_backend(backend_raw_value, stat.database_type)
-			else
-				stat.persistent_value = 0
-			end
-
-			if type(stat.persistent_value) == "table" then
-				stat.persistent_value_mirror = table.clone(stat.persistent_value)
-			else
-				stat.persistent_value_mirror = stat.persistent_value
+				initiated_stat = self:_init_stat(definition, convert_from_backend(backend_raw_value, definition.database_type))
 			end
 		end
 	else
-		for stat_name, stat_definition in pairs(stat) do
-			init_backend_stat(stat_definition, backend_stats)
+		for stat_name, stat_data in pairs(definition) do
+			local child_stat = self:_init_backend_stat(definition[stat_name], backend_stats)
+
+			if child_stat then
+				initiated_stat = initiated_stat or {}
+				initiated_stat[stat_name] = child_stat
+			end
 		end
 	end
+
+	return initiated_stat
 end
 
-local function init_stat(stat)
-	if stat.value then
-		stat.default_value = stat.value
-	else
-		for stat_name, stat_definition in pairs(stat) do
-			init_stat(stat_definition)
-		end
+StatisticsDatabase._init_stat = function (self, definition, persistent_value)
+	local stat = table.clone(definition)
+
+	stat.default_value = stat.value
+
+	if definition.database_name then
+		stat.persistent_value = persistent_value or stat.value or 0
+		stat.persistent_value_mirror = stat.persistent_value
 	end
+
+	if false then
+		-- Nothing
+	end
+
+	return stat
 end
 
 StatisticsDatabase.register = function (self, id, category, backend_stats)
@@ -145,47 +154,59 @@ StatisticsDatabase.register = function (self, id, category, backend_stats)
 	assert(self.statistics[id] == nil, "There were statistics for %s already.", tostring(id))
 
 	local definitions = StatisticsDefinitions[category]
-	local stats = table.clone(definitions)
-
-	init_stat(stats)
+	local stats
 
 	if backend_stats then
-		init_backend_stat(stats, backend_stats)
+		stats = self:_init_backend_stat(definitions, backend_stats)
 	end
 
-	self.statistics[id] = stats
-	self.categories[id] = category
+	self.statistics[id] = stats or {}
 end
 
 StatisticsDatabase.unregister = function (self, id)
 	dbprintf("StatisticsDatabase: Unregistering id=%s", tostring(id))
 
+	local event_manager = Managers.state.event
+
+	if event_manager then
+		event_manager:trigger("statistics_database_unregister_player", id)
+	end
+
 	self.statistics[id] = nil
-	self.categories[id] = nil
 end
 
 StatisticsDatabase.is_registered = function (self, id)
 	return self.statistics[id]
 end
 
-local function unnetworkified_path(networkified_path)
-	local path = {}
+local path_scratch = {}
 
-	for i, id in ipairs(networkified_path) do
-		path[i] = NetworkLookup.statistics_path_names[id]
+local function unnetworkified_path(networkified_path)
+	local path_n = #networkified_path
+
+	for i = 1, path_n do
+		local name_id = networkified_path[i]
+
+		path_scratch[i] = NetworkLookup.statistics_path_names[name_id]
 	end
 
-	return path
+	for i = path_n + 1, #path_scratch do
+		path_scratch[i] = nil
+	end
+
+	return path_scratch
 end
 
 local function networkified_path(path)
-	local networkified_path = {}
+	local out = {}
 
-	for id, name in ipairs(path) do
-		networkified_path[id] = NetworkLookup.statistics_path_names[name]
+	for i = 1, #path do
+		local name = path[i]
+
+		out[i] = NetworkLookup.statistics_path_names[name]
 	end
 
-	return networkified_path
+	return out
 end
 
 local function cap_sync_value(value)
@@ -210,10 +231,10 @@ local function sync_stat(peer_id, stat_peer_id, stat_local_player_id, path, path
 			local default_value = stat.default_value
 
 			if stat.value ~= default_value or stat.persistent_value and stat.persistent_value ~= default_value then
-				local networkified_path = networkified_path(path)
+				local net_path = networkified_path(path)
 				local channel_id = PEER_ID_TO_CHANNEL[peer_id]
 
-				RPC.rpc_sync_statistics_number(channel_id, stat_peer_id, stat_local_player_id, networkified_path, cap_sync_value(stat.value), cap_sync_value(stat.persistent_value or 0))
+				RPC.rpc_sync_statistics_number(channel_id, stat_peer_id, stat_local_player_id, net_path, cap_sync_value(stat.value), cap_sync_value(stat.persistent_value or 0))
 			end
 		end
 	else
@@ -236,9 +257,9 @@ local function sync_stat_to_server(network_transmit, stat_peer_id, stat_local_pl
 			local default_value = stat.default_value
 
 			if stat.value ~= default_value or stat.persistent_value and stat.persistent_value ~= default_value then
-				local networkified_path = networkified_path(path)
+				local net_path = networkified_path(path)
 
-				network_transmit:send_rpc_server("rpc_sync_statistics_number", stat_peer_id, stat_local_player_id, networkified_path, cap_sync_value(stat.value), cap_sync_value(stat.persistent_value))
+				network_transmit:send_rpc_server("rpc_sync_statistics_number", stat_peer_id, stat_local_player_id, net_path, cap_sync_value(stat.value), cap_sync_value(stat.persistent_value))
 			end
 		end
 	else
@@ -253,26 +274,65 @@ local function sync_stat_to_server(network_transmit, stat_peer_id, stat_local_pl
 end
 
 StatisticsDatabase.hot_join_sync = function (self, peer_id)
-	for stat_id, category in pairs(self.categories) do
-		if category == "player" then
-			local player = Managers.player:player_from_stats_id(stat_id)
-			local stats = self.statistics[stat_id]
+	for stat_id, stats in pairs(self.statistics) do
+		local player = Managers.player:player_from_stats_id(stat_id)
 
-			sync_stat(peer_id, player:network_id(), player:local_player_id(), {}, 1, stats)
-		elseif category == "session" then
-			-- Nothing
+		sync_stat(peer_id, player:network_id(), player:local_player_id(), {}, 1, stats)
+	end
+end
+
+StatisticsDatabase._create_stat = function (self, stats, arg_n, ...)
+	local stat = stats
+	local definition = StatisticsDefinitions[CATEGORY]
+
+	for i = 1, arg_n - 1 do
+		local arg_value = select(i, ...)
+
+		definition = definition[arg_value]
+
+		local next_stat = stat[arg_value] or {}
+
+		stat[arg_value] = next_stat
+		stat = next_stat
+	end
+
+	local last_arg = select(arg_n, ...)
+
+	definition = definition[last_arg]
+
+	local initiated_stat = self:_init_stat(definition)
+
+	stat[last_arg] = initiated_stat
+
+	return initiated_stat
+end
+
+StatisticsDatabase._get_or_create_stat = function (self, id, offset, ...)
+	local stats = self.statistics[id]
+	local stat = stats
+	local arg_n = select("#", ...) - (offset or 0)
+
+	for i = 1, arg_n do
+		local arg_value = select(i, ...)
+
+		stat = stat[arg_value]
+
+		if not stat then
+			return self:_create_stat(stats, arg_n, ...), arg_n
 		end
 	end
+
+	return stat, arg_n
 end
 
 local function reset_stat(stat)
 	if stat.value then
-		if stat.database_type == nil then
-			stat.value = stat.persistent_value or stat.default_value or 0
-		elseif stat.database_type == "hexarray" then
+		if stat.database_type == "hexarray" then
 			for i = 1, #stat.value do
 				stat.value[i] = false
 			end
+		else
+			stat.value = stat.persistent_value or stat.default_value or 0
 		end
 	else
 		for stat_name, stat_definition in pairs(stat) do
@@ -284,9 +344,7 @@ end
 StatisticsDatabase.reset_session_stats = function (self)
 	dbprintf("StatisticsDatabase: Resetting all session stats")
 
-	for id, category in pairs(self.categories) do
-		local stats = self.statistics[id]
-
+	for _, stats in pairs(self.statistics) do
 		reset_stat(stats)
 	end
 
@@ -309,24 +367,15 @@ end
 
 StatisticsDatabase.generate_backend_stats = function (self, id, backend_stats)
 	local stats = self.statistics[id]
-	local category = self.categories[id]
 
-	print("generate_backend_stats", id)
-	assert(next(backend_stats) == nil, "Got non-empty table")
+	assert(table.is_empty(backend_stats), "Got non-empty table")
 	generate_backend_stats(stats, backend_stats)
 
 	return backend_stats
 end
 
 StatisticsDatabase.increment_stat = function (self, id, ...)
-	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
+	local stat = self:_get_or_create_stat(id, 0, ...)
 
 	stat.value = stat.value + 1
 
@@ -345,14 +394,7 @@ StatisticsDatabase.increment_stat = function (self, id, ...)
 end
 
 StatisticsDatabase.decrement_stat = function (self, id, ...)
-	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
+	local stat = self:_get_or_create_stat(id, 0, ...)
 
 	stat.value = stat.value - 1
 
@@ -381,16 +423,8 @@ StatisticsDatabase.increment_stat_and_sync_to_clients = function (self, stat_nam
 end
 
 StatisticsDatabase.modify_stat_by_amount = function (self, id, ...)
-	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n - 1 do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
-
-	local increment_value = select(arg_n, ...)
+	local stat, arg_n = self:_get_or_create_stat(id, 1, ...)
+	local increment_value = select(arg_n + 1, ...)
 	local old_value = stat.value
 
 	stat.value = old_value + increment_value
@@ -409,32 +443,9 @@ StatisticsDatabase.modify_stat_by_amount = function (self, id, ...)
 	dbprintf("StatisticsDatabase: Modified stat %s for id=%s from %f to %f", stat.name, tostring(id), old_value, old_value + increment_value)
 end
 
-StatisticsDatabase.get_array_stat = function (self, id, ...)
-	local array_stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n - 1 do
-		local arg_value = select(i, ...)
-
-		array_stat = array_stat[arg_value]
-	end
-
-	local array_index = select(arg_n, ...)
-
-	return array_stat.value[array_index]
-end
-
 StatisticsDatabase.get_persistent_array_stat = function (self, id, ...)
-	local array_stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n - 1 do
-		local arg_value = select(i, ...)
-
-		array_stat = array_stat[arg_value]
-	end
-
-	local array_index = select(arg_n, ...)
+	local array_stat, last_idx = self:_get_or_create_stat(id, 1, ...)
+	local array_index = select(last_idx + 1, ...)
 
 	if array_stat.persistent_value then
 		return array_stat.persistent_value[array_index]
@@ -444,17 +455,9 @@ StatisticsDatabase.get_persistent_array_stat = function (self, id, ...)
 end
 
 StatisticsDatabase.set_array_stat = function (self, id, ...)
-	local array_stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n - 2 do
-		local arg_value = select(i, ...)
-
-		array_stat = array_stat[arg_value]
-	end
-
-	local array_index = select(arg_n - 1, ...)
-	local new_stat_value = select(arg_n, ...)
+	local array_stat, last_idx = self:_get_or_create_stat(id, 2, ...)
+	local array_index = select(last_idx + 1, ...)
+	local new_stat_value = select(last_idx + 2, ...)
 
 	array_stat.value[array_index] = new_stat_value
 
@@ -466,16 +469,8 @@ StatisticsDatabase.set_array_stat = function (self, id, ...)
 end
 
 StatisticsDatabase.set_stat = function (self, id, ...)
-	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n - 1 do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
-
-	local new_value = select(arg_n, ...)
+	local stat, arg_n = self:_get_or_create_stat(id, 1, ...)
+	local new_value = select(arg_n + 1, ...)
 
 	stat.dirty = stat.value ~= new_value
 	stat.value = new_value
@@ -483,41 +478,14 @@ StatisticsDatabase.set_stat = function (self, id, ...)
 end
 
 StatisticsDatabase.set_non_persistent_stat = function (self, id, ...)
-	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n - 1 do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
-
-	local new_value = select(arg_n, ...)
+	local stat, arg_n = self:_get_or_create_stat(id, 1, ...)
+	local new_value = select(arg_n + 1, ...)
 
 	stat.dirty = stat.value ~= new_value
 	stat.value = new_value
 end
 
-StatisticsDatabase.get_stat = function (self, id, ...)
-	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
-
-	for i = 1, arg_n do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
-
-	return stat.value
-end
-
-StatisticsDatabase.has_stat = function (self, id, ...)
-	local stat = self.statistics[id]
-
-	if not stat then
-		return false
-	end
-
+StatisticsDatabase._get_stat = function (self, stat, ...)
 	local arg_n = select("#", ...)
 
 	for i = 1, arg_n do
@@ -526,46 +494,43 @@ StatisticsDatabase.has_stat = function (self, id, ...)
 		stat = stat[arg_value]
 
 		if not stat then
-			return false
+			return nil
 		end
 	end
 
-	return true
+	return stat
+end
+
+StatisticsDatabase.get_stat = function (self, id, ...)
+	local stat = self.statistics[id]
+
+	stat = self:_get_stat(stat, ...)
+
+	return stat and stat.value or 0
+end
+
+StatisticsDatabase.has_stat = function (self, ...)
+	local definition = StatisticsDefinitions[CATEGORY]
+
+	return not not self:_get_stat(definition, ...)
 end
 
 StatisticsDatabase.get_persistent_stat = function (self, id, ...)
 	local stat = self.statistics[id]
-	local arg_n = select("#", ...)
 
-	for i = 1, arg_n do
-		local arg_value = select(i, ...)
-
-		stat = stat[arg_value]
-	end
+	stat = self:_get_stat(stat, ...)
 
 	if stat then
 		return stat.persistent_value
-	end
+	else
+		local definition = self:_get_stat(StatisticsDefinitions[CATEGORY], ...)
 
-	local error = "No persistent stat found for arguments \""
-
-	for i = 1, arg_n do
-		error = error .. "%s"
-
-		if i < arg_n then
-			error = error .. ","
-		end
-
-		if i ~= arg_n then
-			error = error .. " "
+		if definition.database_name then
+			return definition.value
 		end
 	end
 
-	error = error .. "\""
-
-	fassert(stat, error, unpack({
-		...
-	}))
+	return nil
 end
 
 StatisticsDatabase.sync_stats_to_server = function (self, stat_id, peer_id, local_player_id, network_transmit)
@@ -673,11 +638,7 @@ StatisticsDatabase.rpc_sync_statistics_number = function (self, channel_id, peer
 	local player = Managers.player:player(peer_id, local_player_id)
 	local stats_id = player:stats_id()
 	local path = unnetworkified_path(statistics_path_names)
-	local stat = self.statistics[stats_id]
-
-	for i = 1, #path do
-		stat = stat[path[i]]
-	end
+	local stat = self:_get_or_create_stat(stats_id, 0, unpack(path))
 
 	stat.value = value
 
@@ -727,12 +688,12 @@ end
 local function apply_persistant_stat(stat)
 	if stat.value then
 		if stat.persistent_value and stat.dirty then
-			if stat.database_type == nil then
-				stat.persistent_value_mirror = stat.persistent_value
-			elseif stat.database_type == "hexarray" then
+			if stat.database_type == "hexarray" then
 				for i = 1, #stat.persistent_value do
 					stat.persistent_value_mirror[i] = stat.persistent_value[i]
 				end
+			else
+				stat.persistent_value_mirror = stat.persistent_value
 			end
 		end
 	else
@@ -745,9 +706,7 @@ end
 StatisticsDatabase.apply_persistant_stats = function (self)
 	dbprintf("StatisticsDatabase: Applying all session stats")
 
-	for id, category in pairs(self.categories) do
-		local stats = self.statistics[id]
-
+	for _, stats in pairs(self.statistics) do
 		apply_persistant_stat(stats)
 	end
 end
@@ -755,14 +714,14 @@ end
 local function reset_persistant_stat(stat)
 	if stat.value then
 		if stat.persistent_value and stat.dirty then
-			if stat.database_type == nil then
-				stat.persistent_value = stat.persistent_value_mirror
-				stat.value = stat.persistent_value or stat.default_value or 0
-			elseif stat.database_type == "hexarray" then
+			if stat.database_type == "hexarray" then
 				for i = 1, #stat.persistent_value do
 					stat.persistent_value[i] = stat.persistent_value_mirror[i]
 					stat.value[i] = stat.persistent_value[i] or false
 				end
+			else
+				stat.persistent_value = stat.persistent_value_mirror
+				stat.value = stat.persistent_value or stat.default_value or 0
 			end
 
 			stat.dirty = false
@@ -777,7 +736,7 @@ end
 StatisticsDatabase.reset_persistant_stats = function (self)
 	dbprintf("StatisticsDatabase: Reseting all session stats")
 
-	for id, category in pairs(self.categories) do
+	for id, category in pairs(self.statistics) do
 		local stats = self.statistics[id]
 
 		reset_persistant_stat(stats)
@@ -787,6 +746,10 @@ end
 local DB_UNIT_TEST = false
 
 if DB_UNIT_TEST then
+	local real_category = CATEGORY
+
+	CATEGORY = "unit_test"
+
 	local old_debug = script_data.statistics_debug
 
 	script_data.statistics_debug = true
@@ -814,13 +777,9 @@ if DB_UNIT_TEST then
 	sdb:modify_stat_by_amount("player1", "profiles", "witch_hunter", "kills_total", 5)
 	assert(sdb:get_stat("player1", "kills_total") == 5)
 	assert(sdb:get_stat("player1", "profiles", "witch_hunter", "kills_total") == 5)
-	assert(sdb:get_array_stat("player1", "lorebook_unlocks", 1) == false)
-	sdb:set_array_stat("player1", "lorebook_unlocks", 1, true)
-	assert(sdb:get_array_stat("player1", "lorebook_unlocks", 1) == true)
 	sdb:reset_session_stats()
 	assert(sdb:get_stat("player1", "kills_total") == 0)
 	assert(sdb:get_stat("player1", "profiles", "witch_hunter", "kills_total") == 0)
-	assert(sdb:get_array_stat("player1", "lorebook_unlocks", 1) == false)
 
 	local backend_stats_temp = {}
 
@@ -831,4 +790,5 @@ if DB_UNIT_TEST then
 	sdb:destroy()
 
 	script_data.statistics_debug = old_debug
+	CATEGORY = real_category
 end

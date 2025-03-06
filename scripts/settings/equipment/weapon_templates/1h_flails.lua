@@ -1469,11 +1469,9 @@ weapon_template.buffs = {
 }
 weapon_template.attack_meta_data = {
 	tap_attack = {
-		penetrating = false,
 		arc = 1
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 2,
 		attack_chain = {
 			start_sub_action_name = "default",

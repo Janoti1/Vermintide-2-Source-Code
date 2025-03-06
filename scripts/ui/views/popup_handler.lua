@@ -1476,7 +1476,7 @@ PopupHandler.acquire_input = function (self, ignore_cursor_stack)
 	}, 1, "popup", "PopupHandler")
 
 	if not ignore_cursor_stack then
-		ShowCursorStack.push()
+		ShowCursorStack.show("PopupHandler")
 	end
 end
 
@@ -1491,7 +1491,7 @@ PopupHandler.release_input = function (self, ignore_cursor_stack)
 	}, 1, "popup", "PopupHandler", block_reason)
 
 	if not ignore_cursor_stack then
-		ShowCursorStack.pop()
+		ShowCursorStack.hide("PopupHandler")
 	end
 end
 

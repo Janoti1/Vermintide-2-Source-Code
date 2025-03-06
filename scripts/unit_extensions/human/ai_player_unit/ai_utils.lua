@@ -1639,7 +1639,7 @@ AiUtils.get_combat_conditions = function (blackboard)
 
 		return {
 			enemy_arc = num_enemies > 3 and 2 or num_enemies > 1 and 1 or 0,
-			target_armor = target_breed and target_breed.armor_category or 1
+			target_armor = target_breed and (target_breed.primary_armor_category or target_breed.armor_category) or 1
 		}
 	end
 
@@ -1650,7 +1650,6 @@ local DEFAULT_MAXIMAL_MELEE_RANGE = 5
 local DEFAULT_ATTACK_META_DATA = {
 	tap_attack = {
 		speed_mod = 1.2,
-		penetrating = false,
 		arc = 0,
 		max_range = DEFAULT_MAXIMAL_MELEE_RANGE,
 		armor_modifiers = {
@@ -1664,7 +1663,6 @@ local DEFAULT_ATTACK_META_DATA = {
 	},
 	hold_attack = {
 		speed_mod = 0.8,
-		penetrating = true,
 		arc = 2,
 		max_range = DEFAULT_MAXIMAL_MELEE_RANGE,
 		armor_modifiers = {
@@ -1693,11 +1691,11 @@ local ARMOR_MOD_IMPORTANCE = {
 }
 local ARMOR_ARC_MOD = {
 	1,
+	-1,
 	0,
 	0,
 	0,
-	0,
-	0
+	-2
 }
 local math_abs = math.abs
 

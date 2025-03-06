@@ -1368,12 +1368,11 @@ AIBotGroupSystem._update_urgent_targets = function (self, dt, t)
 end
 
 local URGENT_TARGET_REVIVE_MIN_DISTANCE_SQ = {
-	skaven_ratling_gunner = 25,
 	skaven_pack_master = 49,
 	chaos_corruptor_sorcerer = 100,
 	skaven_poison_wind_globadier = 25,
 	skaven_warpfire_thrower = 100,
-	chaos_plague_sorcerer = 25
+	skaven_ratling_gunner = 25
 }
 
 AIBotGroupSystem._can_revive_with_urgent_target = function (self, bot_unit, self_position, blackboard, urgent_target, t)

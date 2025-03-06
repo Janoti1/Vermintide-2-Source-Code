@@ -102,7 +102,7 @@ CareerSettings.vs_gutter_runner = {
 			description = "vs_htp_gutter_pounce_description_line1",
 			name = "pounce",
 			icon = "gutter_runner_01",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			gamepad_input = "action_one",
 			title = "vs_htp_gutter_pounce"
 		},
@@ -110,7 +110,7 @@ CareerSettings.vs_gutter_runner = {
 			description = "vs_htp_gutter_smoke_description_line1",
 			name = "foff",
 			icon = "gutter_runner_02",
-			input_action = "weapon_reload",
+			input_action = "dark_pact_reload",
 			gamepad_input = "weapon_reload_input",
 			title = "vs_htp_gutter_smoke"
 		}
@@ -208,7 +208,7 @@ CareerSettings.vs_poison_wind_globadier = {
 			description = "vs_htp_globadier_globe_description_line2",
 			name = "gas",
 			icon = "globadier_01",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			gamepad_input = "action_one",
 			title = "vs_htp_globadier_globe"
 		}
@@ -303,7 +303,7 @@ CareerSettings.vs_packmaster = {
 			description = "vs_htp_packmaster_hook_description_line1",
 			name = "grab",
 			icon = "packmaster_01",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			gamepad_input = "action_one",
 			title = "vs_htp_packmaster_hook",
 			double_input = true
@@ -399,7 +399,7 @@ CareerSettings.vs_ratling_gunner = {
 	career_info_settings = {
 		{
 			description = "vs_htp_ratling_gun_description_line1",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			icon = "ratling_gunner_01",
 			gamepad_input = "action_one",
 			title = "vs_htp_ratling_rapidfire"
@@ -408,7 +408,7 @@ CareerSettings.vs_ratling_gunner = {
 			description = "vs_htp_ratling_reload_description_line1",
 			name = "fire",
 			icon = "ratling_gunner_03",
-			input_action = "weapon_reload_hold",
+			input_action = "dark_pact_reload_hold",
 			gamepad_input = "weapon_reload_input",
 			title = "vs_htp_ratling_reload"
 		}
@@ -501,7 +501,7 @@ CareerSettings.vs_warpfire_thrower = {
 			description = "vs_htp_warpfire_blast_description_line1",
 			name = "fire",
 			icon = "warpfire_thrower_01",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			gamepad_input = "action_one",
 			title = "vs_htp_wapfire_blast"
 		}
@@ -592,7 +592,7 @@ CareerSettings.vs_chaos_troll = {
 	career_info_settings = {
 		{
 			description = "vs_htp_troll_melee_description_line1",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			icon = "troll_01",
 			gamepad_input = "action_one",
 			title = "vs_htp_troll_melee"
@@ -601,7 +601,7 @@ CareerSettings.vs_chaos_troll = {
 			description = "vs_htp_troll_vomit_description_line1",
 			name = "vomit",
 			icon = "troll_02",
-			input_action = "action_two",
+			input_action = "dark_pact_action_two",
 			gamepad_input = "action_two",
 			title = "vs_htp_troll_vomit"
 		}
@@ -696,7 +696,7 @@ CareerSettings.vs_rat_ogre = {
 	career_info_settings = {
 		{
 			description = "vs_htp_rat_ogre_melee_description_line1",
-			input_action = "action_one",
+			input_action = "dark_pact_action_one",
 			icon = "rat_ogre_01",
 			gamepad_input = "action_one",
 			title = "vs_htp_rat_ogre_melee"
@@ -705,7 +705,7 @@ CareerSettings.vs_rat_ogre = {
 			description = "vs_htp_rat_ogre_leap_description_line1",
 			name = "ogre_jump",
 			icon = "rat_ogre_02",
-			input_action = "action_two",
+			input_action = "dark_pact_action_two",
 			gamepad_input = "action_two",
 			title = "vs_htp_rat_ogre_leap"
 		}

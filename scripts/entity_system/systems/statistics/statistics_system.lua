@@ -6,8 +6,7 @@ local extensions = {
 	"StatisticsExtension"
 }
 local CLIENT_RPCS = {
-	"rpc_register_kill",
-	"rpc_set_unsigned_number_session_stat"
+	"rpc_register_kill"
 }
 
 StatisticsSystem.init = function (self, context, name)
@@ -84,25 +83,7 @@ StatisticsSystem.update = function (self, context, t)
 end
 
 StatisticsSystem.hot_join_sync = function (self, sender)
-	local db = self.extension_init_context.statistics_db
-
-	for stat_name, data in pairs(StatisticsDefinitions.session) do
-		local sync_rpc = data.hot_join_sync_rpc
-
-		if sync_rpc then
-			local stat_id = NetworkLookup.session_stats[stat_name]
-			local value = db:get_stat("session", stat_name)
-
-			self.network_transmit:send_rpc(sync_rpc, sender, stat_id, value)
-		end
-	end
-end
-
-StatisticsSystem.rpc_set_unsigned_number_session_stat = function (self, channel_id, stat_id, value)
-	local stat = NetworkLookup.session_stats[stat_id]
-	local statistics_db = self.extension_init_context.statistics_db
-
-	statistics_db:set_stat("session", stat, value)
+	return
 end
 
 local TEMP_ARGS = {}

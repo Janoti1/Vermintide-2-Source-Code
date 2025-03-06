@@ -1,7 +1,3 @@
-local function count_bosses_alive()
-	return #Managers.state.conflict:alive_bosses()
-end
-
 GenericTerrorEvents = {
 	encampment = {
 		{

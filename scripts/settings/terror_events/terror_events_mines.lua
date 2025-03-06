@@ -1,7 +1,6 @@
-local function count_event_breed(breed_name)
-	return Managers.state.conflict:count_units_by_breed_during_event(breed_name)
-end
-
+local TerrorEventUtils = require("scripts/settings/terror_events/terror_event_utils")
+local count_event_breed = TerrorEventUtils.count_event_breed
+local HARDEST = TerrorEventUtils.HARDEST
 local weighted_random_terror_events = {
 	mines_end_event_loop_02 = {
 		"mines_end_event_loop_02_chaos",
@@ -18,8 +17,6 @@ local weighted_random_terror_events = {
 		1
 	}
 }
-local HARDEST = 5
-local CATACLYSM = 6
 local terror_event_blueprints = {
 	mines_enable_carry_bots = {
 		{
@@ -553,4 +550,7 @@ local terror_event_blueprints = {
 	}
 }
 
-return terror_event_blueprints, weighted_random_terror_events
+return {
+	terror_event_blueprints,
+	weighted_random_terror_events
+}

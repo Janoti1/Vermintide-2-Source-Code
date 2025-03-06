@@ -32,7 +32,7 @@ end
 
 GameModeManager = class(GameModeManager)
 
-GameModeManager.init = function (self, world, lobby_host, lobby_client, network_event_delegate, statistics_db, game_mode_key, network_server, network_transmit, profile_synchronizer, game_mode_settings)
+GameModeManager.init = function (self, world, lobby_host, lobby_client, network_event_delegate, statistics_db, game_mode_key, network_handler, network_transmit, profile_synchronizer, game_mode_settings)
 	local level_key = Managers.level_transition_handler:get_current_level_keys()
 
 	self._lobby_host = lobby_host
@@ -47,7 +47,7 @@ GameModeManager.init = function (self, world, lobby_host, lobby_client, network_
 	self._end_reason = nil
 	self._ready_for_transition = nil
 	self.statistics_db = statistics_db
-	self.network_server = network_server
+	self._network_handler = network_handler
 	self._network_transmit = network_transmit
 	self._profile_synchronizer = profile_synchronizer
 	self._have_signalled_ready_to_transition = false
@@ -93,7 +93,7 @@ GameModeManager.init = function (self, world, lobby_host, lobby_client, network_
 
 	local has_local_client = not DEDICATED_SERVER
 
-	self._mutator_handler = MutatorHandler:new(mutators, self.is_server, has_local_client, world, network_event_delegate, network_transmit)
+	self._mutator_handler = MutatorHandler:new(mutators, self.is_server, network_handler, has_local_client, world, network_event_delegate, network_transmit)
 	self._looping_event_timers = {}
 	self._disable_spawning_reasons = {}
 
@@ -272,6 +272,10 @@ end
 
 GameModeManager.mutators = function (self)
 	return self._mutator_handler:mutators()
+end
+
+GameModeManager.initialized_mutator_map = function (self)
+	return self._mutator_handler:initialized_mutator_map()
 end
 
 GameModeManager.evaluate_end_zone_activation_conditions = function (self)
@@ -576,7 +580,7 @@ GameModeManager._init_game_mode = function (self, game_mode_key, game_mode_setti
 		cprintf("[GameModeManager] Changing game mode to: %s", game_mode_key)
 	end
 
-	self._game_mode = class:new(settings, self._world, self.network_server, self.is_server, self._profile_synchronizer, self._level_key, self.statistics_db, game_mode_settings)
+	self._game_mode = class:new(settings, self._world, self._network_handler, self.is_server, self._profile_synchronizer, self._level_key, self.statistics_db, game_mode_settings)
 end
 
 GameModeManager.host_player_spawned = function (self)
@@ -754,7 +758,7 @@ GameModeManager.update = function (self, dt, t)
 end
 
 GameModeManager._update_initial_join = function (self, t, dt)
-	if self.network_server:are_all_peers_ingame() then
+	if self._network_handler:are_all_peers_ingame() then
 		self._initial_peers_ready = true
 
 		self._game_mode:all_peers_ready()
@@ -801,7 +805,7 @@ GameModeManager.server_update = function (self, dt, t)
 					Managers.mechanism:progress_state()
 				end
 
-				self.network_server:enter_post_game()
+				self._network_handler:enter_post_game()
 
 				self._end_conditions_met = true
 				self._end_reason = reason

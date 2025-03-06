@@ -60,7 +60,7 @@ TwitchView._create_ui_elements = function (self)
 end
 
 TwitchView.on_enter = function (self)
-	ShowCursorStack.push()
+	ShowCursorStack.show("TwitchView")
 	self:set_active(true)
 end
 
@@ -290,7 +290,7 @@ TwitchView._draw = function (self, dt, t)
 end
 
 TwitchView.on_exit = function (self)
-	ShowCursorStack.pop()
+	ShowCursorStack.hide("TwitchView")
 	self:set_active(false)
 end
 

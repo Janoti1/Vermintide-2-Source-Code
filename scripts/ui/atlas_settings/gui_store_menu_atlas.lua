@@ -286,11 +286,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.213379,
-			0.445313
+			0.509766
 		},
 		uv11 = {
 			0.22998,
-			0.469727
+			0.53418
 		}
 	},
 	store_preview_info_career_icon_border = {
@@ -314,11 +314,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.333496,
-			0.914063
+			0.955078
 		},
 		uv11 = {
 			0.359375,
-			0.939941
+			0.980957
 		}
 	},
 	store_menu_divider = {
@@ -335,7 +335,63 @@ store_menu_atlas = {
 			0.02002
 		}
 	},
-	store_tag_icon_dr_engineer_exotic = {
+	store_tag_icon_es_questingknight = {
+		size = {
+			47,
+			56
+		},
+		uv00 = {
+			0.333496,
+			0.914063
+		},
+		uv11 = {
+			0.356445,
+			0.941406
+		}
+	},
+	store_tag_icon_pose_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.57959,
+			0.746582
+		},
+		uv11 = {
+			0.606934,
+			0.773926
+		}
+	},
+	store_tag_icon_pactsworn_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.57959,
+			0.717285
+		},
+		uv11 = {
+			0.606934,
+			0.744629
+		}
+	},
+	store_tag_icon_dr_slayer_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.57959,
+			0.687988
+		},
+		uv11 = {
+			0.606934,
+			0.715332
+		}
+	},
+	store_tag_icon_bw_necromancer_unique = {
 		size = {
 			56,
 			56
@@ -349,7 +405,7 @@ store_menu_atlas = {
 			0.686035
 		}
 	},
-	store_tag_icon_pose_unique = {
+	store_tag_icon_dr_ranger_common = {
 		size = {
 			56,
 			56
@@ -363,7 +419,7 @@ store_menu_atlas = {
 			0.656738
 		}
 	},
-	store_tag_icon_pactsworn_unique = {
+	store_tag_icon_wh_zealot_unique = {
 		size = {
 			56,
 			56
@@ -377,259 +433,7 @@ store_menu_atlas = {
 			0.627441
 		}
 	},
-	store_tag_icon_bw_unchained = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.960449,
-			0.570801
-		},
-		uv11 = {
-			0.987793,
-			0.598145
-		}
-	},
-	store_tag_icon_hat_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.931152,
-			0.570801
-		},
-		uv11 = {
-			0.958496,
-			0.598145
-		}
-	},
-	store_tag_icon_bw_scholar_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.901855,
-			0.570801
-		},
-		uv11 = {
-			0.929199,
-			0.598145
-		}
-	},
-	store_tag_icon_pose_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.872559,
-			0.570801
-		},
-		uv11 = {
-			0.899902,
-			0.598145
-		}
-	},
-	store_tag_icon_dr_engineer_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.843262,
-			0.570801
-		},
-		uv11 = {
-			0.870605,
-			0.598145
-		}
-	},
-	store_tag_icon_bw_necromancer_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.813965,
-			0.570801
-		},
-		uv11 = {
-			0.841309,
-			0.598145
-		}
-	},
-	store_tag_icon_bw_unchained_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.784668,
-			0.570801
-		},
-		uv11 = {
-			0.812012,
-			0.598145
-		}
-	},
-	store_tag_icon_dr_ranger_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.755371,
-			0.570801
-		},
-		uv11 = {
-			0.782715,
-			0.598145
-		}
-	},
-	store_tag_icon_dr_ironbreaker_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.726074,
-			0.570801
-		},
-		uv11 = {
-			0.753418,
-			0.598145
-		}
-	},
-	store_tag_icon_weapon_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.696777,
-			0.570801
-		},
-		uv11 = {
-			0.724121,
-			0.598145
-		}
-	},
-	store_tag_icon_bw_scholar_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.66748,
-			0.570801
-		},
-		uv11 = {
-			0.694824,
-			0.598145
-		}
-	},
-	store_tag_icon_skin_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.638184,
-			0.570801
-		},
-		uv11 = {
-			0.665527,
-			0.598145
-		}
-	},
-	store_tag_icon_dr_ironbreaker_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.608887,
-			0.570801
-		},
-		uv11 = {
-			0.63623,
-			0.598145
-		}
-	},
-	store_tag_icon_skin_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.57959,
-			0.570801
-		},
-		uv11 = {
-			0.606934,
-			0.598145
-		}
-	},
-	store_tag_icon_bw_unchained_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.95166
-		},
-		uv11 = {
-			0.577637,
-			0.979004
-		}
-	},
-	store_tag_icon_wh_zealot_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.922363
-		},
-		uv11 = {
-			0.577637,
-			0.949707
-		}
-	},
-	store_tag_icon_portrait_frame_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.893066
-		},
-		uv11 = {
-			0.577637,
-			0.92041
-		}
-	},
-	store_tag_icon_es_mercenary_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.86377
-		},
-		uv11 = {
-			0.577637,
-			0.891113
-		}
-	},
-	store_tag_icon_es_questingknight = {
+	store_tag_icon_es_questingknight_promo = {
 		size = {
 			47,
 			56
@@ -643,6 +447,202 @@ store_menu_atlas = {
 			0.900391
 		}
 	},
+	store_tag_icon_pose_promo = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.960449,
+			0.570801
+		},
+		uv11 = {
+			0.987793,
+			0.598145
+		}
+	},
+	store_tag_icon_es_knight_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.931152,
+			0.570801
+		},
+		uv11 = {
+			0.958496,
+			0.598145
+		}
+	},
+	store_tag_icon_bw_scholar = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.901855,
+			0.570801
+		},
+		uv11 = {
+			0.929199,
+			0.598145
+		}
+	},
+	store_tag_icon_hat_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.872559,
+			0.570801
+		},
+		uv11 = {
+			0.899902,
+			0.598145
+		}
+	},
+	store_tag_icon_portrait_frame = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.843262,
+			0.570801
+		},
+		uv11 = {
+			0.870605,
+			0.598145
+		}
+	},
+	store_tag_icon_dr_slayer = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.813965,
+			0.570801
+		},
+		uv11 = {
+			0.841309,
+			0.598145
+		}
+	},
+	store_tag_icon_pose_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.784668,
+			0.570801
+		},
+		uv11 = {
+			0.812012,
+			0.598145
+		}
+	},
+	store_tag_icon_hat_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.755371,
+			0.570801
+		},
+		uv11 = {
+			0.782715,
+			0.598145
+		}
+	},
+	store_tag_icon_skin_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.726074,
+			0.570801
+		},
+		uv11 = {
+			0.753418,
+			0.598145
+		}
+	},
+	store_tag_icon_es_huntsman_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.696777,
+			0.570801
+		},
+		uv11 = {
+			0.724121,
+			0.598145
+		}
+	},
+	store_tag_icon_es_mercenary_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.66748,
+			0.570801
+		},
+		uv11 = {
+			0.694824,
+			0.598145
+		}
+	},
+	store_tag_icon_es_huntsman = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.638184,
+			0.570801
+		},
+		uv11 = {
+			0.665527,
+			0.598145
+		}
+	},
+	store_tag_icon_dr_engineer = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.608887,
+			0.570801
+		},
+		uv11 = {
+			0.63623,
+			0.598145
+		}
+	},
+	store_tag_icon_dr_engineer_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.57959,
+			0.570801
+		},
+		uv11 = {
+			0.606934,
+			0.598145
+		}
+	},
 	store_tag_icon_pactsworn_promo = {
 		size = {
 			56,
@@ -650,11 +650,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.550293,
-			0.834473
+			0.95166
 		},
 		uv11 = {
 			0.577637,
-			0.861816
+			0.979004
 		}
 	},
 	store_tag_icon_pactsworn_rare = {
@@ -664,434 +664,14 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.550293,
-			0.805176
-		},
-		uv11 = {
-			0.577637,
-			0.83252
-		}
-	},
-	store_tag_icon_dr_engineer_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.775879
-		},
-		uv11 = {
-			0.577637,
-			0.803223
-		}
-	},
-	store_tag_icon_skin_magic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.746582
-		},
-		uv11 = {
-			0.577637,
-			0.773926
-		}
-	},
-	store_tag_icon_bw_unchained_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.717285
-		},
-		uv11 = {
-			0.577637,
-			0.744629
-		}
-	},
-	store_tag_icon_pose_magic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.687988
-		},
-		uv11 = {
-			0.577637,
-			0.715332
-		}
-	},
-	store_tag_icon_bw_scholar_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.658691
-		},
-		uv11 = {
-			0.577637,
-			0.686035
-		}
-	},
-	store_tag_icon_portrait_frame_promo = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.629395
-		},
-		uv11 = {
-			0.577637,
-			0.656738
-		}
-	},
-	store_tag_icon_dr_ironbreaker = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.600098
-		},
-		uv11 = {
-			0.577637,
-			0.627441
-		}
-	},
-	store_tag_icon_weapon_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.570801
-		},
-		uv11 = {
-			0.577637,
-			0.598145
-		}
-	},
-	store_tag_icon_dlc = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.960449,
-			0.541504
-		},
-		uv11 = {
-			0.987793,
-			0.568848
-		}
-	},
-	store_tag_icon_bw_necromancer_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.931152,
-			0.541504
-		},
-		uv11 = {
-			0.958496,
-			0.568848
-		}
-	},
-	store_tag_icon_dr_ironbreaker_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.901855,
-			0.541504
-		},
-		uv11 = {
-			0.929199,
-			0.568848
-		}
-	},
-	store_tag_icon_portrait_frame_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.872559,
-			0.541504
-		},
-		uv11 = {
-			0.899902,
-			0.568848
-		}
-	},
-	store_tag_icon_bw_scholar_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.843262,
-			0.541504
-		},
-		uv11 = {
-			0.870605,
-			0.568848
-		}
-	},
-	store_tag_icon_we_shade = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.813965,
-			0.541504
-		},
-		uv11 = {
-			0.841309,
-			0.568848
-		}
-	},
-	store_tag_icon_wh_zealot_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.784668,
-			0.541504
-		},
-		uv11 = {
-			0.812012,
-			0.568848
-		}
-	},
-	store_tag_icon_pose_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.755371,
-			0.541504
-		},
-		uv11 = {
-			0.782715,
-			0.568848
-		}
-	},
-	store_tag_icon_bw_unchained_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.726074,
-			0.541504
-		},
-		uv11 = {
-			0.753418,
-			0.568848
-		}
-	},
-	store_tag_icon_pose_promo = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.696777,
-			0.541504
-		},
-		uv11 = {
-			0.724121,
-			0.568848
-		}
-	},
-	store_tag_icon_es_huntsman_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.66748,
-			0.541504
-		},
-		uv11 = {
-			0.694824,
-			0.568848
-		}
-	},
-	store_tag_icon_pactsworn_magic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.638184,
-			0.541504
-		},
-		uv11 = {
-			0.665527,
-			0.568848
-		}
-	},
-	store_tag_icon_es_questingknight_magic = {
-		size = {
-			47,
-			56
-		},
-		uv00 = {
-			0.852051,
-			0.382813
-		},
-		uv11 = {
-			0.875,
-			0.410156
-		}
-	},
-	store_tag_icon_bw_scholar = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.608887,
-			0.541504
-		},
-		uv11 = {
-			0.63623,
-			0.568848
-		}
-	},
-	store_tag_icon_es_knight_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.57959,
-			0.541504
-		},
-		uv11 = {
-			0.606934,
-			0.568848
-		}
-	},
-	store_tag_icon_pactsworn_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.541504
-		},
-		uv11 = {
-			0.577637,
-			0.568848
-		}
-	},
-	store_tag_icon_bw_necromancer_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.95166
-		},
-		uv11 = {
-			0.54834,
-			0.979004
-		}
-	},
-	store_tag_icon_portrait_frame = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
 			0.922363
 		},
 		uv11 = {
-			0.54834,
+			0.577637,
 			0.949707
 		}
 	},
-	store_tag_icon_es_mercenary_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.893066
-		},
-		uv11 = {
-			0.54834,
-			0.92041
-		}
-	},
-	store_tag_icon_pactsworn_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.86377
-		},
-		uv11 = {
-			0.54834,
-			0.891113
-		}
-	},
-	store_tag_icon_bw_necromancer_magic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.834473
-		},
-		uv11 = {
-			0.54834,
-			0.861816
-		}
-	},
-	store_tag_icon_pose_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.805176
-		},
-		uv11 = {
-			0.54834,
-			0.83252
-		}
-	},
-	store_tag_icon_es_questingknight_common = {
+	store_tag_icon_es_questingknight_exotic = {
 		size = {
 			47,
 			56
@@ -1105,49 +685,77 @@ store_menu_atlas = {
 			0.995605
 		}
 	},
-	store_tag_icon_bundle = {
+	store_tag_icon_skin_magic = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.520996,
+			0.550293,
+			0.893066
+		},
+		uv11 = {
+			0.577637,
+			0.92041
+		}
+	},
+	store_tag_icon_es_huntsman_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.86377
+		},
+		uv11 = {
+			0.577637,
+			0.891113
+		}
+	},
+	store_tag_icon_pose_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.834473
+		},
+		uv11 = {
+			0.577637,
+			0.861816
+		}
+	},
+	store_tag_icon_dr_ranger_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.805176
+		},
+		uv11 = {
+			0.577637,
+			0.83252
+		}
+	},
+	store_tag_icon_portrait_frame_magic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
 			0.775879
 		},
 		uv11 = {
-			0.54834,
+			0.577637,
 			0.803223
 		}
 	},
-	store_tag_icon_bw_necromancer_promo = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.746582
-		},
-		uv11 = {
-			0.54834,
-			0.773926
-		}
-	},
-	store_tag_icon_pose_plentiful = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
-			0.717285
-		},
-		uv11 = {
-			0.54834,
-			0.744629
-		}
-	},
-	store_tag_icon_es_questingknight_rare = {
+	store_tag_icon_es_questingknight_unique = {
 		size = {
 			47,
 			56
@@ -1161,18 +769,32 @@ store_menu_atlas = {
 			0.966309
 		}
 	},
-	store_tag_icon_es_mercenary_unique = {
+	store_tag_icon_weapon_common = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.520996,
-			0.687988
+			0.550293,
+			0.746582
 		},
 		uv11 = {
-			0.54834,
-			0.715332
+			0.577637,
+			0.773926
+		}
+	},
+	store_tag_icon_es_knight_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.717285
+		},
+		uv11 = {
+			0.577637,
+			0.744629
 		}
 	},
 	store_tag_icon_hat_magic = {
@@ -1181,40 +803,124 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.520996,
+			0.550293,
+			0.687988
+		},
+		uv11 = {
+			0.577637,
+			0.715332
+		}
+	},
+	store_tag_icon_hat_plentiful = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
 			0.658691
 		},
 		uv11 = {
-			0.54834,
+			0.577637,
 			0.686035
 		}
 	},
-	store_tag_icon_dr_slayer_rare = {
+	store_tag_icon_weapon_exotic = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.520996,
+			0.550293,
 			0.629395
 		},
 		uv11 = {
-			0.54834,
+			0.577637,
 			0.656738
 		}
 	},
-	store_tag_icon_portrait_frame_magic = {
+	store_tag_icon_dr_slayer_exotic = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.520996,
+			0.550293,
 			0.600098
 		},
 		uv11 = {
-			0.54834,
+			0.577637,
 			0.627441
+		}
+	},
+	store_tag_icon_wh_zealot_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.570801
+		},
+		uv11 = {
+			0.577637,
+			0.598145
+		}
+	},
+	store_tag_icon_dr_ironbreaker_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.960449,
+			0.541504
+		},
+		uv11 = {
+			0.987793,
+			0.568848
+		}
+	},
+	store_tag_icon_portrait_frame_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.931152,
+			0.541504
+		},
+		uv11 = {
+			0.958496,
+			0.568848
+		}
+	},
+	store_tag_icon_es_knight = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.901855,
+			0.541504
+		},
+		uv11 = {
+			0.929199,
+			0.568848
+		}
+	},
+	store_tag_icon_pose_plentiful = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.872559,
+			0.541504
+		},
+		uv11 = {
+			0.899902,
+			0.568848
 		}
 	},
 	store_tag_icon_bw_necromancer = {
@@ -1223,40 +929,26 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.520996,
-			0.570801
-		},
-		uv11 = {
-			0.54834,
-			0.598145
-		}
-	},
-	store_tag_icon_bundle_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.520996,
+			0.843262,
 			0.541504
 		},
 		uv11 = {
-			0.54834,
+			0.870605,
 			0.568848
 		}
 	},
-	store_tag_icon_dr_engineer = {
+	store_tag_icon_pose_common = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.960449,
-			0.512207
+			0.813965,
+			0.541504
 		},
 		uv11 = {
-			0.987793,
-			0.539551
+			0.841309,
+			0.568848
 		}
 	},
 	store_tag_icon_bw_adept = {
@@ -1265,54 +957,26 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.931152,
-			0.512207
+			0.784668,
+			0.541504
 		},
 		uv11 = {
-			0.958496,
-			0.539551
+			0.812012,
+			0.568848
 		}
 	},
-	store_tag_icon_dr_engineer_common = {
+	store_tag_icon_hat_unique = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.901855,
-			0.512207
+			0.755371,
+			0.541504
 		},
 		uv11 = {
-			0.929199,
-			0.539551
-		}
-	},
-	store_tag_icon_dr_ranger = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.872559,
-			0.512207
-		},
-		uv11 = {
-			0.899902,
-			0.539551
-		}
-	},
-	store_tag_icon_portrait_frame_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.843262,
-			0.512207
-		},
-		uv11 = {
-			0.870605,
-			0.539551
+			0.782715,
+			0.568848
 		}
 	},
 	store_tag_icon_bw_necromancer_common = {
@@ -1321,29 +985,141 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.813965,
-			0.512207
+			0.726074,
+			0.541504
 		},
 		uv11 = {
-			0.841309,
-			0.539551
+			0.753418,
+			0.568848
 		}
 	},
-	store_tag_icon_portrait_frame_exotic = {
+	store_tag_icon_pactsworn_exotic = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.784668,
-			0.512207
+			0.696777,
+			0.541504
 		},
 		uv11 = {
-			0.812012,
-			0.539551
+			0.724121,
+			0.568848
 		}
 	},
-	store_tag_icon_es_questingknight_exotic = {
+	store_tag_icon_es_knight_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.66748,
+			0.541504
+		},
+		uv11 = {
+			0.694824,
+			0.568848
+		}
+	},
+	store_tag_icon_portrait_frame_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.638184,
+			0.541504
+		},
+		uv11 = {
+			0.665527,
+			0.568848
+		}
+	},
+	store_tag_icon_bw_necromancer_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.608887,
+			0.541504
+		},
+		uv11 = {
+			0.63623,
+			0.568848
+		}
+	},
+	store_tag_icon_pactsworn_magic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.57959,
+			0.541504
+		},
+		uv11 = {
+			0.606934,
+			0.568848
+		}
+	},
+	store_tag_icon_es_mercenary_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.541504
+		},
+		uv11 = {
+			0.577637,
+			0.568848
+		}
+	},
+	store_tag_icon_skin_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.95166
+		},
+		uv11 = {
+			0.54834,
+			0.979004
+		}
+	},
+	store_tag_icon_bw_necromancer_magic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.922363
+		},
+		uv11 = {
+			0.54834,
+			0.949707
+		}
+	},
+	store_tag_icon_pactsworn_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.893066
+		},
+		uv11 = {
+			0.54834,
+			0.92041
+		}
+	},
+	store_tag_icon_es_questingknight_common = {
 		size = {
 			47,
 			56
@@ -1357,21 +1133,49 @@ store_menu_atlas = {
 			0.861328
 		}
 	},
-	store_tag_icon_bw_adept_common = {
+	store_tag_icon_pose_magic = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.755371,
-			0.512207
+			0.520996,
+			0.86377
 		},
 		uv11 = {
-			0.782715,
-			0.539551
+			0.54834,
+			0.891113
 		}
 	},
-	store_tag_icon_es_questingknight_promo = {
+	store_tag_icon_bw_necromancer_promo = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.834473
+		},
+		uv11 = {
+			0.54834,
+			0.861816
+		}
+	},
+	store_tag_icon_bundle = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.805176
+		},
+		uv11 = {
+			0.54834,
+			0.83252
+		}
+	},
+	store_tag_icon_es_questingknight_rare = {
 		size = {
 			47,
 			56
@@ -1385,133 +1189,175 @@ store_menu_atlas = {
 			0.820801
 		}
 	},
-	store_tag_icon_hat_promo = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.726074,
-			0.512207
-		},
-		uv11 = {
-			0.753418,
-			0.539551
-		}
-	},
-	store_tag_icon_es_huntsman_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.696777,
-			0.512207
-		},
-		uv11 = {
-			0.724121,
-			0.539551
-		}
-	},
-	store_tag_icon_bundle_promo = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.66748,
-			0.512207
-		},
-		uv11 = {
-			0.694824,
-			0.539551
-		}
-	},
-	store_tag_icon_es_huntsman_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.638184,
-			0.512207
-		},
-		uv11 = {
-			0.665527,
-			0.539551
-		}
-	},
-	store_tag_icon_dr_ranger_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.608887,
-			0.512207
-		},
-		uv11 = {
-			0.63623,
-			0.539551
-		}
-	},
-	store_tag_icon_dr_ranger_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.57959,
-			0.512207
-		},
-		uv11 = {
-			0.606934,
-			0.539551
-		}
-	},
-	store_tag_icon_bundle_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.550293,
-			0.512207
-		},
-		uv11 = {
-			0.577637,
-			0.539551
-		}
-	},
-	store_tag_icon_dr_slayer = {
+	store_tag_icon_bw_necromancer_rare = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
 			0.520996,
-			0.512207
+			0.775879
 		},
 		uv11 = {
 			0.54834,
-			0.539551
+			0.803223
 		}
 	},
-	store_tag_icon_es_knight_common = {
+	store_tag_icon_weapon_rare = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.491699,
-			0.95166
+			0.520996,
+			0.746582
 		},
 		uv11 = {
-			0.519043,
-			0.979004
+			0.54834,
+			0.773926
 		}
 	},
-	store_tag_icon_es_questingknight_unique = {
+	store_tag_icon_weapon_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.717285
+		},
+		uv11 = {
+			0.54834,
+			0.744629
+		}
+	},
+	store_tag_icon_dr_slayer_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.687988
+		},
+		uv11 = {
+			0.54834,
+			0.715332
+		}
+	},
+	store_tag_icon_es_mercenary_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.658691
+		},
+		uv11 = {
+			0.54834,
+			0.686035
+		}
+	},
+	store_tag_icon_es_mercenary = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.629395
+		},
+		uv11 = {
+			0.54834,
+			0.656738
+		}
+	},
+	store_tag_icon_es_mercenary_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.600098
+		},
+		uv11 = {
+			0.54834,
+			0.627441
+		}
+	},
+	store_tag_icon_bundle_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.570801
+		},
+		uv11 = {
+			0.54834,
+			0.598145
+		}
+	},
+	store_tag_icon_portrait_frame_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.541504
+		},
+		uv11 = {
+			0.54834,
+			0.568848
+		}
+	},
+	store_tag_icon_es_huntsman_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.960449,
+			0.512207
+		},
+		uv11 = {
+			0.987793,
+			0.539551
+		}
+	},
+	store_tag_icon_portrait_frame_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.931152,
+			0.512207
+		},
+		uv11 = {
+			0.958496,
+			0.539551
+		}
+	},
+	store_tag_icon_dr_engineer_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.901855,
+			0.512207
+		},
+		uv11 = {
+			0.929199,
+			0.539551
+		}
+	},
+	store_tag_icon_es_questingknight_magic = {
 		size = {
 			47,
 			56
@@ -1525,7 +1371,203 @@ store_menu_atlas = {
 			0.657715
 		}
 	},
+	store_tag_icon_dr_engineer_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.872559,
+			0.512207
+		},
+		uv11 = {
+			0.899902,
+			0.539551
+		}
+	},
+	store_tag_icon_bw_adept_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.843262,
+			0.512207
+		},
+		uv11 = {
+			0.870605,
+			0.539551
+		}
+	},
+	store_tag_icon_bw_unchained = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.813965,
+			0.512207
+		},
+		uv11 = {
+			0.841309,
+			0.539551
+		}
+	},
+	store_tag_icon_hat_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.784668,
+			0.512207
+		},
+		uv11 = {
+			0.812012,
+			0.539551
+		}
+	},
+	store_tag_icon_bw_unchained_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.755371,
+			0.512207
+		},
+		uv11 = {
+			0.782715,
+			0.539551
+		}
+	},
+	store_tag_icon_bundle_promo = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.726074,
+			0.512207
+		},
+		uv11 = {
+			0.753418,
+			0.539551
+		}
+	},
+	store_tag_icon_bw_scholar_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.696777,
+			0.512207
+		},
+		uv11 = {
+			0.724121,
+			0.539551
+		}
+	},
+	store_tag_icon_dr_ranger = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.66748,
+			0.512207
+		},
+		uv11 = {
+			0.694824,
+			0.539551
+		}
+	},
+	store_tag_icon_bw_scholar_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.638184,
+			0.512207
+		},
+		uv11 = {
+			0.665527,
+			0.539551
+		}
+	},
+	store_tag_icon_bundle_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.608887,
+			0.512207
+		},
+		uv11 = {
+			0.63623,
+			0.539551
+		}
+	},
+	store_tag_icon_dr_engineer_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.57959,
+			0.512207
+		},
+		uv11 = {
+			0.606934,
+			0.539551
+		}
+	},
+	store_tag_icon_hat_promo = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.550293,
+			0.512207
+		},
+		uv11 = {
+			0.577637,
+			0.539551
+		}
+	},
+	store_tag_icon_dr_ironbreaker = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.520996,
+			0.512207
+		},
+		uv11 = {
+			0.54834,
+			0.539551
+		}
+	},
 	store_tag_icon_bw_adept_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.491699,
+			0.95166
+		},
+		uv11 = {
+			0.519043,
+			0.979004
+		}
+	},
+	store_tag_icon_bw_unchained_unique = {
 		size = {
 			56,
 			56
@@ -1539,7 +1581,7 @@ store_menu_atlas = {
 			0.949707
 		}
 	},
-	store_tag_icon_hat_exotic = {
+	store_tag_icon_es_huntsman_exotic = {
 		size = {
 			56,
 			56
@@ -1553,7 +1595,7 @@ store_menu_atlas = {
 			0.92041
 		}
 	},
-	store_tag_icon_dr_ranger_exotic = {
+	store_tag_icon_dlc = {
 		size = {
 			56,
 			56
@@ -1567,7 +1609,7 @@ store_menu_atlas = {
 			0.891113
 		}
 	},
-	store_tag_icon_es_knight_unique = {
+	store_tag_icon_bundle_unique = {
 		size = {
 			56,
 			56
@@ -1581,7 +1623,7 @@ store_menu_atlas = {
 			0.861816
 		}
 	},
-	store_tag_icon_bundle_unique = {
+	store_tag_icon_dr_ironbreaker_common = {
 		size = {
 			56,
 			56
@@ -1595,7 +1637,7 @@ store_menu_atlas = {
 			0.83252
 		}
 	},
-	store_tag_icon_es_mercenary_common = {
+	store_tag_icon_dr_ranger_exotic = {
 		size = {
 			56,
 			56
@@ -1609,7 +1651,7 @@ store_menu_atlas = {
 			0.803223
 		}
 	},
-	store_tag_icon_es_mercenary = {
+	store_tag_icon_dr_ironbreaker_exotic = {
 		size = {
 			56,
 			56
@@ -1623,7 +1665,7 @@ store_menu_atlas = {
 			0.773926
 		}
 	},
-	store_tag_icon_hat_plentiful = {
+	store_tag_icon_bw_adept_rare = {
 		size = {
 			56,
 			56
@@ -1637,7 +1679,7 @@ store_menu_atlas = {
 			0.744629
 		}
 	},
-	store_tag_icon_bw_adept_rare = {
+	store_tag_icon_bw_scholar_rare = {
 		size = {
 			56,
 			56
@@ -1651,7 +1693,7 @@ store_menu_atlas = {
 			0.715332
 		}
 	},
-	store_tag_icon_hat_rare = {
+	store_tag_icon_es_knight_common = {
 		size = {
 			56,
 			56
@@ -1665,7 +1707,7 @@ store_menu_atlas = {
 			0.686035
 		}
 	},
-	store_tag_icon_dr_slayer_common = {
+	store_tag_icon_bw_scholar_unique = {
 		size = {
 			56,
 			56
@@ -1679,7 +1721,7 @@ store_menu_atlas = {
 			0.656738
 		}
 	},
-	store_tag_icon_dr_slayer_exotic = {
+	store_tag_icon_bundle_magic = {
 		size = {
 			56,
 			56
@@ -1693,7 +1735,7 @@ store_menu_atlas = {
 			0.627441
 		}
 	},
-	store_tag_icon_bundle_magic = {
+	store_tag_icon_dr_ironbreaker_rare = {
 		size = {
 			56,
 			56
@@ -1707,7 +1749,7 @@ store_menu_atlas = {
 			0.598145
 		}
 	},
-	store_tag_icon_dr_slayer_unique = {
+	store_tag_icon_dr_slayer_common = {
 		size = {
 			56,
 			56
@@ -1721,7 +1763,7 @@ store_menu_atlas = {
 			0.568848
 		}
 	},
-	store_tag_icon_hat_common = {
+	store_tag_icon_wh_zealot_rare = {
 		size = {
 			56,
 			56
@@ -1735,7 +1777,7 @@ store_menu_atlas = {
 			0.539551
 		}
 	},
-	store_tag_icon_dr_ironbreaker_unique = {
+	store_tag_icon_bw_adept_unique = {
 		size = {
 			56,
 			56
@@ -1749,7 +1791,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_bw_adept_unique = {
+	store_tag_icon_bw_unchained_exotic = {
 		size = {
 			56,
 			56
@@ -1763,7 +1805,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_weapon_rare = {
+	store_tag_icon_dr_ranger_unique = {
 		size = {
 			56,
 			56
@@ -1777,7 +1819,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_es_huntsman = {
+	store_tag_icon_bw_unchained_rare = {
 		size = {
 			56,
 			56
@@ -1791,7 +1833,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_es_knight = {
+	store_tag_icon_bundle_rare = {
 		size = {
 			56,
 			56
@@ -1805,7 +1847,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_bundle_rare = {
+	store_tag_icon_pactsworn_plentiful = {
 		size = {
 			56,
 			56
@@ -1819,7 +1861,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_es_knight_exotic = {
+	store_tag_icon_portrait_frame_promo = {
 		size = {
 			56,
 			56
@@ -1833,7 +1875,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_es_huntsman_exotic = {
+	store_tag_icon_we_maidenguard_rare = {
 		size = {
 			56,
 			56
@@ -1847,7 +1889,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_pactsworn_plentiful = {
+	store_tag_icon_skin_plentiful = {
 		size = {
 			56,
 			56
@@ -1861,7 +1903,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_we_maidenguard_unique = {
+	store_tag_icon_wh_zealot = {
 		size = {
 			56,
 			56
@@ -1875,10 +1917,10 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_skin_plentiful = {
+	store_tag_icon_we_thornsister_rare = {
 		size = {
 			56,
-			56
+			54
 		},
 		uv00 = {
 			0.66748,
@@ -1886,10 +1928,10 @@ store_menu_atlas = {
 		},
 		uv11 = {
 			0.694824,
-			0.510254
+			0.509277
 		}
 	},
-	store_tag_icon_we_shade_common = {
+	store_tag_icon_versus_coin_unique = {
 		size = {
 			56,
 			56
@@ -1903,10 +1945,10 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_we_thornsister = {
+	store_tag_icon_versus_coin_magic = {
 		size = {
 			56,
-			54
+			56
 		},
 		uv00 = {
 			0.608887,
@@ -1914,10 +1956,10 @@ store_menu_atlas = {
 		},
 		uv11 = {
 			0.63623,
-			0.509277
+			0.510254
 		}
 	},
-	store_tag_icon_versus_coin_unique = {
+	store_tag_icon_versus_coin_plentiful = {
 		size = {
 			56,
 			56
@@ -1931,7 +1973,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_versus_coin_magic = {
+	store_tag_icon_skin_promo = {
 		size = {
 			56,
 			56
@@ -1945,7 +1987,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_versus_coin_plentiful = {
+	store_tag_icon_versus_coin_common = {
 		size = {
 			56,
 			56
@@ -1959,7 +2001,7 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_skin_promo = {
+	store_tag_icon_we_maidenguard_unique = {
 		size = {
 			56,
 			56
@@ -1973,34 +2015,6 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_versus_coin_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.950684
-		},
-		uv11 = {
-			0.489746,
-			0.978027
-		}
-	},
-	store_tag_icon_wh_zealot_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.921387
-		},
-		uv11 = {
-			0.489746,
-			0.94873
-		}
-	},
 	store_tag_icon_skin_rare = {
 		size = {
 			56,
@@ -2008,17 +2022,45 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.462402,
-			0.89209
+			0.94873
 		},
 		uv11 = {
 			0.489746,
-			0.919434
+			0.976074
 		}
 	},
-	store_tag_icon_we_shade_unique = {
+	store_tag_icon_we_thornsister_unique = {
+		size = {
+			56,
+			54
+		},
+		uv00 = {
+			0.462402,
+			0.92041
+		},
+		uv11 = {
+			0.489746,
+			0.946777
+		}
+	},
+	store_tag_icon_weapon_magic = {
 		size = {
 			56,
 			56
+		},
+		uv00 = {
+			0.462402,
+			0.891113
+		},
+		uv11 = {
+			0.489746,
+			0.918457
+		}
+	},
+	store_tag_icon_we_thornsister = {
+		size = {
+			56,
+			54
 		},
 		uv00 = {
 			0.462402,
@@ -2026,10 +2068,10 @@ store_menu_atlas = {
 		},
 		uv11 = {
 			0.489746,
-			0.890137
+			0.88916
 		}
 	},
-	store_tag_icon_weapon_magic = {
+	store_tag_icon_skin_unique = {
 		size = {
 			56,
 			56
@@ -2043,88 +2085,18 @@ store_menu_atlas = {
 			0.86084
 		}
 	},
-	store_tag_icon_we_thornsister_rare = {
+	store_tag_icon_we_maidenguard = {
 		size = {
 			56,
-			54
+			56
 		},
 		uv00 = {
 			0.462402,
-			0.805176
+			0.804199
 		},
 		uv11 = {
 			0.489746,
 			0.831543
-		}
-	},
-	store_tag_icon_skin_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.775879
-		},
-		uv11 = {
-			0.489746,
-			0.803223
-		}
-	},
-	store_tag_icon_we_waywatcher_exotic = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.746582
-		},
-		uv11 = {
-			0.489746,
-			0.773926
-		}
-	},
-	store_tag_icon_we_shade_rare = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.717285
-		},
-		uv11 = {
-			0.489746,
-			0.744629
-		}
-	},
-	store_tag_icon_we_maidenguard_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.687988
-		},
-		uv11 = {
-			0.489746,
-			0.715332
-		}
-	},
-	store_tag_icon_weapon_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.462402,
-			0.658691
-		},
-		uv11 = {
-			0.489746,
-			0.686035
 		}
 	},
 	store_tag_icon_we_maidenguard_exotic = {
@@ -2134,11 +2106,25 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.462402,
-			0.629395
+			0.774902
 		},
 		uv11 = {
 			0.489746,
-			0.656738
+			0.802246
+		}
+	},
+	store_tag_icon_we_waywatcher = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.462402,
+			0.745605
+		},
+		uv11 = {
+			0.489746,
+			0.772949
 		}
 	},
 	store_tag_icon_versus_coin_exotic = {
@@ -2148,11 +2134,39 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.462402,
-			0.600098
+			0.716309
 		},
 		uv11 = {
 			0.489746,
-			0.627441
+			0.743652
+		}
+	},
+	store_tag_icon_we_shade_common = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.462402,
+			0.687012
+		},
+		uv11 = {
+			0.489746,
+			0.714355
+		}
+	},
+	store_tag_icon_we_shade_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.462402,
+			0.657715
+		},
+		uv11 = {
+			0.489746,
+			0.685059
 		}
 	},
 	store_tag_icon_we_shade_exotic = {
@@ -2162,31 +2176,59 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.462402,
-			0.570801
+			0.628418
 		},
 		uv11 = {
 			0.489746,
-			0.598145
+			0.655762
 		}
 	},
-	store_tag_icon_we_maidenguard_rare = {
+	store_tag_icon_we_shade = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
 			0.462402,
-			0.541504
+			0.599121
 		},
 		uv11 = {
 			0.489746,
-			0.568848
+			0.626465
 		}
 	},
-	store_tag_icon_wh_zealot_common = {
+	store_tag_icon_we_waywatcher_unique = {
 		size = {
 			56,
 			56
+		},
+		uv00 = {
+			0.462402,
+			0.569824
+		},
+		uv11 = {
+			0.489746,
+			0.597168
+		}
+	},
+	store_tag_icon_we_shade_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.462402,
+			0.540527
+		},
+		uv11 = {
+			0.489746,
+			0.567871
+		}
+	},
+	store_tag_icon_we_thornsister_exotic = {
+		size = {
+			56,
+			54
 		},
 		uv00 = {
 			0.462402,
@@ -2194,10 +2236,10 @@ store_menu_atlas = {
 		},
 		uv11 = {
 			0.489746,
-			0.539551
+			0.538574
 		}
 	},
-	store_tag_icon_we_waywatcher_rare = {
+	store_tag_icon_wh_zealot_exotic = {
 		size = {
 			56,
 			56
@@ -2211,59 +2253,31 @@ store_menu_atlas = {
 			0.510254
 		}
 	},
-	store_tag_icon_we_thornsister_unique = {
-		size = {
-			56,
-			54
-		},
-		uv00 = {
-			0.947266,
-			0.435547
-		},
-		uv11 = {
-			0.974609,
-			0.461914
-		}
-	},
-	store_tag_icon_weapon_promo = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.917969,
-			0.435547
-		},
-		uv11 = {
-			0.945313,
-			0.462891
-		}
-	},
 	store_tag_icon_we_thornsister_common = {
 		size = {
 			56,
 			54
 		},
 		uv00 = {
-			0.888672,
+			0.950195,
 			0.435547
 		},
 		uv11 = {
-			0.916016,
+			0.977539,
 			0.461914
 		}
 	},
-	store_tag_icon_weapon_plentiful = {
+	store_tag_icon_we_maidenguard_common = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.859375,
+			0.920898,
 			0.435547
 		},
 		uv11 = {
-			0.886719,
+			0.948242,
 			0.462891
 		}
 	},
@@ -2273,25 +2287,25 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.830078,
+			0.891602,
 			0.435547
 		},
 		uv11 = {
-			0.857422,
+			0.918945,
 			0.462891
 		}
 	},
-	store_tag_icon_we_waywatcher = {
+	store_tag_icon_weapon_plentiful = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.800781,
+			0.862305,
 			0.435547
 		},
 		uv11 = {
-			0.828125,
+			0.889648,
 			0.462891
 		}
 	},
@@ -2301,53 +2315,39 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.771484,
+			0.833008,
 			0.435547
 		},
 		uv11 = {
-			0.798828,
+			0.860352,
 			0.462891
 		}
 	},
-	store_tag_icon_we_maidenguard = {
+	store_tag_icon_weapon_promo = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.742188,
+			0.803711,
 			0.435547
 		},
 		uv11 = {
-			0.769531,
+			0.831055,
 			0.462891
 		}
 	},
-	store_tag_icon_we_thornsister_exotic = {
-		size = {
-			56,
-			54
-		},
-		uv00 = {
-			0.712891,
-			0.435547
-		},
-		uv11 = {
-			0.740234,
-			0.461914
-		}
-	},
-	store_tag_icon_wh_bountyhunter_rare = {
+	store_tag_icon_wh_bountyhunter_exotic = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.683594,
+			0.774414,
 			0.435547
 		},
 		uv11 = {
-			0.710938,
+			0.801758,
 			0.462891
 		}
 	},
@@ -2357,53 +2357,11 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.654297,
+			0.745117,
 			0.435547
 		},
 		uv11 = {
-			0.681641,
-			0.462891
-		}
-	},
-	store_tag_icon_we_waywatcher_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.625,
-			0.435547
-		},
-		uv11 = {
-			0.652344,
-			0.462891
-		}
-	},
-	store_tag_icon_wh_captain_common = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.595703,
-			0.435547
-		},
-		uv11 = {
-			0.623047,
-			0.462891
-		}
-	},
-	store_tag_icon_wh_captain_unique = {
-		size = {
-			56,
-			56
-		},
-		uv00 = {
-			0.566406,
-			0.435547
-		},
-		uv11 = {
-			0.59375,
+			0.772461,
 			0.462891
 		}
 	},
@@ -2413,57 +2371,99 @@ store_menu_atlas = {
 			56
 		},
 		uv00 = {
-			0.537109,
+			0.71582,
 			0.435547
 		},
 		uv11 = {
-			0.564453,
+			0.743164,
 			0.462891
 		}
 	},
-	store_tag_icon_we_waywatcher_unique = {
+	store_tag_icon_we_waywatcher_common = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
-			0.507813,
+			0.686523,
 			0.435547
 		},
 		uv11 = {
-			0.535156,
+			0.713867,
 			0.462891
 		}
 	},
-	store_tag_icon_wh_bountyhunter_common = {
+	store_tag_icon_we_waywatcher_rare = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.657227,
+			0.435547
+		},
+		uv11 = {
+			0.68457,
+			0.462891
+		}
+	},
+	store_tag_icon_wh_captain_unique = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.62793,
+			0.435547
+		},
+		uv11 = {
+			0.655273,
+			0.462891
+		}
+	},
+	store_tag_icon_we_waywatcher_exotic = {
+		size = {
+			56,
+			56
+		},
+		uv00 = {
+			0.598633,
+			0.435547
+		},
+		uv11 = {
+			0.625977,
+			0.462891
+		}
+	},
+	store_tag_icon_wh_bountyhunter_unique = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
 			0.406738,
-			0.962402
+			0.956055
 		},
 		uv11 = {
 			0.434082,
-			0.989746
+			0.983398
 		}
 	},
-	store_tag_icon_wh_captain_rare = {
+	store_tag_icon_wh_bountyhunter = {
 		size = {
 			56,
 			56
 		},
 		uv00 = {
 			0.361328,
-			0.962402
+			0.956055
 		},
 		uv11 = {
 			0.388672,
-			0.989746
+			0.983398
 		}
 	},
-	store_tag_icon_wh_bountyhunter_exotic = {
+	store_tag_icon_wh_priest = {
 		size = {
 			56,
 			56
@@ -2477,7 +2477,7 @@ store_menu_atlas = {
 			0.423828
 		}
 	},
-	store_tag_icon_wh_priest = {
+	store_tag_icon_wh_bountyhunter_common = {
 		size = {
 			56,
 			56
@@ -2491,7 +2491,7 @@ store_menu_atlas = {
 			0.423828
 		}
 	},
-	store_tag_icon_wh_bountyhunter = {
+	store_tag_icon_wh_priest_common = {
 		size = {
 			56,
 			56
@@ -2505,7 +2505,7 @@ store_menu_atlas = {
 			0.423828
 		}
 	},
-	store_tag_icon_wh_priest_unique = {
+	store_tag_icon_wh_captain_common = {
 		size = {
 			56,
 			56
@@ -2519,7 +2519,7 @@ store_menu_atlas = {
 			0.423828
 		}
 	},
-	store_tag_icon_wh_bountyhunter_unique = {
+	store_tag_icon_wh_bountyhunter_rare = {
 		size = {
 			56,
 			56
@@ -2533,7 +2533,7 @@ store_menu_atlas = {
 			0.424316
 		}
 	},
-	store_tag_icon_wh_priest_rare = {
+	store_tag_icon_wh_priest_unique = {
 		size = {
 			56,
 			56
@@ -2547,7 +2547,7 @@ store_menu_atlas = {
 			0.424316
 		}
 	},
-	store_tag_icon_wh_zealot = {
+	store_tag_icon_wh_priest_rare = {
 		size = {
 			56,
 			56
@@ -2561,7 +2561,7 @@ store_menu_atlas = {
 			0.424316
 		}
 	},
-	store_tag_icon_wh_priest_common = {
+	store_tag_icon_wh_captain_rare = {
 		size = {
 			56,
 			56
@@ -2589,7 +2589,7 @@ store_menu_atlas = {
 			0.989746
 		}
 	},
-	icon_store_timer = {
+	store_icon_currency_ingame_big = {
 		size = {
 			64,
 			64
@@ -2615,6 +2615,20 @@ store_menu_atlas = {
 		uv11 = {
 			0.211914,
 			0.628418
+		}
+	},
+	store_menu_button_right = {
+		size = {
+			13,
+			64
+		},
+		uv00 = {
+			0.224121,
+			0.538086
+		},
+		uv11 = {
+			0.230469,
+			0.569336
 		}
 	},
 	store_icon_breadcrumb = {
@@ -2645,35 +2659,7 @@ store_menu_atlas = {
 			0.993652
 		}
 	},
-	store_menu_button_right = {
-		size = {
-			13,
-			64
-		},
-		uv00 = {
-			0.224121,
-			0.538086
-		},
-		uv11 = {
-			0.230469,
-			0.569336
-		}
-	},
-	store_menu_button_middle = {
-		size = {
-			13,
-			64
-		},
-		uv00 = {
-			0.222168,
-			0.40918
-		},
-		uv11 = {
-			0.228516,
-			0.44043
-		}
-	},
-	store_icon_currency_ingame_big = {
+	icon_store_timer = {
 		size = {
 			64,
 			64
@@ -2687,6 +2673,20 @@ store_menu_atlas = {
 			0.993652
 		}
 	},
+	store_menu_button_middle = {
+		size = {
+			13,
+			64
+		},
+		uv00 = {
+			0.222168,
+			0.473633
+		},
+		uv11 = {
+			0.228516,
+			0.504883
+		}
+	},
 	store_menu_bg_end = {
 		size = {
 			14,
@@ -2694,11 +2694,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.213379,
-			0.40918
+			0.473633
 		},
 		uv11 = {
 			0.220215,
-			0.443359
+			0.507813
 		}
 	},
 	expand_video_icon = {
@@ -2708,11 +2708,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.418945,
-			0.816895
+			0.85791
 		},
 		uv11 = {
 			0.460449,
-			0.85791
+			0.898926
 		}
 	},
 	store_thumbnail_pricetag_left = {
@@ -2729,7 +2729,35 @@ store_menu_atlas = {
 			0.583008
 		}
 	},
+	store_info_back_on = {
+		size = {
+			89,
+			93
+		},
+		uv00 = {
+			0.553223,
+			0.435547
+		},
+		uv11 = {
+			0.59668,
+			0.480957
+		}
+	},
 	store_info_back_off = {
+		size = {
+			89,
+			93
+		},
+		uv00 = {
+			0.507813,
+			0.435547
+		},
+		uv11 = {
+			0.55127,
+			0.480957
+		}
+	},
+	store_info_expand_off = {
 		size = {
 			89,
 			93
@@ -2743,32 +2771,18 @@ store_menu_atlas = {
 			0.480957
 		}
 	},
-	store_info_expand_off = {
-		size = {
-			89,
-			93
-		},
-		uv00 = {
-			0.406738,
-			0.915039
-		},
-		uv11 = {
-			0.450195,
-			0.960449
-		}
-	},
 	store_info_expand_on = {
 		size = {
 			89,
 			93
 		},
 		uv00 = {
-			0.361328,
-			0.915039
+			0.406738,
+			0.908691
 		},
 		uv11 = {
-			0.404785,
-			0.960449
+			0.450195,
+			0.954102
 		}
 	},
 	store_info_contract_on = {
@@ -2777,26 +2791,12 @@ store_menu_atlas = {
 			93
 		},
 		uv00 = {
-			0.406738,
-			0.867676
-		},
-		uv11 = {
-			0.450195,
-			0.913086
-		}
-	},
-	store_info_back_on = {
-		size = {
-			89,
-			93
-		},
-		uv00 = {
 			0.361328,
-			0.867676
+			0.908691
 		},
 		uv11 = {
 			0.404785,
-			0.913086
+			0.954102
 		}
 	},
 	store_info_contract_off = {
@@ -2848,11 +2848,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.361328,
-			0.816895
+			0.85791
 		},
 		uv11 = {
 			0.416992,
-			0.865723
+			0.906738
 		}
 	},
 	store_thumbnail_sale = {
@@ -2897,7 +2897,7 @@ store_menu_atlas = {
 			0.045898
 		}
 	},
-	store_frame_side_01 = {
+	store_frame_side_03 = {
 		size = {
 			128,
 			79
@@ -2909,6 +2909,20 @@ store_menu_atlas = {
 		uv11 = {
 			0.205566,
 			0.872559
+		}
+	},
+	store_frame_side_01 = {
+		size = {
+			128,
+			79
+		},
+		uv00 = {
+			0.143066,
+			0.793457
+		},
+		uv11 = {
+			0.205566,
+			0.832031
 		}
 	},
 	store_frame_small_side_02 = {
@@ -2925,18 +2939,18 @@ store_menu_atlas = {
 			0.659668
 		}
 	},
-	store_frame_side_03 = {
+	store_frame_small_side_04 = {
 		size = {
-			128,
-			79
+			42,
+			128
 		},
 		uv00 = {
-			0.143066,
-			0.793457
+			0.190918,
+			0.473633
 		},
 		uv11 = {
-			0.205566,
-			0.832031
+			0.211426,
+			0.536133
 		}
 	},
 	store_frame_side_04 = {
@@ -2946,11 +2960,11 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.190918,
-			0.473633
+			0.40918
 		},
 		uv11 = {
 			0.229492,
-			0.536133
+			0.47168
 		}
 	},
 	store_frame_small_side_03 = {
@@ -2965,20 +2979,6 @@ store_menu_atlas = {
 		uv11 = {
 			0.890137,
 			0.045898
-		}
-	},
-	store_frame_small_side_04 = {
-		size = {
-			42,
-			128
-		},
-		uv00 = {
-			0.190918,
-			0.40918
-		},
-		uv11 = {
-			0.211426,
-			0.47168
 		}
 	},
 	store_slideshow_fill = {
@@ -3044,14 +3044,28 @@ store_menu_atlas = {
 		},
 		uv00 = {
 			0.361328,
-			0.722656
+			0.763672
 		},
 		uv11 = {
 			0.453125,
-			0.814941
+			0.855957
 		}
 	},
-	store_category_icon_victor_zealot = {
+	store_category_icon_sienna_scholar = {
+		size = {
+			203,
+			80
+		},
+		uv00 = {
+			0.361328,
+			0.722656
+		},
+		uv11 = {
+			0.460449,
+			0.761719
+		}
+	},
+	store_category_icon_kerillian_shade = {
 		size = {
 			203,
 			80
@@ -3065,7 +3079,7 @@ store_menu_atlas = {
 			0.720703
 		}
 	},
-	store_category_icon_kruber_huntsman = {
+	store_category_icon_victor_priest = {
 		size = {
 			203,
 			80
@@ -3079,7 +3093,7 @@ store_menu_atlas = {
 			0.679688
 		}
 	},
-	store_category_icon_victor_priest = {
+	store_category_icon_victor_zealot = {
 		size = {
 			203,
 			80
@@ -3093,7 +3107,7 @@ store_menu_atlas = {
 			0.638672
 		}
 	},
-	store_category_icon_victor_captain = {
+	store_category_icon_kerillian_waystalker = {
 		size = {
 			203,
 			80
@@ -3107,7 +3121,7 @@ store_menu_atlas = {
 			0.597656
 		}
 	},
-	store_category_icon_kerillian_shade = {
+	store_category_icon_victor_captain = {
 		size = {
 			203,
 			80
@@ -3149,7 +3163,7 @@ store_menu_atlas = {
 			0.474609
 		}
 	},
-	store_category_icon_bardin_engineer = {
+	store_category_icon_bardin_slayer = {
 		size = {
 			203,
 			80
@@ -3163,7 +3177,7 @@ store_menu_atlas = {
 			0.994141
 		}
 	},
-	store_category_icon_kerillian_thornsister = {
+	store_category_icon_bardin_engineer = {
 		size = {
 			203,
 			80
@@ -3191,7 +3205,7 @@ store_menu_atlas = {
 			0.912109
 		}
 	},
-	store_category_icon_kerillian_waystalker = {
+	store_category_icon_kerillian_thornsister = {
 		size = {
 			203,
 			80
@@ -3205,7 +3219,7 @@ store_menu_atlas = {
 			0.394531
 		}
 	},
-	store_category_icon_bardin_slayer = {
+	store_category_icon_kruber_knight = {
 		size = {
 			203,
 			80
@@ -3233,21 +3247,7 @@ store_menu_atlas = {
 			0.3125
 		}
 	},
-	store_category_icon_sienna_scholar = {
-		size = {
-			203,
-			80
-		},
-		uv00 = {
-			0.750977,
-			0.382813
-		},
-		uv11 = {
-			0.850098,
-			0.421875
-		}
-	},
-	store_category_icon_bardin_ranger = {
+	store_category_icon_kruber_questingknight = {
 		size = {
 			203,
 			80
@@ -3261,7 +3261,7 @@ store_menu_atlas = {
 			0.244141
 		}
 	},
-	store_category_icon_sienna_adept = {
+	store_category_icon_bardin_ranger = {
 		size = {
 			203,
 			80
@@ -3275,7 +3275,7 @@ store_menu_atlas = {
 			0.203125
 		}
 	},
-	store_category_icon_kruber_questingknight = {
+	store_category_icon_kruber_mercenary = {
 		size = {
 			203,
 			80
@@ -3289,7 +3289,7 @@ store_menu_atlas = {
 			0.433105
 		}
 	},
-	store_category_icon_kruber_mercenary = {
+	store_category_icon_sienna_adept = {
 		size = {
 			203,
 			80
@@ -3303,7 +3303,7 @@ store_menu_atlas = {
 			0.137695
 		}
 	},
-	store_category_icon_kruber_knight = {
+	store_category_icon_kruber_huntsman = {
 		size = {
 			203,
 			80
@@ -3351,6 +3351,20 @@ store_menu_atlas = {
 			80
 		},
 		uv00 = {
+			0.750977,
+			0.382813
+		},
+		uv11 = {
+			0.876953,
+			0.421875
+		}
+	},
+	store_category_icon_event = {
+		size = {
+			258,
+			80
+		},
+		uv00 = {
 			0.76709,
 			0.098633
 		},
@@ -3359,7 +3373,7 @@ store_menu_atlas = {
 			0.137695
 		}
 	},
-	store_category_icon_poses = {
+	store_category_icon_hats = {
 		size = {
 			258,
 			80
@@ -3373,7 +3387,7 @@ store_menu_atlas = {
 			0.09668
 		}
 	},
-	store_category_icon_skins = {
+	store_category_icon_poses = {
 		size = {
 			258,
 			80
@@ -3387,7 +3401,7 @@ store_menu_atlas = {
 			0.137695
 		}
 	},
-	store_category_icon_hats = {
+	store_category_icon_currencies = {
 		size = {
 			258,
 			80
@@ -3415,7 +3429,7 @@ store_menu_atlas = {
 			0.137695
 		}
 	},
-	store_category_icon_currencies = {
+	store_category_icon_skins = {
 		size = {
 			258,
 			80
@@ -3443,7 +3457,7 @@ store_menu_atlas = {
 			0.960449
 		}
 	},
-	store_thumbnail_bg_exotic = {
+	store_thumbnail_bg_promo = {
 		size = {
 			260,
 			220
@@ -3457,7 +3471,7 @@ store_menu_atlas = {
 			0.871094
 		}
 	},
-	store_thumbnail_bg_unique = {
+	store_thumbnail_bg_common = {
 		size = {
 			260,
 			220
@@ -3471,7 +3485,7 @@ store_menu_atlas = {
 			0.761719
 		}
 	},
-	store_thumbnail_bg_rare = {
+	store_thumbnail_bg_plentiful = {
 		size = {
 			260,
 			220
@@ -3485,7 +3499,7 @@ store_menu_atlas = {
 			0.652344
 		}
 	},
-	store_thumbnail_bg_promo = {
+	store_thumbnail_bg_rare = {
 		size = {
 			260,
 			220
@@ -3513,7 +3527,7 @@ store_menu_atlas = {
 			0.380859
 		}
 	},
-	store_thumbnail_bg_plentiful = {
+	store_thumbnail_bg_unique = {
 		size = {
 			260,
 			220
@@ -3527,7 +3541,7 @@ store_menu_atlas = {
 			0.271484
 		}
 	},
-	store_thumbnail_bg_common = {
+	store_thumbnail_bg_exotic = {
 		size = {
 			260,
 			220
@@ -3541,7 +3555,7 @@ store_menu_atlas = {
 			0.39502
 		}
 	},
-	store_fence_skulls_front = {
+	store_fence_skulls_back = {
 		size = {
 			287,
 			258
@@ -3555,7 +3569,7 @@ store_menu_atlas = {
 			0.919434
 		}
 	},
-	store_fence_skulls_back = {
+	store_fence_skulls_front = {
 		size = {
 			287,
 			258

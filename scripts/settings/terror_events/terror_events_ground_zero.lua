@@ -1,11 +1,7 @@
-local function count_event_breed(breed_name)
-	return Managers.state.conflict:count_units_by_breed_during_event(breed_name)
-end
-
-local NORMAL = 2
-local HARD = 3
-local HARDER = 4
-local HARDEST = 5
+local TerrorEventUtils = require("scripts/settings/terror_events/terror_event_utils")
+local count_event_breed = TerrorEventUtils.count_event_breed
+local HARD = TerrorEventUtils.HARD
+local HARDER = TerrorEventUtils.HARDER
 local weighted_random_terror_events = {
 	gz_elevator_guards = {
 		"gz_elevator_guards_a",
@@ -133,4 +129,7 @@ local terror_event_blueprints = {
 	}
 }
 
-return terror_event_blueprints, weighted_random_terror_events
+return {
+	terror_event_blueprints,
+	weighted_random_terror_events
+}

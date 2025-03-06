@@ -1,8 +1,6 @@
 require("scripts/settings/breeds")
 
-local session = StatisticsDefinitions.session
 local player = StatisticsDefinitions.player
-local unit_test = StatisticsDefinitions.unit_test
 
 player.vs_damage_dealt_to_pactsworn = {
 	value = 0,

@@ -1199,13 +1199,11 @@ weapon_template.buffs = {
 weapon_template.attack_meta_data = {
 	tap_attack = {
 		max_range = 2.25,
-		arc = 1,
-		penetrating = true
+		arc = 1
 	},
 	hold_attack = {
 		max_range = 2.25,
-		arc = 1,
-		penetrating = true
+		arc = 1
 	}
 }
 weapon_template.weapon_diagram = {

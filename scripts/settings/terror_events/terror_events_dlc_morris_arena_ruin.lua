@@ -1,12 +1,6 @@
-local RECRUIT = 2
-local VETERAN = 3
-local CHAMPION = 4
-local LEGENDARY = 5
-local CATACLYSM = 6
-local boss_pre_spawn_func
-
-boss_pre_spawn_func = TerrorEventUtils.add_enhancements_for_difficulty
-
+local TerrorEventUtils = require("scripts/settings/terror_events/terror_event_utils")
+local boss_pre_spawn_func = TerrorEventUtils.add_enhancements_for_difficulty
+local HARDEST = TerrorEventUtils.HARDEST
 local terror_event_blueprints = {
 	arena_ruin_terror = {
 		{
@@ -923,7 +917,7 @@ local terror_event_blueprints = {
 				cataclysm = 2,
 				normal = 1
 			},
-			difficulty_requirement = LEGENDARY
+			difficulty_requirement = HARDEST
 		},
 		{
 			"delay",
@@ -977,7 +971,7 @@ local terror_event_blueprints = {
 				cataclysm = 2,
 				normal = 1
 			},
-			difficulty_requirement = LEGENDARY
+			difficulty_requirement = HARDEST
 		},
 		{
 			"delay",
@@ -1031,4 +1025,6 @@ local terror_event_blueprints = {
 	}
 }
 
-return terror_event_blueprints
+return {
+	terror_event_blueprints
+}

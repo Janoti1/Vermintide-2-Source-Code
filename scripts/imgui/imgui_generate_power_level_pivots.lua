@@ -546,7 +546,7 @@ ImguiGeneratePowerLevelPivots._draw_graph = function (self, size)
 			name = name .. " "
 		end
 
-		pivots[name] = last_pivot or {
+		pivots[name] = table.clone(last_pivot) or {
 			pivot_level = 30,
 			min = 10,
 			pivot_power = 300,

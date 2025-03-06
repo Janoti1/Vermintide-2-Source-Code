@@ -104,10 +104,85 @@ Missions.bridge_gathering_event = {
 	mission_template_name = "collect",
 	collect_amount = 8
 }
+Missions.black_powder_dont_kill_rat_ogre = {
+	mission_template_name = "goal",
+	text = "n/a"
+}
+Missions.farm_dont_drop_sacks = {
+	text = "n/a",
+	hidden = true,
+	mission_template_name = "goal"
+}
+Missions.farm_gathering_event = {
+	text = "farm_gathering_event",
+	mission_template_name = "collect",
+	collect_amount = 6
+}
 Missions.mission_objective_city_walls_destroy_chains = {
 	text = "mission_objective_city_walls_destroy_chains",
 	mission_template_name = "collect",
 	collect_amount = 4
+}
+Missions.stromdorf_hills_courier = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_hills_find_courier"
+}
+Missions.stromdorf_hills_tower = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_hills_search_tower"
+}
+Missions.stromdorf_hills_goto_stromdorf = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_hills_goto_stromdorf"
+}
+Missions.stromdorf_hills_open_door = {
+	mission_template_name = "goal",
+	text = "morris_mines_blow_up_gate"
+}
+Missions.stromdorf_town_goto_town = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_town_goto_town"
+}
+Missions.stromdorf_town_find_tannery = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_town_find_tannery"
+}
+Missions.stromdorf_town_investigate_tannery = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_town_investigate_tannery"
+}
+Missions.stromdorf_town_kill_boss = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_town_kill_boss"
+}
+Missions.stromdorf_town_goto_coach = {
+	mission_template_name = "goal",
+	text = "mission_stromdorf_town_goto_coach"
+}
+Missions.merchant_gathering_event = {
+	text = "merchant_gathering_event_mission_text",
+	mission_template_name = "collect",
+	collect_amount = 5
+}
+Missions.merchant_no_healing = {
+	text = "n/a",
+	hidden = true,
+	mission_template_name = "goal"
+}
+Missions.merchant_find_district = {
+	text = "mission_goal_merchant_find_district",
+	mission_template_name = "goal",
+	collect_amount = 1
+}
+Missions.merchant_reach_square = {
+	text = "mission_goal_merchant_reach_square",
+	mission_template_name = "goal",
+	collect_amount = 1
+}
+Missions.merchant_escape = {
+	text = "mission_goal_merchant_escape",
+	mission_template_name = "goal",
+	collect_amount = 1
 }
 Missions.tunnels_bomb_pillar = {
 	text = "tunnels_bomb_pillar_mission_text",
@@ -129,10 +204,98 @@ Missions.end_boss_destroy_chains = {
 	mission_template_name = "collect",
 	collect_amount = 4
 }
+Missions.end_boss_find_lair = {
+	mission_template_name = "goal",
+	text = "mission_goal_end_boss_find_lair"
+}
+Missions.end_boss_enter_lair = {
+	mission_template_name = "goal",
+	text = "mission_goal_end_boss_enter_lair"
+}
+Missions.end_boss_open_door = {
+	mission_template_name = "goal",
+	text = "mission_objective_end_boss_open_door"
+}
+Missions.end_boss_proceed_upwards_1 = {
+	mission_template_name = "goal",
+	text = "mission_objective_end_boss_proceed_up"
+}
+Missions.end_boss_proceed_upwards_2 = {
+	mission_template_name = "goal",
+	text = "mission_objective_end_boss_proceed_up"
+}
+Missions.end_boss_destroy_bell = {
+	mission_template_name = "goal",
+	text = "mission_goal_end_boss_destroy_bell"
+}
+Missions.end_boss_stop_seer = {
+	mission_template_name = "goal",
+	text = "mission_goal_end_boss_stop_seer"
+}
+Missions.end_boss_escape = {
+	mission_template_name = "goal",
+	text = "mission_goal_end_boss_escape"
+}
+Missions.white_rat_kill_stormvermin = {
+	text = "n/a",
+	hidden = true,
+	mission_template_name = "goal"
+}
 Missions.merchant_gathering_event = {
 	text = "merchant_gathering_event_mission_text",
 	mission_template_name = "collect",
 	collect_amount = 5
+}
+Missions.enemy_below_kill_gutter_runners = {
+	text = "n/a",
+	hidden = true,
+	mission_template_name = "goal"
+}
+Missions.tunnels_bomb_pillar = {
+	text = "tunnels_bomb_pillar_mission_text",
+	mission_template_name = "collect",
+	collect_amount = 3
+}
+Missions.tunnels_start = {
+	mission_template_name = "goal",
+	text = "tunnels_start_mission_text"
+}
+Missions.tunnels_investigate_tunnels = {
+	mission_template_name = "goal",
+	text = "tunnels_investigate_tunnels_mission_text"
+}
+Missions.tunnels_escape = {
+	mission_template_name = "goal",
+	text = "tunnels_escape_mission_text"
+}
+Missions.tunnels_to_ferry_lady = {
+	mission_template_name = "goal",
+	text = "tunnels_to_ferry_lady_mission_text"
+}
+Missions.well_watch_keep_wells_alive = {
+	text = "n/a",
+	hidden = true,
+	mission_template_name = "goal"
+}
+Missions.dlc1_10_mission_forest_reikwald_reach_river = {
+	mission_template_name = "goal",
+	text = "dlc1_10_mission_forest_reikwald_reach_river"
+}
+Missions.dlc1_10_mission_forest_reikwald_through_camp = {
+	mission_template_name = "goal",
+	text = "dlc1_10_mission_forest_reikwald_through_camp"
+}
+Missions.dlc1_10_mission_forest_reikwald_follow_river = {
+	mission_template_name = "goal",
+	text = "dlc1_10_mission_forest_reikwald_follow_river"
+}
+Missions.dlc1_10_mission_forest_reikwald_extinguish = {
+	mission_template_name = "goal",
+	text = "dlc1_10_mission_forest_reikwald_extinguish"
+}
+Missions.dlc1_10_mission_forest_reikwald_find_ship = {
+	mission_template_name = "goal",
+	text = "dlc1_10_mission_forest_reikwald_find_ship"
 }
 Missions.dlc_castle_enter_castle = {
 	mission_template_name = "goal",

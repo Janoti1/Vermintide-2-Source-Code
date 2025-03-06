@@ -154,28 +154,28 @@ settings.missions = {
 	}
 }
 LevelSettings.carousel_hub = {
-	no_bots_allowed = true,
-	player_aux_bus_name = "environment_reverb_outside",
 	display_name = "level_name_carousel_hub",
+	knocked_down_setting = "knocked_down",
+	conflict_settings = "inn_level",
 	environment_state = "exterior",
-	mechanism = "versus",
+	preload_no_enemies = true,
+	level_image = "level_image_carousel_hub",
 	act = "act_versus",
-	loading_ui_package_name = "loading_screen_carousel",
+	dlc_name = "carousel",
 	small_level_image = "carousel_hub_small_image",
 	skip_generate_spawns = true,
-	dlc_name = "carousel",
+	loading_ui_package_name = "loading_screen_carousel",
 	hub_level = true,
 	ambient_sound_event = "silent_default_world_sound",
-	load_no_enemies = false,
-	level_image = "level_image_carousel_hub",
+	no_bots_allowed = true,
+	mechanism = "versus",
 	act_presentation_order = 1,
-	knocked_down_setting = "knocked_down",
 	game_mode = "inn_vs",
 	default_surface_material = "dirt",
-	conflict_settings = "inn_level",
 	has_multiple_loading_images = true,
 	level_name = "levels/honduras_dlcs/carousel/carousel_hub/world",
 	no_nav_mesh = false,
+	player_aux_bus_name = "environment_reverb_outside",
 	no_terror_events = true,
 	source_aux_bus_name = "environment_reverb_outside_source",
 	packages = {
@@ -184,15 +184,6 @@ LevelSettings.carousel_hub = {
 	},
 	level_particle_effects = {},
 	level_screen_effects = {},
-	breed_categories = {
-		{
-			id = "keep_rats",
-			dynamic_loading = false,
-			breeds = {
-				"critter_rat"
-			}
-		}
-	},
 	locations = {},
 	loot_objectives = {},
 	pickup_settings = {
@@ -253,6 +244,58 @@ LevelSettings.farmlands_pvp = {
 		"location_farmlands_pvp_farmstead_01",
 		"location_farmlands_pvp_farmstead_02",
 		"location_farmlands_pvp_farmstead_03"
+	},
+	supported_game_modes = {
+		versus = true
+	}
+}
+LevelSettings.dwarf_exterior_pvp = {
+	climate_type = "snow",
+	ambient_sound_event = "silent_default_world_sound",
+	level_name = "levels/honduras_dlcs/carousel/dwarf_exterior_pvp/world",
+	player_aux_bus_name = "environment_reverb_outside",
+	environment_state = "exterior",
+	mechanism = "versus",
+	act_presentation_order = 9,
+	act = "act_versus",
+	knocked_down_setting = "knocked_down",
+	small_level_image = "dlc_dwarf_exterior_small_image",
+	main_game_level = false,
+	boss_spawning_method = "hand_placed",
+	description_text = "nik_dlc_dwarf_exterior_loading_screen_01",
+	unlockable = true,
+	use_mini_patrols = false,
+	display_name = "dwarf_exterior_pvp",
+	loading_ui_package_name = "loading_screen_dwarf_2",
+	game_mode = "versus",
+	level_image = "dlc_dwarf_exterior",
+	dlc_name = "carousel",
+	override_map_start_section = true,
+	source_aux_bus_name = "environment_reverb_outside_source",
+	packages = {
+		"resource_packages/levels/dlcs/carousel/versus_dependencies",
+		"resource_packages/levels/dlcs/carousel/dwarf_exterior_pvp_meta"
+	},
+	level_particle_effects = {},
+	level_screen_effects = {},
+	loading_screen_wwise_events = {
+		"nik_dwarf_external_loading_screen_01",
+		"nik_dwarf_external_loading_screen_02",
+		"nde_dwarf_external_loading_screen_01",
+		"nde_dwarf_external_loading_screen_02"
+	},
+	locations = {
+		"dlc1_5_dwarf_exterior_location_forest_outskirts",
+		"dlc1_5_dwarf_exterior_location_secret_path",
+		"dlc1_5_dwarf_exterior_location_main_road",
+		"dlc1_5_dwarf_exterior_location_dwarf_guard_post",
+		"dlc1_5_dwarf_exterior_location_wilderness",
+		"dlc1_5_dwarf_exterior_location_frozen_lake",
+		"dlc1_5_dwarf_exterior_location_frozen_stream",
+		"dlc1_5_dwarf_exterior_location_mining_path",
+		"dlc1_5_dwarf_exterior_location_railyard",
+		"dlc1_5_dwarf_exterior_location_hidden_cave",
+		"dlc1_5_dwarf_exterior_location_chamber_area"
 	},
 	supported_game_modes = {
 		versus = true

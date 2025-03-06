@@ -1,32 +1,58 @@
 local breed_data = {
-	far_off_despawn_immunity = true,
-	target_selection = "pick_mutator_sorcerer_target",
-	has_inventory = true,
-	armor_category = 1,
-	no_stagger_duration = false,
-	run_speed = 4.8,
+	detection_radius = 9999999,
 	walk_speed = 2.3,
-	behavior = "chaos_mutator_sorcerer",
+	has_inventory = true,
+	bone_lod_level = 1,
+	minion_detection_radius = 10,
+	height = 2.4,
+	bot_hitbox_radius_approximation = 0.8,
 	animation_sync_rpc = "rpc_sync_anim_state_8",
+	aoe_radius = 0.7,
+	death_reaction = "ai_default",
 	debug_spawn_category = "Misc",
-	navigation_spline_distance_to_borders = 1,
-	stagger_threshold_light = 0.5,
+	run_speed = 4.8,
+	race = "chaos",
+	behavior = "chaos_mutator_sorcerer",
+	perception = "perception_pack_master",
+	threat_value = 0,
+	awards_positive_reinforcement_message = true,
 	wield_inventory_on_spawn = false,
 	default_inventory_template = "chaos_mutator_sorcerer",
 	stagger_resistance = 3,
 	dialogue_source_name = "chaos_corruptor_sorcerer",
+	flingable = true,
+	radius = 1,
+	hit_mass_count = 8,
+	disable_second_hit_ragdoll = true,
+	proximity_system_check = true,
+	poison_resistance = 100,
+	armor_category = 1,
+	use_navigation_path_splines = true,
+	smart_targeting_width = 0.3,
+	is_bot_aid_threat = true,
+	initial_is_passive = false,
+	target_selection = "pick_mutator_sorcerer_target",
+	no_stagger_duration = false,
+	exchange_order = 2,
+	navigation_spline_distance_to_borders = 1,
+	stagger_threshold_light = 0.5,
+	hit_reaction = "ai_default",
+	special = true,
+	smart_targeting_outer_width = 0.7,
 	hit_effect_template = "HitEffectsDummySorcerer",
-	height = 2.4,
+	smart_targeting_height_multiplier = 2.2,
 	unit_template = "ai_unit_chaos_corruptor_sorcerer",
 	ignore_bot_opportunity = true,
-	race = "chaos",
-	perception = "perception_pack_master",
+	smart_object_template = "special",
+	headshot_coop_stamina_fatigue_type = "headshot_special",
+	player_locomotion_constrain_radius = 0.7,
 	weapon_reach = 15,
-	use_navigation_path_splines = true,
+	far_off_despawn_immunity = true,
 	is_of_interest_func = "is_of_interest_to_corruptor",
-	perception_continuous = "SET_TO_NIL",
+	vortexable = false,
 	base_unit = "units/beings/enemies/chaos_mutator_sorcerer/chr_chaos_mutator_sorcerer",
-	threat_value = 0,
+	aoe_height = 2.1,
+	infighting = InfightingSettings.small,
 	max_health = {
 		30,
 		30,
@@ -49,10 +75,11 @@ local breed_data = {
 		3
 	},
 	diff_stagger_resist = BreedTweaks.diff_stagger_resist.sorcerer,
+	hit_mass_counts = BreedTweaks.hit_mass_counts.sorcerer,
 	hitzone_multiplier_types = {
 		head = "headshot"
 	},
-	run_on_spawn = AiBreedSnippets.on_chaos_plague_sorcerer_spawn,
+	run_on_spawn = AiBreedSnippets.on_chaos_sorcerer_spawn,
 	status_effect_settings = {
 		category = "medium",
 		ignored_statuses = table.set({
@@ -68,20 +95,122 @@ local breed_data = {
 		wood_elf = "chaos_sorcerer_plague_targeting_elf",
 		bright_wizard = "chaos_sorcerer_plague_targeting_wizard"
 	},
-	disabled = Development.setting("disable_plague_sorcerer") or false
+	debug_color = {
+		255,
+		200,
+		200,
+		0
+	},
+	disabled = Development.setting("disable_plague_sorcerer") or false,
+	hit_zones = {
+		head = {
+			prio = 1,
+			actors = {
+				"c_head"
+			},
+			push_actors = {
+				"j_head",
+				"j_spine1"
+			}
+		},
+		neck = {
+			prio = 1,
+			actors = {
+				"c_neck"
+			},
+			push_actors = {
+				"j_head",
+				"j_spine1"
+			}
+		},
+		torso = {
+			prio = 2,
+			actors = {
+				"c_hips",
+				"c_spine",
+				"c_spine1",
+				"c_leftshoulder",
+				"c_rightshoulder"
+			},
+			push_actors = {
+				"j_spine1"
+			}
+		},
+		left_arm = {
+			prio = 3,
+			actors = {
+				"c_leftarm",
+				"c_leftforearm",
+				"c_lefthand"
+			},
+			push_actors = {
+				"j_spine1"
+			}
+		},
+		right_arm = {
+			prio = 3,
+			actors = {
+				"c_rightarm",
+				"c_rightforearm",
+				"c_righthand"
+			},
+			push_actors = {
+				"j_spine1"
+			}
+		},
+		left_leg = {
+			prio = 3,
+			actors = {
+				"c_leftupleg",
+				"c_leftleg",
+				"c_leftfoot",
+				"c_lefttoebase"
+			},
+			push_actors = {
+				"j_leftfoot",
+				"j_rightfoot",
+				"j_hips"
+			}
+		},
+		right_leg = {
+			prio = 3,
+			actors = {
+				"c_rightupleg",
+				"c_rightleg",
+				"c_rightfoot",
+				"c_righttoebase"
+			},
+			push_actors = {
+				"j_leftfoot",
+				"j_rightfoot",
+				"j_hips"
+			}
+		},
+		full = {
+			prio = 4,
+			actors = {}
+		},
+		afro = {
+			prio = 5,
+			actors = {
+				"h_afro"
+			}
+		}
+	},
+	allowed_layers = {
+		planks = 1.5,
+		ledges = 5,
+		bot_ratling_gun_fire = 10,
+		jumps = 5,
+		destructible_wall = 5,
+		temporary_wall = 0,
+		ledges_with_fence = 5,
+		doors = 1.5,
+		teleporters = 5,
+		bot_poison_wind = 2,
+		fire_grenade = 10
+	}
 }
-
-for key, value in pairs(Breeds.chaos_tentacle_sorcerer) do
-	local keep_value = breed_data[key]
-
-	if keep_value == "SET_TO_NIL" then
-		breed_data[key] = nil
-	elseif keep_value ~= nil then
-		breed_data[key] = keep_value
-	else
-		breed_data[key] = value
-	end
-end
 
 Breeds.chaos_mutator_sorcerer = table.create_copy(Breeds.chaos_mutator_sorcerer, breed_data)
 

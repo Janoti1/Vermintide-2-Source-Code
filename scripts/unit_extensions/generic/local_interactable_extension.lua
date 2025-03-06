@@ -4,6 +4,7 @@ LocalInteractableExtension.init = function (self, extension_init_context, unit, 
 	self.unit = unit
 	self._is_level_object = Unit.level(unit) ~= nil
 	self.interactable_type = Unit.get_data(unit, "interaction_data", "interaction_type") or "player_generic"
+	self._override_interactable_action = Unit.get_data(unit, "override_interactable_action")
 	self.interactor_unit = nil
 	self._enabled = true
 	self.num_times_successfully_completed = 0
@@ -73,4 +74,8 @@ end
 
 LocalInteractableExtension.set_enabled = function (self, enabled)
 	self._enabled = enabled
+end
+
+LocalInteractableExtension.override_interactable_action = function (self)
+	return self._override_interactable_action
 end

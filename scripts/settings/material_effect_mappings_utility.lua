@@ -1,6 +1,5 @@
 MaterialEffectMappings = MaterialEffectMappings or {}
-
-table.clear(MaterialEffectMappings)
+MaterialEffectMappingsHotReloadVersion = (MaterialEffectMappingsHotReloadVersion or 0) + 1
 
 local _added_keys, _removed_keys, _diffing_keys = {}, {}, {}
 
@@ -12,7 +11,7 @@ end
 
 MaterialEffectMappingsUtility = {
 	add = function (identifier, mappings)
-		if MaterialEffectMappings[identifier] then
+		if MaterialEffectMappings[identifier] and MaterialEffectMappingsHotReloadVersion <= 1 then
 			ferror("MaterialEffectMappings with identifier %s already exists. %s", identifier, _find_diffs(MaterialEffectMappings[identifier], mappings))
 		end
 

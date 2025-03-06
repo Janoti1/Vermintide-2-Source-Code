@@ -128,7 +128,7 @@ settings.currency_ui_settings = {
 		}
 	},
 	VS = {
-		name = "menu_store_panel_versus_currency_tooltip_title",
+		name = "menu_store_versus_panel_currency_tooltip_title",
 		icon_small = "store_icon_currency_versus_coin",
 		max_amount = 999,
 		frame = "button_frame_01_gold",

@@ -20,7 +20,7 @@ return {
 		first_person_bot = "units/beings/player/first_person_base/chr_first_person_bot_base",
 		third_person_bot = "units/beings/player/third_person_base/dwarf_ranger/chr_third_person_base",
 		third_person = "units/beings/player/third_person_base/dwarf_ranger/chr_third_person_base",
-		equip_hat_event = "show_beard_default",
+		equip_hat_event = "using_skin_02",
 		third_person_husk = "units/beings/player/third_person_base/dwarf_ranger/chr_third_person_husk_base",
 		first_person = "units/beings/player/first_person_base/chr_first_person_base",
 		first_person_attachment = {

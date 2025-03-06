@@ -25,7 +25,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_01/wpn_dr_deus_projectile_01_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -40,7 +40,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_02/wpn_dr_deus_projectile_02_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -55,7 +55,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_03/wpn_dr_deus_projectile_03_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -70,7 +70,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_01/wpn_dr_deus_projectile_01_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -85,7 +85,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_02/wpn_dr_deus_projectile_02_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -100,7 +100,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_03/wpn_dr_deus_projectile_03_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -115,7 +115,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_01/wpn_dr_deus_projectile_01_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{
@@ -130,7 +130,7 @@ local skins = {
 			template = "dr_deus_01_template_1",
 			ammo_unit_3p = "units/weapons/player/wpn_dr_deus_projectile_02/wpn_dr_deus_projectile_02_3p",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_drakegun"
+			display_unit = "units/weapons/weapon_display/display_trollhammer"
 		}
 	},
 	{

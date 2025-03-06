@@ -103,11 +103,11 @@ EditAiUtility.init = function (self, world)
 end
 
 EditAiUtility.activate = function (self)
-	ShowCursorStack.push()
+	ShowCursorStack.show("EditAiUtility")
 end
 
 EditAiUtility.deactivate = function (self)
-	ShowCursorStack.pop()
+	ShowCursorStack.hide("EditAiUtility")
 end
 
 EditAiUtility.use_breed = function (self, breed)

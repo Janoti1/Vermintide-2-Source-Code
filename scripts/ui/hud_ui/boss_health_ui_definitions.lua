@@ -20,7 +20,7 @@ local scenegraph_definition = {
 		parent = "screen",
 		horizontal_alignment = "center",
 		size = {
-			440,
+			bar_length,
 			70
 		},
 		position = {
@@ -34,7 +34,7 @@ local scenegraph_definition = {
 		parent = "pivot_parent",
 		horizontal_alignment = "left",
 		size = {
-			440,
+			bar_length,
 			14
 		},
 		position = {
@@ -48,7 +48,7 @@ local scenegraph_definition = {
 		parent = "pivot",
 		horizontal_alignment = "left",
 		size = {
-			440,
+			bar_length,
 			70
 		},
 		position = {
@@ -315,7 +315,7 @@ local function create_health_bar_widget()
 			255
 		},
 		size = {
-			440,
+			bar_length,
 			14
 		},
 		offset = {
@@ -329,7 +329,7 @@ local function create_health_bar_widget()
 			2
 		},
 		default_size = {
-			440,
+			bar_length,
 			14
 		}
 	}
@@ -364,7 +364,7 @@ local function create_health_bar_widget()
 			255
 		},
 		size = {
-			440,
+			bar_length,
 			14
 		},
 		offset = {
@@ -378,7 +378,7 @@ local function create_health_bar_widget()
 			3
 		},
 		default_size = {
-			440,
+			bar_length,
 			14
 		}
 	}
@@ -413,7 +413,7 @@ local function create_health_bar_widget()
 			255
 		},
 		size = {
-			440,
+			bar_length,
 			14
 		},
 		offset = {
@@ -427,7 +427,7 @@ local function create_health_bar_widget()
 			1
 		},
 		default_size = {
-			440,
+			bar_length,
 			14
 		}
 	}
@@ -464,7 +464,7 @@ local function create_health_bar_widget()
 		default_width_offset = 11,
 		color = table.clone(default_color),
 		offset = {
-			429,
+			bar_length - 11,
 			bar_y - 8,
 			7
 		},
@@ -493,7 +493,7 @@ local function create_health_bar_widget()
 		default_width_offset = 7,
 		color = table.clone(default_color),
 		offset = {
-			433,
+			bar_length - 7,
 			bar_y,
 			4
 		},

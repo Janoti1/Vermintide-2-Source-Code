@@ -1,13 +1,16 @@
 return {
 	screenspace_effect_name = "fx/screenspace_statue_veins/screenspace_statue_veins",
 	display_name = "display_name_mutator_escort",
+	time_until_explosion = 10,
 	pickup_name = "mutator_statue_01",
 	end_effect_required_duration = 4.5,
 	icon = "mutator_icon_escort",
 	description = "description_mutator_escort",
 	screenspace_end_effect_name = "fx/screenspace_statue_veins/screenspace_statue_veins_fade_out",
 	buildup_sound_global_parameter = "mutator_escort_buildup",
-	time_until_explosion = 10,
+	packages = {
+		"resource_packages/mutators/mutator_escort"
+	},
 	is_player_carrying_pickup = function (pickup_name, side)
 		local pickup_settings = AllPickups[pickup_name]
 		local slot_name = pickup_settings.slot_name

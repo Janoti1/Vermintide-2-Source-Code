@@ -1622,11 +1622,9 @@ weapon_template.wield_anim = "to_dual_daggers"
 weapon_template.state_machine = "units/beings/player/first_person_base/state_machines/melee/dual_daggers"
 weapon_template.attack_meta_data = {
 	tap_attack = {
-		penetrating = false,
 		arc = 0
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 0
 	}
 }

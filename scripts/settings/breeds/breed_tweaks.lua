@@ -1,3 +1,5 @@
+require("foundation/scripts/util/math")
+
 BreedTweaks = {}
 
 local health_step_multipliers = {

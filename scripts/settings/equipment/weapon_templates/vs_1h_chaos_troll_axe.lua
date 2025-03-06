@@ -1,3 +1,6 @@
+local action_one = "dark_pact_action_one"
+local action_one_release = "dark_pact_action_one_release"
+local action_one_hold = "dark_pact_action_one_hold"
 local time_mod = 0.9
 local extra_range_add = 1.1
 local weapon_template = {}
@@ -130,9 +133,8 @@ local knockback_tables = {
 }
 
 weapon_template.actions = {
-	action_one = {
+	[action_one] = {
 		default = {
-			attack_hold_input = "action_one_hold",
 			anim_end_event = "attack_finished",
 			disallow_ghost_mode = true,
 			kind = "melee_start",
@@ -157,32 +159,33 @@ weapon_template.actions = {
 				return not is_in_ghost_mode
 			end,
 			total_time = math.huge,
+			attack_hold_input = action_one_hold,
 			buff_data = planted_decrease_movement_settings.charge,
 			allowed_chain_actions = {
 				{
 					sub_action = "attack_sweep_1",
 					start_time = 0,
-					action = "action_one",
 					end_time = 0.4,
-					input = "action_one_release"
+					input = action_one_release,
+					action = action_one
 				},
 				{
 					sub_action = "attack_cleave",
 					start_time = 1.2,
-					action = "action_one",
-					input = "action_one_release"
+					input = action_one_release,
+					action = action_one
 				},
 				{
 					start_time = 0.6,
 					blocker = true,
 					end_time = 1.5,
-					input = "action_one_hold"
+					input = action_one_hold
 				},
 				{
 					sub_action = "attack_cleave",
 					start_time = 1,
-					action = "action_one",
-					auto_chain = true
+					auto_chain = true,
+					action = action_one
 				},
 				{
 					sub_action = "default",
@@ -193,7 +196,6 @@ weapon_template.actions = {
 			}
 		},
 		default_2 = {
-			attack_hold_input = "action_one_hold",
 			anim_end_event = "attack_finished",
 			disallow_ghost_mode = true,
 			kind = "melee_start",
@@ -212,32 +214,33 @@ weapon_template.actions = {
 				return end_reason ~= "new_interupting_action" and end_reason ~= "action_complete"
 			end,
 			total_time = math.huge,
+			attack_hold_input = action_one_hold,
 			buff_data = planted_decrease_movement_settings.charge,
 			allowed_chain_actions = {
 				{
 					sub_action = "attack_shove",
 					start_time = 0,
-					action = "action_one",
 					end_time = 0.4,
-					input = "action_one_release"
+					input = action_one_release,
+					action = action_one
 				},
 				{
 					sub_action = "attack_cleave",
 					start_time = 1.2,
-					action = "action_one",
-					input = "action_one_release"
+					input = action_one_release,
+					action = action_one
 				},
 				{
 					start_time = 0.6,
 					blocker = true,
 					end_time = 1.5,
-					input = "action_one_hold"
+					input = action_one_hold
 				},
 				{
 					sub_action = "attack_cleave",
 					start_time = 1,
-					action = "action_one",
-					auto_chain = true
+					auto_chain = true,
+					action = action_one
 				},
 				{
 					sub_action = "default",
@@ -280,15 +283,15 @@ weapon_template.actions = {
 				{
 					sub_action = "default_2",
 					start_time = 1,
-					action = "action_one",
 					end_time = 1.4,
-					input = "action_one"
+					input = action_one,
+					action = action_one
 				},
 				{
 					sub_action = "default",
 					start_time = 1.4,
-					action = "action_one",
-					input = "action_one"
+					input = action_one,
+					action = action_one
 				}
 			},
 			baked_sweep = {
@@ -400,8 +403,8 @@ weapon_template.actions = {
 				{
 					sub_action = "default",
 					start_time = 1.5,
-					action = "action_one",
-					input = "action_one_hold"
+					input = action_one_hold,
+					action = action_one
 				}
 			},
 			baked_sweep = {
@@ -508,17 +511,17 @@ weapon_template.actions = {
 				{
 					sub_action = "default_2",
 					start_time = 1.1,
-					action = "action_one",
-					release_required = "action_one_hold",
 					end_time = 1.6,
-					input = "action_one"
+					input = action_one,
+					action = action_one,
+					release_required = action_one_hold
 				},
 				{
 					sub_action = "default",
 					start_time = 1.6,
-					action = "action_one",
-					release_required = "action_one_hold",
-					input = "action_one_hold"
+					input = action_one_hold,
+					action = action_one,
+					release_required = action_one_hold
 				}
 			},
 			enter_function = function (attacker_unit, input_extension)
@@ -622,11 +625,9 @@ weapon_template.max_fatigue_points = 6
 weapon_template.buffs = {}
 weapon_template.attack_meta_data = {
 	tap_attack = {
-		penetrating = true,
 		arc = 0
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 0
 	}
 }
@@ -665,22 +666,22 @@ weapon_template.tooltip_keywords = {
 }
 weapon_template.tooltip_compare = {
 	light = {
-		action_name = "action_one",
-		sub_action_name = "light_attack_left"
+		sub_action_name = "light_attack_left",
+		action_name = action_one
 	},
 	heavy = {
-		action_name = "action_one",
-		sub_action_name = "heavy_attack_left"
+		sub_action_name = "heavy_attack_left",
+		action_name = action_one
 	}
 }
 weapon_template.tooltip_detail = {
 	light = {
-		action_name = "action_one",
-		sub_action_name = "default"
+		sub_action_name = "default",
+		action_name = action_one
 	},
 	heavy = {
-		action_name = "action_one",
-		sub_action_name = "default"
+		sub_action_name = "default",
+		action_name = action_one
 	}
 }
 weapon_template.wwise_dep_right_hand = {

@@ -1473,7 +1473,6 @@ weapon_template.attack_meta_data = {
 		arc = 1
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 1,
 		attack_chain = {
 			start_sub_action_name = "default",

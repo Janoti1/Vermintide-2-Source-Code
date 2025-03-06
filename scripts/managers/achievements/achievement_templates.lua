@@ -1,3 +1,5 @@
+require("scripts/settings/progression_unlocks")
+
 AchievementTemplates = {}
 
 local ExperienceSettings = rawget(_G, "ExperienceSettings")
@@ -2662,23 +2664,17 @@ for _, diff_key in ipairs(AchievementTemplates.difficulties) do
 	}
 end
 
-local hero_careers = {
-	"dr_ironbreaker",
-	"dr_slayer",
-	"dr_ranger",
-	"es_huntsman",
-	"es_knight",
-	"es_mercenary",
-	"we_shade",
-	"we_maidenguard",
-	"we_waywatcher",
-	"wh_zealot",
-	"wh_bountyhunter",
-	"wh_captain",
-	"bw_scholar",
-	"bw_adept",
-	"bw_unchained"
-}
+local hero_careers = {}
+
+for _, profile in ipairs(SPProfiles) do
+	if profile.affiliation == "heroes" then
+		for _, career in ipairs(profile.careers) do
+			hero_careers[#hero_careers + 1] = career.name
+		end
+	end
+end
+
+AchievementTemplates.hero_careers = hero_careers
 
 for _, career_name in ipairs(hero_careers) do
 	fassert(CareerSettings[career_name] ~= nil, "No career with such name (%s)", career_name)

@@ -1410,11 +1410,9 @@ weapon_template.ammo_data = {
 weapon_template.default_spread_template = "brace_of_pistols"
 weapon_template.attack_meta_data = {
 	tap_attack = {
-		penetrating = false,
 		arc = 1
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 0
 	}
 }

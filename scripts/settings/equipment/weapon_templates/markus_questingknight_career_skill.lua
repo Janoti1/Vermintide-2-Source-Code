@@ -740,11 +740,9 @@ weapon_template.attack_meta_data = {
 	charge_when_obstructed = true,
 	ignore_enemies_for_obstruction = true,
 	tap_attack = {
-		penetrating = false,
 		arc = 2
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 0
 	}
 }

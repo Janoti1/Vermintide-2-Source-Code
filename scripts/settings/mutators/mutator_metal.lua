@@ -3,8 +3,9 @@ local blade_dance_enemies = {
 	skaven_stormfiend = true,
 	skaven_storm_vermin_with_shield = true,
 	chaos_warrior = true,
-	beastmen_bestigor = true,
+	chaos_bulwark = true,
 	skaven_warpfire_thrower = true,
+	beastmen_bestigor = true,
 	beastmen_standard_bearer = true,
 	skaven_storm_vermin_commander = true,
 	skaven_storm_vermin = true,
@@ -25,6 +26,7 @@ return {
 		"skaven_ratling_gunner",
 		"skaven_warpfire_thrower",
 		"chaos_warrior",
+		"chaos_bulwark",
 		"beastmen_bestigor",
 		"beastmen_standard_bearer"
 	},

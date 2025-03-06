@@ -3662,7 +3662,7 @@ return function ()
 				"query_context",
 				"sound_event",
 				OP.EQ,
-				"pwe_gameplay_response_149"
+				"pwe_gameplay_response_154"
 			},
 			{
 				"user_context",
@@ -5811,7 +5811,7 @@ return function ()
 				"user_context",
 				"player_profile",
 				OP.EQ,
-				"empire_soldier"
+				"bright_wizard"
 			}
 		},
 		on_done = {
@@ -7057,7 +7057,7 @@ return function ()
 				"user_context",
 				"player_profile",
 				OP.EQ,
-				"wood_elf"
+				"dwarf_ranger"
 			}
 		}
 	})
@@ -10783,7 +10783,7 @@ return function ()
 				"query_context",
 				"sound_event",
 				OP.EQ,
-				"pwe_gameplay_response_149"
+				"pwh_gameplay_response_152"
 			},
 			{
 				"user_context",
@@ -20133,7 +20133,7 @@ return function ()
 				"query_context",
 				"sound_event",
 				OP.EQ,
-				"pbw_gameplay_wizard_3_special_kills_in_a_row_01_reply_01"
+				"pbw_gameplay_wizard_kills_3_specials_in_a_row_02_reply_01"
 			},
 			{
 				"user_context",
@@ -21475,7 +21475,7 @@ return function ()
 				"user_context",
 				"player_profile",
 				OP.EQ,
-				"bright_wizard"
+				"wood_elf"
 			}
 		}
 	})
@@ -27395,9 +27395,16 @@ return function ()
 			},
 			{
 				"query_context",
-				"dialogue_name",
+				"sound_event",
 				OP.EQ,
-				"pes_gameplay_wood_elf_on_a_frenzy",
+				"pes_gameplay_wood_elf_on_a_frenzy_new_a_01",
+				CombiningOP.OR_NEXT
+			},
+			{
+				"query_context",
+				"sound_event",
+				OP.EQ,
+				"pes_gameplay_wood_elf_on_a_frenzy_04",
 				CombiningOP.OR_NEXT
 			},
 			{
@@ -28117,7 +28124,7 @@ return function ()
 				"query_context",
 				"sound_event",
 				OP.EQ,
-				"pbw_gameplay_response_07"
+				"pwe_gameplay_elf_killing_rat_ogre_melee_01_reply_01"
 			},
 			{
 				"user_context",
@@ -32145,7 +32152,7 @@ return function ()
 				"user_context",
 				"player_profile",
 				OP.EQ,
-				"wood_elf"
+				"witch_hunter"
 			}
 		}
 	})

@@ -1565,7 +1565,6 @@ UnitVariationSettings.chaos_vortex_sorcerer = {
 		}
 	}
 }
-UnitVariationSettings.chaos_plague_sorcerer = {}
 UnitVariationSettings.chaos_fanatic = {
 	enabled_from_start = {
 		"body",

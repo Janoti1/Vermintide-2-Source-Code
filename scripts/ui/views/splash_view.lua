@@ -469,7 +469,7 @@ local function create_disclaimer_widget(input)
 				font_type = "hell_shark_header",
 				area_size = {
 					1400,
-					900
+					700
 				},
 				text_color = Colors.get_color_table_with_alpha("white", 255),
 				offset = {

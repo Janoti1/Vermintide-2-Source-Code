@@ -244,7 +244,7 @@ local function create_social_widget(settings, widget_angle, category_settings, g
 							style.text_color = style.base_color
 						end
 
-						return IS_WINDOWS
+						return IS_WINDOWS or settings.disable_input_text
 					end
 				},
 				{
@@ -258,7 +258,7 @@ local function create_social_widget(settings, widget_angle, category_settings, g
 							style.text_color = style.base_color
 						end
 
-						return IS_WINDOWS
+						return IS_WINDOWS or settings.disable_input_text
 					end
 				}
 			}

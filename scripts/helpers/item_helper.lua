@@ -1,6 +1,6 @@
 require("scripts/settings/equipment/item_master_list")
-dofile("scripts/settings/equipment/attachments")
-dofile("scripts/settings/equipment/cosmetics")
+local_require("scripts/settings/equipment/attachments")
+local_require("scripts/settings/equipment/cosmetics")
 
 ItemHelper = ItemHelper or {}
 

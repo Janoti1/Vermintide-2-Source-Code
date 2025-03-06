@@ -1192,38 +1192,7 @@ local function create_menu_button(scenegraph_id, text, callback, menu_option_dat
 			passes = {
 				{
 					pass_type = "hotspot",
-					content_id = "button_text",
-					content_change_function = function (content, style, ui_animations, dt, render_settings)
-						local content = content.parent
-						local alpha_multiplier = render_settings.alpha_multiplier or 1
-						local alpha = math.floor(alpha_multiplier * 255)
-
-						if alpha ~= content.alpha_value then
-							local match = string.match(content.text_field, "#color%b()")
-
-							if match then
-								local formatted_match = string.gsub(match, "%s", "")
-								local value_match = string.match(formatted_match, "%d+,%d+,%d+,%d+")
-								local values = string.split_deprecated(value_match, ",")
-
-								values[4] = tostring(alpha)
-
-								local injected_str = "#color("
-
-								for i = 1, 4 do
-									if i > 1 then
-										injected_str = injected_str .. ","
-									end
-
-									injected_str = injected_str .. values[i]
-								end
-
-								injected_str = injected_str .. ")"
-								content.text_field = string.gsub(content.text_field, "#color%b()", injected_str)
-								content.alpha_value = alpha
-							end
-						end
-					end
+					content_id = "button_text"
 				},
 				{
 					style_id = "text",

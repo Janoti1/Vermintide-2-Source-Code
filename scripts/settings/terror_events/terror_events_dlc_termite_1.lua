@@ -1,16 +1,8 @@
-local function count_event_breed(breed_name)
-	return Managers.state.conflict:count_units_by_breed_during_event(breed_name)
-end
-
-local function count_breed(breed_name)
-	return Managers.state.conflict:count_units_by_breed(breed_name)
-end
-
-local NORMAL = 1
-local HARD = 2
-local HARDER = 3
-local HARDEST = 4
-local CATACLYSM = 5
+local TerrorEventUtils = require("scripts/settings/terror_events/terror_event_utils")
+local count_event_breed = TerrorEventUtils.count_event_breed
+local HARD = TerrorEventUtils.HARD
+local HARDER = TerrorEventUtils.HARDER
+local HARDEST = TerrorEventUtils.HARDEST
 local terror_event_blueprints = {
 	termite_01_pacing_off = {
 		{
@@ -67,7 +59,7 @@ local terror_event_blueprints = {
 				"skaven_gutter_runner",
 				"skaven_ratling_gunner"
 			},
-			difficulty_requirement = HARDER
+			difficulty_requirement = HARD
 		},
 		{
 			"delay",
@@ -81,7 +73,7 @@ local terror_event_blueprints = {
 				"skaven_gutter_runner",
 				"skaven_ratling_gunner"
 			},
-			difficulty_requirement = CATACLYSM
+			difficulty_requirement = HARDEST
 		},
 		{
 			"delay",
@@ -186,7 +178,7 @@ local terror_event_blueprints = {
 			"event_horde",
 			spawner_id = "end_event_left",
 			composition_type = "event_extra_spice_small",
-			difficulty_requirement = HARDER
+			difficulty_requirement = HARD
 		},
 		{
 			"delay",
@@ -208,8 +200,26 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "end_event_left_extras",
-			composition_type = "event_extra_spice_small",
-			difficulty_requirement = NORMAL
+			composition_type = "event_extra_spice_small"
+		},
+		{
+			"spawn_special",
+			amount = 1,
+			breed_name = {
+				"skaven_poison_wind_globadier",
+				"skaven_gutter_runner",
+				"skaven_ratling_gunner"
+			}
+		},
+		{
+			"delay",
+			duration = 2
+		},
+		{
+			"event_horde",
+			spawner_id = "end_event_left_extras",
+			composition_type = "storm_vermin_medium",
+			difficulty_requirement = HARDER
 		},
 		{
 			"spawn_special",
@@ -223,33 +233,13 @@ local terror_event_blueprints = {
 		},
 		{
 			"delay",
-			duration = 2
-		},
-		{
-			"event_horde",
-			spawner_id = "end_event_left_extras",
-			composition_type = "storm_vermin_medium",
-			difficulty_requirement = HARDEST
-		},
-		{
-			"spawn_special",
-			amount = 1,
-			breed_name = {
-				"skaven_poison_wind_globadier",
-				"skaven_gutter_runner",
-				"skaven_ratling_gunner"
-			},
-			difficulty_requirement = HARDER
-		},
-		{
-			"delay",
 			duration = 3
 		},
 		{
 			"event_horde",
 			spawner_id = "end_event_left_extras",
 			composition_type = "plague_monks_small",
-			difficulty_requirement = CATACLYSM
+			difficulty_requirement = HARDEST
 		}
 	},
 	termite_01_end_event_right = {
@@ -266,7 +256,7 @@ local terror_event_blueprints = {
 			"event_horde",
 			spawner_id = "end_event_right",
 			composition_type = "event_extra_spice_small",
-			difficulty_requirement = HARDER
+			difficulty_requirement = HARD
 		},
 		{
 			"delay",
@@ -288,8 +278,7 @@ local terror_event_blueprints = {
 		{
 			"event_horde",
 			spawner_id = "end_event_right_extras",
-			composition_type = "event_extra_spice_small",
-			difficulty_requirement = NORMAL
+			composition_type = "event_extra_spice_small"
 		},
 		{
 			"spawn_special",
@@ -298,8 +287,7 @@ local terror_event_blueprints = {
 				"skaven_poison_wind_globadier",
 				"skaven_gutter_runner",
 				"skaven_ratling_gunner"
-			},
-			difficulty_requirement = HARD
+			}
 		},
 		{
 			"delay",
@@ -313,7 +301,7 @@ local terror_event_blueprints = {
 				"skaven_gutter_runner",
 				"skaven_ratling_gunner"
 			},
-			difficulty_requirement = HARDEST
+			difficulty_requirement = HARDER
 		},
 		{
 			"delay",
@@ -323,7 +311,7 @@ local terror_event_blueprints = {
 			"event_horde",
 			spawner_id = "end_event_right_extras",
 			composition_type = "storm_vermin_small",
-			difficulty_requirement = CATACLYSM
+			difficulty_requirement = HARDEST
 		},
 		{
 			"delay",
@@ -337,7 +325,7 @@ local terror_event_blueprints = {
 				"skaven_gutter_runner",
 				"skaven_ratling_gunner"
 			},
-			difficulty_requirement = HARDER
+			difficulty_requirement = HARD
 		}
 	},
 	termite_01_end_event_center = {
@@ -352,7 +340,16 @@ local terror_event_blueprints = {
 			"event_horde",
 			spawner_id = "end_event_right_extras",
 			composition_type = "plague_monks_medium",
-			difficulty_requirement = CATACLYSM
+			difficulty_requirement = HARDEST
+		},
+		{
+			"spawn_special",
+			amount = 1,
+			breed_name = {
+				"skaven_pack_master",
+				"skaven_gutter_runner"
+			},
+			difficulty_requirement = HARD
 		},
 		{
 			"spawn_special",
@@ -362,15 +359,6 @@ local terror_event_blueprints = {
 				"skaven_gutter_runner"
 			},
 			difficulty_requirement = HARDER
-		},
-		{
-			"spawn_special",
-			amount = 1,
-			breed_name = {
-				"skaven_pack_master",
-				"skaven_gutter_runner"
-			},
-			difficulty_requirement = HARDEST
 		}
 	},
 	termite_01_end_event_manual_01 = {
@@ -410,4 +398,6 @@ local terror_event_blueprints = {
 	}
 }
 
-return terror_event_blueprints
+return {
+	terror_event_blueprints
+}

@@ -46,23 +46,23 @@ LevelSettings.editor_level = {
 	locations = {}
 }
 LevelSettings.inn_level = {
-	conflict_settings = "inn_level",
-	display_name = "level_name_keep",
-	player_aux_bus_name = "environment_reverb_outside",
 	mechanism = "adventure",
+	display_name = "level_name_keep",
+	knocked_down_setting = "knocked_down",
+	player_aux_bus_name = "environment_reverb_outside",
+	preload_no_enemies = true,
 	use_keep_decorations = true,
-	no_bots_allowed = true,
 	environment_state = "interior",
 	level_image = "level_icon_inn_level",
-	skip_generate_spawns = true,
 	loading_ui_package_name = "loading_screen_15",
+	skip_generate_spawns = true,
 	hub_level = true,
 	ambient_sound_event = "silent_default_world_sound",
-	load_no_enemies = false,
+	no_bots_allowed = true,
+	has_multiple_loading_images = true,
 	no_terror_events = true,
 	game_mode = "inn",
-	has_multiple_loading_images = true,
-	knocked_down_setting = "knocked_down",
+	conflict_settings = "inn_level",
 	level_name = "levels/inn/world",
 	no_nav_mesh = false,
 	source_aux_bus_name = "environment_reverb_outside_source",
@@ -73,15 +73,6 @@ LevelSettings.inn_level = {
 	},
 	level_particle_effects = {},
 	level_screen_effects = {},
-	breed_categories = {
-		{
-			id = "keep_rats",
-			dynamic_loading = false,
-			breeds = {
-				"critter_rat"
-			}
-		}
-	},
 	locations = {
 		"location_keep_armoury",
 		"location_keep_bardins_room",
@@ -112,24 +103,24 @@ LevelSettings.inn_level = {
 	}
 }
 LevelSettings.inn_level_celebrate = {
-	conflict_settings = "inn_level",
-	display_name = "level_name_keep",
-	player_aux_bus_name = "environment_reverb_outside",
 	mechanism = "adventure",
+	display_name = "level_name_keep",
+	knocked_down_setting = "knocked_down",
+	player_aux_bus_name = "environment_reverb_outside",
+	preload_no_enemies = true,
 	use_keep_decorations = true,
-	no_bots_allowed = true,
 	environment_state = "interior",
+	level_image = "level_icon_inn_level",
 	small_level_image = "inn_level_small_image",
 	skip_generate_spawns = true,
-	loading_ui_package_name = "loading_screen_15",
 	hub_level = true,
 	ambient_sound_event = "silent_default_world_sound",
-	load_no_enemies = false,
+	no_bots_allowed = true,
+	has_multiple_loading_images = true,
 	no_terror_events = true,
 	game_mode = "inn",
-	has_multiple_loading_images = true,
-	knocked_down_setting = "knocked_down",
-	level_image = "level_icon_inn_level",
+	loading_ui_package_name = "loading_screen_15",
+	conflict_settings = "inn_level",
 	level_name = "levels/inn/event_decoration/celebrate/world",
 	no_nav_mesh = false,
 	source_aux_bus_name = "environment_reverb_outside_source",
@@ -141,15 +132,6 @@ LevelSettings.inn_level_celebrate = {
 	},
 	level_particle_effects = {},
 	level_screen_effects = {},
-	breed_categories = {
-		{
-			id = "keep_rats",
-			dynamic_loading = false,
-			breeds = {
-				"critter_rat"
-			}
-		}
-	},
 	locations = {},
 	loot_objectives = {},
 	pickup_settings = {
@@ -166,24 +148,24 @@ LevelSettings.inn_level_celebrate = {
 	}
 }
 LevelSettings.inn_level_halloween = {
-	conflict_settings = "inn_level",
-	display_name = "level_name_keep",
-	player_aux_bus_name = "environment_reverb_outside",
 	mechanism = "adventure",
+	display_name = "level_name_keep",
+	knocked_down_setting = "knocked_down",
+	player_aux_bus_name = "environment_reverb_outside",
+	preload_no_enemies = true,
 	use_keep_decorations = true,
-	no_bots_allowed = true,
 	environment_state = "interior",
+	level_image = "level_icon_inn_level",
 	small_level_image = "inn_level_small_image",
 	skip_generate_spawns = true,
-	loading_ui_package_name = "loading_screen_15",
 	hub_level = true,
 	ambient_sound_event = "silent_default_world_sound",
-	load_no_enemies = false,
+	no_bots_allowed = true,
+	has_multiple_loading_images = true,
 	no_terror_events = true,
 	game_mode = "inn",
-	has_multiple_loading_images = true,
-	knocked_down_setting = "knocked_down",
-	level_image = "level_icon_inn_level",
+	loading_ui_package_name = "loading_screen_15",
+	conflict_settings = "inn_level",
 	level_name = "levels/inn/event_decoration/halloween/world",
 	no_nav_mesh = false,
 	source_aux_bus_name = "environment_reverb_outside_source",
@@ -195,15 +177,6 @@ LevelSettings.inn_level_halloween = {
 	},
 	level_particle_effects = {},
 	level_screen_effects = {},
-	breed_categories = {
-		{
-			id = "keep_rats",
-			dynamic_loading = false,
-			breeds = {
-				"critter_rat"
-			}
-		}
-	},
 	locations = {},
 	loot_objectives = {},
 	pickup_settings = {
@@ -220,27 +193,27 @@ LevelSettings.inn_level_halloween = {
 	}
 }
 LevelSettings.inn_level_skulls = {
-	conflict_settings = "inn_level",
+	mechanism = "adventure",
+	display_name = "level_name_keep",
 	debug_environment_level_flow_event = "keep_event_skulls",
 	player_aux_bus_name = "environment_reverb_outside",
-	mechanism = "adventure",
+	preload_no_enemies = true,
 	use_keep_decorations = true,
-	no_bots_allowed = true,
 	environment_state = "interior",
+	level_image = "level_icon_inn_level",
 	small_level_image = "inn_level_small_image",
 	skip_generate_spawns = true,
-	loading_ui_package_name = "loading_screen_15",
 	hub_level = true,
 	ambient_sound_event = "silent_default_world_sound",
-	load_no_enemies = false,
+	no_bots_allowed = true,
+	has_multiple_loading_images = true,
 	no_terror_events = true,
 	game_mode = "inn",
-	has_multiple_loading_images = true,
 	knocked_down_setting = "knocked_down",
-	display_name = "level_name_keep",
+	conflict_settings = "inn_level",
+	loading_ui_package_name = "loading_screen_15",
 	level_name = "levels/inn/event_decoration/skulls/world",
 	no_nav_mesh = false,
-	level_image = "level_icon_inn_level",
 	source_aux_bus_name = "environment_reverb_outside_source",
 	packages = {
 		"resource_packages/levels/inn_dependencies",
@@ -250,15 +223,6 @@ LevelSettings.inn_level_skulls = {
 	},
 	level_particle_effects = {},
 	level_screen_effects = {},
-	breed_categories = {
-		{
-			id = "keep_rats",
-			dynamic_loading = false,
-			breeds = {
-				"critter_rat"
-			}
-		}
-	},
 	locations = {},
 	loot_objectives = {},
 	pickup_settings = {
@@ -275,27 +239,27 @@ LevelSettings.inn_level_skulls = {
 	}
 }
 LevelSettings.inn_level_sonnstill = {
-	conflict_settings = "inn_level",
+	mechanism = "adventure",
+	display_name = "level_name_keep",
 	debug_environment_level_flow_event = "keep_event_sonnstill",
 	player_aux_bus_name = "environment_reverb_outside",
-	mechanism = "adventure",
+	preload_no_enemies = true,
 	use_keep_decorations = true,
-	no_bots_allowed = true,
 	environment_state = "interior",
+	level_image = "level_icon_inn_level",
 	small_level_image = "inn_level_small_image",
 	skip_generate_spawns = true,
-	loading_ui_package_name = "loading_screen_15",
 	hub_level = true,
 	ambient_sound_event = "silent_default_world_sound",
-	load_no_enemies = false,
+	no_bots_allowed = true,
+	has_multiple_loading_images = true,
 	no_terror_events = true,
 	game_mode = "inn",
-	has_multiple_loading_images = true,
 	knocked_down_setting = "knocked_down",
-	display_name = "level_name_keep",
+	conflict_settings = "inn_level",
+	loading_ui_package_name = "loading_screen_15",
 	level_name = "levels/inn/event_decoration/sonnstill/world",
 	no_nav_mesh = false,
-	level_image = "level_icon_inn_level",
 	source_aux_bus_name = "environment_reverb_outside_source",
 	packages = {
 		"resource_packages/levels/inn_dependencies",
@@ -305,15 +269,6 @@ LevelSettings.inn_level_sonnstill = {
 	},
 	level_particle_effects = {},
 	level_screen_effects = {},
-	breed_categories = {
-		{
-			id = "keep_rats",
-			dynamic_loading = false,
-			breeds = {
-				"critter_rat"
-			}
-		}
-	},
 	locations = {},
 	loot_objectives = {},
 	pickup_settings = {

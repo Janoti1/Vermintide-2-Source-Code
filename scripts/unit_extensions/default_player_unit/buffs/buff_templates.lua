@@ -271,6 +271,7 @@ ProcEvents = {
 	"stagger_calculation_ended",
 	"damage_calculation_started",
 	"damage_calculation_ended",
+	"on_staggered",
 	"minion_attack_used"
 }
 
@@ -292,7 +293,8 @@ ProcEventParams = {
 	on_damage_dealt = make_proc_param_lookup("attacked_unit", "attacker_unit", "damage_amount", "hit_zone_name", "no_crit_headshot_damage", "is_critical_strike", "buff_attack_type", "target_index", "damage_source", "damage_type", "first_hit", "PROC_MODIFIABLE"),
 	on_critical_hit = make_proc_param_lookup("hit_unit", "attack_type", "hit_zone_name", "target_number", "buff_type"),
 	on_ranged_hit = make_proc_param_lookup("hit_unit", "attack_type", "hit_zone_name", "target_number", "buff_type", "is_critical", "unmodified"),
-	on_hit = make_proc_param_lookup("hit_unit", "attack_type", "hit_zone_name", "target_number", "buff_type", "is_critical", "unmodified")
+	on_hit = make_proc_param_lookup("hit_unit", "attack_type", "hit_zone_name", "target_number", "buff_type", "is_critical", "unmodified"),
+	on_staggered = make_proc_param_lookup("target_unit", "damage_profile", "attacker_unit", "stagger_type", "stagger_duration", "stagger_value", "buff_type", "target_index")
 }
 
 local buff_params = {}
@@ -311,30 +313,6 @@ local function is_bot(unit)
 	local player = Managers.player:owner(unit)
 
 	return player and player.bot_player
-end
-
-local function get_killing_blow_slot_type(params)
-	local killing_blow_data = params[1]
-
-	if not killing_blow_data then
-		return
-	end
-
-	local master_list_key = killing_blow_data[DamageDataIndex.DAMAGE_SOURCE_NAME]
-
-	if not master_list_key then
-		return
-	end
-
-	local master_list_data = rawget(ItemMasterList, master_list_key)
-
-	if not master_list_data then
-		return
-	end
-
-	local slot_type = master_list_data.slot_type
-
-	return slot_type
 end
 
 ProcFunctions = {
@@ -952,30 +930,6 @@ ProcFunctions = {
 			end
 		end
 	end,
-	bardin_ironbreaker_remove_on_block_power_buff = function (owner_unit, buff, params, world, param_order)
-		if not Managers.state.network.is_server then
-			return
-		end
-
-		if ALIVE[owner_unit] then
-			local target_index = params[param_order.target_index]
-			local template = buff.template
-			local buff_extension = ScriptUnit.extension(owner_unit, "buff_system")
-			local buff_system = Managers.state.entity:system("buff_system")
-			local reference_buff_name = template.reference_buff
-			local reference_buff = buff_extension:get_non_stacking_buff(reference_buff_name)
-
-			if reference_buff and reference_buff.buff_list and target_index and target_index == 1 then
-				for i = 1, #reference_buff.buff_list do
-					local buff_to_remove = table.remove(reference_buff.buff_list)
-
-					if buff_to_remove then
-						buff_system:remove_server_controlled_buff(owner_unit, buff_to_remove)
-					end
-				end
-			end
-		end
-	end,
 	remove_buff_on_action = function (owner_unit, buff, params)
 		if ALIVE[owner_unit] then
 			local kind = params[1].kind
@@ -1394,13 +1348,13 @@ ProcFunctions = {
 				local buffs_to_remove = buff_extension:num_buff_stacks(buff_to_add)
 
 				for i = 1, buffs_to_remove do
-					local buff = buff_extension:get_buff_type(buff_to_add)
+					local added_buff = buff_extension:get_buff_type(buff_to_add)
 
-					if not buff then
+					if not added_buff then
 						break
 					end
 
-					buff_extension:remove_buff(buff.id)
+					buff_extension:remove_buff(added_buff.id)
 				end
 			end
 		end
@@ -1964,7 +1918,6 @@ ProcFunctions = {
 			local hit_data = params[5]
 			local attack_type = params[2]
 			local unmodifed = params[7]
-			local hit_unit = params[1]
 
 			if not hit_data or hit_data == "n/a" or hit_data ~= "RANGED" then
 				return
@@ -3138,31 +3091,31 @@ ProcFunctions = {
 
 				for i = 1, #remove_buff_stack_data_array do
 					local remove_buff_stack_data = remove_buff_stack_data_array[i]
-					local buff_to_remove = remove_buff_stack_data.buff_to_remove
+					local buff_to_remove_name = remove_buff_stack_data.buff_to_remove
 					local num_stacks = remove_buff_stack_data.num_stacks or 1
 
 					if remove_buff_stack_data.server_controlled then
-						fassert(buff_to_remove == template.buff_to_add, "Trying to remove different type of server controlled buff, only same types are allowed right now.")
+						fassert(buff_to_remove_name == template.buff_to_add, "Trying to remove different type of server controlled buff, only same types are allowed right now.")
 
 						local buff_system = Managers.state.entity:system("buff_system")
 						local server_buff_ids = buff.server_buff_ids
 
 						num_stacks = server_buff_ids and math.min(#server_buff_ids, num_stacks) or 0
 
-						for i = 1, num_stacks do
+						for _ = 1, num_stacks do
 							local buff_to_remove = table.remove(server_buff_ids)
 
 							buff_system:remove_server_controlled_buff(owner_unit, buff_to_remove)
 						end
 					else
-						for i = 1, num_stacks do
-							local buff = buff_extension:get_buff_type(buff_to_remove)
+						for _ = 1, num_stacks do
+							local buff_to_remove = buff_extension:get_buff_type(buff_to_remove_name)
 
-							if not buff then
+							if not buff_to_remove then
 								break
 							end
 
-							buff_extension:remove_buff(buff.id)
+							buff_extension:remove_buff(buff_to_remove.id)
 						end
 					end
 
@@ -3841,10 +3794,6 @@ ProcFunctions = {
 			elseif required_weapon_type == "ranged" and (not attack_type or attack_type ~= "instant_projectile" and attack_type ~= "projectile" or attack_type == "heavy_instant_projectile") then
 				return
 			end
-
-			if slot_type ~= required_weapon_type then
-				return
-			end
 		end
 
 		local buff_extension = ScriptUnit.has_extension(owner_unit, "buff_system")
@@ -3886,10 +3835,10 @@ ProcFunctions = {
 
 			if buffs_to_remove then
 				for i = 1, #buffs_to_remove do
-					local buff = buff_extension:get_non_stacking_buff(buffs_to_remove[i])
+					local buff_to_remove = buff_extension:get_non_stacking_buff(buffs_to_remove[i])
 
-					if buff then
-						buff_extension:remove_buff(buff.id)
+					if buff_to_remove then
+						buff_extension:remove_buff(buff_to_remove.id)
 					end
 				end
 			end
@@ -3990,6 +3939,15 @@ ProcFunctions = {
 	end,
 	remove_buff_synced = function (owner_unit, buff, params)
 		BuffFunctionTemplates.functions.remove_buff_synced(owner_unit, buff, params)
+	end,
+	add_kill_timer = function (owner_unit, buff, params)
+		if not Managers.state.network.is_server then
+			return
+		end
+
+		local buff_extension = ScriptUnit.has_extension(owner_unit, "buff_system")
+
+		buff_extension:add_buff("enemy_kill_timer_buff")
 	end
 }
 StackingBuffFunctions = {
@@ -5587,19 +5545,6 @@ BuffTemplates = {
 			}
 		}
 	},
-	bloodlust = {
-		buffs = {
-			{
-				name = "bloodlust",
-				multiplier = 0.2,
-				buff_func = "heal_percentage_of_enemy_hp_on_melee_kill",
-				event = "on_kill",
-				perks = {
-					buff_perks.smiter_healing
-				}
-			}
-		}
-	},
 	vanguard = {
 		buffs = {
 			{
@@ -5769,6 +5714,26 @@ BuffTemplates = {
 				name = "damage_taken_from_proc",
 				stat_buff = "damage_taken",
 				refresh_durations = true
+			}
+		}
+	},
+	enemy_kill_timer = {
+		buffs = {
+			{
+				event = "on_staggered",
+				name = "enemy_kill_timer",
+				max_stacks = 1,
+				buff_func = "add_kill_timer"
+			}
+		}
+	},
+	enemy_kill_timer_buff = {
+		buffs = {
+			{
+				fuse_time = 1,
+				name = "enemy_kill_timer_buff",
+				update_func = "update_kill_timer",
+				max_stacks = 1
 			}
 		}
 	},
@@ -8942,8 +8907,8 @@ BuffTemplates = {
 	twitch_vote_buff_fatigue_loss = {
 		buffs = {
 			{
-				multiplier = -1,
 				name = "twitch_vote_buff_fatigue_loss",
+				multiplier = -1,
 				stat_buff = "fatigue_regen",
 				duration = 15,
 				max_stacks = 1,

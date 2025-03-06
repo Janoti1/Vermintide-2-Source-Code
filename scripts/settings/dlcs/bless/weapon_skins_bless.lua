@@ -496,7 +496,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_01/wpn_wh_1h_hammer_01",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes"
+			display_unit = "units/weapons/weapon_display/display_hammer_book"
 		}
 	},
 	{
@@ -510,7 +510,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_01/wpn_wh_1h_hammer_01_runed",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes"
+			display_unit = "units/weapons/weapon_display/display_hammer_book"
 		}
 	},
 	{
@@ -524,7 +524,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_01/wpn_wh_1h_hammer_01_runed",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes",
+			display_unit = "units/weapons/weapon_display/display_hammer_book",
 			material_settings = WeaponMaterialSettingsTemplates.purple_glow
 		}
 	},
@@ -539,7 +539,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_02/wpn_wh_1h_hammer_02",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes"
+			display_unit = "units/weapons/weapon_display/display_hammer_book"
 		}
 	},
 	{
@@ -553,7 +553,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_02/wpn_wh_1h_hammer_02_runed",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes"
+			display_unit = "units/weapons/weapon_display/display_hammer_book"
 		}
 	},
 	{
@@ -567,7 +567,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_02/wpn_wh_1h_hammer_02_runed",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes",
+			display_unit = "units/weapons/weapon_display/display_hammer_book",
 			material_settings = WeaponMaterialSettingsTemplates.purple_glow
 		}
 	},
@@ -582,7 +582,7 @@ local skins = {
 			left_hand_unit = "units/weapons/player/wpn_wh_1h_hammer_02/wpn_wh_1h_hammer_02_magic",
 			template = "one_handed_hammer_book_priest_template",
 			hud_icon = "weapon_generic_icon_staff_3",
-			display_unit = "units/weapons/weapon_display/display_dual_axes"
+			display_unit = "units/weapons/weapon_display/display_hammer_book"
 		}
 	}
 }

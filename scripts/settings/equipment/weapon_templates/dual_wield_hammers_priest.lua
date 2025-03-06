@@ -1749,11 +1749,9 @@ weapon_template.state_machine_career = {
 }
 weapon_template.attack_meta_data = {
 	tap_attack = {
-		penetrating = false,
 		arc = 0
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 0
 	}
 }

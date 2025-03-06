@@ -1,4 +1,3 @@
-ItemMasterList = ItemMasterList or {}
 ItemMasterList.wh_brace_of_pistols_skin_03_runed_05 = {
 	description = "wh_brace_of_pistols_skin_03_runed_05_description",
 	rarity = "unique",
@@ -6,7 +5,6 @@ ItemMasterList.wh_brace_of_pistols_skin_03_runed_05 = {
 	inventory_icon = "icon_wpn_emp_pistol_02_t2_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	template = "brace_of_pistols_template_1",
 	hud_icon = "weapon_generic_icon_brace_of_pistol",
 	item_type = "weapon_skin",
@@ -15,6 +13,9 @@ ItemMasterList.wh_brace_of_pistols_skin_03_runed_05 = {
 		"wh_zealot",
 		"wh_bountyhunter",
 		"wh_captain"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.dr_steam_pistol_skin_02_runed_05 = {
@@ -25,7 +26,6 @@ ItemMasterList.dr_steam_pistol_skin_02_runed_05 = {
 	inventory_icon = "icon_wpn_dw_steam_pistol_01_t2_runed_03",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	required_dlc = "cog",
 	template = "heavy_steam_pistol_template_1",
 	item_type = "weapon_skin",
@@ -33,6 +33,9 @@ ItemMasterList.dr_steam_pistol_skin_02_runed_05 = {
 	can_wield = {
 		"dr_engineer",
 		"dr_ranger"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.we_javelin_skin_02_runed_05 = {
@@ -43,13 +46,15 @@ ItemMasterList.we_javelin_skin_02_runed_05 = {
 	inventory_icon = "icon_wpn_we_javelin_02_runed_02_03",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	required_dlc = "woods",
 	template = "two_handed_spears_elf_template_1",
 	item_type = "weapon_skin",
 	matching_item_key = "we_javelin",
 	can_wield = {
 		"we_thornsister"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.bw_deus_01_skin_02_runed_05 = {
@@ -60,7 +65,6 @@ ItemMasterList.bw_deus_01_skin_02_runed_05 = {
 	inventory_icon = "icon_wpn_brw_magmastaff_t2_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	required_dlc = "grass",
 	hud_icon = "weapon_generic_icon_staff_5",
 	item_type = "weapon_skin",
@@ -69,6 +73,9 @@ ItemMasterList.bw_deus_01_skin_02_runed_05 = {
 		"bw_scholar",
 		"bw_adept",
 		"bw_unchained"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.es_dual_wield_hammer_sword_skin_02_runed_05 = {
@@ -78,7 +85,6 @@ ItemMasterList.es_dual_wield_hammer_sword_skin_02_runed_05 = {
 	inventory_icon = "icon_es_dual_wield_hammer_sword_02_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	template = "dual_wield_hammer_sword_template",
 	hud_icon = "weapon_generic_icon_falken",
 	item_type = "weapon_skin",
@@ -87,6 +93,9 @@ ItemMasterList.es_dual_wield_hammer_sword_skin_02_runed_05 = {
 		"es_huntsman",
 		"es_knight",
 		"es_mercenary"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.wh_deus_01_skin_03_runed_05 = {
@@ -97,7 +106,6 @@ ItemMasterList.wh_deus_01_skin_03_runed_05 = {
 	inventory_icon = "icon_wpn_emp_duckfoot_t3_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	required_dlc = "grass",
 	hud_icon = "weapon_generic_icon_bow",
 	item_type = "weapon_skin",
@@ -106,6 +114,9 @@ ItemMasterList.wh_deus_01_skin_03_runed_05 = {
 		"wh_bountyhunter",
 		"wh_captain",
 		"wh_zealot"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.dw_2h_hammer_skin_01_runed_05 = {
@@ -115,7 +126,6 @@ ItemMasterList.dw_2h_hammer_skin_01_runed_05 = {
 	inventory_icon = "dw_2h_hammer_01_t1_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	template = "two_handed_hammers_template_1",
 	hud_icon = "weapon_generic_icon_staff_3",
 	item_type = "weapon_skin",
@@ -124,6 +134,9 @@ ItemMasterList.dw_2h_hammer_skin_01_runed_05 = {
 		"dr_ironbreaker",
 		"dr_slayer",
 		"dr_ranger"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.es_handgun_skin_02_runed_05 = {
@@ -133,7 +146,6 @@ ItemMasterList.es_handgun_skin_02_runed_05 = {
 	inventory_icon = "empire_handgun_02_t2_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	template = "handgun_template_1",
 	hud_icon = "weapon_generic_icon_staff_3",
 	item_type = "weapon_skin",
@@ -142,6 +154,9 @@ ItemMasterList.es_handgun_skin_02_runed_05 = {
 		"es_huntsman",
 		"es_knight",
 		"es_mercenary"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.we_dual_dagger_skin_02_runed_05 = {
@@ -151,7 +166,6 @@ ItemMasterList.we_dual_dagger_skin_02_runed_05 = {
 	inventory_icon = "we_dagger_01_t2_dual_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	template = "dual_wield_daggers_template_1",
 	hud_icon = "weapon_generic_icon_staff_3",
 	item_type = "weapon_skin",
@@ -160,6 +174,9 @@ ItemMasterList.we_dual_dagger_skin_02_runed_05 = {
 		"we_shade",
 		"we_maidenguard",
 		"we_waywatcher"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.bw_1h_flaming_sword_skin_01_runed_05 = {
@@ -169,7 +186,6 @@ ItemMasterList.bw_1h_flaming_sword_skin_01_runed_05 = {
 	inventory_icon = "icon_wpn_brw_flaming_sword_01_t1_runed_02",
 	slot_type = "weapon_skin",
 	information_text = "information_weapon_skin",
-	event_item = true,
 	template = "flaming_sword_template_1",
 	hud_icon = "weapon_generic_icon_staff_3",
 	item_type = "weapon_skin",
@@ -178,6 +194,9 @@ ItemMasterList.bw_1h_flaming_sword_skin_01_runed_05 = {
 		"bw_scholar",
 		"bw_adept",
 		"bw_unchained"
+	},
+	events = {
+		"gotwf"
 	}
 }
 ItemMasterList.frame_gotwf_01 = {
@@ -188,9 +207,11 @@ ItemMasterList.frame_gotwf_01 = {
 	inventory_icon = "icon_portrait_frame_gotwf_01",
 	slot_type = "frame",
 	information_text = "information_text_frame",
-	event_item = true,
 	rarity = "promo",
 	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"gotwf"
+	}
 }

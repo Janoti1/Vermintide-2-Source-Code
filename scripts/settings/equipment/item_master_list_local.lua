@@ -1,4 +1,4 @@
-ItemMasterList = ItemMasterList or {}
+ItemMasterList = ItemMasterList or Script.new_map(4096)
 ItemMasterList.lamp_oil = {
 	temporary_template = "lamp_oil",
 	slot_type = "healthkit",

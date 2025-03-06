@@ -1,16 +1,7 @@
-local function count_event_breed(breed_name)
-	return Managers.state.conflict:count_units_by_breed_during_event(breed_name)
-end
-
-local function count_breed(breed_name)
-	return Managers.state.conflict:count_units_by_breed(breed_name)
-end
-
-local NORMAL = 1
-local HARD = 2
-local HARDER = 3
-local HARDEST = 4
-local CATACLYSM = 5
+local TerrorEventUtils = require("scripts/settings/terror_events/terror_event_utils")
+local count_event_breed = TerrorEventUtils.count_event_breed
+local HARDER = TerrorEventUtils.HARDER
+local HARDEST = TerrorEventUtils.HARDEST
 local terror_event_blueprints = {
 	bastion_gate_event = {
 		{
@@ -88,9 +79,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_ratling_gunner",
 			spawner_id = "bastion_gate_event_special",
-			difficulty_requirement = NORMAL
+			breed_name = "skaven_ratling_gunner"
 		},
 		{
 			"delay",
@@ -100,7 +90,7 @@ local terror_event_blueprints = {
 			"spawn_at_raw",
 			breed_name = "skaven_ratling_gunner",
 			spawner_id = "bastion_gate_event_special",
-			difficulty_requirement = HARDEST
+			difficulty_requirement = HARDER
 		},
 		{
 			"delay",
@@ -138,9 +128,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_gutter_runner",
 			spawner_id = "bastion_gate_event_special",
-			difficulty_requirement = NORMAL
+			breed_name = "skaven_gutter_runner"
 		},
 		{
 			"event_horde",
@@ -196,9 +185,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_gutter_runner",
 			spawner_id = "bastion_gate_event_special",
-			difficulty_requirement = NORMAL
+			breed_name = "skaven_gutter_runner"
 		},
 		{
 			"delay",
@@ -208,7 +196,7 @@ local terror_event_blueprints = {
 			"spawn_at_raw",
 			breed_name = "skaven_gutter_runner",
 			spawner_id = "bastion_gate_event_special",
-			difficulty_requirement = HARDEST
+			difficulty_requirement = HARDER
 		},
 		{
 			"event_horde",
@@ -372,9 +360,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_pack_master",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = NORMAL
+			breed_name = "skaven_pack_master"
 		},
 		{
 			"delay",
@@ -382,9 +369,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_pack_master",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_pack_master"
 		},
 		{
 			"delay",
@@ -421,8 +407,7 @@ local terror_event_blueprints = {
 				"skaven_warpfire_thrower",
 				"skaven_poison_wind_globadier",
 				"skaven_poison_wind_globadier"
-			},
-			difficulty_requirement = NORMAL
+			}
 		},
 		{
 			"delay",
@@ -458,6 +443,21 @@ local terror_event_blueprints = {
 				"skaven_pack_master",
 				"skaven_poison_wind_globadier",
 				"skaven_poison_wind_globadier"
+			}
+		},
+		{
+			"delay",
+			duration = 3
+		},
+		{
+			"spawn_at_raw",
+			spawner_id = "bastion_finale_event_boss",
+			breed_name = {
+				"skaven_ratling_gunner",
+				"skaven_warpfire_thrower",
+				"skaven_pack_master",
+				"skaven_poison_wind_globadier",
+				"skaven_poison_wind_globadier"
 			},
 			difficulty_requirement = HARDER
 		},
@@ -476,22 +476,6 @@ local terror_event_blueprints = {
 				"skaven_poison_wind_globadier"
 			},
 			difficulty_requirement = HARDEST
-		},
-		{
-			"delay",
-			duration = 3
-		},
-		{
-			"spawn_at_raw",
-			spawner_id = "bastion_finale_event_boss",
-			breed_name = {
-				"skaven_ratling_gunner",
-				"skaven_warpfire_thrower",
-				"skaven_pack_master",
-				"skaven_poison_wind_globadier",
-				"skaven_poison_wind_globadier"
-			},
-			difficulty_requirement = CATACLYSM
 		},
 		{
 			"delay",
@@ -562,9 +546,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_pack_master",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_pack_master"
 		},
 		{
 			"delay",
@@ -572,9 +555,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_gutter_runner",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_gutter_runner"
 		},
 		{
 			"continue_when",
@@ -603,9 +585,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_pack_master",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_pack_master"
 		},
 		{
 			"delay",
@@ -613,9 +594,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_gutter_runner",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_gutter_runner"
 		},
 		{
 			"continue_when",
@@ -644,9 +624,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_pack_master",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_pack_master"
 		},
 		{
 			"delay",
@@ -654,9 +633,8 @@ local terror_event_blueprints = {
 		},
 		{
 			"spawn_at_raw",
-			breed_name = "skaven_gutter_runner",
 			spawner_id = "bastion_finale_event_boss",
-			difficulty_requirement = HARDER
+			breed_name = "skaven_gutter_runner"
 		},
 		{
 			"continue_when",
@@ -700,4 +678,6 @@ local terror_event_blueprints = {
 	}
 }
 
-return terror_event_blueprints
+return {
+	terror_event_blueprints
+}

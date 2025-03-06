@@ -43,30 +43,42 @@ VersusObjectiveSettings = {
 			"forest_ambush_pvp_set_2",
 			"forest_ambush_pvp_set_3"
 		}
+	},
+	dwarf_exterior_pvp = {
+		num_sets = 3,
+		round_timer = 1800,
+		objective_lists = {
+			"dwarf_exterior_pvp_set_1",
+			"dwarf_exterior_pvp_set_2",
+			"dwarf_exterior_pvp_set_3"
+		}
 	}
 }
 
 local allowed_objective_terms = {
-	capture_time = true,
+	always_show_objective_marker = true,
 	mission_name = true,
 	play_safehouse_vo = true,
 	play_waystone_vo = true,
 	play_complete_vo = true,
 	score_for_each_player_inside = true,
 	objective_tag = true,
-	almost_done = true,
+	play_dialogue_event_on_complete = true,
 	score_per_socket = true,
-	volume_name = true,
+	dialogue_event = true,
 	score_for_completion = true,
 	num_sockets = true,
-	play_arrive_vo = true,
+	almost_done = true,
 	close_to_win_on_completion = true,
-	vo_context_on_activate = true,
+	volume_name = true,
 	description = true,
 	on_leaf_complete_sound_event = true,
 	num_sections = true,
-	on_last_leaf_complete_sound_event = true,
+	vo_context_on_activate = true,
 	objective_type = true,
+	play_arrive_vo = true,
+	on_last_leaf_complete_sound_event = true,
+	capture_time = true,
 	sub_objectives = true,
 	time_for_completion = true,
 	close_to_win_on_section = true,

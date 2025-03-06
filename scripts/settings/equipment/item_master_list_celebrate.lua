@@ -20,8 +20,12 @@ ItemMasterList.frame_celebration_01 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"anniversary"
+	}
 }
 ItemMasterList.frame_celebration_02 = {
 	description = "frame_celebration_02_description",
@@ -32,8 +36,12 @@ ItemMasterList.frame_celebration_02 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"anniversary"
+	}
 }
 ItemMasterList.frame_celebration_03 = {
 	description = "frame_celebration_03_description",
@@ -44,8 +52,12 @@ ItemMasterList.frame_celebration_03 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"anniversary"
+	}
 }
 ItemMasterList.frame_celebration_05 = {
 	description = "frame_celebration_05_description",
@@ -56,8 +68,12 @@ ItemMasterList.frame_celebration_05 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"anniversary"
+	}
 }
 ItemMasterList.frame_celebration_06 = {
 	description = "frame_celebration_06_description",
@@ -68,6 +84,10 @@ ItemMasterList.frame_celebration_06 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"anniversary"
+	}
 }

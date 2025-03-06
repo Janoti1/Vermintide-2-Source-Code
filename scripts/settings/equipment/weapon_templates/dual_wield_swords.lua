@@ -1513,11 +1513,9 @@ weapon_template.wield_anim = "to_dual_swords"
 weapon_template.state_machine = "units/beings/player/first_person_base/state_machines/melee/dual_swords"
 weapon_template.attack_meta_data = {
 	tap_attack = {
-		penetrating = false,
 		arc = 1
 	},
 	hold_attack = {
-		penetrating = true,
 		arc = 1
 	}
 }

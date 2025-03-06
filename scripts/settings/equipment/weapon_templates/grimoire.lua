@@ -71,12 +71,10 @@ weapon_template.buffs = {
 weapon_template.attack_meta_data = {
 	tap_attack = {
 		arc = 0,
-		penetrating = false,
 		max_range = math.huge
 	},
 	hold_attack = {
 		arc = 0,
-		penetrating = false,
 		max_range = math.huge,
 		attack_chain = {
 			start_sub_action_name = "default",

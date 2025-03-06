@@ -94,9 +94,9 @@ local settings = {
 		category = "Allround useful stuff!"
 	},
 	{
-		description = "Disables the network hash check when connecting",
+		description = "Disables the network hash check when connecting (WARNING: Both clients need to have this enabled)",
 		is_boolean = true,
-		setting_name = "ignore_network_hash",
+		setting_name = "force_ignore_network_hash",
 		category = "Allround useful stuff!"
 	},
 	{
@@ -497,14 +497,13 @@ local settings = {
 		setting_name = "Disable all specials",
 		category = "Presets",
 		preset = {
-			disable_tentacle_sorcerer = true,
+			disable_globadier = true,
 			disable_ratling_gunner = true,
 			disable_warpfire_thrower = true,
 			disable_gutter_runner = true,
 			disable_vortex_sorcerer = true,
 			disable_pack_master = true,
-			disable_plague_sorcerer = true,
-			disable_globadier = true
+			disable_plague_sorcerer = true
 		}
 	},
 	{
@@ -512,14 +511,13 @@ local settings = {
 		setting_name = "Enable all specials",
 		category = "Presets",
 		preset = {
-			disable_tentacle_sorcerer = false,
+			disable_globadier = false,
 			disable_ratling_gunner = false,
 			disable_warpfire_thrower = false,
 			disable_gutter_runner = false,
 			disable_vortex_sorcerer = false,
 			disable_pack_master = false,
-			disable_plague_sorcerer = false,
-			disable_globadier = false
+			disable_plague_sorcerer = false
 		}
 	},
 	{
@@ -1786,12 +1784,6 @@ local settings = {
 		description = "Disables plague sorcerers from spawning (requires restart!!!)",
 		is_boolean = true,
 		setting_name = "disable_plague_sorcerer",
-		category = "AI recommended"
-	},
-	{
-		description = "Disables tentacle sorcerers from spawning (requires restart!!!)",
-		is_boolean = true,
-		setting_name = "disable_tentacle_sorcerer",
 		category = "AI recommended"
 	},
 	{
@@ -7069,6 +7061,12 @@ local settings = {
 		category = "Bots"
 	},
 	{
+		description = "Displays statistics for bots",
+		is_boolean = true,
+		setting_name = "ai_bots_debug_behavior",
+		category = "Bots"
+	},
+	{
 		description = "Make bots not see/attack anyone",
 		is_boolean = true,
 		setting_name = "ai_bots_disable_perception",
@@ -8433,6 +8431,12 @@ local settings = {
 		description = "Generates fake players in the ceremony screen",
 		is_boolean = true,
 		setting_name = "versus_generate_fake_ceremony_players",
+		category = "Versus"
+	},
+	{
+		description = "Shows some information about the recharge of the horde ability.",
+		is_boolean = true,
+		setting_name = "vs_horde_ability_debug",
 		category = "Versus"
 	},
 	{

@@ -797,7 +797,7 @@ OptionsView.destroy = function (self)
 	self:cleanup_popups()
 
 	if self._cursor_pushed then
-		ShowCursorStack.pop()
+		ShowCursorStack.hide("OptionsView")
 
 		self._cursor_pushed = nil
 	end
@@ -1587,7 +1587,7 @@ OptionsView.set_widget_disabled = function (self, name, disable)
 end
 
 OptionsView.on_enter = function (self, params)
-	ShowCursorStack.push()
+	ShowCursorStack.show("OptionsView")
 
 	self._cursor_pushed = true
 
@@ -1653,7 +1653,7 @@ OptionsView.on_exit = function (self)
 	end
 
 	self:cleanup_popups()
-	ShowCursorStack.pop()
+	ShowCursorStack.hide("OptionsView")
 
 	self._cursor_pushed = nil
 

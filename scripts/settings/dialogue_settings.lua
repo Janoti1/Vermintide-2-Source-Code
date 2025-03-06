@@ -569,6 +569,7 @@ DialogueSettings.dialogue_category_config = {
 		playable_during_category = {}
 	},
 	cut_scene = {
+		mutually_exclusive = true,
 		interrupted_by = {
 			cut_scene_interrupt = true
 		},
@@ -666,6 +667,7 @@ DialogueSettings.dialogue_category_config = {
 		}
 	},
 	cut_scene_interrupt_three = {
+		mutually_exclusive = true,
 		interrupted_by = {},
 		playable_during_category = {
 			activate_ability = true,

@@ -432,6 +432,12 @@ return function ()
 				"current_objective",
 				OP.EQ,
 				"two"
+			},
+			{
+				"global_context",
+				"objective_part",
+				OP.EQ,
+				1
 			}
 		}
 	})
