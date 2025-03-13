@@ -41,6 +41,19 @@ weapon_template.actions = {
 					input = "action_one"
 				},
 				{
+					softbutton_threshold = 0.1,
+					start_time = 0.7,
+					action = "action_one",
+					sub_action = "shoot",
+					input = "action_one_softbutton_gamepad",
+					softbutton_required = {
+						{
+							softbutton_threshold = 0.1,
+							input = "action_one_softbutton_gamepad"
+						}
+					}
+				},
+				{
 					sub_action = "shoot",
 					start_time = 0.7,
 					action = "action_one",

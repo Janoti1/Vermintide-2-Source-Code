@@ -20,7 +20,9 @@ local UI_RENDERER_MATERIALS = {
 	"material",
 	"materials/ui/ui_1080p_morris_single_textures",
 	"material",
-	"materials/ui/ui_1080p_belakor_atlas"
+	"materials/ui/ui_1080p_belakor_atlas",
+	"material",
+	"materials/ui/ui_1080p_versus_rewards_atlas"
 }
 
 for _, dlc in pairs(DLCSettings) do

@@ -3268,14 +3268,6 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 					text_id = "game_mode_text"
 				},
 				{
-					style_id = "expedition_highlight_text",
-					pass_type = "text",
-					text_id = "expedition_highlight_text",
-					content_check_function = function (content)
-						return not content.show_note and not disable_note
-					end
-				},
-				{
 					style_id = "note_text",
 					pass_type = "text",
 					text_id = "note_text",
@@ -3304,7 +3296,6 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 			info_hotspot = {},
 			header_text = gamemode_header_text or Localize("not_assigned"),
 			game_mode_text = game_mode_text or Localize("not_assigned"),
-			expedition_highlight_text = Localize("expedition_highlight_text"),
 			note_text = Localize("expedition_info_note") or Localize("not_assigned"),
 			press_key_text = string.format(Localize("for_more_info"), "$KEY;start_game_view__show_information:") or Localize("not_assigned"),
 			disable_note = disable_note
@@ -3439,25 +3430,6 @@ UIWidgets.create_start_game_deus_gamemode_info_box = function (scenegraph_id, ba
 				size = {
 					background_size[1] - 50,
 					is_twitch and background_size[2] / 2 or background_size[2] / 2 + 10
-				}
-			},
-			expedition_highlight_text = {
-				font_size = 28,
-				upper_case = false,
-				localize = false,
-				word_wrap = true,
-				horizontal_alignment = "left",
-				vertical_alignment = "top",
-				font_type = "hell_shark_header",
-				text_color = Colors.get_color_table_with_alpha("cheeseburger", 255),
-				offset = {
-					25,
-					background_size[2] / 2 - 30,
-					3
-				},
-				size = {
-					background_size[1] - 50,
-					is_twitch and background_size[2] / 2 + 10 or background_size[2] / 2
 				}
 			},
 			note_text = {
@@ -4398,5 +4370,648 @@ UIWidgets.create_ability_charges_widget = function (scenegraph_id, size, offset)
 			0,
 			1
 		}
+	}
+end
+
+UIWidgets.create_power_up = function (scenegraph_id, size)
+	return {
+		element = {
+			passes = {
+				{
+					texture_id = "shrine_bg",
+					style_id = "shrine_bg",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					texture_id = "shrine_bg",
+					style_id = "shrine_bg_left",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "shrine_bg_frame_left",
+					pass_type = "texture_uv",
+					content_id = "shrine_bg_frame_left",
+					content_check_function = function (content)
+						return not content.parent.extend_left
+					end
+				},
+				{
+					style_id = "shrine_bg_frame_right",
+					pass_type = "texture_uv",
+					content_id = "shrine_bg_frame_right",
+					content_check_function = function (content)
+						return content.parent.extend_left
+					end
+				},
+				{
+					texture_id = "icon",
+					style_id = "round_icon",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return content.icon and not content.is_rectangular_icon
+					end
+				},
+				{
+					texture_id = "round_icon_bg",
+					style_id = "round_icon_bg",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return content.icon and not content.is_rectangular_icon and false
+					end
+				},
+				{
+					texture_id = "icon",
+					style_id = "rectangular_icon",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return content.icon and content.is_rectangular_icon
+					end
+				},
+				{
+					style_id = "rectangular_bg",
+					pass_type = "rect",
+					content_check_function = function (content)
+						return content.icon and not content.is_rectangular_icon
+					end
+				},
+				{
+					texture_id = "rectangular_icon_bg",
+					style_id = "rectangular_icon_bg",
+					pass_type = "texture",
+					content_check_function = function (content)
+						return true
+					end
+				},
+				{
+					style_id = "title_text",
+					pass_type = "text",
+					text_id = "title_text",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					style_id = "title_text_shadow",
+					pass_type = "text",
+					text_id = "title_text",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					style_id = "rarity_text",
+					pass_type = "text",
+					text_id = "rarity_text",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					style_id = "rarity_text_shadow",
+					pass_type = "text",
+					text_id = "rarity_text",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					style_id = "description_text",
+					pass_type = "text",
+					text_id = "description_text",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					style_id = "description_text_shadow",
+					pass_type = "text",
+					text_id = "description_text",
+					content_check_function = function (content)
+						return not content.extend_left
+					end
+				},
+				{
+					style_id = "title_text_left",
+					pass_type = "text",
+					text_id = "title_text",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "title_text_shadow_left",
+					pass_type = "text",
+					text_id = "title_text",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "rarity_text_left",
+					pass_type = "text",
+					text_id = "rarity_text",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "rarity_text_shadow_left",
+					pass_type = "text",
+					text_id = "rarity_text",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "description_text_left",
+					pass_type = "text",
+					text_id = "description_text",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "description_text_shadow_left",
+					pass_type = "text",
+					text_id = "description_text",
+					content_check_function = function (content)
+						return content.extend_left
+					end
+				},
+				{
+					style_id = "set_progression",
+					pass_type = "text",
+					text_id = "set_progression",
+					content_check_function = function (content)
+						return content.is_part_of_set
+					end
+				}
+			}
+		},
+		content = {
+			title_text = "header",
+			extend_left = false,
+			round_icon_bg = "button_round_bg",
+			rectangular_icon_bg = "button_frame_01",
+			rarity_text = "rarity",
+			visible = false,
+			shrine_bg = "shrine_blessing_bg_hover",
+			set_progression = "%d/%d",
+			is_rectangular_icon = false,
+			description_text = "description_text",
+			shrine_bg_frame_left = {
+				texture_id = "shrine_blessing_frame",
+				uvs = {
+					{
+						1,
+						0
+					},
+					{
+						0,
+						1
+					}
+				}
+			},
+			shrine_bg_frame_right = {
+				texture_id = "shrine_blessing_frame",
+				uvs = {
+					{
+						0,
+						0
+					},
+					{
+						1,
+						1
+					}
+				}
+			}
+		},
+		style = {
+			shrine_bg = {
+				vertical_alignment = "top",
+				horizontal_alignment = "left",
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					50,
+					0,
+					0
+				},
+				texture_size = {
+					484,
+					194
+				}
+			},
+			shrine_bg_left = {
+				vertical_alignment = "top",
+				horizontal_alignment = "left",
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					-384,
+					0,
+					0
+				},
+				texture_size = {
+					484,
+					194
+				}
+			},
+			shrine_bg_frame_left = {
+				vertical_alignment = "top",
+				horizontal_alignment = "left",
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				texture_size = {
+					size[1],
+					size[2]
+				},
+				offset = {
+					0,
+					0,
+					1
+				}
+			},
+			shrine_bg_frame_right = {
+				vertical_alignment = "top",
+				horizontal_alignment = "right",
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				texture_size = {
+					size[1],
+					size[2]
+				},
+				offset = {
+					-384,
+					0,
+					1
+				}
+			},
+			round_icon = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				masked = true,
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					28,
+					0,
+					10
+				},
+				texture_size = {
+					40,
+					40
+				}
+			},
+			rectangular_icon = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				masked = true,
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					17,
+					0,
+					10
+				},
+				texture_size = {
+					63,
+					63
+				}
+			},
+			rectangular_bg = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				color = {
+					255,
+					0,
+					0,
+					0
+				},
+				offset = {
+					15,
+					0,
+					9
+				},
+				texture_size = {
+					63,
+					63
+				}
+			},
+			round_icon_bg = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					10,
+					0,
+					9
+				},
+				texture_size = {
+					74,
+					74
+				}
+			},
+			rectangular_icon_bg = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					10,
+					0,
+					9
+				},
+				texture_size = {
+					75,
+					75
+				}
+			},
+			title_text = {
+				font_type = "hell_shark_header",
+				upper_case = true,
+				localize = false,
+				word_wrap = false,
+				font_size = 28,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				dynamic_font_size = true,
+				area_size = {
+					250,
+					size[2]
+				},
+				text_color = Colors.get_color_table_with_alpha("font_title", 255),
+				offset = {
+					100,
+					-30,
+					3
+				}
+			},
+			rarity_text = {
+				vertical_alignment = "top",
+				font_size = 22,
+				localize = false,
+				horizontal_alignment = "right",
+				word_wrap = false,
+				font_type = "hell_shark",
+				text_color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					-60,
+					-30,
+					3
+				}
+			},
+			description_text = {
+				word_wrap = true,
+				font_type = "hell_shark",
+				localize = false,
+				dynamic_font_size_word_wrap = true,
+				font_size = 20,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				area_size = {
+					320,
+					120
+				},
+				text_color = Colors.get_color_table_with_alpha("font_default", 255),
+				offset = {
+					100,
+					-60,
+					3
+				}
+			},
+			title_text_shadow = {
+				font_type = "hell_shark_header",
+				upper_case = true,
+				localize = false,
+				word_wrap = false,
+				font_size = 28,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				dynamic_font_size = true,
+				area_size = {
+					250,
+					size[2]
+				},
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					102,
+					-32,
+					2
+				}
+			},
+			rarity_text_shadow = {
+				vertical_alignment = "top",
+				font_size = 22,
+				localize = false,
+				horizontal_alignment = "right",
+				word_wrap = false,
+				font_type = "hell_shark",
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					-58,
+					-32,
+					2
+				}
+			},
+			description_text_shadow = {
+				word_wrap = true,
+				font_type = "hell_shark",
+				localize = false,
+				dynamic_font_size_word_wrap = true,
+				font_size = 20,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				area_size = {
+					320,
+					120
+				},
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					102,
+					-62,
+					2
+				}
+			},
+			title_text_left = {
+				font_type = "hell_shark_header",
+				upper_case = true,
+				localize = false,
+				word_wrap = false,
+				font_size = 28,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				dynamic_font_size = true,
+				area_size = {
+					250,
+					size[2]
+				},
+				text_color = Colors.get_color_table_with_alpha("font_title", 255),
+				offset = {
+					-320,
+					-30,
+					3
+				}
+			},
+			rarity_text_left = {
+				vertical_alignment = "top",
+				font_size = 22,
+				localize = false,
+				horizontal_alignment = "right",
+				word_wrap = false,
+				font_type = "hell_shark",
+				text_color = {
+					255,
+					255,
+					255,
+					255
+				},
+				offset = {
+					-480,
+					-30,
+					3
+				}
+			},
+			description_text_left = {
+				word_wrap = true,
+				font_type = "hell_shark",
+				localize = false,
+				dynamic_font_size_word_wrap = true,
+				font_size = 20,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				area_size = {
+					320,
+					120
+				},
+				text_color = Colors.get_color_table_with_alpha("font_default", 255),
+				offset = {
+					-320,
+					-60,
+					3
+				}
+			},
+			title_text_shadow_left = {
+				font_type = "hell_shark_header",
+				upper_case = true,
+				localize = false,
+				word_wrap = false,
+				font_size = 28,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				dynamic_font_size = true,
+				area_size = {
+					250,
+					size[2]
+				},
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					-318,
+					-32,
+					2
+				}
+			},
+			rarity_text_shadow_left = {
+				vertical_alignment = "top",
+				font_size = 22,
+				localize = false,
+				horizontal_alignment = "right",
+				word_wrap = false,
+				font_type = "hell_shark",
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					-478,
+					-32,
+					2
+				}
+			},
+			description_text_shadow_left = {
+				word_wrap = true,
+				font_type = "hell_shark",
+				localize = false,
+				dynamic_font_size_word_wrap = true,
+				font_size = 20,
+				horizontal_alignment = "left",
+				vertical_alignment = "top",
+				area_size = {
+					320,
+					120
+				},
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					-318,
+					-62,
+					2
+				}
+			},
+			set_progression = {
+				word_wrap = false,
+				upper_case = false,
+				font_size = 20,
+				horizontal_alignment = "right",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark",
+				progression_colors = {
+					incomplete = Colors.get_color_table_with_alpha("font_default", 255),
+					complete = Colors.get_color_table_with_alpha("lime_green", 255)
+				},
+				text_color = Colors.get_color_table_with_alpha("font_default", 255),
+				offset = {
+					-488,
+					18,
+					10
+				}
+			}
+		},
+		offset = {
+			-15,
+			-65,
+			50
+		},
+		scenegraph_id = scenegraph_id
 	}
 end
