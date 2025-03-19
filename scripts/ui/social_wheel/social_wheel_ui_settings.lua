@@ -874,7 +874,7 @@ SocialWheelSettings = {
 			{
 				icon = "radial_chat_icon_ambush",
 				vo_event_name = "vw_ambush",
-				event_text = "vs_social_wheel_dark_pact_player_ambush",
+				event_text = "vs_social_wheel_dark_pact_general_ambush",
 				ping_sound_effect = "versus_ping_marker_imminent",
 				name = "vs_social_wheel_dark_pact_player_ambush",
 				text = "vs_social_wheel_dark_pact_general_ambush",
@@ -896,7 +896,7 @@ SocialWheelSettings = {
 			{
 				icon = "radial_chat_icon_attack",
 				vo_event_name = "vw_attack_now",
-				event_text = "vs_social_wheel_dark_pact_player_attack",
+				event_text = "vs_social_wheel_dark_pact_general_attack",
 				ping_sound_effect = "versus_ping_marker_imminent",
 				name = "vs_social_wheel_dark_pact_player_attack",
 				text = "vs_social_wheel_dark_pact_general_attack",
