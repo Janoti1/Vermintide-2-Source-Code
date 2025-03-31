@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2025-03-27  |  6.5.4  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-5-4-27th-of-march/106395)
 2025-03-18  |  6.5.3  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-4-1-6-4-2-6-4-3/105787/12)
 2025-03-12  |  6.5.2  | [Hotfix 6.4.1 and 6.4.2 Bots](https://forums.fatsharkgames.com/t/pc-hotfix-6-5-1-6-5-2/105787)
 2025-03-06  |  6.4.0  | [Anniversary Update](https://forums.fatsharkgames.com/t/vermintide-2s-7th-anniversary-is-live-now/105472)
