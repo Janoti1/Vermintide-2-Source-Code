@@ -200,7 +200,10 @@ AchievementTemplateHelper.add_health_challenge = function (achievements, id, car
 		ID_XB1 = id_xb1,
 		ID_PS4 = id_ps4,
 		completed = function (statistics_db, stats_id)
-			return statistics_db:get_persistent_stat(stats_id, "min_health_completed", career) >= threshold
+			local stat = statistics_db:get_persistent_stat(stats_id, "min_health_completed", career)
+			local completed = stat >= threshold
+
+			return completed
 		end
 	}
 end
@@ -568,11 +571,13 @@ AchievementTemplateHelper.add_meta_challenge = function (achievements, id, achie
 	}
 
 	template.completed = function (statistics_db, stats_id)
+		local backend_interface_loot = Managers.backend:get_interface("loot")
+
 		for i = 1, #achievement_ids do
 			local achievement_id = achievement_ids[i]
 			local completed = achievements[achievement_id].completed(statistics_db, stats_id)
 
-			if not completed then
+			if not completed and not backend_interface_loot:achievement_rewards_claimed(achievement_id) then
 				return false
 			end
 		end
@@ -581,12 +586,15 @@ AchievementTemplateHelper.add_meta_challenge = function (achievements, id, achie
 	end
 
 	template.progress = function (statistics_db, stats_id)
+		local backend_interface_loot = Managers.backend:get_interface("loot")
 		local count = 0
 		local num_achievements = #achievement_ids
 
 		for i = 1, num_achievements do
 			local achievement_id = achievement_ids[i]
 			local completed = achievements[achievement_id].completed(statistics_db, stats_id)
+
+			completed = completed or backend_interface_loot:achievement_rewards_claimed(achievement_id)
 
 			if completed then
 				count = count + 1
@@ -600,12 +608,15 @@ AchievementTemplateHelper.add_meta_challenge = function (achievements, id, achie
 	end
 
 	template.requirements = function (statistics_db, stats_id)
+		local backend_interface_loot = Managers.backend:get_interface("loot")
 		local reqs = {}
 
 		for i = 1, #achievement_ids do
 			local achievement_id = achievement_ids[i]
 			local achv_name = achievements[achievement_id].name
 			local completed = achievements[achievement_id].completed(statistics_db, stats_id)
+
+			completed = completed or backend_interface_loot:achievement_rewards_claimed(achievement_id)
 
 			table.insert(reqs, {
 				name = achv_name,

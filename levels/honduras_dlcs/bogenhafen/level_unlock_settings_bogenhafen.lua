@@ -1,12 +1,13 @@
 AreaSettings.bogenhafen = {
 	menu_sound_event = "Play_hud_menu_area_bogenhafen",
-	name = "bogenhafen",
+	long_description_text = "area_selection_bogenhafen_description_long",
 	display_name = "area_selection_bogenhafen_name",
 	description_text = "area_selection_bogenhafen_description",
+	name = "bogenhafen",
 	store_page_url = "https://store.steampowered.com/app/828790/Warhammer_Vermintide_2__Shadows_Over_Bgenhafen/",
-	level_image = "area_icon_bogenhafen",
 	dlc_name = "bogenhafen",
 	sort_order = 9004,
+	level_image = "area_icon_bogenhafen",
 	video_settings = {
 		material_name = "area_video_bogenhafen",
 		resource = "video/area_videos/bogenhafen/area_video_bogenhafen"

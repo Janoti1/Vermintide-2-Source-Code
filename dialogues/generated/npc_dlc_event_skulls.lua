@@ -8,13 +8,25 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_greeting_skulls_first"
+				"nik_greeting"
 			},
 			{
 				"query_context",
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
+			},
+			{
+				"global_context",
+				"hub_environment",
+				OP.EQ,
+				"skulls"
 			}
 		}
 	})
@@ -27,13 +39,25 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_greeting_skulls_second"
+				"nik_greeting"
 			},
 			{
 				"query_context",
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.NEQ,
+				"none"
+			},
+			{
+				"global_context",
+				"hub_environment",
+				OP.EQ,
+				"skulls"
 			}
 		}
 	})
@@ -53,6 +77,18 @@ return function ()
 				"item_tag",
 				OP.EQ,
 				"nik_backstory_interacting"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
+				"global_context",
+				"hub_environment",
+				OP.EQ,
+				"skulls"
 			}
 		}
 	})
@@ -78,6 +114,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -103,6 +145,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -128,6 +176,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -153,6 +207,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -178,6 +238,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -203,6 +269,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -228,6 +300,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -253,6 +331,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -278,6 +362,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -303,6 +393,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -328,6 +424,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -353,6 +455,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -378,6 +486,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -403,6 +517,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -428,6 +548,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -453,6 +579,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -478,6 +610,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -503,6 +641,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -528,6 +672,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -553,6 +703,12 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"none"
 			}
 		}
 	})
@@ -598,12 +754,13 @@ return function ()
 		},
 		nik_greeting_skulls_event_second = {
 			randomize_indexes_n = 0,
-			face_animations_n = 5,
+			face_animations_n = 6,
 			database = "npc_dlc_event_skulls",
-			sound_events_n = 5,
+			sound_events_n = 6,
 			category = "npc_talk",
-			dialogue_animations_n = 5,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -615,9 +772,11 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
+				"nik_hub_skulls_05",
 				"nik_hub_skulls_06",
 				"nik_hub_skulls_07",
 				"nik_hub_skulls_08",
@@ -626,6 +785,7 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
+				"nik_hub_skulls_05",
 				"nik_hub_skulls_06",
 				"nik_hub_skulls_07",
 				"nik_hub_skulls_08",
@@ -633,6 +793,7 @@ return function ()
 				"nik_hub_skulls_10"
 			},
 			sound_events_duration = {
+				2.7369582653046,
 				3.6826040744781,
 				8.9105205535889,
 				6.1234169006348,

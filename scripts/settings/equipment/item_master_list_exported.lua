@@ -1718,8 +1718,12 @@ ItemMasterList.frame_skulls = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"skulls"
+	}
 }
 ItemMasterList.frame_geheimnisnacht_01 = {
 	description = "frame_geheimnisnacht_01_description",
@@ -3107,8 +3111,12 @@ ItemMasterList.frame_0095 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"skulls"
+	}
 }
 ItemMasterList.frame_0096 = {
 	description = "frame_0096_description",
@@ -3239,8 +3247,12 @@ ItemMasterList.frame_skulls_2021 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"skulls"
+	}
 }
 ItemMasterList.frame_skulls_2022 = {
 	description = "portrait_frame_skulls_2022_description",
@@ -3251,8 +3263,12 @@ ItemMasterList.frame_skulls_2022 = {
 	slot_type = "frame",
 	information_text = "information_text_frame",
 	rarity = "promo",
+	display_unit = "units/weapons/weapon_display/display_portrait_frame",
 	item_type = "frame",
-	can_wield = CanWieldAllItemTemplates
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"skulls"
+	}
 }
 ItemMasterList.crafting_material_scrap = {
 	description = "crafting_material_scrap_description",

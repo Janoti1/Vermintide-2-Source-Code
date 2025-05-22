@@ -334,9 +334,9 @@ local talent_buff_templates = {
 local talent_trees = {
 	{
 		{
-			"victor_priest_vanguard",
-			"victor_priest_reaper",
-			"victor_priest_heal_share"
+			"victor_priest_thp_tank",
+			"victor_priest_thp_linesman",
+			"victor_priest_thp_smiter"
 		},
 		{
 			"victor_priest_2_1",
@@ -406,6 +406,42 @@ local talents = {
 		},
 		buffs = {
 			"victor_priest_conqueror"
+		}
+	},
+	{
+		name = "victor_priest_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "victor_priest_1_1",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "victor_priest_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "victor_priest_1_2",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "victor_priest_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "victor_priest_1_3",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
 		}
 	},
 	{

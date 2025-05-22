@@ -491,9 +491,9 @@ local talent_buff_templates = {
 local talent_trees = {
 	{
 		{
-			"bardin_engineer_vanguard",
-			"bardin_engineer_reaper",
-			"bardin_engineer_heal_share"
+			"bardin_engineer_thp_tank",
+			"bardin_engineer_thp_linesman",
+			"bardin_engineer_thp_smiter"
 		},
 		{
 			"bardin_engineer_improved_explosives",
@@ -563,6 +563,42 @@ local talents = {
 		},
 		buffs = {
 			"bardin_engineer_heal_share"
+		}
+	},
+	{
+		name = "bardin_engineer_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_engineer_vanguard",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "bardin_engineer_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_engineer_reaper",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "bardin_engineer_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_engineer_heal_share",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
 		}
 	},
 	{

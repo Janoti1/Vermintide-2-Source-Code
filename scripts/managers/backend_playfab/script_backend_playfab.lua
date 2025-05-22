@@ -44,9 +44,13 @@ ScriptBackendPlayFab.update_signin = function (self)
 				SteamTicket = ticket,
 				InfoRequestParameters = {
 					GetUserReadOnlyData = true,
-					GetTitleData = true,
 					GetUserData = true,
-					GetUserAccountInfo = true
+					GetPlayerProfile = true,
+					GetUserAccountInfo = true,
+					GetTitleData = true,
+					ProfileConstraints = {
+						ShowBannedUntil = true
+					}
 				}
 			}
 			local login_request_cb = callback(self, "login_request_cb")

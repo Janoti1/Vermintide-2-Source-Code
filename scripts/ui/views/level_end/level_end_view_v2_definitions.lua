@@ -872,6 +872,23 @@ local animations = {
 			end
 		}
 	},
+	ready_button_exit_alone = {
+		{
+			name = "entry",
+			start_progress = 0,
+			end_progress = 0,
+			init = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				return
+			end,
+			update = function (ui_scenegraph, scenegraph_definition, widgets, progress, params)
+				ui_scenegraph.ready_button_alone.local_position[2] = scenegraph_definition.ready_button_alone.position[2]
+				params.render_settings.alpha_multiplier = 0
+			end,
+			on_complete = function (ui_scenegraph, scenegraph_definition, widgets, params)
+				return
+			end
+		}
+	},
 	ready_button_entry = {
 		{
 			name = "entry",

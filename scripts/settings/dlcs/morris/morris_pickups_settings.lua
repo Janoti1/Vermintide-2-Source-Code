@@ -1,7 +1,20 @@
 local settings = DLCSettings.morris
 
 local function can_spawn_deus_pickup(params, is_debug_spawn)
-	return Managers.mechanism:current_mechanism_name() == "deus"
+	if Managers.mechanism:current_mechanism_name() ~= "deus" then
+		return false
+	end
+
+	local level_transition_handler = Managers.level_transition_handler
+	local level_key = level_transition_handler:get_current_level_keys()
+	local level_settings = LevelSettings[level_key]
+	local is_hub_level = level_settings and level_settings.hub_level
+
+	if is_hub_level then
+		return false
+	end
+
+	return true
 end
 
 local material_settings_templates = {
@@ -340,6 +353,7 @@ settings.loot_rat_pickups = {
 	deus = {
 		first_aid_kit = 6,
 		all_ammo_small = 6,
+		deus_soft_currency = 6,
 		fire_grenade_t2 = 2,
 		frag_grenade_t2 = 2,
 		healing_draught = 6

@@ -704,24 +704,24 @@ return function ()
 			},
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMEDIFF,
 				OP.GT,
-				1
+				40
 			}
 		},
 		on_done = {
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_bright_wizard_low_on_health",
 		response = "pdr_gameplay_bright_wizard_low_on_health",
+		name = "pdr_gameplay_bright_wizard_low_on_health",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -740,20 +740,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"time_since_low_health_pbw",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_low_health_pbw",
-				OP.TIMESET
 			}
 		}
 	})
@@ -792,9 +778,21 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				1200
+			},
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMEDIFF,
+				OP.GT,
+				45
 			}
 		},
 		on_done = {
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMESET
+			},
 			{
 				"faction_memory",
 				"time_since_last_frenzy_bright_wizard",
@@ -861,6 +859,210 @@ return function ()
 			{
 				"faction_memory",
 				"time_since_casual_quotes",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pdr_gameplay_chaos_wizard_leech_leeching_keriliian",
+		response = "pdr_gameplay_chaos_wizard_leech_leeching_keriliian",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"grabbed"
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"chaos_corruptor_sorcerer"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMEDIFF,
+				OP.GT,
+				40
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pdr_gameplay_chaos_wizard_leech_leeching_kruber",
+		response = "pdr_gameplay_chaos_wizard_leech_leeching_kruber",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"grabbed"
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"chaos_corruptor_sorcerer"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMEDIFF,
+				OP.GT,
+				40
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre",
+		response = "pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"grabbed"
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"chaos_corruptor_sorcerer"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMEDIFF,
+				OP.GT,
+				40
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pdr_gameplay_chaos_wizard_leech_leeching_sienna",
+		response = "pdr_gameplay_chaos_wizard_leech_leeching_sienna",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"grabbed"
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"chaos_corruptor_sorcerer"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
+				OP.TIMEDIFF,
+				OP.GT,
+				40
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"time_since_teammate_grabbed",
 				OP.TIMESET
 			}
 		}
@@ -1149,24 +1351,24 @@ return function ()
 			},
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMEDIFF,
 				OP.GT,
-				1
+				40
 			}
 		},
 		on_done = {
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_empire_soldier_low_on_health",
 		response = "pdr_gameplay_empire_soldier_low_on_health",
+		name = "pdr_gameplay_empire_soldier_low_on_health",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1185,20 +1387,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"time_since_low_health_pes",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_low_health_pes",
-				OP.TIMESET
 			}
 		}
 	})
@@ -1237,9 +1425,21 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				1200
+			},
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMEDIFF,
+				OP.GT,
+				45
 			}
 		},
 		on_done = {
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMESET
+			},
 			{
 				"faction_memory",
 				"time_since_last_frenzy_empire_soldier",
@@ -2149,7 +2349,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -2174,14 +2374,14 @@ return function ()
 				"last_seen_chaos_spawn",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
 				"last_heard_chaos_spawn",
 				OP.TIMEDIFF,
 				OP.GT,
-				120
+				300
 			}
 		},
 		on_done = {
@@ -2213,7 +2413,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -2238,7 +2438,7 @@ return function ()
 				"last_seen_chaos_spawn",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
@@ -2799,7 +2999,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3044,7 +3244,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3069,14 +3269,14 @@ return function ()
 				"last_seen_rat_ogre",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
 				"last_heard_skaven_rat_ogre",
 				OP.TIMEDIFF,
 				OP.GT,
-				120
+				300
 			}
 		},
 		on_done = {
@@ -3115,7 +3315,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3140,7 +3340,7 @@ return function ()
 				"last_seen_rat_ogre",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
@@ -3289,7 +3489,14 @@ return function ()
 				"query_context",
 				"enemy_tag",
 				OP.EQ,
-				"beastmen_standard_bearer"
+				"beastmen_standard_bearer",
+				CombiningOP.OR_NEXT
+			},
+			{
+				"query_context",
+				"enemy_tag",
+				OP.EQ,
+				"beastmen_standard_bearer_crater"
 			},
 			{
 				"query_context",
@@ -3328,64 +3535,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_hearing_a_standard_bearer_crater",
-		response = "pdr_gameplay_hearing_a_standard_bearer_crater",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_enemy"
-			},
-			{
-				"query_context",
-				"enemy_tag",
-				OP.EQ,
-				"beastmen_standard_bearer_crater"
-			},
-			{
-				"user_context",
-				"enemies_close",
-				OP.EQ,
-				0
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"last_seen_beastmen_standard_bearer_crater",
-				OP.TIMEDIFF,
-				OP.GT,
-				20
-			},
-			{
-				"faction_memory",
-				"last_heard_beastmen_standard_bearer_crater",
-				OP.TIMEDIFF,
-				OP.GT,
-				300
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"last_heard_beastmen_standard_bearer_crater",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pdr_gameplay_hearing_a_stormfiend",
 		response = "pdr_gameplay_hearing_a_stormfiend",
 		criterias = {
@@ -3405,7 +3554,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3430,14 +3579,14 @@ return function ()
 				"last_seen_skaven_stormfiend",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
 				"last_heard_skaven_stormfiend",
 				OP.TIMEDIFF,
 				OP.GT,
-				120
+				300
 			}
 		},
 		on_done = {
@@ -3469,7 +3618,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3494,7 +3643,7 @@ return function ()
 				"last_seen_skaven_stormfiend",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
@@ -3540,7 +3689,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3565,14 +3714,14 @@ return function ()
 				"last_seen_chaos_troll",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
 				"last_heard_chaos_troll",
 				OP.TIMEDIFF,
 				OP.GT,
-				120
+				300
 			}
 		},
 		on_done = {
@@ -3611,7 +3760,7 @@ return function ()
 				"query_context",
 				"distance",
 				OP.GT,
-				10
+				14
 			},
 			{
 				"query_context",
@@ -3636,7 +3785,7 @@ return function ()
 				"last_seen_chaos_troll",
 				OP.TIMEDIFF,
 				OP.GT,
-				20
+				300
 			},
 			{
 				"faction_memory",
@@ -3751,9 +3900,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_helped_by_bright_wizard",
 		response = "pdr_gameplay_helped_by_bright_wizard",
+		name = "pdr_gameplay_helped_by_bright_wizard",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3778,27 +3927,13 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_helped_by_empire_soldier",
 		response = "pdr_gameplay_helped_by_empire_soldier",
+		name = "pdr_gameplay_helped_by_empire_soldier",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3823,27 +3958,13 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_helped_by_witch_hunter",
 		response = "pdr_gameplay_helped_by_witch_hunter",
+		name = "pdr_gameplay_helped_by_witch_hunter",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3868,27 +3989,13 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_helped_by_wood_elf",
 		response = "pdr_gameplay_helped_by_wood_elf",
+		name = "pdr_gameplay_helped_by_wood_elf",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -3913,20 +4020,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"last_helped",
-				OP.TIMESET
 			}
 		}
 	})
@@ -4113,7 +4206,7 @@ return function ()
 				"query_context",
 				"attack_tag",
 				OP.EQ,
-				"rat_ogre_charge"
+				"rat_ogre_change_target"
 			},
 			{
 				"query_context",
@@ -4132,7 +4225,7 @@ return function ()
 				"ogre_charges",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				70
 			}
 		},
 		on_done = {
@@ -5013,12 +5106,6 @@ return function ()
 			},
 			{
 				"faction_memory",
-				"times_we_downed",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
 				"times_down_dwarf_ranger",
 				OP.ADD,
 				1
@@ -5026,9 +5113,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_low_on_health",
 		response = "pdr_gameplay_low_on_health",
+		name = "pdr_gameplay_low_on_health",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -5071,20 +5158,6 @@ return function ()
 				"friends_distant",
 				OP.GT,
 				0
-			},
-			{
-				"user_memory",
-				"low_health",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"low_health",
-				OP.TIMESET
 			}
 		}
 	})
@@ -5115,7 +5188,7 @@ return function ()
 				"global_context",
 				"level_time",
 				OP.GT,
-				60
+				120
 			},
 			{
 				"faction_memory",
@@ -6161,7 +6234,7 @@ return function ()
 				"last_seen_storm_vermin",
 				OP.TIMEDIFF,
 				OP.GT,
-				120
+				300
 			}
 		},
 		on_done = {
@@ -6840,9 +6913,21 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				120
+			},
+			{
+				"faction_memory",
+				"time_since_last_special_kill_global",
+				OP.TIMEDIFF,
+				OP.GT,
+				65
 			}
 		},
 		on_done = {
+			{
+				"faction_memory",
+				"time_since_last_special_kill_global",
+				OP.TIMESET
+			},
 			{
 				"user_memory",
 				"time_since_last_special_kill_melee_dwarf",
@@ -6885,9 +6970,21 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				900
+			},
+			{
+				"faction_memory",
+				"time_since_last_special_kill_global",
+				OP.TIMEDIFF,
+				OP.GT,
+				65
 			}
 		},
 		on_done = {
+			{
+				"faction_memory",
+				"time_since_last_special_kill_global",
+				OP.TIMESET
+			},
 			{
 				"faction_memory",
 				"time_since_last_special_kill_ranged",
@@ -7246,41 +7343,9 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"has_planted_standard"
+				"has_planted_standard",
+				CombiningOP.OR_NEXT
 			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_beastmen_standard_planted",
-				OP.TIMEDIFF,
-				OP.GT,
-				2
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_beastmen_standard_planted",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_standard_bearer_has_planted_standard_crater",
-		response = "pdr_gameplay_standard_bearer_has_planted_standard_crater",
-		criterias = {
 			{
 				"query_context",
 				"concept",
@@ -7301,7 +7366,7 @@ return function ()
 			},
 			{
 				"user_memory",
-				"time_since_beastmen_standard_planted_crater",
+				"time_since_beastmen_standard_planted",
 				OP.TIMEDIFF,
 				OP.GT,
 				2
@@ -7310,7 +7375,7 @@ return function ()
 		on_done = {
 			{
 				"user_memory",
-				"time_since_beastmen_standard_planted_crater",
+				"time_since_beastmen_standard_planted",
 				OP.TIMESET
 			}
 		}
@@ -7463,7 +7528,7 @@ return function ()
 				"time_since_throwing_bomb",
 				OP.TIMEDIFF,
 				OP.GT,
-				1
+				2
 			}
 		},
 		on_done = {
@@ -7520,9 +7585,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_using_potion",
 		response = "pdr_gameplay_using_potion",
+		name = "pdr_gameplay_using_potion",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -7541,20 +7606,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_used_potion",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_used_potion",
-				OP.TIMESET
 			}
 		}
 	})
@@ -7722,24 +7773,24 @@ return function ()
 			},
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMEDIFF,
 				OP.GT,
-				1
+				40
 			}
 		},
 		on_done = {
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_witch_hunter_low_on_health",
 		response = "pdr_gameplay_witch_hunter_low_on_health",
+		name = "pdr_gameplay_witch_hunter_low_on_health",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -7758,20 +7809,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"time_since_low_health_pwh",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_low_health_pwh",
-				OP.TIMESET
 			}
 		}
 	})
@@ -7810,9 +7847,21 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				1200
+			},
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMEDIFF,
+				OP.GT,
+				45
 			}
 		},
 		on_done = {
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMESET
+			},
 			{
 				"faction_memory",
 				"time_since_last_frenzy_witch_hunter",
@@ -7984,24 +8033,24 @@ return function ()
 			},
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMEDIFF,
 				OP.GT,
-				1
+				40
 			}
 		},
 		on_done = {
 			{
 				"faction_memory",
-				"times_since_we_grabbed",
+				"time_since_teammate_grabbed",
 				OP.TIMESET
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_wood_elf_low_on_health",
 		response = "pdr_gameplay_wood_elf_low_on_health",
+		name = "pdr_gameplay_wood_elf_low_on_health",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -8020,20 +8069,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"time_since_low_health_pwe",
-				OP.TIMEDIFF,
-				OP.GT,
-				1
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_low_health_pwe",
-				OP.TIMESET
 			}
 		}
 	})
@@ -8072,9 +8107,21 @@ return function ()
 				OP.TIMEDIFF,
 				OP.GT,
 				1200
+			},
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMEDIFF,
+				OP.GT,
+				45
 			}
 		},
 		on_done = {
+			{
+				"faction_memory",
+				"time_since_last_frenzy_global",
+				OP.TIMESET
+			},
 			{
 				"faction_memory",
 				"time_since_last_frenzy_wood_elf",
@@ -9124,7 +9171,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
+		probability = 0.4,
 		name = "pdr_targeted_by_ratling",
 		response = "pdr_targeted_by_ratling",
 		criterias = {
@@ -9147,16 +9194,16 @@ return function ()
 				"dwarf_ranger"
 			},
 			{
-				"user_memory",
+				"faction_memory",
 				"time_since_ratling_target",
 				OP.TIMEDIFF,
 				OP.GT,
-				10
+				90
 			}
 		},
 		on_done = {
 			{
-				"user_memory",
+				"faction_memory",
 				"time_since_ratling_target",
 				OP.TIMESET
 			}
@@ -10096,21 +10143,13 @@ return function ()
 		},
 		pdr_gameplay_bright_wizard_grabbed = {
 			randomize_indexes_n = 0,
-			face_animations_n = 13,
+			face_animations_n = 5,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 13,
+			sound_events_n = 5,
 			category = "player_alerts",
-			dialogue_animations_n = 13,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
 				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -10121,79 +10160,29 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
 				"pdr_gameplay_bright_wizard_grabbed_01",
-				"pdr_gameplay_bright_wizard_grabbed_02",
-				"pdr_gameplay_bright_wizard_grabbed_03",
-				"pdr_gameplay_bright_wizard_grabbed_04",
-				"pdr_gameplay_bright_wizard_grabbed_05",
-				"pdr_gameplay_bright_wizard_grabbed_06",
 				"pdr_gameplay_bright_wizard_grabbed_07",
 				"pdr_gameplay_bright_wizard_grabbed_08",
 				"pdr_gameplay_bright_wizard_grabbed_09",
-				"pdr_gameplay_bright_wizard_grabbed_10",
-				"pdr_gameplay_bright_wizard_grabbed_11",
-				"pdr_gameplay_bright_wizard_grabbed_12",
-				"pdr_gameplay_bright_wizard_grabbed_13"
+				"pdr_gameplay_bright_wizard_grabbed_12"
 			},
 			randomize_indexes = {},
-			sound_event_filters = {
-				pdr_gameplay_bright_wizard_grabbed_05 = {
-					{
-						"global_context",
-						"bw_necromancer",
-						OP.EQ,
-						true
-					}
-				},
-				pdr_gameplay_bright_wizard_grabbed_06 = {
-					{
-						"global_context",
-						"bw_necromancer",
-						OP.EQ,
-						true
-					}
-				}
-			},
 			sound_events = {
 				"pdr_gameplay_bright_wizard_grabbed_01",
-				"pdr_gameplay_bright_wizard_grabbed_02",
-				"pdr_gameplay_bright_wizard_grabbed_03",
-				"pdr_gameplay_bright_wizard_grabbed_04",
-				"pdr_gameplay_bright_wizard_grabbed_05",
-				"pdr_gameplay_bright_wizard_grabbed_06",
 				"pdr_gameplay_bright_wizard_grabbed_07",
 				"pdr_gameplay_bright_wizard_grabbed_08",
 				"pdr_gameplay_bright_wizard_grabbed_09",
-				"pdr_gameplay_bright_wizard_grabbed_10",
-				"pdr_gameplay_bright_wizard_grabbed_11",
-				"pdr_gameplay_bright_wizard_grabbed_12",
-				"pdr_gameplay_bright_wizard_grabbed_13"
+				"pdr_gameplay_bright_wizard_grabbed_12"
 			},
 			sound_events_duration = {
 				2.8293540477753,
-				2.5886459350586,
-				3.0292084217072,
-				1.9528332948685,
-				2.2222917079926,
-				1.4103125333786,
 				1.7716666460037,
 				2.6246249675751,
 				2.4000000953674,
-				1.395708322525,
-				2.8242499828339,
-				3.5508542060852,
-				4.3178958892822
+				3.5508542060852
 			}
 		},
 		pdr_gameplay_bright_wizard_low_on_health = {
@@ -10503,6 +10492,197 @@ return function ()
 				4.0305418968201
 			}
 		},
+		pdr_gameplay_chaos_wizard_leech_leeching_keriliian = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "dwarf_ranger_honduras",
+			sound_events_n = 4,
+			category = "player_alerts",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_06"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_keriliian_06"
+			},
+			sound_events_duration = {
+				2.7731385231018,
+				2.482311964035,
+				1.3552930355072,
+				1.5430729389191
+			}
+		},
+		pdr_gameplay_chaos_wizard_leech_leeching_kruber = {
+			randomize_indexes_n = 0,
+			face_animations_n = 6,
+			database = "dwarf_ranger_honduras",
+			sound_events_n = 6,
+			category = "player_alerts",
+			dialogue_animations_n = 6,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_03",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_04",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_06"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_03",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_04",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_kruber_06"
+			},
+			sound_events_duration = {
+				2.2058091163635,
+				3.0037715435028,
+				3.9396460056305,
+				3.3717544078827,
+				1.4920045137405,
+				1.6312146186829
+			}
+		},
+		pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre = {
+			randomize_indexes_n = 0,
+			face_animations_n = 7,
+			database = "dwarf_ranger_honduras",
+			sound_events_n = 7,
+			category = "player_alerts",
+			dialogue_animations_n = 7,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_03",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_04",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_06",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_07"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_03",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_04",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_06",
+				"pdr_gameplay_chaos_wizard_leech_leeching_saltzpyre_07"
+			},
+			sound_events_duration = {
+				2.2867856025696,
+				1.8720639944077,
+				3.5373685359955,
+				3.7776875495911,
+				2.3171353340149,
+				1.6281189918518,
+				1.7719399929047
+			}
+		},
+		pdr_gameplay_chaos_wizard_leech_leeching_sienna = {
+			randomize_indexes_n = 0,
+			face_animations_n = 6,
+			database = "dwarf_ranger_honduras",
+			sound_events_n = 6,
+			category = "player_alerts",
+			dialogue_animations_n = 6,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_03",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_04",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_06"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_01",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_02",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_03",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_04",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_05",
+				"pdr_gameplay_chaos_wizard_leech_leeching_sienna_06"
+			},
+			sound_events_duration = {
+				3.1702218055725,
+				2.5781943798065,
+				3.3502292633057,
+				1.7580024003983,
+				1.4900656938553,
+				1.6059012413025
+			}
+		},
 		pdr_gameplay_dead_body = {
 			randomize_indexes_n = 0,
 			face_animations_n = 5,
@@ -10790,21 +10970,12 @@ return function ()
 		},
 		pdr_gameplay_empire_soldier_grabbed = {
 			randomize_indexes_n = 0,
-			face_animations_n = 13,
+			face_animations_n = 4,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 13,
+			sound_events_n = 4,
 			category = "player_alerts",
-			dialogue_animations_n = 13,
+			dialogue_animations_n = 4,
 			dialogue_animations = {
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -10814,62 +10985,26 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
-				"pdr_gameplay_empire_soldier_grabbed_01",
-				"pdr_gameplay_empire_soldier_grabbed_02",
-				"pdr_gameplay_empire_soldier_grabbed_03",
-				"pdr_gameplay_empire_soldier_grabbed_04",
-				"pdr_gameplay_empire_soldier_grabbed_05",
-				"pdr_gameplay_empire_soldier_grabbed_06",
 				"pdr_gameplay_empire_soldier_grabbed_07",
-				"pdr_gameplay_empire_soldier_grabbed_08",
 				"pdr_gameplay_empire_soldier_grabbed_09",
-				"pdr_gameplay_empire_soldier_grabbed_10",
 				"pdr_gameplay_empire_soldier_grabbed_11",
-				"pdr_gameplay_empire_soldier_grabbed_12",
-				"pdr_gameplay_empire_soldier_grabbed_13"
+				"pdr_gameplay_empire_soldier_grabbed_12"
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"pdr_gameplay_empire_soldier_grabbed_01",
-				"pdr_gameplay_empire_soldier_grabbed_02",
-				"pdr_gameplay_empire_soldier_grabbed_03",
-				"pdr_gameplay_empire_soldier_grabbed_04",
-				"pdr_gameplay_empire_soldier_grabbed_05",
-				"pdr_gameplay_empire_soldier_grabbed_06",
 				"pdr_gameplay_empire_soldier_grabbed_07",
-				"pdr_gameplay_empire_soldier_grabbed_08",
 				"pdr_gameplay_empire_soldier_grabbed_09",
-				"pdr_gameplay_empire_soldier_grabbed_10",
 				"pdr_gameplay_empire_soldier_grabbed_11",
-				"pdr_gameplay_empire_soldier_grabbed_12",
-				"pdr_gameplay_empire_soldier_grabbed_13"
+				"pdr_gameplay_empire_soldier_grabbed_12"
 			},
 			sound_events_duration = {
-				1.8123333454132,
-				3.0456249713898,
-				1.3761041164398,
-				1.4493541717529,
-				2.7625832557678,
-				3.6173748970032,
 				2.6134583950043,
-				2.7363958358765,
 				3.4063541889191,
-				5.1488752365112,
-				5.2965416908264,
-				4.8476247787476,
-				4.9762916564941
+				2.9655289649963,
+				2.0539748668671
 			}
 		},
 		pdr_gameplay_empire_soldier_low_on_health = {
@@ -12599,15 +12734,12 @@ return function ()
 		},
 		pdr_gameplay_hearing_a_minotaur = {
 			randomize_indexes_n = 0,
-			face_animations_n = 14,
+			face_animations_n = 11,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 14,
+			sound_events_n = 11,
 			category = "enemy_alerts_high",
-			dialogue_animations_n = 14,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -12631,9 +12763,6 @@ return function ()
 				"face_fear",
 				"face_fear",
 				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
 				"face_fear"
 			},
 			localization_strings = {
@@ -12644,11 +12773,8 @@ return function ()
 				"pdr_gameplay_hearing_a_minotaur_05",
 				"pdr_gameplay_hearing_a_minotaur_06",
 				"pdr_gameplay_hearing_a_minotaur_combat_01",
-				"pdr_gameplay_hearing_a_minotaur_combat_02",
-				"pdr_gameplay_hearing_a_minotaur_combat_03",
 				"pdr_gameplay_hearing_a_minotaur_combat_04",
 				"pdr_gameplay_hearing_a_minotaur_combat_05",
-				"pdr_gameplay_hearing_a_minotaur_combat_06",
 				"pdr_gameplay_hearing_a_minotaur_combat_07",
 				"pdr_gameplay_hearing_a_minotaur_combat_08"
 			},
@@ -12661,11 +12787,8 @@ return function ()
 				"pdr_gameplay_hearing_a_minotaur_05",
 				"pdr_gameplay_hearing_a_minotaur_06",
 				"pdr_gameplay_hearing_a_minotaur_combat_01",
-				"pdr_gameplay_hearing_a_minotaur_combat_02",
-				"pdr_gameplay_hearing_a_minotaur_combat_03",
 				"pdr_gameplay_hearing_a_minotaur_combat_04",
 				"pdr_gameplay_hearing_a_minotaur_combat_05",
-				"pdr_gameplay_hearing_a_minotaur_combat_06",
 				"pdr_gameplay_hearing_a_minotaur_combat_07",
 				"pdr_gameplay_hearing_a_minotaur_combat_08"
 			},
@@ -12677,11 +12800,8 @@ return function ()
 				2.5187499523163,
 				4.8975625038147,
 				2.0160417556763,
-				2.5239374637604,
-				1.3682082891464,
 				1.6273332834244,
 				3.3220417499542,
-				2.8141458034515,
 				4.2549166679382,
 				2.482479095459
 			}
@@ -13171,65 +13291,6 @@ return function ()
 				4.2006249427795,
 				2.0574998855591,
 				1.0967394113541
-			}
-		},
-		pdr_gameplay_hearing_a_standard_bearer_crater = {
-			randomize_indexes_n = 0,
-			face_animations_n = 8,
-			database = "dwarf_ranger_honduras",
-			sound_events_n = 8,
-			category = "enemy_alerts",
-			dialogue_animations_n = 8,
-			dialogue_animations = {
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout"
-			},
-			face_animations = {
-				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear"
-			},
-			localization_strings = {
-				"pdr_gameplay_hearing_a_standard_bearer_01",
-				"pdr_gameplay_hearing_a_standard_bearer_02",
-				"pdr_gameplay_hearing_a_standard_bearer_03",
-				"pdr_gameplay_hearing_a_standard_bearer_04",
-				"pdr_gameplay_hearing_a_standard_bearer_06",
-				"pdr_gameplay_hearing_a_standard_bearer_combat_03",
-				"pdr_gameplay_hearing_a_standard_bearer_combat_05",
-				"pdr_gameplay_hearing_a_standard_bearer_combat_08"
-			},
-			randomize_indexes = {},
-			sound_events = {
-				"pdr_gameplay_hearing_a_standard_bearer_01",
-				"pdr_gameplay_hearing_a_standard_bearer_02",
-				"pdr_gameplay_hearing_a_standard_bearer_03",
-				"pdr_gameplay_hearing_a_standard_bearer_04",
-				"pdr_gameplay_hearing_a_standard_bearer_06",
-				"pdr_gameplay_hearing_a_standard_bearer_combat_03",
-				"pdr_gameplay_hearing_a_standard_bearer_combat_05",
-				"pdr_gameplay_hearing_a_standard_bearer_combat_08"
-			},
-			sound_events_duration = {
-				3.1251041889191,
-				3.4723541736603,
-				2.8400626182556,
-				2.2855207920074,
-				2.9592707157135,
-				2.2172083854675,
-				4.2006249427795,
-				2.0574998855591
 			}
 		},
 		pdr_gameplay_hearing_a_stormfiend = {
@@ -17178,65 +17239,6 @@ return function ()
 				2.9073958396912
 			}
 		},
-		pdr_gameplay_standard_bearer_has_planted_standard_crater = {
-			randomize_indexes_n = 0,
-			face_animations_n = 8,
-			database = "dwarf_ranger_honduras",
-			sound_events_n = 8,
-			category = "enemy_alerts_high",
-			dialogue_animations_n = 8,
-			dialogue_animations = {
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk"
-			},
-			face_animations = {
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral"
-			},
-			localization_strings = {
-				"pdr_gameplay_standard_bearer_has_planted_standard_01",
-				"pdr_gameplay_standard_bearer_has_planted_standard_02",
-				"pdr_gameplay_standard_bearer_has_planted_standard_03",
-				"pdr_gameplay_standard_bearer_has_planted_standard_04",
-				"pdr_gameplay_standard_bearer_has_planted_standard_05",
-				"pdr_gameplay_standard_bearer_has_planted_standard_06",
-				"pdr_gameplay_standard_bearer_has_planted_standard_07",
-				"pdr_gameplay_standard_bearer_has_planted_standard_08"
-			},
-			randomize_indexes = {},
-			sound_events = {
-				"pdr_gameplay_standard_bearer_has_planted_standard_01",
-				"pdr_gameplay_standard_bearer_has_planted_standard_02",
-				"pdr_gameplay_standard_bearer_has_planted_standard_03",
-				"pdr_gameplay_standard_bearer_has_planted_standard_04",
-				"pdr_gameplay_standard_bearer_has_planted_standard_05",
-				"pdr_gameplay_standard_bearer_has_planted_standard_06",
-				"pdr_gameplay_standard_bearer_has_planted_standard_07",
-				"pdr_gameplay_standard_bearer_has_planted_standard_08"
-			},
-			sound_events_duration = {
-				1.7657916545868,
-				1.827645778656,
-				1.9682500362396,
-				2.1931874752045,
-				2.5643541812897,
-				1.9176458120346,
-				1.6758333444595,
-				2.9073958396912
-			}
-		},
 		pdr_gameplay_taking_heavy_damage = {
 			randomize_indexes_n = 0,
 			face_animations_n = 13,
@@ -17731,13 +17733,12 @@ return function ()
 		},
 		pdr_gameplay_witch_hunter_grabbed = {
 			randomize_indexes_n = 0,
-			face_animations_n = 7,
+			face_animations_n = 6,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 7,
+			sound_events_n = 6,
 			category = "player_alerts",
-			dialogue_animations_n = 7,
+			dialogue_animations_n = 6,
 			dialogue_animations = {
-				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -17751,7 +17752,6 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
-				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
@@ -17760,8 +17760,7 @@ return function ()
 				"pdr_gameplay_witch_hunter_grabbed_08",
 				"pdr_gameplay_witch_hunter_grabbed_09",
 				"pdr_gameplay_witch_hunter_grabbed_10",
-				"pdr_gameplay_witch_hunter_grabbed_11",
-				"pdr_gameplay_witch_hunter_grabbed_12"
+				"pdr_gameplay_witch_hunter_grabbed_11"
 			},
 			randomize_indexes = {},
 			sound_events = {
@@ -17770,8 +17769,7 @@ return function ()
 				"pdr_gameplay_witch_hunter_grabbed_08",
 				"pdr_gameplay_witch_hunter_grabbed_09",
 				"pdr_gameplay_witch_hunter_grabbed_10",
-				"pdr_gameplay_witch_hunter_grabbed_11",
-				"pdr_gameplay_witch_hunter_grabbed_12"
+				"pdr_gameplay_witch_hunter_grabbed_11"
 			},
 			sound_events_duration = {
 				3.9856667518616,
@@ -17779,8 +17777,7 @@ return function ()
 				2.7196249961853,
 				3.2752709388733,
 				3.2390415668488,
-				2.930624961853,
-				6.3812294006348
+				2.930624961853
 			}
 		},
 		pdr_gameplay_witch_hunter_low_on_health = {
@@ -19304,16 +19301,12 @@ return function ()
 		},
 		pdr_targeted_by_ratling = {
 			randomize_indexes_n = 0,
-			face_animations_n = 12,
+			face_animations_n = 8,
 			database = "dwarf_ranger_honduras",
-			sound_events_n = 12,
+			sound_events_n = 8,
 			category = "player_feedback",
-			dialogue_animations_n = 12,
+			dialogue_animations_n = 8,
 			dialogue_animations = {
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
-				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
 				"dialogue_shout",
@@ -19331,17 +19324,9 @@ return function ()
 				"face_fear",
 				"face_fear",
 				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
-				"face_fear",
 				"face_fear"
 			},
 			localization_strings = {
-				"pdr_targeted_by_ratling_01",
-				"pdr_targeted_by_ratling_02",
-				"pdr_targeted_by_ratling_03",
-				"pdr_targeted_by_ratling_04",
 				"pdr_targeted_by_ratling_05",
 				"pdr_targeted_by_ratling_06",
 				"pdr_targeted_by_ratling_07",
@@ -19353,10 +19338,6 @@ return function ()
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"pdr_targeted_by_ratling_01",
-				"pdr_targeted_by_ratling_02",
-				"pdr_targeted_by_ratling_03",
-				"pdr_targeted_by_ratling_04",
 				"pdr_targeted_by_ratling_05",
 				"pdr_targeted_by_ratling_06",
 				"pdr_targeted_by_ratling_07",
@@ -19367,10 +19348,6 @@ return function ()
 				"pdr_targeted_by_ratling_12"
 			},
 			sound_events_duration = {
-				2.7404375076294,
-				4.4371252059936,
-				4.3345417976379,
-				1.9634582996368,
 				2.280416727066,
 				1.6878957748413,
 				1.9884791374207,

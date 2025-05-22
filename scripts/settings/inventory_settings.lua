@@ -234,6 +234,10 @@ InventorySettings.bot_loadout_allowed_game_modes = {
 	inn = true,
 	deus = true
 }
+InventorySettings.bot_loadout_allowed_mechanisms = {
+	adventure = true,
+	deus = true
+}
 InventorySettings.weapon_slots = {}
 InventorySettings.enemy_weapon_slots = {}
 InventorySettings.attachment_slots = {}

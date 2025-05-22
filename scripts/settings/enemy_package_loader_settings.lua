@@ -1,7 +1,6 @@
 EnemyPackageLoaderSettings = EnemyPackageLoaderSettings or {}
 EnemyPackageLoaderSettings.policy = "default"
 EnemyPackageLoaderSettings.max_loaded_breed_cap = 35
-EnemyPackageLoaderSettings.unload_startup_packages_between_levels = false
 EnemyPackageLoaderSettings.breed_path = "resource_packages/breeds/"
 EnemyPackageLoaderSettings.categories = {
 	{
@@ -129,7 +128,6 @@ local category_changes
 
 if IS_CONSOLE or script_data.enemy_package_loader_policy == "console" then
 	EnemyPackageLoaderSettings.policy = "console"
-	EnemyPackageLoaderSettings.unload_startup_packages_between_levels = false
 	EnemyPackageLoaderSettings.max_loaded_breed_cap = 35
 	category_changes = {
 		bosses = {

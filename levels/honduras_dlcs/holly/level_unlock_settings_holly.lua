@@ -1,12 +1,13 @@
 AreaSettings.holly = {
 	menu_sound_event = "Play_hud_menu_area_ubersreik",
-	name = "holly",
+	long_description_text = "area_selection_holly_description_long",
 	display_name = "area_selection_holly_name",
 	description_text = "area_selection_holly_description",
+	name = "holly",
 	store_page_url = "https://store.steampowered.com/app/975400/Warhammer_Vermintide_2__Back_to_Ubersreik/",
-	level_image = "area_icon_ubersreik",
 	dlc_name = "holly",
 	sort_order = 9005,
+	level_image = "area_icon_ubersreik",
 	video_settings = {
 		material_name = "area_video_holly",
 		resource = "video/area_videos/holly/area_video_holly"

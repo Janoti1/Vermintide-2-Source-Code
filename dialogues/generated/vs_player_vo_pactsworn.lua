@@ -531,6 +531,238 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "egt_vs_ability_horde_a",
+		name = "egt_vs_ability_horde_a",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"vs_ability_horde"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			}
+		}
+	})
+	define_rule({
+		response = "egt_vs_downed_hero_a",
+		name = "egt_vs_downed_hero_a",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"vs_downed_hero"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "egt_vs_globadier_hitting_many_a",
+		response = "egt_vs_globadier_hitting_many_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"vs_globadier_hitting_many"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"is_in_ghost_mode",
+				OP.EQ,
+				0
+			},
+			{
+				"global_context",
+				"game_about_to_end",
+				OP.EQ,
+				0
+			},
+			{
+				"user_memory",
+				"vs_globadier_globe_thrown",
+				OP.EQ,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_globe_thrown",
+				OP.TIMEDIFF,
+				OP.GT,
+				60
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"vs_globadier_globe_thrown",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_globe_thrown",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "egt_vs_globadier_missing_globe_a",
+		response = "egt_vs_globadier_missing_globe_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"vs_globadier_missing_globe"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"is_in_ghost_mode",
+				OP.EQ,
+				0
+			},
+			{
+				"global_context",
+				"game_about_to_end",
+				OP.EQ,
+				0
+			},
+			{
+				"user_memory",
+				"vs_globadier_globe_thrown",
+				OP.EQ,
+				0
+			},
+			{
+				"faction_memory",
+				"time_since_globe_thrown",
+				OP.TIMEDIFF,
+				OP.GT,
+				60
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"vs_globadier_globe_thrown",
+				OP.ADD,
+				1
+			},
+			{
+				"faction_memory",
+				"time_since_globe_thrown",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		response = "egt_vs_heroes_objective_almost_completed_b",
+		name = "egt_vs_heroes_objective_almost_completed_b",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"vs_heroes_objective_almost_completed_a"
+			},
+			{
+				"user_context",
+				"is_in_ghost_mode",
+				OP.EQ,
+				0
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			}
+		}
+	})
+	define_rule({
+		response = "egt_vs_many_heroes_incapacitated_a",
+		name = "egt_vs_many_heroes_incapacitated_a",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"vs_many_heroes_incapacitated"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			}
+		}
+	})
+	define_rule({
 		probability = 1,
 		name = "egt_vs_pact_proximity_banter_eight_b",
 		response = "egt_vs_pact_proximity_banter_eight_b",
@@ -539,7 +771,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -583,7 +815,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -627,7 +859,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -671,7 +903,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_instigator"
+				"friends_close"
 			},
 			{
 				"query_context",
@@ -758,7 +990,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_instigator"
+				"friends_close"
 			},
 			{
 				"query_context",
@@ -845,7 +1077,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -889,7 +1121,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -933,7 +1165,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -977,7 +1209,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1021,7 +1253,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1065,7 +1297,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1109,7 +1341,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1153,7 +1385,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1197,7 +1429,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1241,7 +1473,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_instigator"
+				"friends_close"
 			},
 			{
 				"query_context",
@@ -1328,7 +1560,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1372,7 +1604,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1416,7 +1648,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1460,7 +1692,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_instigator"
+				"friends_close"
 			},
 			{
 				"query_context",
@@ -1547,7 +1779,7 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"gutter_runner_temp_disabled_heard"
+				"heard_speak"
 			},
 			{
 				"query_context",
@@ -1579,6 +1811,51 @@ return function ()
 				"faction_memory",
 				"time_since_pact_banter",
 				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "egt_vs_passing_hoisted_hero_a",
+		response = "egt_vs_passing_hoisted_hero_a",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"vs_passing_hoisted_hero"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"vs_gutter_runner"
+			},
+			{
+				"user_context",
+				"is_in_ghost_mode",
+				OP.EQ,
+				0
+			},
+			{
+				"user_memory",
+				"vs_passing_hoisted_hero",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"vs_passing_hoisted_hero",
+				OP.ADD,
+				1
 			}
 		}
 	})
@@ -3842,15 +4119,21 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "epg_vs_vw_cheer_a",
 		response = "epg_vs_vw_cheer_a",
+		name = "epg_vs_vw_cheer_a",
+		probability = 0.4,
 		criterias = {
 			{
 				"query_context",
 				"concept",
 				OP.EQ,
-				"vs_vw_cheer"
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"vs_ability_horde_a"
 			},
 			{
 				"query_context",
@@ -3863,20 +4146,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"vs_poison_wind_globadier"
-			},
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMEDIFF,
-				OP.GT,
-				5
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMESET
 			}
 		}
 	})
@@ -6192,15 +6461,21 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "epm_vs_vw_cheer_a",
 		response = "epm_vs_vw_cheer_a",
+		name = "epm_vs_vw_cheer_a",
+		probability = 0.4,
 		criterias = {
 			{
 				"query_context",
 				"concept",
 				OP.EQ,
-				"vs_vw_cheer"
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"vs_ability_horde_a"
 			},
 			{
 				"query_context",
@@ -6213,20 +6488,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"vs_packmaster"
-			},
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMEDIFF,
-				OP.GT,
-				5
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMESET
 			}
 		}
 	})
@@ -8404,45 +8665,6 @@ return function ()
 				"vs_shooting_hooked_hero",
 				OP.ADD,
 				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "erg_vs_vw_cheer_a",
-		response = "erg_vs_vw_cheer_a",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"vs_vw_cheer"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"vs_ratling_gunner"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"vs_ratling_gunner"
-			},
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMEDIFF,
-				OP.GT,
-				5
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMESET
 			}
 		}
 	})
@@ -10694,15 +10916,21 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "ewt_vs_vw_cheer_a",
 		response = "ewt_vs_vw_cheer_a",
+		name = "ewt_vs_vw_cheer_a",
+		probability = 0.4,
 		criterias = {
 			{
 				"query_context",
 				"concept",
 				OP.EQ,
-				"vs_vw_cheer"
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name_nopre",
+				OP.EQ,
+				"vs_ability_horde_a"
 			},
 			{
 				"query_context",
@@ -10715,20 +10943,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"vs_warpfire_thrower"
-			},
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMEDIFF,
-				OP.GT,
-				5
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_vw_cheer",
-				OP.TIMESET
 			}
 		}
 	})
@@ -11290,11 +11504,11 @@ return function ()
 				"egt_spawning_gutter_runner_05"
 			},
 			sound_events_duration = {
-				3.6960201263428,
-				3.8597495555878,
-				3.5872640609741,
-				3.0923001766205,
-				2.9253997802734
+				3.9157967567444,
+				4.089262008667,
+				3.8005735874176,
+				3.2761778831482,
+				3.0993530750275
 			}
 		},
 		egt_taunting_bardin = {
@@ -11354,16 +11568,16 @@ return function ()
 				"egt_taunting_bardin_10"
 			},
 			sound_events_duration = {
-				3.1533441543579,
-				2.8094174861908,
-				3.9942402839661,
-				3.7840163707733,
-				3.9690136909485,
-				3.3635683059692,
-				1.9222718477249,
-				1.9987932443619,
-				1.2192822694778,
-				1.9424532651901
+				3.3408515453339,
+				2.9764740467072,
+				4.2317500114441,
+				4.0090255737305,
+				4.2050232887268,
+				3.5635762214661,
+				2.0365760326385,
+				2.1176476478577,
+				1.2917845249176,
+				2.0579574108124
 			}
 		},
 		egt_taunting_kerillian = {
@@ -11423,16 +11637,16 @@ return function ()
 				"egt_taunting_kerillian_10"
 			},
 			sound_events_duration = {
-				3.4409306049347,
-				3.1533441543579,
-				3.3635683059692,
-				1.8861130475998,
-				2.557989358902,
-				3.1617531776428,
-				1.79445540905,
-				1.6388895511627,
-				2.1022236347199,
-				1.7389562129974
+				3.6455388069153,
+				3.3408515453339,
+				3.5635762214661,
+				1.9982671737671,
+				2.71009516716,
+				3.3497605323791,
+				1.9011591672897,
+				1.7363430261612,
+				2.2272281646728,
+				1.8423599004745
 			}
 		},
 		egt_taunting_kruber = {
@@ -11492,16 +11706,16 @@ return function ()
 				"egt_taunting_kruber_10"
 			},
 			sound_events_duration = {
-				2.8186674118042,
-				3.0448684692383,
-				3.2265019416809,
-				3.106253862381,
-				3.0305731296539,
-				2.4755816459656,
-				2.2678802013397,
-				1.8903176784515,
-				2.0997009277344,
-				2.2283580303192
+				2.9862740039825,
+				3.2259254455566,
+				3.4183597564697,
+				3.290961265564,
+				3.2107803821564,
+				2.6227872371674,
+				2.4027352333069,
+				2.002721786499,
+				2.2245554924011,
+				2.3608629703522
 			}
 		},
 		egt_taunting_saltzpyre = {
@@ -11557,15 +11771,15 @@ return function ()
 				"egt_taunting_saltzpyre_10"
 			},
 			sound_events_duration = {
-				2.1022236347199,
-				3.573792219162,
-				3.2525696754456,
-				2.873325586319,
-				3.0364594459534,
-				2.1434276103973,
-				1.6817753314972,
-				1.3370077610016,
-				1.6464576721191
+				2.2272281646728,
+				3.7863008975983,
+				3.4459774494171,
+				3.0441823005676,
+				3.2170166969299,
+				2.2708823680878,
+				1.7817788124084,
+				1.4165103435516,
+				1.7443611621857
 			}
 		},
 		egt_taunting_sienna = {
@@ -11625,16 +11839,262 @@ return function ()
 				"egt_taunting_sienna_10"
 			},
 			sound_events_duration = {
-				1.5463910102844,
-				2.171177148819,
-				2.9717104434967,
-				2.5075356960297,
-				1.5304139852524,
-				2.6900100708008,
-				1.3504621982575,
-				1.7549333572388,
-				1.4379153251648,
-				2.1568818092346
+				1.638344168663,
+				2.3002820014954,
+				3.1484174728394,
+				2.6566412448883,
+				1.6214170455933,
+				2.8499662876129,
+				1.4307647943497,
+				1.8592870235443,
+				1.5234181880951,
+				2.2851364612579
+			}
+		},
+		egt_vs_ability_horde_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 6,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 6,
+			category = "activate_ability",
+			dialogue_animations_n = 6,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"egt_vs_ability_horde_a_01",
+				"egt_vs_ability_horde_a_02",
+				"egt_vs_ability_horde_a_03",
+				"egt_vs_ability_horde_a_04",
+				"egt_vs_ability_horde_a_05",
+				"egt_vs_ability_horde_a_06"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"egt_vs_ability_horde_a_01",
+				"egt_vs_ability_horde_a_02",
+				"egt_vs_ability_horde_a_03",
+				"egt_vs_ability_horde_a_04",
+				"egt_vs_ability_horde_a_05",
+				"egt_vs_ability_horde_a_06"
+			},
+			sound_events_duration = {
+				1.9180769324303,
+				3.5410131216049,
+				3.2492144107819,
+				2.8260586261749,
+				4.0824394226074,
+				3.503338932991
+			}
+		},
+		egt_vs_downed_hero_a = {
+			only_allies = true,
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 4,
+			category = "player_feedback",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"egt_vs_downed_hero_a_01",
+				"egt_vs_downed_hero_a_02",
+				"egt_vs_downed_hero_a_03",
+				"egt_vs_downed_hero_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"egt_vs_downed_hero_a_01",
+				"egt_vs_downed_hero_a_02",
+				"egt_vs_downed_hero_a_03",
+				"egt_vs_downed_hero_a_04"
+			},
+			sound_events_duration = {
+				1.4112113714218,
+				1.9832147359848,
+				3.3062551021576,
+				2.4515862464905
+			}
+		},
+		egt_vs_globadier_hitting_many_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 4,
+			category = "player_feedback",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"egt_vs_globadier_hitting_many_a_01",
+				"egt_vs_globadier_hitting_many_a_02",
+				"egt_vs_globadier_hitting_many_a_03",
+				"egt_vs_globadier_hitting_many_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"egt_vs_globadier_hitting_many_a_01",
+				"egt_vs_globadier_hitting_many_a_02",
+				"egt_vs_globadier_hitting_many_a_03",
+				"egt_vs_globadier_hitting_many_a_04"
+			},
+			sound_events_duration = {
+				1.7378277778625,
+				2.4269194602966,
+				2.1431868076324,
+				2.1231043338776
+			}
+		},
+		egt_vs_globadier_missing_globe_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 4,
+			category = "player_feedback",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"egt_vs_globadier_missing_globe_a_01",
+				"egt_vs_globadier_missing_globe_a_02",
+				"egt_vs_globadier_missing_globe_a_03",
+				"egt_vs_globadier_missing_globe_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"egt_vs_globadier_missing_globe_a_01",
+				"egt_vs_globadier_missing_globe_a_02",
+				"egt_vs_globadier_missing_globe_a_03",
+				"egt_vs_globadier_missing_globe_a_04"
+			},
+			sound_events_duration = {
+				2.0212264060974,
+				2.0050973892212,
+				1.6031535863876,
+				1.5619682073593
+			}
+		},
+		egt_vs_heroes_objective_almost_completed_b = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 4,
+			category = "player_feedback",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"egt_vs_heroes_objective_almost_completed_b_01",
+				"egt_vs_heroes_objective_almost_completed_b_02",
+				"egt_vs_heroes_objective_almost_completed_b_03",
+				"egt_vs_heroes_objective_almost_completed_b_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"egt_vs_heroes_objective_almost_completed_b_01",
+				"egt_vs_heroes_objective_almost_completed_b_02",
+				"egt_vs_heroes_objective_almost_completed_b_03",
+				"egt_vs_heroes_objective_almost_completed_b_04"
+			},
+			sound_events_duration = {
+				1.3400972485542,
+				1.6005923748016,
+				1.888668179512,
+				1.7175970077515
+			}
+		},
+		egt_vs_many_heroes_incapacitated_a = {
+			only_allies = true,
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 4,
+			category = "player_feedback",
+			dialogue_animations_n = 4,
+			dialogue_animations = {
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"egt_vs_many_heroes_incapacitated_a_01",
+				"egt_vs_many_heroes_incapacitated_a_02",
+				"egt_vs_many_heroes_incapacitated_a_03",
+				"egt_vs_many_heroes_incapacitated_a_04"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"egt_vs_many_heroes_incapacitated_a_01",
+				"egt_vs_many_heroes_incapacitated_a_02",
+				"egt_vs_many_heroes_incapacitated_a_03",
+				"egt_vs_many_heroes_incapacitated_a_04"
+			},
+			sound_events_duration = {
+				2.5100885629654,
+				2.1104462146759,
+				2.478443145752,
+				2.8980934619904
 			}
 		},
 		egt_vs_pact_proximity_banter_eight_b = {
@@ -11656,7 +12116,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_eight_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 2.3578932285309
 			}
 		},
 		egt_vs_pact_proximity_banter_eighteen_b = {
@@ -11678,7 +12138,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_eighteen_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 5.2393751144409
 			}
 		},
 		egt_vs_pact_proximity_banter_eleven_b = {
@@ -11700,7 +12160,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_eleven_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 4.0669527053833
 			}
 		},
 		egt_vs_pact_proximity_banter_fifteen_a = {
@@ -11722,7 +12182,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_fifteen_a_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 5.0782155990601
 			}
 		},
 		egt_vs_pact_proximity_banter_five_a = {
@@ -11744,7 +12204,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_five_a_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 3.5441434383392
 			}
 		},
 		egt_vs_pact_proximity_banter_four_b = {
@@ -11766,7 +12226,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_four_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 4.4363231658936
 			}
 		},
 		egt_vs_pact_proximity_banter_fourteen_b = {
@@ -11788,7 +12248,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_fourteen_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 2.2868256568909
 			}
 		},
 		egt_vs_pact_proximity_banter_nine_b = {
@@ -11810,7 +12270,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_nine_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 2.3973898887634
 			}
 		},
 		egt_vs_pact_proximity_banter_nineteen_b = {
@@ -11832,7 +12292,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_nineteen_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 2.1619143486023
 			}
 		},
 		egt_vs_pact_proximity_banter_one_b = {
@@ -11854,7 +12314,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_one_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 3.163135766983
 			}
 		},
 		egt_vs_pact_proximity_banter_seven_b = {
@@ -11876,7 +12336,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_seven_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 2.7864899635315
 			}
 		},
 		egt_vs_pact_proximity_banter_seventeen_b = {
@@ -11898,7 +12358,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_seventeen_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 3.9773428440094
 			}
 		},
 		egt_vs_pact_proximity_banter_six_b = {
@@ -11920,7 +12380,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_six_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 5.2943511009216
 			}
 		},
 		egt_vs_pact_proximity_banter_sixteen_b = {
@@ -11942,7 +12402,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_sixteen_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 3.9781041145325
 			}
 		},
 		egt_vs_pact_proximity_banter_ten_a = {
@@ -11964,7 +12424,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_ten_a_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 2.0888047814369
 			}
 		},
 		egt_vs_pact_proximity_banter_thirteen_b = {
@@ -11986,7 +12446,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_thirteen_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 6.0487570762634
 			}
 		},
 		egt_vs_pact_proximity_banter_three_b = {
@@ -12008,7 +12468,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_three_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 1.9133162498474
 			}
 		},
 		egt_vs_pact_proximity_banter_twelve_b = {
@@ -12030,7 +12490,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_twelve_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 4.2783184051514
 			}
 		},
 		egt_vs_pact_proximity_banter_twenty_a = {
@@ -12052,7 +12512,7 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_twenty_a_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 3.5805962085724
 			}
 		},
 		egt_vs_pact_proximity_banter_two_b = {
@@ -12074,7 +12534,36 @@ return function ()
 				[1] = "egt_vs_pact_proximity_banter_two_b_01"
 			},
 			sound_events_duration = {
-				[1] = 3.4567
+				[1] = 4.2045407295227
+			}
+		},
+		egt_vs_passing_hoisted_hero_a = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "vs_player_vo_pactsworn",
+			sound_events_n = 2,
+			category = "player_feedback",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "egt_vs_passing_hoisted_hero_a_01",
+				[2] = "egt_vs_passing_hoisted_hero_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "egt_vs_passing_hoisted_hero_a_01",
+				[2] = "egt_vs_passing_hoisted_hero_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.9340603351593,
+				[2] = 3.4575591087341
 			}
 		},
 		egt_vw_affirmative = {
@@ -12135,16 +12624,16 @@ return function ()
 				"egt_vw_affirmative_10"
 			},
 			sound_events_duration = {
-				0.74838030338287,
-				1.2150954008102,
-				0.8476060628891,
-				1.585089802742,
-				2.4688544273377,
-				1.8810678720474,
-				2.8388488292694,
-				3.7486987113953,
-				1.4068021774292,
-				1.892840385437
+				0.79288130998611,
+				1.2873486280441,
+				0.89800733327866,
+				1.6793440580368,
+				2.6156599521637,
+				1.9929219484329,
+				3.0076553821564,
+				3.9716079235077,
+				1.4904549121857,
+				2.0053944587708
 			}
 		},
 		egt_vw_ambush = {
@@ -12205,16 +12694,16 @@ return function ()
 				"egt_vw_ambush_10"
 			},
 			sound_events_duration = {
-				0.6129959821701,
-				1.3100991249084,
-				1.0511029958725,
-				1.1158519983292,
-				1.0788525342941,
-				0.78874331712723,
-				1.7263429164886,
-				2.2233126163483,
-				2.554625749588,
-				1.4227792024612
+				0.64944660663605,
+				1.3880016803741,
+				1.1136047840118,
+				1.1822040081024,
+				1.1430044174194,
+				0.83564442396164,
+				1.8289965391159,
+				2.3555176258087,
+				2.7065317630768,
+				1.5073820352554
 			}
 		},
 		egt_vw_attack_now = {
@@ -12275,16 +12764,16 @@ return function ()
 				"egt_vw_attack_now_10"
 			},
 			sound_events_duration = {
-				1.2268503904343,
-				1.8188414573669,
-				2.0610196590424,
-				2.5226719379425,
-				1.4740738868713,
-				1.1864873170853,
-				1.9575892686844,
-				1.8482729196549,
-				2.4310140609741,
-				2.9229383468628
+				1.2998026609421,
+				1.9269952774048,
+				2.1835741996765,
+				2.6726775169373,
+				1.561726808548,
+				1.2570395469666,
+				2.0739934444427,
+				1.9581768512726,
+				2.5755693912506,
+				3.0967452526092
 			}
 		},
 		egt_vw_cover_me = {
@@ -12345,16 +12834,16 @@ return function ()
 				"egt_vw_cover_me_10"
 			},
 			sound_events_duration = {
-				1.2773041725159,
-				2.7505548000336,
-				1.9289988279343,
-				1.3706436157227,
-				1.2613271474838,
-				1.111647605896,
-				1.5186413526535,
-				1.9231126308441,
-				2.4360594749451,
-				1.9474986791611
+				1.3532565832138,
+				2.9141111373901,
+				2.0437030792236,
+				1.4521462917328,
+				1.336329460144,
+				1.1777495145798,
+				1.6089444160461,
+				2.0374667644501,
+				2.5809149742127,
+				2.0633029937744
 			}
 		},
 		egt_vw_gather = {
@@ -12415,16 +12904,16 @@ return function ()
 				"egt_vw_gather_10"
 			},
 			sound_events_duration = {
-				1.2806676626205,
-				0.8728329539299,
-				1.347939491272,
-				2.1795861721039,
-				0.90900903940201,
-				0.75006210803986,
-				1.1217383146286,
-				1.111647605896,
-				1.4421198368073,
-				3.1112992763519
+				1.3568201065064,
+				0.92473423480988,
+				1.4280921220779,
+				2.3091909885406,
+				0.96306145191193,
+				0.79466307163239,
+				1.188440322876,
+				1.1777495145798,
+				1.5278726816177,
+				3.2963066101074
 			}
 		},
 		egt_vw_go_here = {
@@ -12485,16 +12974,16 @@ return function ()
 				"egt_vw_go_here_10"
 			},
 			sound_events_duration = {
-				1.6607091426849,
-				1.5321921110153,
-				0.99931782484055,
-				1.46342253685,
-				1.5554393529892,
-				1.6259783506393,
-				1.6233417987824,
-				0.95869201421738,
-				1.6552257537842,
-				1.9720947742462
+				1.7594599723816,
+				1.623300909996,
+				1.0587403774261,
+				1.5504420995712,
+				1.6479306221008,
+				1.7226639986038,
+				1.7198706865311,
+				1.0156987905502,
+				1.7536505460739,
+				2.0893616676331
 			}
 		},
 		egt_vw_negation = {
@@ -12559,28 +13048,29 @@ return function ()
 				"egt_vw_negation_11"
 			},
 			sound_events_duration = {
-				0.48771992325783,
-				0.66008615493774,
-				0.86274218559265,
-				1.2285321950913,
-				1.4093248844147,
-				1.3050537109375,
-				1.4765965938568,
-				0.76351648569107,
-				3.2180931568146,
-				1.1713511943817,
-				1.8667724132538
+				0.51672124862671,
+				0.69933694601059,
+				0.91404348611832,
+				1.301584482193,
+				1.4931275844574,
+				1.3826562166214,
+				1.564399600029,
+				0.80891746282578,
+				3.4094507694244,
+				1.2410032749176,
+				1.9777764081955
 			}
 		},
 		egt_vw_thanks = {
 			only_allies = true,
 			randomize_indexes_n = 0,
-			face_animations_n = 10,
+			face_animations_n = 11,
 			database = "vs_player_vo_pactsworn",
-			sound_events_n = 10,
+			sound_events_n = 11,
 			category = "player_alerts",
-			dialogue_animations_n = 10,
+			dialogue_animations_n = 11,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -12602,44 +13092,48 @@ return function ()
 				"face_neutral",
 				"face_neutral",
 				"face_neutral",
+				"face_neutral",
 				"face_neutral"
 			},
 			localization_strings = {
-				"egt_vw_thanks_01",
-				"egt_vw_thanks_02",
-				"egt_vw_thanks_03",
-				"egt_vw_thanks_04",
-				"egt_vw_thanks_05",
-				"egt_vw_thanks_06",
-				"egt_vw_thanks_07",
-				"egt_vw_thanks_08",
-				"egt_vw_thanks_09",
-				"egt_vw_thanks_10"
+				"egt_vs_vw_thanks_a_01",
+				"egt_vs_vw_thanks_a_02",
+				"egt_vs_vw_thanks_a_03",
+				"egt_vs_vw_thanks_a_04",
+				"egt_vs_vw_thanks_a_05",
+				"egt_vs_vw_thanks_a_06",
+				"egt_vs_vw_thanks_a_07",
+				"egt_vs_vw_thanks_a_08",
+				"egt_vs_vw_thanks_a_09",
+				"egt_vs_vw_thanks_a_11",
+				"egt_vs_vw_thanks_a_12"
 			},
 			randomize_indexes = {},
 			sound_events = {
-				"egt_vw_thanks_01",
-				"egt_vw_thanks_02",
-				"egt_vw_thanks_03",
-				"egt_vw_thanks_04",
-				"egt_vw_thanks_05",
-				"egt_vw_thanks_06",
-				"egt_vw_thanks_07",
-				"egt_vw_thanks_08",
-				"egt_vw_thanks_09",
-				"egt_vw_thanks_10"
+				"egt_vs_vw_thanks_a_01",
+				"egt_vs_vw_thanks_a_02",
+				"egt_vs_vw_thanks_a_03",
+				"egt_vs_vw_thanks_a_04",
+				"egt_vs_vw_thanks_a_05",
+				"egt_vs_vw_thanks_a_06",
+				"egt_vs_vw_thanks_a_07",
+				"egt_vs_vw_thanks_a_08",
+				"egt_vs_vw_thanks_a_09",
+				"egt_vs_vw_thanks_a_11",
+				"egt_vs_vw_thanks_a_12"
 			},
 			sound_events_duration = {
-				0.70997935533524,
-				1.6032565832138,
-				1.5384550094605,
-				2.1761348247528,
-				1.3873740434647,
-				0.90780031681061,
-				0.7396559715271,
-				1.1354904174805,
-				1.6641340255737,
-				2.09721326828
+				1.3801412284374,
+				0.84811699390411,
+				0.70130431652069,
+				0.90376108884811,
+				1.1061992645264,
+				1.2699389457703,
+				0.37516114115715,
+				0.85129082202911,
+				1.1165651679039,
+				1.5773918628693,
+				1.1549387574196
 			}
 		},
 		egt_vw_wait = {
@@ -12704,17 +13198,17 @@ return function ()
 				"egt_vw_wait_11"
 			},
 			sound_events_duration = {
-				2.4562411308289,
-				1.4816420078278,
-				1.4883691072464,
-				1.1738739013672,
-				1.5270503759384,
-				2.0391564369202,
-				4.2868723869324,
-				1.7969781160355,
-				2.3040387630463,
-				2.5874207019806,
-				3.5384745597839
+				2.6022965908051,
+				1.5697450637817,
+				1.5768721103668,
+				1.2436760663986,
+				1.6178534030914,
+				2.1604108810425,
+				4.5417828559875,
+				1.9038319587708,
+				2.4410440921783,
+				2.7412767410278,
+				3.7488832473755
 			}
 		},
 		epg_spawning_globadier = {
@@ -17702,55 +18196,6 @@ return function ()
 				1.8375833034515,
 				2.1348125934601,
 				1.663125038147
-			}
-		},
-		erg_vs_vw_cheer_a = {
-			randomize_indexes_n = 0,
-			face_animations_n = 6,
-			database = "vs_player_vo_pactsworn",
-			sound_events_n = 6,
-			category = "player_feedback",
-			dialogue_animations_n = 6,
-			dialogue_animations = {
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk"
-			},
-			face_animations = {
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral",
-				"face_neutral"
-			},
-			localization_strings = {
-				"erg_vs_vw_cheer_a_01",
-				"erg_vs_vw_cheer_a_02",
-				"erg_vs_vw_cheer_a_03",
-				"erg_vs_vw_cheer_a_04",
-				"erg_vs_vw_cheer_a_05",
-				"erg_vs_vw_cheer_a_06"
-			},
-			randomize_indexes = {},
-			sound_events = {
-				"erg_vs_vw_cheer_a_01",
-				"erg_vs_vw_cheer_a_02",
-				"erg_vs_vw_cheer_a_03",
-				"erg_vs_vw_cheer_a_04",
-				"erg_vs_vw_cheer_a_05",
-				"erg_vs_vw_cheer_a_06"
-			},
-			sound_events_duration = {
-				3.4567,
-				3.4567,
-				3.4567,
-				3.4567,
-				3.4567,
-				3.4567
 			}
 		},
 		erg_vw_affirmative = {

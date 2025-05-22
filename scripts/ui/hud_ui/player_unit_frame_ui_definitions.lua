@@ -72,6 +72,20 @@ local scenegraph_definition = {
 			108
 		}
 	},
+	equipment_root = {
+		vertical_alignment = "bottom",
+		parent = "root",
+		horizontal_alignment = "center",
+		position = {
+			0 + UISettings.INSIGNIA_OFFSET,
+			0,
+			5
+		},
+		size = {
+			86,
+			108
+		}
+	},
 	insignia_pivot_parent = {
 		vertical_alignment = "bottom",
 		parent = "root",
@@ -538,7 +552,7 @@ end
 
 local function create_dynamic_health_widget()
 	return {
-		scenegraph_id = "player_status",
+		scenegraph_id = "equipment_root",
 		element = {
 			passes = {
 				{
@@ -807,7 +821,7 @@ end
 
 local function create_dynamic_ability_widget()
 	return {
-		scenegraph_id = "player_status",
+		scenegraph_id = "equipment_root",
 		element = {
 			passes = {
 				{

@@ -8,19 +8,25 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"seen_item"
+				"nik_greeting_level"
 			},
 			{
 				"query_context",
-				"item_tag",
+				"source_name",
 				OP.EQ,
-				"nik_crawl_level_complete_fail"
+				"inn_keeper"
 			},
 			{
-				"query_context",
-				"level_name",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
 				"dlc_celebrate_crawl"
+			},
+			{
+				"global_context",
+				"last_level_won",
+				OP.EQ,
+				false
 			}
 		}
 	})
@@ -33,19 +39,25 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"seen_item"
+				"nik_greeting_level"
 			},
 			{
 				"query_context",
-				"item_tag",
+				"source_name",
 				OP.EQ,
-				"nik_crawl_level_complete_success"
+				"inn_keeper"
 			},
 			{
-				"query_context",
-				"level_name",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
 				"dlc_celebrate_crawl"
+			},
+			{
+				"global_context",
+				"last_level_won",
+				OP.EQ,
+				true
 			}
 		}
 	})
@@ -58,13 +70,25 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"seen_item"
+				"nik_greeting"
 			},
 			{
 				"query_context",
-				"item_tag",
+				"source_name",
 				OP.EQ,
-				"nik_greeting_evening"
+				"inn_keeper"
+			},
+			{
+				"global_context",
+				"hub_environment",
+				OP.EQ,
+				"celebrate"
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.NEQ,
+				"dlc_celebrate_crawl"
 			}
 		}
 	})
@@ -84,6 +108,18 @@ return function ()
 				"item_tag",
 				OP.EQ,
 				"nik_backstory_interacting"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
+				"global_context",
+				"hub_environment",
+				OP.EQ,
+				"celebrate"
 			}
 		}
 	})
@@ -5153,9 +5189,9 @@ return function ()
 				5.4015002250671,
 				8.8776664733887,
 				6.4083333015442,
-				4.4263124465942,
+				4.4262914657593,
 				10.569812774658,
-				15.338541984558,
+				14.731812477112,
 				1.0735000371933
 			}
 		},

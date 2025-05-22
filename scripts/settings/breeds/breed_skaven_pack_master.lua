@@ -33,6 +33,7 @@ local breed_data = {
 	death_reaction = "ai_default",
 	armor_category = 3,
 	backstab_player_sound_event = "Play_clan_rat_attack_player_back_vce",
+	death_sound_event = "Play_packmaster_vce_death",
 	smart_targeting_width = 0.2,
 	is_bot_aid_threat = true,
 	behavior = "pack_master",

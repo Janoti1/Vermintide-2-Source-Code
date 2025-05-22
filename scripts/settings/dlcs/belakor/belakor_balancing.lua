@@ -1,14 +1,14 @@
 BelakorBalancing = {
 	crystal_throw_speed = 5,
 	homing_skulls_min_time_between_spawns = 20,
-	totem_despawn_distance = 35,
 	homing_skulls_retry_time_on_spawn_failure = 3,
 	homing_skulls_minimum_count = 3,
 	homing_skulls_distance_between_skulls = 2,
 	homing_skulls_maximum_count = 5,
 	captains_chance_per_spawn = 0.5,
+	totem_despawn_distance = 35,
 	totem_panic_decal_duration = 1.5,
-	homing_skulls_max_time_between_spawns = 30,
+	homing_skulls_min_speed_multiplier = 0.009,
 	homing_skulls_min_distance_above_ground = 2,
 	homing_skulls_vertical_offset_multiplier = 0.1,
 	totem_spawns_distance = 50,
@@ -26,7 +26,7 @@ BelakorBalancing = {
 	captains_stop_spawning_when_crystal_count = 2,
 	harder_spawn_interval = 3,
 	statue_health = 50,
-	homing_skulls_min_speed_multiplier = 0.009,
+	homing_skulls_max_time_between_spawns = 30,
 	captains_max_marked_enemies = 1,
 	captains_possible_enemies = {
 		chaos_marauder = true,
@@ -57,6 +57,20 @@ BelakorBalancing = {
 		120,
 		120
 	},
+	spawn_crystal_func = function (position)
+		local pickup_system = Managers.state.entity:system("pickup_system")
+		local with_physics = true
+		local rotation = Quaternion.identity()
+		local spawn_type = "dropped"
+		local pickup_name = "belakor_crystal"
+		local override_unit_template_name = "belakor_crystal_throw"
+
+		for i = 1, BelakorBalancing.totem_crystal_count do
+			local velocity = Vector3(2 * math.random() - 1, 2 * math.random() - 1, 1)
+
+			pickup_system:spawn_pickup(pickup_name, position + Vector3.up() * 2, rotation, with_physics, spawn_type, velocity, override_unit_template_name)
+		end
+	end,
 	homing_skulls_min_pitch = math.pi * 0.1,
 	homing_skulls_max_pitch = math.pi * 0.25,
 	homing_skulls_pitch_delta = math.pi * 0.05,

@@ -261,6 +261,7 @@ TalentBuffTemplates.empire_soldier = {
 		buffs = {
 			{
 				event = "on_hit",
+				remove_on_proc = true,
 				buff_func = "end_huntsman_stealth",
 				duration = buff_tweak_data.markus_huntsman_activated_ability.duration
 			}
@@ -514,6 +515,7 @@ TalentBuffTemplates.empire_soldier = {
 		buffs = {
 			{
 				event = "on_hit",
+				remove_on_proc = true,
 				buff_func = "end_huntsman_stealth",
 				duration = buff_tweak_data.markus_huntsman_activated_ability_duration.duration
 			}
@@ -1597,9 +1599,9 @@ TalentTrees = TalentTrees or {}
 TalentTrees.empire_soldier = {
 	{
 		{
-			"markus_huntsman_vanguard",
-			"markus_huntsman_bloodlust_2",
-			"markus_huntsman_heal_share"
+			"markus_huntsman_thp_tank",
+			"markus_huntsman_thp_smiter",
+			"markus_huntsman_thp_linesman"
 		},
 		{
 			"markus_huntsman_third_shot_free",
@@ -1629,9 +1631,9 @@ TalentTrees.empire_soldier = {
 	},
 	{
 		{
-			"markus_knight_vanguard",
-			"markus_knight_reaper",
-			"markus_knight_heal_share"
+			"markus_knight_thp_tank",
+			"markus_knight_thp_linesman",
+			"markus_knight_thp_smiter"
 		},
 		{
 			"markus_knight_power_level_impact",
@@ -1661,9 +1663,9 @@ TalentTrees.empire_soldier = {
 	},
 	{
 		{
-			"markus_mercenary_reaper",
-			"markus_mercenary_bloodlust_2",
-			"markus_mercenary_heal_share"
+			"markus_mercenary_thp_linesman",
+			"markus_mercenary_thp_smiter",
+			"markus_mercenary_thp_tank"
 		},
 		{
 			"markus_mercenary_increased_damage_on_enemy_proximity",
@@ -1729,6 +1731,42 @@ Talents.empire_soldier = {
 		},
 		buffs = {
 			"markus_huntsman_conqueror"
+		}
+	},
+	{
+		name = "markus_huntsman_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_huntsman_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "markus_huntsman_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_huntsman_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "markus_huntsman_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_huntsman_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
 		}
 	},
 	{
@@ -2015,6 +2053,42 @@ Talents.empire_soldier = {
 		},
 		buffs = {
 			"markus_knight_conqueror"
+		}
+	},
+	{
+		name = "markus_knight_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_knight_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "markus_knight_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_knight_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "markus_knight_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_knight_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
 		}
 	},
 	{
@@ -2341,6 +2415,42 @@ Talents.empire_soldier = {
 		},
 		buffs = {
 			"markus_mercenary_conqueror"
+		}
+	},
+	{
+		name = "markus_mercenary_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_mercenary_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "markus_mercenary_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_mercenary_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "markus_mercenary_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_mercenary_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
 		}
 	},
 	{

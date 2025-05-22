@@ -988,7 +988,7 @@ local function create_player_panel_widget(team_index, player_index)
 			profile_tooltip_text = "input_description_show_profile",
 			show_kick_button = false,
 			chat_tooltip_text_unmute = "input_description_unmute_chat",
-			kick_tooltip_text = "input_description_vote_kick_player",
+			kick_tooltip_text = "vs_player_hosted_lobby_kick",
 			show_ping = false,
 			voice_tooltip_text_unmute = "input_description_unmute_voice",
 			player_name = "*Missing Name",

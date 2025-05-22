@@ -1400,9 +1400,9 @@ TalentTrees = TalentTrees or {}
 TalentTrees.wood_elf = {
 	{
 		{
-			"kerillian_shade_regrowth_2",
-			"kerillian_shade_bloodlust",
-			"kerillian_shade_heal_share"
+			"kerillian_shade_thp_ninjafencer",
+			"kerillian_shade_thp_smiter",
+			"kerillian_shade_thp_linesman"
 		},
 		{
 			"kerillian_shade_increased_critical_strike_damage",
@@ -1432,9 +1432,9 @@ TalentTrees.wood_elf = {
 	},
 	{
 		{
-			"kerillian_maidenguard_reaper",
-			"kerillian_maidenguard_bloodlust_2",
-			"kerillian_maidenguard_heal_share"
+			"kerillian_maidenguard_thp_linesman",
+			"kerillian_maidenguard_thp_smiter",
+			"kerillian_maidenguard_thp_tank"
 		},
 		{
 			"kerillian_maidenguard_power_level_on_unharmed",
@@ -1464,9 +1464,9 @@ TalentTrees.wood_elf = {
 	},
 	{
 		{
-			"kerillian_waywatcher_regrowth_2",
-			"kerillian_waywatcher_reaper",
-			"kerillian_waywatcher_heal_share"
+			"kerillian_waywatcher_thp_ninjafencer",
+			"kerillian_waywatcher_thp_linesman",
+			"kerillian_waywatcher_thp_smiter"
 		},
 		{
 			"kerillian_waywatcher_extra_arrow_melee_kill",
@@ -1547,6 +1547,42 @@ Talents.wood_elf = {
 		},
 		buffs = {
 			"kerillian_shade_conqueror"
+		}
+	},
+	{
+		name = "kerillian_shade_thp_ninjafencer",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_shade_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_ninjafencer"
+		}
+	},
+	{
+		name = "kerillian_shade_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_shade_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "kerillian_shade_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_shade_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
 		}
 	},
 	{
@@ -1856,6 +1892,42 @@ Talents.wood_elf = {
 		}
 	},
 	{
+		name = "kerillian_maidenguard_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_maidenguard_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "kerillian_maidenguard_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_maidenguard_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "kerillian_maidenguard_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_maidenguard_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
 		description = "kerillian_maidenguard_power_level_on_unharmed_desc",
 		name = "kerillian_maidenguard_power_level_on_unharmed",
 		buffer = "both",
@@ -2159,6 +2231,42 @@ Talents.wood_elf = {
 		},
 		buffs = {
 			"kerillian_waywatcher_conqueror"
+		}
+	},
+	{
+		name = "kerillian_waywatcher_thp_ninjafencer",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_waywatcher_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_ninjafencer"
+		}
+	},
+	{
+		name = "kerillian_waywatcher_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_waywatcher_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "kerillian_waywatcher_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_waywatcher_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
 		}
 	},
 	{

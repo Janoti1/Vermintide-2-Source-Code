@@ -349,9 +349,9 @@ local talent_buff_templates = {
 local talent_trees = {
 	{
 		{
-			"kerillian_thorn_sister_regrowth",
-			"kerillian_thorn_sister_bloodlust",
-			"kerillian_thorn_sister_heal_share"
+			"kerillian_thorn_sister_thp_ninjafencer",
+			"kerillian_thorn_sister_thp_smiter",
+			"kerillian_thorn_sister_thp_linesman"
 		},
 		{
 			"kerillian_thorn_sister_attack_speed_on_full",
@@ -432,6 +432,42 @@ local talents = {
 		},
 		buffs = {
 			"kerillian_maidenguard_conqueror"
+		}
+	},
+	{
+		name = "kerillian_thorn_sister_thp_ninjafencer",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_thornsister_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_ninjafencer"
+		}
+	},
+	{
+		name = "kerillian_thorn_sister_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_thornsister_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "kerillian_thorn_sister_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "kerillian_thornsister_heal_share",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
 		}
 	},
 	{

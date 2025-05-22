@@ -432,9 +432,9 @@ local talent_buff_templates = {
 local talent_trees = {
 	{
 		{
-			"sienna_necromancer_1_1",
-			"sienna_necromancer_1_2",
-			"sienna_necromancer_1_3"
+			"sienna_necromancer_thp_linesman",
+			"sienna_necromancer_thp_smiter",
+			"sienna_necromancer_thp_ninjafencer"
 		},
 		{
 			"sienna_necromancer_2_1",
@@ -509,6 +509,42 @@ local talents = {
 		},
 		buffs = {
 			"sienna_necromancer_1_3"
+		}
+	},
+	{
+		name = "sienna_necromancer_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "sienna_necromancer_1_1",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "sienna_necromancer_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "sienna_necromancer_1_2",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "sienna_necromancer_thp_ninjafencer",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "sienna_necromancer_1_3",
+		display_name = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_ninjafencer"
 		}
 	},
 	{

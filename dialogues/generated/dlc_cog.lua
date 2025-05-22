@@ -624,31 +624,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "nik_whisper_conversation_eleven_02",
-		name = "nik_whisper_conversation_eleven_02",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"npp_whisper_conversation_eleven_01"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"inn_keeper"
-			}
-		}
-	})
-	define_rule({
 		probability = 1,
 		name = "nik_whispers_conversation_five_01",
 		response = "nik_whispers_conversation_five_01",
@@ -660,6 +635,12 @@ return function ()
 				"nik_whispers_conversations"
 			},
 			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
 				"global_context",
 				"empire_soldier",
 				OP.EQ,
@@ -669,13 +650,13 @@ return function ()
 				"global_context",
 				"level_time",
 				OP.GT,
-				3600
+				600
 			},
 			{
-				"user_context",
-				"player_profile",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
-				"inn_keeper"
+				"dlc_castle"
 			},
 			{
 				"user_memory",
@@ -705,6 +686,12 @@ return function ()
 				"nik_whispers_conversations"
 			},
 			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
 				"global_context",
 				"wood_elf",
 				OP.EQ,
@@ -714,13 +701,13 @@ return function ()
 				"global_context",
 				"level_time",
 				OP.GT,
-				3600
+				600
 			},
 			{
-				"user_context",
-				"player_profile",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
-				"inn_keeper"
+				"dlc_castle"
 			},
 			{
 				"user_memory",
@@ -750,6 +737,12 @@ return function ()
 				"nik_whispers_conversations"
 			},
 			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
 				"global_context",
 				"witch_hunter",
 				OP.EQ,
@@ -759,13 +752,13 @@ return function ()
 				"global_context",
 				"level_time",
 				OP.GT,
-				3600
+				600
 			},
 			{
-				"user_context",
-				"player_profile",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
-				"inn_keeper"
+				"dlc_castle"
 			},
 			{
 				"user_memory",
@@ -795,6 +788,12 @@ return function ()
 				"nik_whispers_conversations"
 			},
 			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
 				"global_context",
 				"dwarf_ranger",
 				OP.EQ,
@@ -804,13 +803,13 @@ return function ()
 				"global_context",
 				"level_time",
 				OP.GT,
-				3600
+				600
 			},
 			{
-				"user_context",
-				"player_profile",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
-				"inn_keeper"
+				"dlc_castle"
 			},
 			{
 				"user_memory",
@@ -840,6 +839,12 @@ return function ()
 				"nik_whispers_conversations"
 			},
 			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"inn_keeper"
+			},
+			{
 				"global_context",
 				"bright_wizard",
 				OP.EQ,
@@ -849,13 +854,13 @@ return function ()
 				"global_context",
 				"level_time",
 				OP.GT,
-				3600
+				600
 			},
 			{
-				"user_context",
-				"player_profile",
+				"global_context",
+				"last_level_played",
 				OP.EQ,
-				"inn_keeper"
+				"dlc_castle"
 			},
 			{
 				"user_memory",
@@ -868,78 +873,6 @@ return function ()
 			{
 				"user_memory",
 				"nik_whispers_conversations",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "npp_comet_conversation_ten_01",
-		response = "npp_comet_conversation_ten_01",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"npp_comet_conversation_ten_01"
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"witch_hunter",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"bright_wizard",
-				OP.EQ,
-				1
-			},
-			{
-				"user_memory",
-				"npp_comet_conversation_ten_01",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"npp_comet_conversation_ten_01",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "npp_whisper_conversation_eleven_01",
-		response = "npp_whisper_conversation_eleven_01",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"npp_whisper_conversation_eleven_01"
-			},
-			{
-				"user_memory",
-				"npp_whisper_conversation_eleven_01",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"npp_whisper_conversation_eleven_01",
 				OP.ADD,
 				1
 			}
@@ -1667,38 +1600,6 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pbw_comet_conversation_ten_01",
-		response = "pbw_comet_conversation_ten_01",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_comet_conversation_ten_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
 		response = "pbw_comet_conversation_two_01",
 		name = "pbw_comet_conversation_two_01",
 		probability = 1,
@@ -1805,20 +1706,20 @@ return function ()
 			{
 				"user_context",
 				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"witch_hunter",
-				OP.EQ,
+				OP.GTEQ,
 				1
 			},
 			{
 				"global_context",
 				"level_time",
 				OP.GT,
-				2400
+				300
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"dlc_castle"
 			},
 			{
 				"faction_memory",
@@ -1850,215 +1751,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_whisper_conversation_twelve_01_a",
-		response = "pbw_whisper_conversation_twelve_01_a",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"dwarf_ranger",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_01_b",
-		response = "pbw_whisper_conversation_twelve_01_b",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"wood_elf",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_01_c",
-		response = "pbw_whisper_conversation_twelve_01_c",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_02_1",
-		response = "pbw_whisper_conversation_twelve_02_1",
+		name = "pbw_whisper_conversation_twelve_02",
+		response = "pbw_whisper_conversation_twelve_02",
 		criterias = {
 			{
 				"query_context",
@@ -2068,9 +1762,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pwh_whisper_conversation_twelve_01"
+				"whisper_conversation_twelve_01"
 			},
 			{
 				"user_context",
@@ -2089,8 +1783,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_whisper_conversation_twelve_02_2",
-		response = "pbw_whisper_conversation_twelve_02_2",
+		name = "pbw_whisper_conversation_twelve_03",
+		response = "pbw_whisper_conversation_twelve_03",
 		criterias = {
 			{
 				"query_context",
@@ -2100,201 +1794,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pdr_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_02_3",
-		response = "pbw_whisper_conversation_twelve_02_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_02_4",
-		response = "pbw_whisper_conversation_twelve_02_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_03_1",
-		response = "pbw_whisper_conversation_twelve_03_1",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwh_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_03_2",
-		response = "pbw_whisper_conversation_twelve_03_2",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_03_3",
-		response = "pbw_whisper_conversation_twelve_03_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_whisper_conversation_twelve_03_4",
-		response = "pbw_whisper_conversation_twelve_03_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_02"
+				"whisper_conversation_twelve_02"
 			},
 			{
 				"user_context",
@@ -2320,13 +1822,13 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_whispers_conversation_two_01_done"
+				"heard_speak"
 			},
 			{
 				"query_context",
-				"source_name",
+				"sound_event",
 				OP.EQ,
-				"bright_wizard"
+				"nik_whispers_conversation_two_01"
 			},
 			{
 				"user_context",
@@ -4425,20 +3927,20 @@ return function ()
 			{
 				"user_context",
 				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"witch_hunter",
-				OP.EQ,
+				OP.GTEQ,
 				1
 			},
 			{
 				"global_context",
 				"level_time",
 				OP.GT,
-				2400
+				300
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"dlc_castle"
 			},
 			{
 				"faction_memory",
@@ -4470,215 +3972,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_whisper_conversation_twelve_01_a",
-		response = "pdr_whisper_conversation_twelve_01_a",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"bright_wizard",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_01_b",
-		response = "pdr_whisper_conversation_twelve_01_b",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"wood_elf",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_01_c",
-		response = "pdr_whisper_conversation_twelve_01_c",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_02_1",
-		response = "pdr_whisper_conversation_twelve_02_1",
+		name = "pdr_whisper_conversation_twelve_02",
+		response = "pdr_whisper_conversation_twelve_02",
 		criterias = {
 			{
 				"query_context",
@@ -4688,9 +3983,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pwh_whisper_conversation_twelve_01"
+				"whisper_conversation_twelve_01"
 			},
 			{
 				"user_context",
@@ -4709,8 +4004,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_whisper_conversation_twelve_02_2",
-		response = "pdr_whisper_conversation_twelve_02_2",
+		name = "pdr_whisper_conversation_twelve_03",
+		response = "pdr_whisper_conversation_twelve_03",
 		criterias = {
 			{
 				"query_context",
@@ -4720,201 +4015,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pbw_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_02_3",
-		response = "pdr_whisper_conversation_twelve_02_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_02_4",
-		response = "pdr_whisper_conversation_twelve_02_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_03_1",
-		response = "pdr_whisper_conversation_twelve_03_1",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwh_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_03_2",
-		response = "pdr_whisper_conversation_twelve_03_2",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pbw_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_03_3",
-		response = "pdr_whisper_conversation_twelve_03_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_whisper_conversation_twelve_03_4",
-		response = "pdr_whisper_conversation_twelve_03_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_02"
+				"whisper_conversation_twelve_02"
 			},
 			{
 				"user_context",
@@ -4940,13 +4043,13 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_whispers_conversation_three_01_done"
+				"heard_speak"
 			},
 			{
 				"query_context",
-				"source_name",
+				"sound_event",
 				OP.EQ,
-				"dwarf_ranger"
+				"nik_whispers_conversation_three_01"
 			},
 			{
 				"user_context",
@@ -5810,70 +4913,6 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pes_comet_conversation_ten_01",
-		response = "pes_comet_conversation_ten_01",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"npp_comet_conversation_ten_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_comet_conversation_ten_02",
-		response = "pes_comet_conversation_ten_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwh_comet_conversation_ten_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
 		response = "pes_whisper_conversation_ten_01",
 		name = "pes_whisper_conversation_ten_01",
 		probability = 1,
@@ -5924,20 +4963,20 @@ return function ()
 			{
 				"user_context",
 				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"witch_hunter",
-				OP.EQ,
+				OP.GTEQ,
 				1
 			},
 			{
 				"global_context",
 				"level_time",
 				OP.GT,
-				2400
+				300
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"dlc_castle"
 			},
 			{
 				"faction_memory",
@@ -5969,215 +5008,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_whisper_conversation_twelve_01_a",
-		response = "pes_whisper_conversation_twelve_01_a",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"bright_wizard",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_01_b",
-		response = "pes_whisper_conversation_twelve_01_b",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"dwarf_ranger",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_01_c",
-		response = "pes_whisper_conversation_twelve_01_c",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"wood_elf",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_02_1",
-		response = "pes_whisper_conversation_twelve_02_1",
+		name = "pes_whisper_conversation_twelve_02",
+		response = "pes_whisper_conversation_twelve_02",
 		criterias = {
 			{
 				"query_context",
@@ -6187,9 +5019,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pwh_whisper_conversation_twelve_01"
+				"whisper_conversation_twelve_01"
 			},
 			{
 				"user_context",
@@ -6208,8 +5040,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_whisper_conversation_twelve_02_2",
-		response = "pes_whisper_conversation_twelve_02_2",
+		name = "pes_whisper_conversation_twelve_03",
+		response = "pes_whisper_conversation_twelve_03",
 		criterias = {
 			{
 				"query_context",
@@ -6219,201 +5051,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pbw_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_02_3",
-		response = "pes_whisper_conversation_twelve_02_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_02_4",
-		response = "pes_whisper_conversation_twelve_02_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_03_1",
-		response = "pes_whisper_conversation_twelve_03_1",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwh_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_03_2",
-		response = "pes_whisper_conversation_twelve_03_2",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pbw_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_03_3",
-		response = "pes_whisper_conversation_twelve_03_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_whisper_conversation_twelve_03_4",
-		response = "pes_whisper_conversation_twelve_03_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_02"
+				"whisper_conversation_twelve_02"
 			},
 			{
 				"user_context",
@@ -6439,13 +5079,13 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_whispers_conversation_five_01_done"
+				"heard_speak"
 			},
 			{
 				"query_context",
-				"source_name",
+				"sound_event",
 				OP.EQ,
-				"empire_soldier"
+				"nik_whispers_conversation_five_01"
 			},
 			{
 				"user_context",
@@ -7223,20 +5863,20 @@ return function ()
 			{
 				"user_context",
 				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"witch_hunter",
-				OP.EQ,
+				OP.GTEQ,
 				1
 			},
 			{
 				"global_context",
 				"level_time",
 				OP.GT,
-				2400
+				300
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"dlc_castle"
 			},
 			{
 				"faction_memory",
@@ -7268,215 +5908,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_whisper_conversation_twelve_01_a",
-		response = "pwe_whisper_conversation_twelve_01_a",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"bright_wizard",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_01_b",
-		response = "pwe_whisper_conversation_twelve_01_b",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"dwarf_ranger",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_01_c",
-		response = "pwe_whisper_conversation_twelve_01_c",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_02_1",
-		response = "pwe_whisper_conversation_twelve_02_1",
+		name = "pwe_whisper_conversation_twelve_02",
+		response = "pwe_whisper_conversation_twelve_02",
 		criterias = {
 			{
 				"query_context",
@@ -7486,9 +5919,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pwh_whisper_conversation_twelve_01"
+				"whisper_conversation_twelve_01"
 			},
 			{
 				"user_context",
@@ -7507,8 +5940,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_whisper_conversation_twelve_02_2",
-		response = "pwe_whisper_conversation_twelve_02_2",
+		name = "pwe_whisper_conversation_twelve_03",
+		response = "pwe_whisper_conversation_twelve_03",
 		criterias = {
 			{
 				"query_context",
@@ -7518,201 +5951,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pbw_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_02_3",
-		response = "pwe_whisper_conversation_twelve_02_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_02_4",
-		response = "pwe_whisper_conversation_twelve_02_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_03_1",
-		response = "pwe_whisper_conversation_twelve_03_1",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwh_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_03_2",
-		response = "pwe_whisper_conversation_twelve_03_2",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pbw_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_03_3",
-		response = "pwe_whisper_conversation_twelve_03_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_whisper_conversation_twelve_03_4",
-		response = "pwe_whisper_conversation_twelve_03_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_02"
+				"whisper_conversation_twelve_02"
 			},
 			{
 				"user_context",
@@ -7738,13 +5979,13 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_whispers_conversation_four_01_done"
+				"heard_speak"
 			},
 			{
 				"query_context",
-				"source_name",
+				"sound_event",
 				OP.EQ,
-				"wood_elf"
+				"nik_whispers_conversation_four_01"
 			},
 			{
 				"user_context",
@@ -8881,38 +7122,6 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pwh_comet_conversation_ten_01",
-		response = "pwh_comet_conversation_ten_01",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_comet_conversation_ten_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
 		response = "pwh_comet_conversation_two_01",
 		name = "pwh_comet_conversation_two_01",
 		probability = 1,
@@ -8994,20 +7203,20 @@ return function ()
 			{
 				"user_context",
 				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"bright_wizard",
-				OP.EQ,
+				OP.GTEQ,
 				1
 			},
 			{
 				"global_context",
 				"level_time",
 				OP.GT,
-				2400
+				300
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"dlc_castle"
 			},
 			{
 				"faction_memory",
@@ -9039,215 +7248,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwh_whisper_conversation_twelve_01_a",
-		response = "pwh_whisper_conversation_twelve_01_a",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"dwarf_ranger",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_01_b",
-		response = "pwh_whisper_conversation_twelve_01_b",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"wood_elf",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_01_c",
-		response = "pwh_whisper_conversation_twelve_01_c",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"story_trigger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GT,
-				1
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"global_context",
-				"level_time",
-				OP.GT,
-				2400
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMEDIFF,
-				OP.GT,
-				60
-			},
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"penny_epilogue",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_02_1",
-		response = "pwh_whisper_conversation_twelve_02_1",
+		name = "pwh_whisper_conversation_twelve_02",
+		response = "pwh_whisper_conversation_twelve_02",
 		criterias = {
 			{
 				"query_context",
@@ -9257,41 +7259,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pbw_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_02_2",
-		response = "pwh_whisper_conversation_twelve_02_2",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_01"
+				"whisper_conversation_twelve_01"
 			},
 			{
 				"user_context",
@@ -9310,8 +7280,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwh_whisper_conversation_twelve_02_3",
-		response = "pwh_whisper_conversation_twelve_02_3",
+		name = "pwh_whisper_conversation_twelve_03",
+		response = "pwh_whisper_conversation_twelve_03",
 		criterias = {
 			{
 				"query_context",
@@ -9321,169 +7291,9 @@ return function ()
 			},
 			{
 				"query_context",
-				"sound_event",
+				"dialogue_name_nopre",
 				OP.EQ,
-				"pwe_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_02_4",
-		response = "pwh_whisper_conversation_twelve_02_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_03_1",
-		response = "pwh_whisper_conversation_twelve_03_1",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pbw_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_03_2",
-		response = "pwh_whisper_conversation_twelve_03_2",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_03_3",
-		response = "pwh_whisper_conversation_twelve_03_3",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pwe_whisper_conversation_twelve_02"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"time_since_conversation",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_whisper_conversation_twelve_03_4",
-		response = "pwh_whisper_conversation_twelve_03_4",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pes_whisper_conversation_twelve_02"
+				"whisper_conversation_twelve_02"
 			},
 			{
 				"user_context",
@@ -9509,13 +7319,13 @@ return function ()
 				"query_context",
 				"concept",
 				OP.EQ,
-				"nik_whispers_conversation_one_01_done"
+				"heard_speak"
 			},
 			{
 				"query_context",
-				"source_name",
+				"sound_event",
 				OP.EQ,
-				"witch_hunter"
+				"nik_whispers_conversation_one_01"
 			},
 			{
 				"user_context",
@@ -9854,34 +7664,11 @@ return function ()
 				[1] = 3.5139582157135
 			}
 		},
-		nik_whisper_conversation_eleven_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "nik_whisper_conversation_eleven_02"
-			},
-			sound_events = {
-				[1] = "nik_whisper_conversation_eleven_02"
-			},
-			sound_events_duration = {
-				[1] = 1.811979174614
-			}
-		},
 		nik_whispers_conversation_five_01 = {
-			override_awareness = "nik_whispers_conversation_five_01_done",
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
-			sound_distance = 20,
+			sound_distance = 25,
 			category = "story_talk_keep",
 			dialogue_animations_n = 1,
 			dialogue_animations = {
@@ -9901,11 +7688,10 @@ return function ()
 			}
 		},
 		nik_whispers_conversation_four_01 = {
-			override_awareness = "nik_whispers_conversation_four_01_done",
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
-			sound_distance = 20,
+			sound_distance = 25,
 			category = "story_talk_keep",
 			dialogue_animations_n = 1,
 			dialogue_animations = {
@@ -9925,11 +7711,10 @@ return function ()
 			}
 		},
 		nik_whispers_conversation_one_01 = {
-			override_awareness = "nik_whispers_conversation_one_01_done",
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
-			sound_distance = 20,
+			sound_distance = 25,
 			category = "story_talk_keep",
 			dialogue_animations_n = 1,
 			dialogue_animations = {
@@ -9949,11 +7734,10 @@ return function ()
 			}
 		},
 		nik_whispers_conversation_three_01 = {
-			override_awareness = "nik_whispers_conversation_three_01_done",
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
-			sound_distance = 20,
+			sound_distance = 25,
 			category = "story_talk_keep",
 			dialogue_animations_n = 1,
 			dialogue_animations = {
@@ -9973,11 +7757,10 @@ return function ()
 			}
 		},
 		nik_whispers_conversation_two_01 = {
-			override_awareness = "nik_whispers_conversation_two_01_done",
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
-			sound_distance = 20,
+			sound_distance = 25,
 			category = "story_talk_keep",
 			dialogue_animations_n = 1,
 			dialogue_animations = {
@@ -9994,52 +7777,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 8.4042081832886
-			}
-		},
-		npp_comet_conversation_ten_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			sound_distance = 30,
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "npp_comet_conversation_ten_01"
-			},
-			sound_events = {
-				[1] = "npp_comet_conversation_ten_01"
-			},
-			sound_events_duration = {
-				[1] = 5.9561457633972
-			}
-		},
-		npp_whisper_conversation_eleven_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			sound_distance = 20,
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "npp_whisper_conversation_eleven_01"
-			},
-			sound_events = {
-				[1] = "npp_whisper_conversation_eleven_01"
-			},
-			sound_events_duration = {
-				[1] = 10.045770645142
 			}
 		},
 		pbw__comet_conversation_four_01 = {
@@ -10416,28 +8153,6 @@ return function ()
 				[1] = 3.1821458339691
 			}
 		},
-		pbw_comet_conversation_ten_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_comet_conversation_ten_01"
-			},
-			sound_events = {
-				[1] = "pbw_comet_conversation_ten_01"
-			},
-			sound_events_duration = {
-				[1] = 1.9469166994095
-			}
-		},
 		pbw_comet_conversation_two_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -10526,73 +8241,7 @@ return function ()
 				[1] = 9.0235004425049
 			}
 		},
-		pbw_whisper_conversation_twelve_01_a = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 9.0235004425049
-			}
-		},
-		pbw_whisper_conversation_twelve_01_b = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 9.0235004425049
-			}
-		},
-		pbw_whisper_conversation_twelve_01_c = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 9.0235004425049
-			}
-		},
-		pbw_whisper_conversation_twelve_02_1 = {
+		pbw_whisper_conversation_twelve_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -10614,139 +8263,7 @@ return function ()
 				[1] = 3.8890209197998
 			}
 		},
-		pbw_whisper_conversation_twelve_02_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 3.8890209197998
-			}
-		},
-		pbw_whisper_conversation_twelve_02_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 3.8890209197998
-			}
-		},
-		pbw_whisper_conversation_twelve_02_4 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 3.8890209197998
-			}
-		},
-		pbw_whisper_conversation_twelve_03_1 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 2.4632916450501
-			}
-		},
-		pbw_whisper_conversation_twelve_03_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 2.4632916450501
-			}
-		},
-		pbw_whisper_conversation_twelve_03_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pbw_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 2.4632916450501
-			}
-		},
-		pbw_whisper_conversation_twelve_03_4 = {
+		pbw_whisper_conversation_twelve_03 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -12198,73 +9715,7 @@ return function ()
 				[1] = 4.2766456604004
 			}
 		},
-		pdr_whisper_conversation_twelve_01_a = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 4.2766456604004
-			}
-		},
-		pdr_whisper_conversation_twelve_01_b = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 4.2766456604004
-			}
-		},
-		pdr_whisper_conversation_twelve_01_c = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 4.2766456604004
-			}
-		},
-		pdr_whisper_conversation_twelve_02_1 = {
+		pdr_whisper_conversation_twelve_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -12286,139 +9737,7 @@ return function ()
 				[1] = 2.46129155159
 			}
 		},
-		pdr_whisper_conversation_twelve_02_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.46129155159
-			}
-		},
-		pdr_whisper_conversation_twelve_02_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.46129155159
-			}
-		},
-		pdr_whisper_conversation_twelve_02_4 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.46129155159
-			}
-		},
-		pdr_whisper_conversation_twelve_03_1 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.8102083206177
-			}
-		},
-		pdr_whisper_conversation_twelve_03_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.8102083206177
-			}
-		},
-		pdr_whisper_conversation_twelve_03_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pdr_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pdr_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.8102083206177
-			}
-		},
-		pdr_whisper_conversation_twelve_03_4 = {
+		pdr_whisper_conversation_twelve_03 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -12946,50 +10265,6 @@ return function ()
 				[1] = 2.5339999198914
 			}
 		},
-		pes_comet_conversation_ten_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_comet_conversation_ten_01"
-			},
-			sound_events = {
-				[1] = "pes_comet_conversation_ten_01"
-			},
-			sound_events_duration = {
-				[1] = 2.876312494278
-			}
-		},
-		pes_comet_conversation_ten_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_comet_conversation_ten_02"
-			},
-			sound_events = {
-				[1] = "pes_comet_conversation_ten_02"
-			},
-			sound_events_duration = {
-				[1] = 2.3201665878296
-			}
-		},
 		pes_whisper_conversation_ten_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -13034,73 +10309,7 @@ return function ()
 				[1] = 3.7365000247955
 			}
 		},
-		pes_whisper_conversation_twelve_01_a = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 3.7365000247955
-			}
-		},
-		pes_whisper_conversation_twelve_01_b = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 3.7365000247955
-			}
-		},
-		pes_whisper_conversation_twelve_01_c = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 3.7365000247955
-			}
-		},
-		pes_whisper_conversation_twelve_02_1 = {
+		pes_whisper_conversation_twelve_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -13122,139 +10331,7 @@ return function ()
 				[1] = 1.8397916555405
 			}
 		},
-		pes_whisper_conversation_twelve_02_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 1.8397916555405
-			}
-		},
-		pes_whisper_conversation_twelve_02_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 1.8397916555405
-			}
-		},
-		pes_whisper_conversation_twelve_02_4 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 1.8397916555405
-			}
-		},
-		pes_whisper_conversation_twelve_03_1 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.066645860672
-			}
-		},
-		pes_whisper_conversation_twelve_03_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.066645860672
-			}
-		},
-		pes_whisper_conversation_twelve_03_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pes_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pes_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.066645860672
-			}
-		},
-		pes_whisper_conversation_twelve_03_4 = {
+		pes_whisper_conversation_twelve_03 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -13760,73 +10837,7 @@ return function ()
 				[1] = 5.2204375267029
 			}
 		},
-		pwe_whisper_conversation_twelve_01_a = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 5.2204375267029
-			}
-		},
-		pwe_whisper_conversation_twelve_01_b = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 5.2204375267029
-			}
-		},
-		pwe_whisper_conversation_twelve_01_c = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 5.2204375267029
-			}
-		},
-		pwe_whisper_conversation_twelve_02_1 = {
+		pwe_whisper_conversation_twelve_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -13848,139 +10859,7 @@ return function ()
 				[1] = 2.4909167289734
 			}
 		},
-		pwe_whisper_conversation_twelve_02_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.4909167289734
-			}
-		},
-		pwe_whisper_conversation_twelve_02_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.4909167289734
-			}
-		},
-		pwe_whisper_conversation_twelve_02_4 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.4909167289734
-			}
-		},
-		pwe_whisper_conversation_twelve_03_1 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.4925416707993
-			}
-		},
-		pwe_whisper_conversation_twelve_03_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.4925416707993
-			}
-		},
-		pwe_whisper_conversation_twelve_03_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwe_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pwe_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 1.4925416707993
-			}
-		},
-		pwe_whisper_conversation_twelve_03_4 = {
+		pwe_whisper_conversation_twelve_03 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -14574,28 +11453,6 @@ return function ()
 				[1] = 3.0912916660309
 			}
 		},
-		pwh_comet_conversation_ten_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_comet_conversation_ten_01"
-			},
-			sound_events = {
-				[1] = "pwh_comet_conversation_ten_01"
-			},
-			sound_events_duration = {
-				[1] = 4.7637915611267
-			}
-		},
 		pwh_comet_conversation_two_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -14662,73 +11519,7 @@ return function ()
 				[1] = 3.2293748855591
 			}
 		},
-		pwh_whisper_conversation_twelve_01_a = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 3.2293748855591
-			}
-		},
-		pwh_whisper_conversation_twelve_01_b = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 3.2293748855591
-			}
-		},
-		pwh_whisper_conversation_twelve_01_c = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_01"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_01"
-			},
-			sound_events_duration = {
-				[1] = 3.2293748855591
-			}
-		},
-		pwh_whisper_conversation_twelve_02_1 = {
+		pwh_whisper_conversation_twelve_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",
@@ -14750,139 +11541,7 @@ return function ()
 				[1] = 2.7881457805634
 			}
 		},
-		pwh_whisper_conversation_twelve_02_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.7881457805634
-			}
-		},
-		pwh_whisper_conversation_twelve_02_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.7881457805634
-			}
-		},
-		pwh_whisper_conversation_twelve_02_4 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_02"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_02"
-			},
-			sound_events_duration = {
-				[1] = 2.7881457805634
-			}
-		},
-		pwh_whisper_conversation_twelve_03_1 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 0.43252083659172
-			}
-		},
-		pwh_whisper_conversation_twelve_03_2 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 0.43252083659172
-			}
-		},
-		pwh_whisper_conversation_twelve_03_3 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "dlc_cog",
-			category = "story_talk_keep",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pwh_whisper_conversation_twelve_03"
-			},
-			sound_events = {
-				[1] = "pwh_whisper_conversation_twelve_03"
-			},
-			sound_events_duration = {
-				[1] = 0.43252083659172
-			}
-		},
-		pwh_whisper_conversation_twelve_03_4 = {
+		pwh_whisper_conversation_twelve_03 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "dlc_cog",

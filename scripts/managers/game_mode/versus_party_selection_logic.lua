@@ -85,6 +85,10 @@ VersusPartySelectionLogic.party_states = {
 			local duration = Managers.state.game_mode:setting("character_picking_settings").parading_duration
 
 			parent:set_timer(duration)
+
+			for i = 1, #party_data.picker_list do
+				parent:set_player_state("parading", party.party_id, i)
+			end
 		end,
 		run = function (parent, party_data, party, timer, t, dt, party_selection_logic)
 			if timer <= 0 then
@@ -169,6 +173,14 @@ VersusPartySelectionLogic.client_states = {
 			party_data.slider_timer = timer
 		end
 	},
+	parading = {
+		enter = function (parent, party_data, party)
+			return
+		end,
+		run = function (parent, party_data, party, timer, t, dt)
+			return
+		end
+	},
 	closing = {
 		enter = function (parent, party_data, party)
 			party_data.slider_timer = nil
@@ -184,12 +196,14 @@ local ClientStateLookup = {
 	"player_waiting_to_pick",
 	"player_picking_character",
 	"player_has_picked_character",
+	"parading",
 	"closing",
 	player_has_picked_character = 4,
 	player_picking_character = 3,
 	startup = 1,
-	closing = 5,
-	player_waiting_to_pick = 2
+	closing = 6,
+	player_waiting_to_pick = 2,
+	parading = 5
 }
 
 VersusPartySelectionLogicUtility.ClientStateLookup = ClientStateLookup

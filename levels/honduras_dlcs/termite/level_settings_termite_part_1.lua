@@ -8,12 +8,12 @@ LevelSettings.dlc_termite_1 = {
 	loading_ui_package_name = "loading_screen_verminous_1",
 	unlockable = true,
 	level_image = "level_image_dlc_termite_1",
-	use_mini_patrols = false,
 	act_presentation_order = 1,
 	description_text = "nik_termite_1_briefing_01",
 	boss_spawning_method = "hand_placed",
 	dlc_name = "termite",
 	default_surface_material = "stone",
+	use_mini_patrols = false,
 	knocked_down_setting = "knocked_down",
 	level_name = "levels/honduras_dlcs/termite/dlc_termite_1/world",
 	source_aux_bus_name = "environment_reverb_outside_source",
@@ -109,5 +109,11 @@ LevelSettings.dlc_termite_1 = {
 		-246,
 		0,
 		0
+	},
+	mission_givers = {
+		{
+			dialogue_profile = "inn_keeper",
+			faction = "player"
+		}
 	}
 }

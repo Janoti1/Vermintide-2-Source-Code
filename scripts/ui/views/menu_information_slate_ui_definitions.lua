@@ -148,7 +148,7 @@ local scenegraph_definition = {
 			0
 		},
 		size = {
-			0,
+			440,
 			25
 		}
 	},
@@ -259,11 +259,12 @@ local header_text_style = {
 	}
 }
 local sub_header_text_style = {
-	vertical_alignment = "top",
+	font_size = 25,
 	upper_case = false,
 	localize = false,
 	horizontal_alignment = "left",
-	font_size = 25,
+	vertical_alignment = "top",
+	dynamic_font_size = true,
 	font_type = "hell_shark_header",
 	text_color = {
 		255,

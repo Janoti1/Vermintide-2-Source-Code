@@ -254,9 +254,9 @@ local talent_buff_templates = {
 local talent_trees = {
 	{
 		{
-			"markus_questing_knight_vanguard",
-			"markus_questing_knight_bloodlust_2",
-			"markus_questing_knight_heal_share"
+			"markus_questing_knight_thp_tank",
+			"markus_questing_knight_thp_smiter",
+			"markus_questing_knight_thp_linesman"
 		},
 		{
 			"markus_questing_knight_kills_buff_power_stacking",
@@ -327,6 +327,42 @@ local talents = {
 		},
 		buffs = {
 			"markus_questing_knight_conqueror"
+		}
+	},
+	{
+		name = "markus_questing_knight_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_questing_knight_vanguard",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "markus_questing_knight_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_questing_knight_bloodlust_2",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "markus_questing_knight_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "markus_questing_knight_heal_share",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
 		}
 	},
 	{

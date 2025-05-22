@@ -14,14 +14,16 @@ LevelEndViewDeus._setup_pages_victory = function (self, rewards)
 
 	if chest then
 		index_by_state_name = {
-			EndViewStateChest = 2,
-			EndViewStateSummaryDeus = 1,
-			EndViewStateScore = 3
+			EndViewStateParading = 1,
+			EndViewStateSummaryDeus = 2,
+			EndViewStateChest = 3,
+			EndViewStateScore = 4
 		}
 	else
 		index_by_state_name = {
-			EndViewStateScore = 2,
-			EndViewStateSummaryDeus = 1
+			EndViewStateParading = 1,
+			EndViewStateSummaryDeus = 2,
+			EndViewStateScore = 3
 		}
 	end
 

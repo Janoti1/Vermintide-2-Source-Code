@@ -1,10 +1,3 @@
-local function _get_unlocks(achievement_name, statistics_db, stats_id)
-	local achievement_data = AchievementTemplates.achievements[achievement_name]
-	local completed = achievement_data.completed(statistics_db, stats_id)
-
-	return completed
-end
-
 local function _fulfill_requirements_for_weave()
 	if script_data.unlock_all_levels then
 		return true

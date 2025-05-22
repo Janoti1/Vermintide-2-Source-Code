@@ -222,13 +222,12 @@ settings.pickups = {
 			can_pickup_orb = check_if_buff_is_active
 		},
 		ability_cooldown_reduction_orb = {
-			item_name = "ability_cooldown_reduction_orb",
-			unit_name = "units/props/deus_orb/deus_orb_01",
 			type = "orb_pickup_unit",
+			unit_name = "units/props/deus_orb/deus_orb_01",
+			granted_buff = "ability_cooldown_reduction_orb",
 			unit_template_name = "orb_pickup_unit",
 			spawn_weighting = 1e-06,
 			debug_pickup_category = "orbs",
-			granted_buff = "ability_cooldown_reduction_orb",
 			can_pickup_orb = check_if_ability_is_not_ready
 		}
 	},

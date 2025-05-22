@@ -1382,11 +1382,14 @@ Cosmetics.skin_ww_waywatcher_helmgart = {
 	material_changes = {
 		package_name = "units/beings/player/way_watcher_upgraded/skins/helmgart/chr_way_watcher_upgraded_helmgart",
 		third_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart",
-			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_ds"
+			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_ds",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_skin",
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart"
 		},
 		first_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_1p"
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_1p",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_1p_skin",
+			mtr_fur = "units/beings/player/way_watcher_upgraded/skins/helmgart/mtr_outfit_helmgart_1p_fur"
 		}
 	}
 }
@@ -1408,11 +1411,14 @@ Cosmetics.skin_ww_waywatcher_anmyr = {
 	material_changes = {
 		package_name = "units/beings/player/way_watcher_upgraded/skins/anmyr/chr_way_watcher_upgraded_anmyr",
 		third_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr",
-			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_ds"
+			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_ds",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_skin",
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr"
 		},
 		first_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_1p"
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_1p",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_1p_skin",
+			mtr_fur = "units/beings/player/way_watcher_upgraded/skins/anmyr/mtr_outfit_anmyr_1p_fur"
 		}
 	}
 }
@@ -1434,11 +1440,14 @@ Cosmetics.skin_ww_waywatcher_atylwyth = {
 	material_changes = {
 		package_name = "units/beings/player/way_watcher_upgraded/skins/atylwyth/chr_way_watcher_upgraded_atylwyth",
 		third_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth",
-			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_ds"
+			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_ds",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_skin",
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth"
 		},
 		first_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_1p"
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_1p",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_1p_skin",
+			mtr_fur = "units/beings/player/way_watcher_upgraded/skins/atylwyth/mtr_outfit_atylwyth_1p_fur"
 		}
 	}
 }
@@ -1460,11 +1469,14 @@ Cosmetics.skin_ww_waywatcher_black_and_gold = {
 	material_changes = {
 		package_name = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/chr_way_watcher_upgraded_black_and_gold",
 		third_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold",
-			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_ds"
+			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_ds",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_skin",
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold"
 		},
 		first_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_1p"
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_1p",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_1p_skin",
+			mtr_fur = "units/beings/player/way_watcher_upgraded/skins/black_and_gold/mtr_outfit_black_and_gold_1p_fur"
 		}
 	}
 }
@@ -1486,11 +1498,14 @@ Cosmetics.skin_ww_waywatcher_cythral = {
 	material_changes = {
 		package_name = "units/beings/player/way_watcher_upgraded/skins/cythral/chr_way_watcher_upgraded_cythral",
 		third_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral",
-			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_ds"
+			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_ds",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_skin",
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral"
 		},
 		first_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_1p"
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_1p",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_1p_skin",
+			mtr_fur = "units/beings/player/way_watcher_upgraded/skins/cythral/mtr_outfit_cythral_1p_fur"
 		}
 	}
 }
@@ -1512,11 +1527,14 @@ Cosmetics.skin_ww_waywatcher_tirsyth = {
 	material_changes = {
 		package_name = "units/beings/player/way_watcher_upgraded/skins/tirsyth/chr_way_watcher_upgraded_tirsyth",
 		third_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth",
-			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_ds"
+			mtr_outfit_ds = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_ds",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_skin",
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth"
 		},
 		first_person = {
-			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_1p"
+			mtr_outfit = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_1p",
+			mtr_skin = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_1p_skin",
+			mtr_fur = "units/beings/player/way_watcher_upgraded/skins/tirsyth/mtr_outfit_tirsyth_1p_fur"
 		}
 	}
 }
@@ -2746,9 +2764,6 @@ Cosmetics.frame_0094 = {
 		}
 	}
 }
-Cosmetics.frame_0095 = {
-	icon = "unit_frame_02"
-}
 Cosmetics.frame_0096 = {
 	icon = "unit_frame_02"
 }
@@ -2858,9 +2873,6 @@ Cosmetics.frame_collectors_edition_preorder = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_community_01 = {
-	icon = "unit_frame_02"
-}
-Cosmetics.frame_skulls = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_year_of_the_rat = {
@@ -3154,12 +3166,6 @@ Cosmetics.frame_season_04_tier_3 = {
 Cosmetics.frame_season_04_tier_4 = {
 	icon = "unit_frame_02"
 }
-Cosmetics.frame_skulls_2021 = {
-	icon = "unit_frame_02"
-}
-Cosmetics.frame_skulls_2022 = {
-	icon = "unit_frame_02"
-}
 Cosmetics.frame_celebration_06 = {
 	icon = "unit_frame_02",
 	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_celebration_06",
@@ -3247,8 +3253,80 @@ Cosmetics.frame_rat_ogre_01 = {
 Cosmetics.frame_rat_ogre_02 = {
 	icon = "unit_frame_02"
 }
+Cosmetics.frame_0095 = {
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_0095",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_0095/store_item_icon_frame_0095",
+			type = "texture"
+		}
+	}
+}
+Cosmetics.frame_skulls = {
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_skulls",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_skulls/store_item_icon_frame_skulls",
+			type = "texture"
+		}
+	}
+}
+Cosmetics.frame_skulls_2021 = {
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_skulls_2021",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_skulls_2021/store_item_icon_frame_skulls_2021",
+			type = "texture"
+		}
+	}
+}
+Cosmetics.frame_skulls_2022 = {
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_skulls_2022",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_skulls_2022/store_item_icon_frame_skulls_2022",
+			type = "texture"
+		}
+	}
+}
 Cosmetics.frame_skulls_2023 = {
-	icon = "unit_frame_02"
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_skulls_2023",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_skulls_2023/store_item_icon_frame_skulls_2023",
+			type = "texture"
+		}
+	}
 }
 Cosmetics.frame_skulls_2024 = {
 	icon = "unit_frame_02",
@@ -3261,6 +3339,21 @@ Cosmetics.frame_skulls_2024 = {
 	material_settings = {
 		portrait_frame = {
 			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_skulls_2024/store_item_icon_frame_skulls_2024",
+			type = "texture"
+		}
+	}
+}
+Cosmetics.frame_skulls_2025 = {
+	icon = "unit_frame_02",
+	texture_package_name = "resource_packages/store/item_icons/store_item_icon_frame_skulls_2025",
+	unit = "",
+	attachment_node = {
+		unit = "units/ui/ui_portrait_frame",
+		attachment_node = AttachmentNodeLinking.ui_portrait_frame
+	},
+	material_settings = {
+		portrait_frame = {
+			texture = "gui/1080p/single_textures/store_item_icons/store_item_icon_frame_skulls_2025/store_item_icon_frame_skulls_2025",
 			type = "texture"
 		}
 	}
@@ -3284,6 +3377,9 @@ Cosmetics.frame_termite_01 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_termite_02 = {
+	icon = "unit_frame_02"
+}
+Cosmetics.frame_termite_03 = {
 	icon = "unit_frame_02"
 }
 Cosmetics.frame_necromancer_01 = {

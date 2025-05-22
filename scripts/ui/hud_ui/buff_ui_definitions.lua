@@ -13,14 +13,28 @@ local scenegraph_definition = {
 			SIZE_Y
 		}
 	},
-	pivot_parent = {
+	pivot_root = {
 		vertical_alignment = "bottom",
 		parent = "root",
 		horizontal_alignment = "left",
 		position = {
-			200,
+			150,
 			18,
 			1
+		},
+		size = {
+			0,
+			0
+		}
+	},
+	pivot_parent = {
+		vertical_alignment = "bottom",
+		parent = "pivot_root",
+		horizontal_alignment = "left",
+		position = {
+			UISettings.INSIGNIA_OFFSET,
+			0,
+			0
 		},
 		size = {
 			0,

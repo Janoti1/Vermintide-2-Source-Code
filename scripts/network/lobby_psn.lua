@@ -56,15 +56,15 @@ LobbyInternal.matchmaking_lobby_data = {
 LobbyInternal.lobby_data_network_lookups = {
 	matchmaking = "lobby_data_values",
 	secondary_region = "matchmaking_regions",
+	twitch_enabled = "lobby_data_values",
 	mechanism = "mechanism_keys",
 	is_private = "lobby_data_values",
 	matchmaking_type = "matchmaking_types",
 	mission_id = "mission_ids",
 	primary_region = "matchmaking_regions",
-	quick_game = "lobby_data_values",
 	selected_mission_id = "mission_ids",
 	difficulty = "difficulties",
-	twitch_enabled = "lobby_data_values"
+	weave_quick_game = "lobby_data_values"
 }
 LobbyInternal.key_order = {
 	"network_hash",
@@ -75,7 +75,7 @@ LobbyInternal.key_order = {
 	"selected_mission_id",
 	"matchmaking",
 	"num_players",
-	"quick_game",
+	"weave_quick_game",
 	"session_id",
 	"reserved_profiles",
 	"unique_server_name",
@@ -92,16 +92,16 @@ for i, key in ipairs(LobbyInternal.key_order) do
 end
 
 LobbyInternal.default_lobby_data = {
+	twitch_enabled = "false",
 	reserved_profiles = "0=0",
 	is_private = "false",
 	matchmaking_type = "n/a",
 	mission_id = "n/a",
 	matchmaking = "false",
 	num_players = 1,
-	quick_game = "false",
 	selected_mission_id = "n/a",
 	difficulty = "normal",
-	twitch_enabled = "false"
+	weave_quick_game = "false"
 }
 
 LobbyInternal.init_client = function (network_options)

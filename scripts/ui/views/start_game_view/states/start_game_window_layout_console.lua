@@ -52,7 +52,7 @@ local windows = {
 	area_selection = {
 		ignore_alignment = true,
 		name = "area_selection",
-		class_name = "StartGameWindowAreaSelectionConsole"
+		class_name = "StartGameWindowAreaSelectionConsoleV2"
 	},
 	twitch_overview = {
 		ignore_alignment = true,
@@ -200,6 +200,7 @@ local window_layouts = {
 		name = "area_selection",
 		save_data_table = "custom",
 		input_focus_window = "area_selection",
+		return_to_top_level = true,
 		close_on_exit = false,
 		windows = {
 			area_selection = 3,

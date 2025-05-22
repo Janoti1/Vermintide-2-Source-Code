@@ -1304,9 +1304,9 @@ TalentTrees = TalentTrees or {}
 TalentTrees.dwarf_ranger = {
 	{
 		{
-			"bardin_ironbreaker_vanguard",
-			"bardin_ironbreaker_bloodlust_2",
-			"bardin_ironbreaker_heal_share"
+			"bardin_ironbreaker_thp_tank",
+			"bardin_ironbreaker_thp_smiter",
+			"bardin_ironbreaker_thp_linesman"
 		},
 		{
 			"bardin_ironbreaker_overcharge_increase_power_lowers_attack_speed",
@@ -1336,9 +1336,9 @@ TalentTrees.dwarf_ranger = {
 	},
 	{
 		{
-			"bardin_slayer_reaper",
-			"bardin_slayer_bloodlust_2",
-			"bardin_slayer_heal_share"
+			"bardin_slayer_thp_linesman",
+			"bardin_slayer_thp_smiter",
+			"bardin_slayer_thp_ninjafencer"
 		},
 		{
 			"bardin_slayer_attack_speed_on_double_one_handed_weapons",
@@ -1368,9 +1368,9 @@ TalentTrees.dwarf_ranger = {
 	},
 	{
 		{
-			"bardin_ranger_vanguard",
-			"bardin_ranger_reaper",
-			"bardin_ranger_heal_share"
+			"bardin_ranger_thp_tank",
+			"bardin_ranger_thp_linesman",
+			"bardin_ranger_thp_smiter"
 		},
 		{
 			"bardin_ranger_increased_melee_damage_on_no_ammo",
@@ -1441,6 +1441,42 @@ Talents.dwarf_ranger = {
 		},
 		buffs = {
 			"bardin_ironbreaker_conqueror"
+		}
+	},
+	{
+		name = "bardin_ironbreaker_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_ironbreaker_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "bardin_ironbreaker_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_ironbreaker_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "bardin_ironbreaker_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_ironbreaker_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
 		}
 	},
 	{
@@ -1749,6 +1785,42 @@ Talents.dwarf_ranger = {
 		}
 	},
 	{
+		name = "bardin_slayer_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_slayer_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "bardin_slayer_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_slayer_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
+		}
+	},
+	{
+		name = "bardin_slayer_thp_ninjafencer",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_slayer_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_ninjafencer", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_ninjafencer"
+		}
+	},
+	{
 		description = "bardin_slayer_crit_chance_desc",
 		name = "bardin_slayer_crit_chance",
 		num_ranks = 1,
@@ -2028,6 +2100,42 @@ Talents.dwarf_ranger = {
 		},
 		buffs = {
 			"bardin_ranger_conqueror"
+		}
+	},
+	{
+		name = "bardin_ranger_thp_tank",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_ranger_regrowth",
+		display_name = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_tank", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_tank"
+		}
+	},
+	{
+		name = "bardin_ranger_thp_linesman",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_ranger_bloodlust",
+		display_name = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_linesman", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_linesman"
+		}
+	},
+	{
+		name = "bardin_ranger_thp_smiter",
+		buffer = "server",
+		num_ranks = 1,
+		icon = "bardin_ranger_conqueror",
+		display_name = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].display_name,
+		description = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description,
+		description_values = BuffUtils.get_buff_template("thp_smiter", "adventure").buffs[1].description_values,
+		buffs = {
+			"thp_smiter"
 		}
 	},
 	{

@@ -1318,7 +1318,7 @@ UIWidgets.create_framed_info_box = function (scenegraph_id, title_frame_name, in
 	return widget
 end
 
-UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_offset, background_icon, background_icon_size, background_icon_offset, sub_text, title_text, title_text_color, width, is_rectangular_icon, hide_text)
+UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_offset, background_icon, background_icon_size, background_icon_offset, sub_text, title_text, title_text_color, width, is_rectangular_icon, hide_text, masked, icon_hotspot)
 	local size = {
 		width,
 		background_icon_size[2]
@@ -1331,7 +1331,8 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 			235
 		},
 		offset = icon_offset,
-		texture_size = icon_size
+		texture_size = icon_size,
+		masked = masked
 	}
 	local icon_background_style = {
 		color = {
@@ -1341,7 +1342,8 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 			255
 		},
 		offset = background_icon_offset,
-		texture_size = background_icon_size
+		texture_size = background_icon_size,
+		masked = masked
 	}
 	local max_widget_height = icon_background_style.texture_size[2]
 	local icon_spacing = 10
@@ -1356,8 +1358,8 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 	local sub_text_style = {
 		vertical_alignment = "center",
 		dynamic_font_size = true,
-		font_type = "hell_shark",
 		font_size = font_size,
+		font_type = masked and "hell_shark_masked" or "hell_shark",
 		text_color = Colors.get_color_table_with_alpha("font_default", 255),
 		offset = {
 			text_offset[1],
@@ -1381,8 +1383,8 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 	local title_text_style = {
 		vertical_alignment = "center",
 		dynamic_font_size = true,
-		font_type = "hell_shark",
 		font_size = font_size,
+		font_type = masked and "hell_shark_masked" or "hell_shark",
 		text_color = title_text_color or Colors.get_color_table_with_alpha("font_default", 255),
 		offset = {
 			text_offset[1],
@@ -1405,20 +1407,31 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 
 	local passes = {
 		{
-			style_id = "icon",
+			style_id = "icon_hotspot",
 			pass_type = "hotspot",
 			content_id = "hotspot"
 		},
 		{
 			pass_type = "texture",
 			style_id = "icon",
-			texture_id = "icon"
+			texture_id = "icon",
+			content_check_function = function (content, style)
+				return not content.hotspot.is_hover
+			end
 		},
 		{
 			style_id = "icon_bg",
 			pass_type = "rect",
 			content_check_function = function (content)
-				return not content.is_rectangular_icon
+				return not content.is_rectangular_icon and not masked
+			end
+		},
+		{
+			pass_type = "texture",
+			style_id = "icon_bg",
+			texture_id = "rect_masked",
+			content_check_function = function (content)
+				return not content.is_rectangular_icon and masked
 			end
 		},
 		{
@@ -1460,6 +1473,7 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 		}
 	}
 	local content = {
+		rect_masked = "rect_masked",
 		hotspot = {},
 		icon = icon,
 		icon_background = background_icon,
@@ -1471,6 +1485,7 @@ UIWidgets.create_icon_info_box = function (scenegraph_id, icon, icon_size, icon_
 	}
 	local style = {
 		icon = icon_style,
+		icon_hotspot = icon_hotspot or icon_style,
 		icon_bg = {
 			vertical_alignment = "center",
 			horizontal_alignment = "left",
@@ -4373,7 +4388,13 @@ UIWidgets.create_ability_charges_widget = function (scenegraph_id, size, offset)
 	}
 end
 
-UIWidgets.create_power_up = function (scenegraph_id, size)
+UIWidgets.create_power_up = function (scenegraph_id, size, disable_masked_icons, allow_boon_removal)
+	local masked = true
+
+	if disable_masked_icons then
+		masked = false
+	end
+
 	return {
 		element = {
 			passes = {
@@ -4549,22 +4570,117 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 					pass_type = "text",
 					text_id = "set_progression",
 					content_check_function = function (content)
-						return content.is_part_of_set
+						return content.is_part_of_set and not content.extend_left
+					end
+				},
+				{
+					style_id = "set_progression_left",
+					pass_type = "text",
+					text_id = "set_progression",
+					content_check_function = function (content)
+						return content.is_part_of_set and content.extend_left
+					end
+				},
+				{
+					style_id = "remove_tooltip_left",
+					pass_type = "text",
+					text_id = "remove_tooltip",
+					content_check_function = function (content)
+						return not content.locked and content.extend_left and allow_boon_removal
+					end,
+					content_change_function = function (content, style, _, dt)
+						local loc_string = Localize(content.remove_tooltip_key)
+						local input_service_name = content.input_service_name
+						local macro = "$KEY;%s__%s:"
+						local mouse_action = content.mouse_action
+						local gamepad_action = content.gamepad_action
+						local input = Managers.input:is_device_active("gamepad") and gamepad_action or mouse_action
+						local input_macro = string.format(macro, input_service_name, input)
+
+						content.remove_tooltip = string.format(loc_string, input_macro)
+					end
+				},
+				{
+					style_id = "remove_tooltip",
+					pass_type = "text",
+					text_id = "remove_tooltip",
+					content_check_function = function (content)
+						return not content.locked and not content.extend_left and allow_boon_removal
+					end,
+					content_change_function = function (content, style, _, dt)
+						local loc_string = Localize(content.remove_tooltip_key)
+						local input_service_name = content.input_service_name
+						local macro = "$KEY;%s__%s:"
+						local mouse_action = content.mouse_action
+						local gamepad_action = content.gamepad_action
+						local input = Managers.input:is_device_active("gamepad") and gamepad_action or mouse_action
+						local input_macro = string.format(macro, input_service_name, input)
+
+						content.remove_tooltip = string.format(loc_string, input_macro)
+					end
+				},
+				{
+					style_id = "locked_left",
+					pass_type = "text",
+					text_id = "locked_text_id",
+					content_check_function = function (content)
+						return content.locked and content.extend_left and allow_boon_removal
+					end
+				},
+				{
+					style_id = "locked_left_shadow",
+					pass_type = "text",
+					text_id = "locked_text_id",
+					content_check_function = function (content)
+						return content.locked and content.extend_left and allow_boon_removal
+					end
+				},
+				{
+					style_id = "locked",
+					pass_type = "text",
+					text_id = "locked_text_id",
+					content_check_function = function (content)
+						return content.locked and not content.extend_left and allow_boon_removal
+					end
+				},
+				{
+					style_id = "locked_shadow",
+					pass_type = "text",
+					text_id = "locked_text_id",
+					content_check_function = function (content)
+						return content.locked and not content.extend_left and allow_boon_removal
+					end
+				},
+				{
+					pass_type = "texture",
+					style_id = "remove_frame",
+					texture_id = "remove_frame",
+					content_check_function = function (content, style)
+						return content.input_made and not content.locked and allow_boon_removal
 					end
 				}
 			}
 		},
 		content = {
-			title_text = "header",
-			extend_left = false,
 			round_icon_bg = "button_round_bg",
+			title_text = "header",
+			remove_tooltip = "",
 			rectangular_icon_bg = "button_frame_01",
-			rarity_text = "rarity",
 			visible = false,
+			input_service_name = "ingame_menu",
 			shrine_bg = "shrine_blessing_bg_hover",
-			set_progression = "%d/%d",
+			locked = false,
+			remove_frame = "deus_shop_square_gradient",
 			is_rectangular_icon = false,
+			remove_interaction_duration = 1,
 			description_text = "description_text",
+			set_progression = "%d/%d",
+			extend_left = false,
+			rarity_text = "rarity",
+			remove_tooltip_key = "remove_boon_tooltip",
+			mouse_action = "mouse_middle_press",
+			locked_text_id = "party_locked",
+			gamepad_action = "special_1",
 			shrine_bg_frame_left = {
 				texture_id = "shrine_blessing_frame",
 				uvs = {
@@ -4672,7 +4788,6 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 			round_icon = {
 				vertical_alignment = "center",
 				horizontal_alignment = "left",
-				masked = true,
 				color = {
 					255,
 					255,
@@ -4687,12 +4802,12 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				texture_size = {
 					40,
 					40
-				}
+				},
+				masked = masked
 			},
 			rectangular_icon = {
 				vertical_alignment = "center",
 				horizontal_alignment = "left",
-				masked = true,
 				color = {
 					255,
 					255,
@@ -4707,7 +4822,8 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				texture_size = {
 					63,
 					63
-				}
+				},
+				masked = masked
 			},
 			rectangular_bg = {
 				vertical_alignment = "center",
@@ -4773,7 +4889,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				word_wrap = false,
 				font_size = 28,
 				horizontal_alignment = "left",
-				vertical_alignment = "top",
+				vertical_alignment = "center",
 				dynamic_font_size = true,
 				area_size = {
 					250,
@@ -4782,7 +4898,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				text_color = Colors.get_color_table_with_alpha("font_title", 255),
 				offset = {
 					100,
-					-30,
+					52,
 					3
 				}
 			},
@@ -4815,7 +4931,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				vertical_alignment = "top",
 				area_size = {
 					320,
-					120
+					75
 				},
 				text_color = Colors.get_color_table_with_alpha("font_default", 255),
 				offset = {
@@ -4831,7 +4947,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				word_wrap = false,
 				font_size = 28,
 				horizontal_alignment = "left",
-				vertical_alignment = "top",
+				vertical_alignment = "center",
 				dynamic_font_size = true,
 				area_size = {
 					250,
@@ -4840,7 +4956,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				text_color = Colors.get_color_table_with_alpha("black", 255),
 				offset = {
 					102,
-					-32,
+					50,
 					2
 				}
 			},
@@ -4868,7 +4984,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				vertical_alignment = "top",
 				area_size = {
 					320,
-					120
+					75
 				},
 				text_color = Colors.get_color_table_with_alpha("black", 255),
 				offset = {
@@ -4884,7 +5000,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				word_wrap = false,
 				font_size = 28,
 				horizontal_alignment = "left",
-				vertical_alignment = "top",
+				vertical_alignment = "center",
 				dynamic_font_size = true,
 				area_size = {
 					250,
@@ -4893,7 +5009,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				text_color = Colors.get_color_table_with_alpha("font_title", 255),
 				offset = {
 					-320,
-					-30,
+					52,
 					3
 				}
 			},
@@ -4926,7 +5042,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				vertical_alignment = "top",
 				area_size = {
 					320,
-					120
+					75
 				},
 				text_color = Colors.get_color_table_with_alpha("font_default", 255),
 				offset = {
@@ -4942,7 +5058,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				word_wrap = false,
 				font_size = 28,
 				horizontal_alignment = "left",
-				vertical_alignment = "top",
+				vertical_alignment = "center",
 				dynamic_font_size = true,
 				area_size = {
 					250,
@@ -4951,7 +5067,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				text_color = Colors.get_color_table_with_alpha("black", 255),
 				offset = {
 					-318,
-					-32,
+					50,
 					2
 				}
 			},
@@ -4979,7 +5095,7 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				vertical_alignment = "top",
 				area_size = {
 					320,
-					120
+					75
 				},
 				text_color = Colors.get_color_table_with_alpha("black", 255),
 				offset = {
@@ -5001,9 +5117,191 @@ UIWidgets.create_power_up = function (scenegraph_id, size)
 				},
 				text_color = Colors.get_color_table_with_alpha("font_default", 255),
 				offset = {
+					-60,
+					18,
+					10
+				}
+			},
+			set_progression_left = {
+				word_wrap = false,
+				upper_case = false,
+				font_size = 20,
+				horizontal_alignment = "right",
+				vertical_alignment = "bottom",
+				font_type = "hell_shark",
+				progression_colors = {
+					incomplete = Colors.get_color_table_with_alpha("font_default", 255),
+					complete = Colors.get_color_table_with_alpha("lime_green", 255)
+				},
+				text_color = Colors.get_color_table_with_alpha("font_default", 255),
+				offset = {
 					-488,
 					18,
 					10
+				}
+			},
+			remove_tooltip = {
+				word_wrap = false,
+				upper_case = false,
+				localize = false,
+				font_type = "hell_shark_header",
+				font_size = 22,
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				use_shadow = true,
+				dynamic_font_size = true,
+				size = {
+					250,
+					30
+				},
+				area_size = {
+					250,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("cheeseburger", 255),
+				offset = {
+					100,
+					18,
+					1
+				}
+			},
+			remove_tooltip_left = {
+				word_wrap = false,
+				upper_case = false,
+				localize = false,
+				font_type = "hell_shark_header",
+				font_size = 22,
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				use_shadow = true,
+				dynamic_font_size = true,
+				size = {
+					250,
+					30
+				},
+				area_size = {
+					250,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("cheeseburger", 255),
+				offset = {
+					-320,
+					18,
+					1
+				}
+			},
+			locked = {
+				word_wrap = false,
+				upper_case = false,
+				localize = true,
+				font_type = "hell_shark_header",
+				font_size = 22,
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				use_shadow = true,
+				dynamic_font_size = true,
+				size = {
+					250,
+					30
+				},
+				area_size = {
+					250,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("firebrick", 255),
+				offset = {
+					100,
+					18,
+					2
+				}
+			},
+			locked_shadow = {
+				word_wrap = false,
+				upper_case = false,
+				localize = true,
+				font_type = "hell_shark_header",
+				font_size = 22,
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				use_shadow = true,
+				dynamic_font_size = true,
+				size = {
+					250,
+					30
+				},
+				area_size = {
+					250,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					102,
+					16,
+					1
+				}
+			},
+			locked_left = {
+				word_wrap = false,
+				upper_case = false,
+				localize = true,
+				font_type = "hell_shark_header",
+				font_size = 22,
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				use_shadow = true,
+				dynamic_font_size = true,
+				size = {
+					250,
+					30
+				},
+				area_size = {
+					250,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("firebrick", 255),
+				offset = {
+					-320,
+					18,
+					2
+				}
+			},
+			locked_left_shadow = {
+				word_wrap = false,
+				upper_case = false,
+				localize = true,
+				font_type = "hell_shark_header",
+				font_size = 22,
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				use_shadow = true,
+				dynamic_font_size = true,
+				size = {
+					250,
+					30
+				},
+				area_size = {
+					250,
+					30
+				},
+				text_color = Colors.get_color_table_with_alpha("black", 255),
+				offset = {
+					-318,
+					16,
+					1
+				}
+			},
+			remove_frame = {
+				vertical_alignment = "center",
+				horizontal_alignment = "left",
+				color = Colors.get_color_table_with_alpha("red", 255),
+				offset = {
+					9,
+					0,
+					11
+				},
+				texture_size = {
+					80,
+					80
 				}
 			}
 		},

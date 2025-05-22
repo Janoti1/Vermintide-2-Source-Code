@@ -1,12 +1,13 @@
 AreaSettings.karak_azgaraz = {
 	menu_sound_event = "Play_hud_menu_area_dwarf",
-	name = "karak_azgaraz",
+	long_description_text = "area_selection_karak_azgaraz_description_long",
 	display_name = "area_selection_karak_azgaraz_name",
 	description_text = "area_selection_karak_azgaraz_description",
-	level_image = "area_icon_karak_azgaraz",
+	name = "karak_azgaraz",
+	sort_order = 4,
 	store_page_url = "https://store.steampowered.com/app/552500/Warhammer_Vermintide_2/",
 	dlc_name = "karak_azgaraz_part_1",
-	sort_order = 4,
+	level_image = "area_icon_karak_azgaraz",
 	video_settings = {
 		material_name = "area_video_karak_azgaraz",
 		resource = "video/area_videos/karak_azgaraz/area_video_karak_azgaraz"

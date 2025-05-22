@@ -15,7 +15,7 @@ local scenegraph_definition = {
 			SIZE_Y
 		}
 	},
-	pivot_parent = {
+	portrait_pivot_parent = {
 		vertical_alignment = "top",
 		parent = "root",
 		horizontal_alignment = "left",
@@ -29,8 +29,22 @@ local scenegraph_definition = {
 			0
 		}
 	},
+	player_status = {
+		vertical_alignment = "top",
+		parent = "root",
+		horizontal_alignment = "left",
+		position = {
+			0,
+			0,
+			0
+		},
+		size = {
+			0,
+			0
+		}
+	},
 	pivot = {
-		parent = "pivot_parent",
+		parent = "portrait_pivot_parent",
 		position = {
 			0,
 			0,

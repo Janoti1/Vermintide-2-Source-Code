@@ -1,12 +1,13 @@
 AreaSettings.scorpion = {
 	menu_sound_event = "Play_hud_menu_area_crater",
-	name = "scorpion",
-	display_name = "area_selection_scorpion_name",
+	long_description_text = "area_selection_scorpion_description_long",
 	description_text = "area_selection_scorpion_description",
+	display_name = "area_selection_scorpion_name",
 	unlock_requirement_description = "scorpion_area_selection_unlock_requirements",
-	level_image = "area_icon_wom",
-	store_page_url = "https://store.steampowered.com/app/1033060/Warhammer_Vermintide_2__Winds_of_Magic/",
 	dlc_name = "scorpion",
+	store_page_url = "https://store.steampowered.com/app/1033060/Warhammer_Vermintide_2__Winds_of_Magic/",
+	name = "scorpion",
+	level_image = "area_icon_wom",
 	sort_order = 9006,
 	video_settings = {
 		material_name = "area_video_scorpion",

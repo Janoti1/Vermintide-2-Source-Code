@@ -2133,7 +2133,7 @@ LobbyBrowserConsoleUI._fill_details = function (self, lobby_data)
 				level_key = weave_template.objectives[1].level_id
 			end
 
-			if lobby_data.quick_game == "true" then
+			if lobby_data.weave_quick_game == "true" then
 				matchmaking_type = "weave_quick_play"
 			else
 				matchmaking_type = "weave"
@@ -2246,7 +2246,7 @@ LobbyBrowserConsoleUI._fill_weave_details = function (self, lobby_data)
 
 	local level_name_widget = details_widgets.level_name
 
-	if lobby_data.quick_game == "true" then
+	if lobby_data.weave_quick_game == "true" then
 		level_name_widget.content.text = Localize(level_name)
 	else
 		level_name_widget.content.text = weave_index .. ". " .. Localize(level_name)
@@ -2329,7 +2329,7 @@ LobbyBrowserConsoleUI._fill_weave_details = function (self, lobby_data)
 				level_key = weave_template.objectives[1].level_id
 			end
 
-			if lobby_data.quick_game == "true" then
+			if lobby_data.weave_quick_game == "true" then
 				matchmaking_type = "weave_quick_play"
 			end
 		elseif mechanism == "deus" then
@@ -2458,7 +2458,7 @@ LobbyBrowserConsoleUI._fill_deus_details = function (self, lobby_data)
 				level_key = weave_template.objectives[1].level_id
 			end
 
-			if lobby_data.quick_game == "true" then
+			if lobby_data.weave_quick_game == "true" then
 				matchmaking_type = "weave_quick_play"
 			else
 				matchmaking_type = "weave"

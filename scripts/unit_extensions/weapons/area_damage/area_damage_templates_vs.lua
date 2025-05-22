@@ -80,7 +80,7 @@ settings.area_damage_templates = {
 				end
 
 				if DamageUtils.networkify_damage(damage) > 0 then
-					DamageUtils.add_damage_network(hit_unit, extension_unit, damage, "torso", "gas", nil, Vector3(1, 0, 0), damage_source, hit_ragdoll_actor, source_attacker_unit, nil)
+					DamageUtils.add_damage_network(hit_unit, extension_unit, damage, "torso", "gas", nil, Vector3(1, 0, 0), damage_source, hit_ragdoll_actor, source_attacker_unit, nil, nil, nil, nil, nil, nil, nil, nil, 1)
 				end
 			end
 		},
@@ -107,12 +107,6 @@ settings.area_damage_templates = {
 								particle_id = particle_id,
 								start_time = t
 							}
-
-							local status_extension = ScriptUnit.has_extension(player_unit, "status_system")
-
-							if status_extension then
-								status_extension:hit_by_globadier_poison()
-							end
 						elseif is_inside_radius and t >= player_unit_particles[player_unit].start_time + 5 then
 							local particle_id = player_unit_particles[player_unit].particle_id
 
@@ -210,7 +204,7 @@ settings.area_damage_templates = {
 				local damage_source = data.damage_source
 				local hit_ragdoll_actor
 
-				DamageUtils.add_damage_network(hit_unit, extension_unit, damage, "torso", "damage_over_time", nil, Vector3(1, 0, 0), damage_source, hit_ragdoll_actor, source_attacker_unit)
+				DamageUtils.add_damage_network(hit_unit, extension_unit, damage, "torso", "damage_over_time", nil, Vector3(1, 0, 0), damage_source, hit_ragdoll_actor, source_attacker_unit, nil, nil, nil, nil, nil, nil, nil, nil, 1)
 			end
 		},
 		client = {
@@ -519,7 +513,7 @@ settings.area_damage_templates = {
 				local damage = data.damage
 				local damage_source = data.damage_source
 
-				DamageUtils.add_damage_network(hit_unit, extension_unit, damage, "torso", "damage_over_time", nil, Vector3(1, 0, 0), damage_source)
+				DamageUtils.add_damage_network(hit_unit, extension_unit, damage, "torso", "damage_over_time", nil, Vector3(1, 0, 0), damage_source, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, 1)
 			end
 		},
 		client = {

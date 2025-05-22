@@ -501,12 +501,12 @@ GameModeSettings.versus.dark_pact_respawn_timers = {
 		min = 5
 	},
 	{
-		max = 14,
-		min = 8
+		max = 10,
+		min = 5
 	},
 	{
-		max = 20,
-		min = 12
+		max = 15,
+		min = 10
 	}
 }
 GameModeSettings.versus.dark_pact_bot_respawn_timers = {
@@ -606,6 +606,10 @@ GameModeSettings.versus.experience = {
 GameModeSettings.versus.mission_givers = {
 	{
 		dialogue_profile = "vs_pactsworn_mission_giver",
+		side_name = "dark_pact"
+	},
+	{
+		dialogue_profile = "krask_minion",
 		side_name = "dark_pact"
 	},
 	{

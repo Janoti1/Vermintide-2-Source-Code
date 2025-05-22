@@ -39,7 +39,8 @@ InteractionHelper.interactions = {
 	deus_door_transition = {},
 	carousel_door_transition = {},
 	loadout_access = {},
-	handbook_access = {}
+	handbook_access = {},
+	active_event = {}
 }
 
 DLCUtils.map_list("interactions", function (interaction)

@@ -1,4 +1,5 @@
 local FlexmatchQueueStatus = require("scripts/managers/backend_playfab/settings/flexmatch_queue_status")
+local ReservationHandlerTypes = require("scripts/managers/game_mode/mechanisms/reservation_handler_types")
 
 BackendInterfaceVersusPlayFab = class(BackendInterfaceVersusPlayFab)
 
