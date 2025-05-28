@@ -710,7 +710,9 @@ StoreLayoutConfig.get_item_filter = function (path, temporary_page_func)
 			added_filters = added_filters + 1
 		end
 
-		structure = structure[path_name] or {}
+		if type(structure) == "table" then
+			structure = structure[path_name]
+		end
 	end
 
 	if type(structure) == "table" then

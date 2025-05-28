@@ -419,7 +419,9 @@ NetworkMatchHandler._clear_non_session_peers = function (self)
 end
 
 NetworkMatchHandler.client_disconnected = function (self, peer_id)
-	self:_store_data(peer_id)
+	if self._data_by_peer[peer_id] then
+		self:_store_data(peer_id)
+	end
 end
 
 NetworkMatchHandler.has_peer_data = function (self, peer_id)
