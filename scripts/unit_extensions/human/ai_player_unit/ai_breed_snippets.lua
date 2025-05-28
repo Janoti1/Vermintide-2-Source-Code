@@ -522,7 +522,7 @@ AiBreedSnippets.on_storm_vermin_champion_update = function (unit, blackboard, t,
 	local side = Managers.state.side.side_by_unit[unit]
 	local enemy_player_and_bot_units = side.ENEMY_PLAYER_AND_BOT_UNITS
 	local enemy_player_and_bot_positions = side.ENEMY_PLAYER_AND_BOT_POSITIONS
-	local self_pos = POSITION_LOOKUP[unit]
+	local self_pos = Unit.local_position(unit, 0)
 	local range = BreedActions.skaven_storm_vermin_champion.special_attack_spin.radius
 	local num = 0
 

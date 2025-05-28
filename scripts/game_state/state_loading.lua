@@ -318,7 +318,10 @@ StateLoading._setup_first_time_ui = function (self)
 		loading_context.play_trailer = nil
 		self._first_time_view = TitleLoadingUI:new(self._world, params, auto_skip)
 
-		Managers.transition:hide_loading_icon()
+		if not self._first_time_view:is_loading_packages() then
+			Managers.transition:hide_loading_icon()
+		end
+
 		Managers.chat:enable_gui(false)
 		self._loading_view:deactivate()
 	end

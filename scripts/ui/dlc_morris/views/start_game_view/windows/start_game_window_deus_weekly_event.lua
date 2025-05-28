@@ -248,7 +248,7 @@ StartGameWindowDeusWeeklyEvent._evaluate_rewards = function (self, data, difficu
 
 		reward_data.collected = claimed or unlocked_weapon_skins[item_name] ~= nil
 
-		local item = item_name and ItemMasterList[item_name]
+		local item = WeaponSkins.skins[item_name] or ItemMasterList[item_name]
 
 		reward_data.desc = Localize(item and item.display_name or "lb_unkown")
 		reward_data.icon = item and item.inventory_icon or "icons_placeholder"

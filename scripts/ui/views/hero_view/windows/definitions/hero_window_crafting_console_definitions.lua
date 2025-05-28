@@ -533,12 +533,12 @@ local generic_input_actions = {
 		},
 		{
 			input_action = "confirm",
-			priority = 5,
+			priority = 6,
 			description_text = "input_description_select"
 		},
 		{
 			input_action = "back",
-			priority = 6,
+			priority = 7,
 			description_text = "input_description_back"
 		}
 	},
@@ -592,12 +592,12 @@ local generic_input_actions = {
 		},
 		{
 			input_action = "confirm",
-			priority = 5,
+			priority = 6,
 			description_text = "input_description_select"
 		},
 		{
 			input_action = "back",
-			priority = 6,
+			priority = 7,
 			description_text = "input_description_back"
 		}
 	}
@@ -607,27 +607,8 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
-				description_text = "input_description_reset"
-			},
-			{
-				input_action = "refresh",
 				priority = 3,
-				description_text = "hero_view_crafting_salvage"
-			}
-		}
-	},
-	salvage_auto = {
-		actions = {
-			{
-				input_action = "special_1",
-				priority = 2,
 				description_text = "input_description_reset"
-			},
-			{
-				input_action = "right_stick_press",
-				priority = 3,
-				description_text = "hero_view_crafting_salvage_auto_fill"
 			},
 			{
 				input_action = "refresh",
@@ -636,16 +617,35 @@ local input_actions = {
 			}
 		}
 	},
+	salvage_auto = {
+		actions = {
+			{
+				input_action = "special_1",
+				priority = 3,
+				description_text = "input_description_reset"
+			},
+			{
+				input_action = "right_stick_press",
+				priority = 4,
+				description_text = "hero_view_crafting_salvage_auto_fill"
+			},
+			{
+				input_action = "refresh",
+				priority = 5,
+				description_text = "hero_view_crafting_salvage"
+			}
+		}
+	},
 	craft_random_item = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_craft"
 			}
 		}
@@ -654,12 +654,12 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_properties"
 			}
 		}
@@ -668,12 +668,12 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_trait"
 			}
 		}
@@ -682,12 +682,12 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_upgrade"
 			}
 		}
@@ -696,12 +696,12 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_apply_skin"
 			}
 		}
@@ -710,12 +710,12 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "refresh",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_convert"
 			}
 		}
@@ -724,7 +724,7 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			}
 		}
@@ -733,12 +733,12 @@ local input_actions = {
 		actions = {
 			{
 				input_action = "special_1",
-				priority = 2,
+				priority = 3,
 				description_text = "input_description_reset"
 			},
 			{
 				input_action = "right_stick_press",
-				priority = 3,
+				priority = 4,
 				description_text = "hero_view_crafting_salvage_auto_fill"
 			}
 		}

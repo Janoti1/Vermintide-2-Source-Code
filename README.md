@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2025-05-28  |  6.6.2  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-6-2-28th-of-may/108338)
 2025-05-22  |  6.6.1  | [Hotfix 6.6.1 and 6.6.0 Map + Balance Update](https://forums.fatsharkgames.com/t/new-map-the-well-of-dreams-live-now-skulls-in-game-event-patch-6-6-0-hotfix-6-6-1/108063)
 2025-03-27  |  6.5.4  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-5-4-27th-of-march/106395)
 2025-03-18  |  6.5.3  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-4-1-6-4-2-6-4-3/105787/12)

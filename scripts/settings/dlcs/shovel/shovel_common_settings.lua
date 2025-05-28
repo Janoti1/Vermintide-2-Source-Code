@@ -223,6 +223,10 @@ settings.bt_enter_hooks = {
 			blackboard.commander_extension:register_follow_node_update(unit)
 			blackboard.navigation_extension:set_enabled(true)
 		end
+	end,
+	start_command_attack = function (unit, blackboard, t)
+		blackboard.new_command_attack = nil
+		blackboard.undergoing_command_attack = true
 	end
 }
 settings.projectile_templates = {
@@ -237,7 +241,7 @@ settings.bt_leave_hooks = {
 		blackboard.disabled_resume_time = t + 0.5
 	end,
 	command_attack_done = function (unit, blackboard, t)
-		blackboard.new_command_attack = nil
+		blackboard.undergoing_command_attack = false
 	end,
 	remove_charge_target = function (unit, blackboard, t)
 		if blackboard.anim_cb_charge_impact_finished or blackboard.commander_target ~= blackboard.charge_target then

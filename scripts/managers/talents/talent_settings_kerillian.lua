@@ -2006,7 +2006,7 @@ Talents.wood_elf = {
 	{
 		description = "kerillian_maidenguard_speed_on_block_desc",
 		name = "kerillian_maidenguard_speed_on_block",
-		buffer = "client",
+		buffer = "both",
 		num_ranks = 1,
 		icon = "kerillian_maidenguard_improved_dodge",
 		description_values = {
