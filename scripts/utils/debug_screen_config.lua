@@ -2015,7 +2015,13 @@ local settings = {
 		description = "Shows which dynamic packages that have been loaded or unloaded.",
 		is_boolean = true,
 		setting_name = "debug_pickup_package_loader",
-		category = "AI"
+		category = "Network"
+	},
+	{
+		description = "Shows which dynamic packages that have been loaded or unloaded",
+		is_boolean = true,
+		setting_name = "debug_general_package_loader",
+		category = "Network"
 	},
 	{
 		description = "Draws lines up in the sky where each ai is",

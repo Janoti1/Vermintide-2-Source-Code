@@ -359,7 +359,13 @@ LevelEndView._verify_weapon_data = function (self, player_data, weapon_slot, wea
 		verified_weapon.skin_name = weapon_skin_verfied and skin_name
 	end
 
-	local package_name = "resource_packages/pose_packages/" .. item_data.name
+	local weapon_item_type = string.gsub(item_data.name, "^vs_", "")
+
+	if item_data.rarity == "magic" then
+		weapon_item_type = string.gsub(weapon_item_type, "_magic_0%d$", "")
+	end
+
+	local package_name = "resource_packages/pose_packages/" .. weapon_item_type
 
 	if Application.can_get("package", package_name) then
 		verfied_pose_anim = weapon_pose_anim
@@ -401,6 +407,26 @@ LevelEndView._setup_team_previewer = function (self)
 	local hero_locations = self:_gather_hero_locations()
 
 	self._team_previewer:setup_team(team_data, hero_locations)
+end
+
+LevelEndView._handle_global_shader_flags = function (self)
+	local necromancer_shader_flag_active = false
+
+	for _, data in pairs(self._team_heroes) do
+		local profile_index = data.profile_index
+		local career_index = data.career_index
+		local profile = SPProfiles[profile_index]
+		local career = profile.careers[career_index]
+		local career_name = career.name
+
+		if career_name == "bw_necromancer" then
+			necromancer_shader_flag_active = true
+
+			break
+		end
+	end
+
+	GlobalShaderFlags.set_global_shader_flag("NECROMANCER_CAREER_REMAP", necromancer_shader_flag_active)
 end
 
 LevelEndView.draw_weave_widgets = function (self, dt, input_service)
@@ -510,6 +536,8 @@ LevelEndView._update_fade = function (self, dt, t)
 		Managers.transition:fade_out(2)
 
 		self._fade_out_triggered = true
+
+		self:_handle_global_shader_flags()
 	end
 end
 

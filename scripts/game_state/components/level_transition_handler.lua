@@ -1,6 +1,7 @@
 require("scripts/game_state/components/enemy_package_loader")
 require("scripts/game_state/components/transient_package_loader")
 require("scripts/game_state/components/pickup_package_loader")
+require("scripts/game_state/components/general_synced_package_loader")
 
 local global_print = print
 
@@ -30,6 +31,7 @@ LevelTransitionHandler.init = function (self)
 	self.enemy_package_loader = EnemyPackageLoader:new()
 	self.transient_package_loader = TransientPackageLoader:new()
 	self.pickup_package_loader = PickupPackageLoader:new()
+	self.general_synced_package_loader = GeneralSyncedPackageLoader:new()
 	self._network_state = nil
 
 	local level_key, environment_variation_id, level_seed, mechanism, game_mode, conflict_director, locked_director_functions, difficulty, difficulty_tweak, extra_packages
@@ -152,6 +154,7 @@ LevelTransitionHandler.update = function (self)
 
 	self.enemy_package_loader:update()
 	self.pickup_package_loader:update()
+	self.general_synced_package_loader:update()
 	self.transient_package_loader:update()
 end
 
