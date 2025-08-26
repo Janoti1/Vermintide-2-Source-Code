@@ -180,6 +180,15 @@ DialogueSettings.level_specific_load_files = {
 		"dialogues/generated/dwarf_ranger_ground_zero",
 		"dialogues/generated/witch_hunter_ground_zero",
 		"dialogues/generated/hero_conversations_ground_zero"
+	},
+	dlc_dwarf_fest = {
+		"dialogues/generated/wood_elf_dlc_dwarf_fest",
+		"dialogues/generated/empire_soldier_dlc_dwarf_fest",
+		"dialogues/generated/bright_wizard_dlc_dwarf_fest",
+		"dialogues/generated/dwarf_ranger_dlc_dwarf_fest",
+		"dialogues/generated/witch_hunter_dlc_dwarf_fest",
+		"dialogues/generated/hero_conversations_dlc_dwarf_fest",
+		"dialogues/generated/npc_dlc_dwarf_fest"
 	}
 }
 DialogueSettings.blocked_auto_load_files = {
@@ -295,7 +304,9 @@ DialogueSettings.dialogue_category_config = {
 	},
 	special_occasion = {
 		mutually_exclusive = true,
-		interrupted_by = {},
+		interrupted_by = {
+			special_occasion_interrupt = true
+		},
 		playable_during_category = {
 			default = true,
 			enemy_high_prio = true,
@@ -311,6 +322,33 @@ DialogueSettings.dialogue_category_config = {
 			enemy_basic_prio = true,
 			enemy_alerts_high = true,
 			knocked_down_override = true
+		}
+	},
+	special_occasion_interrupt = {
+		mutually_exclusive = true,
+		interrupted_by = {},
+		playable_during_category = {
+			enemy_alerts = true,
+			story_talk = true,
+			enemy_alerts_high = true,
+			default = true,
+			player_alerts_overcharge_explode = true,
+			activate_ability = true,
+			casual_singing_01 = true,
+			casual_talk = true,
+			casual_singing_02 = true,
+			player_feedback = true,
+			level_talk = true,
+			enemy_basic_prio = true,
+			knocked_down_override = true,
+			enemy_high_prio = true,
+			guidance = true,
+			seen_items = true,
+			player_alerts_overcharge_warning = true,
+			player_alerts = true,
+			casual_singing_03 = true,
+			special_occasion = true,
+			player_alerts_boss = true
 		}
 	},
 	activate_ability = {

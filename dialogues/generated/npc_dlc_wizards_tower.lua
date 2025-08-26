@@ -90,9 +90,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_destroy_wards_a",
 		response = "nfl_wizard_tower_destroy_wards_a",
+		name = "nfl_wizard_tower_destroy_wards_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -105,27 +105,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_destroy_wards_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_destroy_wards_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_door",
 		response = "nfl_wizard_tower_door",
+		name = "nfl_wizard_tower_door",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -138,27 +124,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_door",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_door",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_enchantment",
 		response = "nfl_wizard_tower_enchantment",
+		name = "nfl_wizard_tower_enchantment",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -171,27 +143,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_enchantment",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_enchantment",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_flame_source",
 		response = "nfl_wizard_tower_flame_source",
+		name = "nfl_wizard_tower_flame_source",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -204,27 +162,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_flame_source",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_flame_source",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_jungle_two",
 		response = "nfl_wizard_tower_jungle_two",
+		name = "nfl_wizard_tower_jungle_two",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -237,27 +181,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_jungle_two",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_jungle_two",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_keep_climbing",
 		response = "nfl_wizard_tower_keep_climbing",
+		name = "nfl_wizard_tower_keep_climbing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -270,20 +200,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_keep_climbing",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_keep_climbing",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -430,9 +346,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nfl_wizard_tower_test_subjects",
 		response = "nfl_wizard_tower_test_subjects",
+		name = "nfl_wizard_tower_test_subjects",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -445,20 +361,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"ferry_lady"
-			},
-			{
-				"user_memory",
-				"wizard_tower_test_subjects",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_test_subjects",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -529,9 +431,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_destroy_wards_a",
 		response = "nik_wizard_tower_destroy_wards_a",
+		name = "nik_wizard_tower_destroy_wards_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -544,27 +446,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_destroy_wards_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_destroy_wards_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_door",
 		response = "nik_wizard_tower_door",
+		name = "nik_wizard_tower_door",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -577,27 +465,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_door",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_door",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_enchantment",
 		response = "nik_wizard_tower_enchantment",
+		name = "nik_wizard_tower_enchantment",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -610,27 +484,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_enchantment",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_enchantment",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_flame_source",
 		response = "nik_wizard_tower_flame_source",
+		name = "nik_wizard_tower_flame_source",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -643,20 +503,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_flame_source",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_flame_source",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -694,9 +540,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_intro_a",
 		response = "nik_wizard_tower_intro_a",
+		name = "nik_wizard_tower_intro_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -709,27 +555,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_intro_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_intro_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_jungle_two",
 		response = "nik_wizard_tower_jungle_two",
+		name = "nik_wizard_tower_jungle_two",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -742,27 +574,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_jungle_two",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_jungle_two",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_keep_climbing",
 		response = "nik_wizard_tower_keep_climbing",
+		name = "nik_wizard_tower_keep_climbing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -775,27 +593,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_keep_climbing",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_keep_climbing",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nik_wizard_tower_test_subjects",
 		response = "nik_wizard_tower_test_subjects",
+		name = "nik_wizard_tower_test_subjects",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -808,20 +612,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"inn_keeper"
-			},
-			{
-				"user_memory",
-				"wizard_tower_test_subjects",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_test_subjects",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -930,9 +720,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_door",
 		response = "nsf_wizard_tower_door",
+		name = "nsf_wizard_tower_door",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -945,27 +735,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_door",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_door",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_enchantment",
 		response = "nsf_wizard_tower_enchantment",
+		name = "nsf_wizard_tower_enchantment",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -978,27 +754,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_enchantment",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_enchantment",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_keep_climbing",
 		response = "nsf_wizard_tower_keep_climbing",
+		name = "nsf_wizard_tower_keep_climbing",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1011,27 +773,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_keep_climbing",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_keep_climbing",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_library_two_a",
 		response = "nsf_wizard_tower_library_two_a",
+		name = "nsf_wizard_tower_library_two_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1044,20 +792,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_library_two_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_library_two_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -1138,9 +872,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_test_subjects",
 		response = "nsf_wizard_tower_test_subjects",
+		name = "nsf_wizard_tower_test_subjects",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1153,27 +887,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_test_subjects",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_test_subjects",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_waste_disposal_a",
 		response = "nsf_wizard_tower_waste_disposal_a",
+		name = "nsf_wizard_tower_waste_disposal_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1186,27 +906,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_waste_disposal_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_waste_disposal_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "nsf_wizard_tower_welcome_a",
 		response = "nsf_wizard_tower_welcome_a",
+		name = "nsf_wizard_tower_welcome_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -1219,20 +925,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"sofia_fuegonasus"
-			},
-			{
-				"user_memory",
-				"wizard_tower_welcome_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"wizard_tower_welcome_a",
-				OP.ADD,
-				1
 			}
 		}
 	})

@@ -431,7 +431,7 @@ ProjectileSystem.rpc_projectile_event = function (self, channel_id, go_id, event
 	end
 end
 
-ProjectileSystem.rpc_spawn_pickup_projectile = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, pickup_spawn_type_id, spawn_limit)
+ProjectileSystem.rpc_spawn_pickup_projectile = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, pickup_spawn_type_id, spawn_limit, always_show, objective_active)
 	if not Managers.state.network:game() then
 		return
 	end
@@ -460,16 +460,23 @@ ProjectileSystem.rpc_spawn_pickup_projectile = function (self, channel_id, proje
 	local position = AiAnimUtils.position_network_scale(network_position)
 	local rotation = AiAnimUtils.rotation_network_scale(network_rotation)
 	local pickup_settings = AllPickups[pickup_name]
+	local unit
 	local spawn_override_func = pickup_settings.spawn_override_func
 
 	if spawn_override_func then
-		spawn_override_func(pickup_settings, extension_init_data, position, rotation)
+		unit = spawn_override_func(pickup_settings, extension_init_data, position, rotation)
 	else
-		Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
+		unit = Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
+	end
+
+	if objective_active then
+		local tutorial_extension = ScriptUnit.extension(unit, "tutorial_system")
+
+		tutorial_extension:set_active(true)
 	end
 end
 
-ProjectileSystem.rpc_spawn_pickup_projectile_limited = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, spawner_unit_id, limited_item_id, pickup_spawn_type_id)
+ProjectileSystem.rpc_spawn_pickup_projectile_limited = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, spawner_unit_id, limited_item_id, pickup_spawn_type_id, always_show, objective_active)
 	if not Managers.state.network:game() then
 		return
 	end
@@ -497,15 +504,23 @@ ProjectileSystem.rpc_spawn_pickup_projectile_limited = function (self, channel_i
 		limited_item_track_system = {
 			spawner_unit = spawner_unit,
 			id = limited_item_id
+		},
+		tutorial_system = {
+			always_show = always_show
 		}
 	}
 	local position = AiAnimUtils.position_network_scale(network_position)
 	local rotation = AiAnimUtils.rotation_network_scale(network_rotation)
+	local unit = Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
 
-	Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
+	if objective_active then
+		local tutorial_extension = ScriptUnit.extension(unit, "tutorial_system")
+
+		tutorial_extension:set_active(true)
+	end
 end
 
-ProjectileSystem.rpc_spawn_explosive_pickup_projectile = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, damage, explode_time, fuse_time, attacker_unit_id, item_name_id, pickup_spawn_type_id)
+ProjectileSystem.rpc_spawn_explosive_pickup_projectile = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, damage, explode_time, fuse_time, attacker_unit_id, item_name_id, pickup_spawn_type_id, always_show, objective_active)
 	if not Managers.state.network:game() then
 		return
 	end
@@ -546,15 +561,23 @@ ProjectileSystem.rpc_spawn_explosive_pickup_projectile = function (self, channel
 			item_name = item_name,
 			damage = damage,
 			health_data = explosion_data
+		},
+		tutorial_system = {
+			always_show = always_show
 		}
 	}
 	local position = AiAnimUtils.position_network_scale(network_position)
 	local rotation = AiAnimUtils.rotation_network_scale(network_rotation)
+	local unit = Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
 
-	Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
+	if objective_active then
+		local tutorial_extension = ScriptUnit.extension(unit, "tutorial_system")
+
+		tutorial_extension:set_active(true)
+	end
 end
 
-ProjectileSystem.rpc_spawn_explosive_pickup_projectile_limited = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, spawner_unit_id, limited_item_id, damage, explode_time, fuse_time, attacker_unit_id, item_name_id, pickup_spawn_type_id)
+ProjectileSystem.rpc_spawn_explosive_pickup_projectile_limited = function (self, channel_id, projectile_unit_name_id, projectile_unit_template_name_id, network_position, network_rotation, network_velocity, network_angular_velocity, pickup_name_id, spawner_unit_id, limited_item_id, damage, explode_time, fuse_time, attacker_unit_id, item_name_id, pickup_spawn_type_id, always_show, objective_active)
 	if not Managers.state.network:game() then
 		return
 	end
@@ -601,12 +624,20 @@ ProjectileSystem.rpc_spawn_explosive_pickup_projectile_limited = function (self,
 		limited_item_track_system = {
 			spawner_unit = spawner_unit,
 			id = limited_item_id
+		},
+		tutorial_system = {
+			always_show = always_show
 		}
 	}
 	local position = AiAnimUtils.position_network_scale(network_position)
 	local rotation = AiAnimUtils.rotation_network_scale(network_rotation)
+	local unit = Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
 
-	Managers.state.unit_spawner:spawn_network_unit(projectile_unit_name, projectile_unit_template_name, extension_init_data, position, rotation)
+	if objective_active then
+		local tutorial_extension = ScriptUnit.extension(unit, "tutorial_system")
+
+		tutorial_extension:set_active(true)
+	end
 end
 
 ProjectileSystem.spawn_true_flight_projectile = function (self, owner_unit, target_unit, true_flight_template_name, position, rotation, angle, target_vector, speed, item_name, item_template_name, action_name, sub_action_name, scale, is_critical_strike, power_level)

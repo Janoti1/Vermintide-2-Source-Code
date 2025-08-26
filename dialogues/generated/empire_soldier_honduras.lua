@@ -1541,7 +1541,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 0.4,
+		probability = 0.3,
 		name = "pes_gameplay_friendly_fire_bright_wizard",
 		response = "pes_gameplay_friendly_fire_bright_wizard",
 		criterias = {
@@ -1580,7 +1580,7 @@ return function ()
 				"last_friendly_fire",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				10
 			}
 		},
 		on_done = {
@@ -1592,7 +1592,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 0.4,
+		probability = 0.3,
 		name = "pes_gameplay_friendly_fire_dwarf_ranger",
 		response = "pes_gameplay_friendly_fire_dwarf_ranger",
 		criterias = {
@@ -1631,7 +1631,7 @@ return function ()
 				"last_friendly_fire",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				10
 			}
 		},
 		on_done = {
@@ -1643,7 +1643,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 0.4,
+		probability = 0.3,
 		name = "pes_gameplay_friendly_fire_witch_hunter",
 		response = "pes_gameplay_friendly_fire_witch_hunter",
 		criterias = {
@@ -1682,7 +1682,7 @@ return function ()
 				"last_friendly_fire",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				10
 			}
 		},
 		on_done = {
@@ -1694,7 +1694,7 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 0.4,
+		probability = 0.3,
 		name = "pes_gameplay_friendly_fire_wood_elf",
 		response = "pes_gameplay_friendly_fire_wood_elf",
 		criterias = {
@@ -1733,7 +1733,7 @@ return function ()
 				"last_friendly_fire",
 				OP.TIMEDIFF,
 				OP.GT,
-				5
+				10
 			}
 		},
 		on_done = {

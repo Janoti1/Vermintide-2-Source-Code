@@ -148,6 +148,10 @@ ScoreboardHelper.scoreboard_topic_stats = {
 			},
 			{
 				"damage_dealt_per_breed",
+				"chaos_troll_chief"
+			},
+			{
+				"damage_dealt_per_breed",
 				"beastmen_minotaur"
 			}
 		},

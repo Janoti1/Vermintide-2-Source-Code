@@ -860,7 +860,7 @@ local action_data = {
 		rotation_time = 0,
 		fatigue_type = "blocked_slam",
 		shove_z_speed = 4,
-		bot_threat_duration = 0.75,
+		bot_threat_duration = 1.2,
 		damage_type = "cutting",
 		offset_up = -0.6,
 		attack_anim = "attack_push_back",
@@ -1083,7 +1083,6 @@ local action_data = {
 				{
 					height = 2,
 					offset_forward = 1,
-					duration = 1.5333333333333334,
 					offset_up = 0,
 					width = 4.5,
 					start_time = 0
@@ -1093,7 +1092,6 @@ local action_data = {
 				{
 					height = 2,
 					offset_forward = 1,
-					duration = 1.5333333333333334,
 					offset_up = 0,
 					width = 4.5,
 					start_time = 0
@@ -1103,7 +1101,6 @@ local action_data = {
 				{
 					height = 2,
 					offset_forward = 1,
-					duration = 1.8666666666666667,
 					offset_up = 0,
 					width = 4.5,
 					start_time = 0.6
@@ -1113,7 +1110,6 @@ local action_data = {
 				{
 					height = 2,
 					offset_forward = 1,
-					duration = 1.8666666666666667,
 					offset_up = 0,
 					width = 4.5,
 					start_time = 0.4666666666666667
@@ -1123,7 +1119,6 @@ local action_data = {
 				{
 					height = 2,
 					offset_forward = 1,
-					duration = 1.8666666666666667,
 					offset_up = 0,
 					width = 4.5,
 					start_time = 0.6

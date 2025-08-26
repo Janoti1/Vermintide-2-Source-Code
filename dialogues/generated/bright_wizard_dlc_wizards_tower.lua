@@ -18,12 +18,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"friends_distant",
 				OP.GT,
 				0
@@ -66,12 +60,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
 			}
 		}
 	})
@@ -91,57 +79,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_another_locked_door",
-		response = "pbw_wizard_tower_another_locked_door",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"seen_item"
-			},
-			{
-				"query_context",
-				"item_tag",
-				OP.EQ,
-				"wizard_tower_another_locked_door"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_another_locked_door",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_another_locked_door",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -165,12 +102,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"bright_wizard"
 			},
@@ -221,12 +152,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
@@ -264,12 +189,6 @@ return function ()
 				"wizard_tower_destroy_wards_a_done"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -297,12 +216,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"bright_wizard"
 			},
@@ -352,12 +265,6 @@ return function ()
 				"bright_wizard"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"faction_memory",
 				"wizard_tower_gravity_a",
 				OP.EQ,
@@ -398,12 +305,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
@@ -425,9 +326,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_intro_a",
 		response = "pbw_wizard_tower_intro_a",
+		name = "pbw_wizard_tower_intro_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -436,37 +337,17 @@ return function ()
 				"wizard_tower_intro_a"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"query_context",
 				"source_name",
 				OP.EQ,
 				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_intro_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_intro_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_intro_b",
 		response = "pbw_wizard_tower_intro_b",
+		name = "pbw_wizard_tower_intro_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -481,30 +362,10 @@ return function ()
 				"wizard_tower_intro_a"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
 				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_intro_b",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_intro_b",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -526,12 +387,6 @@ return function ()
 				"wizard_tower_intro_b"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -554,9 +409,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_jungle",
 		response = "pbw_wizard_tower_jungle",
+		name = "pbw_wizard_tower_jungle",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -575,33 +430,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_jungle",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_jungle",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_leap_of_faith",
 		response = "pbw_wizard_tower_leap_of_faith",
+		name = "pbw_wizard_tower_leap_of_faith",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -623,36 +458,16 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
-			},
-			{
-				"faction_memory",
-				"wizard_tower_leap_of_faith",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_leap_of_faith",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_library",
 		response = "pbw_wizard_tower_library",
+		name = "pbw_wizard_tower_library",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -674,29 +489,9 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
-			},
-			{
-				"faction_memory",
-				"wizard_tower_library",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_library",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -710,12 +505,6 @@ return function ()
 				"concept",
 				OP.EQ,
 				"nsf_wizard_tower_library_two_a_done"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"user_context",
@@ -750,30 +539,12 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
-			},
-			{
-				"faction_memory",
-				"wizard_tower_observatory",
-				OP.EQ,
-				0
 			}
 		},
 		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_observatory",
-				OP.ADD,
-				1
-			},
 			{
 				"faction_memory",
 				"time_since_casual_quotes",
@@ -801,12 +572,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"bright_wizard"
 			},
@@ -852,12 +617,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"bright_wizard"
 			},
@@ -918,12 +677,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.EQ,
 				0
@@ -954,12 +707,6 @@ return function ()
 				"concept",
 				OP.EQ,
 				"wizard_tower_reunion_pbw"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"user_context",
@@ -1008,12 +755,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
@@ -1052,12 +793,6 @@ return function ()
 				"nfl_wizard_tower_scheme_c"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -1091,12 +826,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"bright_wizard"
 			},
@@ -1152,12 +881,6 @@ return function ()
 				"wizard_tower_waste_disposal_a_done"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -1175,63 +898,6 @@ return function ()
 				"concept",
 				OP.EQ,
 				"wizard_tower_welcome_a_done"
-			},
-			{
-				"global_context",
-				"bright_wizard",
-				OP.EQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_welcome_b",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_welcome_b",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_wizard_tower_welcome_b_alt",
-		response = "pbw_wizard_tower_welcome_b_alt",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"wizard_tower_welcome_a_done"
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"user_context",
@@ -1273,12 +939,6 @@ return function ()
 				"pes_wizard_tower_welcome_c_01"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -1296,12 +956,6 @@ return function ()
 				"concept",
 				OP.EQ,
 				"wizard_tower_where_is_she_a"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"query_context",
@@ -1343,12 +997,6 @@ return function ()
 				"wizard_tower_where_is_she_a"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -1386,12 +1034,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pbw_wizard_tower_welcome_b_05"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
 			},
 			{
 				"user_context",
@@ -1469,45 +1111,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 0.20000000298023
-			}
-		},
-		pbw_wizard_tower_another_locked_door = {
-			randomize_indexes_n = 0,
-			face_animations_n = 4,
-			database = "bright_wizard_dlc_wizards_tower",
-			sound_events_n = 4,
-			category = "level_talk",
-			dialogue_animations_n = 4,
-			dialogue_animations = {
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk"
-			},
-			face_animations = {
-				"face_calm",
-				"face_calm",
-				"face_calm",
-				"face_calm"
-			},
-			localization_strings = {
-				"pbw_wizard_tower_another_locked_door_01",
-				"pbw_wizard_tower_another_locked_door_02",
-				"pbw_wizard_tower_another_locked_door_03",
-				"pbw_wizard_tower_another_locked_door_04"
-			},
-			randomize_indexes = {},
-			sound_events = {
-				"pbw_wizard_tower_another_locked_door_01",
-				"pbw_wizard_tower_another_locked_door_02",
-				"pbw_wizard_tower_another_locked_door_03",
-				"pbw_wizard_tower_another_locked_door_04"
-			},
-			sound_events_duration = {
-				1.7399791479111,
-				1.7809791564941,
-				2.9269790649414,
-				2.1429791450501
 			}
 		},
 		pbw_wizard_tower_bones = {
@@ -2340,12 +1943,13 @@ return function ()
 		},
 		pbw_wizard_tower_welcome_b = {
 			randomize_indexes_n = 0,
-			face_animations_n = 4,
+			face_animations_n = 5,
 			database = "bright_wizard_dlc_wizards_tower",
-			sound_events_n = 4,
+			sound_events_n = 5,
 			category = "level_talk",
-			dialogue_animations_n = 4,
+			dialogue_animations_n = 5,
 			dialogue_animations = {
+				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
 				"dialogue_talk",
@@ -2355,48 +1959,40 @@ return function ()
 				"face_calm",
 				"face_calm",
 				"face_calm",
+				"face_calm",
 				"face_calm"
 			},
 			localization_strings = {
 				"pbw_wizard_tower_welcome_b_01",
 				"pbw_wizard_tower_welcome_b_02",
 				"pbw_wizard_tower_welcome_b_03",
-				"pbw_wizard_tower_welcome_b_04"
+				"pbw_wizard_tower_welcome_b_04",
+				"pbw_wizard_tower_welcome_b_05"
 			},
 			randomize_indexes = {},
+			sound_event_filters = {
+				pbw_wizard_tower_welcome_b_05 = {
+					{
+						"global_context",
+						"empire_soldier",
+						OP.EQ,
+						false
+					}
+				}
+			},
 			sound_events = {
 				"pbw_wizard_tower_welcome_b_01",
 				"pbw_wizard_tower_welcome_b_02",
 				"pbw_wizard_tower_welcome_b_03",
-				"pbw_wizard_tower_welcome_b_04"
+				"pbw_wizard_tower_welcome_b_04",
+				"pbw_wizard_tower_welcome_b_05"
 			},
 			sound_events_duration = {
 				2.1080000400543,
 				3.0719792842865,
 				3.7539999485016,
-				3.1239790916443
-			}
-		},
-		pbw_wizard_tower_welcome_b_alt = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "bright_wizard_dlc_wizards_tower",
-			category = "level_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_calm"
-			},
-			localization_strings = {
-				[1] = "pbw_wizard_tower_welcome_b_05"
-			},
-			sound_events = {
-				[1] = "pbw_wizard_tower_welcome_b_05"
-			},
-			sound_events_duration = {
-				[1] = 3.930999994278
+				3.1239790916443,
+				3.930999994278
 			}
 		},
 		pbw_wizard_tower_welcome_d = {

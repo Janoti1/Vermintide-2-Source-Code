@@ -2356,7 +2356,7 @@ return function ()
 				[1] = "ecm_gameplay_running_towards_players"
 			},
 			sound_events_duration = {
-				[1] = 2.7142012417316
+				[1] = 2.6622343957424
 			}
 		},
 		ecr_gameplay_attacking_bright_wizard_backstab_celebration_level = {
@@ -2860,7 +2860,7 @@ return function ()
 				[1] = "ecr_gameplay_land"
 			},
 			sound_events_duration = {
-				[1] = 0.66479074954987
+				[1] = 0.65106110274792
 			}
 		},
 		ecr_gameplay_player_knocked_down_celebration_level = {
@@ -4509,7 +4509,7 @@ return function ()
 				[1] = "Play_plague_monk_running_vce"
 			},
 			sound_events_duration = {
-				[1] = 4.3576783537865
+				[1] = 3.6055112481117
 			}
 		},
 		epm_gameplay_startled_celebration_level = {
@@ -4531,7 +4531,7 @@ return function ()
 				[1] = "Play_plague_monk_alerted_vce"
 			},
 			sound_events_duration = {
-				[1] = 4.3576783537865
+				[1] = 3.6055112481117
 			}
 		},
 		epwg_gameplay_begin_suicide_run_celebration_level = {
@@ -4987,7 +4987,7 @@ return function ()
 				[1] = "esr_gameplay_land"
 			},
 			sound_events_duration = {
-				[1] = 0.66479074954987
+				[1] = 0.65106110274792
 			}
 		},
 		esr_gameplay_player_knocked_down_celebration_level = {

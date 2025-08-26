@@ -509,7 +509,12 @@ StartGameStateSettingsOverview.set_layout_by_name = function (self, name)
 
 	local index = table.find_by_key(self._window_layouts, "name", name)
 
-	fassert(index, "[StartGameStateSettingsOverview]:set_layout_by_name() - Could not find a layout with name %s", name)
+	if not index then
+		ferror("[StartGameStateSettingsOverview]:set_layout_by_name() - Could not find a layout with name %s. Layouts: (%s)", name, table.concat(table.select_array(self._window_layouts, function (_, l)
+			return l.name
+		end), ", "))
+	end
+
 	self:set_layout(index)
 end
 
@@ -567,13 +572,13 @@ StartGameStateSettingsOverview.set_layout = function (self, index)
 
 	local close_on_exit = layout_setting.close_on_exit
 	local reset_on_exit = layout_setting.reset_on_exit
-	local var_36_0 = self._widgets_by_name.exit_button.content
+	local var_37_0 = self._widgets_by_name.exit_button.content
 
 	if reset_on_exit then
 		-- Nothing
 	end
 
-	var_36_0.visible = close_on_exit
+	var_37_0.visible = close_on_exit
 	self._widgets_by_name.back_button.content.visible = reset_on_exit or not close_on_exit
 	self._close_on_exit = close_on_exit
 	self._reset_on_exit = reset_on_exit

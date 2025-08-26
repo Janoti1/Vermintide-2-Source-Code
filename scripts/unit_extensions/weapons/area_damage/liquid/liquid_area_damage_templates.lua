@@ -201,6 +201,102 @@ LiquidAreaDamageTemplates.templates = {
 			end
 		end
 	},
+	bile_troll_chief_downed_vomit = {
+		do_direct_damage_ai = true,
+		sfx_name_stop = "Stop_enemy_troll_puke_loop",
+		cell_size = 1,
+		liquid_spread_function = "pour_spread",
+		starting_pressure = 30,
+		apply_buff_to_player = true,
+		do_direct_damage_player = false,
+		buff_template_name = "bile_troll_vomit_ground_downed",
+		linearized_flow = false,
+		damage_type = "vomit_ground",
+		sfx_name_start = "Play_enemy_troll_puke_loop",
+		init_function = "bile_troll_vomit_init",
+		end_pressure = 3,
+		fx_name_filled = "fx/wpnfx_troll_vomit_impact_01",
+		apply_buff_to_ai = false,
+		time_of_life = 7,
+		max_liquid = 160,
+		update_function = "bile_troll_vomit_update",
+		use_nav_cost_map_volumes = true,
+		buff_template_type = "troll_bile_ground",
+		nav_cost_map_cost_type = "troll_bile",
+		buff_condition_function = "bile_troll_vomit_ground_base_condition",
+		immune_breeds = {
+			chaos_troll = true,
+			chaos_dummy_troll = true,
+			chaos_spawn = true,
+			skaven_rat_ogre = true,
+			skaven_stormfiend = true
+		},
+		difficulty_direct_damage = {
+			easy = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			normal = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			hard = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			harder = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			hardest = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			cataclysm = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			cataclysm_2 = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			cataclysm_3 = {
+				1,
+				1,
+				0,
+				0,
+				1
+			},
+			versus_base = {
+				1,
+				1,
+				0,
+				0,
+				1
+			}
+		}
+	},
 	vs_bile_troll_vomit_near = {
 		do_direct_damage_ai = true,
 		sfx_name_stop = "Stop_enemy_troll_puke_loop",
@@ -1006,6 +1102,10 @@ LiquidAreaDamageTemplates.templates = {
 		}
 	}
 }
+LiquidAreaDamageTemplates.templates.troll_chief_vomit = table.clone(LiquidAreaDamageTemplates.templates.bile_troll_vomit)
+LiquidAreaDamageTemplates.templates.troll_chief_vomit.fx_name_filled = "fx/wpnfx_troll_chief_vomit_impact_01"
+LiquidAreaDamageTemplates.templates.troll_chief_vomit_near = table.clone(LiquidAreaDamageTemplates.templates.bile_troll_vomit_near)
+LiquidAreaDamageTemplates.templates.troll_chief_vomit_near.fx_name_filled = "fx/wpnfx_troll_chief_vomit_impact_01"
 
 LiquidAreaDamageTemplates.pour_spread = function (angle)
 	return 1

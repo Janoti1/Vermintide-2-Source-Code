@@ -490,8 +490,11 @@ player.kills_critter_total = {
 	sync_on_hot_join = true
 }
 player.kills_per_breed = {}
+player.kills_per_breed_persistent = {}
+player.kills_per_breed_difficulty = {}
 player.kills_per_race = {}
 player.kill_assists_per_breed = {}
+player.kill_assists_per_breed_difficulty = {}
 player.damage_taken = {
 	value = 0,
 	sync_on_hot_join = true
@@ -505,6 +508,17 @@ player.completed_career_levels = {}
 player.played_difficulty = {}
 player.weapon_kills_per_breed = {}
 player.mission_streak = {}
+player.dwarf_fest_secret_trolls_killed = {
+	first = {
+		value = 0
+	},
+	second = {
+		value = 0
+	},
+	third = {
+		value = 0
+	}
+}
 player.completed_daily_quests = {
 	value = 0,
 	database_name = "completed_daily_quests",
@@ -602,6 +616,11 @@ for breed_name, breed in pairs(Breeds) do
 		sync_on_hot_join = true,
 		name = breed_name
 	}
+	player.kills_per_breed_persistent[breed_name] = {
+		value = 0,
+		source = "player_data",
+		database_name = "kills_per_breed_persistent_" .. breed_name
+	}
 	player.kill_assists_per_breed[breed_name] = {
 		value = 0,
 		name = breed_name
@@ -619,6 +638,20 @@ for breed_name, breed in pairs(Breeds) do
 			name = race
 		}
 	end
+
+	player.kills_per_breed_difficulty[breed_name] = {}
+	player.kill_assists_per_breed_difficulty[breed_name] = {}
+
+	local difficulties = DifficultySettings
+
+	for difficulty_name in pairs(difficulties) do
+		player.kills_per_breed_difficulty[breed_name][difficulty_name] = {
+			value = 0
+		}
+		player.kill_assists_per_breed_difficulty[breed_name][difficulty_name] = {
+			value = 0
+		}
+	end
 end
 
 for breed_name, breed in pairs(PlayerBreeds) do
@@ -634,6 +667,11 @@ for breed_name, breed in pairs(PlayerBreeds) do
 	player.damage_dealt_per_breed[breed_name] = {
 		value = 0,
 		name = breed_name
+	}
+	player.kills_per_breed_persistent[breed_name] = {
+		value = 0,
+		source = "player_data",
+		database_name = "kills_per_breed_persistent_" .. breed_name
 	}
 	player.damage_dealt_as_breed[breed_name] = {
 		value = 0,
@@ -654,6 +692,20 @@ for breed_name, breed in pairs(PlayerBreeds) do
 		player.kills_per_race[race] = {
 			value = 0,
 			name = race
+		}
+	end
+
+	player.kills_per_breed_difficulty[breed_name] = {}
+	player.kill_assists_per_breed_difficulty[breed_name] = {}
+
+	local difficulties = DifficultySettings
+
+	for difficulty_name in pairs(difficulties) do
+		player.kills_per_breed_difficulty[breed_name][difficulty_name] = {
+			value = 0
+		}
+		player.kill_assists_per_breed_difficulty[breed_name][difficulty_name] = {
+			value = 0
 		}
 	end
 end

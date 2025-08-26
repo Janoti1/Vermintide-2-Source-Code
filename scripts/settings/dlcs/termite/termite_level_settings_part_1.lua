@@ -1,7 +1,7 @@
 local settings = DLCSettings.termite_part_1
 
 settings.level_settings = "levels/honduras_dlcs/termite/level_settings_termite_part_1"
-settings.level_unlock_settings = "levels/honduras_dlcs/termite/level_unlock_settings_termite_part_1"
+settings.level_unlock_settings = "levels/honduras_dlcs/termite/level_unlock_settings_termite"
 settings.missions = {
 	termite_lvl1_follow_stream = {
 		mission_template_name = "goal",

@@ -3269,6 +3269,18 @@ UIPlayerPortraitFrameSettings = {
 				255
 			}
 		}
+	},
+	frame_dwarf_fest = {
+		{
+			texture = "portrait_frame_dwarf_fest",
+			layer = 10,
+			color = {
+				255,
+				255,
+				255,
+				255
+			}
+		}
 	}
 }
 

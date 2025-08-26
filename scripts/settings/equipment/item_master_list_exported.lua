@@ -13756,3 +13756,18 @@ ItemMasterList.frame_streamer = {
 	item_type = "frame",
 	can_wield = CanWieldAllItemTemplates
 }
+ItemMasterList.frame_dwarf_fest = {
+	description = "frame_dwarf_fest_description",
+	temporary_template = "frame_dwarf_fest",
+	display_name = "frame_dwarf_fest_name",
+	hud_icon = "unit_frame_02",
+	inventory_icon = "icon_portrait_frame_dwarf_fest",
+	slot_type = "frame",
+	information_text = "information_text_frame",
+	rarity = "promo",
+	item_type = "frame",
+	can_wield = CanWieldAllItemTemplates,
+	events = {
+		"dwarf_fest_2025"
+	}
+}

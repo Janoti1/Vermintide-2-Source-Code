@@ -18,12 +18,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"friends_distant",
 				OP.GT,
 				0
@@ -66,12 +60,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
 			}
 		}
 	})
@@ -91,19 +79,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_tower_npc_intro_dummy_trigger",
 		response = "pdr_tower_npc_intro_dummy_trigger",
+		name = "pdr_tower_npc_intro_dummy_trigger",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -116,76 +98,6 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_intro_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_intro_a",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_wizard_tower_another_locked_door",
-		response = "pdr_wizard_tower_another_locked_door",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"seen_item"
-			},
-			{
-				"query_context",
-				"item_tag",
-				OP.EQ,
-				"wizard_tower_another_locked_door"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_another_locked_door",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_another_locked_door",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"time_since_casual_quotes",
-				OP.TIMESET
 			}
 		}
 	})
@@ -209,12 +121,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
 			},
@@ -265,12 +171,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
@@ -308,12 +208,6 @@ return function ()
 				"wizard_tower_destroy_wards_a_done"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -341,12 +235,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
 			},
@@ -396,12 +284,6 @@ return function ()
 				"dwarf_ranger"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
 				"faction_memory",
 				"wizard_tower_gravity_a",
 				OP.EQ,
@@ -442,12 +324,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
@@ -469,9 +345,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_wizard_tower_intro_a",
 		response = "pdr_wizard_tower_intro_a",
+		name = "pdr_wizard_tower_intro_a",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -480,37 +356,17 @@ return function ()
 				"wizard_tower_intro_a"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
 				"query_context",
 				"source_name",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_intro_a",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_intro_a",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_wizard_tower_intro_b",
 		response = "pdr_wizard_tower_intro_b",
+		name = "pdr_wizard_tower_intro_b",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -525,30 +381,10 @@ return function ()
 				"wizard_tower_intro_a"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_intro_b",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_intro_b",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -570,12 +406,6 @@ return function ()
 				"wizard_tower_intro_b"
 			},
 			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
 				"user_context",
 				"player_profile",
 				OP.EQ,
@@ -598,9 +428,9 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_wizard_tower_jungle",
 		response = "pdr_wizard_tower_jungle",
+		name = "pdr_wizard_tower_jungle",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -619,33 +449,13 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"wizard_tower_jungle",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_jungle",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_wizard_tower_leap_of_faith",
 		response = "pdr_wizard_tower_leap_of_faith",
+		name = "pdr_wizard_tower_leap_of_faith",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -667,36 +477,16 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
-			},
-			{
-				"faction_memory",
-				"wizard_tower_leap_of_faith",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_leap_of_faith",
-				OP.ADD,
-				1
 			}
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pdr_wizard_tower_library",
 		response = "pdr_wizard_tower_library",
+		name = "pdr_wizard_tower_library",
+		probability = 1,
 		criterias = {
 			{
 				"query_context",
@@ -718,29 +508,9 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
-			},
-			{
-				"faction_memory",
-				"wizard_tower_library",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"wizard_tower_library",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -769,29 +539,16 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.LT,
 				3
-			},
-			{
-				"faction_memory",
-				"wizard_tower_observatory",
-				OP.EQ,
-				0
 			}
 		},
 		on_done = {
 			{
 				"faction_memory",
-				"wizard_tower_observatory",
-				OP.ADD,
-				1
+				"time_since_casual_quotes",
+				OP.TIMESET
 			}
 		}
 	})
@@ -815,12 +572,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
 			},
@@ -866,12 +617,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
 			},
@@ -932,12 +677,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.EQ,
 				0
@@ -978,12 +717,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
 			},
@@ -1040,12 +773,6 @@ return function ()
 			},
 			{
 				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
 				"enemies_close",
 				OP.EQ,
 				0
@@ -1096,12 +823,6 @@ return function ()
 				"wizard_tower_where_is_she_a"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
 				"query_context",
 				"source_name",
 				OP.EQ,
@@ -1139,12 +860,6 @@ return function ()
 				"dialogue_name_nopre",
 				OP.EQ,
 				"wizard_tower_where_is_she_a"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
 			},
 			{
 				"user_context",
@@ -1259,45 +974,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 0.20000000298023
-			}
-		},
-		pdr_wizard_tower_another_locked_door = {
-			randomize_indexes_n = 0,
-			face_animations_n = 4,
-			database = "dwarf_ranger_dlc_wizards_tower",
-			sound_events_n = 4,
-			category = "level_talk",
-			dialogue_animations_n = 4,
-			dialogue_animations = {
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk",
-				"dialogue_talk"
-			},
-			face_animations = {
-				"face_calm",
-				"face_calm",
-				"face_calm",
-				"face_calm"
-			},
-			localization_strings = {
-				"pdr_wizard_tower_another_locked_door_01",
-				"pdr_wizard_tower_another_locked_door_02",
-				"pdr_wizard_tower_another_locked_door_03",
-				"pdr_wizard_tower_another_locked_door_04"
-			},
-			randomize_indexes = {},
-			sound_events = {
-				"pdr_wizard_tower_another_locked_door_01",
-				"pdr_wizard_tower_another_locked_door_02",
-				"pdr_wizard_tower_another_locked_door_03",
-				"pdr_wizard_tower_another_locked_door_04"
-			},
-			sound_events_duration = {
-				1.8229792118073,
-				2.3279790878296,
-				1.7560000419617,
-				5.151978969574
 			}
 		},
 		pdr_wizard_tower_bones = {

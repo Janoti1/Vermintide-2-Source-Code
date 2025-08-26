@@ -110,10 +110,10 @@ local skins = {
 	{
 		name = "we_dual_sword_skin_02_runed_05",
 		data = {
-			description = "we_dual_sword_skin_02_runed_01_description",
+			description = "we_dual_sword_skin_02_runed_05_description",
 			rarity = "unique",
 			right_hand_unit = "units/weapons/player/wpn_we_sword_01_t2/wpn_we_sword_01_t2_runed_01",
-			display_name = "we_dual_sword_skin_02_runed_01_name",
+			display_name = "we_dual_sword_skin_02_runed_05_name",
 			inventory_icon = "icon_we_dual_sword_skin_02_runed_05",
 			left_hand_unit = "units/weapons/player/wpn_we_sword_01_t2/wpn_we_sword_01_t2_runed_01",
 			template = "dual_wield_swords_template_1",

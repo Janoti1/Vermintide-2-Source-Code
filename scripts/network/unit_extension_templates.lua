@@ -689,7 +689,6 @@ local unit_templates = {
 			"PingTargetExtension",
 			"AIGroupMember",
 			"DialogueActorExtension",
-			"AIVolumeExtension",
 			"AIUnitFadeExtension",
 			"AISimpleExtension",
 			"UnitFlowOverrideExtension"
@@ -921,14 +920,12 @@ local unit_templates = {
 			"AIInventoryExtension",
 			"AIEnemySlotExtension",
 			"GenericUnitAimExtension",
-			"SoundSectorExtension",
-			"GenericOutlineExtension"
+			"SoundSectorExtension"
 		},
 		husk_extensions = {
 			"AIInventoryExtension",
 			"GenericUnitAimExtension",
-			"SoundSectorExtension",
-			"GenericOutlineExtension"
+			"SoundSectorExtension"
 		},
 		remove_when_killed = {
 			self_owned_extensions = {
@@ -1555,21 +1552,25 @@ local unit_templates = {
 		self_owned_extensions = {
 			"AIInventoryExtension",
 			"PingTargetExtension",
-			"CorruptorBeamExtension"
+			"CorruptorBeamExtension",
+			"ObjectiveUnitExtension"
 		},
 		husk_extensions = {
 			"AIInventoryExtension",
 			"PingTargetExtension",
-			"CorruptorBeamExtension"
+			"CorruptorBeamExtension",
+			"ObjectiveUnitExtension"
 		},
 		remove_when_killed = {
 			self_owned_extensions = {
 				"PingTargetExtension",
-				"CorruptorBeamExtension"
+				"CorruptorBeamExtension",
+				"ObjectiveUnitExtension"
 			},
 			husk_extensions = {
 				"PingTargetExtension",
-				"CorruptorBeamExtension"
+				"CorruptorBeamExtension",
+				"ObjectiveUnitExtension"
 			}
 		}
 	},
@@ -2210,7 +2211,8 @@ local unit_templates = {
 			"LookatTargetExtension",
 			"ProjectileLinkerExtension",
 			"PickupProjectileVolumeExtension",
-			"PingTargetExtension"
+			"PingTargetExtension",
+			"ObjectiveUnitExtension"
 		},
 		husk_extensions = {
 			"ProjectilePhysicsHuskLocomotionExtension",
@@ -2221,7 +2223,8 @@ local unit_templates = {
 			"PickupOutlineExtension",
 			"LookatTargetExtension",
 			"ProjectileLinkerExtension",
-			"PingTargetExtension"
+			"PingTargetExtension",
+			"ObjectiveUnitExtension"
 		}
 	},
 	interaction_unit = {
@@ -2500,6 +2503,25 @@ local unit_templates = {
 			"PingTargetExtension"
 		}
 	},
+	objective_pickup_unit = {
+		go_type = "objective_pickup_unit",
+		self_owned_extensions = {
+			"PickupUnitExtension",
+			"GenericUnitInteractableExtension",
+			"PickupOutlineExtension",
+			"LookatTargetExtension",
+			"PingTargetExtension",
+			"ObjectiveUnitExtension"
+		},
+		husk_extensions = {
+			"PickupUnitExtension",
+			"GenericUnitInteractableExtension",
+			"PickupOutlineExtension",
+			"LookatTargetExtension",
+			"PingTargetExtension",
+			"ObjectiveUnitExtension"
+		}
+	},
 	battle_chatter_unit = {
 		self_owned_extensions = {
 			"LookatTargetExtension"
@@ -2565,7 +2587,8 @@ local unit_templates = {
 			"WeaponUnitExtension",
 			"GenericAmmoUserExtension",
 			"ExplosiveBarrelHealthExtension",
-			"GenericDeathExtension"
+			"GenericDeathExtension",
+			"ObjectiveUnitExtension"
 		}
 	},
 	explosive_weapon_unit_ammo_limited = {
@@ -2574,7 +2597,8 @@ local unit_templates = {
 			"GenericAmmoUserExtension",
 			"HeldLimitedItemExtension",
 			"ExplosiveBarrelHealthExtension",
-			"GenericDeathExtension"
+			"GenericDeathExtension",
+			"ObjectiveUnitExtension"
 		}
 	},
 	weapon_unit_aim = {
@@ -2605,6 +2629,12 @@ local unit_templates = {
 		self_owned_extensions = {
 			"AIInventoryItemExtension",
 			"ProjectileLinkerExtension"
+		}
+	},
+	ai_skin_unit = {
+		go_type = "ai_inventory_item",
+		self_owned_extensions = {
+			"AIInventoryItemExtension"
 		}
 	},
 	ai_outfit_unit = {
@@ -2701,6 +2731,9 @@ local unit_templates = {
 			"DialogueActorExtension",
 			"GlobalObserverExtension"
 		}
+	},
+	explosive_barrel_socket = {
+		go_type = "explosive_barrel_socket"
 	}
 }
 

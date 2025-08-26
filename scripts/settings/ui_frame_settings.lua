@@ -1272,5 +1272,26 @@ UIFrameSettings = {
 				0
 			}
 		}
+	},
+	boss_hp_bar_heal_flash = {
+		texture = "boss_hp_bar_heal_flash",
+		texture_size = {
+			440,
+			40
+		},
+		texture_sizes = {
+			corner = {
+				13,
+				13
+			},
+			vertical = {
+				13,
+				14
+			},
+			horizontal = {
+				414,
+				13
+			}
+		}
 	}
 }

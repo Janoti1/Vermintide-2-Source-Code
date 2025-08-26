@@ -10,12 +10,6 @@ local function enemy_unit_common_extractor(unit, game_session, game_object_id)
 
 	Unit.set_data(unit, "breed", breed)
 
-	local level_settings = LevelSettings[Managers.state.game_mode:level_key()]
-	local climate_type = level_settings.climate_type or "default"
-
-	Unit.set_flow_variable(unit, "climate_type", climate_type)
-	Unit.flow_event(unit, "climate_type_set")
-
 	local side_id = GameSession.game_object_field(game_session, game_object_id, "side_id")
 
 	return breed, breed_name, side_id
@@ -1161,9 +1155,7 @@ go_type_table = {
 			local limited_item_extension = ScriptUnit.extension(unit, "limited_item_track_system")
 			local spawner_unit = limited_item_extension.spawner_unit
 			local id = limited_item_extension.id
-			local world = gameobject_functor_context.world
-			local level = LevelHelper:current_level(world)
-			local spawner_unit_index = spawner_unit and Level.unit_index(level, spawner_unit) or NetworkConstants.invalid_game_object_id
+			local spawner_unit_index, spawner_unit_is_level_unit = Managers.state.network:game_object_or_level_id(spawner_unit)
 			local data_table = {
 				go_type = NetworkLookup.go_types.pickup_projectile_unit_limited,
 				husk_unit = NetworkLookup.husks[unit_name],
@@ -1174,7 +1166,8 @@ go_type_table = {
 				network_velocity = network_velocity,
 				network_angular_velocity = network_angular_velocity,
 				debug_pos = Unit.local_position(unit, 0),
-				spawner_unit = spawner_unit_index,
+				spawner_unit = spawner_unit_index or NetworkConstants.invalid_game_object_id,
+				spawner_unit_is_level_unit = spawner_unit_is_level_unit or false,
 				limited_item_id = id,
 				pickup_name = NetworkLookup.pickup_names[pickup_name],
 				owner_peer_id = owner_peer_id,
@@ -1199,6 +1192,8 @@ go_type_table = {
 			local death_extension = ScriptUnit.extension(unit, "death_system")
 			local explode_time = 0
 			local fuse_time = 0
+			local tutorial_extension = ScriptUnit.extension(unit, "tutorial_system")
+			local always_show = tutorial_extension.always_show or false
 
 			if health_extension.ignited then
 				local data = health_extension:health_data()
@@ -1224,7 +1219,8 @@ go_type_table = {
 				damage = damage,
 				explode_time = explode_time,
 				fuse_time = fuse_time,
-				item_name = NetworkLookup.item_names[item_name]
+				item_name = NetworkLookup.item_names[item_name],
+				always_show = always_show
 			}
 
 			return data_table
@@ -1247,6 +1243,8 @@ go_type_table = {
 			local death_extension = ScriptUnit.extension(unit, "death_system")
 			local explode_time = 0
 			local fuse_time = 0
+			local tutorial_extension = ScriptUnit.extension(unit, "tutorial_system")
+			local always_show = tutorial_extension.always_show or false
 
 			if health_extension.ignited then
 				local data = health_extension:health_data()
@@ -1256,9 +1254,7 @@ go_type_table = {
 			end
 
 			local item_name = death_extension.item_name or AllPickups[pickup_name].item_name
-			local world = gameobject_functor_context.world
-			local level = LevelHelper:current_level(world)
-			local spawner_unit_index = spawner_unit and Level.unit_index(level, spawner_unit) or NetworkConstants.invalid_game_object_id
+			local spawner_unit_index, spawner_unit_is_level_unit = Managers.state.network:game_object_or_level_id(spawner_unit)
 			local data_table = {
 				go_type = NetworkLookup.go_types.explosive_pickup_projectile_unit_limited,
 				husk_unit = NetworkLookup.husks[unit_name],
@@ -1272,12 +1268,14 @@ go_type_table = {
 				pickup_name = NetworkLookup.pickup_names[pickup_name],
 				has_physics = has_physics,
 				spawn_type = NetworkLookup.pickup_spawn_types[spawn_type],
-				spawner_unit = spawner_unit_index,
+				spawner_unit = spawner_unit_index or NetworkConstants.invalid_game_object_id,
+				spawner_unit_is_level_unit = spawner_unit_is_level_unit or false,
 				limited_item_id = id,
 				damage = damage,
 				explode_time = explode_time,
 				fuse_time = fuse_time,
-				item_name = NetworkLookup.item_names[item_name]
+				item_name = NetworkLookup.item_names[item_name],
+				always_show = always_show
 			}
 
 			return data_table
@@ -1503,6 +1501,7 @@ go_type_table = {
 			local area_damage_template = area_damage_system.area_damage_template
 			local source_attacker_unit = area_damage_system.source_attacker_unit
 			local network_manager = Managers.state.network
+			local impact_unit, impact_unit_is_level_unit = network_manager:game_object_or_level_id(impact_hit_unit)
 			local data_table = {
 				go_type = NetworkLookup.go_types.aoe_projectile_unit_fixed_impact,
 				husk_unit = NetworkLookup.husks[unit_name],
@@ -1515,7 +1514,8 @@ go_type_table = {
 				owner_unit = network_manager:unit_game_object_id(owner_unit),
 				impact_position = impact_position,
 				impact_time = impact_time,
-				impact_unit = network_manager:game_object_or_level_id(impact_hit_unit),
+				impact_unit = impact_unit or NetworkConstants.invalid_game_object_id,
+				impact_unit_is_level_unit = impact_unit_is_level_unit or false,
 				impact_actor = impact_actor_index,
 				impact_direction = impact_direction,
 				impact_normal = impact_normal,
@@ -1851,12 +1851,15 @@ go_type_table = {
 			local pickup_name = pickup_system.pickup_name
 			local has_physics = pickup_system.has_physics
 			local spawn_type = pickup_system.spawn_type
+			local tutorial_extension = ScriptUnit.has_extension(unit, "tutorial_system")
+			local always_show = tutorial_extension and tutorial_extension.always_show or false
 			local data_table = {
 				go_type = NetworkLookup.go_types.objective_pickup_unit,
 				husk_unit = NetworkLookup.husks[unit_name],
 				pickup_name = NetworkLookup.pickup_names[pickup_name],
 				has_physics = has_physics,
 				spawn_type = NetworkLookup.pickup_spawn_types[spawn_type],
+				always_show = always_show,
 				position = Unit.local_position(unit, 0),
 				rotation = Unit.local_rotation(unit, 0)
 			}
@@ -2065,6 +2068,14 @@ go_type_table = {
 			}
 
 			return data_table
+		end,
+		explosive_barrel_socket = function (unit, unit_name, unit_template, gameobject_functor_context)
+			return {
+				position = Unit.local_position(unit, 0),
+				rotation = Unit.local_rotation(unit, 0),
+				go_type = NetworkLookup.go_types.explosive_barrel_socket,
+				husk_unit = NetworkLookup.husks[unit_name]
+			}
 		end
 	},
 	extractors = {
@@ -2903,7 +2914,8 @@ go_type_table = {
 					game = game_session
 				},
 				health_system = {
-					health = health
+					health = health,
+					breed = breed
 				},
 				death_system = {
 					is_husk = true,
@@ -3580,9 +3592,6 @@ go_type_table = {
 			local extension_init_data = {
 				objective_system = {
 					objective_name = NetworkLookup.objective_names[objective_name]
-				},
-				objective_socket_system = {
-					use_game_object_id = true
 				}
 			}
 			local unit_template_name = "weave_doom_wheel"
@@ -3662,10 +3671,9 @@ go_type_table = {
 			local has_physics = GameSession.game_object_field(game_session, go_id, "has_physics")
 			local spawn_type = GameSession.game_object_field(game_session, go_id, "spawn_type")
 			local spawner_unit_index = GameSession.game_object_field(game_session, go_id, "spawner_unit")
+			local spawner_unit_is_level_unit = GameSession.game_object_field(game_session, go_id, "spawner_unit_is_level_unit")
 			local limited_item_id = GameSession.game_object_field(game_session, go_id, "limited_item_id")
-			local world = gameobject_functor_context.world
-			local level = LevelHelper:current_level(world)
-			local spawner_unit = spawner_unit_index ~= NetworkConstants.invalid_game_object_id and Level.unit_by_index(level, spawner_unit_index) or nil
+			local spawner_unit = Managers.state.network:game_object_or_level_unit(spawner_unit_index, spawner_unit_is_level_unit)
 			local extension_init_data = {
 				projectile_locomotion_system = {
 					network_position = network_position,
@@ -3700,6 +3708,7 @@ go_type_table = {
 			local explode_time = GameSession.game_object_field(game_session, go_id, "explode_time")
 			local fuse_time = GameSession.game_object_field(game_session, go_id, "fuse_time")
 			local item_name_id = GameSession.game_object_field(game_session, go_id, "item_name")
+			local always_show = GameSession.game_object_field(game_session, go_id, "always_show")
 			local explosion_data
 
 			if explode_time ~= 0 then
@@ -3730,6 +3739,9 @@ go_type_table = {
 				death_system = {
 					in_hand = false,
 					item_name = NetworkLookup.item_names[item_name_id]
+				},
+				tutorial_system = {
+					always_show = always_show
 				}
 			}
 			local unit_template_name = "explosive_pickup_projectile_unit"
@@ -3745,6 +3757,7 @@ go_type_table = {
 			local has_physics = GameSession.game_object_field(game_session, go_id, "has_physics")
 			local spawn_type = GameSession.game_object_field(game_session, go_id, "spawn_type")
 			local spawner_unit_index = GameSession.game_object_field(game_session, go_id, "spawner_unit")
+			local spawner_unit_is_level_unit = GameSession.game_object_field(game_session, go_id, "spawner_unit_is_level_unit")
 			local limited_item_id = GameSession.game_object_field(game_session, go_id, "limited_item_id")
 			local damage = GameSession.game_object_field(game_session, go_id, "damage")
 			local explode_time = GameSession.game_object_field(game_session, go_id, "explode_time")
@@ -3761,7 +3774,7 @@ go_type_table = {
 
 			local world = gameobject_functor_context.world
 			local level = LevelHelper:current_level(world)
-			local spawner_unit = spawner_unit_index ~= NetworkConstants.invalid_game_object_id and Level.unit_by_index(level, spawner_unit_index) or nil
+			local spawner_unit = Managers.state.network:game_object_or_level_unit(spawner_unit_index, spawner_unit_is_level_unit)
 			local extension_init_data = {
 				projectile_locomotion_system = {
 					network_position = network_position,
@@ -4025,6 +4038,7 @@ go_type_table = {
 			local impact_normal = GameSession.game_object_field(game_session, go_id, "impact_normal")
 			local impact_direction = GameSession.game_object_field(game_session, go_id, "impact_direction")
 			local impact_hit_unit_id = GameSession.game_object_field(game_session, go_id, "impact_unit")
+			local impact_unit_is_level_unit = GameSession.game_object_field(game_session, go_id, "impact_unit_is_level_unit")
 			local impact_actor_index = GameSession.game_object_field(game_session, go_id, "impact_actor")
 			local impact_time = GameSession.game_object_field(game_session, go_id, "impact_time")
 			local impact_template_name = GameSession.game_object_field(game_session, go_id, "impact_template_name")
@@ -4044,7 +4058,7 @@ go_type_table = {
 			local impact_data = {
 				position = Vector3Box(impact_position),
 				direction = Vector3Box(impact_direction),
-				hit_unit = Managers.state.network:game_object_or_level_unit(impact_hit_unit_id, true),
+				hit_unit = Managers.state.network:game_object_or_level_unit(impact_hit_unit_id, impact_unit_is_level_unit),
 				actor_index = impact_actor_index,
 				hit_normal = Vector3Box(impact_normal),
 				time = impact_time
@@ -4414,11 +4428,15 @@ go_type_table = {
 			local pickup_name = GameSession.game_object_field(game_session, go_id, "pickup_name")
 			local has_physics = GameSession.game_object_field(game_session, go_id, "has_physics")
 			local spawn_type = GameSession.game_object_field(game_session, go_id, "spawn_type")
+			local always_show = GameSession.game_object_field(game_session, go_id, "always_show")
 			local extension_init_data = {
 				pickup_system = {
 					pickup_name = NetworkLookup.pickup_names[pickup_name],
 					has_physics = has_physics,
 					spawn_type = NetworkLookup.pickup_spawn_types[spawn_type]
+				},
+				tutorial_system = {
+					always_show = always_show
 				}
 			}
 			local unit_template_name = "objective_pickup_unit"
@@ -4635,6 +4653,12 @@ go_type_table = {
 				}
 			}
 			local unit_template_name = "dialogue_node"
+
+			return unit_template_name, extension_init_data
+		end,
+		explosive_barrel_socket = function (game_session, go_id, owner_id, unit, gameobject_functor_context)
+			local extension_init_data = {}
+			local unit_template_name = "explosive_barrel_socket"
 
 			return unit_template_name, extension_init_data
 		end

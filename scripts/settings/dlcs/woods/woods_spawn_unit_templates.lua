@@ -68,7 +68,7 @@ SpawnUnitTemplates.thornsister_thorn_wall_unit = {
 				hit_reaction_template = "level_object"
 			}
 		}
-		local wall_unit = Managers.state.unit_spawner:spawn_network_unit(UNIT_NAME, UNIT_TEMPLATE_NAME, extension_init_data, position, rotation)
+		local wall_unit, wall_go_id = Managers.state.unit_spawner:spawn_network_unit(UNIT_NAME, UNIT_TEMPLATE_NAME, extension_init_data, position, rotation)
 		local random_rotation = Quaternion(Vector3.up(), math.random() * 2 * math.pi - math.pi)
 
 		Unit.set_local_rotation(wall_unit, 0, random_rotation)
@@ -86,6 +86,8 @@ SpawnUnitTemplates.thornsister_thorn_wall_unit = {
 		if thorn_wall_extension then
 			thorn_wall_extension.group_spawn_index = group_spawn_index
 		end
+
+		return wall_unit, wall_go_id
 	end
 }
 SpawnUnitTemplates.vortex_unit = {
@@ -131,6 +133,6 @@ SpawnUnitTemplates.vortex_unit = {
 			}
 		}
 
-		Managers.state.unit_spawner:spawn_network_unit(UNIT_NAME, UNIT_TEMPLATE_NAME, extension_init_data, position, rotation)
+		return Managers.state.unit_spawner:spawn_network_unit(UNIT_NAME, UNIT_TEMPLATE_NAME, extension_init_data, position, rotation)
 	end
 }

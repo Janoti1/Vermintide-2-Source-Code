@@ -72,8 +72,7 @@ settings.buff_function_templates = {
 			local heal_amount = buff_template.heal_amounts[difficulty_level]
 			local new_max_health = max_health + heal_amount * 5
 
-			health_extension:set_max_health(new_max_health)
-
+			new_max_health = health_extension:set_max_health(new_max_health)
 			health_extension._damage_cap_per_hit = new_max_health
 		end
 	end,
@@ -110,8 +109,7 @@ settings.buff_function_templates = {
 			local heal_amount = buff_template.heal_amounts[difficulty_level]
 			local new_max_health = max_health - heal_amount * 5
 
-			health_extension:set_max_health(new_max_health)
-
+			new_max_health = health_extension:set_max_health(new_max_health)
 			health_extension._damage_cap_per_hit = new_max_health
 
 			local attacker_unit = ALIVE[params.attacker_unit] and params.attacker_unit or unit

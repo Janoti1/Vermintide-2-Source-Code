@@ -101,9 +101,6 @@ ObjectiveUnitTemplates.weave_doom_wheel = {
 				on_fuze_start_func = objective_data.on_fuze_start_func,
 				on_fuze_progress_func = objective_data.on_fuze_progress_func,
 				on_fuze_complete_func = objective_data.on_fuze_complete_func
-			},
-			objective_socket_system = {
-				use_game_object_id = true
 			}
 		}
 

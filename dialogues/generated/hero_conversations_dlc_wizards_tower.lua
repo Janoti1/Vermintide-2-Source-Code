@@ -341,12 +341,6 @@ return function ()
 				"bright_wizard"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
 				"global_context",
 				"witch_hunter",
 				OP.EQ,
@@ -619,12 +613,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
 			},
@@ -930,12 +918,6 @@ return function ()
 				"empire_soldier"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
 				"global_context",
 				"witch_hunter",
 				OP.EQ,
@@ -1048,12 +1030,6 @@ return function ()
 				"wood_elf"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
 				"faction_memory",
 				"wizard_tower_brew",
 				OP.NOT,
@@ -1150,12 +1126,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"wood_elf"
 			},
@@ -1392,12 +1362,6 @@ return function ()
 				"witch_hunter"
 			},
 			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
 				"faction_memory",
 				"wizard_tower_brew",
 				OP.NOT,
@@ -1570,12 +1534,6 @@ return function ()
 			{
 				"query_context",
 				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
 				OP.EQ,
 				"witch_hunter"
 			},

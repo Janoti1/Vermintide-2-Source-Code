@@ -657,6 +657,7 @@ local action_data = {
 				offset_up = 0,
 				range = 2.5,
 				player_push_speed = 10,
+				triggers_anim_cb_damage_multiple_times = true,
 				damage_done_time = 2.2666666666666666,
 				rotation_speed = 2.5,
 				player_push_speed_blocked = 10,

@@ -391,7 +391,14 @@ return function ()
 				"global_context",
 				"last_level_played",
 				OP.EQ,
-				"dlc_wizards_trail"
+				"dlc_wizards_trail",
+				CombiningOP.OR_NEXT
+			},
+			{
+				"global_context",
+				"last_level_played",
+				OP.EQ,
+				"dlc_wizards_tower"
 			},
 			{
 				"global_context",

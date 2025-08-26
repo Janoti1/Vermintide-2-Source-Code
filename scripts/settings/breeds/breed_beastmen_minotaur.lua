@@ -707,7 +707,8 @@ local action_data = {
 				offset_up = 0,
 				range = 2.5,
 				player_push_speed = 7,
-				damage_done_time = 2.1333333333333333,
+				triggers_anim_cb_damage_multiple_times = true,
+				damage_done_time = 2.3333333333333335,
 				rotation_speed = 5,
 				player_push_speed_blocked = 7,
 				push_close_units_during_attack = true,
@@ -721,22 +722,32 @@ local action_data = {
 					{
 						range = 3.5,
 						duration = 0.3333333333333333,
-						start_time = 0.13333333333333333
+						width = 3,
+						start_time = 0
 					},
 					{
 						range = 3.5,
 						duration = 0.3333333333333333,
-						start_time = 0.7333333333333333
+						width = 3,
+						start_time = 0.26666666666666666
 					},
 					{
 						range = 3.5,
 						duration = 0.3333333333333333,
-						start_time = 1.1333333333333333
+						width = 3,
+						start_time = 0.5333333333333333
 					},
 					{
 						range = 3.5,
 						duration = 0.3333333333333333,
-						start_time = 1.8333333333333333
+						width = 3,
+						start_time = 0.9333333333333333
+					},
+					{
+						range = 3.5,
+						duration = 0.3333333333333333,
+						width = 3,
+						start_time = 1.6333333333333333
 					}
 				}
 			}
@@ -825,7 +836,7 @@ local action_data = {
 							offset_right = 0,
 							offset_up = 0,
 							duration = 0.5666666666666667,
-							start_time = 0.26666666666666666
+							start_time = 0
 						}
 					},
 					attack_right = {
@@ -837,7 +848,7 @@ local action_data = {
 							offset_right = 0,
 							offset_up = 0,
 							duration = 0.5666666666666667,
-							start_time = 0.26666666666666666
+							start_time = 0
 						}
 					}
 				}

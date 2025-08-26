@@ -592,8 +592,10 @@ local view_settings = {
 			for _, settings in pairs(AreaSettings) do
 				local video_settings = settings.video_settings
 
-				materials[#materials + 1] = "material"
-				materials[#materials + 1] = video_settings.resource
+				if video_settings then
+					materials[#materials + 1] = "material"
+					materials[#materials + 1] = video_settings.resource
+				end
 			end
 
 			for _, dlc in pairs(DLCSettings) do
@@ -677,8 +679,10 @@ local view_settings = {
 			for _, settings in pairs(AreaSettings) do
 				local video_settings = settings.video_settings
 
-				materials[#materials + 1] = "material"
-				materials[#materials + 1] = video_settings.resource
+				if video_settings then
+					materials[#materials + 1] = "material"
+					materials[#materials + 1] = video_settings.resource
+				end
 			end
 
 			for _, dlc in pairs(DLCSettings) do

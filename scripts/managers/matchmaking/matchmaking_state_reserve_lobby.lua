@@ -21,8 +21,8 @@ MatchmakingStateReserveLobby.init = function (self, params)
 end
 
 MatchmakingStateReserveLobby.terminate = function (self)
-	if Managers.lobby:query_lobby("matchmaking_game_server_client") then
-		Managers.lobby:destroy_lobby("matchmaking_game_server_client")
+	if Managers.lobby:query_lobby("matchmaking_join_lobby") then
+		Managers.lobby:destroy_lobby("matchmaking_join_lobby")
 	end
 end
 
@@ -46,7 +46,7 @@ MatchmakingStateReserveLobby.on_enter = function (self, state_context)
 	if state_context.is_flexmatch then
 		local server_info = state_context.server_info
 
-		Managers.lobby:make_lobby(GameServerLobbyClient, "matchmaking_game_server_client", self._network_options, state_context, server_info.password, party_members)
+		Managers.lobby:make_lobby(GameServerLobbyClient, "matchmaking_join_lobby", "MatchmakingStateReserveLobby (on_enter)", self._network_options, state_context, server_info.password, party_members)
 
 		self._state = "reserving"
 	else
@@ -71,7 +71,7 @@ end
 
 MatchmakingStateReserveLobby.update = function (self, dt, t)
 	local state = self._state
-	local game_server_lobby_client = Managers.lobby:query_lobby("matchmaking_game_server_client")
+	local game_server_lobby_client = Managers.lobby:query_lobby("matchmaking_join_lobby")
 
 	if game_server_lobby_client and t > self._request_timer then
 		game_server_lobby_client:request_data()
@@ -94,7 +94,7 @@ MatchmakingStateReserveLobby.update = function (self, dt, t)
 
 		if result == "reserved" then
 			if self._reserver then
-				Managers.lobby:register_existing_lobby(game_server_lobby_client, "matchmaking_game_server_client")
+				Managers.lobby:register_existing_lobby(game_server_lobby_client, "matchmaking_join_lobby", "MatchmakingStateReserveLobby (update)")
 			end
 
 			if self._reserver then
@@ -128,7 +128,7 @@ MatchmakingStateReserveLobby.update = function (self, dt, t)
 			end
 		end
 	elseif state == "send_queue_tickets" then
-		game_server_lobby_client = Managers.lobby:query_lobby("matchmaking_game_server_client")
+		game_server_lobby_client = Managers.lobby:get_lobby("matchmaking_join_lobby")
 
 		local engine_lobby = game_server_lobby_client.lobby
 
@@ -156,7 +156,7 @@ MatchmakingStateReserveLobby.update = function (self, dt, t)
 			return MatchmakingStateRequestJoinGame, self._state_context
 		end
 
-		game_server_lobby_client = Managers.lobby:query_lobby("matchmaking_game_server_client")
+		game_server_lobby_client = Managers.lobby:get_lobby("matchmaking_join_lobby")
 
 		local engine_lobby = game_server_lobby_client.lobby
 
@@ -186,8 +186,8 @@ MatchmakingStateReserveLobby._reset = function (self)
 		mechanism:reset_party_info()
 	end
 
-	if Managers.lobby:query_lobby("matchmaking_game_server_client") then
-		Managers.lobby:destroy_lobby("matchmaking_game_server_client")
+	if Managers.lobby:query_lobby("matchmaking_join_lobby") then
+		Managers.lobby:destroy_lobby("matchmaking_join_lobby")
 	end
 
 	self._join_lobby_data = nil
@@ -204,8 +204,8 @@ MatchmakingStateReserveLobby._cleanup = function (self)
 		self._reserver = nil
 	end
 
-	if self._cleanup_server_lobby and Managers.lobby:query_lobby("matchmaking_game_server_client") then
-		Managers.lobby:destroy_lobby("matchmaking_game_server_client")
+	if self._cleanup_server_lobby and Managers.lobby:query_lobby("matchmaking_join_lobby") then
+		Managers.lobby:destroy_lobby("matchmaking_join_lobby")
 	end
 
 	self._state = nil
@@ -249,7 +249,7 @@ MatchmakingStateReserveLobby._start_search = function (self, party_members, opti
 end
 
 MatchmakingStateReserveLobby._claim_reservation = function (self, state_context)
-	local game_server_lobby_client = Managers.lobby:free_lobby("matchmaking_game_server_client")
+	local game_server_lobby_client = Managers.lobby:free_lobby("matchmaking_join_lobby")
 
 	state_context.reserved_lobby = game_server_lobby_client
 	state_context.join_lobby_data = self._join_lobby_data

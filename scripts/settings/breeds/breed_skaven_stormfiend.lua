@@ -727,7 +727,7 @@ local action_data = {
 							offset_right = 0,
 							offset_up = 0,
 							duration = 1.0666666666666667,
-							start_time = 0.26666666666666666
+							start_time = 0.16666666666666666
 						}
 					},
 					attack_melee_bwd = {

@@ -1026,15 +1026,16 @@ local action_data = {
 		considerations = UtilityConsiderations.marauder_attack,
 		attacks = {
 			{
+				anim_driven = true,
 				range = 4,
 				lock_attack_time = 2.1,
-				height = 1.5,
 				rotation_time = 1,
-				anim_driven = true,
-				offset_up = 0,
-				offset_forward = 0,
-				hit_multiple_targets = true,
+				triggers_anim_cb_damage_multiple_times = true,
 				width = 2.5,
+				offset_up = 0,
+				hit_multiple_targets = true,
+				offset_forward = 0,
+				height = 1.5,
 				attack_anim = {
 					"attack_double_cross_01",
 					"attack_double_cross_02"
@@ -1061,15 +1062,16 @@ local action_data = {
 				}
 			},
 			{
+				anim_driven = true,
 				range = 4,
 				lock_attack_time = 2.1,
-				height = 1.5,
 				rotation_time = 1,
-				anim_driven = true,
-				offset_up = 0,
-				offset_forward = 0,
-				hit_multiple_targets = true,
+				triggers_anim_cb_damage_multiple_times = true,
 				width = 2.5,
+				offset_up = 0,
+				hit_multiple_targets = true,
+				offset_forward = 0,
+				height = 1.5,
 				attack_anim = {
 					"attack_double_slash_01"
 				},
@@ -1095,15 +1097,16 @@ local action_data = {
 				}
 			},
 			{
+				anim_driven = true,
 				range = 4,
 				lock_attack_time = 2.1,
-				height = 1.5,
 				rotation_time = 1,
-				anim_driven = true,
-				offset_up = 0,
-				offset_forward = 0,
-				hit_multiple_targets = true,
+				triggers_anim_cb_damage_multiple_times = true,
 				width = 2.5,
+				offset_up = 0,
+				hit_multiple_targets = true,
+				offset_forward = 0,
+				height = 1.5,
 				attack_anim = {
 					"attack_double_slash_02",
 					"attack_stab_slash_01"
@@ -1166,15 +1169,16 @@ local action_data = {
 				}
 			},
 			{
+				anim_driven = true,
 				range = 4,
 				lock_attack_time = 2.1,
-				height = 1.5,
 				rotation_time = 1,
-				anim_driven = true,
-				offset_up = 0,
-				offset_forward = 0.5,
-				hit_multiple_targets = true,
+				triggers_anim_cb_damage_multiple_times = true,
 				width = 1,
+				offset_up = 0,
+				hit_multiple_targets = true,
+				offset_forward = 0.5,
+				height = 1.5,
 				attack_anim = {
 					"attack_stab_01",
 					"attack_stab_02"
@@ -1201,15 +1205,16 @@ local action_data = {
 				}
 			},
 			{
+				anim_driven = true,
 				range = 4,
 				lock_attack_time = 2.1,
-				height = 1.5,
 				rotation_time = 1,
-				anim_driven = true,
-				offset_up = 0,
-				offset_forward = 0.5,
-				hit_multiple_targets = true,
+				triggers_anim_cb_damage_multiple_times = true,
 				width = 1,
+				offset_up = 0,
+				hit_multiple_targets = true,
+				offset_forward = 0.5,
+				height = 1.5,
 				attack_anim = {
 					"attack_tripple_slash_01"
 				},

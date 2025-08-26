@@ -49,7 +49,7 @@ local breed_data = {
 	regen_taken_damage_pause_time = 2,
 	always_look_at_target = true,
 	ai_toughness = 10,
-	animation_sync_rpc = "rpc_sync_anim_state_9",
+	animation_sync_rpc = "rpc_sync_anim_state_6",
 	aoe_radius = 1,
 	is_always_spawnable = true,
 	ai_strength = 10,
@@ -103,13 +103,13 @@ local breed_data = {
 	awards_positive_reinforcement_message = true,
 	threat_value = 32,
 	show_health_bar = true,
-	bone_lod_level = 0,
 	aim_template = "chaos_warrior",
-	smart_object_template = "chaos_troll",
+	bone_lod_level = 0,
 	passive_in_patrol_start_anim = "move_fwd",
 	reach_distance = 4.2,
 	navigation_spline_distance_to_borders = 1,
 	stagger_threshold_light = 1,
+	smart_object_template = "chaos_troll",
 	bot_opportunity_target_melee_range_while_ranged = 5,
 	hit_reaction = "ai_default",
 	passive_in_patrol = true,
@@ -187,6 +187,18 @@ local breed_data = {
 		ignored_statuses = table.set({
 			StatusEffectNames.burning_warpfire
 		})
+	},
+	name_pool_by_level = {
+		dlc_dwarf_fest = {
+			"name_dwarf_fest_troll_004",
+			"name_dwarf_fest_troll_005",
+			"name_dwarf_fest_troll_007",
+			"name_dwarf_fest_troll_008",
+			"name_dwarf_fest_troll_009",
+			"name_dwarf_fest_troll_010",
+			"name_dwarf_fest_troll_011",
+			"name_dwarf_fest_troll_012"
+		}
 	},
 	debug_color = {
 		255,
@@ -621,7 +633,7 @@ local action_data = {
 				offset_up = 0,
 				range = 2.75,
 				player_push_speed = 8,
-				damage_done_time = 1.4333333333333333,
+				damage_done_time = 1,
 				hit_multiple_targets = true,
 				player_push_speed_blocked = 8,
 				attack_time = 2.6666666666666665,
@@ -633,7 +645,7 @@ local action_data = {
 				bot_threats = {
 					{
 						duration = 0.6666666666666666,
-						start_time = 0.9
+						start_time = 1
 					}
 				}
 			}
@@ -807,7 +819,7 @@ local action_data = {
 						height = 3.5,
 						offset_right = 0,
 						offset_up = 0,
-						duration = 0.9333333333333333,
+						duration = 0.7333333333333333,
 						start_time = 0.16666666666666666
 					}
 				}
@@ -947,7 +959,7 @@ local action_data = {
 					{
 						collision_type = "cylinder",
 						offset_forward = 0,
-						radius = 3,
+						radius = 3.5,
 						height = 3.5,
 						offset_right = 0,
 						offset_up = 0,
@@ -1010,13 +1022,13 @@ local action_data = {
 				bot_threats = {
 					{
 						collision_type = "cylinder",
-						offset_forward = 2,
-						radius = 3,
+						offset_forward = 2.6,
+						radius = 4.25,
 						height = 3.7,
-						offset_right = 0,
+						offset_right = -0.4,
 						offset_up = 0,
-						duration = 0.9333333333333333,
-						start_time = 0.16666666666666666
+						duration = 1,
+						start_time = 0
 					}
 				}
 			}
@@ -1086,14 +1098,15 @@ local action_data = {
 		}
 	},
 	downed = {
-		respawn_hp_max_percent = 0.8,
-		standup_anim_duration = 5,
 		reset_duration = 5,
+		standup_anim_duration = 5,
 		reduce_hp_permanently = true,
+		freeze_healing = true,
 		respawn_hp_min_percent = 0.5,
-		min_downed_duration = 3,
 		become_downed_hp_percent = 0.4,
-		downed_duration = 7
+		downed_duration = 7,
+		respawn_hp_max_percent = 0.8,
+		min_downed_duration = 3
 	},
 	stagger = {
 		scale_animation_speeds = true,

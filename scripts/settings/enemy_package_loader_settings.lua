@@ -42,6 +42,7 @@ EnemyPackageLoaderSettings.categories = {
 			"skaven_stormfiend_boss",
 			"skaven_grey_seer",
 			"training_dummy",
+			"chaos_troll_chief",
 			"pet_skeleton",
 			"pet_skeleton_with_shield",
 			"pet_skeleton_dual_wield",
@@ -185,6 +186,7 @@ EnemyPackageLoaderSettings.opt_lookup_breed_names = {
 EnemyPackageLoaderSettings.alias_to_breed = {
 	chaos_raider_tutorial = "chaos_raider",
 	chaos_dummy_troll = "chaos_troll",
+	chaos_tether_sorcerer = "chaos_corruptor_sorcerer",
 	skaven_dummy_slave = "skaven_slave",
 	chaos_exalted_champion_norsca = "chaos_exalted_champion_warcamp",
 	chaos_marauder_tutorial = "chaos_marauder",

@@ -638,7 +638,8 @@ function flow_query_leader_get_persistant_stat(params)
 	fassert(leader_peer_id == local_peer_id, "Flow node \"Leader Get Persistant Stat\" should only be called by the leader player")
 
 	local stat_name = params.stat_name
-	local stat_value = get_presistent_stat_from_peer_id(local_peer_id, stat_name)
+	local parts = string.split(stat_name, "|")
+	local stat_value = get_presistent_stat_from_peer_id(local_peer_id, unpack(parts))
 
 	flow_return_table.value = stat_value
 
@@ -647,7 +648,8 @@ end
 
 function flow_query_local_player_get_persistant_stat(params)
 	local stat_name = params.stat_name
-	local stat_value = get_presistent_stat_from_peer_id(Network.peer_id(), stat_name)
+	local parts = string.split(stat_name, "|")
+	local stat_value = get_presistent_stat_from_peer_id(Network.peer_id(), unpack(parts))
 
 	flow_return_table.value = stat_value
 

@@ -85,8 +85,8 @@ local knockback_tables = {
 weapon_template.actions = {
 	[action_one] = {
 		default = {
-			anim_end_event = "attack_finished",
 			disallow_ghost_mode = true,
+			anim_end_event = "attack_finished",
 			kind = "melee_start",
 			uninterruptible = true,
 			anim_event = "attack_ogre_slam_charge",
@@ -108,6 +108,7 @@ weapon_template.actions = {
 			end,
 			total_time = math.huge,
 			anim_time_scale = time_mod * 1.15,
+			attack_hold_input = action_one_hold,
 			buff_data = planted_decrease_movement_settings.charge,
 			allowed_chain_actions = {
 				{
@@ -119,19 +120,19 @@ weapon_template.actions = {
 				},
 				{
 					sub_action = "attack_slam",
-					start_time = 1.2,
+					start_time = 0.8,
 					input = action_one_release,
 					action = action_one
 				},
 				{
-					start_time = 0.6,
+					start_time = 0.4,
 					blocker = true,
 					end_time = 1.5,
 					input = action_one_hold
 				},
 				{
 					sub_action = "attack_slam",
-					start_time = 1,
+					start_time = 1.5,
 					auto_chain = true,
 					action = action_one
 				},
@@ -166,19 +167,19 @@ weapon_template.actions = {
 				},
 				{
 					sub_action = "attack_slam",
-					start_time = 1.2,
+					start_time = 0.8,
 					input = action_one_release,
 					action = action_one
 				},
 				{
-					start_time = 0.6,
+					start_time = 0.4,
 					blocker = true,
 					end_time = 1.5,
 					input = action_one_hold
 				},
 				{
 					sub_action = "attack_slam",
-					start_time = 1,
+					start_time = 1.5,
 					auto_chain = true,
 					action = action_one
 				},
@@ -191,7 +192,7 @@ weapon_template.actions = {
 			}
 		},
 		attack_swing_right = {
-			damage_window_start = 0.54,
+			damage_window_start = 0.59,
 			anim_end_event = "attack_finished",
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
@@ -202,7 +203,7 @@ weapon_template.actions = {
 			no_damage_impact_sound_event = "blunt_hit_armour",
 			damage_profile = "rat_ogre_light_1",
 			use_precision_sweep = false,
-			damage_window_end = 0.65,
+			damage_window_end = 0.7,
 			impact_sound_event = "blunt_hit",
 			aim_assist_ramp_multiplier = 0.4,
 			disallow_ghost_mode = true,
@@ -238,7 +239,7 @@ weapon_template.actions = {
 			}
 		},
 		attack_swing_left = {
-			damage_window_start = 0.8,
+			damage_window_start = 0.85,
 			anim_end_event = "attack_finished",
 			kind = "sweep",
 			first_person_hit_anim = "shake_hit",
@@ -249,7 +250,7 @@ weapon_template.actions = {
 			no_damage_impact_sound_event = "blunt_hit_armour",
 			additional_critical_strike_chance = 0.1,
 			use_precision_sweep = false,
-			damage_window_end = 0.87,
+			damage_window_end = 1,
 			impact_sound_event = "blunt_hit",
 			charge_value = "action_push",
 			disallow_ghost_mode = true,
@@ -267,7 +268,6 @@ weapon_template.actions = {
 				roll = math.pi * 0.5
 			},
 			knockback_data = knockback_tables.frenzy,
-			buff_data = planted_decrease_movement_settings.light_attack,
 			allowed_chain_actions = {
 				{
 					sub_action = "default",
@@ -321,16 +321,7 @@ weapon_template.actions = {
 			},
 			knockback_data = knockback_tables.slam,
 			buff_data = planted_decrease_movement_settings.heavy_attack,
-			allowed_chain_actions = {
-				{
-					sub_action = "default",
-					start_time = 1.25,
-					end_time = 1.33,
-					input = action_one,
-					action = action_one,
-					release_required = action_one_hold
-				}
-			},
+			allowed_chain_actions = {},
 			enter_function = function (attacker_unit, input_extension)
 				return input_extension:reset_release_input()
 			end
