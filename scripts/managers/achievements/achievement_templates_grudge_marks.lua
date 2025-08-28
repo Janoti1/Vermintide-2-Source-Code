@@ -34,8 +34,7 @@ local relevant_bosses = table.mirror_array_inplace({
 	"skaven_stormfiend",
 	"chaos_spawn",
 	"beastmen_minotaur",
-	"chaos_troll",
-	"chaos_troll_chief"
+	"chaos_troll"
 })
 local expeditions = {
 	"journey_ruin",

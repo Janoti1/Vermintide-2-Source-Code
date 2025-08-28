@@ -31,9 +31,9 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_dal_finale_hall_of_heroes_leave_a",
-		name = "pdr_dal_finale_hall_of_heroes_leave_a",
 		probability = 1,
+		name = "pdr_dal_finale_hall_of_heroes_leave_a",
+		response = "pdr_dal_finale_hall_of_heroes_leave_a",
 		criterias = {
 			{
 				"query_context",
@@ -43,7 +43,7 @@ return function ()
 			},
 			{
 				"query_context",
-				"item_tag",
+				"dialogue_name",
 				OP.EQ,
 				"dal_finale_hall_of_heroes_leave_a"
 			},
@@ -52,6 +52,59 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"dal_finale_hall_of_heroes_leave_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"dal_finale_hall_of_heroes_leave_a",
+				OP.ADD,
+				1
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
+		name = "pdr_dal_finale_hall_of_heroes_leave_a_heard",
+		response = "pdr_dal_finale_hall_of_heroes_leave_a_heard",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"dialogue_name",
+				OP.EQ,
+				"npcr1_dal_finale_hall_of_heroes_troll_slain_c"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"faction_memory",
+				"dal_finale_hall_of_heroes_leave_a",
+				OP.EQ,
+				0
+			}
+		},
+		on_done = {
+			{
+				"faction_memory",
+				"dal_finale_hall_of_heroes_leave_a",
+				OP.ADD,
+				1
 			}
 		}
 	})
@@ -1272,7 +1325,36 @@ return function ()
 			face_animations_n = 2,
 			database = "dwarf_ranger_dlc_dwarf_fest",
 			sound_events_n = 2,
-			category = "level_talk_must_play",
+			category = "level_talk",
+			dialogue_animations_n = 2,
+			dialogue_animations = {
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_neutral",
+				[2] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pdr_dal_finale_hall_of_heroes_leave_a_01",
+				[2] = "pdr_dal_finale_hall_of_heroes_leave_a_02"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				[1] = "pdr_dal_finale_hall_of_heroes_leave_a_01",
+				[2] = "pdr_dal_finale_hall_of_heroes_leave_a_02"
+			},
+			sound_events_duration = {
+				[1] = 3.5018334388733,
+				[2] = 4.7020831108093
+			}
+		},
+		pdr_dal_finale_hall_of_heroes_leave_a_heard = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
+			database = "dwarf_ranger_dlc_dwarf_fest",
+			sound_events_n = 2,
+			category = "level_talk",
 			dialogue_animations_n = 2,
 			dialogue_animations = {
 				[1] = "dialogue_talk",

@@ -1891,6 +1891,8 @@ NetworkLookup.damage_wave_states = {
 	"running"
 }
 NetworkLookup.music_group_states = {
+	"true",
+	"false",
 	"high_battle",
 	"med_battle",
 	"low_battle",
@@ -1928,7 +1930,6 @@ NetworkLookup.music_group_states = {
 	"escape_mb1",
 	"escape_mb2",
 	"escape_mb3",
-	"false",
 	"mission",
 	"mission_2",
 	"mission_no_horn",
@@ -1948,7 +1949,15 @@ NetworkLookup.music_group_states = {
 	"terror_remix2",
 	"terror_remix3",
 	"ussingen",
-	"winds"
+	"winds",
+	"dlc_dwarf_fest",
+	"dlc_dwarf_fest_main",
+	"None",
+	"default",
+	"multitroll",
+	"multitroll_end",
+	"boss",
+	"boss_end"
 }
 NetworkLookup.statistics_group_name = {
 	"season_1"

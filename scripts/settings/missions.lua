@@ -75,6 +75,11 @@ Missions.forest_ambush_doomwheel_bombing = {
 	mission_template_name = "collect",
 	collect_amount = 3
 }
+Missions.mission_objective_cemetery_cut_down_all = {
+	text = "mission_objective_cemetery_cut_chains",
+	mission_template_name = "collect",
+	collect_amount = 4
+}
 Missions.dlc_castle_enter_castle = {
 	mission_template_name = "goal",
 	text = "dlc1_4_castle_enter_castle_mission_text"
