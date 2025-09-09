@@ -30,7 +30,7 @@ LevelSettings.dlc_dwarf_fest = {
 				ammo = 6,
 				painting_scrap = 3,
 				potions = 5,
-				grenades = 5,
+				grenades = 7,
 				healing = {
 					first_aid_kit = 5,
 					healing_draught = 5
@@ -41,8 +41,8 @@ LevelSettings.dlc_dwarf_fest = {
 				}
 			},
 			secondary = {
-				ammo = 7,
-				grenades = 7,
+				ammo = 9,
+				grenades = 9,
 				healing = 6,
 				potions = 7
 			}
@@ -52,7 +52,7 @@ LevelSettings.dlc_dwarf_fest = {
 				ammo = 8,
 				painting_scrap = 3,
 				potions = 6,
-				grenades = 6,
+				grenades = 8,
 				healing = {
 					first_aid_kit = 6,
 					healing_draught = 8
@@ -63,10 +63,10 @@ LevelSettings.dlc_dwarf_fest = {
 				}
 			},
 			secondary = {
-				ammo = 8,
+				ammo = 10,
 				grenades = 8,
-				healing = 8,
-				potions = 8
+				healing = 10,
+				potions = 10
 			}
 		}
 	},

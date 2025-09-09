@@ -1,4 +1,4 @@
-local version = "6.7.1"
+local version = "6.7.2"
 
 VersionSettings = {
 	version = version
