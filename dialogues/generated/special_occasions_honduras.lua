@@ -1,36 +1,5 @@
 return function ()
 	define_rule({
-		response = "pbr_gameplay_elf_downed_3_times_11",
-		name = "pbr_gameplay_elf_downed_3_times_11",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
 		response = "pbw_all_stairs_conversation_b",
 		name = "pbw_all_stairs_conversation_b",
 		probability = 1,
@@ -500,8 +469,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pbw_gameplay_elf_downed_3_times_02",
-		name = "pbw_gameplay_elf_downed_3_times_02",
+		response = "pbw_gameplay_elf_downed_3_times",
+		name = "pbw_gameplay_elf_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -581,37 +550,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pbw_gameplay_elf_downed_3_times_06",
-		name = "pbw_gameplay_elf_downed_3_times_06",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
 		response = "pbw_gameplay_elf_downed_3_times_06_reply_01",
 		name = "pbw_gameplay_elf_downed_3_times_06_reply_01",
 		probability = 1,
@@ -627,37 +565,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwe_gameplay_elf_downed_3_times_06_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_gameplay_elf_downed_3_times_07",
-		name = "pbw_gameplay_elf_downed_3_times_07",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"user_context",
@@ -1122,8 +1029,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_elf_potions_above_half_health_01",
-		response = "pbw_gameplay_elf_potions_above_half_health_01",
+		name = "pbw_gameplay_elf_potions_above_half_health",
+		response = "pbw_gameplay_elf_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -1154,7 +1061,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -1199,51 +1106,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_elf_potions_above_half_health_02",
-		response = "pbw_gameplay_elf_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pbw_gameplay_elf_potions_above_half_health_02_reply_01",
 		response = "pbw_gameplay_elf_potions_above_half_health_02_reply_01",
 		criterias = {
@@ -1269,51 +1131,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_gameplay_elf_potions_above_half_health_06",
-		response = "pbw_gameplay_elf_potions_above_half_health_06",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -1605,70 +1422,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pbw_gameplay_hunter_downed_3_times_02",
-		name = "pbw_gameplay_hunter_downed_3_times_02",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_gameplay_hunter_downed_3_times_03",
-		name = "pbw_gameplay_hunter_downed_3_times_03",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_gameplay_hunter_downed_3_times_04",
-		name = "pbw_gameplay_hunter_downed_3_times_04",
+		response = "pbw_gameplay_hunter_downed_3_times",
+		name = "pbw_gameplay_hunter_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -2014,63 +1769,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_hunter_kills_3_specials_in_a_row_02",
-		response = "pbw_gameplay_hunter_kills_3_specials_in_a_row_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"killed_enemy"
-			},
-			{
-				"query_context",
-				"killer_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"witch_hunter_special_kills_in_row",
-				OP.EQ,
-				2
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"user_memory",
-				"once_special_kills_in_a_row",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"once_special_kills_in_a_row",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"witch_hunter_special_kills_in_row",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pbw_gameplay_hunter_misses_bomb_01",
 		response = "pbw_gameplay_hunter_misses_bomb_01",
 		criterias = {
@@ -2133,8 +1831,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pbw_gameplay_killing_a_second_rat_ogre_01",
-		name = "pbw_gameplay_killing_a_second_rat_ogre_01",
+		response = "pbw_gameplay_killing_a_second_rat_ogre",
+		name = "pbw_gameplay_killing_a_second_rat_ogre",
 		probability = 1,
 		criterias = {
 			{
@@ -2351,8 +2049,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pbw_gameplay_ranger_downed_3_times_07",
-		name = "pbw_gameplay_ranger_downed_3_times_07",
+		response = "pbw_gameplay_ranger_downed_3_times",
+		name = "pbw_gameplay_ranger_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -2407,37 +2105,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pbw_gameplay_ranger_downed_3_times_08",
-		name = "pbw_gameplay_ranger_downed_3_times_08",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
 		response = "pbw_gameplay_ranger_downed_3_times_08_reply_01",
 		name = "pbw_gameplay_ranger_downed_3_times_08_reply_01",
 		probability = 1,
@@ -2453,37 +2120,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pdr_gameplay_ranger_downed_3_times_08_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_gameplay_ranger_downed_3_times_09",
-		name = "pbw_gameplay_ranger_downed_3_times_09",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"user_context",
@@ -2948,8 +2584,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_ranger_potions_above_half_health_01",
-		response = "pbw_gameplay_ranger_potions_above_half_health_01",
+		name = "pbw_gameplay_ranger_potions_above_half_health",
+		response = "pbw_gameplay_ranger_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -2980,7 +2616,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -3025,51 +2661,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_ranger_potions_above_half_health_02",
-		response = "pbw_gameplay_ranger_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pbw_gameplay_ranger_potions_above_half_health_02_reply_01",
 		response = "pbw_gameplay_ranger_potions_above_half_health_02_reply_01",
 		criterias = {
@@ -3095,51 +2686,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_gameplay_ranger_potions_above_half_health_03",
-		response = "pbw_gameplay_ranger_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -4792,6 +4338,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pbw_gameplay_soldier_downed_3_times",
+		name = "pbw_gameplay_soldier_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"bright_wizard"
+			}
+		}
+	})
+	define_rule({
 		response = "pbw_gameplay_soldier_downed_3_times_05_reply_01",
 		name = "pbw_gameplay_soldier_downed_3_times_05_reply_01",
 		probability = 1,
@@ -4807,68 +4384,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwh_gameplay_soldier_downed_3_times_05"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_gameplay_soldier_downed_3_times_06",
-		name = "pbw_gameplay_soldier_downed_3_times_06",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_gameplay_soldier_downed_3_times_07",
-		name = "pbw_gameplay_soldier_downed_3_times_07",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
 			},
 			{
 				"user_context",
@@ -4900,51 +4415,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_gameplay_soldier_downed_3_times_08",
-		response = "pbw_gameplay_soldier_downed_3_times_08",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"faction_memory",
-				"times_down_empire_soldier",
-				OP.EQ,
-				2
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"times_down_empire_soldier",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -5353,8 +4823,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_soldier_potions_above_half_health_01",
-		response = "pbw_gameplay_soldier_potions_above_half_health_01",
+		name = "pbw_gameplay_soldier_potions_above_half_health",
+		response = "pbw_gameplay_soldier_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -5385,52 +4855,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_gameplay_soldier_potions_above_half_health_02",
-		response = "pbw_gameplay_soldier_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -5468,51 +4893,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_gameplay_soldier_potions_above_half_health_03",
-		response = "pbw_gameplay_soldier_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -6306,8 +5686,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_wizard_potions_above_half_health_01",
-		response = "pbw_gameplay_wizard_potions_above_half_health_01",
+		name = "pbw_gameplay_wizard_potions_above_half_health",
+		response = "pbw_gameplay_wizard_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -6338,7 +5718,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -6447,51 +5827,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pbw_gameplay_wizard_potions_above_half_health_02",
-		response = "pbw_gameplay_wizard_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pbw_gameplay_wizard_potions_above_half_health_02_reply_02",
 		response = "pbw_gameplay_wizard_potions_above_half_health_02_reply_02",
 		criterias = {
@@ -6581,51 +5916,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pbw_gameplay_wizard_potions_above_half_health_03",
-		response = "pbw_gameplay_wizard_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -6838,49 +6128,6 @@ return function ()
 				"player_profile",
 				OP.EQ,
 				"bright_wizard"
-			}
-		}
-	})
-	define_rule({
-		response = "pbw_killing_a_second_rat_ogre_02",
-		name = "pbw_killing_a_second_rat_ogre_02",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"enemy_kill"
-			},
-			{
-				"query_context",
-				"killed_type",
-				OP.EQ,
-				"skaven_rat_ogre"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GTEQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_memory",
-				"times_killed_rat_ogre",
-				OP.EQ,
-				2
 			}
 		}
 	})
@@ -7366,8 +6613,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_elf_downed_3_times_12",
-		name = "pdr_gameplay_elf_downed_3_times_12",
+		response = "pdr_gameplay_elf_downed_3_times",
+		name = "pdr_gameplay_elf_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -7412,37 +6659,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwe_gameplay_elf_downed_3_times_12_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_elf_downed_3_times_13",
-		name = "pdr_gameplay_elf_downed_3_times_13",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
 			},
 			{
 				"user_context",
@@ -7882,8 +7098,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_elf_potions_above_half_health_02",
-		response = "pdr_gameplay_elf_potions_above_half_health_02",
+		name = "pdr_gameplay_elf_potions_above_half_health",
+		response = "pdr_gameplay_elf_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -7914,97 +7130,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_elf_potions_above_half_health_03",
-		response = "pdr_gameplay_elf_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_elf_potions_above_half_health_04",
-		response = "pdr_gameplay_elf_potions_above_half_health_04",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -8269,6 +7395,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pdr_gameplay_hunter_downed_3_times",
+		name = "pdr_gameplay_hunter_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			}
+		}
+	})
+	define_rule({
 		response = "pdr_gameplay_hunter_downed_3_times_02_reply_01",
 		name = "pdr_gameplay_hunter_downed_3_times_02_reply_01",
 		probability = 1,
@@ -8344,37 +7501,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_hunter_downed_3_times_08",
-		name = "pdr_gameplay_hunter_downed_3_times_08",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
 		response = "pdr_gameplay_hunter_downed_3_times_08_reply_01",
 		name = "pdr_gameplay_hunter_downed_3_times_08_reply_01",
 		probability = 1,
@@ -8400,37 +7526,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_hunter_downed_3_times_09",
-		name = "pdr_gameplay_hunter_downed_3_times_09",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
 		response = "pdr_gameplay_hunter_downed_3_times_09_reply_01",
 		name = "pdr_gameplay_hunter_downed_3_times_09_reply_01",
 		probability = 1,
@@ -8446,37 +7541,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwh_gameplay_hunter_downed_3_times_09_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_hunter_downed_3_times_10",
-		name = "pdr_gameplay_hunter_downed_3_times_10",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
 			},
 			{
 				"user_context",
@@ -8991,8 +8055,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_hunter_potions_above_half_health_02",
-		response = "pdr_gameplay_hunter_potions_above_half_health_02",
+		name = "pdr_gameplay_hunter_potions_above_half_health",
+		response = "pdr_gameplay_hunter_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -9023,97 +8087,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_hunter_potions_above_half_health_03",
-		response = "pdr_gameplay_hunter_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_hunter_potions_above_half_health_04",
-		response = "pdr_gameplay_hunter_potions_above_half_health_04",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -9257,51 +8231,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_killing_a_second_rat_ogre_01",
-		name = "pdr_gameplay_killing_a_second_rat_ogre_01",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"enemy_kill"
-			},
-			{
-				"query_context",
-				"killed_type",
-				OP.EQ,
-				"skaven_rat_ogre"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GTEQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"times_killed_rat_ogre",
-				OP.EQ,
-				2
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_killing_a_second_rat_ogre_02",
-		name = "pdr_gameplay_killing_a_second_rat_ogre_02",
+		response = "pdr_gameplay_killing_a_second_rat_ogre",
+		name = "pdr_gameplay_killing_a_second_rat_ogre",
 		probability = 1,
 		criterias = {
 			{
@@ -12179,39 +11110,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_soldier_downed_3_times_09",
-		name = "pdr_gameplay_soldier_downed_3_times_09",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_soldier_downed_3_times_10",
-		name = "pdr_gameplay_soldier_downed_3_times_10",
+		response = "pdr_gameplay_soldier_downed_3_times",
+		name = "pdr_gameplay_soldier_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -12256,37 +11156,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pes_gameplay_soldier_downed_3_times_10_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_soldier_downed_3_times_11",
-		name = "pdr_gameplay_soldier_downed_3_times_11",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
 			},
 			{
 				"user_context",
@@ -12795,8 +11664,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_soldier_potions_above_half_health_01",
-		response = "pdr_gameplay_soldier_potions_above_half_health_01",
+		name = "pdr_gameplay_soldier_potions_above_half_health",
+		response = "pdr_gameplay_soldier_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -12827,7 +11696,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -12872,51 +11741,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_soldier_potions_above_half_health_02",
-		response = "pdr_gameplay_soldier_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pdr_gameplay_soldier_potions_above_half_health_02_reply_02",
 		response = "pdr_gameplay_soldier_potions_above_half_health_02_reply_02",
 		criterias = {
@@ -12942,51 +11766,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_soldier_potions_above_half_health_03",
-		response = "pdr_gameplay_soldier_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -13233,6 +12012,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pdr_gameplay_wizard_downed_3_times",
+		name = "pdr_gameplay_wizard_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"dwarf_ranger"
+			}
+		}
+	})
+	define_rule({
 		response = "pdr_gameplay_wizard_downed_3_times_05_reply_01",
 		name = "pdr_gameplay_wizard_downed_3_times_05_reply_01",
 		probability = 1,
@@ -13308,68 +12118,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pdr_gameplay_wizard_downed_3_times_08",
-		name = "pdr_gameplay_wizard_downed_3_times_08",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_wizard_downed_3_times_09",
-		name = "pdr_gameplay_wizard_downed_3_times_09",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
 		response = "pdr_gameplay_wizard_downed_3_times_09_reply_01",
 		name = "pdr_gameplay_wizard_downed_3_times_09_reply_01",
 		probability = 1,
@@ -13385,37 +12133,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pbw_gameplay_wizard_downed_3_times_09_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			}
-		}
-	})
-	define_rule({
-		response = "pdr_gameplay_wizard_downed_3_times_10",
-		name = "pdr_gameplay_wizard_downed_3_times_10",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
 			},
 			{
 				"user_context",
@@ -13822,63 +12539,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_wizard_kills_3_specials_in_a_row_02",
-		response = "pdr_gameplay_wizard_kills_3_specials_in_a_row_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"killed_enemy"
-			},
-			{
-				"query_context",
-				"killer_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"faction_memory",
-				"bright_wizard_special_kills_in_row",
-				OP.EQ,
-				2
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"user_memory",
-				"once_special_kills_in_a_row",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"once_special_kills_in_a_row",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"bright_wizard_special_kills_in_row",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pdr_gameplay_wizard_misses_bomb_01",
 		response = "pdr_gameplay_wizard_misses_bomb_01",
 		criterias = {
@@ -13942,8 +12602,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pdr_gameplay_wizard_potions_above_half_health_01",
-		response = "pdr_gameplay_wizard_potions_above_half_health_01",
+		name = "pdr_gameplay_wizard_potions_above_half_health",
+		response = "pdr_gameplay_wizard_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -13974,97 +12634,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_wizard_potions_above_half_health_02",
-		response = "pdr_gameplay_wizard_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pdr_gameplay_wizard_potions_above_half_health_03",
-		response = "pdr_gameplay_wizard_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -14658,8 +13228,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pes_gameplay_elf_downed_3_times_08",
-		name = "pes_gameplay_elf_downed_3_times_08",
+		response = "pes_gameplay_elf_downed_3_times",
+		name = "pes_gameplay_elf_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -14714,37 +13284,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pes_gameplay_elf_downed_3_times_09",
-		name = "pes_gameplay_elf_downed_3_times_09",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
 		response = "pes_gameplay_elf_downed_3_times_09_reply_01",
 		name = "pes_gameplay_elf_downed_3_times_09_reply_01",
 		probability = 1,
@@ -14760,37 +13299,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwe_gameplay_elf_downed_3_times_09_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_elf_downed_3_times_10",
-		name = "pes_gameplay_elf_downed_3_times_10",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
 			},
 			{
 				"user_context",
@@ -15230,8 +13738,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_gameplay_elf_potions_above_half_health_01",
-		response = "pes_gameplay_elf_potions_above_half_health_01",
+		name = "pes_gameplay_elf_potions_above_half_health",
+		response = "pes_gameplay_elf_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -15262,7 +13770,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -15307,51 +13815,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_gameplay_elf_potions_above_half_health_02",
-		response = "pes_gameplay_elf_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pes_gameplay_elf_potions_above_half_health_02_reply_01",
 		response = "pes_gameplay_elf_potions_above_half_health_02_reply_01",
 		criterias = {
@@ -15377,51 +13840,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_elf_potions_above_half_health_03",
-		response = "pes_gameplay_elf_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -15801,8 +14219,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pes_gameplay_hunter_downed_3_times_05",
-		name = "pes_gameplay_hunter_downed_3_times_05",
+		response = "pes_gameplay_hunter_downed_3_times",
+		name = "pes_gameplay_hunter_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -15847,68 +14265,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwh_gameplay_hunter_downed_3_times_05_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_hunter_downed_3_times_06",
-		name = "pes_gameplay_hunter_downed_3_times_06",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_hunter_downed_3_times_07",
-		name = "pes_gameplay_hunter_downed_3_times_07",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
 			},
 			{
 				"user_context",
@@ -16355,8 +14711,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_gameplay_hunter_potions_above_half_health_01",
-		response = "pes_gameplay_hunter_potions_above_half_health_01",
+		name = "pes_gameplay_hunter_potions_above_half_health",
+		response = "pes_gameplay_hunter_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -16387,7 +14743,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -16432,51 +14788,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_gameplay_hunter_potions_above_half_health_02",
-		response = "pes_gameplay_hunter_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pes_gameplay_hunter_potions_above_half_health_02_reply_01",
 		response = "pes_gameplay_hunter_potions_above_half_health_02_reply_01",
 		criterias = {
@@ -16502,51 +14813,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_hunter_potions_above_half_health_03",
-		response = "pes_gameplay_hunter_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -16636,51 +14902,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pes_gameplay_killing_a_second_rat_ogre_01",
-		name = "pes_gameplay_killing_a_second_rat_ogre_01",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"enemy_kill"
-			},
-			{
-				"query_context",
-				"killed_type",
-				OP.EQ,
-				"skaven_rat_ogre"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GTEQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"times_killed_rat_ogre",
-				OP.EQ,
-				2
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_killing_a_second_rat_ogre_02",
-		name = "pes_gameplay_killing_a_second_rat_ogre_02",
+		response = "pes_gameplay_killing_a_second_rat_ogre",
+		name = "pes_gameplay_killing_a_second_rat_ogre",
 		probability = 1,
 		criterias = {
 			{
@@ -16903,33 +15126,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pes_gameplay_ranger_downed_3_times_09_reply_01",
-		name = "pes_gameplay_ranger_downed_3_times_09_reply_01",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"heard_speak"
-			},
-			{
-				"query_context",
-				"sound_event",
-				OP.EQ,
-				"pdr_gameplay_ranger_downed_3_times_09_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_ranger_downed_3_times_10",
-		name = "pes_gameplay_ranger_downed_3_times_10",
+		response = "pes_gameplay_ranger_downed_3_times",
+		name = "pes_gameplay_ranger_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -16949,6 +15147,31 @@ return function ()
 				"source_name",
 				OP.EQ,
 				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			}
+		}
+	})
+	define_rule({
+		response = "pes_gameplay_ranger_downed_3_times_09_reply_01",
+		name = "pes_gameplay_ranger_downed_3_times_09_reply_01",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"heard_speak"
+			},
+			{
+				"query_context",
+				"sound_event",
+				OP.EQ,
+				"pdr_gameplay_ranger_downed_3_times_09_reply_01"
 			},
 			{
 				"user_context",
@@ -17345,8 +15568,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_gameplay_ranger_potions_above_half_health_01",
-		response = "pes_gameplay_ranger_potions_above_half_health_01",
+		name = "pes_gameplay_ranger_potions_above_half_health",
+		response = "pes_gameplay_ranger_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -17377,52 +15600,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_ranger_potions_above_half_health_02",
-		response = "pes_gameplay_ranger_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -17460,51 +15638,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_ranger_potions_above_half_health_03",
-		response = "pes_gameplay_ranger_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -20167,6 +18300,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pes_gameplay_wizard_downed_3_times",
+		name = "pes_gameplay_wizard_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"empire_soldier"
+			}
+		}
+	})
+	define_rule({
 		response = "pes_gameplay_wizard_downed_3_times_04_reply_01",
 		name = "pes_gameplay_wizard_downed_3_times_04_reply_01",
 		probability = 1,
@@ -20182,113 +18346,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pbw_gameplay_wizard_downed_3_times_04_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_wizard_downed_3_times_05",
-		response = "pes_gameplay_wizard_downed_3_times_05",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"faction_memory",
-				"times_down_bright_wizard",
-				OP.EQ,
-				2
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"times_down_bright_wizard",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_wizard_downed_3_times_06",
-		name = "pes_gameplay_wizard_downed_3_times_06",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			}
-		}
-	})
-	define_rule({
-		response = "pes_gameplay_wizard_downed_3_times_07",
-		name = "pes_gameplay_wizard_downed_3_times_07",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
 			},
 			{
 				"user_context",
@@ -20803,8 +18860,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pes_gameplay_wizard_potions_above_half_health_01",
-		response = "pes_gameplay_wizard_potions_above_half_health_01",
+		name = "pes_gameplay_wizard_potions_above_half_health",
+		response = "pes_gameplay_wizard_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -20835,52 +18892,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_wizard_potions_above_half_health_02",
-		response = "pes_gameplay_wizard_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -20918,51 +18930,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pes_gameplay_wizard_potions_above_half_health_03",
-		response = "pes_gameplay_wizard_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -22633,6 +20600,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pwe_gameplay_hunter_downed_3_times",
+		name = "pwe_gameplay_hunter_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			}
+		}
+	})
+	define_rule({
 		response = "pwe_gameplay_hunter_downed_3_times_06_reply_01",
 		name = "pwe_gameplay_hunter_downed_3_times_06_reply_01",
 		probability = 1,
@@ -22658,37 +20656,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_hunter_downed_3_times_11",
-		name = "pwe_gameplay_hunter_downed_3_times_11",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
 		response = "pwe_gameplay_hunter_downed_3_times_11_reply_01",
 		name = "pwe_gameplay_hunter_downed_3_times_11_reply_01",
 		probability = 1,
@@ -22704,68 +20671,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwh_gameplay_hunter_downed_3_times_11_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
-		response = "pwe_gameplay_hunter_downed_3_times_12",
-		name = "pwe_gameplay_hunter_downed_3_times_12",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
-		response = "pwe_gameplay_hunter_downed_3_times_13",
-		name = "pwe_gameplay_hunter_downed_3_times_13",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
 			},
 			{
 				"user_context",
@@ -23255,8 +21160,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_gameplay_hunter_potions_above_half_health_01",
-		response = "pwe_gameplay_hunter_potions_above_half_health_01",
+		name = "pwe_gameplay_hunter_potions_above_half_health",
+		response = "pwe_gameplay_hunter_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -23287,52 +21192,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_gameplay_hunter_potions_above_half_health_02",
-		response = "pwe_gameplay_hunter_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -23370,51 +21230,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_gameplay_hunter_potions_above_half_health_03",
-		response = "pwe_gameplay_hunter_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -23536,49 +21351,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_kiling_a_second_rat_ogre_01",
-		name = "pwe_gameplay_kiling_a_second_rat_ogre_01",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"enemy_kill"
-			},
-			{
-				"query_context",
-				"killed_type",
-				OP.EQ,
-				"skaven_rat_ogre"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GTEQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"times_killed_rat_ogre",
-				OP.EQ,
-				2
-			}
-		}
-	})
-	define_rule({
 		response = "pwe_gameplay_killing_a_rat_ogre_01",
 		name = "pwe_gameplay_killing_a_rat_ogre_01",
 		probability = 1,
@@ -23628,8 +21400,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_killing_a_second_rat_ogre_02",
-		name = "pwe_gameplay_killing_a_second_rat_ogre_02",
+		response = "pwe_gameplay_killing_a_second_rat_ogre",
+		name = "pwe_gameplay_killing_a_second_rat_ogre",
 		probability = 1,
 		criterias = {
 			{
@@ -23778,6 +21550,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pwe_gameplay_ranger_downed_3_times",
+		name = "pwe_gameplay_ranger_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"dwarf_ranger"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"wood_elf"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"wood_elf"
+			}
+		}
+	})
+	define_rule({
 		response = "pwe_gameplay_ranger_downed_3_times_04_reply_01",
 		name = "pwe_gameplay_ranger_downed_3_times_04_reply_01",
 		probability = 1,
@@ -23828,68 +21631,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_ranger_downed_3_times_11",
-		name = "pwe_gameplay_ranger_downed_3_times_11",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
-		response = "pwe_gameplay_ranger_downed_3_times_12",
-		name = "pwe_gameplay_ranger_downed_3_times_12",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
 		response = "pwe_gameplay_ranger_downed_3_times_12_reply_01",
 		name = "pwe_gameplay_ranger_downed_3_times_12_reply_01",
 		probability = 1,
@@ -23905,37 +21646,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pdr_gameplay_ranger_downed_3_times_12_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
-		response = "pwe_gameplay_ranger_downed_3_times_13",
-		name = "pwe_gameplay_ranger_downed_3_times_13",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
 			},
 			{
 				"user_context",
@@ -24425,8 +22135,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_gameplay_ranger_potions_above_half_health_02",
-		response = "pwe_gameplay_ranger_potions_above_half_health_02",
+		name = "pwe_gameplay_ranger_potions_above_half_health",
+		response = "pwe_gameplay_ranger_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -24457,7 +22167,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -24502,51 +22212,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_gameplay_ranger_potions_above_half_health_03",
-		response = "pwe_gameplay_ranger_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pwe_gameplay_ranger_potions_above_half_health_03_reply_01",
 		response = "pwe_gameplay_ranger_potions_above_half_health_03_reply_01",
 		criterias = {
@@ -24572,51 +22237,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_gameplay_ranger_potions_above_half_health_04",
-		response = "pwe_gameplay_ranger_potions_above_half_health_04",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -26408,8 +24028,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_soldier_downed_3_times_02",
-		name = "pwe_gameplay_soldier_downed_3_times_02",
+		response = "pwe_gameplay_soldier_downed_3_times",
+		name = "pwe_gameplay_soldier_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -26514,37 +24134,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_soldier_downed_3_times_12",
-		name = "pwe_gameplay_soldier_downed_3_times_12",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
 		response = "pwe_gameplay_soldier_downed_3_times_12_reply_01",
 		name = "pwe_gameplay_soldier_downed_3_times_12_reply_01",
 		probability = 1,
@@ -26560,37 +24149,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pes_gameplay_soldier_downed_3_times_12_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
-		response = "pwe_gameplay_soldier_downed_3_times_13",
-		name = "pwe_gameplay_soldier_downed_3_times_13",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
 			},
 			{
 				"user_context",
@@ -27086,8 +24644,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_gameplay_soldier_potions_above_half_health_01",
-		response = "pwe_gameplay_soldier_potions_above_half_health_01",
+		name = "pwe_gameplay_soldier_potions_above_half_health",
+		response = "pwe_gameplay_soldier_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -27118,7 +24676,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -27163,51 +24721,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_gameplay_soldier_potions_above_half_health_02",
-		response = "pwe_gameplay_soldier_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pwe_gameplay_soldier_potions_above_half_health_02_reply_01",
 		response = "pwe_gameplay_soldier_potions_above_half_health_02_reply_01",
 		criterias = {
@@ -27233,51 +24746,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_gameplay_soldier_potions_above_half_health_03",
-		response = "pwe_gameplay_soldier_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -27499,8 +24967,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwe_gameplay_wizard_downed_3_times_11",
-		name = "pwe_gameplay_wizard_downed_3_times_11",
+		response = "pwe_gameplay_wizard_downed_3_times",
+		name = "pwe_gameplay_wizard_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -27545,37 +25013,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pbw_gameplay_wizard_downed_3_times_11_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			}
-		}
-	})
-	define_rule({
-		response = "pwe_gameplay_wizard_downed_3_times_12",
-		name = "pwe_gameplay_wizard_downed_3_times_12",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
 			},
 			{
 				"user_context",
@@ -27965,8 +25402,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwe_gameplay_wizard_potions_above_half_health_01",
-		response = "pwe_gameplay_wizard_potions_above_half_health_01",
+		name = "pwe_gameplay_wizard_potions_above_half_health",
+		response = "pwe_gameplay_wizard_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -27997,7 +25434,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -28035,51 +25472,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwe_gameplay_wizard_potions_above_half_health_03",
-		response = "pwe_gameplay_wizard_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -28634,8 +26026,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_elf_downed_3_times_03_azsd",
-		name = "pwh_gameplay_elf_downed_3_times_03_azsd",
+		response = "pwh_gameplay_elf_downed_3_times",
+		name = "pwh_gameplay_elf_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -28690,37 +26082,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_elf_downed_3_times_04",
-		name = "pwh_gameplay_elf_downed_3_times_04",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
 		response = "pwh_gameplay_elf_downed_3_times_04_reply_01",
 		name = "pwh_gameplay_elf_downed_3_times_04_reply_01",
 		probability = 1,
@@ -28736,37 +26097,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pwe_gameplay_elf_downed_3_times_04_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
-		response = "pwh_gameplay_elf_downed_3_times_05",
-		name = "pwh_gameplay_elf_downed_3_times_05",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
 			},
 			{
 				"user_context",
@@ -29256,8 +26586,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwh_gameplay_elf_potions_above_half_health_01",
-		response = "pwh_gameplay_elf_potions_above_half_health_01",
+		name = "pwh_gameplay_elf_potions_above_half_health",
+		response = "pwh_gameplay_elf_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -29288,7 +26618,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -29326,51 +26656,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_gameplay_elf_potions_above_half_health_02",
-		response = "pwh_gameplay_elf_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"wood_elf"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -30526,51 +27811,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_killing_a_second_rat_ogre_01",
-		name = "pwh_gameplay_killing_a_second_rat_ogre_01",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"enemy_kill"
-			},
-			{
-				"query_context",
-				"killed_type",
-				OP.EQ,
-				"skaven_rat_ogre"
-			},
-			{
-				"user_context",
-				"friends_close",
-				OP.GTEQ,
-				1
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_memory",
-				"times_killed_rat_ogre",
-				OP.EQ,
-				2
-			}
-		}
-	})
-	define_rule({
-		response = "pwh_gameplay_killing_a_second_rat_ogre_02",
-		name = "pwh_gameplay_killing_a_second_rat_ogre_02",
+		response = "pwh_gameplay_killing_a_second_rat_ogre",
+		name = "pwh_gameplay_killing_a_second_rat_ogre",
 		probability = 1,
 		criterias = {
 			{
@@ -30769,8 +28011,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_ranger_downed_3_time_02",
-		name = "pwh_gameplay_ranger_downed_3_time_02",
+		response = "pwh_gameplay_ranger_downed_3_times",
+		name = "pwh_gameplay_ranger_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -30825,37 +28067,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_ranger_downed_3_times_03",
-		name = "pwh_gameplay_ranger_downed_3_times_03",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
 		response = "pwh_gameplay_ranger_downed_3_times_03_reply_01",
 		name = "pwh_gameplay_ranger_downed_3_times_03_reply_01",
 		probability = 1,
@@ -30871,37 +28082,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pdr_gameplay_ranger_downed_3_times_03_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
-		response = "pwh_gameplay_ranger_downed_3_times_04",
-		name = "pwh_gameplay_ranger_downed_3_times_04",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
 			},
 			{
 				"user_context",
@@ -30953,63 +28133,6 @@ return function ()
 				"faction_memory",
 				"time_since_hit_by_goo_vo",
 				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_gameplay_ranger_killing_3_specials_in_a_row_02",
-		response = "pwh_gameplay_ranger_killing_3_specials_in_a_row_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"killed_enemy"
-			},
-			{
-				"query_context",
-				"killer_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"faction_memory",
-				"dwarf_ranger_special_kills_in_row",
-				OP.EQ,
-				2
-			},
-			{
-				"global_context",
-				"empire_soldier",
-				OP.EQ,
-				1
-			},
-			{
-				"user_memory",
-				"once_special_kills_in_a_row",
-				OP.EQ,
-				0
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"once_special_kills_in_a_row",
-				OP.ADD,
-				1
-			},
-			{
-				"faction_memory",
-				"dwarf_ranger_special_kills_in_row",
-				OP.ADD,
-				1
 			}
 		}
 	})
@@ -31398,8 +28521,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwh_gameplay_ranger_potions_above_half_health_01",
-		response = "pwh_gameplay_ranger_potions_above_half_health_01",
+		name = "pwh_gameplay_ranger_potions_above_half_health",
+		response = "pwh_gameplay_ranger_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -31430,7 +28553,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -31475,51 +28598,6 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwh_gameplay_ranger_potions_above_half_health_02",
-		response = "pwh_gameplay_ranger_potions_above_half_health_02",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
 		name = "pwh_gameplay_ranger_potions_above_half_health_02_reply_01",
 		response = "pwh_gameplay_ranger_potions_above_half_health_02_reply_01",
 		criterias = {
@@ -31545,51 +28623,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_gameplay_ranger_potions_above_half_health_03",
-		response = "pwh_gameplay_ranger_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"dwarf_ranger"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -33299,6 +30332,37 @@ return function ()
 		}
 	})
 	define_rule({
+		response = "pwh_gameplay_soldier_downed_3_times",
+		name = "pwh_gameplay_soldier_downed_3_times",
+		probability = 1,
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"knocked_down_multiple_times"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"empire_soldier"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			}
+		}
+	})
+	define_rule({
 		response = "pwh_gameplay_soldier_downed_3_times_02_reply_01",
 		name = "pwh_gameplay_soldier_downed_3_times_02_reply_01",
 		probability = 1,
@@ -33324,82 +30388,6 @@ return function ()
 		}
 	})
 	define_rule({
-		probability = 1,
-		name = "pwh_gameplay_soldier_downed_3_times_03",
-		response = "pwh_gameplay_soldier_downed_3_times_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"faction_memory",
-				"times_down_empire_soldier",
-				OP.EQ,
-				2
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		},
-		on_done = {
-			{
-				"faction_memory",
-				"times_down_empire_soldier",
-				OP.ADD,
-				1
-			}
-		}
-	})
-	define_rule({
-		response = "pwh_gameplay_soldier_downed_3_times_04",
-		name = "pwh_gameplay_soldier_downed_3_times_04",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
 		response = "pwh_gameplay_soldier_downed_3_times_04_reply_01",
 		name = "pwh_gameplay_soldier_downed_3_times_04_reply_01",
 		probability = 1,
@@ -33415,37 +30403,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pes_gameplay_soldier_downed_3_times_04_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
-		response = "pwh_gameplay_soldier_downed_3_times_05",
-		name = "pwh_gameplay_soldier_downed_3_times_05",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"empire_soldier"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
 			},
 			{
 				"user_context",
@@ -33822,8 +30779,8 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
-		name = "pwh_gameplay_soldier_potions_above_half_health_02",
-		response = "pwh_gameplay_soldier_potions_above_half_health_02",
+		name = "pwh_gameplay_soldier_potions_above_half_health",
+		response = "pwh_gameplay_soldier_potions_above_half_health",
 		criterias = {
 			{
 				"query_context",
@@ -33854,7 +30811,7 @@ return function ()
 				"time_since_early_healing_draught",
 				OP.TIMEDIFF,
 				OP.GT,
-				900
+				600
 			}
 		},
 		on_done = {
@@ -34163,8 +31120,8 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_wizard_downed_3_times_02",
-		name = "pwh_gameplay_wizard_downed_3_times_02",
+		response = "pwh_gameplay_wizard_downed_3_times",
+		name = "pwh_gameplay_wizard_downed_3_times",
 		probability = 1,
 		criterias = {
 			{
@@ -34244,37 +31201,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_wizard_downed_3_times_03",
-		name = "pwh_gameplay_wizard_downed_3_times_03",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
 		response = "pwh_gameplay_wizard_downed_3_times_03_reply_01",
 		name = "pwh_gameplay_wizard_downed_3_times_03_reply_01",
 		probability = 1,
@@ -34300,43 +31226,6 @@ return function ()
 		}
 	})
 	define_rule({
-		response = "pwh_gameplay_wizard_downed_3_times_04",
-		name = "pwh_gameplay_wizard_downed_3_times_04",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"faction_memory",
-				"times_down_bright_wizard",
-				OP.EQ,
-				2
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
 		response = "pwh_gameplay_wizard_downed_3_times_10_reply_01",
 		name = "pwh_gameplay_wizard_downed_3_times_10_reply_01",
 		probability = 1,
@@ -34352,37 +31241,6 @@ return function ()
 				"sound_event",
 				OP.EQ,
 				"pbw_gameplay_wizard_downed_3_times_10_reply_01"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			}
-		}
-	})
-	define_rule({
-		response = "pwh_gameplay_wizard_downed_3_times_14",
-		name = "pwh_gameplay_wizard_downed_3_times_14",
-		probability = 1,
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"knocked_down_multiple_times"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
 			},
 			{
 				"user_context",
@@ -34872,6 +31730,51 @@ return function ()
 	})
 	define_rule({
 		probability = 1,
+		name = "pwh_gameplay_wizard_potions_above_half_health",
+		response = "pwh_gameplay_wizard_potions_above_half_health",
+		criterias = {
+			{
+				"query_context",
+				"concept",
+				OP.EQ,
+				"early_healing_draught"
+			},
+			{
+				"query_context",
+				"source_name",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"query_context",
+				"target_name",
+				OP.EQ,
+				"bright_wizard"
+			},
+			{
+				"user_context",
+				"player_profile",
+				OP.EQ,
+				"witch_hunter"
+			},
+			{
+				"user_memory",
+				"time_since_early_healing_draught",
+				OP.TIMEDIFF,
+				OP.GT,
+				600
+			}
+		},
+		on_done = {
+			{
+				"user_memory",
+				"time_since_early_healing_draught",
+				OP.TIMESET
+			}
+		}
+	})
+	define_rule({
+		probability = 1,
 		name = "pwh_gameplay_wizard_potions_above_half_health_01_reply_01",
 		response = "pwh_gameplay_wizard_potions_above_half_health_01_reply_01",
 		criterias = {
@@ -34929,51 +31832,6 @@ return function ()
 		on_done = {
 			{
 				"faction_memory",
-				"time_since_early_healing_draught",
-				OP.TIMESET
-			}
-		}
-	})
-	define_rule({
-		probability = 1,
-		name = "pwh_gameplay_wizard_potions_above_half_health_03",
-		response = "pwh_gameplay_wizard_potions_above_half_health_03",
-		criterias = {
-			{
-				"query_context",
-				"concept",
-				OP.EQ,
-				"early_healing_draught"
-			},
-			{
-				"query_context",
-				"source_name",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"query_context",
-				"target_name",
-				OP.EQ,
-				"bright_wizard"
-			},
-			{
-				"user_context",
-				"player_profile",
-				OP.EQ,
-				"witch_hunter"
-			},
-			{
-				"user_memory",
-				"time_since_early_healing_draught",
-				OP.TIMEDIFF,
-				OP.GT,
-				900
-			}
-		},
-		on_done = {
-			{
-				"user_memory",
 				"time_since_early_healing_draught",
 				OP.TIMESET
 			}
@@ -35243,28 +32101,6 @@ return function ()
 		}
 	})
 	add_dialogues({
-		pbr_gameplay_elf_downed_3_times_11 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbr_gameplay_elf_downed_3_times_11"
-			},
-			sound_events = {
-				[1] = "pbr_gameplay_elf_downed_3_times_11"
-			},
-			sound_events_duration = {
-				[1] = 1.6000000238419
-			}
-		},
 		pbw_all_stairs_conversation_b = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -35636,26 +32472,38 @@ return function ()
 				[1] = 1.6358125209808
 			}
 		},
-		pbw_gameplay_elf_downed_3_times_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_elf_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_elf_downed_3_times_02"
+				"pbw_gameplay_elf_downed_3_times_07",
+				"pbw_gameplay_elf_downed_3_times_06",
+				"pbw_gameplay_elf_downed_3_times_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_elf_downed_3_times_02"
+				"pbw_gameplay_elf_downed_3_times_07",
+				"pbw_gameplay_elf_downed_3_times_06",
+				"pbw_gameplay_elf_downed_3_times_02"
 			},
 			sound_events_duration = {
-				[1] = 1.7866666316986
+				2.3509166240692,
+				4.0160207748413,
+				1.7866666316986
 			}
 		},
 		pbw_gameplay_elf_downed_3_times_02_reply_01 = {
@@ -35702,28 +32550,6 @@ return function ()
 				[1] = 4.2043747901917
 			}
 		},
-		pbw_gameplay_elf_downed_3_times_06 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_elf_downed_3_times_06"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_elf_downed_3_times_06"
-			},
-			sound_events_duration = {
-				[1] = 4.0160207748413
-			}
-		},
 		pbw_gameplay_elf_downed_3_times_06_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -35744,28 +32570,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.4567
-			}
-		},
-		pbw_gameplay_elf_downed_3_times_07 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_elf_downed_3_times_07"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_elf_downed_3_times_07"
-			},
-			sound_events_duration = {
-				[1] = 2.3509166240692
 			}
 		},
 		pbw_gameplay_elf_downed_3_times_07_reply_01 = {
@@ -36032,26 +32836,38 @@ return function ()
 				3.4182915687561
 			}
 		},
-		pbw_gameplay_elf_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_elf_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_elf_potions_above_half_health_01"
+				"pbw_gameplay_elf_potions_above_half_health_01",
+				"pbw_gameplay_elf_potions_above_half_health_02",
+				"pbw_gameplay_elf_potions_above_half_health_06"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_elf_potions_above_half_health_01"
+				"pbw_gameplay_elf_potions_above_half_health_01",
+				"pbw_gameplay_elf_potions_above_half_health_02",
+				"pbw_gameplay_elf_potions_above_half_health_06"
 			},
 			sound_events_duration = {
-				[1] = 4.1975002288818
+				4.1975002288818,
+				2.2466666698456,
+				2.3719792366028
 			}
 		},
 		pbw_gameplay_elf_potions_above_half_health_01_reply_01 = {
@@ -36076,28 +32892,6 @@ return function ()
 				[1] = 3.9071457386017
 			}
 		},
-		pbw_gameplay_elf_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_elf_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_elf_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 2.2466666698456
-			}
-		},
 		pbw_gameplay_elf_potions_above_half_health_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -36118,28 +32912,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.3800001144409
-			}
-		},
-		pbw_gameplay_elf_potions_above_half_health_06 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_elf_potions_above_half_health_06"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_elf_potions_above_half_health_06"
-			},
-			sound_events_duration = {
-				[1] = 2.3719792366028
 			}
 		},
 		pbw_gameplay_elf_potions_above_half_health_06_reply_01 = {
@@ -36258,25 +33030,32 @@ return function ()
 			}
 		},
 		pbw_gameplay_hunter_3_special_kills_in_a_row = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				[1] = "dialogue_shout",
+				[2] = "dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_hunter_3_special_kills_in_a_row_01"
+				[1] = "pbw_gameplay_hunter_3_special_kills_in_a_row_01",
+				[2] = "pbw_gameplay_hunter_kills_3_specials_in_a_row_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_hunter_3_special_kills_in_a_row_01"
+				[1] = "pbw_gameplay_hunter_3_special_kills_in_a_row_01",
+				[2] = "pbw_gameplay_hunter_kills_3_specials_in_a_row_02"
 			},
 			sound_events_duration = {
-				[1] = 4.2738122940064
+				[1] = 4.2738122940064,
+				[2] = 2.9089374542236
 			}
 		},
 		pbw_gameplay_hunter_3_special_kills_in_a_row_agnostic_c = {
@@ -36345,70 +33124,38 @@ return function ()
 				[1] = 2.0480625629425
 			}
 		},
-		pbw_gameplay_hunter_downed_3_times_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_hunter_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_hunter_downed_3_times_02"
+				"pbw_gameplay_hunter_downed_3_times_04",
+				"pbw_gameplay_hunter_downed_3_times_03",
+				"pbw_gameplay_hunter_downed_3_times_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_hunter_downed_3_times_02"
+				"pbw_gameplay_hunter_downed_3_times_04",
+				"pbw_gameplay_hunter_downed_3_times_03",
+				"pbw_gameplay_hunter_downed_3_times_02"
 			},
 			sound_events_duration = {
-				[1] = 2.6360416412353
-			}
-		},
-		pbw_gameplay_hunter_downed_3_times_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_hunter_downed_3_times_03"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_hunter_downed_3_times_03"
-			},
-			sound_events_duration = {
-				[1] = 4.4993958473206
-			}
-		},
-		pbw_gameplay_hunter_downed_3_times_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_hunter_downed_3_times_04"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_hunter_downed_3_times_04"
-			},
-			sound_events_duration = {
-				[1] = 4.6534376144409
+				4.6534376144409,
+				4.4993958473206,
+				2.6360416412353
 			}
 		},
 		pbw_gameplay_hunter_hit_by_goo_thrice_02 = {
@@ -36565,28 +33312,6 @@ return function ()
 				[1] = 2.3018333911896
 			}
 		},
-		pbw_gameplay_hunter_kills_3_specials_in_a_row_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_hunter_kills_3_specials_in_a_row_02"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_hunter_kills_3_specials_in_a_row_02"
-			},
-			sound_events_duration = {
-				[1] = 2.9089374542236
-			}
-		},
 		pbw_gameplay_hunter_misses_bomb_01 = {
 			randomize_indexes_n = 0,
 			face_animations_n = 3,
@@ -36631,26 +33356,33 @@ return function ()
 				3.6728959083557
 			}
 		},
-		pbw_gameplay_killing_a_second_rat_ogre_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_killing_a_second_rat_ogre = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pbw_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pbw_killing_a_second_rat_ogre_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pbw_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pbw_killing_a_second_rat_ogre_02"
 			},
 			sound_events_duration = {
-				[1] = 4.4454793930054
+				[1] = 4.4454793930054,
+				[2] = 4.8280000686645
 			}
 		},
 		pbw_gameplay_killing_rat_ogre_01 = {
@@ -36763,26 +33495,38 @@ return function ()
 				[1] = 2.9493124485016
 			}
 		},
-		pbw_gameplay_ranger_downed_3_times_07 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_ranger_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_ranger_downed_3_times_07"
+				"pbw_gameplay_ranger_downed_3_times_08",
+				"pbw_gameplay_ranger_downed_3_times_09",
+				"pbw_gameplay_ranger_downed_3_times_07"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_ranger_downed_3_times_07"
+				"pbw_gameplay_ranger_downed_3_times_08",
+				"pbw_gameplay_ranger_downed_3_times_09",
+				"pbw_gameplay_ranger_downed_3_times_07"
 			},
 			sound_events_duration = {
-				[1] = 1.7990416288376
+				1.4792292118073,
+				3.8851873874664,
+				1.7990416288376
 			}
 		},
 		pbw_gameplay_ranger_downed_3_times_07_reply_01 = {
@@ -36807,28 +33551,6 @@ return function ()
 				[1] = 4.8213124275208
 			}
 		},
-		pbw_gameplay_ranger_downed_3_times_08 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_ranger_downed_3_times_08"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_ranger_downed_3_times_08"
-			},
-			sound_events_duration = {
-				[1] = 1.4792292118073
-			}
-		},
 		pbw_gameplay_ranger_downed_3_times_08_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -36849,28 +33571,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 1.853395819664
-			}
-		},
-		pbw_gameplay_ranger_downed_3_times_09 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_ranger_downed_3_times_09"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_ranger_downed_3_times_09"
-			},
-			sound_events_duration = {
-				[1] = 3.8851873874664
 			}
 		},
 		pbw_gameplay_ranger_downed_3_times_11_reply_01 = {
@@ -37137,26 +33837,38 @@ return function ()
 				3.5132915973663
 			}
 		},
-		pbw_gameplay_ranger_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_ranger_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_ranger_potions_above_half_health_01"
+				"pbw_gameplay_ranger_potions_above_half_health_01",
+				"pbw_gameplay_ranger_potions_above_half_health_02",
+				"pbw_gameplay_ranger_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_ranger_potions_above_half_health_01"
+				"pbw_gameplay_ranger_potions_above_half_health_01",
+				"pbw_gameplay_ranger_potions_above_half_health_02",
+				"pbw_gameplay_ranger_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 1.7590416669846
+				1.7590416669846,
+				1.7240833044052,
+				3.6804583072662
 			}
 		},
 		pbw_gameplay_ranger_potions_above_half_health_01_reply_01 = {
@@ -37181,28 +33893,6 @@ return function ()
 				[1] = 2.7886457443237
 			}
 		},
-		pbw_gameplay_ranger_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_ranger_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_ranger_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 1.7240833044052
-			}
-		},
 		pbw_gameplay_ranger_potions_above_half_health_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -37223,28 +33913,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.0086250305176
-			}
-		},
-		pbw_gameplay_ranger_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 3.6804583072662
 			}
 		},
 		pbw_gameplay_ranger_potions_above_half_health_03_reply_01 = {
@@ -38655,6 +35323,40 @@ return function ()
 				[1] = 1.5707499980927
 			}
 		},
+		pbw_gameplay_soldier_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pbw_gameplay_soldier_downed_3_times_08",
+				"pbw_gameplay_soldier_downed_3_times_07",
+				"pbw_gameplay_soldier_downed_3_times_06"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pbw_gameplay_soldier_downed_3_times_08",
+				"pbw_gameplay_soldier_downed_3_times_07",
+				"pbw_gameplay_soldier_downed_3_times_06"
+			},
+			sound_events_duration = {
+				3.9855208396912,
+				3.0608959197998,
+				1.9446874856949
+			}
+		},
 		pbw_gameplay_soldier_downed_3_times_05_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -38677,50 +35379,6 @@ return function ()
 				[1] = 3.3886458873749
 			}
 		},
-		pbw_gameplay_soldier_downed_3_times_06 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_soldier_downed_3_times_06"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_soldier_downed_3_times_06"
-			},
-			sound_events_duration = {
-				[1] = 1.9446874856949
-			}
-		},
-		pbw_gameplay_soldier_downed_3_times_07 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_soldier_downed_3_times_07"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_soldier_downed_3_times_07"
-			},
-			sound_events_duration = {
-				[1] = 3.0608959197998
-			}
-		},
 		pbw_gameplay_soldier_downed_3_times_07_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -38741,28 +35399,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 1.9615416526794
-			}
-		},
-		pbw_gameplay_soldier_downed_3_times_08 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_soldier_downed_3_times_08"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_soldier_downed_3_times_08"
-			},
-			sound_events_duration = {
-				[1] = 3.9855208396912
 			}
 		},
 		pbw_gameplay_soldier_hit_by_goo_thrice_02 = {
@@ -38975,48 +35611,38 @@ return function ()
 				3.2698540687561
 			}
 		},
-		pbw_gameplay_soldier_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_soldier_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_soldier_potions_above_half_health_01"
+				"pbw_gameplay_soldier_potions_above_half_health_01",
+				"pbw_gameplay_soldier_potions_above_half_health_02",
+				"pbw_gameplay_soldier_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_soldier_potions_above_half_health_01"
+				"pbw_gameplay_soldier_potions_above_half_health_01",
+				"pbw_gameplay_soldier_potions_above_half_health_02",
+				"pbw_gameplay_soldier_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 3.4156250953674
-			}
-		},
-		pbw_gameplay_soldier_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_soldier_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_soldier_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 2.2182083129883
+				3.4156250953674,
+				2.2182083129883,
+				3.6204373836517
 			}
 		},
 		pbw_gameplay_soldier_potions_above_half_health_02_reply_01 = {
@@ -39039,28 +35665,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.2707707881927
-			}
-		},
-		pbw_gameplay_soldier_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_soldier_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_soldier_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 3.6204373836517
 			}
 		},
 		pbw_gameplay_soldier_potions_above_half_health_reply_01 = {
@@ -39701,26 +36305,38 @@ return function ()
 				[1] = 4.761833190918
 			}
 		},
-		pbw_gameplay_wizard_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pbw_gameplay_wizard_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pbw_gameplay_wizard_potions_above_half_health_01"
+				"pbw_gameplay_wizard_potions_above_half_health_01",
+				"pbw_gameplay_wizard_potions_above_half_health_02",
+				"pbw_gameplay_wizard_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pbw_gameplay_wizard_potions_above_half_health_01"
+				"pbw_gameplay_wizard_potions_above_half_health_01",
+				"pbw_gameplay_wizard_potions_above_half_health_02",
+				"pbw_gameplay_wizard_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 2.9986040592194
+				2.9986040592194,
+				3.9818959236145,
+				1.090020775795
 			}
 		},
 		pbw_gameplay_wizard_potions_above_half_health_01_reply_01 = {
@@ -39789,28 +36405,6 @@ return function ()
 				[1] = 1.9656250476837
 			}
 		},
-		pbw_gameplay_wizard_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_wizard_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_wizard_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 3.9818959236145
-			}
-		},
 		pbw_gameplay_wizard_potions_above_half_health_02_reply_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -39875,28 +36469,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.0702500343323
-			}
-		},
-		pbw_gameplay_wizard_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pbw_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pbw_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 1.090020775795
 			}
 		},
 		pbw_gameplay_wizard_potions_above_half_health_03_reply_01 = {
@@ -40029,28 +36601,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 4.2754583358765
-			}
-		},
-		pbw_killing_a_second_rat_ogre_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pbw_killing_a_second_rat_ogre_02"
-			},
-			sound_events = {
-				[1] = "pbw_killing_a_second_rat_ogre_02"
-			},
-			sound_events_duration = {
-				[1] = 4.8280000686645
 			}
 		},
 		pdr_all_stairs_conversation_a = {
@@ -40402,26 +36952,38 @@ return function ()
 				[1] = 3.5248334407806
 			}
 		},
-		pdr_gameplay_elf_downed_3_times_12 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_elf_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_elf_downed_3_times_12"
+				"pbr_gameplay_elf_downed_3_times_11",
+				"pdr_gameplay_elf_downed_3_times_13",
+				"pdr_gameplay_elf_downed_3_times_12"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_elf_downed_3_times_12"
+				"pbr_gameplay_elf_downed_3_times_11",
+				"pdr_gameplay_elf_downed_3_times_13",
+				"pdr_gameplay_elf_downed_3_times_12"
 			},
 			sound_events_duration = {
-				[1] = 2.7075417041779
+				1.6000000238419,
+				1.8666042089462,
+				2.7075417041779
 			}
 		},
 		pdr_gameplay_elf_downed_3_times_12_reply_01 = {
@@ -40444,28 +37006,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.0698957443237
-			}
-		},
-		pdr_gameplay_elf_downed_3_times_13 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_elf_downed_3_times_13"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_elf_downed_3_times_13"
-			},
-			sound_events_duration = {
-				[1] = 1.8666042089462
 			}
 		},
 		pdr_gameplay_elf_downed_3_times_13_reply_01 = {
@@ -40710,70 +37250,38 @@ return function ()
 				3.1304166316986
 			}
 		},
-		pdr_gameplay_elf_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_elf_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_elf_potions_above_half_health_02"
+				"pdr_gameplay_elf_potions_above_half_health_02",
+				"pdr_gameplay_elf_potions_above_half_health_03",
+				"pdr_gameplay_elf_potions_above_half_health_04"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_elf_potions_above_half_health_02"
+				"pdr_gameplay_elf_potions_above_half_health_02",
+				"pdr_gameplay_elf_potions_above_half_health_03",
+				"pdr_gameplay_elf_potions_above_half_health_04"
 			},
 			sound_events_duration = {
-				[1] = 3.4939999580383
-			}
-		},
-		pdr_gameplay_elf_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_elf_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_elf_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 3.4214792251587
-			}
-		},
-		pdr_gameplay_elf_potions_above_half_health_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_elf_potions_above_half_health_04"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_elf_potions_above_half_health_04"
-			},
-			sound_events_duration = {
-				[1] = 2.7524583339691
+				3.4939999580383,
+				3.4214792251587,
+				2.7524583339691
 			}
 		},
 		pdr_gameplay_empire_soldier_hit_by_vomit_a = {
@@ -40957,6 +37465,40 @@ return function ()
 				[1] = 2.4855415821075
 			}
 		},
+		pdr_gameplay_hunter_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pdr_gameplay_hunter_downed_3_times_08",
+				"pdr_gameplay_hunter_downed_3_times_09",
+				"pdr_gameplay_hunter_downed_3_times_10"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_hunter_downed_3_times_08",
+				"pdr_gameplay_hunter_downed_3_times_09",
+				"pdr_gameplay_hunter_downed_3_times_10"
+			},
+			sound_events_duration = {
+				4.6560626029968,
+				6.3679165840149,
+				3.1288542747498
+			}
+		},
 		pdr_gameplay_hunter_downed_3_times_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -41023,28 +37565,6 @@ return function ()
 				[1] = 6.2201042175293
 			}
 		},
-		pdr_gameplay_hunter_downed_3_times_08 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_hunter_downed_3_times_08"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_hunter_downed_3_times_08"
-			},
-			sound_events_duration = {
-				[1] = 4.6560626029968
-			}
-		},
 		pdr_gameplay_hunter_downed_3_times_08_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -41067,28 +37587,6 @@ return function ()
 				[1] = 4.4067707061768
 			}
 		},
-		pdr_gameplay_hunter_downed_3_times_09 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_hunter_downed_3_times_09"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_hunter_downed_3_times_09"
-			},
-			sound_events_duration = {
-				[1] = 6.3679165840149
-			}
-		},
 		pdr_gameplay_hunter_downed_3_times_09_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -41109,28 +37607,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.3385207653046
-			}
-		},
-		pdr_gameplay_hunter_downed_3_times_10 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_hunter_downed_3_times_10"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_hunter_downed_3_times_10"
-			},
-			sound_events_duration = {
-				[1] = 3.1288542747498
 			}
 		},
 		pdr_gameplay_hunter_downed_3_times_10_reply_01 = {
@@ -41441,70 +37917,38 @@ return function ()
 				2.8127291202545
 			}
 		},
-		pdr_gameplay_hunter_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_hunter_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_hunter_potions_above_half_health_02"
+				"pdr_gameplay_hunter_potions_above_half_health_02",
+				"pdr_gameplay_hunter_potions_above_half_health_03",
+				"pdr_gameplay_hunter_potions_above_half_health_04"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_hunter_potions_above_half_health_02"
+				"pdr_gameplay_hunter_potions_above_half_health_02",
+				"pdr_gameplay_hunter_potions_above_half_health_03",
+				"pdr_gameplay_hunter_potions_above_half_health_04"
 			},
 			sound_events_duration = {
-				[1] = 2.1261665821075
-			}
-		},
-		pdr_gameplay_hunter_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_hunter_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_hunter_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 3.5346667766571
-			}
-		},
-		pdr_gameplay_hunter_potions_above_half_health_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_hunter_potions_above_half_health_04"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_hunter_potions_above_half_health_04"
-			},
-			sound_events_duration = {
-				[1] = 5.1474165916443
+				2.1261665821075,
+				3.5346667766571,
+				5.1474165916443
 			}
 		},
 		pdr_gameplay_hunter_potions_above_half_health_reply_01 = {
@@ -41640,48 +38084,33 @@ return function ()
 				[1] = 3.0934374332428
 			}
 		},
-		pdr_gameplay_killing_a_second_rat_ogre_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_killing_a_second_rat_ogre = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pdr_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pdr_gameplay_killing_a_second_rat_ogre_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pdr_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pdr_gameplay_killing_a_second_rat_ogre_02"
 			},
 			sound_events_duration = {
-				[1] = 3.3102707862854
-			}
-		},
-		pdr_gameplay_killing_a_second_rat_ogre_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_killing_a_second_rat_ogre_02"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_killing_a_second_rat_ogre_02"
-			},
-			sound_events_duration = {
-				[1] = 4.6186456680298
+				[1] = 3.3102707862854,
+				[2] = 4.6186456680298
 			}
 		},
 		pdr_gameplay_ranger_3_special_kills_in_a_row_01_reply_01 = {
@@ -44016,48 +40445,38 @@ return function ()
 				[1] = 3.0596458911896
 			}
 		},
-		pdr_gameplay_soldier_downed_3_times_09 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_soldier_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_soldier_downed_3_times_09"
+				"pdr_gameplay_soldier_downed_3_times_11",
+				"pdr_gameplay_soldier_downed_3_times_09",
+				"pdr_gameplay_soldier_downed_3_times_10"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_soldier_downed_3_times_09"
+				"pdr_gameplay_soldier_downed_3_times_11",
+				"pdr_gameplay_soldier_downed_3_times_09",
+				"pdr_gameplay_soldier_downed_3_times_10"
 			},
 			sound_events_duration = {
-				[1] = 2.8972084522247
-			}
-		},
-		pdr_gameplay_soldier_downed_3_times_10 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_soldier_downed_3_times_10"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_soldier_downed_3_times_10"
-			},
-			sound_events_duration = {
-				[1] = 2.8430624008179
+				1.5148541927338,
+				2.8972084522247,
+				2.8430624008179
 			}
 		},
 		pdr_gameplay_soldier_downed_3_times_10_reply_01 = {
@@ -44080,28 +40499,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 4.9329791069031
-			}
-		},
-		pdr_gameplay_soldier_downed_3_times_11 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_soldier_downed_3_times_11"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_soldier_downed_3_times_11"
-			},
-			sound_events_duration = {
-				[1] = 1.5148541927338
 			}
 		},
 		pdr_gameplay_soldier_downed_3_times_11_reply_01 = {
@@ -44412,26 +40809,38 @@ return function ()
 				3.0319583415985
 			}
 		},
-		pdr_gameplay_soldier_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_soldier_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_soldier_potions_above_half_health_01"
+				"pdr_gameplay_soldier_potions_above_half_health_01",
+				"pdr_gameplay_soldier_potions_above_half_health_02",
+				"pdr_gameplay_soldier_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_soldier_potions_above_half_health_01"
+				"pdr_gameplay_soldier_potions_above_half_health_01",
+				"pdr_gameplay_soldier_potions_above_half_health_02",
+				"pdr_gameplay_soldier_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 3.6907708644867
+				3.6907708644867,
+				4.520124912262,
+				2.231645822525
 			}
 		},
 		pdr_gameplay_soldier_potions_above_half_health_01_reply_01 = {
@@ -44456,28 +40865,6 @@ return function ()
 				[1] = 1.9445416927338
 			}
 		},
-		pdr_gameplay_soldier_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_soldier_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_soldier_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 4.520124912262
-			}
-		},
 		pdr_gameplay_soldier_potions_above_half_health_02_reply_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -44498,28 +40885,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.8580832481384
-			}
-		},
-		pdr_gameplay_soldier_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_soldier_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_soldier_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.231645822525
 			}
 		},
 		pdr_gameplay_soldier_potions_above_half_health_03_reply_01 = {
@@ -44589,25 +40954,32 @@ return function ()
 			}
 		},
 		pdr_gameplay_wizard_3_special_kills_in_a_row = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				[1] = "dialogue_shout",
+				[2] = "dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_wizard_3_special_kills_in_a_row_01"
+				[1] = "pdr_gameplay_wizard_3_special_kills_in_a_row_01",
+				[2] = "pdr_gameplay_wizard_kills_3_specials_in_a_row_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_wizard_3_special_kills_in_a_row_01"
+				[1] = "pdr_gameplay_wizard_3_special_kills_in_a_row_01",
+				[2] = "pdr_gameplay_wizard_kills_3_specials_in_a_row_02"
 			},
 			sound_events_duration = {
-				[1] = 1.4872916936874
+				[1] = 1.4872916936874,
+				[2] = 3.8113541603088
 			}
 		},
 		pdr_gameplay_wizard_3_special_kills_in_a_row_01_reply_01 = {
@@ -44676,6 +41048,40 @@ return function ()
 				[1] = 1.9252500534058
 			}
 		},
+		pdr_gameplay_wizard_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pdr_gameplay_wizard_downed_3_times_08",
+				"pdr_gameplay_wizard_downed_3_times_09",
+				"pdr_gameplay_wizard_downed_3_times_10"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pdr_gameplay_wizard_downed_3_times_08",
+				"pdr_gameplay_wizard_downed_3_times_09",
+				"pdr_gameplay_wizard_downed_3_times_10"
+			},
+			sound_events_duration = {
+				1.8218958377838,
+				1.5728125572205,
+				3.9230208396912
+			}
+		},
 		pdr_gameplay_wizard_downed_3_times_05_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -44742,50 +41148,6 @@ return function ()
 				[1] = 3.2005624771118
 			}
 		},
-		pdr_gameplay_wizard_downed_3_times_08 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_wizard_downed_3_times_08"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_wizard_downed_3_times_08"
-			},
-			sound_events_duration = {
-				[1] = 1.8218958377838
-			}
-		},
-		pdr_gameplay_wizard_downed_3_times_09 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_wizard_downed_3_times_09"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_wizard_downed_3_times_09"
-			},
-			sound_events_duration = {
-				[1] = 1.5728125572205
-			}
-		},
 		pdr_gameplay_wizard_downed_3_times_09_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -44806,28 +41168,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 5.4147500991821
-			}
-		},
-		pdr_gameplay_wizard_downed_3_times_10 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_wizard_downed_3_times_10"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_wizard_downed_3_times_10"
-			},
-			sound_events_duration = {
-				[1] = 3.9230208396912
 			}
 		},
 		pdr_gameplay_wizard_fires_a_rat_ogre_01 = {
@@ -45028,28 +41368,6 @@ return function ()
 				[1] = 3.7340624332428
 			}
 		},
-		pdr_gameplay_wizard_kills_3_specials_in_a_row_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_wizard_kills_3_specials_in_a_row_02"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_wizard_kills_3_specials_in_a_row_02"
-			},
-			sound_events_duration = {
-				[1] = 3.8113541603088
-			}
-		},
 		pdr_gameplay_wizard_misses_bomb_01 = {
 			randomize_indexes_n = 0,
 			face_animations_n = 3,
@@ -45094,70 +41412,38 @@ return function ()
 				2.4005000591278
 			}
 		},
-		pdr_gameplay_wizard_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pdr_gameplay_wizard_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pdr_gameplay_wizard_potions_above_half_health_01"
+				"pdr_gameplay_wizard_potions_above_half_health_01",
+				"pdr_gameplay_wizard_potions_above_half_health_02",
+				"pdr_gameplay_wizard_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pdr_gameplay_wizard_potions_above_half_health_01"
+				"pdr_gameplay_wizard_potions_above_half_health_01",
+				"pdr_gameplay_wizard_potions_above_half_health_02",
+				"pdr_gameplay_wizard_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 0.66906249523163
-			}
-		},
-		pdr_gameplay_wizard_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_wizard_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_wizard_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 2.0294582843781
-			}
-		},
-		pdr_gameplay_wizard_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pdr_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pdr_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.6358957290649
+				0.66906249523163,
+				2.0294582843781,
+				2.6358957290649
 			}
 		},
 		pdr_gameplay_wizard_potions_above_half_health_03_reply_02 = {
@@ -45534,26 +41820,38 @@ return function ()
 				[1] = 3.2053959369659
 			}
 		},
-		pes_gameplay_elf_downed_3_times_08 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_elf_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_elf_downed_3_times_08"
+				"pes_gameplay_elf_downed_3_times_08",
+				"pes_gameplay_elf_downed_3_times_09",
+				"pes_gameplay_elf_downed_3_times_10"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_elf_downed_3_times_08"
+				"pes_gameplay_elf_downed_3_times_08",
+				"pes_gameplay_elf_downed_3_times_09",
+				"pes_gameplay_elf_downed_3_times_10"
 			},
 			sound_events_duration = {
-				[1] = 3.0694375038147
+				3.0694375038147,
+				2.3461666107178,
+				3.8644165992737
 			}
 		},
 		pes_gameplay_elf_downed_3_times_08_reply_01 = {
@@ -45578,28 +41876,6 @@ return function ()
 				[1] = 0.77727085351944
 			}
 		},
-		pes_gameplay_elf_downed_3_times_09 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_elf_downed_3_times_09"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_elf_downed_3_times_09"
-			},
-			sound_events_duration = {
-				[1] = 2.3461666107178
-			}
-		},
 		pes_gameplay_elf_downed_3_times_09_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -45620,28 +41896,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 6.6962914466858
-			}
-		},
-		pes_gameplay_elf_downed_3_times_10 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_elf_downed_3_times_10"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_elf_downed_3_times_10"
-			},
-			sound_events_duration = {
-				[1] = 3.8644165992737
 			}
 		},
 		pes_gameplay_elf_hit_by_goo_thrice_02 = {
@@ -45886,26 +42140,38 @@ return function ()
 				2.3903748989105
 			}
 		},
-		pes_gameplay_elf_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_elf_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_elf_potions_above_half_health_01"
+				"pes_gameplay_elf_potions_above_half_health_01",
+				"pes_gameplay_elf_potions_above_half_health_02",
+				"pes_gameplay_elf_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_elf_potions_above_half_health_01"
+				"pes_gameplay_elf_potions_above_half_health_01",
+				"pes_gameplay_elf_potions_above_half_health_02",
+				"pes_gameplay_elf_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 3.4710416793823
+				3.4710416793823,
+				4.6964998245239,
+				3.2446458339691
 			}
 		},
 		pes_gameplay_elf_potions_above_half_health_01_reply_02 = {
@@ -45930,28 +42196,6 @@ return function ()
 				[1] = 3.0903332233429
 			}
 		},
-		pes_gameplay_elf_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_elf_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_elf_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 4.6964998245239
-			}
-		},
 		pes_gameplay_elf_potions_above_half_health_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -45972,28 +42216,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.5083749294281
-			}
-		},
-		pes_gameplay_elf_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_elf_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_elf_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 3.2446458339691
 			}
 		},
 		pes_gameplay_elf_potions_above_half_health_03_reply_01 = {
@@ -46301,26 +42523,38 @@ return function ()
 				[1] = 2.7427604198456
 			}
 		},
-		pes_gameplay_hunter_downed_3_times_05 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_hunter_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_hunter_downed_3_times_05"
+				"pes_gameplay_hunter_downed_3_times_05",
+				"pes_gameplay_hunter_downed_3_times_07",
+				"pes_gameplay_hunter_downed_3_times_06"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_hunter_downed_3_times_05"
+				"pes_gameplay_hunter_downed_3_times_05",
+				"pes_gameplay_hunter_downed_3_times_07",
+				"pes_gameplay_hunter_downed_3_times_06"
 			},
 			sound_events_duration = {
-				[1] = 2.663229227066
+				2.663229227066,
+				1.1976249814033,
+				2.2855312824249
 			}
 		},
 		pes_gameplay_hunter_downed_3_times_05_reply_01 = {
@@ -46343,50 +42577,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.6328645944595
-			}
-		},
-		pes_gameplay_hunter_downed_3_times_06 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_hunter_downed_3_times_06"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_hunter_downed_3_times_06"
-			},
-			sound_events_duration = {
-				[1] = 2.2855312824249
-			}
-		},
-		pes_gameplay_hunter_downed_3_times_07 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_hunter_downed_3_times_07"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_hunter_downed_3_times_07"
-			},
-			sound_events_duration = {
-				[1] = 1.1976249814033
 			}
 		},
 		pes_gameplay_hunter_downed_3_times_07_reply_01 = {
@@ -46643,26 +42833,38 @@ return function ()
 				2.179208278656
 			}
 		},
-		pes_gameplay_hunter_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_hunter_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_hunter_potions_above_half_health_01"
+				"pes_gameplay_hunter_potions_above_half_health_01",
+				"pes_gameplay_hunter_potions_above_half_health_02",
+				"pes_gameplay_hunter_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_hunter_potions_above_half_health_01"
+				"pes_gameplay_hunter_potions_above_half_health_01",
+				"pes_gameplay_hunter_potions_above_half_health_02",
+				"pes_gameplay_hunter_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 2.025927066803
+				2.025927066803,
+				2.9181354045868,
+				2.3023437261581
 			}
 		},
 		pes_gameplay_hunter_potions_above_half_health_01_reply_01 = {
@@ -46687,28 +42889,6 @@ return function ()
 				[1] = 3.0606875419617
 			}
 		},
-		pes_gameplay_hunter_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_hunter_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_hunter_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 2.9181354045868
-			}
-		},
 		pes_gameplay_hunter_potions_above_half_health_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -46729,28 +42909,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 1.8532291650772
-			}
-		},
-		pes_gameplay_hunter_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_hunter_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_hunter_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.3023437261581
 			}
 		},
 		pes_gameplay_hunter_potions_above_half_health_03_reply_01 = {
@@ -46854,48 +43012,33 @@ return function ()
 				1.960000038147
 			}
 		},
-		pes_gameplay_killing_a_second_rat_ogre_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_killing_a_second_rat_ogre = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pes_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pes_gameplay_killing_a_second_rat_ogre_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pes_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pes_gameplay_killing_a_second_rat_ogre_02"
 			},
 			sound_events_duration = {
-				[1] = 1.8738125562668
-			}
-		},
-		pes_gameplay_killing_a_second_rat_ogre_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_killing_a_second_rat_ogre_02"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_killing_a_second_rat_ogre_02"
-			},
-			sound_events_duration = {
-				[1] = 2.3803124427795
+				[1] = 1.8738125562668,
+				[2] = 2.3803124427795
 			}
 		},
 		pes_gameplay_killing_rat_ogre_01 = {
@@ -47008,6 +43151,28 @@ return function ()
 				[1] = 4.2881875038147
 			}
 		},
+		pes_gameplay_ranger_downed_3_times = {
+			sound_events_n = 1,
+			face_animations_n = 1,
+			database = "special_occasions_honduras",
+			category = "special_occasion",
+			dialogue_animations_n = 1,
+			dialogue_animations = {
+				[1] = "dialogue_shout"
+			},
+			face_animations = {
+				[1] = "face_neutral"
+			},
+			localization_strings = {
+				[1] = "pes_gameplay_ranger_downed_3_times_10"
+			},
+			sound_events = {
+				[1] = "pes_gameplay_ranger_downed_3_times_10"
+			},
+			sound_events_duration = {
+				[1] = 1.5859999656677
+			}
+		},
 		pes_gameplay_ranger_downed_3_times_09_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -47028,28 +43193,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.2741458415985
-			}
-		},
-		pes_gameplay_ranger_downed_3_times_10 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_ranger_downed_3_times_10"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_ranger_downed_3_times_10"
-			},
-			sound_events_duration = {
-				[1] = 1.5859999656677
 			}
 		},
 		pes_gameplay_ranger_hit_by_goo_thrice_02 = {
@@ -47272,48 +43415,38 @@ return function ()
 				2.7004375457764
 			}
 		},
-		pes_gameplay_ranger_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_ranger_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_ranger_potions_above_half_health_01"
+				"pes_gameplay_ranger_potions_above_half_health_01",
+				"pes_gameplay_ranger_potions_above_half_health_02",
+				"pes_gameplay_ranger_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_ranger_potions_above_half_health_01"
+				"pes_gameplay_ranger_potions_above_half_health_01",
+				"pes_gameplay_ranger_potions_above_half_health_02",
+				"pes_gameplay_ranger_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 2.3760416507721
-			}
-		},
-		pes_gameplay_ranger_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_ranger_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_ranger_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 4.4614791870117
+				2.3760416507721,
+				4.4614791870117,
+				2.4939167499542
 			}
 		},
 		pes_gameplay_ranger_potions_above_half_health_02_reply_01 = {
@@ -47336,28 +43469,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.2464375495911
-			}
-		},
-		pes_gameplay_ranger_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.4939167499542
 			}
 		},
 		pes_gameplay_ranger_potions_above_half_health_03_reply_01 = {
@@ -49582,6 +45693,40 @@ return function ()
 				[1] = 2.2868332862854
 			}
 		},
+		pes_gameplay_wizard_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pes_gameplay_wizard_downed_3_times_05",
+				"pes_gameplay_wizard_downed_3_times_07",
+				"pes_gameplay_wizard_downed_3_times_06"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pes_gameplay_wizard_downed_3_times_05",
+				"pes_gameplay_wizard_downed_3_times_07",
+				"pes_gameplay_wizard_downed_3_times_06"
+			},
+			sound_events_duration = {
+				2.8025417327881,
+				2.7106041908264,
+				1.1784374713898
+			}
+		},
 		pes_gameplay_wizard_downed_3_times_04_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -49602,72 +45747,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.5324583053589
-			}
-		},
-		pes_gameplay_wizard_downed_3_times_05 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_wizard_downed_3_times_05"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_wizard_downed_3_times_05"
-			},
-			sound_events_duration = {
-				[1] = 2.8025417327881
-			}
-		},
-		pes_gameplay_wizard_downed_3_times_06 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_wizard_downed_3_times_06"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_wizard_downed_3_times_06"
-			},
-			sound_events_duration = {
-				[1] = 1.1784374713898
-			}
-		},
-		pes_gameplay_wizard_downed_3_times_07 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_wizard_downed_3_times_07"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_wizard_downed_3_times_07"
-			},
-			sound_events_duration = {
-				[1] = 2.7106041908264
 			}
 		},
 		pes_gameplay_wizard_downed_3_times_07_reply_01 = {
@@ -49968,48 +46047,38 @@ return function ()
 				2.0736458301544
 			}
 		},
-		pes_gameplay_wizard_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pes_gameplay_wizard_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pes_gameplay_wizard_potions_above_half_health_01"
+				"pes_gameplay_wizard_potions_above_half_health_01",
+				"pes_gameplay_wizard_potions_above_half_health_02",
+				"pes_gameplay_wizard_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pes_gameplay_wizard_potions_above_half_health_01"
+				"pes_gameplay_wizard_potions_above_half_health_01",
+				"pes_gameplay_wizard_potions_above_half_health_02",
+				"pes_gameplay_wizard_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 1.925604224205
-			}
-		},
-		pes_gameplay_wizard_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_wizard_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_wizard_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 2.2004582881927
+				1.925604224205,
+				2.2004582881927,
+				3.814374923706
 			}
 		},
 		pes_gameplay_wizard_potions_above_half_health_02_reply_01 = {
@@ -50032,28 +46101,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.619916677475
-			}
-		},
-		pes_gameplay_wizard_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pes_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pes_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 3.814374923706
 			}
 		},
 		pes_gameplay_wizard_potions_above_half_health_03_reply_01 = {
@@ -51271,6 +47318,40 @@ return function ()
 				[1] = 4.1714792251587
 			}
 		},
+		pwe_gameplay_hunter_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pwe_gameplay_hunter_downed_3_times_11",
+				"pwe_gameplay_hunter_downed_3_times_13",
+				"pwe_gameplay_hunter_downed_3_times_12"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwe_gameplay_hunter_downed_3_times_11",
+				"pwe_gameplay_hunter_downed_3_times_13",
+				"pwe_gameplay_hunter_downed_3_times_12"
+			},
+			sound_events_duration = {
+				3.7410624027252,
+				5.2966876029968,
+				2.5054166316986
+			}
+		},
 		pwe_gameplay_hunter_downed_3_times_06_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -51293,28 +47374,6 @@ return function ()
 				[1] = 2.9105000495911
 			}
 		},
-		pwe_gameplay_hunter_downed_3_times_11 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_hunter_downed_3_times_11"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_hunter_downed_3_times_11"
-			},
-			sound_events_duration = {
-				[1] = 3.7410624027252
-			}
-		},
 		pwe_gameplay_hunter_downed_3_times_11_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -51335,50 +47394,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.2385416030884
-			}
-		},
-		pwe_gameplay_hunter_downed_3_times_12 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_hunter_downed_3_times_12"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_hunter_downed_3_times_12"
-			},
-			sound_events_duration = {
-				[1] = 2.5054166316986
-			}
-		},
-		pwe_gameplay_hunter_downed_3_times_13 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_hunter_downed_3_times_13"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_hunter_downed_3_times_13"
-			},
-			sound_events_duration = {
-				[1] = 5.2966876029968
 			}
 		},
 		pwe_gameplay_hunter_downed_3_times_13_reply_01 = {
@@ -51667,48 +47682,38 @@ return function ()
 				1.8220416307449
 			}
 		},
-		pwe_gameplay_hunter_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_hunter_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_hunter_potions_above_half_health_01"
+				"pwe_gameplay_hunter_potions_above_half_health_01",
+				"pwe_gameplay_hunter_potions_above_half_health_02",
+				"pwe_gameplay_hunter_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_hunter_potions_above_half_health_01"
+				"pwe_gameplay_hunter_potions_above_half_health_01",
+				"pwe_gameplay_hunter_potions_above_half_health_02",
+				"pwe_gameplay_hunter_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 5.4133543968201
-			}
-		},
-		pwe_gameplay_hunter_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_hunter_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_hunter_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 3.3083333969116
+				5.4133543968201,
+				3.3083333969116,
+				2.6435208320618
 			}
 		},
 		pwe_gameplay_hunter_potions_above_half_health_02_reply_01 = {
@@ -51731,28 +47736,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 4.182062625885
-			}
-		},
-		pwe_gameplay_hunter_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_hunter_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_hunter_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.6435208320618
 			}
 		},
 		pwe_gameplay_hunter_potions_above_half_health_03_reply_01 = {
@@ -51848,28 +47831,6 @@ return function ()
 				1.9097917079925
 			}
 		},
-		pwe_gameplay_kiling_a_second_rat_ogre_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_kiling_a_second_rat_ogre_01"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_kiling_a_second_rat_ogre_01"
-			},
-			sound_events_duration = {
-				[1] = 4.511833190918
-			}
-		},
 		pwe_gameplay_killing_a_rat_ogre_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -51892,26 +47853,33 @@ return function ()
 				[1] = 2.5700833797455
 			}
 		},
-		pwe_gameplay_killing_a_second_rat_ogre_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_killing_a_second_rat_ogre = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_killing_a_second_rat_ogre_02"
+				[1] = "pwe_gameplay_kiling_a_second_rat_ogre_01",
+				[2] = "pwe_gameplay_killing_a_second_rat_ogre_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_killing_a_second_rat_ogre_02"
+				[1] = "pwe_gameplay_kiling_a_second_rat_ogre_01",
+				[2] = "pwe_gameplay_killing_a_second_rat_ogre_02"
 			},
 			sound_events_duration = {
-				[1] = 3.7440209388733
+				[1] = 4.511833190918,
+				[2] = 3.7440209388733
 			}
 		},
 		pwe_gameplay_ranger_3_special_kills_in_a_row = {
@@ -51980,6 +47948,40 @@ return function ()
 				[1] = 2.6460626125336
 			}
 		},
+		pwe_gameplay_ranger_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pwe_gameplay_ranger_downed_3_times_11",
+				"pwe_gameplay_ranger_downed_3_times_13",
+				"pwe_gameplay_ranger_downed_3_times_12"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwe_gameplay_ranger_downed_3_times_11",
+				"pwe_gameplay_ranger_downed_3_times_13",
+				"pwe_gameplay_ranger_downed_3_times_12"
+			},
+			sound_events_duration = {
+				3.6363749504089,
+				2.2494790554047,
+				2.4539792537689
+			}
+		},
 		pwe_gameplay_ranger_downed_3_times_04_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -52024,50 +48026,6 @@ return function ()
 				[1] = 4.9157290458679
 			}
 		},
-		pwe_gameplay_ranger_downed_3_times_11 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_ranger_downed_3_times_11"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_ranger_downed_3_times_11"
-			},
-			sound_events_duration = {
-				[1] = 3.6363749504089
-			}
-		},
-		pwe_gameplay_ranger_downed_3_times_12 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_ranger_downed_3_times_12"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_ranger_downed_3_times_12"
-			},
-			sound_events_duration = {
-				[1] = 2.4539792537689
-			}
-		},
 		pwe_gameplay_ranger_downed_3_times_12_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -52088,28 +48046,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 0.55156248807907
-			}
-		},
-		pwe_gameplay_ranger_downed_3_times_13 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_ranger_downed_3_times_13"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_ranger_downed_3_times_13"
-			},
-			sound_events_duration = {
-				[1] = 2.2494790554047
 			}
 		},
 		pwe_gameplay_ranger_downed_3_times_13_reply_01 = {
@@ -52398,26 +48334,38 @@ return function ()
 				2.876770734787
 			}
 		},
-		pwe_gameplay_ranger_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_ranger_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_ranger_potions_above_half_health_02"
+				"pwe_gameplay_ranger_potions_above_half_health_04",
+				"pwe_gameplay_ranger_potions_above_half_health_03",
+				"pwe_gameplay_ranger_potions_above_half_health_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_ranger_potions_above_half_health_02"
+				"pwe_gameplay_ranger_potions_above_half_health_04",
+				"pwe_gameplay_ranger_potions_above_half_health_03",
+				"pwe_gameplay_ranger_potions_above_half_health_02"
 			},
 			sound_events_duration = {
-				[1] = 2.4668333530426
+				3.3167707920074,
+				2.1974582672119,
+				2.4668333530426
 			}
 		},
 		pwe_gameplay_ranger_potions_above_half_health_02_reply_01 = {
@@ -52442,28 +48390,6 @@ return function ()
 				[1] = 5.2136664390564
 			}
 		},
-		pwe_gameplay_ranger_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.1974582672119
-			}
-		},
 		pwe_gameplay_ranger_potions_above_half_health_03_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -52484,28 +48410,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.0106875896454
-			}
-		},
-		pwe_gameplay_ranger_potions_above_half_health_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_ranger_potions_above_half_health_04"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_ranger_potions_above_half_health_04"
-			},
-			sound_events_duration = {
-				[1] = 3.3167707920074
 			}
 		},
 		pwe_gameplay_ranger_potions_above_half_health_04_reply_01 = {
@@ -54026,26 +49930,38 @@ return function ()
 				[1] = 3.6328959465027
 			}
 		},
-		pwe_gameplay_soldier_downed_3_times_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_soldier_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_soldier_downed_3_times_02"
+				"pwe_gameplay_soldier_downed_3_times_13",
+				"pwe_gameplay_soldier_downed_3_times_12",
+				"pwe_gameplay_soldier_downed_3_times_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_soldier_downed_3_times_02"
+				"pwe_gameplay_soldier_downed_3_times_13",
+				"pwe_gameplay_soldier_downed_3_times_12",
+				"pwe_gameplay_soldier_downed_3_times_02"
 			},
 			sound_events_duration = {
-				[1] = 3.0639584064484
+				3.1770000457764,
+				3.5231459140778,
+				3.0639584064484
 			}
 		},
 		pwe_gameplay_soldier_downed_3_times_06_reply_01 = {
@@ -54114,28 +50030,6 @@ return function ()
 				[1] = 2.1731562614441
 			}
 		},
-		pwe_gameplay_soldier_downed_3_times_12 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_soldier_downed_3_times_12"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_soldier_downed_3_times_12"
-			},
-			sound_events_duration = {
-				[1] = 3.5231459140778
-			}
-		},
 		pwe_gameplay_soldier_downed_3_times_12_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -54156,28 +50050,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.6049375534058
-			}
-		},
-		pwe_gameplay_soldier_downed_3_times_13 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_soldier_downed_3_times_13"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_soldier_downed_3_times_13"
-			},
-			sound_events_duration = {
-				[1] = 3.1770000457764
 			}
 		},
 		pwe_gameplay_soldier_downed_3_times_13_reply_01 = {
@@ -54466,26 +50338,38 @@ return function ()
 				2.8372707366943
 			}
 		},
-		pwe_gameplay_soldier_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_soldier_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_soldier_potions_above_half_health_01"
+				"pwe_gameplay_soldier_potions_above_half_health_01",
+				"pwe_gameplay_soldier_potions_above_half_health_02",
+				"pwe_gameplay_soldier_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_soldier_potions_above_half_health_01"
+				"pwe_gameplay_soldier_potions_above_half_health_01",
+				"pwe_gameplay_soldier_potions_above_half_health_02",
+				"pwe_gameplay_soldier_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 5.8331665992737
+				5.8331665992737,
+				4.3262915611267,
+				0.67268747091293
 			}
 		},
 		pwe_gameplay_soldier_potions_above_half_health_01_reply_01 = {
@@ -54510,28 +50394,6 @@ return function ()
 				[1] = 2.0899584293366
 			}
 		},
-		pwe_gameplay_soldier_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_soldier_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_soldier_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 4.3262915611267
-			}
-		},
 		pwe_gameplay_soldier_potions_above_half_health_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -54552,28 +50414,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 4.8168540000916
-			}
-		},
-		pwe_gameplay_soldier_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_soldier_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_soldier_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 0.67268747091293
 			}
 		},
 		pwe_gameplay_soldier_potions_above_half_health_03_reply_01 = {
@@ -54708,26 +50548,33 @@ return function ()
 				[1] = 2.0933332443237
 			}
 		},
-		pwe_gameplay_wizard_downed_3_times_11 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_wizard_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				[1] = "dialogue_shout",
+				[2] = "dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_wizard_downed_3_times_11"
+				[1] = "pwe_gameplay_wizard_downed_3_times_11",
+				[2] = "pwe_gameplay_wizard_downed_3_times_12"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_wizard_downed_3_times_11"
+				[1] = "pwe_gameplay_wizard_downed_3_times_11",
+				[2] = "pwe_gameplay_wizard_downed_3_times_12"
 			},
 			sound_events_duration = {
-				[1] = 2.5652916431427
+				[1] = 2.5652916431427,
+				[2] = 3.6698334217072
 			}
 		},
 		pwe_gameplay_wizard_downed_3_times_11_reply_01 = {
@@ -54750,28 +50597,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.1935832500458
-			}
-		},
-		pwe_gameplay_wizard_downed_3_times_12 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_wizard_downed_3_times_12"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_wizard_downed_3_times_12"
-			},
-			sound_events_duration = {
-				[1] = 3.6698334217072
 			}
 		},
 		pwe_gameplay_wizard_hit_by_goo_thrice_02 = {
@@ -54972,26 +50797,33 @@ return function ()
 				2.5805416107178
 			}
 		},
-		pwe_gameplay_wizard_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwe_gameplay_wizard_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				[1] = "face_smug",
+				[2] = "face_smug"
 			},
 			localization_strings = {
-				[1] = "pwe_gameplay_wizard_potions_above_half_health_01"
+				[1] = "pwe_gameplay_wizard_potions_above_half_health_01",
+				[2] = "pwe_gameplay_wizard_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwe_gameplay_wizard_potions_above_half_health_01"
+				[1] = "pwe_gameplay_wizard_potions_above_half_health_01",
+				[2] = "pwe_gameplay_wizard_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 4.1514792442322
+				[1] = 4.1514792442322,
+				[2] = 2.7698125839233
 			}
 		},
 		pwe_gameplay_wizard_potions_above_half_health_01_reply_01 = {
@@ -55014,28 +50846,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 1.7483958005905
-			}
-		},
-		pwe_gameplay_wizard_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwe_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pwe_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.7698125839233
 			}
 		},
 		pwe_gameplay_wizard_potions_above_half_health_03_reply_02 = {
@@ -55436,26 +51246,38 @@ return function ()
 				[1] = 2.9188542366028
 			}
 		},
-		pwh_gameplay_elf_downed_3_times_03_azsd = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwh_gameplay_elf_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_elf_downed_3_times_03_azsd"
+				"pwh_gameplay_elf_downed_3_times_05",
+				"pwh_gameplay_elf_downed_3_times_04",
+				"pwh_gameplay_elf_downed_3_times_03_azsd"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_elf_downed_3_times_03_azsd"
+				"pwh_gameplay_elf_downed_3_times_05",
+				"pwh_gameplay_elf_downed_3_times_04",
+				"pwh_gameplay_elf_downed_3_times_03_azsd"
 			},
 			sound_events_duration = {
-				[1] = 1.5489375591278
+				2.8679583072662,
+				4.1674375534058,
+				1.5489375591278
 			}
 		},
 		pwh_gameplay_elf_downed_3_times_03_reply_01 = {
@@ -55480,28 +51302,6 @@ return function ()
 				[1] = 2.197562456131
 			}
 		},
-		pwh_gameplay_elf_downed_3_times_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_elf_downed_3_times_04"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_elf_downed_3_times_04"
-			},
-			sound_events_duration = {
-				[1] = 4.1674375534058
-			}
-		},
 		pwh_gameplay_elf_downed_3_times_04_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -55522,28 +51322,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 6.5744791030884
-			}
-		},
-		pwh_gameplay_elf_downed_3_times_05 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_elf_downed_3_times_05"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_elf_downed_3_times_05"
-			},
-			sound_events_duration = {
-				[1] = 2.8679583072662
 			}
 		},
 		pwh_gameplay_elf_downed_3_times_10_reply_01 = {
@@ -55832,26 +51610,33 @@ return function ()
 				3.0002083778381
 			}
 		},
-		pwh_gameplay_elf_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwh_gameplay_elf_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				[1] = "face_smug",
+				[2] = "face_smug"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_elf_potions_above_half_health_01"
+				[1] = "pwh_gameplay_elf_potions_above_half_health_01",
+				[2] = "pwh_gameplay_elf_potions_above_half_health_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_elf_potions_above_half_health_01"
+				[1] = "pwh_gameplay_elf_potions_above_half_health_01",
+				[2] = "pwh_gameplay_elf_potions_above_half_health_02"
 			},
 			sound_events_duration = {
-				[1] = 3.8222916126251
+				[1] = 3.8222916126251,
+				[2] = 2.6821665763855
 			}
 		},
 		pwh_gameplay_elf_potions_above_half_health_01_reply_01 = {
@@ -55874,28 +51659,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.7792499065399
-			}
-		},
-		pwh_gameplay_elf_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_elf_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_elf_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 2.6821665763855
 			}
 		},
 		pwh_gameplay_elf_potions_above_half_health_02_reply_01 = {
@@ -56810,70 +52573,62 @@ return function ()
 				[1] = 2.6248958110809
 			}
 		},
-		pwh_gameplay_killing_a_second_rat_ogre_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwh_gameplay_killing_a_second_rat_ogre = {
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				[1] = "dialogue_talk",
+				[2] = "dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pwh_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pwh_gameplay_killing_a_second_rat_ogre_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_killing_a_second_rat_ogre_01"
+				[1] = "pwh_gameplay_killing_a_second_rat_ogre_01",
+				[2] = "pwh_gameplay_killing_a_second_rat_ogre_02"
 			},
 			sound_events_duration = {
-				[1] = 2.1709792613983
-			}
-		},
-		pwh_gameplay_killing_a_second_rat_ogre_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_killing_a_second_rat_ogre_02"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_killing_a_second_rat_ogre_02"
-			},
-			sound_events_duration = {
-				[1] = 3.5244584083557
+				[1] = 2.1709792613983,
+				[2] = 3.5244584083557
 			}
 		},
 		pwh_gameplay_ranger_3_special_kills_in_a_row = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+			randomize_indexes_n = 0,
+			face_animations_n = 2,
 			database = "special_occasions_honduras",
+			sound_events_n = 2,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 2,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				[1] = "dialogue_shout",
+				[2] = "dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				[1] = "face_neutral",
+				[2] = "face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_ranger_3_special_kills_in_a_row_01"
+				[1] = "pwh_gameplay_ranger_3_special_kills_in_a_row_01",
+				[2] = "pwh_gameplay_ranger_killing_3_specials_in_a_row_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_ranger_3_special_kills_in_a_row_01"
+				[1] = "pwh_gameplay_ranger_3_special_kills_in_a_row_01",
+				[2] = "pwh_gameplay_ranger_killing_3_specials_in_a_row_02"
 			},
 			sound_events_duration = {
-				[1] = 5.9997291564941
+				[1] = 5.9997291564941,
+				[2] = 4.5193333625794
 			}
 		},
 		pwh_gameplay_ranger_3_special_kills_in_a_row_01_reply_01 = {
@@ -56964,26 +52719,38 @@ return function ()
 				[1] = 2.774749994278
 			}
 		},
-		pwh_gameplay_ranger_downed_3_time_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwh_gameplay_ranger_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_ranger_downed_3_time_02"
+				"pwh_gameplay_ranger_downed_3_times_04",
+				"pwh_gameplay_ranger_downed_3_times_03",
+				"pwh_gameplay_ranger_downed_3_time_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_ranger_downed_3_time_02"
+				"pwh_gameplay_ranger_downed_3_times_04",
+				"pwh_gameplay_ranger_downed_3_times_03",
+				"pwh_gameplay_ranger_downed_3_time_02"
 			},
 			sound_events_duration = {
-				[1] = 1.4529999494553
+				2.4168124198914,
+				2.1252915859222,
+				1.4529999494553
 			}
 		},
 		pwh_gameplay_ranger_downed_3_times_02_reply_01 = {
@@ -57008,28 +52775,6 @@ return function ()
 				[1] = 2.6878333091736
 			}
 		},
-		pwh_gameplay_ranger_downed_3_times_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_ranger_downed_3_times_03"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_ranger_downed_3_times_03"
-			},
-			sound_events_duration = {
-				[1] = 2.1252915859222
-			}
-		},
 		pwh_gameplay_ranger_downed_3_times_03_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -57052,28 +52797,6 @@ return function ()
 				[1] = 1.4722291231155
 			}
 		},
-		pwh_gameplay_ranger_downed_3_times_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_ranger_downed_3_times_04"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_ranger_downed_3_times_04"
-			},
-			sound_events_duration = {
-				[1] = 2.4168124198914
-			}
-		},
 		pwh_gameplay_ranger_hit_by_goo_thrice_02 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -57094,28 +52817,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.1285207271576
-			}
-		},
-		pwh_gameplay_ranger_killing_3_specials_in_a_row_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_ranger_killing_3_specials_in_a_row_02"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_ranger_killing_3_specials_in_a_row_02"
-			},
-			sound_events_duration = {
-				[1] = 4.5193333625794
 			}
 		},
 		pwh_gameplay_ranger_killing_rat_ogre_melee_01 = {
@@ -57328,26 +53029,38 @@ return function ()
 				2.6981666088104
 			}
 		},
-		pwh_gameplay_ranger_potions_above_half_health_01 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwh_gameplay_ranger_potions_above_half_health = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
 			database = "special_occasions_honduras",
+			sound_events_n = 3,
 			category = "casual_talk",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 3,
 			dialogue_animations = {
-				[1] = "dialogue_talk"
+				"dialogue_talk",
+				"dialogue_talk",
+				"dialogue_talk"
 			},
 			face_animations = {
-				[1] = "face_smug"
+				"face_smug",
+				"face_smug",
+				"face_smug"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_ranger_potions_above_half_health_01"
+				"pwh_gameplay_ranger_potions_above_half_health_01",
+				"pwh_gameplay_ranger_potions_above_half_health_02",
+				"pwh_gameplay_ranger_potions_above_half_health_03"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_ranger_potions_above_half_health_01"
+				"pwh_gameplay_ranger_potions_above_half_health_01",
+				"pwh_gameplay_ranger_potions_above_half_health_02",
+				"pwh_gameplay_ranger_potions_above_half_health_03"
 			},
 			sound_events_duration = {
-				[1] = 2.4495000839233
+				2.4495000839233,
+				3.4193749427795,
+				6.2178750038147
 			}
 		},
 		pwh_gameplay_ranger_potions_above_half_health_01_reply_01 = {
@@ -57372,28 +53085,6 @@ return function ()
 				[1] = 3.2312290668488
 			}
 		},
-		pwh_gameplay_ranger_potions_above_half_health_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_ranger_potions_above_half_health_02"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_ranger_potions_above_half_health_02"
-			},
-			sound_events_duration = {
-				[1] = 3.4193749427795
-			}
-		},
 		pwh_gameplay_ranger_potions_above_half_health_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -57414,28 +53105,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.095541715622
-			}
-		},
-		pwh_gameplay_ranger_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_ranger_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 6.2178750038147
 			}
 		},
 		pwh_gameplay_ranger_potions_above_half_health_03_reply_01 = {
@@ -58890,6 +54559,40 @@ return function ()
 				[1] = 3.2036666870117
 			}
 		},
+		pwh_gameplay_soldier_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 3,
+			database = "special_occasions_honduras",
+			sound_events_n = 3,
+			category = "special_occasion",
+			dialogue_animations_n = 3,
+			dialogue_animations = {
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
+			},
+			face_animations = {
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
+			},
+			localization_strings = {
+				"pwh_gameplay_soldier_downed_3_times_05",
+				"pwh_gameplay_soldier_downed_3_times_04",
+				"pwh_gameplay_soldier_downed_3_times_03"
+			},
+			randomize_indexes = {},
+			sound_events = {
+				"pwh_gameplay_soldier_downed_3_times_05",
+				"pwh_gameplay_soldier_downed_3_times_04",
+				"pwh_gameplay_soldier_downed_3_times_03"
+			},
+			sound_events_duration = {
+				2.3004999160767,
+				3.4936666488648,
+				5.2039375305176
+			}
+		},
 		pwh_gameplay_soldier_downed_3_times_02_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -58912,50 +54615,6 @@ return function ()
 				[1] = 2.0904583930969
 			}
 		},
-		pwh_gameplay_soldier_downed_3_times_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_soldier_downed_3_times_03"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_soldier_downed_3_times_03"
-			},
-			sound_events_duration = {
-				[1] = 5.2039375305176
-			}
-		},
-		pwh_gameplay_soldier_downed_3_times_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_soldier_downed_3_times_04"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_soldier_downed_3_times_04"
-			},
-			sound_events_duration = {
-				[1] = 3.4936666488648
-			}
-		},
 		pwh_gameplay_soldier_downed_3_times_04_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -58976,28 +54635,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 3.9365208148956
-			}
-		},
-		pwh_gameplay_soldier_downed_3_times_05 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_soldier_downed_3_times_05"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_soldier_downed_3_times_05"
-			},
-			sound_events_duration = {
-				[1] = 2.3004999160767
 			}
 		},
 		pwh_gameplay_soldier_downed_3_times_05_reply_01 = {
@@ -59198,7 +54835,7 @@ return function ()
 				[1] = 1.3996249437332
 			}
 		},
-		pwh_gameplay_soldier_potions_above_half_health_02 = {
+		pwh_gameplay_soldier_potions_above_half_health = {
 			sound_events_n = 1,
 			face_animations_n = 1,
 			database = "special_occasions_honduras",
@@ -59459,26 +55096,43 @@ return function ()
 				[1] = 3.6046874523163
 			}
 		},
-		pwh_gameplay_wizard_downed_3_times_02 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
+		pwh_gameplay_wizard_downed_3_times = {
+			randomize_indexes_n = 0,
+			face_animations_n = 4,
 			database = "special_occasions_honduras",
+			sound_events_n = 4,
 			category = "special_occasion",
-			dialogue_animations_n = 1,
+			dialogue_animations_n = 4,
 			dialogue_animations = {
-				[1] = "dialogue_shout"
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout",
+				"dialogue_shout"
 			},
 			face_animations = {
-				[1] = "face_neutral"
+				"face_neutral",
+				"face_neutral",
+				"face_neutral",
+				"face_neutral"
 			},
 			localization_strings = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_02"
+				"pwh_gameplay_wizard_downed_3_times_04",
+				"pwh_gameplay_wizard_downed_3_times_14",
+				"pwh_gameplay_wizard_downed_3_times_03",
+				"pwh_gameplay_wizard_downed_3_times_02"
 			},
+			randomize_indexes = {},
 			sound_events = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_02"
+				"pwh_gameplay_wizard_downed_3_times_04",
+				"pwh_gameplay_wizard_downed_3_times_14",
+				"pwh_gameplay_wizard_downed_3_times_03",
+				"pwh_gameplay_wizard_downed_3_times_02"
 			},
 			sound_events_duration = {
-				[1] = 3.4063749313355
+				4.6729583740234,
+				2.4786875247955,
+				2.0427083969116,
+				3.4063749313355
 			}
 		},
 		pwh_gameplay_wizard_downed_3_times_02_reply_01 = {
@@ -59525,28 +55179,6 @@ return function ()
 				[1] = 2.4023957252502
 			}
 		},
-		pwh_gameplay_wizard_downed_3_times_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_03"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_03"
-			},
-			sound_events_duration = {
-				[1] = 2.0427083969116
-			}
-		},
 		pwh_gameplay_wizard_downed_3_times_03_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -59569,28 +55201,6 @@ return function ()
 				[1] = 3.9895625114441
 			}
 		},
-		pwh_gameplay_wizard_downed_3_times_04 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_04"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_04"
-			},
-			sound_events_duration = {
-				[1] = 4.6729583740234
-			}
-		},
 		pwh_gameplay_wizard_downed_3_times_10_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -59611,28 +55221,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 4.4037289619446
-			}
-		},
-		pwh_gameplay_wizard_downed_3_times_14 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "special_occasion",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_shout"
-			},
-			face_animations = {
-				[1] = "face_neutral"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_14"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_wizard_downed_3_times_14"
-			},
-			sound_events_duration = {
-				[1] = 2.4786875247955
 			}
 		},
 		pwh_gameplay_wizard_downed_3_times_14_reply_01 = {
@@ -59921,6 +55509,28 @@ return function ()
 				3.5577917098999
 			}
 		},
+		pwh_gameplay_wizard_potions_above_half_health = {
+			sound_events_n = 1,
+			face_animations_n = 1,
+			database = "special_occasions_honduras",
+			category = "casual_talk",
+			dialogue_animations_n = 1,
+			dialogue_animations = {
+				[1] = "dialogue_talk"
+			},
+			face_animations = {
+				[1] = "face_smug"
+			},
+			localization_strings = {
+				[1] = "pwh_gameplay_wizard_potions_above_half_health_03"
+			},
+			sound_events = {
+				[1] = "pwh_gameplay_wizard_potions_above_half_health_03"
+			},
+			sound_events_duration = {
+				[1] = 2.7536041736603
+			}
+		},
 		pwh_gameplay_wizard_potions_above_half_health_01_reply_01 = {
 			sound_events_n = 1,
 			face_animations_n = 1,
@@ -59963,28 +55573,6 @@ return function ()
 			},
 			sound_events_duration = {
 				[1] = 2.943437576294
-			}
-		},
-		pwh_gameplay_wizard_potions_above_half_health_03 = {
-			sound_events_n = 1,
-			face_animations_n = 1,
-			database = "special_occasions_honduras",
-			category = "casual_talk",
-			dialogue_animations_n = 1,
-			dialogue_animations = {
-				[1] = "dialogue_talk"
-			},
-			face_animations = {
-				[1] = "face_smug"
-			},
-			localization_strings = {
-				[1] = "pwh_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events = {
-				[1] = "pwh_gameplay_wizard_potions_above_half_health_03"
-			},
-			sound_events_duration = {
-				[1] = 2.7536041736603
 			}
 		},
 		pwh_gameplay_wizard_potions_above_half_health_03_reply_01 = {

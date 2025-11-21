@@ -192,6 +192,9 @@ local skins = {
 			template = "one_hand_axe_shield_template_1",
 			hud_icon = "weapon_generic_icon_staff_3",
 			display_unit = "units/weapons/weapon_display/display_shield",
+			left_hand_unit_override = {
+				dr_engineer = "units/weapons/player/wpn_dw_shield_05_t1/wpn_dw_e_shield_05_runed_01"
+			},
 			material_settings = WeaponMaterialSettingsTemplates.golden_glow,
 			action_anim_overrides = {
 				animation_variation_id = 1

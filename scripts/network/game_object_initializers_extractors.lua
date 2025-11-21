@@ -78,6 +78,7 @@ go_type_table = {
 				has_moved_from_start_position = false,
 				ability_percentage = 0,
 				overcharge_max_value = 40,
+				moving_platform_soft_linked = false,
 				overcharge_percentage = 0,
 				moving_platform = 0,
 				go_type = NetworkLookup.go_types.player_unit,
@@ -127,6 +128,7 @@ go_type_table = {
 
 			local rotation = Unit.local_rotation(unit, 0)
 			local data_table = {
+				moving_platform_soft_linked = false,
 				ammo_percentage = 1,
 				overcharge_threshold_percentage = 0,
 				ability_percentage = 0,

@@ -9,6 +9,7 @@ Vermintide 2 Source Code 5.5.0+
 
 Date        |  Patch  | Notes
 ----------: | :-----: | :--------------
+2025-11-20  |  6.9.0  | [New Level Return to the Reik](https://forums.fatsharkgames.com/t/geheimnisnacht-and-the-skull-of-blosphoros-return-patch-6-8-0-hotfix-6-8-1/113884)
 2025-09-18  |  6.7.3  | Silent Patch to fix loading of unsanctioned mods to official realm
 2025-09-09  |  6.7.2  | [Hotfix](https://forums.fatsharkgames.com/t/pc-hotfix-6-7-2/112401)
 2025-08-28  |  6.7.1  | [Hotfix](https://forums.fatsharkgames.com/t/feast-of-grimnir-double-xp-limited-time-event-out-now/111969)

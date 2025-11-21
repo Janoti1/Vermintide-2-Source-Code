@@ -1484,48 +1484,54 @@ ItemMasterList.vs_dr_1h_hammer = {
 	}
 }
 ItemMasterList.vs_dr_shield_axe = {
+	template = "one_hand_axe_shield_template_1",
+	slot_type = "melee",
+	display_name = "dw_1h_axe_shield_skin_01_name",
+	skin_combination_table = "dr_shield_axe_skins",
+	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
+	hud_icon = "weapon_generic_icon_axe_and_sheild",
+	item_type = "dr_1h_axe_shield",
+	trait_table_name = "melee",
 	description = "dw_1h_axe_shield_skin_01_description",
 	rarity = "plentiful",
 	right_hand_unit = "units/weapons/player/wpn_dw_axe_01_t1/wpn_dw_axe_01_t1",
-	skin_combination_table = "dr_shield_axe_skins",
-	slot_type = "melee",
-	hud_icon = "weapon_generic_icon_axe_and_sheild",
-	display_name = "dw_1h_axe_shield_skin_01_name",
-	has_power_level = true,
-	template = "one_hand_axe_shield_template_1",
-	property_table_name = "melee",
-	item_type = "dr_1h_axe_shield",
-	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
-	trait_table_name = "melee",
 	inventory_icon = "icon_wpn_dw_shield_01_axe",
+	has_power_level = true,
+	property_table_name = "melee",
 	can_wield = {
 		"dr_ironbreaker",
 		"dr_ranger",
 		"dr_engineer"
+	},
+	left_hand_unit_override = {
+		dr_engineer = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_e_shield_01"
 	},
 	mechanisms = {
 		"versus"
 	}
 }
 ItemMasterList.vs_dr_shield_hammer = {
+	template = "one_handed_hammer_shield_template_2",
+	slot_type = "melee",
+	display_name = "dw_1h_hammer_shield_skin_01_name",
+	skin_combination_table = "dr_shield_hammer_skins",
+	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
+	hud_icon = "weapon_generic_icon_hammer_and_sheild",
+	item_type = "dr_1h_hammer_shield",
+	trait_table_name = "melee",
 	description = "dw_1h_hammer_shield_skin_01_description",
 	rarity = "plentiful",
 	right_hand_unit = "units/weapons/player/wpn_dw_hammer_01_t1/wpn_dw_hammer_01_t1",
-	skin_combination_table = "dr_shield_hammer_skins",
-	slot_type = "melee",
-	hud_icon = "weapon_generic_icon_hammer_and_sheild",
-	display_name = "dw_1h_hammer_shield_skin_01_name",
-	has_power_level = true,
-	template = "one_handed_hammer_shield_template_2",
-	property_table_name = "melee",
-	item_type = "dr_1h_hammer_shield",
-	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
-	trait_table_name = "melee",
 	inventory_icon = "icon_wpn_dw_shield_01_hammer",
+	has_power_level = true,
+	property_table_name = "melee",
 	can_wield = {
 		"dr_ironbreaker",
 		"dr_ranger",
 		"dr_engineer"
+	},
+	left_hand_unit_override = {
+		dr_engineer = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_e_shield_01"
 	},
 	mechanisms = {
 		"versus"

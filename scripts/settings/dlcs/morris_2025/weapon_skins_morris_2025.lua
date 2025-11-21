@@ -169,6 +169,9 @@ local skins = {
 			template = "one_handed_hammer_shield_template_2",
 			hud_icon = "weapon_generic_icon_staff_3",
 			display_unit = "units/weapons/weapon_display/display_shield_hammer",
+			left_hand_unit_override = {
+				dr_engineer = "units/weapons/player/wpn_dw_shield_02_t1/wpn_dw_e_shield_02_runed_01"
+			},
 			action_anim_overrides = {
 				animation_variation_id = 1
 			},

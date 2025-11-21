@@ -126,26 +126,29 @@ ItemMasterList.es_1h_flail_skin_02_runed_03 = {
 	}
 }
 ItemMasterList.dw_1h_axe_shield_skin_05_runed_03 = {
+	slot_type = "weapon_skin",
+	display_name = "dw_1h_axe_shield_skin_05_runed_03_name",
+	event_quest_requirement = "event_geheimnisnacht_2022_disrupt_bardin",
+	left_hand_unit = "units/weapons/player/wpn_dw_shield_05_t1/wpn_dw_shield_05_runed_01",
+	information_text = "information_weapon_skin",
+	hud_icon = "weapon_generic_icon_staff_3",
+	item_type = "weapon_skin",
+	matching_item_key = "dr_shield_axe",
 	description = "dw_1h_axe_shield_skin_05_runed_03_description",
 	rarity = "unique",
-	display_name = "dw_1h_axe_shield_skin_05_runed_03_name",
-	hud_icon = "weapon_generic_icon_staff_3",
-	inventory_icon = "icon_wpn_dw_1h_axe_shield_skin_05_runed_03",
-	slot_type = "weapon_skin",
-	information_text = "information_weapon_skin",
-	left_hand_unit = "units/weapons/player/wpn_dw_shield_05_t1/wpn_dw_shield_05_runed_01",
 	right_hand_unit = "units/weapons/player/wpn_dw_axe_03_t2/wpn_dw_axe_03_t2_runed_01",
-	display_unit = "units/weapons/weapon_display/display_shield",
-	item_type = "weapon_skin",
+	inventory_icon = "icon_wpn_dw_1h_axe_shield_skin_05_runed_03",
 	template = "one_hand_axe_shield_template_1",
-	event_quest_requirement = "event_geheimnisnacht_2022_disrupt_bardin",
-	matching_item_key = "dr_shield_axe",
+	display_unit = "units/weapons/weapon_display/display_shield",
 	can_wield = {
 		"dr_ironbreaker",
 		"dr_ranger"
 	},
 	events = {
 		"geheimnisnacht"
+	},
+	left_hand_unit_override = {
+		dr_engineer = "units/weapons/player/wpn_dw_shield_05_t1/wpn_dw_e_shield_05_runed_01"
 	}
 }
 ItemMasterList.bw_1h_flaming_sword_skin_01_runed_03 = {

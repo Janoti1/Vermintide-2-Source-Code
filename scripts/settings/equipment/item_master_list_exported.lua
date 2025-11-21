@@ -7352,16 +7352,19 @@ ItemMasterList.dr_shield_axe = {
 	skin_combination_table = "dr_shield_axe_skins",
 	slot_type = "melee",
 	hud_icon = "weapon_generic_icon_axe_and_sheild",
-	display_name = "dw_1h_axe_shield_skin_01_name",
-	has_power_level = true,
 	template = "one_hand_axe_shield_template_1",
+	has_power_level = true,
 	property_table_name = "melee",
 	item_type = "dr_1h_axe_shield",
-	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
+	display_name = "dw_1h_axe_shield_skin_01_name",
 	trait_table_name = "melee",
+	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
 	can_wield = {
 		"dr_ironbreaker",
 		"dr_ranger"
+	},
+	left_hand_unit_override = {
+		dr_engineer = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_e_shield_01"
 	}
 }
 ItemMasterList.dr_shield_hammer = {
@@ -7372,16 +7375,19 @@ ItemMasterList.dr_shield_hammer = {
 	skin_combination_table = "dr_shield_hammer_skins",
 	slot_type = "melee",
 	hud_icon = "weapon_generic_icon_hammer_and_sheild",
-	display_name = "dw_1h_hammer_shield_skin_01_name",
-	has_power_level = true,
 	template = "one_handed_hammer_shield_template_2",
+	has_power_level = true,
 	property_table_name = "melee",
 	item_type = "dr_1h_hammer_shield",
-	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
+	display_name = "dw_1h_hammer_shield_skin_01_name",
 	trait_table_name = "melee",
+	left_hand_unit = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_shield_01",
 	can_wield = {
 		"dr_ironbreaker",
 		"dr_ranger"
+	},
+	left_hand_unit_override = {
+		dr_engineer = "units/weapons/player/wpn_dw_shield_01_t1/wpn_dw_e_shield_01"
 	}
 }
 ItemMasterList.dr_crossbow = {

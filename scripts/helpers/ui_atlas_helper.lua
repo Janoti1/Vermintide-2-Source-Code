@@ -258,6 +258,7 @@ local standalone_texture = {
 	gamepad_ability_effect = true,
 	ability_outer_effect_mask = true,
 	overchargecircle_sidefade = true,
+	event_upsell_geheimnisnacht = true,
 	start_game_detail_glow = true,
 	twitch_buff_2 = true,
 	unit_frame_portrait_kerillian_shade = true,

@@ -572,7 +572,7 @@ local terror_event_blueprints = {
 	dwarf_fest_waterwheel_horde_bridge = {
 		{
 			"spawn_at_raw",
-			spawner_id = "waterwheel_gate_manual",
+			spawner_id = "waterwheel_gate_manual_02",
 			amount = 1,
 			breed_name = {
 				"skaven_warpfire_thrower",

@@ -9537,6 +9537,12 @@ local settings = {
 
 			return true
 		end
+	},
+	{
+		description = "Displays elevator context on screen",
+		is_boolean = true,
+		setting_name = "debug_elevators",
+		category = "Allround useful stuff!"
 	}
 }
 
