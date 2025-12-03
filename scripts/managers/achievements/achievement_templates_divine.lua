@@ -75,6 +75,7 @@ achievements.divine_nautical_miles_challenge = {
 }
 
 local ANCHOR_TIMER = 60
+local ANCHOR_FAKE_TIMER = 50
 local NUM_ANCHOR_EVENTS = 3
 
 achievements.divine_anchor_challenge = {
@@ -83,7 +84,7 @@ achievements.divine_anchor_challenge = {
 	always_run = true,
 	icon = "achv_divine_anchor_challenge_icon",
 	desc = function ()
-		return string.format(Localize("achv_divine_anchor_challenge_desc"), ANCHOR_TIMER)
+		return string.format(Localize("achv_divine_anchor_challenge_desc"), ANCHOR_FAKE_TIMER)
 	end,
 	events = {
 		"divine_anchor_attached",
